@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.tb-gruber.at/model" nsPrefix="tbg">
+  <eClassifiers xsi:type="ecore:EClass" name="Bahnhof">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="projektname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objekt" upperBound="-1"
+        eType="#//Objekt" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objekt">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektart" eType="#//objektarttype"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adresse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anlage" upperBound="-1"
+        eType="#//Anlage" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="objektarttype">
+    <eLiterals name="Hochbauobjekt" literal="Hochbauobjekt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Anlage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenart" eType="#//anlagearttype"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagennummer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektteil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafoKva" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafospannung" eType="#//spannungsarttype"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="verbindungNach" upperBound="-1"
+        eType="#//Verbindung" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="versorgtVon" eType="#//Anlage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versorgungsspannung" eType="#//spannungsarttype"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="anlagearttype">
+    <eLiterals name="Trafo" literal="Trafo"/>
+    <eLiterals name="Versorgungsknoten" value="1" literal="Versorgungsknoten"/>
+    <eLiterals name="UEGSZaehlpunkt" value="2" literal="ÜGS/Zählpunkt"/>
+    <eLiterals name="Energietechnikanlage" value="3" literal="Energietechnikanlage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="spannungsarttype">
+    <eLiterals name="NSP50Hz" literal="NSP 50Hz (grün)"/>
+    <eLiterals name="_20kV50Hz" value="1" literal="20kV 50Hz (rot)"/>
+    <eLiterals name="_15kV16_7Hz" value="2" literal="15kV 16,7Hz (magenta)"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Verbindung">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versorgungsspannung" eType="#//spannungsarttype"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kabeltyp" eType="#//kabeltyptype"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ziel" lowerBound="1" eType="#//Anlage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ursprung" lowerBound="1"
+        eType="#//Anlage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="kabeltyptype"/>
+</ecore:EPackage>
