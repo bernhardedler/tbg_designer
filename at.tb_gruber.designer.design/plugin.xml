@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="at.tb_gruber.designer.design.Activator"
+               id="at.tb_gruber.designer.design"
+	       name="designer">
+    </component>
+  </extension>
+</plugin>

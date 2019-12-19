@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>at.tb_gruber.designer.feature</groupId>
+	<artifactId>at.tb_gruber.designer.feature</artifactId>
+	<packaging>eclipse-plugin</packaging>
+	<parent>
+		<groupId>at.tb_gruber</groupId>
+		<artifactId>at.tb_gruber.designer.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../at.tb_gruber.designer.parent</relativePath>
+	</parent>
+</project>

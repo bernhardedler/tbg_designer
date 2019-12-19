@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Designer" uid="at.tb_gruber.designer" id="at.tb_gruber.designer.product.product" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Designer" uid="at.tb_gruber.designer" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="icons/about.gif"/>
@@ -23,7 +23,7 @@
       startupProgressRect="0,328,458,18"
       startupMessageRect="7,308,458,18"
       startupForegroundColor="000000" />
-   <launcher>
+   <launcher name="tbgdesigner">
       <win useIco="false">
          <bmp/>
       </win>
@@ -33,13 +33,12 @@
       <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
    </vm>
 
-
    <plugins>
    </plugins>
 
    <features>
-      <feature id="at.tb_gruber.designer.dep_feature" installMode="root"/>
       <feature id="at.tb_gruber.designer.feature" installMode="root"/>
+      <feature id="org.eclipse.platform" installMode="root"/>
    </features>
 
    <configurations>
@@ -48,29 +47,6 @@
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.sirius" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.sirius.common" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.sirius.common.acceleo.aql" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.sirius.common.ui" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.sirius.common.ui.ext" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.sirius.diagram" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.diagram.formatdata" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ecore.extender" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.base" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.draw3d" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.e3" autoStart="false" startLevel="3" />
-      <plugin id="org.eclipse.sirius.ext.e3.ui" autoStart="false" startLevel="3" />
-      <plugin id="org.eclipse.sirius.ext.emf" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.emf.tx" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.gef" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.jface" autoStart="false" startLevel="4" />
-      <plugin id="org.eclipse.sirius.ext.swt" autoStart="false" startLevel="3" />
-      <plugin id="org.eclipse.sirius.ui" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.sirius.ui.editor" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.sirius.ui.ext" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.sirius.ui.properties" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.ui.ide" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.ui.ide.application" autoStart="true" startLevel="1" />
    </configurations>
 
    <preferencesInfo>

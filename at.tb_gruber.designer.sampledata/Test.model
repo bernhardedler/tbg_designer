@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="TestBahnhof">
+  <objekt name="Objekt A">
+    <anlage name="Anlage A1" versorgtVon="//@objekt.2/@anlage.1"/>
+  </objekt>
+  <objekt name="Objekt B">
+    <anlage name="Anlage B1">
+      <verbindungNach ziel="//@objekt.0/@anlage.0" ursprung="//@objekt.1/@anlage.0"/>
+      <verbindungNach ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.1/@anlage.0"/>
+      <verbindungNach ziel="//@objekt.1/@anlage.1" ursprung="//@objekt.1/@anlage.0"/>
+    </anlage>
+    <anlage name="Anlage B2" anlagenart="Versorgungsknoten" versorgtVon="//@objekt.1/@anlage.0"/>
+  </objekt>
+  <objekt name="Objekt C">
+    <anlage name="Anlage C1" anlagenart="ÜGS/Zählpunkt" anlagennummer="C1-1" versorgtVon="//@objekt.1/@anlage.0"/>
+    <anlage name="Anlage C2" anlagenart="Versorgungsknoten" anlagennummer="dfgsdfgsdfg">
+      <verbindungNach ziel="//@objekt.0/@anlage.0" ursprung="//@objekt.2/@anlage.1"/>
+    </anlage>
+  </objekt>
+</tbg:Bahnhof>
