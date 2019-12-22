@@ -2,7 +2,7 @@
 <feature
       id="at.tb_gruber.designer.feature"
       label="Feature"
-      version="1.0.0.qualifier">
+      version="0.0.1.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -15,20 +15,6 @@
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
-
-   <requires>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.core.resources"/>
-      <import plugin="org.eclipse.sirius" version="6.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.common.acceleo.aql"/>
-      <import plugin="at.tb_gruber.designer.model" version="0.1.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.emf.edit.ui"/>
-      <import plugin="org.eclipse.ui.ide"/>
-   </requires>
 
    <plugin
          id="at.tb_gruber.designer.model"
@@ -52,7 +38,7 @@
          unpack="false"/>
 
    <plugin
-         id="at.tb_gruber.designer.product"
+         id="at.tb_gruber.designer.design"
          download-size="0"
          install-size="0"
          version="0.0.0"

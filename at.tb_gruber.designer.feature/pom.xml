@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>at.tb_gruber.designer.feature</groupId>
 	<artifactId>at.tb_gruber.designer.feature</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>eclipse-feature</packaging>
 	<parent>
 		<groupId>at.tb_gruber</groupId>
 		<artifactId>at.tb_gruber.designer.parent</artifactId>

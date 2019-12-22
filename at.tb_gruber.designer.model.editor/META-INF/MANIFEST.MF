@@ -15,6 +15,5 @@ Require-Bundle: org.eclipse.core.runtime,
  at.tb_gruber.designer.model.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.swt;bundle-version="3.113.0";visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport
 Bundle-ActivationPolicy: lazy

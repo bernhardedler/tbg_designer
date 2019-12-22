@@ -28,7 +28,7 @@
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
-							<arch>x86</arch>
+							<arch>x86_64</arch>
 						</environment>
 					</environments>
 				</configuration>
@@ -38,12 +38,7 @@
 	<repositories>
 		<repository>
 			<id>eclipse-repo</id>
-			<url>http://download.eclipse.org/releases/2019-12</url>
-			<layout>p2</layout>
-		</repository>
-		<repository>
-			<id>other-eclipse</id>
-			<url>http://download.eclipse.org/eclipse/updates/4.14</url>
+	 		<url>http://download.eclipse.org/releases/2019-12</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
@@ -54,5 +49,6 @@
 		<module>../at.tb_gruber.designer.model.editor</module>
 		<module>../at.tb_gruber.designer.product</module>
 		<module>../at.tb_gruber.designer.feature</module>
+		
 	</modules>
 </project>
