@@ -17,6 +17,12 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import feature="org.eclipse.gmf.runtime.notation" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime" version="6.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime.ide.ui" version="6.0.0" match="greaterOrEqual"/>
+   </requires>
+
    <plugin
          id="at.tb_gruber.designer.model"
          download-size="0"
