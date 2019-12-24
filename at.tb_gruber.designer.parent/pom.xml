@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>at.tb_gruber</groupId>
+	<groupId>at.tb_gruber.designer</groupId>
 	<artifactId>at.tb_gruber.designer.parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -18,7 +18,6 @@
 				<version>${tycho.version}</version>
 				<extensions>true</extensions>
 			</plugin>
-
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
@@ -38,17 +37,17 @@
 	<repositories>
 		<repository>
 			<id>eclipse-repo</id>
-	 		<url>http://download.eclipse.org/releases/2019-12</url>
+			<url>http://download.eclipse.org/releases/2019-12</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
 	<modules>
-		<module>../at.tb_gruber.designer.design</module>
 		<module>../at.tb_gruber.designer.model</module>
+		<module>../at.tb_gruber.designer.design</module>
 		<module>../at.tb_gruber.designer.model.edit</module>
 		<module>../at.tb_gruber.designer.model.editor</module>
-		<module>../at.tb_gruber.designer.product</module>
 		<module>../at.tb_gruber.designer.feature</module>
-		
+		<module>../at.tb_gruber.designer.product</module>
+
 	</modules>
 </project>

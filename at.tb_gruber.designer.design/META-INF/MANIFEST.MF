@@ -13,5 +13,5 @@ Require-Bundle: org.eclipse.ui,
  at.tb_gruber.designer.model;bundle-version="0.0.1"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-Vendor: %providerName
+Bundle-Vendor: TB Gruber
 Automatic-Module-Name: at.tb_gruber.designer.design
