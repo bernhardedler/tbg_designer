@@ -224,7 +224,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_2BG8UBeNEeqCWpqxRWZ9Ug" sourceNode="__VRbIBbkEeqroYhKMGzJ4g" targetNode="__VLUgBbkEeqroYhKMGzJ4g">
       <target xmi:type="tbg:Verbindung" href="Test.model#//@objekt.1/@anlage.0/@verbindungNach.0"/>
       <semanticElements xmi:type="tbg:Verbindung" href="Test.model#//@objekt.1/@anlage.0/@verbindungNach.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YSwSJSEGEeq6pMzz5I6erQ" size="2" routingStyle="manhattan" strokeColor="77,137,20">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YSwSJSEGEeq6pMzz5I6erQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="77,137,20">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.0/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YSwSJiEGEeq6pMzz5I6erQ" labelSize="12"/>
       </ownedStyle>
@@ -260,7 +260,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_vZ3LMBhAEeqH9ob_MX50tw" sourceNode="__VRbIBbkEeqroYhKMGzJ4g" targetNode="_q4KhoBhAEeqH9ob_MX50tw">
       <target xmi:type="tbg:Verbindung" href="Test.model#//@objekt.1/@anlage.0/@verbindungNach.1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="Test.model#//@objekt.1/@anlage.0/@verbindungNach.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vZ3yQBhAEeqH9ob_MX50tw" size="2" routingStyle="manhattan" strokeColor="77,137,20">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vZ3yQBhAEeqH9ob_MX50tw" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="77,137,20">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.0/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vZ3yQRhAEeqH9ob_MX50tw" labelSize="12"/>
       </ownedStyle>
@@ -269,7 +269,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_N7L8AiDzEeqfetDhJcJIuQ" sourceNode="__VRbIBbkEeqroYhKMGzJ4g" targetNode="_fxd04BeOEeqCWpqxRWZ9Ug">
       <target xmi:type="tbg:Verbindung" href="Test.model#//@objekt.1/@anlage.0/@verbindungNach.2"/>
       <semanticElements xmi:type="tbg:Verbindung" href="Test.model#//@objekt.1/@anlage.0/@verbindungNach.2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_N7NKICDzEeqfetDhJcJIuQ" size="2" routingStyle="manhattan" strokeColor="77,137,20">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_N7NKICDzEeqfetDhJcJIuQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="77,137,20">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.0/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_N7NKISDzEeqfetDhJcJIuQ" labelSize="12"/>
       </ownedStyle>
@@ -278,7 +278,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_0s_6rCEFEeq6pMzz5I6erQ" sourceNode="_uvO7sCEFEeq6pMzz5I6erQ" targetNode="__VLUgBbkEeqroYhKMGzJ4g">
       <target xmi:type="tbg:Verbindung" href="Test.model#//@objekt.2/@anlage.1/@verbindungNach.0"/>
       <semanticElements xmi:type="tbg:Verbindung" href="Test.model#//@objekt.2/@anlage.1/@verbindungNach.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WK8RHiEGEeq6pMzz5I6erQ" size="2" routingStyle="manhattan" strokeColor="77,137,20">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WK8RHiEGEeq6pMzz5I6erQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="77,137,20">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.0/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WK8RHyEGEeq6pMzz5I6erQ" labelSize="12"/>
       </ownedStyle>

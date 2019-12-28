@@ -7,4 +7,28 @@
 	       name="designer">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <category
+           id="at.tb_gruber.designer.ide.category1"
+           name="TB Gruber">
+     </category>
+     <wizard
+           category="at.tb_gruber.designer.ide.category1"
+           class="at.tb_gruber.designer.ide.NewWizard"
+           id="at.tb_gruber.designer.ide.wizard1"
+           name="TBG Projekt"
+           project="true">
+     </wizard>
+  </extension>
+  <extension
+        id="tbgnature"
+        name="TBG Nature"
+        point="org.eclipse.core.resources.natures">
+     <runtime>
+        <run
+              class="at.tb_gruber.designer.ide.ProjectNature">
+        </run>
+     </runtime>
+  </extension>
 </plugin>
