@@ -7,9 +7,9 @@ import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.Sicherung;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.anlagearttype;
-import at.tb_gruber.designer.model.kabeltyptype;
 import at.tb_gruber.designer.model.objektarttype;
 import at.tb_gruber.designer.model.spannungsarttype;
 
@@ -61,6 +61,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass sicherungEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum objektarttypeEEnum = null;
 
 	/**
@@ -76,13 +83,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EEnum spannungsarttypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum kabeltyptypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -414,6 +414,46 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getVerbindung_QuellSicherung() {
+		return (EReference) verbindungEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVerbindung_ZielSicherung() {
+		return (EReference) verbindungEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSicherung() {
+		return sicherungEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSicherung_Sicherungsgröße() {
+		return (EAttribute) sicherungEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getobjektarttype() {
 		return objektarttypeEEnum;
 	}
@@ -436,16 +476,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EEnum getspannungsarttype() {
 		return spannungsarttypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EEnum getkabeltyptype() {
-		return kabeltyptypeEEnum;
 	}
 
 	/**
@@ -507,12 +537,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(verbindungEClass, VERBINDUNG__KABELTYP);
 		createEReference(verbindungEClass, VERBINDUNG__ZIEL);
 		createEReference(verbindungEClass, VERBINDUNG__URSPRUNG);
+		createEReference(verbindungEClass, VERBINDUNG__QUELL_SICHERUNG);
+		createEReference(verbindungEClass, VERBINDUNG__ZIEL_SICHERUNG);
+
+		sicherungEClass = createEClass(SICHERUNG);
+		createEAttribute(sicherungEClass, SICHERUNG__SICHERUNGSGRÖSSE);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
 		anlagearttypeEEnum = createEEnum(ANLAGEARTTYPE);
 		spannungsarttypeEEnum = createEEnum(SPANNUNGSARTTYPE);
-		kabeltyptypeEEnum = createEEnum(KABELTYPTYPE);
 	}
 
 	/**
@@ -598,7 +632,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerbindung_Versorgungsspannung(), this.getspannungsarttype(), "versorgungsspannung", null, 0,
 				1, Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerbindung_Kabeltyp(), this.getkabeltyptype(), "kabeltyp", null, 0, 1, Verbindung.class,
+		initEAttribute(getVerbindung_Kabeltyp(), ecorePackage.getEString(), "kabeltyp", null, 0, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerbindung_Ziel(), this.getAnlage(), null, "ziel", null, 1, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
@@ -606,6 +640,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getVerbindung_Ursprung(), this.getAnlage(), null, "ursprung", null, 1, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerbindung_QuellSicherung(), this.getSicherung(), null, "quellSicherung", null, 0, 1,
+				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerbindung_ZielSicherung(), this.getSicherung(), null, "zielSicherung", null, 0, 1,
+				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sicherungEClass, Sicherung.class, "Sicherung", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSicherung_Sicherungsgröße(), ecorePackage.getEString(), "Sicherungsgröße", null, 0, 1,
+				Sicherung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");
@@ -621,8 +667,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.NSP50_HZ);
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype._20K_V50_HZ);
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype._15K_V16_7HZ);
-
-		initEEnum(kabeltyptypeEEnum, kabeltyptype.class, "kabeltyptype");
 
 		// Create resource
 		createResource(eNS_URI);

@@ -22,6 +22,16 @@
         </edgeMappings>
         <containerMappings name="ObjektContainer" domainClass="model::Objekt">
           <subNodeMappings name="AnlageNode" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Anlage">
+            <borderedNodeMappings name="SicherungNode" label="Sicherung" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Sicherung">
+              <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>EAST</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </borderedNodeMappings>
             <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -50,7 +60,29 @@
             <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
           </style>
         </containerMappings>
-        <toolSections>
+        <toolSections name="Gebäude">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="GebaeudeAnlegen" label="neues Gebäude" containerMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Objekt" referenceName="objekt"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Anlagen">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AnlageAnlegen" label="neue Anlage" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Verbindungen">
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="VerbindungAnlegen" label="neue Verbindung" edgeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
@@ -69,23 +101,10 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="AnlageAnlegen" label="neue Anlage" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SicherungAnlegen" label="neue Sicherung">
             <variable name="container"/>
             <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="GebaeudeAnlegen" label="neues Gebäude" containerMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Objekt" referenceName="objekt"/>
-              </firstModelOperations>
-            </initialOperation>
+            <initialOperation/>
           </ownedTools>
         </toolSections>
       </defaultLayer>

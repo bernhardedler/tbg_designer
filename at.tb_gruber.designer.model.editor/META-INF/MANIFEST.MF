@@ -6,7 +6,7 @@ Automatic-Module-Name: at.tb_gruber.designer.model.editor
 Bundle-Version: 0.0.1.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: at.tb_gruber.designer.model.presentation.ModelEditorPlugin$Implementation
-Bundle-Vendor: TB Gruber
+Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: at.tb_gruber.designer.model.presentation

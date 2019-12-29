@@ -2,6 +2,7 @@
  */
 package at.tb_gruber.designer.model.provider;
 
+import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.spannungsarttype;
@@ -14,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -125,6 +127,37 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ModelPackage.Literals.VERBINDUNG__QUELL_SICHERUNG);
+			childrenFeatures.add(ModelPackage.Literals.VERBINDUNG__ZIEL_SICHERUNG);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns Verbindung.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,6 +208,10 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 		case ModelPackage.VERBINDUNG__KABELTYP:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -189,6 +226,33 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERBINDUNG__QUELL_SICHERUNG,
+				ModelFactory.eINSTANCE.createSicherung()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERBINDUNG__ZIEL_SICHERUNG,
+				ModelFactory.eINSTANCE.createSicherung()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == ModelPackage.Literals.VERBINDUNG__QUELL_SICHERUNG
+				|| childFeature == ModelPackage.Literals.VERBINDUNG__ZIEL_SICHERUNG;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

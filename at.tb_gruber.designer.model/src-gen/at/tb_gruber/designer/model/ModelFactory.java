@@ -58,6 +58,15 @@ public interface ModelFactory extends EFactory {
 	Verbindung createVerbindung();
 
 	/**
+	 * Returns a new object of class '<em>Sicherung</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sicherung</em>'.
+	 * @generated
+	 */
+	Sicherung createSicherung();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

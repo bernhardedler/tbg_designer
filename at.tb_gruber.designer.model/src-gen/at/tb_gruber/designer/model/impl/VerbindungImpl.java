@@ -4,10 +4,11 @@ package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
+import at.tb_gruber.designer.model.Sicherung;
 import at.tb_gruber.designer.model.Verbindung;
-import at.tb_gruber.designer.model.kabeltyptype;
 import at.tb_gruber.designer.model.spannungsarttype;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -25,6 +26,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getUrsprung <em>Ursprung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getQuellSicherung <em>Quell Sicherung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZielSicherung <em>Ziel Sicherung</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,7 +61,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected static final kabeltyptype KABELTYP_EDEFAULT = null;
+	protected static final String KABELTYP_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getKabeltyp() <em>Kabeltyp</em>}' attribute.
@@ -68,7 +71,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected kabeltyptype kabeltyp = KABELTYP_EDEFAULT;
+	protected String kabeltyp = KABELTYP_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getZiel() <em>Ziel</em>}' reference.
@@ -89,6 +92,26 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @ordered
 	 */
 	protected Anlage ursprung;
+
+	/**
+	 * The cached value of the '{@link #getQuellSicherung() <em>Quell Sicherung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuellSicherung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Sicherung quellSicherung;
+
+	/**
+	 * The cached value of the '{@link #getZielSicherung() <em>Ziel Sicherung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZielSicherung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Sicherung zielSicherung;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,7 +162,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public kabeltyptype getKabeltyp() {
+	public String getKabeltyp() {
 		return kabeltyp;
 	}
 
@@ -149,9 +172,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setKabeltyp(kabeltyptype newKabeltyp) {
-		kabeltyptype oldKabeltyp = kabeltyp;
-		kabeltyp = newKabeltyp == null ? KABELTYP_EDEFAULT : newKabeltyp;
+	public void setKabeltyp(String newKabeltyp) {
+		String oldKabeltyp = kabeltyp;
+		kabeltyp = newKabeltyp;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__KABELTYP, oldKabeltyp,
 					kabeltyp));
@@ -246,6 +269,126 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
+	public Sicherung getQuellSicherung() {
+		return quellSicherung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetQuellSicherung(Sicherung newQuellSicherung, NotificationChain msgs) {
+		Sicherung oldQuellSicherung = quellSicherung;
+		quellSicherung = newQuellSicherung;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.VERBINDUNG__QUELL_SICHERUNG, oldQuellSicherung, newQuellSicherung);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQuellSicherung(Sicherung newQuellSicherung) {
+		if (newQuellSicherung != quellSicherung) {
+			NotificationChain msgs = null;
+			if (quellSicherung != null)
+				msgs = ((InternalEObject) quellSicherung).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__QUELL_SICHERUNG, null, msgs);
+			if (newQuellSicherung != null)
+				msgs = ((InternalEObject) newQuellSicherung).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__QUELL_SICHERUNG, null, msgs);
+			msgs = basicSetQuellSicherung(newQuellSicherung, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__QUELL_SICHERUNG,
+					newQuellSicherung, newQuellSicherung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Sicherung getZielSicherung() {
+		return zielSicherung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetZielSicherung(Sicherung newZielSicherung, NotificationChain msgs) {
+		Sicherung oldZielSicherung = zielSicherung;
+		zielSicherung = newZielSicherung;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.VERBINDUNG__ZIEL_SICHERUNG, oldZielSicherung, newZielSicherung);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setZielSicherung(Sicherung newZielSicherung) {
+		if (newZielSicherung != zielSicherung) {
+			NotificationChain msgs = null;
+			if (zielSicherung != null)
+				msgs = ((InternalEObject) zielSicherung).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__ZIEL_SICHERUNG, null, msgs);
+			if (newZielSicherung != null)
+				msgs = ((InternalEObject) newZielSicherung).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__ZIEL_SICHERUNG, null, msgs);
+			msgs = basicSetZielSicherung(newZielSicherung, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__ZIEL_SICHERUNG,
+					newZielSicherung, newZielSicherung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
+			return basicSetQuellSicherung(null, msgs);
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
+			return basicSetZielSicherung(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
@@ -260,6 +403,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			if (resolve)
 				return getUrsprung();
 			return basicGetUrsprung();
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
+			return getQuellSicherung();
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
+			return getZielSicherung();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -276,13 +423,19 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			setVersorgungsspannung((spannungsarttype) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__KABELTYP:
-			setKabeltyp((kabeltyptype) newValue);
+			setKabeltyp((String) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__ZIEL:
 			setZiel((Anlage) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((Anlage) newValue);
+			return;
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
+			setQuellSicherung((Sicherung) newValue);
+			return;
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
+			setZielSicherung((Sicherung) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -308,6 +461,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((Anlage) null);
 			return;
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
+			setQuellSicherung((Sicherung) null);
+			return;
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
+			setZielSicherung((Sicherung) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -323,11 +482,15 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
 			return versorgungsspannung != VERSORGUNGSSPANNUNG_EDEFAULT;
 		case ModelPackage.VERBINDUNG__KABELTYP:
-			return kabeltyp != KABELTYP_EDEFAULT;
+			return KABELTYP_EDEFAULT == null ? kabeltyp != null : !KABELTYP_EDEFAULT.equals(kabeltyp);
 		case ModelPackage.VERBINDUNG__ZIEL:
 			return ziel != null;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			return ursprung != null;
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
+			return quellSicherung != null;
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
+			return zielSicherung != null;
 		}
 		return super.eIsSet(featureID);
 	}

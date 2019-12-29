@@ -64,6 +64,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createAnlage();
 		case ModelPackage.VERBINDUNG:
 			return createVerbindung();
+		case ModelPackage.SICHERUNG:
+			return createSicherung();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,8 +85,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createanlagearttypeFromString(eDataType, initialValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
 			return createspannungsarttypeFromString(eDataType, initialValue);
-		case ModelPackage.KABELTYPTYPE:
-			return createkabeltyptypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -104,8 +104,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return convertanlagearttypeToString(eDataType, instanceValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
 			return convertspannungsarttypeToString(eDataType, instanceValue);
-		case ModelPackage.KABELTYPTYPE:
-			return convertkabeltyptypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -153,6 +151,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Verbindung createVerbindung() {
 		VerbindungImpl verbindung = new VerbindungImpl();
 		return verbindung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Sicherung createSicherung() {
+		SicherungImpl sicherung = new SicherungImpl();
+		return sicherung;
 	}
 
 	/**
@@ -218,28 +227,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertspannungsarttypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public kabeltyptype createkabeltyptypeFromString(EDataType eDataType, String initialValue) {
-		kabeltyptype result = kabeltyptype.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertkabeltyptypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

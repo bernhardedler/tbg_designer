@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getUrsprung <em>Ursprung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung()
@@ -51,28 +53,25 @@ public interface Verbindung extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Kabeltyp</b></em>' attribute.
-	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.kabeltyptype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kabeltyp</em>' attribute.
-	 * @see at.tb_gruber.designer.model.kabeltyptype
-	 * @see #setKabeltyp(kabeltyptype)
+	 * @see #setKabeltyp(String)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Kabeltyp()
 	 * @model
 	 * @generated
 	 */
-	kabeltyptype getKabeltyp();
+	String getKabeltyp();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kabeltyp</em>' attribute.
-	 * @see at.tb_gruber.designer.model.kabeltyptype
 	 * @see #getKabeltyp()
 	 * @generated
 	 */
-	void setKabeltyp(kabeltyptype value);
+	void setKabeltyp(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ziel</b></em>' reference.
@@ -117,5 +116,49 @@ public interface Verbindung extends EObject {
 	 * @generated
 	 */
 	void setUrsprung(Anlage value);
+
+	/**
+	 * Returns the value of the '<em><b>Quell Sicherung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Quell Sicherung</em>' containment reference.
+	 * @see #setQuellSicherung(Sicherung)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_QuellSicherung()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Sicherung getQuellSicherung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Quell Sicherung</em>' containment reference.
+	 * @see #getQuellSicherung()
+	 * @generated
+	 */
+	void setQuellSicherung(Sicherung value);
+
+	/**
+	 * Returns the value of the '<em><b>Ziel Sicherung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ziel Sicherung</em>' containment reference.
+	 * @see #setZielSicherung(Sicherung)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_ZielSicherung()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Sicherung getZielSicherung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ziel Sicherung</em>' containment reference.
+	 * @see #getZielSicherung()
+	 * @generated
+	 */
+	void setZielSicherung(Sicherung value);
 
 } // Verbindung

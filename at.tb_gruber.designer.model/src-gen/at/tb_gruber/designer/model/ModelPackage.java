@@ -350,13 +350,31 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG__URSPRUNG = 3;
 
 	/**
+	 * The feature id for the '<em><b>Quell Sicherung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERBINDUNG__QUELL_SICHERUNG = 4;
+
+	/**
+	 * The feature id for the '<em><b>Ziel Sicherung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERBINDUNG__ZIEL_SICHERUNG = 5;
+
+	/**
 	 * The number of structural features of the '<em>Verbindung</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG_FEATURE_COUNT = 4;
+	int VERBINDUNG_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Verbindung</em>' class.
@@ -368,6 +386,43 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.SicherungImpl <em>Sicherung</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.SicherungImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSicherung()
+	 * @generated
+	 */
+	int SICHERUNG = 4;
+
+	/**
+	 * The feature id for the '<em><b>Sicherungsgröße</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SICHERUNG__SICHERUNGSGRÖSSE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Sicherung</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SICHERUNG_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Sicherung</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SICHERUNG_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,7 +430,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 4;
+	int OBJEKTARTTYPE = 5;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}' enum.
@@ -385,7 +440,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getanlagearttype()
 	 * @generated
 	 */
-	int ANLAGEARTTYPE = 5;
+	int ANLAGEARTTYPE = 6;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
@@ -395,17 +450,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 6;
-
-	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.kabeltyptype <em>kabeltyptype</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.kabeltyptype
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getkabeltyptype()
-	 * @generated
-	 */
-	int KABELTYPTYPE = 7;
+	int SPANNUNGSARTTYPE = 7;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -690,6 +735,49 @@ public interface ModelPackage extends EPackage {
 	EReference getVerbindung_Ursprung();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Quell Sicherung</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getQuellSicherung()
+	 * @see #getVerbindung()
+	 * @generated
+	 */
+	EReference getVerbindung_QuellSicherung();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ziel Sicherung</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getZielSicherung()
+	 * @see #getVerbindung()
+	 * @generated
+	 */
+	EReference getVerbindung_ZielSicherung();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Sicherung <em>Sicherung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sicherung</em>'.
+	 * @see at.tb_gruber.designer.model.Sicherung
+	 * @generated
+	 */
+	EClass getSicherung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Sicherung#getSicherungsgröße <em>Sicherungsgröße</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sicherungsgröße</em>'.
+	 * @see at.tb_gruber.designer.model.Sicherung#getSicherungsgröße()
+	 * @see #getSicherung()
+	 * @generated
+	 */
+	EAttribute getSicherung_Sicherungsgröße();
+
+	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -718,16 +806,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getspannungsarttype();
-
-	/**
-	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.kabeltyptype <em>kabeltyptype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>kabeltyptype</em>'.
-	 * @see at.tb_gruber.designer.model.kabeltyptype
-	 * @generated
-	 */
-	EEnum getkabeltyptype();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -969,6 +1047,40 @@ public interface ModelPackage extends EPackage {
 		EReference VERBINDUNG__URSPRUNG = eINSTANCE.getVerbindung_Ursprung();
 
 		/**
+		 * The meta object literal for the '<em><b>Quell Sicherung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERBINDUNG__QUELL_SICHERUNG = eINSTANCE.getVerbindung_QuellSicherung();
+
+		/**
+		 * The meta object literal for the '<em><b>Ziel Sicherung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERBINDUNG__ZIEL_SICHERUNG = eINSTANCE.getVerbindung_ZielSicherung();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.SicherungImpl <em>Sicherung</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.SicherungImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSicherung()
+		 * @generated
+		 */
+		EClass SICHERUNG = eINSTANCE.getSicherung();
+
+		/**
+		 * The meta object literal for the '<em><b>Sicherungsgröße</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SICHERUNG__SICHERUNGSGRÖSSE = eINSTANCE.getSicherung_Sicherungsgröße();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -997,16 +1109,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum SPANNUNGSARTTYPE = eINSTANCE.getspannungsarttype();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.kabeltyptype <em>kabeltyptype</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.kabeltyptype
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getkabeltyptype()
-		 * @generated
-		 */
-		EEnum KABELTYPTYPE = eINSTANCE.getkabeltyptype();
 
 	}
 
