@@ -31,4 +31,10 @@
         </run>
      </runtime>
   </extension>
+  <extension
+        point="org.eclipse.sirius.diagram.ui.styleConfigurationProvider">
+        <styleConfigurationProvider
+              providerClass="at.tb_gruber.designer.design.style.StyleConfigurationProvider">
+        </styleConfigurationProvider>
+  </extension>
 </plugin>

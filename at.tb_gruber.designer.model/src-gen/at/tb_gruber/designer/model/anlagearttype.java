@@ -19,25 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum anlagearttype implements Enumerator {
 	/**
-	 * The '<em><b>Trafo</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TRAFO_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TRAFO(0, "Trafo", "Trafo"),
-
-	/**
-	 * The '<em><b>Versorgungsknoten</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #VERSORGUNGSKNOTEN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	VERSORGUNGSKNOTEN(1, "Versorgungsknoten", "Versorgungsknoten"),
-	/**
 	 * The '<em><b>UEGS Zaehlpunkt</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
@@ -45,7 +26,25 @@ public enum anlagearttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UEGS_ZAEHLPUNKT(2, "UEGSZaehlpunkt", "\u00dcGS/Z\u00e4hlpunkt"),
+	UEGS_ZAEHLPUNKT(0, "UEGSZaehlpunkt", "\u00dcGS/Z\u00e4hlpunkt"),
+	/**
+	* The '<em><b>Trafo</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #TRAFO_VALUE
+	* @generated
+	* @ordered
+	*/
+	TRAFO(1, "Trafo", "Trafo"),
+	/**
+	* The '<em><b>Versorgungsknoten</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #VERSORGUNGSKNOTEN_VALUE
+	* @generated
+	* @ordered
+	*/
+	VERSORGUNGSKNOTEN(2, "Versorgungsknoten", "Versorgungsknoten"),
 
 	/**
 	 * The '<em><b>Energietechnikanlage</b></em>' literal object.
@@ -55,29 +54,16 @@ public enum anlagearttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENERGIETECHNIKANLAGE(3, "Energietechnikanlage", "Energietechnikanlage");
-
+	ENERGIETECHNIKANLAGE(3, "Energietechnikanlage", "Energietechnikanlage"),
 	/**
-	 * The '<em><b>Trafo</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TRAFO
-	 * @model name="Trafo"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TRAFO_VALUE = 0;
-
-	/**
-	 * The '<em><b>Versorgungsknoten</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #VERSORGUNGSKNOTEN
-	 * @model name="Versorgungsknoten"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int VERSORGUNGSKNOTEN_VALUE = 1;
+	* The '<em><b>VK ET</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #VK_ET_VALUE
+	* @generated
+	* @ordered
+	*/
+	VK_ET(4, "VK_ET", "Vers.Knoten + ET-Anlage");
 
 	/**
 	 * The '<em><b>UEGS Zaehlpunkt</b></em>' literal value.
@@ -88,7 +74,29 @@ public enum anlagearttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UEGS_ZAEHLPUNKT_VALUE = 2;
+	public static final int UEGS_ZAEHLPUNKT_VALUE = 0;
+
+	/**
+	 * The '<em><b>Trafo</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TRAFO
+	 * @model name="Trafo"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TRAFO_VALUE = 1;
+
+	/**
+	 * The '<em><b>Versorgungsknoten</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VERSORGUNGSKNOTEN
+	 * @model name="Versorgungsknoten"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VERSORGUNGSKNOTEN_VALUE = 2;
 
 	/**
 	 * The '<em><b>Energietechnikanlage</b></em>' literal value.
@@ -102,13 +110,24 @@ public enum anlagearttype implements Enumerator {
 	public static final int ENERGIETECHNIKANLAGE_VALUE = 3;
 
 	/**
+	 * The '<em><b>VK ET</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VK_ET
+	 * @model literal="Vers.Knoten + ET-Anlage"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VK_ET_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>anlagearttype</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final anlagearttype[] VALUES_ARRAY = new anlagearttype[] { TRAFO, VERSORGUNGSKNOTEN, UEGS_ZAEHLPUNKT,
-			ENERGIETECHNIKANLAGE, };
+	private static final anlagearttype[] VALUES_ARRAY = new anlagearttype[] { UEGS_ZAEHLPUNKT, TRAFO, VERSORGUNGSKNOTEN,
+			ENERGIETECHNIKANLAGE, VK_ET, };
 
 	/**
 	 * A public read-only list of all the '<em><b>anlagearttype</b></em>' enumerators.
@@ -164,14 +183,16 @@ public enum anlagearttype implements Enumerator {
 	 */
 	public static anlagearttype get(int value) {
 		switch (value) {
+		case UEGS_ZAEHLPUNKT_VALUE:
+			return UEGS_ZAEHLPUNKT;
 		case TRAFO_VALUE:
 			return TRAFO;
 		case VERSORGUNGSKNOTEN_VALUE:
 			return VERSORGUNGSKNOTEN;
-		case UEGS_ZAEHLPUNKT_VALUE:
-			return UEGS_ZAEHLPUNKT;
 		case ENERGIETECHNIKANLAGE_VALUE:
 			return ENERGIETECHNIKANLAGE;
+		case VK_ET_VALUE:
+			return VK_ET;
 		}
 		return null;
 	}

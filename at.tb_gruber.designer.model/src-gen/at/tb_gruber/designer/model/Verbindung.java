@@ -13,12 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getNr <em>Nr</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getVersorgungsspannung <em>Versorgungsspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getUrsprung <em>Ursprung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherungsGroesse <em>Quell Sicherungs Groesse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherungsGroesse <em>Ziel Sicherungs Groesse</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung()
@@ -26,6 +27,28 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Verbindung extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr</em>' attribute.
+	 * @see #setNr(int)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Nr()
+	 * @model id="true"
+	 * @generated
+	 */
+	int getNr();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getNr <em>Nr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr</em>' attribute.
+	 * @see #getNr()
+	 * @generated
+	 */
+	void setNr(int value);
+
 	/**
 	 * Returns the value of the '<em><b>Versorgungsspannung</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
@@ -118,47 +141,47 @@ public interface Verbindung extends EObject {
 	void setUrsprung(Anlage value);
 
 	/**
-	 * Returns the value of the '<em><b>Quell Sicherung</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Quell Sicherungs Groesse</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quell Sicherung</em>' containment reference.
-	 * @see #setQuellSicherung(Sicherung)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_QuellSicherung()
-	 * @model containment="true"
+	 * @return the value of the '<em>Quell Sicherungs Groesse</em>' attribute.
+	 * @see #setQuellSicherungsGroesse(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_QuellSicherungsGroesse()
+	 * @model
 	 * @generated
 	 */
-	Sicherung getQuellSicherung();
+	String getQuellSicherungsGroesse();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}' containment reference.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherungsGroesse <em>Quell Sicherungs Groesse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Quell Sicherung</em>' containment reference.
-	 * @see #getQuellSicherung()
+	 * @param value the new value of the '<em>Quell Sicherungs Groesse</em>' attribute.
+	 * @see #getQuellSicherungsGroesse()
 	 * @generated
 	 */
-	void setQuellSicherung(Sicherung value);
+	void setQuellSicherungsGroesse(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Ziel Sicherung</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Ziel Sicherungs Groesse</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ziel Sicherung</em>' containment reference.
-	 * @see #setZielSicherung(Sicherung)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_ZielSicherung()
-	 * @model containment="true"
+	 * @return the value of the '<em>Ziel Sicherungs Groesse</em>' attribute.
+	 * @see #setZielSicherungsGroesse(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_ZielSicherungsGroesse()
+	 * @model
 	 * @generated
 	 */
-	Sicherung getZielSicherung();
+	String getZielSicherungsGroesse();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}' containment reference.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getZielSicherungsGroesse <em>Ziel Sicherungs Groesse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ziel Sicherung</em>' containment reference.
-	 * @see #getZielSicherung()
+	 * @param value the new value of the '<em>Ziel Sicherungs Groesse</em>' attribute.
+	 * @see #getZielSicherungsGroesse()
 	 * @generated
 	 */
-	void setZielSicherung(Sicherung value);
+	void setZielSicherungsGroesse(String value);
 
 } // Verbindung

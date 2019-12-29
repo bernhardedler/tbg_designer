@@ -14,15 +14,20 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Hochbauobjekt"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//anlagearttype">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/UEGSZaehlpunkt"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/Trafo"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/Versorgungsknoten"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/UEGSZaehlpunkt"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/Energietechnikanlage"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/VK_ET"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//spannungsarttype">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP50Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_violett"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/_20kV50Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/_10kV50Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP50Hz"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/_15kV16_7Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP16_7Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_hellbraun"/>
     </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
@@ -49,15 +54,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/versorgungsspannung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/versorgungsspannung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/kabeltyp"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verbindung/ziel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verbindung/ursprung"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verbindung/quellSicherung"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verbindung/zielSicherung"/>
-    </genClasses>
-    <genClasses ecoreClass="model.ecore#//Sicherung">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Sicherung/Sicherungsgröße"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/quellSicherungsGroesse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/zielSicherungsGroesse"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

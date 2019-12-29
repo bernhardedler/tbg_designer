@@ -208,12 +208,12 @@ public interface Anlage extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Versorgt Von</em>' reference.
-	 * @see #setVersorgtVon(Anlage)
+	 * @see #setVersorgtVon(Verbindung)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_VersorgtVon()
 	 * @model
 	 * @generated
 	 */
-	Anlage getVersorgtVon();
+	Verbindung getVersorgtVon();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getVersorgtVon <em>Versorgt Von</em>}' reference.
@@ -223,7 +223,7 @@ public interface Anlage extends EObject {
 	 * @see #getVersorgtVon()
 	 * @generated
 	 */
-	void setVersorgtVon(Anlage value);
+	void setVersorgtVon(Verbindung value);
 
 	/**
 	 * Returns the value of the '<em><b>Versorgungsspannung</b></em>' attribute.

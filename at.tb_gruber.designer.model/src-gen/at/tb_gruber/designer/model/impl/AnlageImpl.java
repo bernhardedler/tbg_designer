@@ -69,7 +69,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final anlagearttype ANLAGENART_EDEFAULT = anlagearttype.TRAFO;
+	protected static final anlagearttype ANLAGENART_EDEFAULT = anlagearttype.UEGS_ZAEHLPUNKT;
 
 	/**
 	 * The cached value of the '{@link #getAnlagenart() <em>Anlagenart</em>}' attribute.
@@ -169,7 +169,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype TRAFOSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype TRAFOSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
 
 	/**
 	 * The cached value of the '{@link #getTrafospannung() <em>Trafospannung</em>}' attribute.
@@ -199,7 +199,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 * @ordered
 	 */
-	protected Anlage versorgtVon;
+	protected Verbindung versorgtVon;
 
 	/**
 	 * The default value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
@@ -209,7 +209,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
 
 	/**
 	 * The cached value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
@@ -427,10 +427,10 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 */
 	@Override
-	public Anlage getVersorgtVon() {
+	public Verbindung getVersorgtVon() {
 		if (versorgtVon != null && versorgtVon.eIsProxy()) {
 			InternalEObject oldVersorgtVon = (InternalEObject) versorgtVon;
-			versorgtVon = (Anlage) eResolveProxy(oldVersorgtVon);
+			versorgtVon = (Verbindung) eResolveProxy(oldVersorgtVon);
 			if (versorgtVon != oldVersorgtVon) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ANLAGE__VERSORGT_VON,
@@ -445,7 +445,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anlage basicGetVersorgtVon() {
+	public Verbindung basicGetVersorgtVon() {
 		return versorgtVon;
 	}
 
@@ -455,8 +455,8 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 */
 	@Override
-	public void setVersorgtVon(Anlage newVersorgtVon) {
-		Anlage oldVersorgtVon = versorgtVon;
+	public void setVersorgtVon(Verbindung newVersorgtVon) {
+		Verbindung oldVersorgtVon = versorgtVon;
 		versorgtVon = newVersorgtVon;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__VERSORGT_VON, oldVersorgtVon,
@@ -570,7 +570,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 			getVerbindungNach().addAll((Collection<? extends Verbindung>) newValue);
 			return;
 		case ModelPackage.ANLAGE__VERSORGT_VON:
-			setVersorgtVon((Anlage) newValue);
+			setVersorgtVon((Verbindung) newValue);
 			return;
 		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
 			setVersorgungsspannung((spannungsarttype) newValue);
@@ -612,7 +612,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 			getVerbindungNach().clear();
 			return;
 		case ModelPackage.ANLAGE__VERSORGT_VON:
-			setVersorgtVon((Anlage) null);
+			setVersorgtVon((Verbindung) null);
 			return;
 		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
 			setVersorgungsspannung(VERSORGUNGSSPANNUNG_EDEFAULT);

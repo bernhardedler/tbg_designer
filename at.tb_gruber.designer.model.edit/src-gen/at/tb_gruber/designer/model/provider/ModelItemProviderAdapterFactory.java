@@ -165,29 +165,6 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Sicherung} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SicherungItemProvider sicherungItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Sicherung}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSicherungAdapter() {
-		if (sicherungItemProvider == null) {
-			sicherungItemProvider = new SicherungItemProvider(this);
-		}
-
-		return sicherungItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -300,8 +277,6 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			anlageItemProvider.dispose();
 		if (verbindungItemProvider != null)
 			verbindungItemProvider.dispose();
-		if (sicherungItemProvider != null)
-			sicherungItemProvider.dispose();
 	}
 
 }

@@ -64,8 +64,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createAnlage();
 		case ModelPackage.VERBINDUNG:
 			return createVerbindung();
-		case ModelPackage.SICHERUNG:
-			return createSicherung();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -151,17 +149,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Verbindung createVerbindung() {
 		VerbindungImpl verbindung = new VerbindungImpl();
 		return verbindung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Sicherung createSicherung() {
-		SicherungImpl sicherung = new SicherungImpl();
-		return sicherung;
 	}
 
 	/**

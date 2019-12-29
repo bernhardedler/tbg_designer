@@ -4,11 +4,9 @@ package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.Sicherung;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.spannungsarttype;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -22,17 +20,38 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getNr <em>Nr</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getVersorgungsspannung <em>Versorgungsspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getUrsprung <em>Ursprung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getQuellSicherung <em>Quell Sicherung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZielSicherung <em>Ziel Sicherung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getQuellSicherungsGroesse <em>Quell Sicherungs Groesse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZielSicherungsGroesse <em>Ziel Sicherungs Groesse</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verbindung {
+	/**
+	 * The default value of the '{@link #getNr() <em>Nr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNr() <em>Nr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNr()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nr = NR_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,7 +60,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
 
 	/**
 	 * The cached value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
@@ -94,24 +113,44 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	protected Anlage ursprung;
 
 	/**
-	 * The cached value of the '{@link #getQuellSicherung() <em>Quell Sicherung</em>}' containment reference.
+	 * The default value of the '{@link #getQuellSicherungsGroesse() <em>Quell Sicherungs Groesse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuellSicherung()
+	 * @see #getQuellSicherungsGroesse()
 	 * @generated
 	 * @ordered
 	 */
-	protected Sicherung quellSicherung;
+	protected static final String QUELL_SICHERUNGS_GROESSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getZielSicherung() <em>Ziel Sicherung</em>}' containment reference.
+	 * The cached value of the '{@link #getQuellSicherungsGroesse() <em>Quell Sicherungs Groesse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZielSicherung()
+	 * @see #getQuellSicherungsGroesse()
 	 * @generated
 	 * @ordered
 	 */
-	protected Sicherung zielSicherung;
+	protected String quellSicherungsGroesse = QUELL_SICHERUNGS_GROESSE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getZielSicherungsGroesse() <em>Ziel Sicherungs Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZielSicherungsGroesse()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ZIEL_SICHERUNGS_GROESSE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getZielSicherungsGroesse() <em>Ziel Sicherungs Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZielSicherungsGroesse()
+	 * @generated
+	 * @ordered
+	 */
+	protected String zielSicherungsGroesse = ZIEL_SICHERUNGS_GROESSE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,6 +169,29 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	@Override
 	protected EClass eStaticClass() {
 		return ModelPackage.Literals.VERBINDUNG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getNr() {
+		return nr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNr(int newNr) {
+		int oldNr = nr;
+		nr = newNr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__NR, oldNr, nr));
 	}
 
 	/**
@@ -269,27 +331,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public Sicherung getQuellSicherung() {
-		return quellSicherung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetQuellSicherung(Sicherung newQuellSicherung, NotificationChain msgs) {
-		Sicherung oldQuellSicherung = quellSicherung;
-		quellSicherung = newQuellSicherung;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ModelPackage.VERBINDUNG__QUELL_SICHERUNG, oldQuellSicherung, newQuellSicherung);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
+	public String getQuellSicherungsGroesse() {
+		return quellSicherungsGroesse;
 	}
 
 	/**
@@ -298,21 +341,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setQuellSicherung(Sicherung newQuellSicherung) {
-		if (newQuellSicherung != quellSicherung) {
-			NotificationChain msgs = null;
-			if (quellSicherung != null)
-				msgs = ((InternalEObject) quellSicherung).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__QUELL_SICHERUNG, null, msgs);
-			if (newQuellSicherung != null)
-				msgs = ((InternalEObject) newQuellSicherung).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__QUELL_SICHERUNG, null, msgs);
-			msgs = basicSetQuellSicherung(newQuellSicherung, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__QUELL_SICHERUNG,
-					newQuellSicherung, newQuellSicherung));
+	public void setQuellSicherungsGroesse(String newQuellSicherungsGroesse) {
+		String oldQuellSicherungsGroesse = quellSicherungsGroesse;
+		quellSicherungsGroesse = newQuellSicherungsGroesse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE,
+					oldQuellSicherungsGroesse, quellSicherungsGroesse));
 	}
 
 	/**
@@ -321,27 +355,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public Sicherung getZielSicherung() {
-		return zielSicherung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetZielSicherung(Sicherung newZielSicherung, NotificationChain msgs) {
-		Sicherung oldZielSicherung = zielSicherung;
-		zielSicherung = newZielSicherung;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ModelPackage.VERBINDUNG__ZIEL_SICHERUNG, oldZielSicherung, newZielSicherung);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
+	public String getZielSicherungsGroesse() {
+		return zielSicherungsGroesse;
 	}
 
 	/**
@@ -350,37 +365,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setZielSicherung(Sicherung newZielSicherung) {
-		if (newZielSicherung != zielSicherung) {
-			NotificationChain msgs = null;
-			if (zielSicherung != null)
-				msgs = ((InternalEObject) zielSicherung).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__ZIEL_SICHERUNG, null, msgs);
-			if (newZielSicherung != null)
-				msgs = ((InternalEObject) newZielSicherung).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - ModelPackage.VERBINDUNG__ZIEL_SICHERUNG, null, msgs);
-			msgs = basicSetZielSicherung(newZielSicherung, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__ZIEL_SICHERUNG,
-					newZielSicherung, newZielSicherung));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
-			return basicSetQuellSicherung(null, msgs);
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
-			return basicSetZielSicherung(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setZielSicherungsGroesse(String newZielSicherungsGroesse) {
+		String oldZielSicherungsGroesse = zielSicherungsGroesse;
+		zielSicherungsGroesse = newZielSicherungsGroesse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE,
+					oldZielSicherungsGroesse, zielSicherungsGroesse));
 	}
 
 	/**
@@ -391,6 +381,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case ModelPackage.VERBINDUNG__NR:
+			return getNr();
 		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
 			return getVersorgungsspannung();
 		case ModelPackage.VERBINDUNG__KABELTYP:
@@ -403,10 +395,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			if (resolve)
 				return getUrsprung();
 			return basicGetUrsprung();
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
-			return getQuellSicherung();
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
-			return getZielSicherung();
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
+			return getQuellSicherungsGroesse();
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
+			return getZielSicherungsGroesse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -419,6 +411,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case ModelPackage.VERBINDUNG__NR:
+			setNr((Integer) newValue);
+			return;
 		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
 			setVersorgungsspannung((spannungsarttype) newValue);
 			return;
@@ -431,11 +426,11 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((Anlage) newValue);
 			return;
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
-			setQuellSicherung((Sicherung) newValue);
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
+			setQuellSicherungsGroesse((String) newValue);
 			return;
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
-			setZielSicherung((Sicherung) newValue);
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
+			setZielSicherungsGroesse((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -449,6 +444,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case ModelPackage.VERBINDUNG__NR:
+			setNr(NR_EDEFAULT);
+			return;
 		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
 			setVersorgungsspannung(VERSORGUNGSSPANNUNG_EDEFAULT);
 			return;
@@ -461,11 +459,11 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((Anlage) null);
 			return;
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
-			setQuellSicherung((Sicherung) null);
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
+			setQuellSicherungsGroesse(QUELL_SICHERUNGS_GROESSE_EDEFAULT);
 			return;
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
-			setZielSicherung((Sicherung) null);
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
+			setZielSicherungsGroesse(ZIEL_SICHERUNGS_GROESSE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -479,6 +477,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case ModelPackage.VERBINDUNG__NR:
+			return nr != NR_EDEFAULT;
 		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
 			return versorgungsspannung != VERSORGUNGSSPANNUNG_EDEFAULT;
 		case ModelPackage.VERBINDUNG__KABELTYP:
@@ -487,10 +487,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return ziel != null;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			return ursprung != null;
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
-			return quellSicherung != null;
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
-			return zielSicherung != null;
+		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
+			return QUELL_SICHERUNGS_GROESSE_EDEFAULT == null ? quellSicherungsGroesse != null
+					: !QUELL_SICHERUNGS_GROESSE_EDEFAULT.equals(quellSicherungsGroesse);
+		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
+			return ZIEL_SICHERUNGS_GROESSE_EDEFAULT == null ? zielSicherungsGroesse != null
+					: !ZIEL_SICHERUNGS_GROESSE_EDEFAULT.equals(zielSicherungsGroesse);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -506,10 +508,16 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (versorgungsspannung: ");
+		result.append(" (nr: ");
+		result.append(nr);
+		result.append(", versorgungsspannung: ");
 		result.append(versorgungsspannung);
 		result.append(", kabeltyp: ");
 		result.append(kabeltyp);
+		result.append(", quellSicherungsGroesse: ");
+		result.append(quellSicherungsGroesse);
+		result.append(", zielSicherungsGroesse: ");
+		result.append(zielSicherungsGroesse);
 		result.append(')');
 		return result.toString();
 	}
