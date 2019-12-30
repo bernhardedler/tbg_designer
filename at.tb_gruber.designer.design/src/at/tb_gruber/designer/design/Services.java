@@ -49,79 +49,31 @@ public class Services {
 		return alleIdsArray.length;
 	}
 
-	public Boolean isSpannungsart0(EObject self) {
-		return isSpannungsart(self, spannungsarttype.RESERVE_VIOLETT_VALUE);
-	}
-
-	public Boolean isSpannungsart1(EObject self) {
-		return isSpannungsart(self, spannungsarttype._20K_V50_HZ_VALUE);
-	}
-
-	public Boolean isSpannungsart2(EObject self) {
-		return isSpannungsart(self, spannungsarttype._10K_V50_HZ_VALUE);
-	}
-
-	public Boolean isSpannungsart3(EObject self) {
-		return isSpannungsart(self, spannungsarttype.NSP50_HZ_VALUE);
-	}
-
-	public Boolean isSpannungsart4(EObject self) {
-		return isSpannungsart(self, spannungsarttype._15K_V16_7HZ_VALUE);
-	}
-
-	public Boolean isSpannungsart5(EObject self) {
-		return isSpannungsart(self, spannungsarttype.NSP16_7HZ_VALUE);
-	}
-
-	public Boolean isSpannungsart6(EObject self) {
-		return isSpannungsart(self, spannungsarttype.RESERVE_HELLBRAUN_VALUE);
-	}
-
-	private Boolean isSpannungsart(EObject self, Integer target) {
+	public Boolean isSpannungsart(EObject self, Integer target) {
 		if (self instanceof VerbindungImpl) {
 			return target.equals(((VerbindungImpl) self).getVersorgungsspannung().getValue());
 		} else if (self instanceof AnlageImpl) {
-			return target.equals(((VerbindungImpl) self).getVersorgungsspannung().getValue());
+			return target.equals(((AnlageImpl) self).getVersorgungsspannung().getValue());
 		}
 		return false;
 	}
-	
-	private Boolean isAnlageart0(EObject self) {
-		return isAnlageart(self, anlagearttype.UEGS_ZAEHLPUNKT_VALUE);
-	}
 
-	private Boolean isAnlageart1(EObject self) {
-		return isAnlageart(self, anlagearttype.TRAFO_VALUE);
-	}
-	
-	private Boolean isAnlageart2(EObject self) {
-		return isAnlageart(self, anlagearttype.VERSORGUNGSKNOTEN_VALUE);
-	}
-	
-	private Boolean isAnlageart3(EObject self) {
-		return isAnlageart(self, anlagearttype.ENERGIETECHNIKANLAGE_VALUE);
-	}
-	
-	private Boolean isAnlageart4(EObject self) {
-		return isAnlageart(self, anlagearttype.VK_ET_VALUE);
-	}
-
-	private Boolean isAnlageart(EObject self, Integer target) {
+	public Boolean isAnlageart(EObject self, Integer target) {
 		if (self instanceof AnlageImpl) {
 			return target.equals(((AnlageImpl) self).getAnlagenart().getValue());
 		}
 		return false;
 	}
 	
-	public String getAnlageKombi(EObject self) {
-		if (self instanceof AnlageImpl) {
-			AnlageImpl anlage = (AnlageImpl) self;
-			return anlage.getAnlagenart().getValue() + "_" + anlage.getVersorgungsspannung().getValue();
-		}
-		return "";
-	}
-	
-	public Boolean isAnlageKombi(EObject self, Integer anlageart, Integer spannungsart) {
+	/**
+	 * test javadoc
+	 * @param self
+	 * @param anlageart
+	 * @param spannungsart
+	 * @return
+	 */
+	public Boolean isAnlageart(EObject self, Integer anlageart, Integer spannungsart) {
 		return isAnlageart(self, anlageart) && isSpannungsart(self, spannungsart);
 	}
+
 }

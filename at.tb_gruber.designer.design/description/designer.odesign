@@ -14,7 +14,7 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </endLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="service:isSpannungsart0()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(0)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -25,7 +25,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="service:isSpannungsart1()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(1)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -36,7 +36,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="service:isSpannungsart2()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(2)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -47,7 +47,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="service:isSpannungsart3()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(3)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -58,7 +58,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="service:isSpannungsart4()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(4)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -69,7 +69,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="service:isSpannungsart5()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(5)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -80,7 +80,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="service:isSpannungsart6()">
+          <conditionnalStyles predicateExpression="[self.isSpannungsart(6)/]">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
@@ -99,20 +99,8 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
-            <conditionnalStyles predicateExpression="aql:self.getAnlageKombi().strcmp('0_1')==0">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="20" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/01R_Übergabestelle-Zählpunkt_rot_20kV_50Hz.png">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="aql:self.getAnlageKombi().strcmp('0_2')==0">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/01B_Übergabestelle-Zählpunkt_blau_10kV_50Hz.png">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="aql:self.getAnlageKombi().strcmp('0_3')==0">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/01G_Übergabestelle-Zählpunkt_grün_NSP_50Hz.png">
+            <conditionnalStyles predicateExpression="[self.isAnlageart(2,3)/]">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/svg/2_3.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -172,7 +160,7 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Anlagentabelle" domainClass="model::Bahnhof">
-      <ownedLineMappings domainClass="model::Verbindung"/>
+      <ownedLineMappings name="Verbindung" domainClass="model::Verbindung"/>
       <ownedColumnMappings name="bhfBahnof" headerLabelExpression="Bahnhof" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().eContainer().name"/>
       <ownedColumnMappings name="bhfProjektname" headerLabelExpression="Projektname" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().eContainer().projektname"/>
       <ownedColumnMappings name="objObjektname" headerLabelExpression="Objektname" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().name"/>
