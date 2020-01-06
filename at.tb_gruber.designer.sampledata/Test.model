@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model">
   <objekt name="Gebäude A">
-    <anlage anlagenart="Versorgungsknoten">
+    <anlage name="Anlage A1">
       <verbindungNach nr="1" versorgungsspannung="10kV 50Hz (blau)" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="Gebäude B">
-    <anlage name="Anlage B1" anlagenart="Versorgungsknoten" versorgtVon="1" versorgungsspannung="NSP 50Hz (grün)"/>
+    <anlage name="Anlage B12" anlagenart="Trafo" versorgtVon="1" versorgungsspannung="NSP 50Hz (grün)"/>
   </objekt>
 </tbg:Bahnhof>

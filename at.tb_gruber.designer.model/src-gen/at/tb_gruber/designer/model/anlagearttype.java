@@ -28,22 +28,22 @@ public enum anlagearttype implements Enumerator {
 	 */
 	UEGS_ZAEHLPUNKT(0, "UEGSZaehlpunkt", "\u00dcGS/Z\u00e4hlpunkt"),
 	/**
-	* The '<em><b>Trafo</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Trafo</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #TRAFO_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #TRAFO_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	TRAFO(1, "Trafo", "Trafo"),
 	/**
-	* The '<em><b>Versorgungsknoten</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Versorgungsknoten</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #VERSORGUNGSKNOTEN_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #VERSORGUNGSKNOTEN_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	VERSORGUNGSKNOTEN(2, "Versorgungsknoten", "Versorgungsknoten"),
 
 	/**
@@ -56,13 +56,13 @@ public enum anlagearttype implements Enumerator {
 	 */
 	ENERGIETECHNIKANLAGE(3, "Energietechnikanlage", "Energietechnikanlage"),
 	/**
-	* The '<em><b>VK ET</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>VK ET</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #VK_ET_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #VK_ET_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	VK_ET(4, "VK_ET", "Vers.Knoten + ET-Anlage");
 
 	/**

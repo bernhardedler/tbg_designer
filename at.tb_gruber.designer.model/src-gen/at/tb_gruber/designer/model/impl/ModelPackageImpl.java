@@ -631,7 +631,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.TRAFOSTATION);
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.HOCHBAUOBJEKT);
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.SCHALTHAEUSER);
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.TUNNELOBJEKT);
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.FREISTEHENDER_VT);
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.VERKEHRSSTATION);
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.SONSTIGES);
 
 		initEEnum(anlagearttypeEEnum, anlagearttype.class, "anlagearttype");
 		addEEnumLiteral(anlagearttypeEEnum, anlagearttype.UEGS_ZAEHLPUNKT);

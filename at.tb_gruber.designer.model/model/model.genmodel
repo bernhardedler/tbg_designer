@@ -11,7 +11,13 @@
   <genPackages prefix="Model" basePackage="at.tb_gruber.designer" disposableProviderFactory="true"
       ecorePackage="model.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//objektarttype">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Trafostation"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Hochbauobjekt"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Schalthaeuser"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Tunnelobjekt"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Freistehender_VT"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Verkehrsstation"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Sonstiges"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//anlagearttype">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/UEGSZaehlpunkt"/>

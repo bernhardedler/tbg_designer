@@ -16,7 +16,13 @@
         eType="#//Anlage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="objektarttype">
-    <eLiterals name="Hochbauobjekt" literal="Hochbauobjekt"/>
+    <eLiterals name="Trafostation" literal="Trafostation"/>
+    <eLiterals name="Hochbauobjekt" value="1" literal="Hochbauobjekt"/>
+    <eLiterals name="Schalthaeuser" value="2" literal="Schalthäuser"/>
+    <eLiterals name="Tunnelobjekt" value="3" literal="Tunnelobjekt"/>
+    <eLiterals name="Freistehender_VT" value="4" literal="Freistehender VT"/>
+    <eLiterals name="Verkehrsstation" value="5" literal="Verkehrsstation"/>
+    <eLiterals name="Sonstiges" value="6" literal="Sonstiges"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anlage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

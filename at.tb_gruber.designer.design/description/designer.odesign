@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="designer" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="designer" version="12.0.0.2017041100">
   <ownedViewpoints name="AnlagenDesigner" modelFileExtension="model">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Anlagendiagramm" initialisation="true" domainClass="model::Bahnhof">
       <metamodel href="http://www.tb-gruber.at/model#/"/>
@@ -15,8 +15,7 @@
             </endLabelStyleDescription>
           </style>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(0)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -26,8 +25,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(1)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -37,8 +35,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(2)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -48,8 +45,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(3)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -59,8 +55,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(4)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -70,8 +65,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(5)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -81,8 +75,7 @@
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[self.isSpannungsart(6)/]">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
               <beginLabelStyleDescription labelSize="12" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -94,17 +87,10 @@
         </edgeMappings>
         <containerMappings name="ObjektContainer" domainClass="model::Objekt">
           <subNodeMappings name="AnlageNode" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Anlage">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:CustomStyleDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" id="at.tb_gruber.designer.design.style.AnlageStyle">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(2,3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/svg/2_3.svg">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </style>
-            </conditionnalStyles>
           </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" backgroundStyle="Liquid">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -163,10 +149,77 @@
       <ownedLineMappings name="Verbindung" domainClass="model::Verbindung"/>
       <ownedColumnMappings name="bhfBahnof" headerLabelExpression="Bahnhof" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().eContainer().name"/>
       <ownedColumnMappings name="bhfProjektname" headerLabelExpression="Projektname" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().eContainer().projektname"/>
-      <ownedColumnMappings name="objObjektname" headerLabelExpression="Objektname" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().name"/>
-      <ownedColumnMappings name="objObjektart" headerLabelExpression="Objektart" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().objektart"/>
-      <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name"/>
-      <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.anlagenart"/>
+      <ownedColumnMappings name="objObjektname" headerLabelExpression="Objektname" canEdit="aql:true" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().name">
+        <directEdit>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="table" documentation="The current DTable."/>
+          <variables name="line" documentation="The DLine of the current DCell."/>
+          <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <firstModelOperation xsi:type="tool_1:Let" variableName="objekt" valueExpression="aql:self.ziel.eContainer().oclAsType(model::Objekt)">
+            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:objekt">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <mask mask="{0}"/>
+        </directEdit>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="objObjektart" headerLabelExpression="Objektart" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().objektart">
+        <directEdit>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="table" documentation="The current DTable."/>
+          <variables name="line" documentation="The DLine of the current DCell."/>
+          <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <firstModelOperation xsi:type="tool_1:Let" variableName="objekt" valueExpression="aql:self.ziel.eContainer().oclAsType(model::Objekt)">
+            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:objekt">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="objektart" valueExpression="var:arg0"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <mask mask="{0}"/>
+        </directEdit>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name">
+        <directEdit>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="table" documentation="The current DTable."/>
+          <variables name="line" documentation="The DLine of the current DCell."/>
+          <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <firstModelOperation xsi:type="tool_1:Let" variableName="anlage" valueExpression="aql:self.ziel.oclAsType(model::Anlage)">
+            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:anlage">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <mask mask="{0}"/>
+        </directEdit>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.anlagenart">
+        <directEdit>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="table" documentation="The current DTable."/>
+          <variables name="line" documentation="The DLine of the current DCell."/>
+          <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <firstModelOperation xsi:type="tool_1:Let" valueExpression="aql:self.ziel.oclAsType(model::Anlage)">
+            <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Change Value">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagenart"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </buttons>
+              <page name="Default Page" labelExpression="Page" domainClass="model::Anlage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagentabelle']/@ownedColumnMappings[name='anlAnlagenart']/@directEdit/@firstModelOperation/@subModelOperations.0/@groups.0"/>
+              <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <mask mask="{0}"/>
+        </directEdit>
+      </ownedColumnMappings>
       <ownedColumnMappings name="anlAnlagennummer" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:self.ziel.anlagennummer"/>
       <ownedColumnMappings name="anlVersorgungsspannung" headerLabelExpression="Versorgungsspannung Frequenz" featureName="ursprung" labelExpression="aql:self.ziel.versorgungsspannung"/>
       <ownedColumnMappings name="anlTrafospannung" headerLabelExpression="Trafospannung Frequenz sek." featureName="ursprung" labelExpression="aql:self.ziel.trafospannung"/>
@@ -180,4 +233,13 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="at.tb_gruber.designer.design.Services"/>
   </ownedViewpoints>
+  <userColorsPalettes name="Grundfarben">
+    <entries xsi:type="description:UserFixedColor" red="112" green="48" blue="160" name="violett"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="0" blue="0" name="rot"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="112" blue="192" name="blau"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="255" blue="0" name="grün"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="0" blue="144" name="magenta"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="255" blue="255" name="cyan"/>
+    <entries xsi:type="description:UserFixedColor" red="196" green="89" blue="17" name="hellbraun"/>
+  </userColorsPalettes>
 </description:Group>

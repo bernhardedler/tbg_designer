@@ -69,7 +69,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final objektarttype OBJEKTART_EDEFAULT = objektarttype.HOCHBAUOBJEKT;
+	protected static final objektarttype OBJEKTART_EDEFAULT = objektarttype.TRAFOSTATION;
 
 	/**
 	 * The cached value of the '{@link #getObjektart() <em>Objektart</em>}' attribute.

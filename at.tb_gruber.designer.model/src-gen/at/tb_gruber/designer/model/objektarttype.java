@@ -19,14 +19,79 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum objektarttype implements Enumerator {
 	/**
-	 * The '<em><b>Hochbauobjekt</b></em>' literal object.
+	 * The '<em><b>Trafostation</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #HOCHBAUOBJEKT_VALUE
+	 * @see #TRAFOSTATION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	HOCHBAUOBJEKT(0, "Hochbauobjekt", "Hochbauobjekt");
+	TRAFOSTATION(0, "Trafostation", "Trafostation"),
+	/**
+	* The '<em><b>Hochbauobjekt</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #HOCHBAUOBJEKT_VALUE
+	* @generated
+	* @ordered
+	*/
+	HOCHBAUOBJEKT(1, "Hochbauobjekt", "Hochbauobjekt"),
+	/**
+	* The '<em><b>Schalthaeuser</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #SCHALTHAEUSER_VALUE
+	* @generated
+	* @ordered
+	*/
+	SCHALTHAEUSER(2, "Schalthaeuser", "Schalth\u00e4user"),
+	/**
+	* The '<em><b>Tunnelobjekt</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #TUNNELOBJEKT_VALUE
+	* @generated
+	* @ordered
+	*/
+	TUNNELOBJEKT(3, "Tunnelobjekt", "Tunnelobjekt"),
+	/**
+	* The '<em><b>Freistehender VT</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #FREISTEHENDER_VT_VALUE
+	* @generated
+	* @ordered
+	*/
+	FREISTEHENDER_VT(4, "Freistehender_VT", "Freistehender VT"),
+	/**
+	* The '<em><b>Verkehrsstation</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #VERKEHRSSTATION_VALUE
+	* @generated
+	* @ordered
+	*/
+	VERKEHRSSTATION(5, "Verkehrsstation", "Verkehrsstation"),
+	/**
+	* The '<em><b>Sonstiges</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #SONSTIGES_VALUE
+	* @generated
+	* @ordered
+	*/
+	SONSTIGES(6, "Sonstiges", "Sonstiges");
+
+	/**
+	 * The '<em><b>Trafostation</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TRAFOSTATION
+	 * @model name="Trafostation"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TRAFOSTATION_VALUE = 0;
 
 	/**
 	 * The '<em><b>Hochbauobjekt</b></em>' literal value.
@@ -37,7 +102,62 @@ public enum objektarttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HOCHBAUOBJEKT_VALUE = 0;
+	public static final int HOCHBAUOBJEKT_VALUE = 1;
+
+	/**
+	 * The '<em><b>Schalthaeuser</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SCHALTHAEUSER
+	 * @model name="Schalthaeuser" literal="Schalth\344user"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SCHALTHAEUSER_VALUE = 2;
+
+	/**
+	 * The '<em><b>Tunnelobjekt</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TUNNELOBJEKT
+	 * @model name="Tunnelobjekt"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TUNNELOBJEKT_VALUE = 3;
+
+	/**
+	 * The '<em><b>Freistehender VT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FREISTEHENDER_VT
+	 * @model name="Freistehender_VT" literal="Freistehender VT"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FREISTEHENDER_VT_VALUE = 4;
+
+	/**
+	 * The '<em><b>Verkehrsstation</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VERKEHRSSTATION
+	 * @model name="Verkehrsstation"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VERKEHRSSTATION_VALUE = 5;
+
+	/**
+	 * The '<em><b>Sonstiges</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SONSTIGES
+	 * @model name="Sonstiges"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SONSTIGES_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>objektarttype</b></em>' enumerators.
@@ -45,7 +165,8 @@ public enum objektarttype implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final objektarttype[] VALUES_ARRAY = new objektarttype[] { HOCHBAUOBJEKT, };
+	private static final objektarttype[] VALUES_ARRAY = new objektarttype[] { TRAFOSTATION, HOCHBAUOBJEKT,
+			SCHALTHAEUSER, TUNNELOBJEKT, FREISTEHENDER_VT, VERKEHRSSTATION, SONSTIGES, };
 
 	/**
 	 * A public read-only list of all the '<em><b>objektarttype</b></em>' enumerators.
@@ -101,8 +222,20 @@ public enum objektarttype implements Enumerator {
 	 */
 	public static objektarttype get(int value) {
 		switch (value) {
+		case TRAFOSTATION_VALUE:
+			return TRAFOSTATION;
 		case HOCHBAUOBJEKT_VALUE:
 			return HOCHBAUOBJEKT;
+		case SCHALTHAEUSER_VALUE:
+			return SCHALTHAEUSER;
+		case TUNNELOBJEKT_VALUE:
+			return TUNNELOBJEKT;
+		case FREISTEHENDER_VT_VALUE:
+			return FREISTEHENDER_VT;
+		case VERKEHRSSTATION_VALUE:
+			return VERKEHRSSTATION;
+		case SONSTIGES_VALUE:
+			return SONSTIGES;
 		}
 		return null;
 	}
