@@ -32,7 +32,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GT11cjBwEeqADtkLlV9kmw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_GqOqgSrxEeqMaI8sqcX9PA" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GqOqgirxEeqMaI8sqcX9PA" x="170" y="54" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GqOqgirxEeqMaI8sqcX9PA" x="200" y="189" width="106" height="106"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_W3RTISrsEeq2TsXnS2aKdQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_W3RTIirsEeq2TsXnS2aKdQ"/>
@@ -52,7 +52,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GT3DkjBwEeqADtkLlV9kmw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_57ttUSrsEeqIGoFZMwmCog" fontName="Segoe UI" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_57ttUirsEeqIGoFZMwmCog" x="46" y="29" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_57ttUirsEeqIGoFZMwmCog" x="46" y="29" width="105" height="106"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_2x41oSrsEeqIGoFZMwmCog"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_2x41oirsEeqIGoFZMwmCog"/>
@@ -63,18 +63,18 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_W3LMgirsEeq2TsXnS2aKdQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_geAxoCrxEeq6DI-RN1nuAg" type="4001" element="_gciyACrxEeq6DI-RN1nuAg" source="_GqOqgCrxEeqMaI8sqcX9PA" target="_57ttUCrsEeqIGoFZMwmCog">
           <children xmi:type="notation:Node" xmi:id="_geG4QCrxEeq6DI-RN1nuAg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geG4QSrxEeq6DI-RN1nuAg" x="-55" y="-3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geG4QSrxEeq6DI-RN1nuAg" x="-80" y="19"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_geIGYCrxEeq6DI-RN1nuAg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geIGYSrxEeq6DI-RN1nuAg" x="-11" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geIGYSrxEeq6DI-RN1nuAg" x="-75" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_geJUgCrxEeq6DI-RN1nuAg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geJUgSrxEeq6DI-RN1nuAg" x="-25" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_geJUgSrxEeq6DI-RN1nuAg" x="-37" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_geAxoSrxEeq6DI-RN1nuAg" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_geAxoirxEeq6DI-RN1nuAg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_geAxoyrxEeq6DI-RN1nuAg" points="[87, -7, -577, -14]$[374, -7, -290, -14]$[374, 7, -290, 0]$[607, 7, -57, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_geMX0CrxEeq6DI-RN1nuAg" id="(0.2582998203131685,0.1472805173166184)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_geAxoyrxEeq6DI-RN1nuAg" points="[1, 0, -595, 21]$[282, 0, -314, 21]$[282, -21, -314, 0]$[544, -21, -52, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_geMX0CrxEeq6DI-RN1nuAg" id="(0.5919716472584436,-0.9017130611368062)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_geMX0SrxEeq6DI-RN1nuAg" id="(0.5,0.5)"/>
         </edges>
       </data>
@@ -164,7 +164,7 @@
         <target xmi:type="tbg:Verbindung" href="Test.model#1"/>
         <semanticElements xmi:type="tbg:Verbindung" href="Test.model#1"/>
       </cells>
-      <cells xmi:type="table:DCell" uid="_N29-4y7fEeqF5fQesPUPMA" label="Versorgungsknoten" column="_N2yYsi7fEeqF5fQesPUPMA">
+      <cells xmi:type="table:DCell" uid="_N29-4y7fEeqF5fQesPUPMA" label="Trafo" column="_N2yYsi7fEeqF5fQesPUPMA">
         <target xmi:type="tbg:Verbindung" href="Test.model#1"/>
         <semanticElements xmi:type="tbg:Verbindung" href="Test.model#1"/>
       </cells>
@@ -188,7 +188,7 @@
         <target xmi:type="tbg:Verbindung" href="Test.model#1"/>
         <semanticElements xmi:type="tbg:Verbindung" href="Test.model#1"/>
       </cells>
-      <cells xmi:type="table:DCell" uid="_N3AbIS7fEeqF5fQesPUPMA" label="Versorgungsknoten" column="_N2yYvi7fEeqF5fQesPUPMA">
+      <cells xmi:type="table:DCell" uid="_N3AbIS7fEeqF5fQesPUPMA" label="ÜGS/Zählpunkt" column="_N2yYvi7fEeqF5fQesPUPMA">
         <target xmi:type="tbg:Verbindung" href="Test.model#1"/>
         <semanticElements xmi:type="tbg:Verbindung" href="Test.model#1"/>
       </cells>

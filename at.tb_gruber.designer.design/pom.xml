@@ -10,4 +10,15 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../at.tb_gruber.designer.parent</relativePath>
 	</parent>
+	<build>
+		<resources>
+			<resource>
+				<directory>images</directory>
+				<targetPath>images</targetPath>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
 </project>

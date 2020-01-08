@@ -1,11 +1,15 @@
 package at.tb_gruber.designer.design.style;
 
+import java.net.URL;
 import java.util.Optional;
 
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.ImageFigure;
 import org.eclipse.draw2d.XYLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -14,6 +18,8 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.ComponentEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.requests.RequestConstants;
+import org.eclipse.gmf.runtime.draw2d.ui.render.factory.RenderedImageFactory;
+import org.eclipse.gmf.runtime.draw2d.ui.render.figures.ScalableImageFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -32,7 +38,8 @@ import at.tb_gruber.designer.model.impl.AnlageImpl;
 public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart implements IStyleEditPart {
 
 	public static final String ID = "at.tb_gruber.designer.design.style.AnlageStyle";
-
+	private static final boolean USE_SVG = true;
+	private static final Dimension STANDARD_DIM = new Dimension(100, 100);
 	/**
 	 * the content pane.
 	 */
@@ -127,45 +134,24 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 	}
 
 	protected void refreshVisuals() {
-		CustomStyle customStyle = (CustomStyle) this.resolveSemanticElement();
-		if (customStyle.eContainer() instanceof DNode) {
-			try {
-				EObject eObject = ((DNode) customStyle.eContainer()).getSemanticElements().get(0);
-				AnlageImpl anlage = (AnlageImpl) eObject;
-
-				String imagePath = null;
-				switch (anlage.getAnlagenart().getValue()) {
-				case at.tb_gruber.designer.model.anlagearttype.TRAFO_VALUE: {
-					imagePath = getImageForTrafo(anlage);
-					break;
-				}
-				case at.tb_gruber.designer.model.anlagearttype.VERSORGUNGSKNOTEN_VALUE:
-				case at.tb_gruber.designer.model.anlagearttype.UEGS_ZAEHLPUNKT_VALUE:
-				case at.tb_gruber.designer.model.anlagearttype.ENERGIETECHNIKANLAGE_VALUE:
-				case at.tb_gruber.designer.model.anlagearttype.VK_ET_VALUE:
-				default: {
-					imagePath = getImageForStandardAnlage(anlage);
-					break;
-				}
-
-				}
-
-//				Optional<URL> locate = org.eclipse.jface.resource.ResourceLocator.locate(Activator.PLUGIN_ID,
-//						"images/svg/" + imagePath + ".svg");
-//				if (locate.isPresent()) {
-//					Image flyWeightImage = SVGWorkspaceImageFigure.flyWeightImage("images/svg/" + imagePath + ".svg");
-//					this.getPrimaryShape().setImage(flyWeightImage);
-//				}
-				ImageDescriptor imageDescriptorFromPlugin = AbstractUIPlugin
-						.imageDescriptorFromPlugin(Activator.PLUGIN_ID, "images/png/" + imagePath + ".png");
-				Image image = imageDescriptorFromPlugin.createImage();
+		if (USE_SVG) {
+			Optional<ScalableImageFigure> svg = resolveSvg();
+			if (svg.isPresent()) {
+				ScalableImageFigure sh = svg.get();
+				getPrimaryShape().setImage(sh.getImage());
+			}
+		} else {
+			Optional<Image> png = resolvePng();
+			if (png.isPresent()) {
+				Image image = png.get();
 				getPrimaryShape().setImage(image);
-				getFigure().setPreferredSize(new Dimension(200, 200));
-				getFigure().repaint();
-			} catch (Exception e) {
-				e.printStackTrace();
 			}
 		}
+		Rectangle rect = new Rectangle();
+		rect.setHeight(STANDARD_DIM.height);
+		rect.setWidth(STANDARD_DIM.width);
+		getPrimaryShape().setSize(STANDARD_DIM);
+		getFigure().getParent().getLayoutManager().setConstraint(getFigure(), rect);
 		super.refreshVisuals();
 	}
 
@@ -177,13 +163,76 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		return getImageForStandardAnlage(anlage) + "_" + anlage.getTrafospannung().getValue();
 	}
 
+	private Optional<String> getImageFragment() {
+		CustomStyle customStyle = (CustomStyle) this.resolveSemanticElement();
+		if (customStyle.eContainer() instanceof DNode) {
+			try {
+				EObject eObject = ((DNode) customStyle.eContainer()).getSemanticElements().get(0);
+				AnlageImpl anlage = (AnlageImpl) eObject;
+
+				String imagePath = null;
+				if (anlage.getAnlagenart().getValue() == at.tb_gruber.designer.model.anlagearttype.TRAFO_VALUE) {
+					imagePath = getImageForTrafo(anlage);
+				} else {
+				/* VERSORGUNGSKNOTEN_VALUE:
+				 * UEGS_ZAEHLPUNKT_VALUE
+				 * ENERGIETECHNIKANLAGE_VALUE
+				 * VK_ET_VALUE
+				 */
+					imagePath = getImageForStandardAnlage(anlage);
+				}
+
+				return Optional.of(imagePath);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return Optional.empty();
+	}
+
 	protected void createDefaultEditPolicies() {
 		// empty.
 	}
 
 	@Override
 	public void notifyChanged(Notification notification) {
-		super.notifyChanged(notification);
 		refreshVisuals();
+		super.notifyChanged(notification);
 	}
+
+	protected ScalableImageFigure createNodeShape(String anlagetype) {
+		URL url = FileLocator.find(Activator.getDefault().getBundle(), new Path("images/svg/" + anlagetype + ".svg"),
+				null);
+		return new ScalableImageFigure(RenderedImageFactory.getInstance(url), true, true, true);
+	}
+
+	private ImageFigure resolveImage() {
+		if (USE_SVG) {
+			Optional<ScalableImageFigure> resolveSvg = resolveSvg();
+			return resolveSvg.isPresent() ? resolveSvg.get() : new ImageFigure();
+		} else {
+			Optional<Image> resolvePng = resolvePng();
+			return resolvePng.isPresent() ? new ImageFigure(resolvePng.get()) : new ImageFigure();
+		}
+	}
+
+	private Optional<ScalableImageFigure> resolveSvg() {
+		Optional<String> imageFragment = getImageFragment();
+		if (imageFragment.isPresent()) {
+			return Optional.of(createNodeShape(imageFragment.get()));
+		}
+		return Optional.empty();
+	}
+
+	private Optional<Image> resolvePng() {
+		Optional<String> imageFragment = getImageFragment();
+		if (imageFragment.isPresent()) {
+			ImageDescriptor imageDescriptorFromPlugin = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.PLUGIN_ID,
+					"images/png/" + imageFragment.get() + ".png");
+			Image image = imageDescriptorFromPlugin.createImage();
+			return Optional.of(image);
+		}
+		return Optional.empty();
+	}
+
 }

@@ -11,7 +11,7 @@
  <g>
   <title>Layer 1</title>
   <rect fill="#fff" stroke="#000" stroke-width="1.5" x="548" y="166.453125" width="2" height="1" id="svg_1"/>
-  <ellipse ry="25" rx="30" id="svg_5" cy="37" cx="50" fill-opacity="null" stroke-width="1.5" stroke="#7030a0" fill="none"/>
-  <ellipse ry="25" rx="30" id="svg_8" cy="63" cx="50" fill-opacity="null" stroke-width="1.5" stroke="#00ffff" fill="none"/>
+  <ellipse ry="25" rx="30" id="svg_5" cy="37" cx="50" stroke-width="1.5" stroke="#7030a0" fill="none"/>
+  <ellipse ry="25" rx="30" id="svg_8" cy="63" cx="50" stroke-width="1.5" stroke="#00ffff" fill="none"/>
  </g>
 </svg>
