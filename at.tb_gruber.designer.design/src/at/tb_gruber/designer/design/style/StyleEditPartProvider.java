@@ -4,10 +4,11 @@ import org.eclipse.gmf.runtime.diagram.ui.services.editpart.AbstractEditPartProv
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.sirius.diagram.CustomStyle;
 import org.eclipse.sirius.diagram.DEdge;
+import org.eclipse.sirius.diagram.impl.DNodeContainerImpl;
 
-public class StyleEditParProvider extends AbstractEditPartProvider {
+public class StyleEditPartProvider extends AbstractEditPartProvider {
 
-	public StyleEditParProvider() {
+	public StyleEditPartProvider() {
 		super();
 	}
 
@@ -18,6 +19,8 @@ public class StyleEditParProvider extends AbstractEditPartProvider {
 			if (customStyle.getId().equals(AnlageStyleEditPart.ID)) {
 				return AnlageStyleEditPart.class;
 			}
+//		} else if (view.getElement() instanceof DNodeContainerImpl) {
+//			return ObjektStyleEditPart.class;
 		}
 		return super.getNodeEditPartClass(view);
 	}

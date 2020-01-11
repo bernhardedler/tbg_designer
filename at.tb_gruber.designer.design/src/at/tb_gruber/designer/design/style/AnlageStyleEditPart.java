@@ -1,6 +1,7 @@
 package at.tb_gruber.designer.design.style;
 
 import java.net.URL;
+import java.util.Collections;
 import java.util.Optional;
 
 import org.eclipse.core.runtime.FileLocator;
@@ -9,26 +10,41 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.ImageFigure;
 import org.eclipse.draw2d.XYLayout;
 import org.eclipse.draw2d.geometry.Dimension;
-import org.eclipse.draw2d.geometry.Rectangle;
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.RollbackException;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.impl.TransactionImpl;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.Request;
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.ComponentEditPolicy;
-import org.eclipse.gmf.runtime.diagram.ui.requests.RequestConstants;
 import org.eclipse.gmf.runtime.draw2d.ui.render.factory.RenderedImageFactory;
 import org.eclipse.gmf.runtime.draw2d.ui.render.figures.ScalableImageFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
+import org.eclipse.gmf.runtime.notation.Node;
+import org.eclipse.gmf.runtime.notation.Size;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.business.api.session.SessionManager;
 import org.eclipse.sirius.diagram.CustomStyle;
+import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DNode;
+import org.eclipse.sirius.diagram.description.style.NodeStyleDescription;
+import org.eclipse.sirius.diagram.description.style.WorkspaceImageDescription;
+import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
+import org.eclipse.sirius.diagram.ui.business.internal.query.WorkspaceImageQuery;
 import org.eclipse.sirius.diagram.ui.edit.api.part.AbstractNotSelectableShapeNodeEditPart;
 import org.eclipse.sirius.diagram.ui.edit.api.part.IStyleEditPart;
+import org.eclipse.sirius.diagram.ui.tools.api.layout.LayoutUtils;
+import org.eclipse.sirius.diagram.ui.tools.internal.part.SiriusDiagramGraphicalViewer;
 import org.eclipse.sirius.ext.gmf.runtime.gef.ui.figures.AirStyleDefaultSizeNodeFigure;
+import org.eclipse.sirius.viewpoint.description.style.StyleDescription;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
@@ -69,15 +85,6 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		if (featureOptional.isPresent()) {
 			addListenerFilter("tbgValueChangeTrafospannung", this, obj, featureOptional.get());
 		}
-		installEditPolicy(ComponentEditPolicy.REQ_RESIZE, new ComponentEditPolicy() {
-			@Override
-			public Command getCommand(Request request) {
-				if (RequestConstants.REQ_RESIZE.equals(request.getType())) {
-					return org.eclipse.gef.commands.UnexecutableCommand.INSTANCE;
-				}
-				return super.getCommand(request);
-			}
-		});
 	}
 
 	public DragTracker getDragTracker(Request request) {
@@ -139,25 +146,29 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 	}
 
 	protected void refreshVisuals() {
+		Optional<Image> imageOpt = getImage();
+		if (imageOpt.isPresent()) {
+			Image image = imageOpt.get();
+			getPrimaryShape().setImage(image);
+		}
+		super.refreshVisuals();
+	}
+
+	private Optional<Image> getImage() {
 		if (USE_SVG) {
 			Optional<ScalableImageFigure> svg = resolveSvg();
 			if (svg.isPresent()) {
 				ScalableImageFigure sh = svg.get();
-				getPrimaryShape().setImage(sh.getImage());
+				return Optional.of(sh.getImage());
 			}
 		} else {
 			Optional<Image> png = resolvePng();
 			if (png.isPresent()) {
 				Image image = png.get();
-				getPrimaryShape().setImage(image);
+				return Optional.of(image);
 			}
 		}
-		Rectangle rect = new Rectangle();
-		rect.setHeight(STANDARD_DIM.height);
-		rect.setWidth(STANDARD_DIM.width);
-		getPrimaryShape().setSize(STANDARD_DIM);
-		getFigure().getParent().getLayoutManager().setConstraint(getFigure(), rect);
-		super.refreshVisuals();
+		return Optional.empty();
 	}
 
 	private String getImageForStandardAnlage(AnlageImpl anlage) {
@@ -179,11 +190,10 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 				if (anlage.getAnlagenart().getValue() == at.tb_gruber.designer.model.anlagearttype.TRAFO_VALUE) {
 					imagePath = getImageForTrafo(anlage);
 				} else {
-				/* VERSORGUNGSKNOTEN_VALUE:
-				 * UEGS_ZAEHLPUNKT_VALUE
-				 * ENERGIETECHNIKANLAGE_VALUE
-				 * VK_ET_VALUE
-				 */
+					/*
+					 * VERSORGUNGSKNOTEN_VALUE: UEGS_ZAEHLPUNKT_VALUE ENERGIETECHNIKANLAGE_VALUE
+					 * VK_ET_VALUE
+					 */
 					imagePath = getImageForStandardAnlage(anlage);
 				}
 
@@ -195,10 +205,6 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		return Optional.empty();
 	}
 
-	protected void createDefaultEditPolicies() {
-		// empty.
-	}
-
 	/**
 	 * @generated NOT
 	 */
@@ -208,6 +214,7 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		super.notifyChanged(notification);
 	}
 
+	
 	protected ScalableImageFigure createNodeShape(String anlagetype) {
 		URL url = FileLocator.find(Activator.getDefault().getBundle(), new Path("images/svg/" + anlagetype + ".svg"),
 				null);
@@ -242,5 +249,4 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		}
 		return Optional.empty();
 	}
-
 }

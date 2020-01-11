@@ -11,7 +11,7 @@
     <anlage name="Anlage B12" versorgtVon="1" versorgungsspannung="NSP 50Hz (grün)"/>
   </objekt>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
-    <anlage name="Anlage C1" versorgungsspannung="20kV 50Hz (rot)">
+    <anlage name="Anlage C1" anlagenart="Versorgungsknoten" versorgungsspannung="20kV 50Hz (rot)">
       <verbindungNach nr="2" ziel="//@objekt.0/@anlage.0" ursprung="//@objekt.2/@anlage.0"/>
     </anlage>
     <anlage name="Anlage C2" anlagenart="Versorgungsknoten" versorgtVon="3"/>
