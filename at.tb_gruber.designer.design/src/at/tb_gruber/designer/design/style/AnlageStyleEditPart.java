@@ -38,7 +38,7 @@ import at.tb_gruber.designer.model.impl.AnlageImpl;
 public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart implements IStyleEditPart {
 
 	public static final String ID = "at.tb_gruber.designer.design.style.AnlageStyle";
-	private static final boolean USE_SVG = true;
+	private static final boolean USE_SVG = false;
 	private static final Dimension STANDARD_DIM = new Dimension(100, 100);
 	/**
 	 * the content pane.
@@ -62,7 +62,12 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		Optional<EStructuralFeature> featureOptional = obj.eClass().getEAllStructuralFeatures().stream()
 				.filter(feature -> "anlagenart".equals(feature.getName())).findFirst();
 		if (featureOptional.isPresent()) {
-			addListenerFilter("tbgValueChange", this, obj, featureOptional.get());
+			addListenerFilter("tbgValueChangeAnlagenart", this, obj, featureOptional.get());
+		}
+		featureOptional = obj.eClass().getEAllStructuralFeatures().stream()
+				.filter(feature -> "trafospannung".equals(feature.getName())).findFirst();
+		if (featureOptional.isPresent()) {
+			addListenerFilter("tbgValueChangeTrafospannung", this, obj, featureOptional.get());
 		}
 		installEditPolicy(ComponentEditPolicy.REQ_RESIZE, new ComponentEditPolicy() {
 			@Override
@@ -194,6 +199,9 @@ public class AnlageStyleEditPart extends AbstractNotSelectableShapeNodeEditPart 
 		// empty.
 	}
 
+	/**
+	 * @generated NOT
+	 */
 	@Override
 	public void notifyChanged(Notification notification) {
 		refreshVisuals();

@@ -32,12 +32,6 @@
      </runtime>
   </extension>
   <extension
-        point="org.eclipse.sirius.diagram.ui.styleConfigurationProvider">
-        <styleConfigurationProvider
-              providerClass="at.tb_gruber.designer.design.style.StyleConfigurationProvider">
-        </styleConfigurationProvider>
-  </extension>
-  <extension
         point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
      <editpartProvider
            class="at.tb_gruber.designer.design.style.StyleEditParProvider">
