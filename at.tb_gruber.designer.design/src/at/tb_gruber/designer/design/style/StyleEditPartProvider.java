@@ -4,7 +4,6 @@ import org.eclipse.gmf.runtime.diagram.ui.services.editpart.AbstractEditPartProv
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.sirius.diagram.CustomStyle;
 import org.eclipse.sirius.diagram.DEdge;
-import org.eclipse.sirius.diagram.impl.DNodeContainerImpl;
 
 public class StyleEditPartProvider extends AbstractEditPartProvider {
 
