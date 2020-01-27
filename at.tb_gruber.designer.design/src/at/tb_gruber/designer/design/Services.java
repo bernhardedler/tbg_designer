@@ -7,7 +7,8 @@ import org.eclipse.emf.ecore.EObject;
 
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
-import at.tb_gruber.designer.model.*;
+import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.anlagearttype;
 import at.tb_gruber.designer.model.impl.AnlageImpl;
 import at.tb_gruber.designer.model.impl.VerbindungImpl;
 
@@ -58,22 +59,26 @@ public class Services {
 		return false;
 	}
 
-	public Boolean isAnlageart(EObject self, Integer target) {
+	private Boolean isAnlageart(EObject self, Integer target) {
 		if (self instanceof AnlageImpl) {
 			return target.equals(((AnlageImpl) self).getAnlagenart().getValue());
 		}
 		return false;
 	}
 	
-	/**
-	 * test javadoc
-	 * @param self
-	 * @param anlageart
-	 * @param spannungsart
-	 * @return
-	 */
 	public Boolean isAnlageart(EObject self, Integer anlageart, Integer spannungsart) {
 		return isAnlageart(self, anlageart) && isSpannungsart(self, spannungsart);
 	}
+	
+	private Boolean isTrafoSpannungsart(EObject self, Integer target) {
+		if (self instanceof AnlageImpl) {
+			return target.equals(((AnlageImpl) self).getTrafospannung().getValue());
+		}
+		return false;
+	}
 
+	public Boolean isTrafoart(EObject self, Integer spannungsart, Integer trafoSpannungsart) {
+		boolean result = isAnlageart(self, anlagearttype.TRAFO_VALUE) && isSpannungsart(self, spannungsart) && isTrafoSpannungsart(self, trafoSpannungsart);
+		return result;
+	}
 }

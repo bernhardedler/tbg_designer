@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="Kirchberg">
   <objekt name="Gebäude A">
-    <anlage name="Anlage A1" anlagenart="Trafo" versorgtVon="2" versorgungsspannung="NSP 50Hz (grün)">
-      <verbindungNach nr="1" versorgungsspannung="Reserve (hellbraun)" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
+    <anlage name="Anlage A1" versorgtVon="2" versorgungsspannung="NSP 50Hz (grün)">
+      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
       <verbindungNach nr="3" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.0/@anlage.0"/>
       <verbindungNach nr="4" ziel="//@objekt.2/@anlage.2" ursprung="//@objekt.0/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="Gebäude B">
-    <anlage name="Anlage B12" versorgtVon="1" versorgungsspannung="NSP 50Hz (grün)"/>
+    <anlage name="Anlage B12" versorgtVon="1"/>
+    <anlage name="asjdfklasdf"/>
   </objekt>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
-    <anlage name="Anlage C1" anlagenart="Versorgungsknoten" versorgungsspannung="20kV 50Hz (rot)">
+    <anlage name="Anlage C1" anlagenart="Trafo" versorgungsspannung="10kV 50Hz (blau)">
       <verbindungNach nr="2" ziel="//@objekt.0/@anlage.0" ursprung="//@objekt.2/@anlage.0"/>
     </anlage>
-    <anlage name="Anlage C2" anlagenart="Versorgungsknoten" versorgtVon="3"/>
-    <anlage name="Gebäude C3" versorgtVon="4"/>
+    <anlage name="Anlage C2" versorgtVon="3"/>
+    <anlage name="Anlage C3" versorgtVon="4"/>
   </objekt>
 </tbg:Bahnhof>

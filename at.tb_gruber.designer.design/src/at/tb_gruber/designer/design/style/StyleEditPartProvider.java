@@ -2,9 +2,19 @@ package at.tb_gruber.designer.design.style;
 
 import org.eclipse.gmf.runtime.diagram.ui.services.editpart.AbstractEditPartProvider;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.sirius.diagram.CustomStyle;
 import org.eclipse.sirius.diagram.DEdge;
+import org.eclipse.sirius.diagram.WorkspaceImage;
 
+/**
+ * enable via
+ * <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+ * <editpartProvider class=
+ * "at.tb_gruber.designer.design.style.StyleEditPartProvider">
+ * <Priority name="High"> </Priority> </editpartProvider> </extension>
+ * 
+ * @author bernh
+ *
+ */
 public class StyleEditPartProvider extends AbstractEditPartProvider {
 
 	public StyleEditPartProvider() {
@@ -13,13 +23,9 @@ public class StyleEditPartProvider extends AbstractEditPartProvider {
 
 	@Override
 	protected Class getNodeEditPartClass(View view) {
-		if (view.getElement() instanceof CustomStyle) {
-			CustomStyle customStyle = (CustomStyle) view.getElement();
-			if (customStyle.getId().equals(AnlageStyleEditPart.ID)) {
-				return AnlageStyleEditPart.class;
-			}
-//		} else if (view.getElement() instanceof DNodeContainerImpl) {
-//			return ObjektStyleEditPart.class;
+		System.out.println(view.getElement() + ": " + view.getClass());
+		if (view instanceof WorkspaceImage) {
+			return TBGWorkspaceImageEditPart.class;
 		}
 		return super.getNodeEditPartClass(view);
 	}
@@ -31,4 +37,5 @@ public class StyleEditPartProvider extends AbstractEditPartProvider {
 		}
 		return super.getEdgeEditPartClass(view);
 	}
+
 }

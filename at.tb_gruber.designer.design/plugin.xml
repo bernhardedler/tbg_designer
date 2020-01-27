@@ -31,22 +31,4 @@
         </run>
      </runtime>
   </extension>
-  <extension
-        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
-     <editpartProvider
-           class="at.tb_gruber.designer.design.style.StyleEditPartProvider">
-        <Priority
-              name="High">
-        </Priority>
-     </editpartProvider>
-  </extension>
-  <extension
-        point="org.eclipse.gmf.runtime.diagram.ui.editpolicyProviders">
-     <editpolicyProvider
-           class=" at.tb_gruber.designer.design.style.policy.EditPolicyProvider">
-        <Priority
-              name="Lowest">
-        </Priority>
-     </editpolicyProvider>
-  </extension>
 </plugin>
