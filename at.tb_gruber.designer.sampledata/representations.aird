@@ -238,7 +238,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_AKiIgDMbEeqEFsSzkplHhA" sourceNode="_AKba0DMbEeqEFsSzkplHhA" targetNode="_AKco8DMbEeqEFsSzkplHhA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_AKiIgDMbEeqEFsSzkplHhA" sourceNode="_AKba0DMbEeqEFsSzkplHhA" targetNode="_AKco8DMbEeqEFsSzkplHhA" beginLabel="10A">
       <target xmi:type="tbg:Verbindung" href="Test.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="Test.model#1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_NbuDAD9WEeqxAtvtgQEnEQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="112,48,160">

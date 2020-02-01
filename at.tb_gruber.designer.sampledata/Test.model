@@ -2,7 +2,7 @@
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="Kirchberg">
   <objekt name="Gebäude A">
     <anlage name="Anlage A1" versorgtVon="2" versorgungsspannung="NSP 50Hz (grün)">
-      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
+      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0" quellSicherungsGroesse="10A"/>
       <verbindungNach nr="3" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.0/@anlage.0"/>
       <verbindungNach nr="4" ziel="//@objekt.2/@anlage.2" ursprung="//@objekt.0/@anlage.0"/>
     </anlage>

@@ -6,6 +6,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projektname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objekt" upperBound="-1"
         eType="#//Objekt" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="plankopf" eType="#//Plankopf"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Objekt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -66,4 +68,5 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zielSicherungsGroesse"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Plankopf"/>
 </ecore:EPackage>

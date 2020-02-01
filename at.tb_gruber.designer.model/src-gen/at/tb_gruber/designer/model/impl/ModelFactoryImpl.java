@@ -64,6 +64,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createAnlage();
 		case ModelPackage.VERBINDUNG:
 			return createVerbindung();
+		case ModelPackage.PLANKOPF:
+			return createPlankopf();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -149,6 +151,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Verbindung createVerbindung() {
 		VerbindungImpl verbindung = new VerbindungImpl();
 		return verbindung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Plankopf createPlankopf() {
+		PlankopfImpl plankopf = new PlankopfImpl();
+		return plankopf;
 	}
 
 	/**

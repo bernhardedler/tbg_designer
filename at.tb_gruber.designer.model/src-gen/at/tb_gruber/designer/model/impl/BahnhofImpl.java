@@ -6,6 +6,7 @@ import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
 
+import at.tb_gruber.designer.model.Plankopf;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getProjektname <em>Projektname</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getObjekt <em>Objekt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getPlankopf <em>Plankopf</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,16 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 	 * @ordered
 	 */
 	protected EList<Objekt> objekt;
+
+	/**
+	 * The cached value of the '{@link #getPlankopf() <em>Plankopf</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlankopf()
+	 * @generated
+	 * @ordered
+	 */
+	protected Plankopf plankopf;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,10 +185,64 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 	 * @generated
 	 */
 	@Override
+	public Plankopf getPlankopf() {
+		return plankopf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPlankopf(Plankopf newPlankopf, NotificationChain msgs) {
+		Plankopf oldPlankopf = plankopf;
+		plankopf = newPlankopf;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.BAHNHOF__PLANKOPF, oldPlankopf, newPlankopf);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPlankopf(Plankopf newPlankopf) {
+		if (newPlankopf != plankopf) {
+			NotificationChain msgs = null;
+			if (plankopf != null)
+				msgs = ((InternalEObject) plankopf).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.BAHNHOF__PLANKOPF, null, msgs);
+			if (newPlankopf != null)
+				msgs = ((InternalEObject) newPlankopf).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.BAHNHOF__PLANKOPF, null, msgs);
+			msgs = basicSetPlankopf(newPlankopf, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BAHNHOF__PLANKOPF, newPlankopf,
+					newPlankopf));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.BAHNHOF__OBJEKT:
 			return ((InternalEList<?>) getObjekt()).basicRemove(otherEnd, msgs);
+		case ModelPackage.BAHNHOF__PLANKOPF:
+			return basicSetPlankopf(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -195,6 +261,8 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			return getProjektname();
 		case ModelPackage.BAHNHOF__OBJEKT:
 			return getObjekt();
+		case ModelPackage.BAHNHOF__PLANKOPF:
+			return getPlankopf();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -218,6 +286,9 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			getObjekt().clear();
 			getObjekt().addAll((Collection<? extends Objekt>) newValue);
 			return;
+		case ModelPackage.BAHNHOF__PLANKOPF:
+			setPlankopf((Plankopf) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -239,6 +310,9 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 		case ModelPackage.BAHNHOF__OBJEKT:
 			getObjekt().clear();
 			return;
+		case ModelPackage.BAHNHOF__PLANKOPF:
+			setPlankopf((Plankopf) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -257,6 +331,8 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			return PROJEKTNAME_EDEFAULT == null ? projektname != null : !PROJEKTNAME_EDEFAULT.equals(projektname);
 		case ModelPackage.BAHNHOF__OBJEKT:
 			return objekt != null && !objekt.isEmpty();
+		case ModelPackage.BAHNHOF__PLANKOPF:
+			return plankopf != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -95,13 +95,22 @@ public interface ModelPackage extends EPackage {
 	int BAHNHOF__OBJEKT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Plankopf</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__PLANKOPF = 3;
+
+	/**
 	 * The number of structural features of the '<em>Bahnhof</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BAHNHOF_FEATURE_COUNT = 3;
+	int BAHNHOF_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Bahnhof</em>' class.
@@ -395,6 +404,34 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.PlankopfImpl <em>Plankopf</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.PlankopfImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getPlankopf()
+	 * @generated
+	 */
+	int PLANKOPF = 4;
+
+	/**
+	 * The number of structural features of the '<em>Plankopf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANKOPF_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Plankopf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANKOPF_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -402,7 +439,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 4;
+	int OBJEKTARTTYPE = 5;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}' enum.
@@ -412,7 +449,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getanlagearttype()
 	 * @generated
 	 */
-	int ANLAGEARTTYPE = 5;
+	int ANLAGEARTTYPE = 6;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
@@ -422,7 +459,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 6;
+	int SPANNUNGSARTTYPE = 7;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -466,6 +503,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBahnhof_Objekt();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Bahnhof#getPlankopf <em>Plankopf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Plankopf</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getPlankopf()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EReference getBahnhof_Plankopf();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Objekt <em>Objekt</em>}'.
@@ -740,6 +788,16 @@ public interface ModelPackage extends EPackage {
 	EAttribute getVerbindung_ZielSicherungsGroesse();
 
 	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Plankopf <em>Plankopf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Plankopf</em>'.
+	 * @see at.tb_gruber.designer.model.Plankopf
+	 * @generated
+	 */
+	EClass getPlankopf();
+
+	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -825,6 +883,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BAHNHOF__OBJEKT = eINSTANCE.getBahnhof_Objekt();
+
+		/**
+		 * The meta object literal for the '<em><b>Plankopf</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BAHNHOF__PLANKOPF = eINSTANCE.getBahnhof_Plankopf();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.ObjektImpl <em>Objekt</em>}' class.
@@ -1031,6 +1097,16 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VERBINDUNG__ZIEL_SICHERUNGS_GROESSE = eINSTANCE.getVerbindung_ZielSicherungsGroesse();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.PlankopfImpl <em>Plankopf</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.PlankopfImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getPlankopf()
+		 * @generated
+		 */
+		EClass PLANKOPF = eINSTANCE.getPlankopf();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.

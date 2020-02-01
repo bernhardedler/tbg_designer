@@ -58,6 +58,15 @@ public interface ModelFactory extends EFactory {
 	Verbindung createVerbindung();
 
 	/**
+	 * Returns a new object of class '<em>Plankopf</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Plankopf</em>'.
+	 * @generated
+	 */
+	Plankopf createPlankopf();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

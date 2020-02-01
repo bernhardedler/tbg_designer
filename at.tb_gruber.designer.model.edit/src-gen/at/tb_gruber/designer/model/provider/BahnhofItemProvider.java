@@ -106,6 +106,7 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.BAHNHOF__OBJEKT);
+			childrenFeatures.add(ModelPackage.Literals.BAHNHOF__PLANKOPF);
 		}
 		return childrenFeatures;
 	}
@@ -174,6 +175,7 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.BAHNHOF__OBJEKT:
+		case ModelPackage.BAHNHOF__PLANKOPF:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -193,6 +195,9 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 
 		newChildDescriptors.add(
 				createChildParameter(ModelPackage.Literals.BAHNHOF__OBJEKT, ModelFactory.eINSTANCE.createObjekt()));
+
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.BAHNHOF__PLANKOPF, ModelFactory.eINSTANCE.createPlankopf()));
 	}
 
 	/**

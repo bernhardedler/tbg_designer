@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getProjektname <em>Projektname</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getObjekt <em>Objekt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getPlankopf <em>Plankopf</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getBahnhof()
@@ -80,5 +81,27 @@ public interface Bahnhof extends EObject {
 	 * @generated
 	 */
 	EList<Objekt> getObjekt();
+
+	/**
+	 * Returns the value of the '<em><b>Plankopf</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plankopf</em>' containment reference.
+	 * @see #setPlankopf(Plankopf)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getBahnhof_Plankopf()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Plankopf getPlankopf();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Bahnhof#getPlankopf <em>Plankopf</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Plankopf</em>' containment reference.
+	 * @see #getPlankopf()
+	 * @generated
+	 */
+	void setPlankopf(Plankopf value);
 
 } // Bahnhof

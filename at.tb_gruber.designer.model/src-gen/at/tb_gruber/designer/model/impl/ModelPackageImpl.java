@@ -7,6 +7,7 @@ import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.Plankopf;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.anlagearttype;
 import at.tb_gruber.designer.model.objektarttype;
@@ -54,6 +55,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass verbindungEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass plankopfEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,6 +186,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EReference getBahnhof_Objekt() {
 		return (EReference) bahnhofEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBahnhof_Plankopf() {
+		return (EReference) bahnhofEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -436,6 +454,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getPlankopf() {
+		return plankopfEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getobjektarttype() {
 		return objektarttypeEEnum;
 	}
@@ -494,6 +522,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(bahnhofEClass, BAHNHOF__NAME);
 		createEAttribute(bahnhofEClass, BAHNHOF__PROJEKTNAME);
 		createEReference(bahnhofEClass, BAHNHOF__OBJEKT);
+		createEReference(bahnhofEClass, BAHNHOF__PLANKOPF);
 
 		objektEClass = createEClass(OBJEKT);
 		createEAttribute(objektEClass, OBJEKT__NAME);
@@ -522,6 +551,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEReference(verbindungEClass, VERBINDUNG__URSPRUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__QUELL_SICHERUNGS_GROESSE);
 		createEAttribute(verbindungEClass, VERBINDUNG__ZIEL_SICHERUNGS_GROESSE);
+
+		plankopfEClass = createEClass(PLANKOPF);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
@@ -568,6 +599,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getBahnhof_Objekt(), this.getObjekt(), null, "objekt", null, 0, -1, Bahnhof.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getBahnhof_Plankopf(), this.getPlankopf(), null, "plankopf", null, 0, 1, Bahnhof.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objektEClass, Objekt.class, "Objekt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjekt_Name(), ecorePackage.getEString(), "name", null, 1, 1, Objekt.class, !IS_TRANSIENT,
@@ -628,6 +662,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerbindung_ZielSicherungsGroesse(), ecorePackage.getEString(), "zielSicherungsGroesse", null,
 				0, 1, Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");

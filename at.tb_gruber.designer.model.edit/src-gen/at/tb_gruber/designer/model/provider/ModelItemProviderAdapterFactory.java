@@ -165,6 +165,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Plankopf} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PlankopfItemProvider plankopfItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Plankopf}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPlankopfAdapter() {
+		if (plankopfItemProvider == null) {
+			plankopfItemProvider = new PlankopfItemProvider(this);
+		}
+
+		return plankopfItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -277,6 +300,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			anlageItemProvider.dispose();
 		if (verbindungItemProvider != null)
 			verbindungItemProvider.dispose();
+		if (plankopfItemProvider != null)
+			plankopfItemProvider.dispose();
 	}
 
 }

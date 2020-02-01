@@ -39,6 +39,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/objekt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/plankopf"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Objekt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/name"/>
@@ -68,5 +69,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/quellSicherungsGroesse"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/zielSicherungsGroesse"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//Plankopf"/>
   </genPackages>
 </genmodel:GenModel>
