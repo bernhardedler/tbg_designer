@@ -2,6 +2,7 @@ package at.tb_gruber.designer.design.style;
 
 import org.eclipse.gmf.runtime.diagram.ui.services.editpart.AbstractEditPartProvider;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.sirius.diagram.CustomStyle;
 import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.WorkspaceImage;
 
@@ -26,14 +27,17 @@ public class StyleEditPartProvider extends AbstractEditPartProvider {
 //		if (view instanceof WorkspaceImage) {
 //			return TBGWorkspaceImageEditPart.class;
 //		}
+		if (view instanceof CustomStyle) {
+			
+		}
 		return super.getNodeEditPartClass(view);
 	}
 
 	@Override
 	protected Class getEdgeEditPartClass(View view) {
-		if (view.getElement() instanceof DEdge) {
-			return VerbindungStyleEditPart.class;
-		}
+//		if (view.getElement() instanceof DEdge) {
+//			return VerbindungStyleEditPart.class;
+//		}
 		return super.getEdgeEditPartClass(view);
 	}
 
