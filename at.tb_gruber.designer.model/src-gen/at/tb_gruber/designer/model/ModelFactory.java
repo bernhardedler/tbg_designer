@@ -67,6 +67,15 @@ public interface ModelFactory extends EFactory {
 	Plankopf createPlankopf();
 
 	/**
+	 * Returns a new object of class '<em>Textbaustein</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Textbaustein</em>'.
+	 * @generated
+	 */
+	Textbaustein createTextbaustein();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

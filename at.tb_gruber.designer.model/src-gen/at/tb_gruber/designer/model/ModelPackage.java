@@ -414,13 +414,22 @@ public interface ModelPackage extends EPackage {
 	int PLANKOPF = 4;
 
 	/**
+	 * The feature id for the '<em><b>Textbaustein</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANKOPF__TEXTBAUSTEIN = 0;
+
+	/**
 	 * The number of structural features of the '<em>Plankopf</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANKOPF_FEATURE_COUNT = 0;
+	int PLANKOPF_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Plankopf</em>' class.
@@ -432,6 +441,43 @@ public interface ModelPackage extends EPackage {
 	int PLANKOPF_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.TextbausteinImpl <em>Textbaustein</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.TextbausteinImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTextbaustein()
+	 * @generated
+	 */
+	int TEXTBAUSTEIN = 5;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXTBAUSTEIN__LABEL = 0;
+
+	/**
+	 * The number of structural features of the '<em>Textbaustein</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXTBAUSTEIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Textbaustein</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXTBAUSTEIN_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -439,7 +485,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 5;
+	int OBJEKTARTTYPE = 6;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}' enum.
@@ -449,7 +495,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getanlagearttype()
 	 * @generated
 	 */
-	int ANLAGEARTTYPE = 6;
+	int ANLAGEARTTYPE = 7;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
@@ -459,7 +505,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 7;
+	int SPANNUNGSARTTYPE = 8;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -798,6 +844,38 @@ public interface ModelPackage extends EPackage {
 	EClass getPlankopf();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Plankopf#getTextbaustein <em>Textbaustein</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Textbaustein</em>'.
+	 * @see at.tb_gruber.designer.model.Plankopf#getTextbaustein()
+	 * @see #getPlankopf()
+	 * @generated
+	 */
+	EReference getPlankopf_Textbaustein();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Textbaustein <em>Textbaustein</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Textbaustein</em>'.
+	 * @see at.tb_gruber.designer.model.Textbaustein
+	 * @generated
+	 */
+	EClass getTextbaustein();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Textbaustein#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see at.tb_gruber.designer.model.Textbaustein#getLabel()
+	 * @see #getTextbaustein()
+	 * @generated
+	 */
+	EAttribute getTextbaustein_Label();
+
+	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1107,6 +1185,32 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PLANKOPF = eINSTANCE.getPlankopf();
+
+		/**
+		 * The meta object literal for the '<em><b>Textbaustein</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLANKOPF__TEXTBAUSTEIN = eINSTANCE.getPlankopf_Textbaustein();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.TextbausteinImpl <em>Textbaustein</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.TextbausteinImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTextbaustein()
+		 * @generated
+		 */
+		EClass TEXTBAUSTEIN = eINSTANCE.getTextbaustein();
+
+		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXTBAUSTEIN__LABEL = eINSTANCE.getTextbaustein_Label();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.

@@ -188,6 +188,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Textbaustein} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextbausteinItemProvider textbausteinItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Textbaustein}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTextbausteinAdapter() {
+		if (textbausteinItemProvider == null) {
+			textbausteinItemProvider = new TextbausteinItemProvider(this);
+		}
+
+		return textbausteinItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,6 +325,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			verbindungItemProvider.dispose();
 		if (plankopfItemProvider != null)
 			plankopfItemProvider.dispose();
+		if (textbausteinItemProvider != null)
+			textbausteinItemProvider.dispose();
 	}
 
 }

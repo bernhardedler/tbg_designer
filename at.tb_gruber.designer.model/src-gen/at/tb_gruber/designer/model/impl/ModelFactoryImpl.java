@@ -66,6 +66,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createVerbindung();
 		case ModelPackage.PLANKOPF:
 			return createPlankopf();
+		case ModelPackage.TEXTBAUSTEIN:
+			return createTextbaustein();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -162,6 +164,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Plankopf createPlankopf() {
 		PlankopfImpl plankopf = new PlankopfImpl();
 		return plankopf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Textbaustein createTextbaustein() {
+		TextbausteinImpl textbaustein = new TextbausteinImpl();
+		return textbaustein;
 	}
 
 	/**

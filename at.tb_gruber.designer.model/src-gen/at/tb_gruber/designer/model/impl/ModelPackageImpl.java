@@ -8,6 +8,7 @@ import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Plankopf;
+import at.tb_gruber.designer.model.Textbaustein;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.anlagearttype;
 import at.tb_gruber.designer.model.objektarttype;
@@ -62,6 +63,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass plankopfEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textbausteinEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -464,6 +472,36 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getPlankopf_Textbaustein() {
+		return (EReference) plankopfEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTextbaustein() {
+		return textbausteinEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextbaustein_Label() {
+		return (EAttribute) textbausteinEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getobjektarttype() {
 		return objektarttypeEEnum;
 	}
@@ -553,6 +591,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(verbindungEClass, VERBINDUNG__ZIEL_SICHERUNGS_GROESSE);
 
 		plankopfEClass = createEClass(PLANKOPF);
+		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
+
+		textbausteinEClass = createEClass(TEXTBAUSTEIN);
+		createEAttribute(textbausteinEClass, TEXTBAUSTEIN__LABEL);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
@@ -665,6 +707,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPlankopf_Textbaustein(), this.getTextbaustein(), null, "textbaustein", null, 0, -1,
+				Plankopf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(textbausteinEClass, Textbaustein.class, "Textbaustein", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextbaustein_Label(), ecorePackage.getEString(), "Label", null, 1, 1, Textbaustein.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");

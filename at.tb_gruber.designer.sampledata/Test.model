@@ -3,8 +3,6 @@
   <objekt name="Gebäude A">
     <anlage name="Anlage A1" versorgtVon="2" versorgungsspannung="NSP 50Hz (grün)">
       <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0" quellSicherungsGroesse="10A"/>
-      <verbindungNach nr="3" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.0/@anlage.0"/>
-      <verbindungNach nr="4" ziel="//@objekt.2/@anlage.2" ursprung="//@objekt.0/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="Gebäude B">
@@ -12,10 +10,11 @@
     <anlage name="asjdfklasdf"/>
   </objekt>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
-    <anlage name="Anlage C1" anlagenart="Trafo" versorgungsspannung="10kV 50Hz (blau)">
+    <anlage name="Anlage C1" anlagenart="Trafo">
       <verbindungNach nr="2" ziel="//@objekt.0/@anlage.0" ursprung="//@objekt.2/@anlage.0"/>
     </anlage>
-    <anlage name="Anlage C2" versorgtVon="3"/>
-    <anlage name="Anlage C3" versorgtVon="4"/>
+    <anlage name="Anlage C2" anlagenart="Versorgungsknoten"/>
+    <anlage name="Anlage C3"/>
   </objekt>
+  <plankopf/>
 </tbg:Bahnhof>

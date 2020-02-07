@@ -68,5 +68,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zielSicherungsGroesse"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Plankopf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Plankopf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textbaustein" upperBound="-1"
+        eType="#//Textbaustein" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Textbaustein">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -11,8 +11,8 @@
  <g>
   <title>Layer 1</title>
   <rect stroke="#ff0000" id="svg_3" height="100" width="100" y="0" x="0" stroke-width="3" fill="none"/>
-  <line id="svg_4" y2="50" x2="100" y1="50" x1="0" stroke-width="1.5" stroke="#ff0000" fill="none"/>
-  <line id="svg_5" y2="100" x2="30" y1="50" x1="30" stroke-width="1.5" stroke="#ff0000" fill="none"/>
-  <line id="svg_10" y2="100" x2="70" y1="50" x1="70" stroke-width="1.5" stroke="#ff0000" fill="none"/>
+  <line id="svg_4" y2="50" x2="100" y1="50" x1="0" stroke-width="2" stroke="#ff0000" fill="none"/>
+  <line id="svg_5" y2="100" x2="30" y1="50" x1="30" stroke-width="2" stroke="#ff0000" fill="none"/>
+  <line id="svg_10" y2="100" x2="70" y1="50" x1="70" stroke-width="2" stroke="#ff0000" fill="none"/>
  </g>
 </svg>

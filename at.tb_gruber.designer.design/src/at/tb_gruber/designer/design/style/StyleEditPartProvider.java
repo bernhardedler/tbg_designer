@@ -27,9 +27,6 @@ public class StyleEditPartProvider extends AbstractEditPartProvider {
 //		if (view instanceof WorkspaceImage) {
 //			return TBGWorkspaceImageEditPart.class;
 //		}
-		if (view instanceof CustomStyle) {
-			
-		}
 		return super.getNodeEditPartClass(view);
 	}
 

@@ -69,6 +69,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/quellSicherungsGroesse"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/zielSicherungsGroesse"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Plankopf"/>
+    <genClasses ecoreClass="model.ecore#//Plankopf">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Plankopf/textbaustein"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Textbaustein">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
