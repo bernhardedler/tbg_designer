@@ -24,7 +24,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.common;bundle-version="6.2.2",
  org.eclipse.sirius.common.acceleo.aql.ide;bundle-version="6.2.2",
  org.eclipse.sirius.common.acceleo.mtl;bundle-version="6.2.2",
- org.eclipse.sirius.common.ui;bundle-version="6.2.2"
+ org.eclipse.sirius.common.ui;bundle-version="6.2.2",
+ org.eclipse.sirius.ext.base;bundle-version="6.2.2",
+ com.google.guava;bundle-version="27.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: TB Gruber

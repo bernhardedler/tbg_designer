@@ -169,7 +169,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype TRAFOSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
+	protected static final spannungsarttype TRAFOSPANNUNG_EDEFAULT = spannungsarttype._20K_V50_HZ;
 
 	/**
 	 * The cached value of the '{@link #getTrafospannung() <em>Trafospannung</em>}' attribute.
@@ -209,7 +209,7 @@ public class AnlageImpl extends MinimalEObjectImpl.Container implements Anlage {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
+	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
 
 	/**
 	 * The cached value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.

@@ -66,6 +66,13 @@ public class Services {
 		return false;
 	}
 
+	public Boolean isTrafo(EObject self) {
+		if (self instanceof AnlageImpl) {
+			return ((AnlageImpl) self).getAnlagenart().getValue() == anlagearttype.TRAFO_VALUE;
+		}
+		return false;
+	}
+	
 	public Boolean isAnlageart(EObject self, Integer anlageart, Integer spannungsart) {
 		return isAnlageart(self, anlageart) && isSpannungsart(self, spannungsart);
 	}

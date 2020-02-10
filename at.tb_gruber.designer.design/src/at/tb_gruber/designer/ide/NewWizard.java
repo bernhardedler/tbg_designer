@@ -1,6 +1,7 @@
 package at.tb_gruber.designer.ide;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URI;
 
 import org.eclipse.core.runtime.CoreException;
@@ -27,21 +28,38 @@ public class NewWizard extends Wizard implements INewWizard {
 
 	@Override
 	public boolean performFinish() {
-		String name = _pageOne.getProjectName();
-		URI location = null;
-		if (!_pageOne.useDefaults()) {
-			location = _pageOne.getLocationURI();
-		} // else location == null
+		final ProjectCreationOperation arduinoModelingProjectCreationOperation = new ProjectCreationOperation(
+				_pageOne.getProjectHandle());
 
 		try {
-			CustomProjectSupport.createProject(name, location);
-		} catch (IOException | CoreException e) {
+			getContainer().run(true, false, arduinoModelingProjectCreationOperation);
+		} catch (InvocationTargetException e) {
+			System.out.println("ERROR: Create project failed");
 			e.printStackTrace();
-			return false;
+		} catch (InterruptedException e) {
+			System.out.println("ERROR: Create project failed");
+			e.printStackTrace();
 		}
-
 		return true;
 	}
+
+//	@Override
+//	public boolean performFinish() {
+//		String name = _pageOne.getProjectName();
+//		URI location = null;
+//		if (!_pageOne.useDefaults()) {
+//			location = _pageOne.getLocationURI();
+//		} // else location == null
+//
+//		try {
+//			CustomProjectSupport.createProject(name, location);
+//		} catch (IOException | CoreException e) {
+//			e.printStackTrace();
+//			return false;
+//		}
+//
+//		return true;
+//	}
 
 	@Override
 	public void addPages() {

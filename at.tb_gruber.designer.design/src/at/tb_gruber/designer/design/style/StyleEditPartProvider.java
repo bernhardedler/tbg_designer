@@ -24,9 +24,10 @@ public class StyleEditPartProvider extends AbstractEditPartProvider {
 
 	@Override
 	protected Class getNodeEditPartClass(View view) {
-//		if (view instanceof WorkspaceImage) {
+//		System.out.println(view.getClass() + ": " + view.getElement().getClass());
+		if (view.getElement() instanceof WorkspaceImage) {
 //			return TBGWorkspaceImageEditPart.class;
-//		}
+		}
 		return super.getNodeEditPartClass(view);
 	}
 

@@ -168,6 +168,7 @@ public interface Anlage extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Trafospannung</b></em>' attribute.
+	 * The default value is <code>"20kV 50Hz (rot)"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,7 +176,7 @@ public interface Anlage extends EObject {
 	 * @see at.tb_gruber.designer.model.spannungsarttype
 	 * @see #setTrafospannung(spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Trafospannung()
-	 * @model
+	 * @model default="20kV 50Hz (rot)"
 	 * @generated
 	 */
 	spannungsarttype getTrafospannung();
@@ -227,6 +228,7 @@ public interface Anlage extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The default value is <code>"NSP 50Hz (gr\u00fcn)"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -234,7 +236,7 @@ public interface Anlage extends EObject {
 	 * @see at.tb_gruber.designer.model.spannungsarttype
 	 * @see #setVersorgungsspannung(spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Versorgungsspannung()
-	 * @model
+	 * @model default="NSP 50Hz (gr\u00fcn)"
 	 * @generated
 	 */
 	spannungsarttype getVersorgungsspannung();

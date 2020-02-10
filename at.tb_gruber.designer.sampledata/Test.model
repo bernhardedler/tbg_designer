@@ -2,7 +2,7 @@
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="Kirchberg">
   <objekt name="Gebäude A">
     <anlage name="Anlage A1">
-      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0" quellSicherungsGroesse="10A"/>
+      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0" quellSicherungsGroesse=""/>
       <verbindungNach nr="2" versorgungsspannung="10kV 50Hz (blau)" ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
     </anlage>
   </objekt>
@@ -11,17 +11,17 @@
     <anlage name="asjdfklasdf"/>
   </objekt>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
-    <anlage name="Anlage C1" anlagenart="Trafo" trafospannung="NSP 50Hz (grün)" versorgtVon="2">
-      <verbindungNach nr="3" versorgungsspannung="NSP 50Hz (grün)" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.2/@anlage.0"/>
+    <anlage name="Anlage C1" anlagenart="Trafo" trafospannung="10kV 50Hz (blau)" versorgtVon="2" versorgungsspannung="20kV 50Hz (rot)">
+      <verbindungNach nr="3" versorgungsspannung="10kV 50Hz (blau)" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.2/@anlage.0"/>
     </anlage>
-    <anlage name="Anlage C2" anlagenart="Versorgungsknoten" versorgtVon="3" versorgungsspannung="10kV 50Hz (blau)">
+    <anlage name="Anlage C2a" anlagenart="Versorgungsknoten" versorgtVon="3" versorgungsspannung="10kV 50Hz (blau)">
       <verbindungNach nr="4" ziel="//@objekt.2/@anlage.2" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="5" ziel="//@objekt.2/@anlage.3" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="6" ziel="//@objekt.2/@anlage.4" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="7" ziel="//@objekt.2/@anlage.5" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="8" ziel="//@objekt.2/@anlage.6" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="9" ziel="//@objekt.2/@anlage.7" ursprung="//@objekt.2/@anlage.1"/>
-      <verbindungNach nr="10" ziel="//@objekt.2/@anlage.8" ursprung="//@objekt.2/@anlage.1"/>
+      <verbindungNach nr="10" versorgungsspannung="10kV 50Hz (blau)" ziel="//@objekt.2/@anlage.8" ursprung="//@objekt.2/@anlage.1"/>
     </anlage>
     <anlage name="Anlage C3" anlagenart="Energietechnikanlage" versorgtVon="4"/>
     <anlage name="Anlage C4" anlagenart="Energietechnikanlage" versorgtVon="5"/>
@@ -29,7 +29,7 @@
     <anlage name="Anlage C6" anlagenart="Energietechnikanlage" versorgtVon="7"/>
     <anlage name="Anlage C7" anlagenart="Energietechnikanlage" versorgtVon="8"/>
     <anlage name="Anlage C8" anlagenart="Energietechnikanlage" versorgtVon="9"/>
-    <anlage name="Anlage C9" anlagenart="Energietechnikanlage" versorgtVon="10"/>
+    <anlage name="Anlage C9" anlagenart="Energietechnikanlage" versorgtVon="10" versorgungsspannung="10kV 50Hz (blau)"/>
   </objekt>
   <plankopf/>
 </tbg:Bahnhof>

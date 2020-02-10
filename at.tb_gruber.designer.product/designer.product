@@ -12,6 +12,8 @@
    </configIni>
 
    <launcherArgs>
+      <programArgs>-perspective org.eclipse.sirius.ui.tools.perspective.modeling
+      </programArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>
