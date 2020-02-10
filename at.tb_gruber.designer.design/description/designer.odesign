@@ -688,6 +688,7 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagenart" valueExpression="aql:model::anlagearttype::Trafo"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:model::spannungsarttype::_20kV50Hz"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>

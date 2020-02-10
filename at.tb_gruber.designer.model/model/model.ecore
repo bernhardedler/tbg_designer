@@ -34,7 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafoKva" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafospannung" eType="#//spannungsarttype"
-        defaultValueLiteral="20kV 50Hz (rot)"/>
+        defaultValueLiteral="NSP 50Hz (grün)"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verbindungNach" upperBound="-1"
         eType="#//Verbindung" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="versorgtVon" eType="#//Verbindung"/>

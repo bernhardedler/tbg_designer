@@ -21,7 +21,7 @@
       <verbindungNach nr="7" ziel="//@objekt.2/@anlage.5" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="8" ziel="//@objekt.2/@anlage.6" ursprung="//@objekt.2/@anlage.1"/>
       <verbindungNach nr="9" ziel="//@objekt.2/@anlage.7" ursprung="//@objekt.2/@anlage.1"/>
-      <verbindungNach nr="10" versorgungsspannung="10kV 50Hz (blau)" ziel="//@objekt.2/@anlage.8" ursprung="//@objekt.2/@anlage.1"/>
+      <verbindungNach nr="10" versorgungsspannung="10kV 50Hz (blau)" kabeltyp="" ziel="//@objekt.2/@anlage.8" ursprung="//@objekt.2/@anlage.1"/>
     </anlage>
     <anlage name="Anlage C3" anlagenart="Energietechnikanlage" versorgtVon="4"/>
     <anlage name="Anlage C4" anlagenart="Energietechnikanlage" versorgtVon="5"/>
@@ -31,5 +31,10 @@
     <anlage name="Anlage C8" anlagenart="Energietechnikanlage" versorgtVon="9"/>
     <anlage name="Anlage C9" anlagenart="Energietechnikanlage" versorgtVon="10" versorgungsspannung="10kV 50Hz (blau)"/>
   </objekt>
-  <plankopf/>
+  <objekt name="Gebäude D">
+    <anlage anlagennummer="ÜGS 00"/>
+  </objekt>
+  <plankopf>
+    <textbaustein Label="02/2020"/>
+  </plankopf>
 </tbg:Bahnhof>
