@@ -648,11 +648,11 @@
           </style>
         </containerMappings>
         <containerMappings name="Plankopf" domainClass="model::Plankopf">
-          <subNodeMappings name="Textbaustein" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Textbaustein">
-            <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Label" labelPosition="node" resizeKind="NSEW" shape="stroke">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <subNodeMappings name="Textbaustein" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.3/@ownedTools[name='editNodeLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Textbaustein">
+            <style xsi:type="style:NoteDescription" labelSize="14" showIcon="false" labelExpression="feature:Label" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/plankopf_legende.png">
@@ -797,6 +797,14 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Textbaustein" referenceName="textbaustein"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editNodeLabel">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="Label" valueExpression="var:arg0"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
