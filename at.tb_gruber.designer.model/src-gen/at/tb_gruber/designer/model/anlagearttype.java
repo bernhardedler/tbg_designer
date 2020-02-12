@@ -21,25 +21,27 @@ public enum anlagearttype implements Enumerator {
 	/**
 	 * The '<em><b>UEGS Zaehlpunkt</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #UEGS_ZAEHLPUNKT_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	UEGS_ZAEHLPUNKT(0, "UEGSZaehlpunkt", "\u00dcGS/Z\u00e4hlpunkt"),
+
 	/**
 	 * The '<em><b>Trafo</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #TRAFO_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	TRAFO(1, "Trafo", "Trafo"),
+
 	/**
 	 * The '<em><b>Versorgungsknoten</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #VERSORGUNGSKNOTEN_VALUE
 	 * @generated
 	 * @ordered
@@ -55,10 +57,11 @@ public enum anlagearttype implements Enumerator {
 	 * @ordered
 	 */
 	ENERGIETECHNIKANLAGE(3, "Energietechnikanlage", "Energietechnikanlage"),
+
 	/**
 	 * The '<em><b>VK ET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #VK_ET_VALUE
 	 * @generated
 	 * @ordered

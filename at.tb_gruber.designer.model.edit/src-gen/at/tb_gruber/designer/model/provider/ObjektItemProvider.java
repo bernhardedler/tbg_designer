@@ -228,7 +228,19 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createAnlage()));
+				.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createTrafo()));
+
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createZaehlpunkt()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
+				ModelFactory.eINSTANCE.createVersorgungsknoten()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
+				ModelFactory.eINSTANCE.createEnergietechnikanlage()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
+				ModelFactory.eINSTANCE.createVersorgungsknotenMitET()));
 	}
 
 	/**

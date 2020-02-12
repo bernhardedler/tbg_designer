@@ -214,22 +214,13 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Anlagenart</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANLAGE__ANLAGENART = 1;
-
-	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__ANLAGENNUMMER = 2;
+	int ANLAGE__ANLAGENNUMMER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
@@ -238,7 +229,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__OBJEKTTEIL = 3;
+	int ANLAGE__OBJEKTTEIL = 2;
 
 	/**
 	 * The feature id for the '<em><b>Anlagen Id</b></em>' attribute.
@@ -247,25 +238,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__ANLAGEN_ID = 4;
-
-	/**
-	 * The feature id for the '<em><b>Trafo Kva</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANLAGE__TRAFO_KVA = 5;
-
-	/**
-	 * The feature id for the '<em><b>Trafospannung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANLAGE__TRAFOSPANNUNG = 6;
+	int ANLAGE__ANLAGEN_ID = 3;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -274,16 +247,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__VERBINDUNG_NACH = 7;
+	int ANLAGE__VERBINDUNG_NACH = 4;
 
 	/**
-	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference.
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__VERSORGT_VON = 8;
+	int ANLAGE__VERSORGT_VON = 5;
 
 	/**
 	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
@@ -292,7 +265,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__VERSORGUNGSSPANNUNG = 9;
+	int ANLAGE__VERSORGUNGSSPANNUNG = 6;
 
 	/**
 	 * The number of structural features of the '<em>Anlage</em>' class.
@@ -301,7 +274,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_FEATURE_COUNT = 10;
+	int ANLAGE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Anlage</em>' class.
@@ -478,6 +451,479 @@ public interface ModelPackage extends EPackage {
 	int TEXTBAUSTEIN_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.TrafoImpl <em>Trafo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.TrafoImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTrafo()
+	 * @generated
+	 */
+	int TRAFO = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__NAME = ANLAGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__ANLAGENNUMMER = ANLAGE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__OBJEKTTEIL = ANLAGE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__ANLAGEN_ID = ANLAGE__ANLAGEN_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__VERBINDUNG_NACH = ANLAGE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__VERSORGT_VON = ANLAGE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Trafospannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__TRAFOSPANNUNG = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Trafo Kva</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__TRAFO_KVA = ANLAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Trafo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Trafo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO_OPERATION_COUNT = ANLAGE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.ZaehlpunktImpl <em>Zaehlpunkt</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.ZaehlpunktImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getZaehlpunkt()
+	 * @generated
+	 */
+	int ZAEHLPUNKT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__NAME = ANLAGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__ANLAGENNUMMER = ANLAGE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__OBJEKTTEIL = ANLAGE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__ANLAGEN_ID = ANLAGE__ANLAGEN_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__VERBINDUNG_NACH = ANLAGE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__VERSORGT_VON = ANLAGE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+
+	/**
+	 * The number of structural features of the '<em>Zaehlpunkt</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Zaehlpunkt</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT_OPERATION_COUNT = ANLAGE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl <em>Versorgungsknoten</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.VersorgungsknotenImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVersorgungsknoten()
+	 * @generated
+	 */
+	int VERSORGUNGSKNOTEN = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__NAME = ANLAGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__ANLAGENNUMMER = ANLAGE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__OBJEKTTEIL = ANLAGE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__ANLAGEN_ID = ANLAGE__ANLAGEN_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__VERBINDUNG_NACH = ANLAGE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__VERSORGT_VON = ANLAGE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+
+	/**
+	 * The number of structural features of the '<em>Versorgungsknoten</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Versorgungsknoten</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_OPERATION_COUNT = ANLAGE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.EnergietechnikanlageImpl <em>Energietechnikanlage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.EnergietechnikanlageImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergietechnikanlage()
+	 * @generated
+	 */
+	int ENERGIETECHNIKANLAGE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__NAME = ANLAGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__ANLAGENNUMMER = ANLAGE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__OBJEKTTEIL = ANLAGE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__ANLAGEN_ID = ANLAGE__ANLAGEN_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__VERBINDUNG_NACH = ANLAGE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__VERSORGT_VON = ANLAGE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+
+	/**
+	 * The number of structural features of the '<em>Energietechnikanlage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Energietechnikanlage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE_OPERATION_COUNT = ANLAGE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenMitETImpl <em>Versorgungsknoten Mit ET</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.VersorgungsknotenMitETImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVersorgungsknotenMitET()
+	 * @generated
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__NAME = ANLAGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__ANLAGENNUMMER = ANLAGE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__OBJEKTTEIL = ANLAGE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__ANLAGEN_ID = ANLAGE__ANLAGEN_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__VERBINDUNG_NACH = ANLAGE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__VERSORGT_VON = ANLAGE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+
+	/**
+	 * The number of structural features of the '<em>Versorgungsknoten Mit ET</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Versorgungsknoten Mit ET</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET_OPERATION_COUNT = ANLAGE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -485,7 +931,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 6;
+	int OBJEKTARTTYPE = 11;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}' enum.
@@ -495,7 +941,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getanlagearttype()
 	 * @generated
 	 */
-	int ANLAGEARTTYPE = 7;
+	int ANLAGEARTTYPE = 12;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
@@ -505,7 +951,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 8;
+	int SPANNUNGSARTTYPE = 13;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -648,17 +1094,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAnlage_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getAnlagenart <em>Anlagenart</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Anlagenart</em>'.
-	 * @see at.tb_gruber.designer.model.Anlage#getAnlagenart()
-	 * @see #getAnlage()
-	 * @generated
-	 */
-	EAttribute getAnlage_Anlagenart();
-
-	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getAnlagennummer <em>Anlagennummer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -692,28 +1127,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAnlage_AnlagenId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getTrafoKva <em>Trafo Kva</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Trafo Kva</em>'.
-	 * @see at.tb_gruber.designer.model.Anlage#getTrafoKva()
-	 * @see #getAnlage()
-	 * @generated
-	 */
-	EAttribute getAnlage_TrafoKva();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getTrafospannung <em>Trafospannung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Trafospannung</em>'.
-	 * @see at.tb_gruber.designer.model.Anlage#getTrafospannung()
-	 * @see #getAnlage()
-	 * @generated
-	 */
-	EAttribute getAnlage_Trafospannung();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Anlage#getVerbindungNach <em>Verbindung Nach</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,10 +1138,10 @@ public interface ModelPackage extends EPackage {
 	EReference getAnlage_VerbindungNach();
 
 	/**
-	 * Returns the meta object for the reference '{@link at.tb_gruber.designer.model.Anlage#getVersorgtVon <em>Versorgt Von</em>}'.
+	 * Returns the meta object for the reference list '{@link at.tb_gruber.designer.model.Anlage#getVersorgtVon <em>Versorgt Von</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Versorgt Von</em>'.
+	 * @return the meta object for the reference list '<em>Versorgt Von</em>'.
 	 * @see at.tb_gruber.designer.model.Anlage#getVersorgtVon()
 	 * @see #getAnlage()
 	 * @generated
@@ -874,6 +1287,78 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTextbaustein_Label();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Trafo <em>Trafo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trafo</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo
+	 * @generated
+	 */
+	EClass getTrafo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getTrafospannung <em>Trafospannung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trafospannung</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo#getTrafospannung()
+	 * @see #getTrafo()
+	 * @generated
+	 */
+	EAttribute getTrafo_Trafospannung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trafo Kva</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo#getTrafoKva()
+	 * @see #getTrafo()
+	 * @generated
+	 */
+	EAttribute getTrafo_TrafoKva();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Zaehlpunkt <em>Zaehlpunkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Zaehlpunkt</em>'.
+	 * @see at.tb_gruber.designer.model.Zaehlpunkt
+	 * @generated
+	 */
+	EClass getZaehlpunkt();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Versorgungsknoten <em>Versorgungsknoten</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Versorgungsknoten</em>'.
+	 * @see at.tb_gruber.designer.model.Versorgungsknoten
+	 * @generated
+	 */
+	EClass getVersorgungsknoten();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Energietechnikanlage <em>Energietechnikanlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Energietechnikanlage</em>'.
+	 * @see at.tb_gruber.designer.model.Energietechnikanlage
+	 * @generated
+	 */
+	EClass getEnergietechnikanlage();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VersorgungsknotenMitET <em>Versorgungsknoten Mit ET</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Versorgungsknoten Mit ET</em>'.
+	 * @see at.tb_gruber.designer.model.VersorgungsknotenMitET
+	 * @generated
+	 */
+	EClass getVersorgungsknotenMitET();
 
 	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
@@ -1039,14 +1524,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute ANLAGE__NAME = eINSTANCE.getAnlage_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Anlagenart</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANLAGE__ANLAGENART = eINSTANCE.getAnlage_Anlagenart();
-
-		/**
 		 * The meta object literal for the '<em><b>Anlagennummer</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1071,22 +1548,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute ANLAGE__ANLAGEN_ID = eINSTANCE.getAnlage_AnlagenId();
 
 		/**
-		 * The meta object literal for the '<em><b>Trafo Kva</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANLAGE__TRAFO_KVA = eINSTANCE.getAnlage_TrafoKva();
-
-		/**
-		 * The meta object literal for the '<em><b>Trafospannung</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANLAGE__TRAFOSPANNUNG = eINSTANCE.getAnlage_Trafospannung();
-
-		/**
 		 * The meta object literal for the '<em><b>Verbindung Nach</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1095,7 +1556,7 @@ public interface ModelPackage extends EPackage {
 		EReference ANLAGE__VERBINDUNG_NACH = eINSTANCE.getAnlage_VerbindungNach();
 
 		/**
-		 * The meta object literal for the '<em><b>Versorgt Von</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Versorgt Von</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1211,6 +1672,72 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEXTBAUSTEIN__LABEL = eINSTANCE.getTextbaustein_Label();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.TrafoImpl <em>Trafo</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.TrafoImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTrafo()
+		 * @generated
+		 */
+		EClass TRAFO = eINSTANCE.getTrafo();
+
+		/**
+		 * The meta object literal for the '<em><b>Trafospannung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFO__TRAFOSPANNUNG = eINSTANCE.getTrafo_Trafospannung();
+
+		/**
+		 * The meta object literal for the '<em><b>Trafo Kva</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFO__TRAFO_KVA = eINSTANCE.getTrafo_TrafoKva();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.ZaehlpunktImpl <em>Zaehlpunkt</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.ZaehlpunktImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getZaehlpunkt()
+		 * @generated
+		 */
+		EClass ZAEHLPUNKT = eINSTANCE.getZaehlpunkt();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl <em>Versorgungsknoten</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.VersorgungsknotenImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVersorgungsknoten()
+		 * @generated
+		 */
+		EClass VERSORGUNGSKNOTEN = eINSTANCE.getVersorgungsknoten();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.EnergietechnikanlageImpl <em>Energietechnikanlage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.EnergietechnikanlageImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergietechnikanlage()
+		 * @generated
+		 */
+		EClass ENERGIETECHNIKANLAGE = eINSTANCE.getEnergietechnikanlage();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenMitETImpl <em>Versorgungsknoten Mit ET</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.VersorgungsknotenMitETImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVersorgungsknotenMitET()
+		 * @generated
+		 */
+		EClass VERSORGUNGSKNOTEN_MIT_ET = eINSTANCE.getVersorgungsknotenMitET();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.

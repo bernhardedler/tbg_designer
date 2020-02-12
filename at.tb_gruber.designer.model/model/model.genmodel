@@ -50,12 +50,9 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Anlage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagenart"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagennummer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/objektteil"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagenId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/trafoKva"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/trafospannung"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/verbindungNach"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/versorgtVon"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/versorgungsspannung"/>
@@ -75,5 +72,13 @@
     <genClasses ecoreClass="model.ecore#//Textbaustein">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//Trafo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/trafospannung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/trafoKva"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Zaehlpunkt"/>
+    <genClasses ecoreClass="model.ecore#//Versorgungsknoten"/>
+    <genClasses ecoreClass="model.ecore#//Energietechnikanlage"/>
+    <genClasses ecoreClass="model.ecore#//VersorgungsknotenMitET"/>
   </genPackages>
 </genmodel:GenModel>

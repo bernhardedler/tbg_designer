@@ -4,12 +4,17 @@ package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Plankopf;
 import at.tb_gruber.designer.model.Textbaustein;
+import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Verbindung;
+import at.tb_gruber.designer.model.Versorgungsknoten;
+import at.tb_gruber.designer.model.VersorgungsknotenMitET;
+import at.tb_gruber.designer.model.Zaehlpunkt;
 import at.tb_gruber.designer.model.anlagearttype;
 import at.tb_gruber.designer.model.objektarttype;
 import at.tb_gruber.designer.model.spannungsarttype;
@@ -70,6 +75,41 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass textbausteinEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trafoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass zaehlpunktEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass versorgungsknotenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass energietechnikanlageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass versorgungsknotenMitETEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -292,7 +332,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnlage_Anlagenart() {
+	public EAttribute getAnlage_Anlagennummer() {
 		return (EAttribute) anlageEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -302,7 +342,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnlage_Anlagennummer() {
+	public EAttribute getAnlage_Objektteil() {
 		return (EAttribute) anlageEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -312,7 +352,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnlage_Objektteil() {
+	public EAttribute getAnlage_AnlagenId() {
 		return (EAttribute) anlageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -322,38 +362,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnlage_AnlagenId() {
-		return (EAttribute) anlageEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnlage_TrafoKva() {
-		return (EAttribute) anlageEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnlage_Trafospannung() {
-		return (EAttribute) anlageEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getAnlage_VerbindungNach() {
-		return (EReference) anlageEClass.getEStructuralFeatures().get(7);
+		return (EReference) anlageEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -363,7 +373,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EReference getAnlage_VersorgtVon() {
-		return (EReference) anlageEClass.getEStructuralFeatures().get(8);
+		return (EReference) anlageEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -373,7 +383,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EAttribute getAnlage_Versorgungsspannung() {
-		return (EAttribute) anlageEClass.getEStructuralFeatures().get(9);
+		return (EAttribute) anlageEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -502,6 +512,76 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getTrafo() {
+		return trafoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafo_Trafospannung() {
+		return (EAttribute) trafoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafo_TrafoKva() {
+		return (EAttribute) trafoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getZaehlpunkt() {
+		return zaehlpunktEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVersorgungsknoten() {
+		return versorgungsknotenEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEnergietechnikanlage() {
+		return energietechnikanlageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVersorgungsknotenMitET() {
+		return versorgungsknotenMitETEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getobjektarttype() {
 		return objektarttypeEEnum;
 	}
@@ -571,12 +651,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		anlageEClass = createEClass(ANLAGE);
 		createEAttribute(anlageEClass, ANLAGE__NAME);
-		createEAttribute(anlageEClass, ANLAGE__ANLAGENART);
 		createEAttribute(anlageEClass, ANLAGE__ANLAGENNUMMER);
 		createEAttribute(anlageEClass, ANLAGE__OBJEKTTEIL);
 		createEAttribute(anlageEClass, ANLAGE__ANLAGEN_ID);
-		createEAttribute(anlageEClass, ANLAGE__TRAFO_KVA);
-		createEAttribute(anlageEClass, ANLAGE__TRAFOSPANNUNG);
 		createEReference(anlageEClass, ANLAGE__VERBINDUNG_NACH);
 		createEReference(anlageEClass, ANLAGE__VERSORGT_VON);
 		createEAttribute(anlageEClass, ANLAGE__VERSORGUNGSSPANNUNG);
@@ -595,6 +672,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		textbausteinEClass = createEClass(TEXTBAUSTEIN);
 		createEAttribute(textbausteinEClass, TEXTBAUSTEIN__LABEL);
+
+		trafoEClass = createEClass(TRAFO);
+		createEAttribute(trafoEClass, TRAFO__TRAFOSPANNUNG);
+		createEAttribute(trafoEClass, TRAFO__TRAFO_KVA);
+
+		zaehlpunktEClass = createEClass(ZAEHLPUNKT);
+
+		versorgungsknotenEClass = createEClass(VERSORGUNGSKNOTEN);
+
+		energietechnikanlageEClass = createEClass(ENERGIETECHNIKANLAGE);
+
+		versorgungsknotenMitETEClass = createEClass(VERSORGUNGSKNOTEN_MIT_ET);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
@@ -631,6 +720,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		trafoEClass.getESuperTypes().add(this.getAnlage());
+		zaehlpunktEClass.getESuperTypes().add(this.getAnlage());
+		versorgungsknotenEClass.getESuperTypes().add(this.getAnlage());
+		energietechnikanlageEClass.getESuperTypes().add(this.getAnlage());
+		versorgungsknotenMitETEClass.getESuperTypes().add(this.getAnlage());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bahnhofEClass, Bahnhof.class, "Bahnhof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -658,26 +752,19 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(anlageEClass, Anlage.class, "Anlage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(anlageEClass, Anlage.class, "Anlage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnlage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Anlage.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnlage_Anlagenart(), this.getanlagearttype(), "anlagenart", null, 0, 1, Anlage.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_Anlagennummer(), ecorePackage.getEString(), "anlagennummer", null, 0, 1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_Objektteil(), ecorePackage.getEString(), "objektteil", null, 0, 1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_AnlagenId(), ecorePackage.getEString(), "anlagenId", null, 0, 1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnlage_TrafoKva(), ecorePackage.getELong(), "trafoKva", null, 0, 1, Anlage.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnlage_Trafospannung(), this.getspannungsarttype(), "trafospannung", "NSP 50Hz (gr\u00fcn)",
-				0, 1, Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEReference(getAnlage_VerbindungNach(), this.getVerbindung(), null, "verbindungNach", null, 0, -1,
 				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAnlage_VersorgtVon(), this.getVerbindung(), null, "versorgtVon", null, 0, 1, Anlage.class,
+		initEReference(getAnlage_VersorgtVon(), this.getVerbindung(), null, "versorgtVon", null, 0, -1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_Versorgungsspannung(), this.getspannungsarttype(), "versorgungsspannung",
@@ -716,6 +803,25 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextbaustein_Label(), ecorePackage.getEString(), "Label", null, 1, 1, Textbaustein.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(trafoEClass, Trafo.class, "Trafo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrafo_Trafospannung(), this.getspannungsarttype(), "trafospannung", "NSP 50Hz (gr\u00fcn)", 0,
+				1, Trafo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafo_TrafoKva(), ecorePackage.getELong(), "trafoKva", null, 0, 1, Trafo.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(zaehlpunktEClass, Zaehlpunkt.class, "Zaehlpunkt", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(versorgungsknotenEClass, Versorgungsknoten.class, "Versorgungsknoten", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(energietechnikanlageEClass, Energietechnikanlage.class, "Energietechnikanlage", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(versorgungsknotenMitETEClass, VersorgungsknotenMitET.class, "VersorgungsknotenMitET", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");

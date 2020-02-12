@@ -7,8 +7,14 @@ import org.eclipse.emf.ecore.EObject;
 
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.Trafo;
+import at.tb_gruber.designer.model.Versorgungsknoten;
+import at.tb_gruber.designer.model.VersorgungsknotenMitET;
+import at.tb_gruber.designer.model.Zaehlpunkt;
 import at.tb_gruber.designer.model.anlagearttype;
+import at.tb_gruber.designer.model.spannungsarttype;
 import at.tb_gruber.designer.model.impl.AnlageImpl;
 import at.tb_gruber.designer.model.impl.VerbindungImpl;
 
@@ -16,14 +22,6 @@ import at.tb_gruber.designer.model.impl.VerbindungImpl;
  * The services class used by VSM.
  */
 public class Services {
-
-	/**
-	 * See for documentation on how to write service methods.
-	 */
-	public EObject myService(EObject self, String arg) {
-		// TODO Auto-generated code
-		return self;
-	}
 
 	/**
 	 * Erstellt die nächst niedrige, noch nicht vergebene ID
@@ -50,7 +48,7 @@ public class Services {
 		return alleIdsArray.length;
 	}
 
-	public Boolean isSpannungsart(EObject self, Integer target) {
+	private Boolean isSpannungsart(EObject self, Integer target) {
 		if (self instanceof VerbindungImpl) {
 			return target.equals(((VerbindungImpl) self).getVersorgungsspannung().getValue());
 		} else if (self instanceof AnlageImpl) {
@@ -59,40 +57,87 @@ public class Services {
 		return false;
 	}
 
-	private Boolean isAnlageart(EObject self, Integer target) {
-		if (self instanceof AnlageImpl) {
-			return target.equals(((AnlageImpl) self).getAnlagenart().getValue());
-		}
-		return false;
+	public Boolean isTrafo(EObject self) {
+		return self instanceof Trafo;
 	}
 
-	public Boolean isTrafo(EObject self) {
-		if (self instanceof AnlageImpl) {
-			return ((AnlageImpl) self).getAnlagenart().getValue() == anlagearttype.TRAFO_VALUE;
-		}
-		return false;
+	public Boolean isEt(EObject self) {
+		return self instanceof Energietechnikanlage;
 	}
-	
-	public Boolean isAnlageart(EObject self, Integer anlageart, Integer spannungsart) {
-		return isAnlageart(self, anlageart) && isSpannungsart(self, spannungsart);
+
+	public Boolean isVk(EObject self) {
+		return self instanceof Versorgungsknoten;
+	}
+
+	public Boolean isVkEt(EObject self) {
+		return self instanceof VersorgungsknotenMitET;
+	}
+
+	public Boolean isZp(EObject self) {
+		return self instanceof Zaehlpunkt;
+	}
+
+	public Boolean isVspViolett(EObject self) {
+		return isSpannungsart(self, spannungsarttype.RESERVE_VIOLETT_VALUE);
+	}
+
+	public Boolean isVspRot(EObject self) {
+		return isSpannungsart(self, spannungsarttype._20K_V50_HZ_VALUE);
+	}
+
+	public Boolean isVspBlau(EObject self) {
+		return isSpannungsart(self, spannungsarttype._10K_V50_HZ_VALUE);
+	}
+
+	public Boolean isVspGruen(EObject self) {
+		return isSpannungsart(self, spannungsarttype.NSP50_HZ_VALUE);
+	}
+
+	public Boolean isVspMagenta(EObject self) {
+		return isSpannungsart(self, spannungsarttype._15K_V16_7HZ_VALUE);
+	}
+
+	public Boolean isVspCyan(EObject self) {
+		return isSpannungsart(self, spannungsarttype.NSP16_7HZ_VALUE);
+	}
+
+	public Boolean isVspBraun(EObject self) {
+		return isSpannungsart(self, spannungsarttype.RESERVE_HELLBRAUN_VALUE);
+	}
+
+	public Boolean isTspViolett(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype.RESERVE_VIOLETT_VALUE);
+	}
+
+	public Boolean isTspRot(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype._20K_V50_HZ_VALUE);
+	}
+
+	public Boolean isTspBlau(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype._10K_V50_HZ_VALUE);
+	}
+
+	public Boolean isTspGruen(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype.NSP50_HZ_VALUE);
+	}
+
+	public Boolean isTspMagenta(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype._15K_V16_7HZ_VALUE);
+	}
+
+	public Boolean isTspCyan(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype.NSP16_7HZ_VALUE);
+	}
+
+	public Boolean isTspBraun(EObject self) {
+		return isTrafoSpannungsart(self, spannungsarttype.RESERVE_HELLBRAUN_VALUE);
 	}
 
 	private Boolean isTrafoSpannungsart(EObject self, Integer target) {
-		if (self instanceof AnlageImpl) {
-			return target.equals(((AnlageImpl) self).getTrafospannung().getValue());
+		if (self instanceof Trafo) {
+			return target.equals(((Trafo) self).getTrafospannung().getValue());
 		}
 		return false;
-	}
-
-	public Boolean isTrafoart(EObject self, Integer spannungsart, Integer trafoSpannungsart) {
-		return isAnlageart(self, anlagearttype.TRAFO_VALUE) && isSpannungsart(self, spannungsart)
-				&& isTrafoSpannungsart(self, trafoSpannungsart);
-	}
-
-	public Boolean isVersorgungsknotenSize(EObject self, Integer spannungsart, String size) {
-		return isAnlageart(self, anlagearttype.VERSORGUNGSKNOTEN_VALUE)
-				&& isSpannungsart(self, spannungsart)
-				&& (size.equals(getVersorgungsknotenSize(self)));
 	}
 
 	public String getVersorgungsknotenSize(EObject self) {

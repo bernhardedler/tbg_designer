@@ -60,14 +60,22 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createBahnhof();
 		case ModelPackage.OBJEKT:
 			return createObjekt();
-		case ModelPackage.ANLAGE:
-			return createAnlage();
 		case ModelPackage.VERBINDUNG:
 			return createVerbindung();
 		case ModelPackage.PLANKOPF:
 			return createPlankopf();
 		case ModelPackage.TEXTBAUSTEIN:
 			return createTextbaustein();
+		case ModelPackage.TRAFO:
+			return createTrafo();
+		case ModelPackage.ZAEHLPUNKT:
+			return createZaehlpunkt();
+		case ModelPackage.VERSORGUNGSKNOTEN:
+			return createVersorgungsknoten();
+		case ModelPackage.ENERGIETECHNIKANLAGE:
+			return createEnergietechnikanlage();
+		case ModelPackage.VERSORGUNGSKNOTEN_MIT_ET:
+			return createVersorgungsknotenMitET();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -139,17 +147,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public Anlage createAnlage() {
-		AnlageImpl anlage = new AnlageImpl();
-		return anlage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Verbindung createVerbindung() {
 		VerbindungImpl verbindung = new VerbindungImpl();
 		return verbindung;
@@ -175,6 +172,61 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Textbaustein createTextbaustein() {
 		TextbausteinImpl textbaustein = new TextbausteinImpl();
 		return textbaustein;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Trafo createTrafo() {
+		TrafoImpl trafo = new TrafoImpl();
+		return trafo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Zaehlpunkt createZaehlpunkt() {
+		ZaehlpunktImpl zaehlpunkt = new ZaehlpunktImpl();
+		return zaehlpunkt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Versorgungsknoten createVersorgungsknoten() {
+		VersorgungsknotenImpl versorgungsknoten = new VersorgungsknotenImpl();
+		return versorgungsknoten;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Energietechnikanlage createEnergietechnikanlage() {
+		EnergietechnikanlageImpl energietechnikanlage = new EnergietechnikanlageImpl();
+		return energietechnikanlage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VersorgungsknotenMitET createVersorgungsknotenMitET() {
+		VersorgungsknotenMitETImpl versorgungsknotenMitET = new VersorgungsknotenMitETImpl();
+		return versorgungsknotenMitET;
 	}
 
 	/**

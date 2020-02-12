@@ -27,10 +27,11 @@ public enum spannungsarttype implements Enumerator {
 	 * @ordered
 	 */
 	RESERVE_VIOLETT(0, "Reserve_violett", "Reserve (violett)"),
+
 	/**
 	 * The '<em><b>20k V50 Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #_20K_V50_HZ_VALUE
 	 * @generated
 	 * @ordered
@@ -46,37 +47,41 @@ public enum spannungsarttype implements Enumerator {
 	 * @ordered
 	 */
 	_10K_V50_HZ(2, "_10kV50Hz", "10kV 50Hz (blau)"),
+
 	/**
 	 * The '<em><b>NSP50 Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #NSP50_HZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	NSP50_HZ(3, "NSP50Hz", "NSP 50Hz (gr\u00fcn)"),
+
 	/**
 	 * The '<em><b>15k V16 7Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #_15K_V16_7HZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	_15K_V16_7HZ(4, "_15kV16_7Hz", "15kV 16,7Hz (magenta)"),
+
 	/**
 	 * The '<em><b>NSP16 7Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #NSP16_7HZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	NSP16_7HZ(5, "NSP16_7Hz", "NSP 16,7Hz (cyan)"),
+
 	/**
 	 * The '<em><b>Reserve hellbraun</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #RESERVE_HELLBRAUN_VALUE
 	 * @generated
 	 * @ordered

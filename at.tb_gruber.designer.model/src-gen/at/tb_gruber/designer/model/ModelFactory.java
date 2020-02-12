@@ -40,15 +40,6 @@ public interface ModelFactory extends EFactory {
 	Objekt createObjekt();
 
 	/**
-	 * Returns a new object of class '<em>Anlage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Anlage</em>'.
-	 * @generated
-	 */
-	Anlage createAnlage();
-
-	/**
 	 * Returns a new object of class '<em>Verbindung</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +65,51 @@ public interface ModelFactory extends EFactory {
 	 * @generated
 	 */
 	Textbaustein createTextbaustein();
+
+	/**
+	 * Returns a new object of class '<em>Trafo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trafo</em>'.
+	 * @generated
+	 */
+	Trafo createTrafo();
+
+	/**
+	 * Returns a new object of class '<em>Zaehlpunkt</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Zaehlpunkt</em>'.
+	 * @generated
+	 */
+	Zaehlpunkt createZaehlpunkt();
+
+	/**
+	 * Returns a new object of class '<em>Versorgungsknoten</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Versorgungsknoten</em>'.
+	 * @generated
+	 */
+	Versorgungsknoten createVersorgungsknoten();
+
+	/**
+	 * Returns a new object of class '<em>Energietechnikanlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Energietechnikanlage</em>'.
+	 * @generated
+	 */
+	Energietechnikanlage createEnergietechnikanlage();
+
+	/**
+	 * Returns a new object of class '<em>Versorgungsknoten Mit ET</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Versorgungsknoten Mit ET</em>'.
+	 * @generated
+	 */
+	VersorgungsknotenMitET createVersorgungsknotenMitET();
 
 	/**
 	 * Returns the package supported by this factory.

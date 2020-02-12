@@ -119,29 +119,6 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Anlage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AnlageItemProvider anlageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Anlage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAnlageAdapter() {
-		if (anlageItemProvider == null) {
-			anlageItemProvider = new AnlageItemProvider(this);
-		}
-
-		return anlageItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Verbindung} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -208,6 +185,121 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 		}
 
 		return textbausteinItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Trafo} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TrafoItemProvider trafoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Trafo}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTrafoAdapter() {
+		if (trafoItemProvider == null) {
+			trafoItemProvider = new TrafoItemProvider(this);
+		}
+
+		return trafoItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Zaehlpunkt} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZaehlpunktItemProvider zaehlpunktItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Zaehlpunkt}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZaehlpunktAdapter() {
+		if (zaehlpunktItemProvider == null) {
+			zaehlpunktItemProvider = new ZaehlpunktItemProvider(this);
+		}
+
+		return zaehlpunktItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Versorgungsknoten} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VersorgungsknotenItemProvider versorgungsknotenItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Versorgungsknoten}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVersorgungsknotenAdapter() {
+		if (versorgungsknotenItemProvider == null) {
+			versorgungsknotenItemProvider = new VersorgungsknotenItemProvider(this);
+		}
+
+		return versorgungsknotenItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Energietechnikanlage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnergietechnikanlageItemProvider energietechnikanlageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Energietechnikanlage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnergietechnikanlageAdapter() {
+		if (energietechnikanlageItemProvider == null) {
+			energietechnikanlageItemProvider = new EnergietechnikanlageItemProvider(this);
+		}
+
+		return energietechnikanlageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VersorgungsknotenMitET} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VersorgungsknotenMitETItemProvider versorgungsknotenMitETItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VersorgungsknotenMitET}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVersorgungsknotenMitETAdapter() {
+		if (versorgungsknotenMitETItemProvider == null) {
+			versorgungsknotenMitETItemProvider = new VersorgungsknotenMitETItemProvider(this);
+		}
+
+		return versorgungsknotenMitETItemProvider;
 	}
 
 	/**
@@ -319,14 +411,22 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			bahnhofItemProvider.dispose();
 		if (objektItemProvider != null)
 			objektItemProvider.dispose();
-		if (anlageItemProvider != null)
-			anlageItemProvider.dispose();
 		if (verbindungItemProvider != null)
 			verbindungItemProvider.dispose();
 		if (plankopfItemProvider != null)
 			plankopfItemProvider.dispose();
 		if (textbausteinItemProvider != null)
 			textbausteinItemProvider.dispose();
+		if (trafoItemProvider != null)
+			trafoItemProvider.dispose();
+		if (zaehlpunktItemProvider != null)
+			zaehlpunktItemProvider.dispose();
+		if (versorgungsknotenItemProvider != null)
+			versorgungsknotenItemProvider.dispose();
+		if (energietechnikanlageItemProvider != null)
+			energietechnikanlageItemProvider.dispose();
+		if (versorgungsknotenMitETItemProvider != null)
+			versorgungsknotenMitETItemProvider.dispose();
 	}
 
 }

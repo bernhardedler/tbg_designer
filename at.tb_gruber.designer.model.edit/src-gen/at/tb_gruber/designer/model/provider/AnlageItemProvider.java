@@ -55,12 +55,9 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addAnlagenartPropertyDescriptor(object);
 			addAnlagennummerPropertyDescriptor(object);
 			addObjektteilPropertyDescriptor(object);
 			addAnlagenIdPropertyDescriptor(object);
-			addTrafoKvaPropertyDescriptor(object);
-			addTrafospannungPropertyDescriptor(object);
 			addVersorgtVonPropertyDescriptor(object);
 			addVersorgungsspannungPropertyDescriptor(object);
 		}
@@ -79,22 +76,6 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 						getResourceLocator(), getString("_UI_Anlage_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_name_feature", "_UI_Anlage_type"),
 						ModelPackage.Literals.ANLAGE__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Anlagenart feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAnlagenartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_anlagenart_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_anlagenart_feature",
-								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__ANLAGENART, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -143,38 +124,6 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_anlagenId_feature",
 								"_UI_Anlage_type"),
 						ModelPackage.Literals.ANLAGE__ANLAGEN_ID, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Trafo Kva feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTrafoKvaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_trafoKva_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_trafoKva_feature",
-								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__TRAFO_KVA, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Trafospannung feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTrafospannungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_trafospannung_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_trafospannung_feature",
-								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__TRAFOSPANNUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -286,12 +235,9 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 
 		switch (notification.getFeatureID(Anlage.class)) {
 		case ModelPackage.ANLAGE__NAME:
-		case ModelPackage.ANLAGE__ANLAGENART:
 		case ModelPackage.ANLAGE__ANLAGENNUMMER:
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 		case ModelPackage.ANLAGE__ANLAGEN_ID:
-		case ModelPackage.ANLAGE__TRAFO_KVA:
-		case ModelPackage.ANLAGE__TRAFOSPANNUNG:
 		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

@@ -5,8 +5,8 @@ package at.tb_gruber.designer.model.impl;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
-
 import at.tb_gruber.designer.model.Plankopf;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

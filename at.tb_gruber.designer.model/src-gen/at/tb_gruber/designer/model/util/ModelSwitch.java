@@ -108,6 +108,51 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ModelPackage.TRAFO: {
+			Trafo trafo = (Trafo) theEObject;
+			T result = caseTrafo(trafo);
+			if (result == null)
+				result = caseAnlage(trafo);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.ZAEHLPUNKT: {
+			Zaehlpunkt zaehlpunkt = (Zaehlpunkt) theEObject;
+			T result = caseZaehlpunkt(zaehlpunkt);
+			if (result == null)
+				result = caseAnlage(zaehlpunkt);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERSORGUNGSKNOTEN: {
+			Versorgungsknoten versorgungsknoten = (Versorgungsknoten) theEObject;
+			T result = caseVersorgungsknoten(versorgungsknoten);
+			if (result == null)
+				result = caseAnlage(versorgungsknoten);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.ENERGIETECHNIKANLAGE: {
+			Energietechnikanlage energietechnikanlage = (Energietechnikanlage) theEObject;
+			T result = caseEnergietechnikanlage(energietechnikanlage);
+			if (result == null)
+				result = caseAnlage(energietechnikanlage);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERSORGUNGSKNOTEN_MIT_ET: {
+			VersorgungsknotenMitET versorgungsknotenMitET = (VersorgungsknotenMitET) theEObject;
+			T result = caseVersorgungsknotenMitET(versorgungsknotenMitET);
+			if (result == null)
+				result = caseAnlage(versorgungsknotenMitET);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -200,6 +245,81 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTextbaustein(Textbaustein object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trafo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trafo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrafo(Trafo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Zaehlpunkt</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Zaehlpunkt</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZaehlpunkt(Zaehlpunkt object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Versorgungsknoten</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Versorgungsknoten</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVersorgungsknoten(Versorgungsknoten object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Energietechnikanlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Energietechnikanlage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnergietechnikanlage(Energietechnikanlage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Versorgungsknoten Mit ET</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Versorgungsknoten Mit ET</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVersorgungsknotenMitET(VersorgungsknotenMitET object) {
 		return null;
 	}
 

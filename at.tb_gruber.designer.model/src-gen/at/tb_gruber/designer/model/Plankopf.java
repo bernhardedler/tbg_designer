@@ -3,6 +3,7 @@
 package at.tb_gruber.designer.model;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Plankopf extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Textbaustein</b></em>' containment reference list.
 	 * The list contents are of type {@link at.tb_gruber.designer.model.Textbaustein}.
@@ -34,4 +34,5 @@ public interface Plankopf extends EObject {
 	 * @generated
 	 */
 	EList<Textbaustein> getTextbaustein();
+
 } // Plankopf

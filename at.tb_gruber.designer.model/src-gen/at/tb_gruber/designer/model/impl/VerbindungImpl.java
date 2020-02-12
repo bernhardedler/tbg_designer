@@ -6,9 +6,12 @@ import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.spannungsarttype;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 

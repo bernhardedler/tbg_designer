@@ -97,6 +97,31 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseTrafo(Trafo object) {
+			return createTrafoAdapter();
+		}
+
+		@Override
+		public Adapter caseZaehlpunkt(Zaehlpunkt object) {
+			return createZaehlpunktAdapter();
+		}
+
+		@Override
+		public Adapter caseVersorgungsknoten(Versorgungsknoten object) {
+			return createVersorgungsknotenAdapter();
+		}
+
+		@Override
+		public Adapter caseEnergietechnikanlage(Energietechnikanlage object) {
+			return createEnergietechnikanlageAdapter();
+		}
+
+		@Override
+		public Adapter caseVersorgungsknotenMitET(VersorgungsknotenMitET object) {
+			return createVersorgungsknotenMitETAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -196,6 +221,76 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTextbausteinAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Trafo <em>Trafo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.Trafo
+	 * @generated
+	 */
+	public Adapter createTrafoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Zaehlpunkt <em>Zaehlpunkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.Zaehlpunkt
+	 * @generated
+	 */
+	public Adapter createZaehlpunktAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Versorgungsknoten <em>Versorgungsknoten</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.Versorgungsknoten
+	 * @generated
+	 */
+	public Adapter createVersorgungsknotenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Energietechnikanlage <em>Energietechnikanlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.Energietechnikanlage
+	 * @generated
+	 */
+	public Adapter createEnergietechnikanlageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.VersorgungsknotenMitET <em>Versorgungsknoten Mit ET</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.VersorgungsknotenMitET
+	 * @generated
+	 */
+	public Adapter createVersorgungsknotenMitETAdapter() {
 		return null;
 	}
 

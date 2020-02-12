@@ -4,18 +4,9 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Anlagendiagramm" initialisation="true" domainClass="model::Bahnhof">
       <metamodel href="http://www.tb-gruber.at/model#/"/>
       <defaultLayer name="Default">
-        <edgeMappings name="Verbindung" sourceMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']" targetMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']" targetFinderExpression="feature:ziel" sourceFinderExpression="feature:ursprung" domainClass="model::Verbindung" useDomainElement="true">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </beginLabelStyleDescription>
-            <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </endLabelStyleDescription>
-          </style>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(0)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+        <edgeMappings name="Verbindung" sourceMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']" targetMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']" targetFinderExpression="feature:ziel" sourceFinderExpression="feature:ursprung" domainClass="model::Verbindung" useDomainElement="true">
+          <conditionnalStyles predicateExpression="aql:self.isVspViolett()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -24,8 +15,8 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(1)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <conditionnalStyles predicateExpression="aql:self.isVspRot()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -34,8 +25,8 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(2)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <conditionnalStyles predicateExpression="aql:self.isVspBlau()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -44,8 +35,8 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(3)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <conditionnalStyles predicateExpression="aql:self.isVspGruen()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -54,8 +45,8 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(4)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <conditionnalStyles predicateExpression="aql:self.isVspmagenta()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -64,8 +55,8 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(5)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <conditionnalStyles predicateExpression="aql:self.isVspCyan()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -74,8 +65,8 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="[self.isSpannungsart(6)/]">
-            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <conditionnalStyles predicateExpression="aql:self.isVspBraun()">
+            <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -86,554 +77,557 @@
           </conditionnalStyles>
         </edgeMappings>
         <containerMappings name="ObjektContainer" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editObjektLabel']" domainClass="model::Objekt">
-          <subNodeMappings name="AnlageNode" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editNodeLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Anlage">
-            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_0.svg">
+          <subNodeMappings name="Zp" label="Zählpunkt" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Zaehlpunkt">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(0, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/0_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_0.svg">
+          </subNodeMappings>
+          <subNodeMappings name="Vket" label="Versorgungsknoten mit ET" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VersorgungsknotenMitET">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_violvkett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(0, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_0_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_0.svg">
+          </subNodeMappings>
+          <subNodeMappings name="Et" label="Energietechnikanlage" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(1, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_1_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_0.svg">
+          </subNodeMappings>
+          <subNodeMappings name="Trafo" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Trafo">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(2, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_2_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspViolett())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_0.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(3, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_3_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspRot())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_0.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(4, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_4_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspBlau())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_0.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(5, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_5_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspGruen())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_0.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isTrafoart(6, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/1_6_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspMagenta())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(0, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_0_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(0, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_0_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(0, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_0_l.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(1, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_1_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(1, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_1_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(1, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_1_l.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(2, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_2_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspCyan())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(2, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_2_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(2, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_2_l.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_rot_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(3, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_3_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_blau_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(3, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_3_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_gruen_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(3, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_3_l.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_magenta_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(4, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_4_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_cyan_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(4, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_4_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isTspBraun())">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_braun_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(4, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_4_l.svg">
+          </subNodeMappings>
+          <subNodeMappings name="Vk" label="Versorgungsknoten" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Versorgungsknoten">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_violett_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(5, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_5_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_violett_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(5, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_5_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_violett_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(5, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_5_l.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_rot_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(6, 's')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_6_s.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_rot_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(6, 'm')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_6_m.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_rot_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isVersorgungsknotenSize(6, 'l')/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/2_6_l.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_blau_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_0.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_blau_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_blau_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_gruen_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_gruen_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_gruen_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_magenta_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(3, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/3_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_magenta_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 0)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_0.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_magenta_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 1)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_1.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_cyan_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 2)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_2.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_cyan_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 3)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_3.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_cyan_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 4)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_4.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_braun_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 5)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_5.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_braun_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
-            <conditionnalStyles predicateExpression="[self.isAnlageart(4, 6)/]">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/4_6.svg">
+            <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l')">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_braun_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -680,73 +674,75 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Anlagen">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="TrafoAnlegen" label="Trafo" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="TrafoAnlegen" label="Trafo" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Trafo" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagenart" valueExpression="aql:model::anlagearttype::Trafo"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:model::spannungsarttype::_20kV50Hz"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="trafospannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ZählpunktAnlegen" label="Zählpunkt" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ZählpunktAnlegen" label="Zählpunkt" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Zaehlpunkt" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagenart" valueExpression="aql:model::anlagearttype::UEGSZaehlpunkt"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ÜGS 00"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="VKAnlegen" label="Versorgungsknoten" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VKAnlegen" label="Versorgungsknoten" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagenart" valueExpression="aql:model::anlagearttype::Versorgungsknoten"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ETAnlegen" label="Energietechnikanlage" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='AnlageNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ETAnlegen" label="Energietechnikanlage" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Anlage" referenceName="anlage">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Energietechnikanlage" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagenart" valueExpression="aql:model::anlagearttype::Energietechnikanlage"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ET 00"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DirectEditLabel" name="editNodeLabel">
-            <mask mask="{0}"/>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VKETAnlegen" label="Versorgungsknoten mit ET" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::VersorgungsknotenMitET" referenceName="anlage">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Verbindungen">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="VerbindungAnlegen" label="Verbindung anlegen" precondition="aql:(preTarget.versorgtVon = null) and (preTarget.versorgtVon != preSource)" edgeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="VerbindungAnlegen" label="Verbindung anlegen" precondition="aql:(preTarget.versorgtVon != preSource)" edgeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -822,10 +818,10 @@
       <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.anlagenart"/>
       <ownedColumnMappings name="anlAnlagennummer" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:self.ziel.anlagennummer"/>
       <ownedColumnMappings name="anlVersorgungsspannung" headerLabelExpression="Versorgungsspannung Frequenz" featureName="ursprung" labelExpression="aql:self.versorgungsspannung"/>
-      <ownedColumnMappings name="anlTrafospannung" headerLabelExpression="Trafospannung Frequenz sek." featureName="ursprung" labelExpression="aql:self.ziel.trafospannung"/>
-      <ownedColumnMappings name="anlTrafoKva" headerLabelExpression="Trafo-kVA" featureName="ursprung" labelExpression="aql:self.ziel.trafoKva"/>
+      <ownedColumnMappings name="anlTrafospannung" headerLabelExpression="Trafospannung Frequenz sek." featureName="ursprung" labelExpression="aql:(if self.isTrafo() then self.ziel.trafospannung else '')"/>
+      <ownedColumnMappings name="anlTrafoKva" headerLabelExpression="Trafo-kVA" featureName="ursprung" labelExpression="aql:(if self.ziel.oclIsTypeOf(model::Trafo) then self.ziel.oclAsType(model::Trafo).trafoKva else '')"/>
       <ownedColumnMappings name="vbdVersorgtVonAnl" headerLabelExpression="versorgt von Anlagenname" featureName="ursprung" labelExpression="aql:self.ursprung.name"/>
-      <ownedColumnMappings name="vbdVersorgtVonArt" headerLabelExpression="versorgt von (Versorgungsknoten/Trafo...)" featureName="ursprung" labelExpression="aql:self.ursprung.anlagenart"/>
+      <ownedColumnMappings name="vbdVersorgtVonArt" headerLabelExpression="versorgt von (Versorgungsknoten/Trafo...)" featureName="ursprung" labelExpression="aql:(self.ursprung.oclIsKindOf(model::Versorgungsknoten) then 'Versorgungsknoten' else (if self.ursprung.oclIsTypeOf(model::Trafo) then 'Trafo'))"/>
       <ownedColumnMappings name="vbdVersorgtVonNr" headerLabelExpression="versorgt von Anlagennummer" featureName="ursprung" labelExpression="aql:self.ursprung.anlagennummer"/>
       <ownedColumnMappings name="vbdVersorgtVonObj" headerLabelExpression="vesorgt von Objekt" featureName="ursprung" labelExpression="aql:self.ursprung.eContainer().name"/>
       <ownedColumnMappings name="vbdSpannung" headerLabelExpression="Versorgungsspannung / Frequenz" featureName="ursprung" labelExpression="aql:self.versorgungsspannung"/>
