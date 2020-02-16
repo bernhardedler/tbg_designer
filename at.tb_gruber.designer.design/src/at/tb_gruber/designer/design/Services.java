@@ -144,4 +144,16 @@ public class Services {
 		int cnt = ((AnlageImpl) self).getVerbindungNach().size();
 		return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
 	}
+
+	public String getTrafospannung(EObject self) {
+		return isTrafo(self) ? ((Trafo) self).getTrafospannung().getLiteral() : "";
+	}
+
+	public String getTrafoKVA(EObject self) {
+		return isTrafo(self) ? String.valueOf(((Trafo) self).getTrafoKva()) : "";
+	}
+	
+	public String getClassName(EObject self) {
+		return self.eClass().getName();
+	}
 }

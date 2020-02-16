@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: at.tb_gruber.designer.design;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 2.0.0
 Bundle-Activator: at.tb_gruber.designer.design.Activator
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources,
  org.eclipse.sirius;bundle-version="6.2.2",
  org.eclipse.sirius.common.acceleo.aql,
- at.tb_gruber.designer.model;bundle-version="1.0.0",
+ at.tb_gruber.designer.model;bundle-version="2.0.0",
  org.eclipse.ui.ide;bundle-version="3.16.100",
  org.eclipse.ui.navigator,
  org.eclipse.emf.transaction,
