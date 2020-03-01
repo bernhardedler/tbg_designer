@@ -36,4 +36,20 @@
  	  <Priority name="High"/> 
  	</editpartProvider> 
   </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders">
+     <GlobalActionHandlerProvider
+           class="at.tb_gruber.designer.ide.print.TBGDiagramWithPrintGlobalActionHandlerProvider"
+           id="at.tb_gruber.designer.design.GlobalActionHandlerProvider">
+        <Priority
+              name="Lowest">
+        </Priority>
+        <ViewId
+              id="org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID">
+           <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+        </ViewId>
+     </GlobalActionHandlerProvider>
+  </extension>
 </plugin>
