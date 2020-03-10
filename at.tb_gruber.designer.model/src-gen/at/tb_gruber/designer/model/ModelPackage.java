@@ -259,13 +259,13 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__VERSORGT_VON = 5;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__VERSORGUNGSSPANNUNG = 6;
+	int ANLAGE__PRIMAERSPANNUNG = 6;
 
 	/**
 	 * The number of structural features of the '<em>Anlage</em>' class.
@@ -305,13 +305,13 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG__NR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG__VERSORGUNGSSPANNUNG = 1;
+	int VERBINDUNG__PRIMAERSPANNUNG = 1;
 
 	/**
 	 * The feature id for the '<em><b>Kabeltyp</b></em>' attribute.
@@ -515,22 +515,22 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__VERSORGT_VON = ANLAGE__VERSORGT_VON;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+	int TRAFO__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
-	 * The feature id for the '<em><b>Trafospannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__TRAFOSPANNUNG = ANLAGE_FEATURE_COUNT + 0;
+	int TRAFO__SEKUNDAERSPANNUNG = ANLAGE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Trafo Kva</b></em>' attribute.
@@ -624,13 +624,13 @@ public interface ModelPackage extends EPackage {
 	int ZAEHLPUNKT__VERSORGT_VON = ANLAGE__VERSORGT_VON;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZAEHLPUNKT__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+	int ZAEHLPUNKT__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
 	 * The number of structural features of the '<em>Zaehlpunkt</em>' class.
@@ -715,13 +715,13 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN__VERSORGT_VON = ANLAGE__VERSORGT_VON;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+	int VERSORGUNGSKNOTEN__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten</em>' class.
@@ -806,13 +806,13 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__VERSORGT_VON = ANLAGE__VERSORGT_VON;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+	int ENERGIETECHNIKANLAGE__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
 	 * The number of structural features of the '<em>Energietechnikanlage</em>' class.
@@ -897,13 +897,13 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN_MIT_ET__VERSORGT_VON = ANLAGE__VERSORGT_VON;
 
 	/**
-	 * The feature id for the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN_MIT_ET__VERSORGUNGSSPANNUNG = ANLAGE__VERSORGUNGSSPANNUNG;
+	int VERSORGUNGSKNOTEN_MIT_ET__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten Mit ET</em>' class.
@@ -1149,15 +1149,15 @@ public interface ModelPackage extends EPackage {
 	EReference getAnlage_VersorgtVon();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getVersorgungsspannung <em>Versorgungsspannung</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getPrimaerspannung <em>Primaerspannung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Versorgungsspannung</em>'.
-	 * @see at.tb_gruber.designer.model.Anlage#getVersorgungsspannung()
+	 * @return the meta object for the attribute '<em>Primaerspannung</em>'.
+	 * @see at.tb_gruber.designer.model.Anlage#getPrimaerspannung()
 	 * @see #getAnlage()
 	 * @generated
 	 */
-	EAttribute getAnlage_Versorgungsspannung();
+	EAttribute getAnlage_Primaerspannung();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Verbindung <em>Verbindung</em>}'.
@@ -1181,15 +1181,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getVerbindung_Nr();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getVersorgungsspannung <em>Versorgungsspannung</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getPrimaerspannung <em>Primaerspannung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Versorgungsspannung</em>'.
-	 * @see at.tb_gruber.designer.model.Verbindung#getVersorgungsspannung()
+	 * @return the meta object for the attribute '<em>Primaerspannung</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getPrimaerspannung()
 	 * @see #getVerbindung()
 	 * @generated
 	 */
-	EAttribute getVerbindung_Versorgungsspannung();
+	EAttribute getVerbindung_Primaerspannung();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}'.
@@ -1299,15 +1299,15 @@ public interface ModelPackage extends EPackage {
 	EClass getTrafo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getTrafospannung <em>Trafospannung</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Trafospannung</em>'.
-	 * @see at.tb_gruber.designer.model.Trafo#getTrafospannung()
+	 * @return the meta object for the attribute '<em>Sekundaerspannung</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo#getSekundaerspannung()
 	 * @see #getTrafo()
 	 * @generated
 	 */
-	EAttribute getTrafo_Trafospannung();
+	EAttribute getTrafo_Sekundaerspannung();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}'.
@@ -1564,12 +1564,12 @@ public interface ModelPackage extends EPackage {
 		EReference ANLAGE__VERSORGT_VON = eINSTANCE.getAnlage_VersorgtVon();
 
 		/**
-		 * The meta object literal for the '<em><b>Versorgungsspannung</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Primaerspannung</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ANLAGE__VERSORGUNGSSPANNUNG = eINSTANCE.getAnlage_Versorgungsspannung();
+		EAttribute ANLAGE__PRIMAERSPANNUNG = eINSTANCE.getAnlage_Primaerspannung();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerbindungImpl <em>Verbindung</em>}' class.
@@ -1590,12 +1590,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute VERBINDUNG__NR = eINSTANCE.getVerbindung_Nr();
 
 		/**
-		 * The meta object literal for the '<em><b>Versorgungsspannung</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Primaerspannung</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VERBINDUNG__VERSORGUNGSSPANNUNG = eINSTANCE.getVerbindung_Versorgungsspannung();
+		EAttribute VERBINDUNG__PRIMAERSPANNUNG = eINSTANCE.getVerbindung_Primaerspannung();
 
 		/**
 		 * The meta object literal for the '<em><b>Kabeltyp</b></em>' attribute feature.
@@ -1684,12 +1684,12 @@ public interface ModelPackage extends EPackage {
 		EClass TRAFO = eINSTANCE.getTrafo();
 
 		/**
-		 * The meta object literal for the '<em><b>Trafospannung</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Sekundaerspannung</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRAFO__TRAFOSPANNUNG = eINSTANCE.getTrafo_Trafospannung();
+		EAttribute TRAFO__SEKUNDAERSPANNUNG = eINSTANCE.getTrafo_Sekundaerspannung();
 
 		/**
 		 * The meta object literal for the '<em><b>Trafo Kva</b></em>' attribute feature.

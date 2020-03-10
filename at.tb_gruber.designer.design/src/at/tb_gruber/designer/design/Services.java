@@ -50,9 +50,9 @@ public class Services {
 
 	private Boolean isSpannungsart(EObject self, Integer target) {
 		if (self instanceof VerbindungImpl) {
-			return target.equals(((VerbindungImpl) self).getVersorgungsspannung().getValue());
+			return target.equals(((VerbindungImpl) self).getPrimaerspannung().getValue());
 		} else if (self instanceof AnlageImpl) {
-			return target.equals(((AnlageImpl) self).getVersorgungsspannung().getValue());
+			return target.equals(((AnlageImpl) self).getPrimaerspannung().getValue());
 		}
 		return false;
 	}
@@ -135,7 +135,7 @@ public class Services {
 
 	private Boolean isTrafoSpannungsart(EObject self, Integer target) {
 		if (self instanceof Trafo) {
-			return target.equals(((Trafo) self).getTrafospannung().getValue());
+			return target.equals(((Trafo) self).getSekundaerspannung().getValue());
 		}
 		return false;
 	}
@@ -146,7 +146,7 @@ public class Services {
 	}
 
 	public String getTrafospannung(EObject self) {
-		return isTrafo(self) ? ((Trafo) self).getTrafospannung().getLiteral() : "";
+		return isTrafo(self) ? ((Trafo) self).getSekundaerspannung().getLiteral() : "";
 	}
 
 	public String getTrafoKVA(EObject self) {

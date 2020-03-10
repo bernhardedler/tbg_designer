@@ -725,9 +725,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_RhfpwBg_Eeqx2rM7AP3Sqg" name="versorgungsspannung : spannungsarttype = NSP 50Hz (grün)" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Anlage/versorgungsspannung"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Anlage/versorgungsspannung"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_RhfpwBg_Eeqx2rM7AP3Sqg" name="primaerspannung : spannungsarttype = NSP 50Hz (grün)" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Anlage/primaerspannung"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Anlage/primaerspannung"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_T-aYIRg_Eeqx2rM7AP3Sqg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -883,9 +883,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8kL9ABYHEeqvjqT_N4bxRw" name="versorgungsspannung : spannungsarttype = Reserve (violett)" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Verbindung/versorgungsspannung"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Verbindung/versorgungsspannung"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8kL9ABYHEeqvjqT_N4bxRw" name="primaerspannung : spannungsarttype = Reserve (violett)" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Verbindung/primaerspannung"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Verbindung/primaerspannung"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Y0V__hYIEeqvjqT_N4bxRw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -1031,9 +1031,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_OQYSBBYIEeqvjqT_N4bxRw" name="trafospannung : spannungsarttype = NSP 50Hz (grün)" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Trafo/trafospannung"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Trafo/trafospannung"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_OQYSBBYIEeqvjqT_N4bxRw" name="sekundaerspannung : spannungsarttype = NSP 50Hz (grün)" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Trafo/sekundaerspannung"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Trafo/sekundaerspannung"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_OQYSBRYIEeqvjqT_N4bxRw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>

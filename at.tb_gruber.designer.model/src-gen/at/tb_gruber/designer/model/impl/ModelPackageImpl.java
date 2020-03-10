@@ -382,7 +382,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnlage_Versorgungsspannung() {
+	public EAttribute getAnlage_Primaerspannung() {
 		return (EAttribute) anlageEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -412,7 +412,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerbindung_Versorgungsspannung() {
+	public EAttribute getVerbindung_Primaerspannung() {
 		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -522,7 +522,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTrafo_Trafospannung() {
+	public EAttribute getTrafo_Sekundaerspannung() {
 		return (EAttribute) trafoEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -656,11 +656,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(anlageEClass, ANLAGE__ANLAGEN_ID);
 		createEReference(anlageEClass, ANLAGE__VERBINDUNG_NACH);
 		createEReference(anlageEClass, ANLAGE__VERSORGT_VON);
-		createEAttribute(anlageEClass, ANLAGE__VERSORGUNGSSPANNUNG);
+		createEAttribute(anlageEClass, ANLAGE__PRIMAERSPANNUNG);
 
 		verbindungEClass = createEClass(VERBINDUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__NR);
-		createEAttribute(verbindungEClass, VERBINDUNG__VERSORGUNGSSPANNUNG);
+		createEAttribute(verbindungEClass, VERBINDUNG__PRIMAERSPANNUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__KABELTYP);
 		createEReference(verbindungEClass, VERBINDUNG__ZIEL);
 		createEReference(verbindungEClass, VERBINDUNG__URSPRUNG);
@@ -674,7 +674,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(textbausteinEClass, TEXTBAUSTEIN__LABEL);
 
 		trafoEClass = createEClass(TRAFO);
-		createEAttribute(trafoEClass, TRAFO__TRAFOSPANNUNG);
+		createEAttribute(trafoEClass, TRAFO__SEKUNDAERSPANNUNG);
 		createEAttribute(trafoEClass, TRAFO__TRAFO_KVA);
 
 		zaehlpunktEClass = createEClass(ZAEHLPUNKT);
@@ -767,7 +767,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getAnlage_VersorgtVon(), this.getVerbindung(), null, "versorgtVon", null, 0, -1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnlage_Versorgungsspannung(), this.getspannungsarttype(), "versorgungsspannung",
+		initEAttribute(getAnlage_Primaerspannung(), this.getspannungsarttype(), "primaerspannung",
 				"NSP 50Hz (gr\u00fcn)", 0, 1, Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -775,8 +775,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVerbindung_Nr(), ecorePackage.getEInt(), "nr", null, 0, 1, Verbindung.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerbindung_Versorgungsspannung(), this.getspannungsarttype(), "versorgungsspannung", null, 0,
-				1, Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getVerbindung_Primaerspannung(), this.getspannungsarttype(), "primaerspannung", null, 0, 1,
+				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVerbindung_Kabeltyp(), ecorePackage.getEString(), "kabeltyp", null, 0, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -805,9 +805,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trafoEClass, Trafo.class, "Trafo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrafo_Trafospannung(), this.getspannungsarttype(), "trafospannung", "NSP 50Hz (gr\u00fcn)", 0,
-				1, Trafo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafo_Sekundaerspannung(), this.getspannungsarttype(), "sekundaerspannung",
+				"NSP 50Hz (gr\u00fcn)", 0, 1, Trafo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrafo_TrafoKva(), ecorePackage.getELong(), "trafoKva", null, 0, 1, Trafo.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

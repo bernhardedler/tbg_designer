@@ -45,7 +45,7 @@
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.isVspmagenta()">
+          <conditionnalStyles predicateExpression="aql:self.isVspMagenta()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -681,8 +681,8 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Trafo" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="trafospannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="sekundaerspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -760,18 +760,18 @@
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.isTrafo()">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:source.trafospannung"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.sekundaerspannung"/>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:source.trafospannung"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.sekundaerspannung"/>
                   </subModelOperations>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:not self.isTrafo()">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:source.versorgungsspannung"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.primaerspannung"/>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="versorgungsspannung" valueExpression="aql:source.versorgungsspannung"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.primaerspannung"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -817,14 +817,14 @@
       <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name"/>
       <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.anlagenart"/>
       <ownedColumnMappings name="anlAnlagennummer" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:self.ziel.anlagennummer"/>
-      <ownedColumnMappings name="anlVersorgungsspannung" headerLabelExpression="Versorgungsspannung Frequenz" featureName="ursprung" labelExpression="aql:self.versorgungsspannung"/>
-      <ownedColumnMappings name="anlTrafospannung" headerLabelExpression="Trafospannung Frequenz sek." featureName="ursprung" labelExpression="aql:self.ziel.getTrafospannung()"/>
+      <ownedColumnMappings name="anlprimaerspannung" headerLabelExpression="primaerspannung Frequenz" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
+      <ownedColumnMappings name="anlsekundaerspannung" headerLabelExpression="sekundaerspannung Frequenz sek." featureName="ursprung" labelExpression="aql:self.ziel.getsekundaerspannung()"/>
       <ownedColumnMappings name="anlTrafoKva" headerLabelExpression="Trafo-kVA" featureName="ursprung" labelExpression="aql:self.ziel.getTrafoKVA()"/>
       <ownedColumnMappings name="vbdVersorgtVonAnl" headerLabelExpression="versorgt von Anlagenname" featureName="ursprung" labelExpression="aql:self.ursprung.name"/>
       <ownedColumnMappings name="vbdVersorgtVonArt" headerLabelExpression="versorgt von (Versorgungsknoten/Trafo...)" featureName="ursprung" labelExpression="aql:self.ursprung.getClassName()"/>
       <ownedColumnMappings name="vbdVersorgtVonNr" headerLabelExpression="versorgt von Anlagennummer" featureName="ursprung" labelExpression="aql:self.ursprung.anlagennummer"/>
       <ownedColumnMappings name="vbdVersorgtVonObj" headerLabelExpression="vesorgt von Objekt" featureName="ursprung" labelExpression="aql:self.ursprung.eContainer().name"/>
-      <ownedColumnMappings name="vbdSpannung" headerLabelExpression="Versorgungsspannung / Frequenz" featureName="ursprung" labelExpression="aql:self.versorgungsspannung"/>
+      <ownedColumnMappings name="vbdSpannung" headerLabelExpression="primaerspannung / Frequenz" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
       <ownedColumnMappings name="vbdKabeltyp" headerLabelExpression="Kabeltype" featureName="ursprung" labelExpression="aql:self.kabeltyp"/>
       <ownedColumnMappings name="vbdQuelle" headerLabelExpression="Sicherung Quelle" featureName="ursprung" labelExpression="aql:self.quellSicherungsGroesse"/>
       <ownedColumnMappings name="vbdZiel" headerLabelExpression="Sicherung Ziel" featureName="ursprung" labelExpression="aql:self.zielSicherungsGroesse"/>

@@ -35,7 +35,7 @@
         eType="#//Verbindung" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="versorgtVon" upperBound="-1"
         eType="#//Verbindung"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versorgungsspannung" eType="#//spannungsarttype"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//spannungsarttype"
         defaultValueLiteral="NSP 50Hz (grün)"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="anlagearttype">
@@ -57,7 +57,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Verbindung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versorgungsspannung" eType="#//spannungsarttype"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//spannungsarttype"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kabeltyp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ziel" lowerBound="1" eType="#//Anlage"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ursprung" lowerBound="1"
@@ -75,7 +75,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trafo" eSuperTypes="#//Anlage">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafospannung" eType="#//spannungsarttype"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sekundaerspannung" eType="#//spannungsarttype"
         defaultValueLiteral="NSP 50Hz (grün)"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafoKva" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>

@@ -52,7 +52,7 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 			super.getPropertyDescriptors(object);
 
 			addNrPropertyDescriptor(object);
-			addVersorgungsspannungPropertyDescriptor(object);
+			addPrimaerspannungPropertyDescriptor(object);
 			addKabeltypPropertyDescriptor(object);
 			addZielPropertyDescriptor(object);
 			addUrsprungPropertyDescriptor(object);
@@ -79,18 +79,18 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This adds a property descriptor for the Versorgungsspannung feature.
+	 * This adds a property descriptor for the Primaerspannung feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVersorgungsspannungPropertyDescriptor(Object object) {
+	protected void addPrimaerspannungPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verbindung_versorgungsspannung_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_versorgungsspannung_feature",
+						getResourceLocator(), getString("_UI_Verbindung_primaerspannung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_primaerspannung_feature",
 								"_UI_Verbindung_type"),
-						ModelPackage.Literals.VERBINDUNG__VERSORGUNGSSPANNUNG, true, false, false,
+						ModelPackage.Literals.VERBINDUNG__PRIMAERSPANNUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -218,7 +218,7 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 
 		switch (notification.getFeatureID(Verbindung.class)) {
 		case ModelPackage.VERBINDUNG__NR:
-		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
+		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
 		case ModelPackage.VERBINDUNG__KABELTYP:
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
 		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:

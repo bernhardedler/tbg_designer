@@ -44,25 +44,25 @@ public class TrafoItemProvider extends AnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTrafospannungPropertyDescriptor(object);
+			addSekundaerspannungPropertyDescriptor(object);
 			addTrafoKvaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Trafospannung feature.
+	 * This adds a property descriptor for the Sekundaerspannung feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTrafospannungPropertyDescriptor(Object object) {
+	protected void addSekundaerspannungPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Trafo_trafospannung_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_trafospannung_feature",
+						getResourceLocator(), getString("_UI_Trafo_sekundaerspannung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_sekundaerspannung_feature",
 								"_UI_Trafo_type"),
-						ModelPackage.Literals.TRAFO__TRAFOSPANNUNG, true, false, false,
+						ModelPackage.Literals.TRAFO__SEKUNDAERSPANNUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -127,7 +127,7 @@ public class TrafoItemProvider extends AnlageItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Trafo.class)) {
-		case ModelPackage.TRAFO__TRAFOSPANNUNG:
+		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

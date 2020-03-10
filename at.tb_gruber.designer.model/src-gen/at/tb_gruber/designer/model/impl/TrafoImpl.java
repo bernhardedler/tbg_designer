@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getTrafospannung <em>Trafospannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getTrafoKva <em>Trafo Kva</em>}</li>
  * </ul>
  *
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TrafoImpl extends AnlageImpl implements Trafo {
 	/**
-	 * The default value of the '{@link #getTrafospannung() <em>Trafospannung</em>}' attribute.
+	 * The default value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTrafospannung()
+	 * @see #getSekundaerspannung()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype TRAFOSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
 
 	/**
-	 * The cached value of the '{@link #getTrafospannung() <em>Trafospannung</em>}' attribute.
+	 * The cached value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTrafospannung()
+	 * @see #getSekundaerspannung()
 	 * @generated
 	 * @ordered
 	 */
-	protected spannungsarttype trafospannung = TRAFOSPANNUNG_EDEFAULT;
+	protected spannungsarttype sekundaerspannung = SEKUNDAERSPANNUNG_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTrafoKva() <em>Trafo Kva</em>}' attribute.
@@ -92,8 +92,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public spannungsarttype getTrafospannung() {
-		return trafospannung;
+	public spannungsarttype getSekundaerspannung() {
+		return sekundaerspannung;
 	}
 
 	/**
@@ -102,12 +102,12 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public void setTrafospannung(spannungsarttype newTrafospannung) {
-		spannungsarttype oldTrafospannung = trafospannung;
-		trafospannung = newTrafospannung == null ? TRAFOSPANNUNG_EDEFAULT : newTrafospannung;
+	public void setSekundaerspannung(spannungsarttype newSekundaerspannung) {
+		spannungsarttype oldSekundaerspannung = sekundaerspannung;
+		sekundaerspannung = newSekundaerspannung == null ? SEKUNDAERSPANNUNG_EDEFAULT : newSekundaerspannung;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__TRAFOSPANNUNG, oldTrafospannung,
-					trafospannung));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__SEKUNDAERSPANNUNG,
+					oldSekundaerspannung, sekundaerspannung));
 	}
 
 	/**
@@ -142,8 +142,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ModelPackage.TRAFO__TRAFOSPANNUNG:
-			return getTrafospannung();
+		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
+			return getSekundaerspannung();
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			return getTrafoKva();
 		}
@@ -158,8 +158,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ModelPackage.TRAFO__TRAFOSPANNUNG:
-			setTrafospannung((spannungsarttype) newValue);
+		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
+			setSekundaerspannung((spannungsarttype) newValue);
 			return;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			setTrafoKva((Long) newValue);
@@ -176,8 +176,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ModelPackage.TRAFO__TRAFOSPANNUNG:
-			setTrafospannung(TRAFOSPANNUNG_EDEFAULT);
+		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
+			setSekundaerspannung(SEKUNDAERSPANNUNG_EDEFAULT);
 			return;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			setTrafoKva(TRAFO_KVA_EDEFAULT);
@@ -194,8 +194,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ModelPackage.TRAFO__TRAFOSPANNUNG:
-			return trafospannung != TRAFOSPANNUNG_EDEFAULT;
+		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
+			return sekundaerspannung != SEKUNDAERSPANNUNG_EDEFAULT;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			return trafoKva != TRAFO_KVA_EDEFAULT;
 		}
@@ -213,8 +213,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (trafospannung: ");
-		result.append(trafospannung);
+		result.append(" (sekundaerspannung: ");
+		result.append(sekundaerspannung);
 		result.append(", trafoKva: ");
 		result.append(trafoKva);
 		result.append(')');

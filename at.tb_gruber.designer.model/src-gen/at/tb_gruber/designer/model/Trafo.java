@@ -11,7 +11,7 @@ package at.tb_gruber.designer.model;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.Trafo#getTrafospannung <em>Trafospannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}</li>
  * </ul>
  *
@@ -21,30 +21,30 @@ package at.tb_gruber.designer.model;
  */
 public interface Trafo extends Anlage {
 	/**
-	 * Returns the value of the '<em><b>Trafospannung</b></em>' attribute.
+	 * Returns the value of the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * The default value is <code>"NSP 50Hz (gr\u00fcn)"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trafospannung</em>' attribute.
+	 * @return the value of the '<em>Sekundaerspannung</em>' attribute.
 	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #setTrafospannung(spannungsarttype)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Trafospannung()
+	 * @see #setSekundaerspannung(spannungsarttype)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Sekundaerspannung()
 	 * @model default="NSP 50Hz (gr\u00fcn)"
 	 * @generated
 	 */
-	spannungsarttype getTrafospannung();
+	spannungsarttype getSekundaerspannung();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getTrafospannung <em>Trafospannung</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trafospannung</em>' attribute.
+	 * @param value the new value of the '<em>Sekundaerspannung</em>' attribute.
 	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #getTrafospannung()
+	 * @see #getSekundaerspannung()
 	 * @generated
 	 */
-	void setTrafospannung(spannungsarttype value);
+	void setSekundaerspannung(spannungsarttype value);
 
 	/**
 	 * Returns the value of the '<em><b>Trafo Kva</b></em>' attribute.

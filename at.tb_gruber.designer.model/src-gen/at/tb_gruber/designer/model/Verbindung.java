@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getNr <em>Nr</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getVersorgungsspannung <em>Versorgungsspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getPrimaerspannung <em>Primaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getUrsprung <em>Ursprung</em>}</li>
@@ -50,29 +50,29 @@ public interface Verbindung extends EObject {
 	void setNr(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * Returns the value of the '<em><b>Primaerspannung</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Versorgungsspannung</em>' attribute.
+	 * @return the value of the '<em>Primaerspannung</em>' attribute.
 	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #setVersorgungsspannung(spannungsarttype)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Versorgungsspannung()
+	 * @see #setPrimaerspannung(spannungsarttype)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Primaerspannung()
 	 * @model
 	 * @generated
 	 */
-	spannungsarttype getVersorgungsspannung();
+	spannungsarttype getPrimaerspannung();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getVersorgungsspannung <em>Versorgungsspannung</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getPrimaerspannung <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Versorgungsspannung</em>' attribute.
+	 * @param value the new value of the '<em>Primaerspannung</em>' attribute.
 	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #getVersorgungsspannung()
+	 * @see #getPrimaerspannung()
 	 * @generated
 	 */
-	void setVersorgungsspannung(spannungsarttype value);
+	void setPrimaerspannung(spannungsarttype value);
 
 	/**
 	 * Returns the value of the '<em><b>Kabeltyp</b></em>' attribute.

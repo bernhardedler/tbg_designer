@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAnlagenId <em>Anlagen Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVerbindungNach <em>Verbindung Nach</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVersorgtVon <em>Versorgt Von</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVersorgungsspannung <em>Versorgungsspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
  * </ul>
  *
  * @generated
@@ -145,24 +145,24 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	protected EList<Verbindung> versorgtVon;
 
 	/**
-	 * The default value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
+	 * The default value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersorgungsspannung()
+	 * @see #getPrimaerspannung()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
 
 	/**
-	 * The cached value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
+	 * The cached value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersorgungsspannung()
+	 * @see #getPrimaerspannung()
 	 * @generated
 	 * @ordered
 	 */
-	protected spannungsarttype versorgungsspannung = VERSORGUNGSSPANNUNG_EDEFAULT;
+	protected spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -312,8 +312,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public spannungsarttype getVersorgungsspannung() {
-		return versorgungsspannung;
+	public spannungsarttype getPrimaerspannung() {
+		return primaerspannung;
 	}
 
 	/**
@@ -322,12 +322,12 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setVersorgungsspannung(spannungsarttype newVersorgungsspannung) {
-		spannungsarttype oldVersorgungsspannung = versorgungsspannung;
-		versorgungsspannung = newVersorgungsspannung == null ? VERSORGUNGSSPANNUNG_EDEFAULT : newVersorgungsspannung;
+	public void setPrimaerspannung(spannungsarttype newPrimaerspannung) {
+		spannungsarttype oldPrimaerspannung = primaerspannung;
+		primaerspannung = newPrimaerspannung == null ? PRIMAERSPANNUNG_EDEFAULT : newPrimaerspannung;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG,
-					oldVersorgungsspannung, versorgungsspannung));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__PRIMAERSPANNUNG,
+					oldPrimaerspannung, primaerspannung));
 	}
 
 	/**
@@ -364,8 +364,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return getVerbindungNach();
 		case ModelPackage.ANLAGE__VERSORGT_VON:
 			return getVersorgtVon();
-		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
-			return getVersorgungsspannung();
+		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
+			return getPrimaerspannung();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -399,8 +399,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			getVersorgtVon().clear();
 			getVersorgtVon().addAll((Collection<? extends Verbindung>) newValue);
 			return;
-		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
-			setVersorgungsspannung((spannungsarttype) newValue);
+		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
+			setPrimaerspannung((spannungsarttype) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -432,8 +432,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__VERSORGT_VON:
 			getVersorgtVon().clear();
 			return;
-		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
-			setVersorgungsspannung(VERSORGUNGSSPANNUNG_EDEFAULT);
+		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
+			setPrimaerspannung(PRIMAERSPANNUNG_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -460,8 +460,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return verbindungNach != null && !verbindungNach.isEmpty();
 		case ModelPackage.ANLAGE__VERSORGT_VON:
 			return versorgtVon != null && !versorgtVon.isEmpty();
-		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
-			return versorgungsspannung != VERSORGUNGSSPANNUNG_EDEFAULT;
+		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
+			return primaerspannung != PRIMAERSPANNUNG_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -485,8 +485,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		result.append(objektteil);
 		result.append(", anlagenId: ");
 		result.append(anlagenId);
-		result.append(", versorgungsspannung: ");
-		result.append(versorgungsspannung);
+		result.append(", primaerspannung: ");
+		result.append(primaerspannung);
 		result.append(')');
 		return result.toString();
 	}

@@ -59,7 +59,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			addObjektteilPropertyDescriptor(object);
 			addAnlagenIdPropertyDescriptor(object);
 			addVersorgtVonPropertyDescriptor(object);
-			addVersorgungsspannungPropertyDescriptor(object);
+			addPrimaerspannungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -143,18 +143,18 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Versorgungsspannung feature.
+	 * This adds a property descriptor for the Primaerspannung feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVersorgungsspannungPropertyDescriptor(Object object) {
+	protected void addPrimaerspannungPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_versorgungsspannung_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_versorgungsspannung_feature",
+						getResourceLocator(), getString("_UI_Anlage_primaerspannung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_primaerspannung_feature",
 								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__VERSORGUNGSSPANNUNG, true, false, false,
+						ModelPackage.Literals.ANLAGE__PRIMAERSPANNUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -238,7 +238,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 		case ModelPackage.ANLAGE__ANLAGENNUMMER:
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 		case ModelPackage.ANLAGE__ANLAGEN_ID:
-		case ModelPackage.ANLAGE__VERSORGUNGSSPANNUNG:
+		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:

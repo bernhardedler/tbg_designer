@@ -55,11 +55,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagenId"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/verbindungNach"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/versorgtVon"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/versorgungsspannung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/primaerspannung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/versorgungsspannung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/primaerspannung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/kabeltyp"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verbindung/ziel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verbindung/ursprung"/>
@@ -73,7 +73,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Trafo">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/trafospannung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/sekundaerspannung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/trafoKva"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Zaehlpunkt"/>

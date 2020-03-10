@@ -42,7 +42,7 @@
            class="at.tb_gruber.designer.ide.print.TBGDiagramWithPrintGlobalActionHandlerProvider"
            id="at.tb_gruber.designer.design.GlobalActionHandlerProvider">
         <Priority
-              name="Lowest">
+              name="Highest">
         </Priority>
         <ViewId
               id="org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID">

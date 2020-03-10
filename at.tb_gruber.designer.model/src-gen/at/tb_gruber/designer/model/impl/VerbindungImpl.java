@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getNr <em>Nr</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getVersorgungsspannung <em>Versorgungsspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getUrsprung <em>Ursprung</em>}</li>
@@ -56,24 +56,24 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	protected int nr = NR_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
+	 * The default value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersorgungsspannung()
+	 * @see #getPrimaerspannung()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype VERSORGUNGSSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
+	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.RESERVE_VIOLETT;
 
 	/**
-	 * The cached value of the '{@link #getVersorgungsspannung() <em>Versorgungsspannung</em>}' attribute.
+	 * The cached value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersorgungsspannung()
+	 * @see #getPrimaerspannung()
 	 * @generated
 	 * @ordered
 	 */
-	protected spannungsarttype versorgungsspannung = VERSORGUNGSSPANNUNG_EDEFAULT;
+	protected spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getKabeltyp() <em>Kabeltyp</em>}' attribute.
@@ -203,8 +203,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public spannungsarttype getVersorgungsspannung() {
-		return versorgungsspannung;
+	public spannungsarttype getPrimaerspannung() {
+		return primaerspannung;
 	}
 
 	/**
@@ -213,12 +213,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setVersorgungsspannung(spannungsarttype newVersorgungsspannung) {
-		spannungsarttype oldVersorgungsspannung = versorgungsspannung;
-		versorgungsspannung = newVersorgungsspannung == null ? VERSORGUNGSSPANNUNG_EDEFAULT : newVersorgungsspannung;
+	public void setPrimaerspannung(spannungsarttype newPrimaerspannung) {
+		spannungsarttype oldPrimaerspannung = primaerspannung;
+		primaerspannung = newPrimaerspannung == null ? PRIMAERSPANNUNG_EDEFAULT : newPrimaerspannung;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG,
-					oldVersorgungsspannung, versorgungsspannung));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__PRIMAERSPANNUNG,
+					oldPrimaerspannung, primaerspannung));
 	}
 
 	/**
@@ -386,8 +386,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		switch (featureID) {
 		case ModelPackage.VERBINDUNG__NR:
 			return getNr();
-		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
-			return getVersorgungsspannung();
+		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
+			return getPrimaerspannung();
 		case ModelPackage.VERBINDUNG__KABELTYP:
 			return getKabeltyp();
 		case ModelPackage.VERBINDUNG__ZIEL:
@@ -417,8 +417,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__NR:
 			setNr((Integer) newValue);
 			return;
-		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
-			setVersorgungsspannung((spannungsarttype) newValue);
+		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
+			setPrimaerspannung((spannungsarttype) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__KABELTYP:
 			setKabeltyp((String) newValue);
@@ -450,8 +450,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__NR:
 			setNr(NR_EDEFAULT);
 			return;
-		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
-			setVersorgungsspannung(VERSORGUNGSSPANNUNG_EDEFAULT);
+		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
+			setPrimaerspannung(PRIMAERSPANNUNG_EDEFAULT);
 			return;
 		case ModelPackage.VERBINDUNG__KABELTYP:
 			setKabeltyp(KABELTYP_EDEFAULT);
@@ -482,8 +482,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		switch (featureID) {
 		case ModelPackage.VERBINDUNG__NR:
 			return nr != NR_EDEFAULT;
-		case ModelPackage.VERBINDUNG__VERSORGUNGSSPANNUNG:
-			return versorgungsspannung != VERSORGUNGSSPANNUNG_EDEFAULT;
+		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
+			return primaerspannung != PRIMAERSPANNUNG_EDEFAULT;
 		case ModelPackage.VERBINDUNG__KABELTYP:
 			return KABELTYP_EDEFAULT == null ? kabeltyp != null : !KABELTYP_EDEFAULT.equals(kabeltyp);
 		case ModelPackage.VERBINDUNG__ZIEL:
@@ -513,8 +513,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (nr: ");
 		result.append(nr);
-		result.append(", versorgungsspannung: ");
-		result.append(versorgungsspannung);
+		result.append(", primaerspannung: ");
+		result.append(primaerspannung);
 		result.append(", kabeltyp: ");
 		result.append(kabeltyp);
 		result.append(", quellSicherungsGroesse: ");

@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getAnlagenId <em>Anlagen Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVerbindungNach <em>Verbindung Nach</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVersorgtVon <em>Versorgt Von</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Anlage#getVersorgungsspannung <em>Versorgungsspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getPrimaerspannung <em>Primaerspannung</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getAnlage()
@@ -142,29 +142,29 @@ public interface Anlage extends EObject {
 	EList<Verbindung> getVersorgtVon();
 
 	/**
-	 * Returns the value of the '<em><b>Versorgungsspannung</b></em>' attribute.
+	 * Returns the value of the '<em><b>Primaerspannung</b></em>' attribute.
 	 * The default value is <code>"NSP 50Hz (gr\u00fcn)"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Versorgungsspannung</em>' attribute.
+	 * @return the value of the '<em>Primaerspannung</em>' attribute.
 	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #setVersorgungsspannung(spannungsarttype)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Versorgungsspannung()
+	 * @see #setPrimaerspannung(spannungsarttype)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Primaerspannung()
 	 * @model default="NSP 50Hz (gr\u00fcn)"
 	 * @generated
 	 */
-	spannungsarttype getVersorgungsspannung();
+	spannungsarttype getPrimaerspannung();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getVersorgungsspannung <em>Versorgungsspannung</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getPrimaerspannung <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Versorgungsspannung</em>' attribute.
+	 * @param value the new value of the '<em>Primaerspannung</em>' attribute.
 	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #getVersorgungsspannung()
+	 * @see #getPrimaerspannung()
 	 * @generated
 	 */
-	void setVersorgungsspannung(spannungsarttype value);
+	void setPrimaerspannung(spannungsarttype value);
 
 } // Anlage
