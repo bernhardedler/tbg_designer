@@ -77,7 +77,7 @@
           </conditionnalStyles>
         </edgeMappings>
         <containerMappings name="ObjektContainer" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editObjektLabel']" domainClass="model::Objekt">
-          <subNodeMappings name="Zp" label="Zählpunkt" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Zaehlpunkt">
+          <subNodeMappings name="Zp" label="Zählpunkt" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Zaehlpunkt">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/zp_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -121,7 +121,7 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="Vket" label="Versorgungsknoten mit ET" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VersorgungsknotenMitET">
+          <subNodeMappings name="Vket" label="Versorgungsknoten mit ET" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VersorgungsknotenMitET">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vket_violvkett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -165,7 +165,7 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="Et" label="Energietechnikanlage" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
+          <subNodeMappings name="Et" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/et_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -209,7 +209,7 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="Trafo" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Trafo">
+          <subNodeMappings name="Trafo" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Trafo">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/t_violett_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -505,7 +505,7 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="Vk" label="Versorgungsknoten" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Versorgungsknoten">
+          <subNodeMappings name="Vk" label="Versorgungsknoten" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Versorgungsknoten">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's')">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/vk_violett_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -737,6 +737,21 @@
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                   </subModelOperations>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="AnlageEntfernen">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:For" expression="aql:self.versorgtVon">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:i">
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
