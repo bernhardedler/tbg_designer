@@ -45,7 +45,6 @@ public class ProjectServices {
 		try {
 			project.create(monitor);
 			project.open(monitor);
-//			ModelingProjectManager.INSTANCE.convertToModelingProject(project, monitor);
 		} catch (CoreException e) {
 			System.out.println("ERROR: Open project failed");
 			e.printStackTrace();

@@ -25,11 +25,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getNr <em>Nr</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getUrsprung <em>Ursprung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getQuellSicherungsGroesse <em>Quell Sicherungs Groesse</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZielSicherungsGroesse <em>Ziel Sicherungs Groesse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getReserve9 <em>Reserve9</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getReserve10 <em>Reserve10</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,26 +75,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	protected spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getKabeltyp() <em>Kabeltyp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKabeltyp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String KABELTYP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getKabeltyp() <em>Kabeltyp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKabeltyp()
-	 * @generated
-	 * @ordered
-	 */
-	protected String kabeltyp = KABELTYP_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getZiel() <em>Ziel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,44 +95,44 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	protected Anlage ursprung;
 
 	/**
-	 * The default value of the '{@link #getQuellSicherungsGroesse() <em>Quell Sicherungs Groesse</em>}' attribute.
+	 * The default value of the '{@link #getReserve9() <em>Reserve9</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuellSicherungsGroesse()
+	 * @see #getReserve9()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String QUELL_SICHERUNGS_GROESSE_EDEFAULT = null;
+	protected static final String RESERVE9_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getQuellSicherungsGroesse() <em>Quell Sicherungs Groesse</em>}' attribute.
+	 * The cached value of the '{@link #getReserve9() <em>Reserve9</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuellSicherungsGroesse()
+	 * @see #getReserve9()
 	 * @generated
 	 * @ordered
 	 */
-	protected String quellSicherungsGroesse = QUELL_SICHERUNGS_GROESSE_EDEFAULT;
+	protected String reserve9 = RESERVE9_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getZielSicherungsGroesse() <em>Ziel Sicherungs Groesse</em>}' attribute.
+	 * The default value of the '{@link #getReserve10() <em>Reserve10</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZielSicherungsGroesse()
+	 * @see #getReserve10()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ZIEL_SICHERUNGS_GROESSE_EDEFAULT = null;
+	protected static final String RESERVE10_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getZielSicherungsGroesse() <em>Ziel Sicherungs Groesse</em>}' attribute.
+	 * The cached value of the '{@link #getReserve10() <em>Reserve10</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZielSicherungsGroesse()
+	 * @see #getReserve10()
 	 * @generated
 	 * @ordered
 	 */
-	protected String zielSicherungsGroesse = ZIEL_SICHERUNGS_GROESSE_EDEFAULT;
+	protected String reserve10 = RESERVE10_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -219,30 +198,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__PRIMAERSPANNUNG,
 					oldPrimaerspannung, primaerspannung));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getKabeltyp() {
-		return kabeltyp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setKabeltyp(String newKabeltyp) {
-		String oldKabeltyp = kabeltyp;
-		kabeltyp = newKabeltyp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__KABELTYP, oldKabeltyp,
-					kabeltyp));
 	}
 
 	/**
@@ -334,8 +289,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public String getQuellSicherungsGroesse() {
-		return quellSicherungsGroesse;
+	public String getReserve9() {
+		return reserve9;
 	}
 
 	/**
@@ -344,12 +299,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setQuellSicherungsGroesse(String newQuellSicherungsGroesse) {
-		String oldQuellSicherungsGroesse = quellSicherungsGroesse;
-		quellSicherungsGroesse = newQuellSicherungsGroesse;
+	public void setReserve9(String newReserve9) {
+		String oldReserve9 = reserve9;
+		reserve9 = newReserve9;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE,
-					oldQuellSicherungsGroesse, quellSicherungsGroesse));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__RESERVE9, oldReserve9,
+					reserve9));
 	}
 
 	/**
@@ -358,8 +313,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public String getZielSicherungsGroesse() {
-		return zielSicherungsGroesse;
+	public String getReserve10() {
+		return reserve10;
 	}
 
 	/**
@@ -368,12 +323,12 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setZielSicherungsGroesse(String newZielSicherungsGroesse) {
-		String oldZielSicherungsGroesse = zielSicherungsGroesse;
-		zielSicherungsGroesse = newZielSicherungsGroesse;
+	public void setReserve10(String newReserve10) {
+		String oldReserve10 = reserve10;
+		reserve10 = newReserve10;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE,
-					oldZielSicherungsGroesse, zielSicherungsGroesse));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__RESERVE10, oldReserve10,
+					reserve10));
 	}
 
 	/**
@@ -388,8 +343,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return getNr();
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
 			return getPrimaerspannung();
-		case ModelPackage.VERBINDUNG__KABELTYP:
-			return getKabeltyp();
 		case ModelPackage.VERBINDUNG__ZIEL:
 			if (resolve)
 				return getZiel();
@@ -398,10 +351,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			if (resolve)
 				return getUrsprung();
 			return basicGetUrsprung();
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
-			return getQuellSicherungsGroesse();
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
-			return getZielSicherungsGroesse();
+		case ModelPackage.VERBINDUNG__RESERVE9:
+			return getReserve9();
+		case ModelPackage.VERBINDUNG__RESERVE10:
+			return getReserve10();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -420,20 +373,17 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
 			setPrimaerspannung((spannungsarttype) newValue);
 			return;
-		case ModelPackage.VERBINDUNG__KABELTYP:
-			setKabeltyp((String) newValue);
-			return;
 		case ModelPackage.VERBINDUNG__ZIEL:
 			setZiel((Anlage) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((Anlage) newValue);
 			return;
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
-			setQuellSicherungsGroesse((String) newValue);
+		case ModelPackage.VERBINDUNG__RESERVE9:
+			setReserve9((String) newValue);
 			return;
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
-			setZielSicherungsGroesse((String) newValue);
+		case ModelPackage.VERBINDUNG__RESERVE10:
+			setReserve10((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -453,20 +403,17 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
 			setPrimaerspannung(PRIMAERSPANNUNG_EDEFAULT);
 			return;
-		case ModelPackage.VERBINDUNG__KABELTYP:
-			setKabeltyp(KABELTYP_EDEFAULT);
-			return;
 		case ModelPackage.VERBINDUNG__ZIEL:
 			setZiel((Anlage) null);
 			return;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((Anlage) null);
 			return;
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
-			setQuellSicherungsGroesse(QUELL_SICHERUNGS_GROESSE_EDEFAULT);
+		case ModelPackage.VERBINDUNG__RESERVE9:
+			setReserve9(RESERVE9_EDEFAULT);
 			return;
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
-			setZielSicherungsGroesse(ZIEL_SICHERUNGS_GROESSE_EDEFAULT);
+		case ModelPackage.VERBINDUNG__RESERVE10:
+			setReserve10(RESERVE10_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -484,18 +431,14 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return nr != NR_EDEFAULT;
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
 			return primaerspannung != PRIMAERSPANNUNG_EDEFAULT;
-		case ModelPackage.VERBINDUNG__KABELTYP:
-			return KABELTYP_EDEFAULT == null ? kabeltyp != null : !KABELTYP_EDEFAULT.equals(kabeltyp);
 		case ModelPackage.VERBINDUNG__ZIEL:
 			return ziel != null;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			return ursprung != null;
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
-			return QUELL_SICHERUNGS_GROESSE_EDEFAULT == null ? quellSicherungsGroesse != null
-					: !QUELL_SICHERUNGS_GROESSE_EDEFAULT.equals(quellSicherungsGroesse);
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
-			return ZIEL_SICHERUNGS_GROESSE_EDEFAULT == null ? zielSicherungsGroesse != null
-					: !ZIEL_SICHERUNGS_GROESSE_EDEFAULT.equals(zielSicherungsGroesse);
+		case ModelPackage.VERBINDUNG__RESERVE9:
+			return RESERVE9_EDEFAULT == null ? reserve9 != null : !RESERVE9_EDEFAULT.equals(reserve9);
+		case ModelPackage.VERBINDUNG__RESERVE10:
+			return RESERVE10_EDEFAULT == null ? reserve10 != null : !RESERVE10_EDEFAULT.equals(reserve10);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -515,12 +458,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		result.append(nr);
 		result.append(", primaerspannung: ");
 		result.append(primaerspannung);
-		result.append(", kabeltyp: ");
-		result.append(kabeltyp);
-		result.append(", quellSicherungsGroesse: ");
-		result.append(quellSicherungsGroesse);
-		result.append(", zielSicherungsGroesse: ");
-		result.append(zielSicherungsGroesse);
+		result.append(", reserve9: ");
+		result.append(reserve9);
+		result.append(", reserve10: ");
+		result.append(reserve10);
 		result.append(')');
 		return result.toString();
 	}

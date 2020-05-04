@@ -1,6 +1,7 @@
 package at.tb_gruber.designer.design;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
@@ -10,13 +11,11 @@ import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
+import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VersorgungsknotenMitET;
 import at.tb_gruber.designer.model.Zaehlpunkt;
-import at.tb_gruber.designer.model.anlagearttype;
 import at.tb_gruber.designer.model.spannungsarttype;
-import at.tb_gruber.designer.model.impl.AnlageImpl;
-import at.tb_gruber.designer.model.impl.VerbindungImpl;
 
 /**
  * The services class used by VSM.
@@ -49,10 +48,10 @@ public class Services {
 	}
 
 	private Boolean isSpannungsart(EObject self, Integer target) {
-		if (self instanceof VerbindungImpl) {
-			return target.equals(((VerbindungImpl) self).getPrimaerspannung().getValue());
-		} else if (self instanceof AnlageImpl) {
-			return target.equals(((AnlageImpl) self).getPrimaerspannung().getValue());
+		if (self instanceof Verbindung) {
+			return target.equals(((Verbindung) self).getPrimaerspannung().getValue());
+		} else if (self instanceof Anlage) {
+			return target.equals(((Anlage) self).getPrimaerspannung().getValue());
 		}
 		return false;
 	}
@@ -141,7 +140,7 @@ public class Services {
 	}
 
 	public String getVersorgungsknotenSize(EObject self) {
-		int cnt = ((AnlageImpl) self).getVerbindungNach().size();
+		int cnt = ((Anlage) self).getVerbindungNach().size();
 		return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
 	}
 
@@ -155,5 +154,29 @@ public class Services {
 	
 	public String getClassName(EObject self) {
 		return self.eClass().getName();
+	}
+	
+	public String getReserve5(EObject self) {
+		if (self instanceof Trafo) {
+			return ((Trafo)self).getReserve5();
+		} else {
+			return "";
+		}
+	}
+	
+	public String getReserve6(EObject self) {
+		if (self instanceof Zaehlpunkt) {
+			return ((Zaehlpunkt)self).getReserve6();
+		} else {
+			return "";
+		}
+	}
+	
+	public String getAnlageart(EObject self) {
+		if (self instanceof Anlage) {
+			return self.getClass().getInterfaces()[0].getSimpleName();
+		} else {
+			return "";
+		}
 	}
 }

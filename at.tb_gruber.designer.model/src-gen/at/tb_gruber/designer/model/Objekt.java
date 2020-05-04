@@ -17,9 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getObjektart <em>Objektart</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Objekt#getAdresse <em>Adresse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getOrt_Adresse <em>Ort Adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getObjektId <em>Objekt Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getAnlage <em>Anlage</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getReserve1 <em>Reserve1</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getReserve2 <em>Reserve2</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getObjekt()
@@ -75,26 +78,26 @@ public interface Objekt extends EObject {
 	void setObjektart(objektarttype value);
 
 	/**
-	 * Returns the value of the '<em><b>Adresse</b></em>' attribute.
+	 * Returns the value of the '<em><b>Ort Adresse</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Adresse</em>' attribute.
-	 * @see #setAdresse(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Adresse()
+	 * @return the value of the '<em>Ort Adresse</em>' attribute.
+	 * @see #setOrt_Adresse(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Ort_Adresse()
 	 * @model
 	 * @generated
 	 */
-	String getAdresse();
+	String getOrt_Adresse();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getAdresse <em>Adresse</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getOrt_Adresse <em>Ort Adresse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Adresse</em>' attribute.
-	 * @see #getAdresse()
+	 * @param value the new value of the '<em>Ort Adresse</em>' attribute.
+	 * @see #getOrt_Adresse()
 	 * @generated
 	 */
-	void setAdresse(String value);
+	void setOrt_Adresse(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Objekt Id</b></em>' attribute.
@@ -129,5 +132,71 @@ public interface Objekt extends EObject {
 	 * @generated
 	 */
 	EList<Anlage> getAnlage();
+
+	/**
+	 * Returns the value of the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reserve1</em>' attribute.
+	 * @see #setReserve1(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Reserve1()
+	 * @model
+	 * @generated
+	 */
+	String getReserve1();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getReserve1 <em>Reserve1</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reserve1</em>' attribute.
+	 * @see #getReserve1()
+	 * @generated
+	 */
+	void setReserve1(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reserve2</em>' attribute.
+	 * @see #setReserve2(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Reserve2()
+	 * @model
+	 * @generated
+	 */
+	String getReserve2();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getReserve2 <em>Reserve2</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reserve2</em>' attribute.
+	 * @see #getReserve2()
+	 * @generated
+	 */
+	void setReserve2(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Gpsstandort</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gpsstandort</em>' attribute.
+	 * @see #setGpsstandort(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Gpsstandort()
+	 * @model
+	 * @generated
+	 */
+	String getGpsstandort();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gpsstandort</em>' attribute.
+	 * @see #getGpsstandort()
+	 * @generated
+	 */
+	void setGpsstandort(String value);
 
 } // Objekt

@@ -57,9 +57,12 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			addNamePropertyDescriptor(object);
 			addAnlagennummerPropertyDescriptor(object);
 			addObjektteilPropertyDescriptor(object);
-			addAnlagenIdPropertyDescriptor(object);
+			addEadbIdPropertyDescriptor(object);
 			addVersorgtVonPropertyDescriptor(object);
 			addPrimaerspannungPropertyDescriptor(object);
+			addReserve3PropertyDescriptor(object);
+			addReserve4PropertyDescriptor(object);
+			addAnlagenIdImmoAssiPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,18 +115,17 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Anlagen Id feature.
+	 * This adds a property descriptor for the Eadb Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnlagenIdPropertyDescriptor(Object object) {
+	protected void addEadbIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_anlagenId_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_anlagenId_feature",
-								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__ANLAGEN_ID, true, false, false,
+						getResourceLocator(), getString("_UI_Anlage_eadbId_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_eadbId_feature", "_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__EADB_ID, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -155,6 +157,54 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_primaerspannung_feature",
 								"_UI_Anlage_type"),
 						ModelPackage.Literals.ANLAGE__PRIMAERSPANNUNG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve3 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve3PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_reserve3_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_reserve3_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__RESERVE3, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve4 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve4PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_reserve4_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_reserve4_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__RESERVE4, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Anlagen Id Immo Assi feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAnlagenIdImmoAssiPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_anlagenIdImmoAssi_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_anlagenIdImmoAssi_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__ANLAGEN_ID_IMMO_ASSI, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -237,8 +287,11 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 		case ModelPackage.ANLAGE__NAME:
 		case ModelPackage.ANLAGE__ANLAGENNUMMER:
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
-		case ModelPackage.ANLAGE__ANLAGEN_ID:
+		case ModelPackage.ANLAGE__EADB_ID:
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
+		case ModelPackage.ANLAGE__RESERVE3:
+		case ModelPackage.ANLAGE__RESERVE4:
+		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:

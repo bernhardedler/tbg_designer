@@ -35,10 +35,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAnlagennummer <em>Anlagennummer</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getObjektteil <em>Objektteil</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAnlagenId <em>Anlagen Id</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getEadbId <em>Eadb Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVerbindungNach <em>Verbindung Nach</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVersorgtVon <em>Versorgt Von</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getReserve3 <em>Reserve3</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getReserve4 <em>Reserve4</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,24 +108,24 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	protected String objektteil = OBJEKTTEIL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAnlagenId() <em>Anlagen Id</em>}' attribute.
+	 * The default value of the '{@link #getEadbId() <em>Eadb Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnlagenId()
+	 * @see #getEadbId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ANLAGEN_ID_EDEFAULT = null;
+	protected static final String EADB_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAnlagenId() <em>Anlagen Id</em>}' attribute.
+	 * The cached value of the '{@link #getEadbId() <em>Eadb Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnlagenId()
+	 * @see #getEadbId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String anlagenId = ANLAGEN_ID_EDEFAULT;
+	protected String eadbId = EADB_ID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getVerbindungNach() <em>Verbindung Nach</em>}' containment reference list.
@@ -163,6 +166,66 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve3()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESERVE3_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve3()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reserve3 = RESERVE3_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReserve4() <em>Reserve4</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve4()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESERVE4_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReserve4() <em>Reserve4</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve4()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reserve4 = RESERVE4_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAnlagenIdImmoAssi() <em>Anlagen Id Immo Assi</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnlagenIdImmoAssi()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ANLAGEN_ID_IMMO_ASSI_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAnlagenIdImmoAssi() <em>Anlagen Id Immo Assi</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnlagenIdImmoAssi()
+	 * @generated
+	 * @ordered
+	 */
+	protected String anlagenIdImmoAssi = ANLAGEN_ID_IMMO_ASSI_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,8 +323,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public String getAnlagenId() {
-		return anlagenId;
+	public String getEadbId() {
+		return eadbId;
 	}
 
 	/**
@@ -270,12 +333,11 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setAnlagenId(String newAnlagenId) {
-		String oldAnlagenId = anlagenId;
-		anlagenId = newAnlagenId;
+	public void setEadbId(String newEadbId) {
+		String oldEadbId = eadbId;
+		eadbId = newEadbId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__ANLAGEN_ID, oldAnlagenId,
-					anlagenId));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__EADB_ID, oldEadbId, eadbId));
 	}
 
 	/**
@@ -336,6 +398,78 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public String getReserve3() {
+		return reserve3;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReserve3(String newReserve3) {
+		String oldReserve3 = reserve3;
+		reserve3 = newReserve3;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__RESERVE3, oldReserve3,
+					reserve3));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getReserve4() {
+		return reserve4;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReserve4(String newReserve4) {
+		String oldReserve4 = reserve4;
+		reserve4 = newReserve4;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__RESERVE4, oldReserve4,
+					reserve4));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAnlagenIdImmoAssi() {
+		return anlagenIdImmoAssi;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAnlagenIdImmoAssi(String newAnlagenIdImmoAssi) {
+		String oldAnlagenIdImmoAssi = anlagenIdImmoAssi;
+		anlagenIdImmoAssi = newAnlagenIdImmoAssi;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI,
+					oldAnlagenIdImmoAssi, anlagenIdImmoAssi));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
@@ -358,14 +492,20 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return getAnlagennummer();
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 			return getObjektteil();
-		case ModelPackage.ANLAGE__ANLAGEN_ID:
-			return getAnlagenId();
+		case ModelPackage.ANLAGE__EADB_ID:
+			return getEadbId();
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 			return getVerbindungNach();
 		case ModelPackage.ANLAGE__VERSORGT_VON:
 			return getVersorgtVon();
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			return getPrimaerspannung();
+		case ModelPackage.ANLAGE__RESERVE3:
+			return getReserve3();
+		case ModelPackage.ANLAGE__RESERVE4:
+			return getReserve4();
+		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
+			return getAnlagenIdImmoAssi();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -388,8 +528,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 			setObjektteil((String) newValue);
 			return;
-		case ModelPackage.ANLAGE__ANLAGEN_ID:
-			setAnlagenId((String) newValue);
+		case ModelPackage.ANLAGE__EADB_ID:
+			setEadbId((String) newValue);
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 			getVerbindungNach().clear();
@@ -401,6 +541,15 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			setPrimaerspannung((spannungsarttype) newValue);
+			return;
+		case ModelPackage.ANLAGE__RESERVE3:
+			setReserve3((String) newValue);
+			return;
+		case ModelPackage.ANLAGE__RESERVE4:
+			setReserve4((String) newValue);
+			return;
+		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
+			setAnlagenIdImmoAssi((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -423,8 +572,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 			setObjektteil(OBJEKTTEIL_EDEFAULT);
 			return;
-		case ModelPackage.ANLAGE__ANLAGEN_ID:
-			setAnlagenId(ANLAGEN_ID_EDEFAULT);
+		case ModelPackage.ANLAGE__EADB_ID:
+			setEadbId(EADB_ID_EDEFAULT);
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 			getVerbindungNach().clear();
@@ -434,6 +583,15 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			setPrimaerspannung(PRIMAERSPANNUNG_EDEFAULT);
+			return;
+		case ModelPackage.ANLAGE__RESERVE3:
+			setReserve3(RESERVE3_EDEFAULT);
+			return;
+		case ModelPackage.ANLAGE__RESERVE4:
+			setReserve4(RESERVE4_EDEFAULT);
+			return;
+		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
+			setAnlagenIdImmoAssi(ANLAGEN_ID_IMMO_ASSI_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -454,14 +612,21 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 					: !ANLAGENNUMMER_EDEFAULT.equals(anlagennummer);
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 			return OBJEKTTEIL_EDEFAULT == null ? objektteil != null : !OBJEKTTEIL_EDEFAULT.equals(objektteil);
-		case ModelPackage.ANLAGE__ANLAGEN_ID:
-			return ANLAGEN_ID_EDEFAULT == null ? anlagenId != null : !ANLAGEN_ID_EDEFAULT.equals(anlagenId);
+		case ModelPackage.ANLAGE__EADB_ID:
+			return EADB_ID_EDEFAULT == null ? eadbId != null : !EADB_ID_EDEFAULT.equals(eadbId);
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 			return verbindungNach != null && !verbindungNach.isEmpty();
 		case ModelPackage.ANLAGE__VERSORGT_VON:
 			return versorgtVon != null && !versorgtVon.isEmpty();
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			return primaerspannung != PRIMAERSPANNUNG_EDEFAULT;
+		case ModelPackage.ANLAGE__RESERVE3:
+			return RESERVE3_EDEFAULT == null ? reserve3 != null : !RESERVE3_EDEFAULT.equals(reserve3);
+		case ModelPackage.ANLAGE__RESERVE4:
+			return RESERVE4_EDEFAULT == null ? reserve4 != null : !RESERVE4_EDEFAULT.equals(reserve4);
+		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
+			return ANLAGEN_ID_IMMO_ASSI_EDEFAULT == null ? anlagenIdImmoAssi != null
+					: !ANLAGEN_ID_IMMO_ASSI_EDEFAULT.equals(anlagenIdImmoAssi);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -483,10 +648,16 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		result.append(anlagennummer);
 		result.append(", objektteil: ");
 		result.append(objektteil);
-		result.append(", anlagenId: ");
-		result.append(anlagenId);
+		result.append(", eadbId: ");
+		result.append(eadbId);
 		result.append(", primaerspannung: ");
 		result.append(primaerspannung);
+		result.append(", reserve3: ");
+		result.append(reserve3);
+		result.append(", reserve4: ");
+		result.append(reserve4);
+		result.append(", anlagenIdImmoAssi: ");
+		result.append(anlagenIdImmoAssi);
 		result.append(')');
 		return result.toString();
 	}

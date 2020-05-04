@@ -15,11 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getNr <em>Nr</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getPrimaerspannung <em>Primaerspannung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getUrsprung <em>Ursprung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherungsGroesse <em>Quell Sicherungs Groesse</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherungsGroesse <em>Ziel Sicherungs Groesse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getReserve9 <em>Reserve9</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getReserve10 <em>Reserve10</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung()
@@ -75,28 +74,6 @@ public interface Verbindung extends EObject {
 	void setPrimaerspannung(spannungsarttype value);
 
 	/**
-	 * Returns the value of the '<em><b>Kabeltyp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Kabeltyp</em>' attribute.
-	 * @see #setKabeltyp(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Kabeltyp()
-	 * @model
-	 * @generated
-	 */
-	String getKabeltyp();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getKabeltyp <em>Kabeltyp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Kabeltyp</em>' attribute.
-	 * @see #getKabeltyp()
-	 * @generated
-	 */
-	void setKabeltyp(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Ziel</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,47 +118,47 @@ public interface Verbindung extends EObject {
 	void setUrsprung(Anlage value);
 
 	/**
-	 * Returns the value of the '<em><b>Quell Sicherungs Groesse</b></em>' attribute.
+	 * Returns the value of the '<em><b>Reserve9</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quell Sicherungs Groesse</em>' attribute.
-	 * @see #setQuellSicherungsGroesse(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_QuellSicherungsGroesse()
+	 * @return the value of the '<em>Reserve9</em>' attribute.
+	 * @see #setReserve9(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Reserve9()
 	 * @model
 	 * @generated
 	 */
-	String getQuellSicherungsGroesse();
+	String getReserve9();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherungsGroesse <em>Quell Sicherungs Groesse</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getReserve9 <em>Reserve9</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Quell Sicherungs Groesse</em>' attribute.
-	 * @see #getQuellSicherungsGroesse()
+	 * @param value the new value of the '<em>Reserve9</em>' attribute.
+	 * @see #getReserve9()
 	 * @generated
 	 */
-	void setQuellSicherungsGroesse(String value);
+	void setReserve9(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Ziel Sicherungs Groesse</b></em>' attribute.
+	 * Returns the value of the '<em><b>Reserve10</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ziel Sicherungs Groesse</em>' attribute.
-	 * @see #setZielSicherungsGroesse(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_ZielSicherungsGroesse()
+	 * @return the value of the '<em>Reserve10</em>' attribute.
+	 * @see #setReserve10(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Reserve10()
 	 * @model
 	 * @generated
 	 */
-	String getZielSicherungsGroesse();
+	String getReserve10();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getZielSicherungsGroesse <em>Ziel Sicherungs Groesse</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getReserve10 <em>Reserve10</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ziel Sicherungs Groesse</em>' attribute.
-	 * @see #getZielSicherungsGroesse()
+	 * @param value the new value of the '<em>Reserve10</em>' attribute.
+	 * @see #getReserve10()
 	 * @generated
 	 */
-	void setZielSicherungsGroesse(String value);
+	void setReserve10(String value);
 
 } // Verbindung

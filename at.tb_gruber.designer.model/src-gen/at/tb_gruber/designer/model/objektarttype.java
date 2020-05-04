@@ -46,7 +46,7 @@ public enum objektarttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SCHALTHAEUSER(2, "Schalthaeuser", "Schalth\u00e4user"),
+	SCHALTHAEUSER(2, "Schalthaeuser", "Schalthaus"),
 
 	/**
 	 * The '<em><b>Tunnelobjekt</b></em>' literal object.
@@ -115,7 +115,7 @@ public enum objektarttype implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #SCHALTHAEUSER
-	 * @model name="Schalthaeuser" literal="Schalth\344user"
+	 * @model name="Schalthaeuser" literal="Schalthaus"
 	 * @generated
 	 * @ordered
 	 */

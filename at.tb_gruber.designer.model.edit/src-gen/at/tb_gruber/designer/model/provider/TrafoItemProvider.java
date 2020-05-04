@@ -46,6 +46,7 @@ public class TrafoItemProvider extends AnlageItemProvider {
 
 			addSekundaerspannungPropertyDescriptor(object);
 			addTrafoKvaPropertyDescriptor(object);
+			addReserve5PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,6 +80,21 @@ public class TrafoItemProvider extends AnlageItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_trafoKva_feature", "_UI_Trafo_type"),
 						ModelPackage.Literals.TRAFO__TRAFO_KVA, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve5 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve5PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Trafo_reserve5_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_reserve5_feature", "_UI_Trafo_type"),
+						ModelPackage.Literals.TRAFO__RESERVE5, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -129,6 +145,7 @@ public class TrafoItemProvider extends AnlageItemProvider {
 		switch (notification.getFeatureID(Trafo.class)) {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
 		case ModelPackage.TRAFO__TRAFO_KVA:
+		case ModelPackage.TRAFO__RESERVE5:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -13,6 +13,7 @@ package at.tb_gruber.designer.model;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Trafo#getReserve5 <em>Reserve5</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getTrafo()
@@ -67,5 +68,27 @@ public interface Trafo extends Anlage {
 	 * @generated
 	 */
 	void setTrafoKva(long value);
+
+	/**
+	 * Returns the value of the '<em><b>Reserve5</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reserve5</em>' attribute.
+	 * @see #setReserve5(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Reserve5()
+	 * @model
+	 * @generated
+	 */
+	String getReserve5();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getReserve5 <em>Reserve5</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reserve5</em>' attribute.
+	 * @see #getReserve5()
+	 * @generated
+	 */
+	void setReserve5(String value);
 
 } // Trafo

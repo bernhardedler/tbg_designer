@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getTrafoKva <em>Trafo Kva</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getReserve5 <em>Reserve5</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	 * @ordered
 	 */
 	protected long trafoKva = TRAFO_KVA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReserve5() <em>Reserve5</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve5()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESERVE5_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReserve5() <em>Reserve5</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve5()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reserve5 = RESERVE5_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,12 +161,37 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
+	public String getReserve5() {
+		return reserve5;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReserve5(String newReserve5) {
+		String oldReserve5 = reserve5;
+		reserve5 = newReserve5;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__RESERVE5, oldReserve5, reserve5));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
 			return getSekundaerspannung();
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			return getTrafoKva();
+		case ModelPackage.TRAFO__RESERVE5:
+			return getReserve5();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,6 +209,9 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 			return;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			setTrafoKva((Long) newValue);
+			return;
+		case ModelPackage.TRAFO__RESERVE5:
+			setReserve5((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,6 +231,9 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			setTrafoKva(TRAFO_KVA_EDEFAULT);
 			return;
+		case ModelPackage.TRAFO__RESERVE5:
+			setReserve5(RESERVE5_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +250,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 			return sekundaerspannung != SEKUNDAERSPANNUNG_EDEFAULT;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			return trafoKva != TRAFO_KVA_EDEFAULT;
+		case ModelPackage.TRAFO__RESERVE5:
+			return RESERVE5_EDEFAULT == null ? reserve5 != null : !RESERVE5_EDEFAULT.equals(reserve5);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,6 +271,8 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 		result.append(sekundaerspannung);
 		result.append(", trafoKva: ");
 		result.append(trafoKva);
+		result.append(", reserve5: ");
+		result.append(reserve5);
 		result.append(')');
 		return result.toString();
 	}

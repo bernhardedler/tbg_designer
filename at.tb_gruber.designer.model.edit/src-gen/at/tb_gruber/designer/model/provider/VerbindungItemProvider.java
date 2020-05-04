@@ -53,11 +53,10 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 
 			addNrPropertyDescriptor(object);
 			addPrimaerspannungPropertyDescriptor(object);
-			addKabeltypPropertyDescriptor(object);
 			addZielPropertyDescriptor(object);
 			addUrsprungPropertyDescriptor(object);
-			addQuellSicherungsGroessePropertyDescriptor(object);
-			addZielSicherungsGroessePropertyDescriptor(object);
+			addReserve9PropertyDescriptor(object);
+			addReserve10PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,22 +94,6 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This adds a property descriptor for the Kabeltyp feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addKabeltypPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verbindung_kabeltyp_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_kabeltyp_feature",
-								"_UI_Verbindung_type"),
-						ModelPackage.Literals.VERBINDUNG__KABELTYP, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Ziel feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,34 +124,34 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This adds a property descriptor for the Quell Sicherungs Groesse feature.
+	 * This adds a property descriptor for the Reserve9 feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addQuellSicherungsGroessePropertyDescriptor(Object object) {
+	protected void addReserve9PropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verbindung_quellSicherungsGroesse_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_quellSicherungsGroesse_feature",
+						getResourceLocator(), getString("_UI_Verbindung_reserve9_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_reserve9_feature",
 								"_UI_Verbindung_type"),
-						ModelPackage.Literals.VERBINDUNG__QUELL_SICHERUNGS_GROESSE, true, false, false,
+						ModelPackage.Literals.VERBINDUNG__RESERVE9, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Ziel Sicherungs Groesse feature.
+	 * This adds a property descriptor for the Reserve10 feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addZielSicherungsGroessePropertyDescriptor(Object object) {
+	protected void addReserve10PropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verbindung_zielSicherungsGroesse_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_zielSicherungsGroesse_feature",
+						getResourceLocator(), getString("_UI_Verbindung_reserve10_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_reserve10_feature",
 								"_UI_Verbindung_type"),
-						ModelPackage.Literals.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE, true, false, false,
+						ModelPackage.Literals.VERBINDUNG__RESERVE10, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -219,9 +202,8 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 		switch (notification.getFeatureID(Verbindung.class)) {
 		case ModelPackage.VERBINDUNG__NR:
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
-		case ModelPackage.VERBINDUNG__KABELTYP:
-		case ModelPackage.VERBINDUNG__QUELL_SICHERUNGS_GROESSE:
-		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNGS_GROESSE:
+		case ModelPackage.VERBINDUNG__RESERVE9:
+		case ModelPackage.VERBINDUNG__RESERVE10:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

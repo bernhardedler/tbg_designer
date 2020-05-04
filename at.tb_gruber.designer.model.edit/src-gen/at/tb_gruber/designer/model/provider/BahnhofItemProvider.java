@@ -58,6 +58,7 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 
 			addNamePropertyDescriptor(object);
 			addProjektnamePropertyDescriptor(object);
+			addReserve2ValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,6 +91,22 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 						getString("_UI_PropertyDescriptor_description", "_UI_Bahnhof_projektname_feature",
 								"_UI_Bahnhof_type"),
 						ModelPackage.Literals.BAHNHOF__PROJEKTNAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve2 Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve2ValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Bahnhof_reserve2Value_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Bahnhof_reserve2Value_feature",
+								"_UI_Bahnhof_type"),
+						ModelPackage.Literals.BAHNHOF__RESERVE2_VALUE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -172,6 +189,7 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 		switch (notification.getFeatureID(Bahnhof.class)) {
 		case ModelPackage.BAHNHOF__NAME:
 		case ModelPackage.BAHNHOF__PROJEKTNAME:
+		case ModelPackage.BAHNHOF__RESERVE2_VALUE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.BAHNHOF__OBJEKT:

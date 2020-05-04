@@ -33,9 +33,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getObjektart <em>Objektart</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getAdresse <em>Adresse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getOrt_Adresse <em>Ort Adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getObjektId <em>Objekt Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getAnlage <em>Anlage</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getReserve1 <em>Reserve1</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getReserve2 <em>Reserve2</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGpsstandort <em>Gpsstandort</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,24 +85,24 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	protected objektarttype objektart = OBJEKTART_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAdresse() <em>Adresse</em>}' attribute.
+	 * The default value of the '{@link #getOrt_Adresse() <em>Ort Adresse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAdresse()
+	 * @see #getOrt_Adresse()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ADRESSE_EDEFAULT = null;
+	protected static final String ORT_ADRESSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAdresse() <em>Adresse</em>}' attribute.
+	 * The cached value of the '{@link #getOrt_Adresse() <em>Ort Adresse</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAdresse()
+	 * @see #getOrt_Adresse()
 	 * @generated
 	 * @ordered
 	 */
-	protected String adresse = ADRESSE_EDEFAULT;
+	protected String ort_Adresse = ORT_ADRESSE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getObjektId() <em>Objekt Id</em>}' attribute.
@@ -130,6 +133,66 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @ordered
 	 */
 	protected EList<Anlage> anlage;
+
+	/**
+	 * The default value of the '{@link #getReserve1() <em>Reserve1</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve1()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESERVE1_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReserve1() <em>Reserve1</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve1()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reserve1 = RESERVE1_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReserve2() <em>Reserve2</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve2()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESERVE2_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReserve2() <em>Reserve2</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReserve2()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reserve2 = RESERVE2_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGpsstandort() <em>Gpsstandort</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGpsstandort()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GPSSTANDORT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGpsstandort() <em>Gpsstandort</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGpsstandort()
+	 * @generated
+	 * @ordered
+	 */
+	protected String gpsstandort = GPSSTANDORT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,8 +266,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public String getAdresse() {
-		return adresse;
+	public String getOrt_Adresse() {
+		return ort_Adresse;
 	}
 
 	/**
@@ -213,11 +276,12 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public void setAdresse(String newAdresse) {
-		String oldAdresse = adresse;
-		adresse = newAdresse;
+	public void setOrt_Adresse(String newOrt_Adresse) {
+		String oldOrt_Adresse = ort_Adresse;
+		ort_Adresse = newOrt_Adresse;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__ADRESSE, oldAdresse, adresse));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__ORT_ADRESSE, oldOrt_Adresse,
+					ort_Adresse));
 	}
 
 	/**
@@ -263,6 +327,78 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
+	public String getReserve1() {
+		return reserve1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReserve1(String newReserve1) {
+		String oldReserve1 = reserve1;
+		reserve1 = newReserve1;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__RESERVE1, oldReserve1,
+					reserve1));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getReserve2() {
+		return reserve2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReserve2(String newReserve2) {
+		String oldReserve2 = reserve2;
+		reserve2 = newReserve2;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__RESERVE2, oldReserve2,
+					reserve2));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getGpsstandort() {
+		return gpsstandort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGpsstandort(String newGpsstandort) {
+		String oldGpsstandort = gpsstandort;
+		gpsstandort = newGpsstandort;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__GPSSTANDORT, oldGpsstandort,
+					gpsstandort));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.OBJEKT__ANLAGE:
@@ -283,12 +419,18 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return getName();
 		case ModelPackage.OBJEKT__OBJEKTART:
 			return getObjektart();
-		case ModelPackage.OBJEKT__ADRESSE:
-			return getAdresse();
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			return getOrt_Adresse();
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			return getObjektId();
 		case ModelPackage.OBJEKT__ANLAGE:
 			return getAnlage();
+		case ModelPackage.OBJEKT__RESERVE1:
+			return getReserve1();
+		case ModelPackage.OBJEKT__RESERVE2:
+			return getReserve2();
+		case ModelPackage.OBJEKT__GPSSTANDORT:
+			return getGpsstandort();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -308,8 +450,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__OBJEKTART:
 			setObjektart((objektarttype) newValue);
 			return;
-		case ModelPackage.OBJEKT__ADRESSE:
-			setAdresse((String) newValue);
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			setOrt_Adresse((String) newValue);
 			return;
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			setObjektId((String) newValue);
@@ -317,6 +459,15 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__ANLAGE:
 			getAnlage().clear();
 			getAnlage().addAll((Collection<? extends Anlage>) newValue);
+			return;
+		case ModelPackage.OBJEKT__RESERVE1:
+			setReserve1((String) newValue);
+			return;
+		case ModelPackage.OBJEKT__RESERVE2:
+			setReserve2((String) newValue);
+			return;
+		case ModelPackage.OBJEKT__GPSSTANDORT:
+			setGpsstandort((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -336,14 +487,23 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__OBJEKTART:
 			setObjektart(OBJEKTART_EDEFAULT);
 			return;
-		case ModelPackage.OBJEKT__ADRESSE:
-			setAdresse(ADRESSE_EDEFAULT);
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			setOrt_Adresse(ORT_ADRESSE_EDEFAULT);
 			return;
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			setObjektId(OBJEKT_ID_EDEFAULT);
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:
 			getAnlage().clear();
+			return;
+		case ModelPackage.OBJEKT__RESERVE1:
+			setReserve1(RESERVE1_EDEFAULT);
+			return;
+		case ModelPackage.OBJEKT__RESERVE2:
+			setReserve2(RESERVE2_EDEFAULT);
+			return;
+		case ModelPackage.OBJEKT__GPSSTANDORT:
+			setGpsstandort(GPSSTANDORT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -361,12 +521,18 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ModelPackage.OBJEKT__OBJEKTART:
 			return objektart != OBJEKTART_EDEFAULT;
-		case ModelPackage.OBJEKT__ADRESSE:
-			return ADRESSE_EDEFAULT == null ? adresse != null : !ADRESSE_EDEFAULT.equals(adresse);
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			return ORT_ADRESSE_EDEFAULT == null ? ort_Adresse != null : !ORT_ADRESSE_EDEFAULT.equals(ort_Adresse);
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			return OBJEKT_ID_EDEFAULT == null ? objektId != null : !OBJEKT_ID_EDEFAULT.equals(objektId);
 		case ModelPackage.OBJEKT__ANLAGE:
 			return anlage != null && !anlage.isEmpty();
+		case ModelPackage.OBJEKT__RESERVE1:
+			return RESERVE1_EDEFAULT == null ? reserve1 != null : !RESERVE1_EDEFAULT.equals(reserve1);
+		case ModelPackage.OBJEKT__RESERVE2:
+			return RESERVE2_EDEFAULT == null ? reserve2 != null : !RESERVE2_EDEFAULT.equals(reserve2);
+		case ModelPackage.OBJEKT__GPSSTANDORT:
+			return GPSSTANDORT_EDEFAULT == null ? gpsstandort != null : !GPSSTANDORT_EDEFAULT.equals(gpsstandort);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -386,10 +552,16 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		result.append(name);
 		result.append(", objektart: ");
 		result.append(objektart);
-		result.append(", adresse: ");
-		result.append(adresse);
+		result.append(", Ort_Adresse: ");
+		result.append(ort_Adresse);
 		result.append(", objektId: ");
 		result.append(objektId);
+		result.append(", reserve1: ");
+		result.append(reserve1);
+		result.append(", reserve2: ");
+		result.append(reserve2);
+		result.append(", gpsstandort: ");
+		result.append(gpsstandort);
 		result.append(')');
 		return result.toString();
 	}

@@ -2,6 +2,7 @@
  */
 package at.tb_gruber.designer.model.provider;
 
+import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Zaehlpunkt;
 
 import java.util.Collection;
@@ -10,7 +11,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Zaehlpunkt} object.
@@ -40,8 +44,25 @@ public class ZaehlpunktItemProvider extends AnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReserve6PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve6 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve6PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Zaehlpunkt_reserve6_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Zaehlpunkt_reserve6_feature",
+								"_UI_Zaehlpunkt_type"),
+						ModelPackage.Literals.ZAEHLPUNKT__RESERVE6, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +109,12 @@ public class ZaehlpunktItemProvider extends AnlageItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Zaehlpunkt.class)) {
+		case ModelPackage.ZAEHLPUNKT__RESERVE6:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

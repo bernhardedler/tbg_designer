@@ -252,6 +252,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getBahnhof_Reserve2Value() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getObjekt() {
 		return objektEClass;
 	}
@@ -282,7 +292,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getObjekt_Adresse() {
+	public EAttribute getObjekt_Ort_Adresse() {
 		return (EAttribute) objektEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -304,6 +314,36 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EReference getObjekt_Anlage() {
 		return (EReference) objektEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getObjekt_Reserve1() {
+		return (EAttribute) objektEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getObjekt_Reserve2() {
+		return (EAttribute) objektEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getObjekt_Gpsstandort() {
+		return (EAttribute) objektEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -352,7 +392,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnlage_AnlagenId() {
+	public EAttribute getAnlage_EadbId() {
 		return (EAttribute) anlageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -392,6 +432,36 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAnlage_Reserve3() {
+		return (EAttribute) anlageEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAnlage_Reserve4() {
+		return (EAttribute) anlageEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAnlage_AnlagenIdImmoAssi() {
+		return (EAttribute) anlageEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVerbindung() {
 		return verbindungEClass;
 	}
@@ -422,18 +492,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerbindung_Kabeltyp() {
-		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getVerbindung_Ziel() {
-		return (EReference) verbindungEClass.getEStructuralFeatures().get(3);
+		return (EReference) verbindungEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -443,7 +503,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EReference getVerbindung_Ursprung() {
-		return (EReference) verbindungEClass.getEStructuralFeatures().get(4);
+		return (EReference) verbindungEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -452,18 +512,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerbindung_QuellSicherungsGroesse() {
+	public EAttribute getVerbindung_Reserve9() {
+		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerbindung_Reserve10() {
 		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getVerbindung_ZielSicherungsGroesse() {
-		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -542,8 +602,28 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTrafo_Reserve5() {
+		return (EAttribute) trafoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getZaehlpunkt() {
 		return zaehlpunktEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getZaehlpunkt_Reserve6() {
+		return (EAttribute) zaehlpunktEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -641,31 +721,37 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(bahnhofEClass, BAHNHOF__PROJEKTNAME);
 		createEReference(bahnhofEClass, BAHNHOF__OBJEKT);
 		createEReference(bahnhofEClass, BAHNHOF__PLANKOPF);
+		createEAttribute(bahnhofEClass, BAHNHOF__RESERVE2_VALUE);
 
 		objektEClass = createEClass(OBJEKT);
 		createEAttribute(objektEClass, OBJEKT__NAME);
 		createEAttribute(objektEClass, OBJEKT__OBJEKTART);
-		createEAttribute(objektEClass, OBJEKT__ADRESSE);
+		createEAttribute(objektEClass, OBJEKT__ORT_ADRESSE);
 		createEAttribute(objektEClass, OBJEKT__OBJEKT_ID);
 		createEReference(objektEClass, OBJEKT__ANLAGE);
+		createEAttribute(objektEClass, OBJEKT__RESERVE1);
+		createEAttribute(objektEClass, OBJEKT__RESERVE2);
+		createEAttribute(objektEClass, OBJEKT__GPSSTANDORT);
 
 		anlageEClass = createEClass(ANLAGE);
 		createEAttribute(anlageEClass, ANLAGE__NAME);
 		createEAttribute(anlageEClass, ANLAGE__ANLAGENNUMMER);
 		createEAttribute(anlageEClass, ANLAGE__OBJEKTTEIL);
-		createEAttribute(anlageEClass, ANLAGE__ANLAGEN_ID);
+		createEAttribute(anlageEClass, ANLAGE__EADB_ID);
 		createEReference(anlageEClass, ANLAGE__VERBINDUNG_NACH);
 		createEReference(anlageEClass, ANLAGE__VERSORGT_VON);
 		createEAttribute(anlageEClass, ANLAGE__PRIMAERSPANNUNG);
+		createEAttribute(anlageEClass, ANLAGE__RESERVE3);
+		createEAttribute(anlageEClass, ANLAGE__RESERVE4);
+		createEAttribute(anlageEClass, ANLAGE__ANLAGEN_ID_IMMO_ASSI);
 
 		verbindungEClass = createEClass(VERBINDUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__NR);
 		createEAttribute(verbindungEClass, VERBINDUNG__PRIMAERSPANNUNG);
-		createEAttribute(verbindungEClass, VERBINDUNG__KABELTYP);
 		createEReference(verbindungEClass, VERBINDUNG__ZIEL);
 		createEReference(verbindungEClass, VERBINDUNG__URSPRUNG);
-		createEAttribute(verbindungEClass, VERBINDUNG__QUELL_SICHERUNGS_GROESSE);
-		createEAttribute(verbindungEClass, VERBINDUNG__ZIEL_SICHERUNGS_GROESSE);
+		createEAttribute(verbindungEClass, VERBINDUNG__RESERVE9);
+		createEAttribute(verbindungEClass, VERBINDUNG__RESERVE10);
 
 		plankopfEClass = createEClass(PLANKOPF);
 		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
@@ -676,8 +762,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		trafoEClass = createEClass(TRAFO);
 		createEAttribute(trafoEClass, TRAFO__SEKUNDAERSPANNUNG);
 		createEAttribute(trafoEClass, TRAFO__TRAFO_KVA);
+		createEAttribute(trafoEClass, TRAFO__RESERVE5);
 
 		zaehlpunktEClass = createEClass(ZAEHLPUNKT);
+		createEAttribute(zaehlpunktEClass, ZAEHLPUNKT__RESERVE6);
 
 		versorgungsknotenEClass = createEClass(VERSORGUNGSKNOTEN);
 
@@ -738,19 +826,28 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getBahnhof_Plankopf(), this.getPlankopf(), null, "plankopf", null, 0, 1, Bahnhof.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBahnhof_Reserve2Value(), ecorePackage.getEString(), "reserve2Value", null, 0, 1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(objektEClass, Objekt.class, "Objekt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjekt_Name(), ecorePackage.getEString(), "name", null, 1, 1, Objekt.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getObjekt_Objektart(), this.getobjektarttype(), "objektart", null, 0, 1, Objekt.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getObjekt_Adresse(), ecorePackage.getEString(), "adresse", null, 0, 1, Objekt.class,
+		initEAttribute(getObjekt_Ort_Adresse(), ecorePackage.getEString(), "Ort_Adresse", null, 0, 1, Objekt.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getObjekt_ObjektId(), ecorePackage.getEString(), "objektId", null, 0, 1, Objekt.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getObjekt_Anlage(), this.getAnlage(), null, "anlage", null, 0, -1, Objekt.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getObjekt_Reserve1(), ecorePackage.getEString(), "reserve1", null, 0, 1, Objekt.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjekt_Reserve2(), ecorePackage.getEString(), "reserve2", null, 0, 1, Objekt.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjekt_Gpsstandort(), ecorePackage.getEString(), "gpsstandort", null, 0, 1, Objekt.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(anlageEClass, Anlage.class, "Anlage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnlage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Anlage.class, !IS_TRANSIENT,
@@ -759,8 +856,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_Objektteil(), ecorePackage.getEString(), "objektteil", null, 0, 1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnlage_AnlagenId(), ecorePackage.getEString(), "anlagenId", null, 0, 1, Anlage.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnlage_EadbId(), ecorePackage.getEString(), "eadbId", null, 0, 1, Anlage.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnlage_VerbindungNach(), this.getVerbindung(), null, "verbindungNach", null, 0, -1,
 				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -770,6 +867,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getAnlage_Primaerspannung(), this.getspannungsarttype(), "primaerspannung",
 				"NSP 50Hz (gr\u00fcn)", 0, 1, Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnlage_Reserve3(), ecorePackage.getEString(), "reserve3", null, 0, 1, Anlage.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnlage_Reserve4(), ecorePackage.getEString(), "reserve4", null, 0, 1, Anlage.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnlage_AnlagenIdImmoAssi(), ecorePackage.getEString(), "anlagenIdImmoAssi", null, 0, 1,
+				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(verbindungEClass, Verbindung.class, "Verbindung", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -778,20 +882,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerbindung_Primaerspannung(), this.getspannungsarttype(), "primaerspannung", null, 0, 1,
 				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerbindung_Kabeltyp(), ecorePackage.getEString(), "kabeltyp", null, 0, 1, Verbindung.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerbindung_Ziel(), this.getAnlage(), null, "ziel", null, 1, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerbindung_Ursprung(), this.getAnlage(), null, "ursprung", null, 1, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerbindung_QuellSicherungsGroesse(), ecorePackage.getEString(), "quellSicherungsGroesse",
-				null, 0, 1, Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerbindung_ZielSicherungsGroesse(), ecorePackage.getEString(), "zielSicherungsGroesse", null,
-				0, 1, Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerbindung_Reserve9(), ecorePackage.getEString(), "reserve9", null, 0, 1, Verbindung.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerbindung_Reserve10(), ecorePackage.getEString(), "reserve10", null, 0, 1, Verbindung.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -810,9 +910,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrafo_TrafoKva(), ecorePackage.getELong(), "trafoKva", null, 0, 1, Trafo.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafo_Reserve5(), ecorePackage.getEString(), "reserve5", null, 0, 1, Trafo.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zaehlpunktEClass, Zaehlpunkt.class, "Zaehlpunkt", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getZaehlpunkt_Reserve6(), ecorePackage.getEString(), "reserve6", null, 0, 1, Zaehlpunkt.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(versorgungsknotenEClass, Versorgungsknoten.class, "Versorgungsknoten", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -43,24 +43,6 @@ public class NewWizard extends Wizard implements INewWizard {
 		return true;
 	}
 
-//	@Override
-//	public boolean performFinish() {
-//		String name = _pageOne.getProjectName();
-//		URI location = null;
-//		if (!_pageOne.useDefaults()) {
-//			location = _pageOne.getLocationURI();
-//		} // else location == null
-//
-//		try {
-//			CustomProjectSupport.createProject(name, location);
-//		} catch (IOException | CoreException e) {
-//			e.printStackTrace();
-//			return false;
-//		}
-//
-//		return true;
-//	}
-
 	@Override
 	public void addPages() {
 		super.addPages();

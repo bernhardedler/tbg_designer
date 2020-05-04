@@ -18,10 +18,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getAnlagennummer <em>Anlagennummer</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getObjektteil <em>Objektteil</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Anlage#getAnlagenId <em>Anlagen Id</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getEadbId <em>Eadb Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVerbindungNach <em>Verbindung Nach</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVersorgtVon <em>Versorgt Von</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getPrimaerspannung <em>Primaerspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getReserve3 <em>Reserve3</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getReserve4 <em>Reserve4</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getAnlage()
@@ -96,26 +99,26 @@ public interface Anlage extends EObject {
 	void setObjektteil(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Anlagen Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Eadb Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anlagen Id</em>' attribute.
-	 * @see #setAnlagenId(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_AnlagenId()
+	 * @return the value of the '<em>Eadb Id</em>' attribute.
+	 * @see #setEadbId(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_EadbId()
 	 * @model
 	 * @generated
 	 */
-	String getAnlagenId();
+	String getEadbId();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getAnlagenId <em>Anlagen Id</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getEadbId <em>Eadb Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anlagen Id</em>' attribute.
-	 * @see #getAnlagenId()
+	 * @param value the new value of the '<em>Eadb Id</em>' attribute.
+	 * @see #getEadbId()
 	 * @generated
 	 */
-	void setAnlagenId(String value);
+	void setEadbId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -166,5 +169,71 @@ public interface Anlage extends EObject {
 	 * @generated
 	 */
 	void setPrimaerspannung(spannungsarttype value);
+
+	/**
+	 * Returns the value of the '<em><b>Reserve3</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reserve3</em>' attribute.
+	 * @see #setReserve3(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Reserve3()
+	 * @model
+	 * @generated
+	 */
+	String getReserve3();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getReserve3 <em>Reserve3</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reserve3</em>' attribute.
+	 * @see #getReserve3()
+	 * @generated
+	 */
+	void setReserve3(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reserve4</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reserve4</em>' attribute.
+	 * @see #setReserve4(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Reserve4()
+	 * @model
+	 * @generated
+	 */
+	String getReserve4();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getReserve4 <em>Reserve4</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reserve4</em>' attribute.
+	 * @see #getReserve4()
+	 * @generated
+	 */
+	void setReserve4(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Anlagen Id Immo Assi</em>' attribute.
+	 * @see #setAnlagenIdImmoAssi(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_AnlagenIdImmoAssi()
+	 * @model
+	 * @generated
+	 */
+	String getAnlagenIdImmoAssi();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Anlagen Id Immo Assi</em>' attribute.
+	 * @see #getAnlagenIdImmoAssi()
+	 * @generated
+	 */
+	void setAnlagenIdImmoAssi(String value);
 
 } // Anlage

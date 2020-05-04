@@ -7,70 +7,70 @@
         <edgeMappings name="Verbindung" sourceMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']" targetMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']" targetFinderExpression="feature:ziel" sourceFinderExpression="feature:ursprung" domainClass="model::Verbindung" useDomainElement="true">
           <conditionnalStyles predicateExpression="aql:self.isVspViolett()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:self.isVspRot()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:self.isVspBlau()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:self.isVspGruen()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:self.isVspMagenta()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:self.isVspCyan()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:self.isVspBraun()">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Zp']" centeredTargetMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vket']">
-              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:quellSicherungsGroesse">
+              <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:zielSicherungsGroesse">
+              <endLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
@@ -829,20 +829,32 @@
       <ownedColumnMappings name="bhfProjektname" headerLabelExpression="Projektname" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().eContainer().projektname"/>
       <ownedColumnMappings name="objObjektname" headerLabelExpression="Objektname" canEdit="aql:true" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().name"/>
       <ownedColumnMappings name="objObjektart" headerLabelExpression="Objektart" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().objektart"/>
+      <ownedColumnMappings name="objGPS" headerLabelExpression="GPS-Standort" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().gpsstandort"/>
+      <ownedColumnMappings name="objAdresse" headerLabelExpression="Ort/Adresse" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().ort_Adresse"/>
+      <ownedColumnMappings name="objId" headerLabelExpression="Objekt-ID" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().id"/>
+      <ownedColumnMappings name="objReserve1" headerLabelExpression="Reserve 1" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve1"/>
+      <ownedColumnMappings name="objReserve2" headerLabelExpression="Reserve 2" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve2"/>
       <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name"/>
-      <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.anlagenart"/>
       <ownedColumnMappings name="anlAnlagennummer" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:self.ziel.anlagennummer"/>
-      <ownedColumnMappings name="anlprimaerspannung" headerLabelExpression="primaerspannung Frequenz" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
-      <ownedColumnMappings name="anlsekundaerspannung" headerLabelExpression="sekundaerspannung Frequenz sek." featureName="ursprung" labelExpression="aql:self.ziel.getsekundaerspannung()"/>
+      <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.getAnlageart()"/>
+      <ownedColumnMappings name="anlIdImmoAssi" headerLabelExpression="ANLAGEN_ID_IMMO_ASSI" featureName="ursprung" labelExpression="aql:self.ziel.anlagenIdImmoAssi"/>
+      <ownedColumnMappings name="anlEadbId" headerLabelExpression="EADB_ID" featureName="ursprung" labelExpression="aql:self.ziel.eadbId"/>
+      <ownedColumnMappings name="anlPrimaerspannung" headerLabelExpression="Primaerspannung" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
+      <ownedColumnMappings name="anlReserve3" headerLabelExpression="Reserve 3" featureName="ursprung" labelExpression="aql:self.ziel.reserve3"/>
+      <ownedColumnMappings name="anlReserve4" headerLabelExpression="Reserve 4" featureName="ursprung" labelExpression="aql:self.ziel.reserve4"/>
+      <ownedColumnMappings name="anlSekundaerspannung" headerLabelExpression="Sekundaerspannung" featureName="ursprung" labelExpression="aql:self.ziel.getsekundaerspannung()"/>
       <ownedColumnMappings name="anlTrafoKva" headerLabelExpression="Trafo-kVA" featureName="ursprung" labelExpression="aql:self.ziel.getTrafoKVA()"/>
+      <ownedColumnMappings name="anlReserve5" headerLabelExpression="Reserve 5" featureName="ursprung" labelExpression="aql:self.ziel.getReserve5()"/>
+      <ownedColumnMappings name="anlReserve6" headerLabelExpression="Reserve 6" featureName="ursprung" labelExpression="aql:self.ziel.getReserve6()"/>
       <ownedColumnMappings name="vbdVersorgtVonAnl" headerLabelExpression="versorgt von Anlagenname" featureName="ursprung" labelExpression="aql:self.ursprung.name"/>
-      <ownedColumnMappings name="vbdVersorgtVonArt" headerLabelExpression="versorgt von (Versorgungsknoten/Trafo...)" featureName="ursprung" labelExpression="aql:self.ursprung.getClassName()"/>
       <ownedColumnMappings name="vbdVersorgtVonNr" headerLabelExpression="versorgt von Anlagennummer" featureName="ursprung" labelExpression="aql:self.ursprung.anlagennummer"/>
       <ownedColumnMappings name="vbdVersorgtVonObj" headerLabelExpression="vesorgt von Objekt" featureName="ursprung" labelExpression="aql:self.ursprung.eContainer().name"/>
-      <ownedColumnMappings name="vbdSpannung" headerLabelExpression="primaerspannung / Frequenz" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
-      <ownedColumnMappings name="vbdKabeltyp" headerLabelExpression="Kabeltype" featureName="ursprung" labelExpression="aql:self.kabeltyp"/>
-      <ownedColumnMappings name="vbdQuelle" headerLabelExpression="Sicherung Quelle" featureName="ursprung" labelExpression="aql:self.quellSicherungsGroesse"/>
-      <ownedColumnMappings name="vbdZiel" headerLabelExpression="Sicherung Ziel" featureName="ursprung" labelExpression="aql:self.zielSicherungsGroesse"/>
+      <ownedColumnMappings name="vbdVersorgtVonIdImmoAssi" headerLabelExpression="vesorgt von Anlagen-ID_IMMO_ASSI" featureName="ursprung" labelExpression="aql:self.ursprung.anlagenIdImmoAssi"/>
+      <ownedColumnMappings name="vbdVersorgtVonEadbId" headerLabelExpression="vesorgt von EADB_ID" featureName="ursprung" labelExpression="aql:self.ursprung.eadbId"/>
+      <ownedColumnMappings name="vbdAbgangEadbId" headerLabelExpression="Abgang VT EADB_ID_VERS" featureName="ursprung" labelExpression="aql:self.ziel.eadbId"/>
+      <ownedColumnMappings name="vbdSpannung" headerLabelExpression="Kabelversorgungsspannung" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
+      <ownedColumnMappings name="vbdReserve9" headerLabelExpression="Reserve 9" featureName="ursprung" labelExpression="aql:self.reserve9"/>
+      <ownedColumnMappings name="vbdReserve10" headerLabelExpression="Reserve 10" featureName="ursprung" labelExpression="aql:self.reserve10"/>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="at.tb_gruber.designer.design.Services"/>
   </ownedViewpoints>

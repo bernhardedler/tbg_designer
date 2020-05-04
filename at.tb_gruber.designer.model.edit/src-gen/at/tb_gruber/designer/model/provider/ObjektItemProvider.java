@@ -58,8 +58,11 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 
 			addNamePropertyDescriptor(object);
 			addObjektartPropertyDescriptor(object);
-			addAdressePropertyDescriptor(object);
+			addOrt_AdressePropertyDescriptor(object);
 			addObjektIdPropertyDescriptor(object);
+			addReserve1PropertyDescriptor(object);
+			addReserve2PropertyDescriptor(object);
+			addGpsstandortPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,18 +99,18 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Adresse feature.
+	 * This adds a property descriptor for the Ort Adresse feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAdressePropertyDescriptor(Object object) {
+	protected void addOrt_AdressePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Objekt_adresse_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_adresse_feature",
+						getResourceLocator(), getString("_UI_Objekt_Ort_Adresse_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_Ort_Adresse_feature",
 								"_UI_Objekt_type"),
-						ModelPackage.Literals.OBJEKT__ADRESSE, true, false, false,
+						ModelPackage.Literals.OBJEKT__ORT_ADRESSE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -124,6 +127,54 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_objektId_feature",
 								"_UI_Objekt_type"),
 						ModelPackage.Literals.OBJEKT__OBJEKT_ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve1 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve1PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Objekt_reserve1_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_reserve1_feature",
+								"_UI_Objekt_type"),
+						ModelPackage.Literals.OBJEKT__RESERVE1, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reserve2 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReserve2PropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Objekt_reserve2_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_reserve2_feature",
+								"_UI_Objekt_type"),
+						ModelPackage.Literals.OBJEKT__RESERVE2, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gpsstandort feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGpsstandortPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Objekt_gpsstandort_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_gpsstandort_feature",
+								"_UI_Objekt_type"),
+						ModelPackage.Literals.OBJEKT__GPSSTANDORT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -205,8 +256,11 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		switch (notification.getFeatureID(Objekt.class)) {
 		case ModelPackage.OBJEKT__NAME:
 		case ModelPackage.OBJEKT__OBJEKTART:
-		case ModelPackage.OBJEKT__ADRESSE:
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
 		case ModelPackage.OBJEKT__OBJEKT_ID:
+		case ModelPackage.OBJEKT__RESERVE1:
+		case ModelPackage.OBJEKT__RESERVE2:
+		case ModelPackage.OBJEKT__GPSSTANDORT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:
