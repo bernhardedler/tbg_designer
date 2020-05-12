@@ -331,13 +331,22 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__ANLAGEN_ID_IMMO_ASSI = 9;
 
 	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANLAGE__EADB_VERSORGUNG_ART = 10;
+
+	/**
 	 * The number of structural features of the '<em>Anlage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_FEATURE_COUNT = 10;
+	int ANLAGE_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Anlage</em>' class.
@@ -605,6 +614,15 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__ANLAGEN_ID_IMMO_ASSI = ANLAGE__ANLAGEN_ID_IMMO_ASSI;
 
 	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
 	 * The feature id for the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -750,13 +768,31 @@ public interface ModelPackage extends EPackage {
 	int ZAEHLPUNKT__ANLAGEN_ID_IMMO_ASSI = ANLAGE__ANLAGEN_ID_IMMO_ASSI;
 
 	/**
-	 * The feature id for the '<em><b>Reserve6</b></em>' attribute.
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZAEHLPUNKT__RESERVE6 = ANLAGE_FEATURE_COUNT + 0;
+	int ZAEHLPUNKT__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Nr Hauptversorgung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__NR_HAUPTVERSORGUNG = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Nr Reserve Einspeisung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__NR_RESERVE_EINSPEISUNG = ANLAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Zaehlpunkt</em>' class.
@@ -765,7 +801,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZAEHLPUNKT_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 1;
+	int ZAEHLPUNKT_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Zaehlpunkt</em>' class.
@@ -875,6 +911,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSORGUNGSKNOTEN__ANLAGEN_ID_IMMO_ASSI = ANLAGE__ANLAGEN_ID_IMMO_ASSI;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten</em>' class.
@@ -995,6 +1040,15 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__ANLAGEN_ID_IMMO_ASSI = ANLAGE__ANLAGEN_ID_IMMO_ASSI;
 
 	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
 	 * The number of structural features of the '<em>Energietechnikanlage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1111,6 +1165,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSORGUNGSKNOTEN_MIT_ET__ANLAGEN_ID_IMMO_ASSI = ANLAGE__ANLAGEN_ID_IMMO_ASSI;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten Mit ET</em>' class.
@@ -1444,6 +1507,17 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAnlage_AnlagenIdImmoAssi();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Eadb Versorgung Art</em>'.
+	 * @see at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt()
+	 * @see #getAnlage()
+	 * @generated
+	 */
+	EAttribute getAnlage_EadbVersorgungArt();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Verbindung <em>Verbindung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1615,15 +1689,26 @@ public interface ModelPackage extends EPackage {
 	EClass getZaehlpunkt();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Zaehlpunkt#getReserve6 <em>Reserve6</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Zaehlpunkt#getNrHauptversorgung <em>Nr Hauptversorgung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve6</em>'.
-	 * @see at.tb_gruber.designer.model.Zaehlpunkt#getReserve6()
+	 * @return the meta object for the attribute '<em>Nr Hauptversorgung</em>'.
+	 * @see at.tb_gruber.designer.model.Zaehlpunkt#getNrHauptversorgung()
 	 * @see #getZaehlpunkt()
 	 * @generated
 	 */
-	EAttribute getZaehlpunkt_Reserve6();
+	EAttribute getZaehlpunkt_NrHauptversorgung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Zaehlpunkt#getNrReserveEinspeisung <em>Nr Reserve Einspeisung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Reserve Einspeisung</em>'.
+	 * @see at.tb_gruber.designer.model.Zaehlpunkt#getNrReserveEinspeisung()
+	 * @see #getZaehlpunkt()
+	 * @generated
+	 */
+	EAttribute getZaehlpunkt_NrReserveEinspeisung();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Versorgungsknoten <em>Versorgungsknoten</em>}'.
@@ -1923,6 +2008,14 @@ public interface ModelPackage extends EPackage {
 		EAttribute ANLAGE__ANLAGEN_ID_IMMO_ASSI = eINSTANCE.getAnlage_AnlagenIdImmoAssi();
 
 		/**
+		 * The meta object literal for the '<em><b>Eadb Versorgung Art</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANLAGE__EADB_VERSORGUNG_ART = eINSTANCE.getAnlage_EadbVersorgungArt();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerbindungImpl <em>Verbindung</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2061,12 +2154,20 @@ public interface ModelPackage extends EPackage {
 		EClass ZAEHLPUNKT = eINSTANCE.getZaehlpunkt();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve6</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Nr Hauptversorgung</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ZAEHLPUNKT__RESERVE6 = eINSTANCE.getZaehlpunkt_Reserve6();
+		EAttribute ZAEHLPUNKT__NR_HAUPTVERSORGUNG = eINSTANCE.getZaehlpunkt_NrHauptversorgung();
+
+		/**
+		 * The meta object literal for the '<em><b>Nr Reserve Einspeisung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ZAEHLPUNKT__NR_RESERVE_EINSPEISUNG = eINSTANCE.getZaehlpunkt_NrReserveEinspeisung();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl <em>Versorgungsknoten</em>}' class.

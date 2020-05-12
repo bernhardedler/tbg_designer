@@ -63,6 +63,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			addReserve3PropertyDescriptor(object);
 			addReserve4PropertyDescriptor(object);
 			addAnlagenIdImmoAssiPropertyDescriptor(object);
+			addEadbVersorgungArtPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -209,6 +210,22 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
+	 * This adds a property descriptor for the Eadb Versorgung Art feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEadbVersorgungArtPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_eadbVersorgungArt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_eadbVersorgungArt_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__EADB_VERSORGUNG_ART, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -292,6 +309,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 		case ModelPackage.ANLAGE__RESERVE3:
 		case ModelPackage.ANLAGE__RESERVE4:
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
+		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:

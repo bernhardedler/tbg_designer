@@ -462,6 +462,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAnlage_EadbVersorgungArt() {
+		return (EAttribute) anlageEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVerbindung() {
 		return verbindungEClass;
 	}
@@ -622,8 +632,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getZaehlpunkt_Reserve6() {
+	public EAttribute getZaehlpunkt_NrHauptversorgung() {
 		return (EAttribute) zaehlpunktEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getZaehlpunkt_NrReserveEinspeisung() {
+		return (EAttribute) zaehlpunktEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -744,6 +764,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(anlageEClass, ANLAGE__RESERVE3);
 		createEAttribute(anlageEClass, ANLAGE__RESERVE4);
 		createEAttribute(anlageEClass, ANLAGE__ANLAGEN_ID_IMMO_ASSI);
+		createEAttribute(anlageEClass, ANLAGE__EADB_VERSORGUNG_ART);
 
 		verbindungEClass = createEClass(VERBINDUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__NR);
@@ -765,7 +786,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(trafoEClass, TRAFO__RESERVE5);
 
 		zaehlpunktEClass = createEClass(ZAEHLPUNKT);
-		createEAttribute(zaehlpunktEClass, ZAEHLPUNKT__RESERVE6);
+		createEAttribute(zaehlpunktEClass, ZAEHLPUNKT__NR_HAUPTVERSORGUNG);
+		createEAttribute(zaehlpunktEClass, ZAEHLPUNKT__NR_RESERVE_EINSPEISUNG);
 
 		versorgungsknotenEClass = createEClass(VERSORGUNGSKNOTEN);
 
@@ -874,6 +896,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getAnlage_AnlagenIdImmoAssi(), ecorePackage.getEString(), "anlagenIdImmoAssi", null, 0, 1,
 				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnlage_EadbVersorgungArt(), ecorePackage.getEString(), "eadbVersorgungArt", null, 0, 1,
+				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(verbindungEClass, Verbindung.class, "Verbindung", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -915,8 +940,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(zaehlpunktEClass, Zaehlpunkt.class, "Zaehlpunkt", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getZaehlpunkt_Reserve6(), ecorePackage.getEString(), "reserve6", null, 0, 1, Zaehlpunkt.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getZaehlpunkt_NrHauptversorgung(), ecorePackage.getEString(), "nrHauptversorgung", null, 0, 1,
+				Zaehlpunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getZaehlpunkt_NrReserveEinspeisung(), ecorePackage.getEString(), "nrReserveEinspeisung", null, 0,
+				1, Zaehlpunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(versorgungsknotenEClass, Versorgungsknoten.class, "Versorgungsknoten", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

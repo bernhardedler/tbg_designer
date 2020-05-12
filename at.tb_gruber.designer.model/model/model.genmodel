@@ -63,6 +63,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/reserve3"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/reserve4"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagenIdImmoAssi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/eadbVersorgungArt"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
@@ -84,7 +85,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/reserve5"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Zaehlpunkt">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Zaehlpunkt/reserve6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Zaehlpunkt/nrHauptversorgung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Zaehlpunkt/nrReserveEinspeisung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Versorgungsknoten"/>
     <genClasses ecoreClass="model.ecore#//Energietechnikanlage"/>

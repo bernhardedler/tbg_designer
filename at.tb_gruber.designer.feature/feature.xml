@@ -2,7 +2,7 @@
 <feature
       id="at.tb_gruber.designer.feature"
       label="Feature"
-      version="4.0.0"
+      version="5.0.0"
       provider-name="TB Gruber">
 
    <description url="http://www.example.com/description">

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getReserve3 <em>Reserve3</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getReserve4 <em>Reserve4</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getAnlage()
@@ -235,5 +236,27 @@ public interface Anlage extends EObject {
 	 * @generated
 	 */
 	void setAnlagenIdImmoAssi(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Eadb Versorgung Art</em>' attribute.
+	 * @see #setEadbVersorgungArt(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_EadbVersorgungArt()
+	 * @model
+	 * @generated
+	 */
+	String getEadbVersorgungArt();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Eadb Versorgung Art</em>' attribute.
+	 * @see #getEadbVersorgungArt()
+	 * @generated
+	 */
+	void setEadbVersorgungArt(String value);
 
 } // Anlage

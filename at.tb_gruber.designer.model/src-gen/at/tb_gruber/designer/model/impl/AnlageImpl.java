@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getReserve3 <em>Reserve3</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getReserve4 <em>Reserve4</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
  * </ul>
  *
  * @generated
@@ -226,6 +227,26 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String anlagenIdImmoAssi = ANLAGEN_ID_IMMO_ASSI_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEadbVersorgungArt() <em>Eadb Versorgung Art</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEadbVersorgungArt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EADB_VERSORGUNG_ART_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEadbVersorgungArt() <em>Eadb Versorgung Art</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEadbVersorgungArt()
+	 * @generated
+	 * @ordered
+	 */
+	protected String eadbVersorgungArt = EADB_VERSORGUNG_ART_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -470,6 +491,30 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public String getEadbVersorgungArt() {
+		return eadbVersorgungArt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEadbVersorgungArt(String newEadbVersorgungArt) {
+		String oldEadbVersorgungArt = eadbVersorgungArt;
+		eadbVersorgungArt = newEadbVersorgungArt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__EADB_VERSORGUNG_ART,
+					oldEadbVersorgungArt, eadbVersorgungArt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
@@ -506,6 +551,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return getReserve4();
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 			return getAnlagenIdImmoAssi();
+		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
+			return getEadbVersorgungArt();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -551,6 +598,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 			setAnlagenIdImmoAssi((String) newValue);
 			return;
+		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
+			setEadbVersorgungArt((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -593,6 +643,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 			setAnlagenIdImmoAssi(ANLAGEN_ID_IMMO_ASSI_EDEFAULT);
 			return;
+		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
+			setEadbVersorgungArt(EADB_VERSORGUNG_ART_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -627,6 +680,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 			return ANLAGEN_ID_IMMO_ASSI_EDEFAULT == null ? anlagenIdImmoAssi != null
 					: !ANLAGEN_ID_IMMO_ASSI_EDEFAULT.equals(anlagenIdImmoAssi);
+		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
+			return EADB_VERSORGUNG_ART_EDEFAULT == null ? eadbVersorgungArt != null
+					: !EADB_VERSORGUNG_ART_EDEFAULT.equals(eadbVersorgungArt);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -658,6 +714,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		result.append(reserve4);
 		result.append(", anlagenIdImmoAssi: ");
 		result.append(anlagenIdImmoAssi);
+		result.append(", eadbVersorgungArt: ");
+		result.append(eadbVersorgungArt);
 		result.append(')');
 		return result.toString();
 	}

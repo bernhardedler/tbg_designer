@@ -44,6 +44,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenIdImmoAssi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="anlagearttype">
     <eLiterals name="UEGSZaehlpunkt" literal="ÜGS/Zählpunkt"/>
@@ -85,7 +86,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve5" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Zaehlpunkt" eSuperTypes="#//Anlage">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve6" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrHauptversorgung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrReserveEinspeisung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Versorgungsknoten" eSuperTypes="#//Anlage"/>
   <eClassifiers xsi:type="ecore:EClass" name="Energietechnikanlage" eSuperTypes="#//Anlage"/>

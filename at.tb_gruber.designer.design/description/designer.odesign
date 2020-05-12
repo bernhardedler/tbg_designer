@@ -833,19 +833,21 @@
       <ownedColumnMappings name="objAdresse" headerLabelExpression="Ort/Adresse" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().ort_Adresse"/>
       <ownedColumnMappings name="objId" headerLabelExpression="Objekt-ID" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().id"/>
       <ownedColumnMappings name="objReserve1" headerLabelExpression="Reserve 1" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve1"/>
-      <ownedColumnMappings name="objReserve2" headerLabelExpression="Reserve 2" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve2"/>
+      <ownedColumnMappings name="objDB776UA" headerLabelExpression="DB776 UA" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve2"/>
       <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name"/>
       <ownedColumnMappings name="anlAnlagennummer" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:self.ziel.anlagennummer"/>
       <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.getAnlageart()"/>
       <ownedColumnMappings name="anlIdImmoAssi" headerLabelExpression="ANLAGEN_ID_IMMO_ASSI" featureName="ursprung" labelExpression="aql:self.ziel.anlagenIdImmoAssi"/>
       <ownedColumnMappings name="anlEadbId" headerLabelExpression="EADB_ID" featureName="ursprung" labelExpression="aql:self.ziel.eadbId"/>
+      <ownedColumnMappings name="anlEadbVersorgungArt" headerLabelExpression="EADB Versorgung Art" featureName="ursprung" labelExpression="aql:self.ziel.eadbVersorgungArt"/>
       <ownedColumnMappings name="anlPrimaerspannung" headerLabelExpression="Primaerspannung" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
       <ownedColumnMappings name="anlReserve3" headerLabelExpression="Reserve 3" featureName="ursprung" labelExpression="aql:self.ziel.reserve3"/>
       <ownedColumnMappings name="anlReserve4" headerLabelExpression="Reserve 4" featureName="ursprung" labelExpression="aql:self.ziel.reserve4"/>
       <ownedColumnMappings name="anlSekundaerspannung" headerLabelExpression="Sekundaerspannung" featureName="ursprung" labelExpression="aql:self.ziel.getsekundaerspannung()"/>
       <ownedColumnMappings name="anlTrafoKva" headerLabelExpression="Trafo-kVA" featureName="ursprung" labelExpression="aql:self.ziel.getTrafoKVA()"/>
       <ownedColumnMappings name="anlReserve5" headerLabelExpression="Reserve 5" featureName="ursprung" labelExpression="aql:self.ziel.getReserve5()"/>
-      <ownedColumnMappings name="anlReserve6" headerLabelExpression="Reserve 6" featureName="ursprung" labelExpression="aql:self.ziel.getReserve6()"/>
+      <ownedColumnMappings name="anlReserveZPNrHauptversorgung" headerLabelExpression="Zählpunktnummer Hauptversorgung" featureName="ursprung" labelExpression="aql:self.ziel.getzpNrHaupt()"/>
+      <ownedColumnMappings name="anlReserveZPNrReserveEinspeisung" headerLabelExpression="Zählpunktnummer Reserve Einspeisung" featureName="ursprung" labelExpression="aql:self.ziel.getZpNrReserveEinsp()"/>
       <ownedColumnMappings name="vbdVersorgtVonAnl" headerLabelExpression="versorgt von Anlagenname" featureName="ursprung" labelExpression="aql:self.ursprung.name"/>
       <ownedColumnMappings name="vbdVersorgtVonNr" headerLabelExpression="versorgt von Anlagennummer" featureName="ursprung" labelExpression="aql:self.ursprung.anlagennummer"/>
       <ownedColumnMappings name="vbdVersorgtVonObj" headerLabelExpression="vesorgt von Objekt" featureName="ursprung" labelExpression="aql:self.ursprung.eContainer().name"/>

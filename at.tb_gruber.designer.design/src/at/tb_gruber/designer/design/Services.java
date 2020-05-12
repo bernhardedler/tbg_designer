@@ -164,9 +164,17 @@ public class Services {
 		}
 	}
 	
-	public String getReserve6(EObject self) {
+	public String getZpNrHaupt(EObject self) {
 		if (self instanceof Zaehlpunkt) {
-			return ((Zaehlpunkt)self).getReserve6();
+			return ((Zaehlpunkt)self).getNrHauptversorgung();
+		} else {
+			return "";
+		}
+	}
+	
+	public String getZpNrReserveEinsp(EObject self) {
+		if (self instanceof Zaehlpunkt) {
+			return ((Zaehlpunkt)self).getNrReserveEinspeisung();
 		} else {
 			return "";
 		}

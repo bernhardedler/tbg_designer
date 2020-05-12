@@ -44,24 +44,41 @@ public class ZaehlpunktItemProvider extends AnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addReserve6PropertyDescriptor(object);
+			addNrHauptversorgungPropertyDescriptor(object);
+			addNrReserveEinspeisungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Reserve6 feature.
+	 * This adds a property descriptor for the Nr Hauptversorgung feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReserve6PropertyDescriptor(Object object) {
+	protected void addNrHauptversorgungPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Zaehlpunkt_reserve6_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Zaehlpunkt_reserve6_feature",
+						getResourceLocator(), getString("_UI_Zaehlpunkt_nrHauptversorgung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Zaehlpunkt_nrHauptversorgung_feature",
 								"_UI_Zaehlpunkt_type"),
-						ModelPackage.Literals.ZAEHLPUNKT__RESERVE6, true, false, false,
+						ModelPackage.Literals.ZAEHLPUNKT__NR_HAUPTVERSORGUNG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nr Reserve Einspeisung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNrReserveEinspeisungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Zaehlpunkt_nrReserveEinspeisung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Zaehlpunkt_nrReserveEinspeisung_feature",
+								"_UI_Zaehlpunkt_type"),
+						ModelPackage.Literals.ZAEHLPUNKT__NR_RESERVE_EINSPEISUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -111,7 +128,8 @@ public class ZaehlpunktItemProvider extends AnlageItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Zaehlpunkt.class)) {
-		case ModelPackage.ZAEHLPUNKT__RESERVE6:
+		case ModelPackage.ZAEHLPUNKT__NR_HAUPTVERSORGUNG:
+		case ModelPackage.ZAEHLPUNKT__NR_RESERVE_EINSPEISUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
