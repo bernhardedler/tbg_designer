@@ -831,7 +831,8 @@
       <ownedColumnMappings name="objObjektart" headerLabelExpression="Objektart" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().objektart"/>
       <ownedColumnMappings name="objGPS" headerLabelExpression="GPS-Standort" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().gpsstandort"/>
       <ownedColumnMappings name="objAdresse" headerLabelExpression="Ort/Adresse" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().ort_Adresse"/>
-      <ownedColumnMappings name="objId" headerLabelExpression="Objekt-ID" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().id"/>
+      <ownedColumnMappings name="objAdresse2" headerLabelExpression="Ort/Adresse ermittlet" featureName="ursprung" labelExpression="service:getZielAdresse()"/>
+      <ownedColumnMappings name="objId" headerLabelExpression="Objekt-ID" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().objektId"/>
       <ownedColumnMappings name="objReserve1" headerLabelExpression="Reserve 1" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve1"/>
       <ownedColumnMappings name="objDB776UA" headerLabelExpression="DB776 UA" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve2"/>
       <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name"/>

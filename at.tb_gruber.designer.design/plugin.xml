@@ -52,4 +52,12 @@
         </ViewId>
      </GlobalActionHandlerProvider>
   </extension>
+  <extension
+        point="org.eclipse.ui.preferencePages">
+     <page
+           class="at.tb_gruber.designer.ide.preferences.TBGPreferencePage"
+           id="at.tb_gruber.designer.ide.preferences.page"
+           name="TBG Designer">
+     </page>
+  </extension>
 </plugin>
