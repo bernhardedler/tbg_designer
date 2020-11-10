@@ -5,6 +5,7 @@ package at.tb_gruber.designer.model.impl;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
 
 import java.util.Collection;
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getReserve1 <em>Reserve1</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getReserve2 <em>Reserve2</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGpsstandort <em>Gpsstandort</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getExterneQuelle <em>Externe Quelle</em>}</li>
  * </ul>
  *
  * @generated
@@ -193,6 +195,26 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @ordered
 	 */
 	protected String gpsstandort = GPSSTANDORT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getExterneQuelle() <em>Externe Quelle</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExterneQuelle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final externe_datenquelle EXTERNE_QUELLE_EDEFAULT = externe_datenquelle.IMMO;
+
+	/**
+	 * The cached value of the '{@link #getExterneQuelle() <em>Externe Quelle</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExterneQuelle()
+	 * @generated
+	 * @ordered
+	 */
+	protected externe_datenquelle externeQuelle = EXTERNE_QUELLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -399,6 +421,30 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
+	public externe_datenquelle getExterneQuelle() {
+		return externeQuelle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setExterneQuelle(externe_datenquelle newExterneQuelle) {
+		externe_datenquelle oldExterneQuelle = externeQuelle;
+		externeQuelle = newExterneQuelle == null ? EXTERNE_QUELLE_EDEFAULT : newExterneQuelle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__EXTERNE_QUELLE, oldExterneQuelle,
+					externeQuelle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.OBJEKT__ANLAGE:
@@ -431,6 +477,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return getReserve2();
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			return getGpsstandort();
+		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
+			return getExterneQuelle();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -469,6 +517,9 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			setGpsstandort((String) newValue);
 			return;
+		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
+			setExterneQuelle((externe_datenquelle) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -505,6 +556,9 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			setGpsstandort(GPSSTANDORT_EDEFAULT);
 			return;
+		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
+			setExterneQuelle(EXTERNE_QUELLE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -533,6 +587,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return RESERVE2_EDEFAULT == null ? reserve2 != null : !RESERVE2_EDEFAULT.equals(reserve2);
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			return GPSSTANDORT_EDEFAULT == null ? gpsstandort != null : !GPSSTANDORT_EDEFAULT.equals(gpsstandort);
+		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
+			return externeQuelle != EXTERNE_QUELLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -562,6 +618,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		result.append(reserve2);
 		result.append(", gpsstandort: ");
 		result.append(gpsstandort);
+		result.append(", externeQuelle: ");
+		result.append(externeQuelle);
 		result.append(')');
 		return result.toString();
 	}

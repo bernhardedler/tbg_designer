@@ -63,6 +63,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 			addReserve1PropertyDescriptor(object);
 			addReserve2PropertyDescriptor(object);
 			addGpsstandortPropertyDescriptor(object);
+			addExterneQuellePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -179,6 +180,22 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
+	 * This adds a property descriptor for the Externe Quelle feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExterneQuellePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Objekt_externeQuelle_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_externeQuelle_feature",
+								"_UI_Objekt_type"),
+						ModelPackage.Literals.OBJEKT__EXTERNE_QUELLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -261,6 +278,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		case ModelPackage.OBJEKT__RESERVE1:
 		case ModelPackage.OBJEKT__RESERVE2:
 		case ModelPackage.OBJEKT__GPSSTANDORT:
+		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:

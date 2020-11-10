@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getReserve1 <em>Reserve1</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getReserve2 <em>Reserve2</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getObjekt()
@@ -198,5 +199,30 @@ public interface Objekt extends EObject {
 	 * @generated
 	 */
 	void setGpsstandort(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Externe Quelle</b></em>' attribute.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.externe_datenquelle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Externe Quelle</em>' attribute.
+	 * @see at.tb_gruber.designer.model.externe_datenquelle
+	 * @see #setExterneQuelle(externe_datenquelle)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_ExterneQuelle()
+	 * @model
+	 * @generated
+	 */
+	externe_datenquelle getExterneQuelle();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Externe Quelle</em>' attribute.
+	 * @see at.tb_gruber.designer.model.externe_datenquelle
+	 * @see #getExterneQuelle()
+	 * @generated
+	 */
+	void setExterneQuelle(externe_datenquelle value);
 
 } // Objekt

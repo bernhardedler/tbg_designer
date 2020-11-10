@@ -95,6 +95,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createanlagearttypeFromString(eDataType, initialValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
 			return createspannungsarttypeFromString(eDataType, initialValue);
+		case ModelPackage.EXTERNE_DATENQUELLE:
+			return createexterne_datenquelleFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +116,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return convertanlagearttypeToString(eDataType, instanceValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
 			return convertspannungsarttypeToString(eDataType, instanceValue);
+		case ModelPackage.EXTERNE_DATENQUELLE:
+			return convertexterne_datenquelleToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -292,6 +296,28 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertspannungsarttypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public externe_datenquelle createexterne_datenquelleFromString(EDataType eDataType, String initialValue) {
+		externe_datenquelle result = externe_datenquelle.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertexterne_datenquelleToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

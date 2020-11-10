@@ -16,6 +16,7 @@ import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VersorgungsknotenMitET;
 import at.tb_gruber.designer.model.Zaehlpunkt;
 import at.tb_gruber.designer.model.anlagearttype;
+import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
 import at.tb_gruber.designer.model.spannungsarttype;
 
@@ -131,6 +132,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EEnum spannungsarttypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum externe_datenquelleEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -352,6 +360,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getObjekt_ExterneQuelle() {
+		return (EAttribute) objektEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAnlage() {
 		return anlageEClass;
 	}
@@ -542,6 +560,36 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getVerbindung_QuellSicherung() {
+		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerbindung_ZielSicherung() {
+		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerbindung_Kabeltype() {
+		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPlankopf() {
 		return plankopfEClass;
 	}
@@ -712,6 +760,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getexterne_datenquelle() {
+		return externe_datenquelleEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ModelFactory getModelFactory() {
 		return (ModelFactory) getEFactoryInstance();
 	}
@@ -752,6 +810,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(objektEClass, OBJEKT__RESERVE1);
 		createEAttribute(objektEClass, OBJEKT__RESERVE2);
 		createEAttribute(objektEClass, OBJEKT__GPSSTANDORT);
+		createEAttribute(objektEClass, OBJEKT__EXTERNE_QUELLE);
 
 		anlageEClass = createEClass(ANLAGE);
 		createEAttribute(anlageEClass, ANLAGE__NAME);
@@ -773,6 +832,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEReference(verbindungEClass, VERBINDUNG__URSPRUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__RESERVE9);
 		createEAttribute(verbindungEClass, VERBINDUNG__RESERVE10);
+		createEAttribute(verbindungEClass, VERBINDUNG__QUELL_SICHERUNG);
+		createEAttribute(verbindungEClass, VERBINDUNG__ZIEL_SICHERUNG);
+		createEAttribute(verbindungEClass, VERBINDUNG__KABELTYPE);
 
 		plankopfEClass = createEClass(PLANKOPF);
 		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
@@ -799,6 +861,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
 		anlagearttypeEEnum = createEEnum(ANLAGEARTTYPE);
 		spannungsarttypeEEnum = createEEnum(SPANNUNGSARTTYPE);
+		externe_datenquelleEEnum = createEEnum(EXTERNE_DATENQUELLE);
 	}
 
 	/**
@@ -870,6 +933,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getObjekt_Gpsstandort(), ecorePackage.getEString(), "gpsstandort", null, 0, 1, Objekt.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjekt_ExterneQuelle(), this.getexterne_datenquelle(), "externeQuelle", null, 0, 1,
+				Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(anlageEClass, Anlage.class, "Anlage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnlage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Anlage.class, !IS_TRANSIENT,
@@ -916,6 +982,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerbindung_Reserve9(), ecorePackage.getEString(), "reserve9", null, 0, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVerbindung_Reserve10(), ecorePackage.getEString(), "reserve10", null, 0, 1, Verbindung.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerbindung_QuellSicherung(), ecorePackage.getEString(), "quellSicherung", null, 0, 1,
+				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerbindung_ZielSicherung(), ecorePackage.getEString(), "zielSicherung", null, 0, 1,
+				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerbindung_Kabeltype(), ecorePackage.getEString(), "kabeltype", null, 0, 1, Verbindung.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
@@ -981,6 +1055,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype._15K_V16_7HZ);
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.NSP16_7HZ);
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_HELLBRAUN);
+
+		initEEnum(externe_datenquelleEEnum, externe_datenquelle.class, "externe_datenquelle");
+		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.IMMO);
+		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.VS);
+		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.GEBAEUDE);
 
 		// Create resource
 		createResource(eNS_URI);

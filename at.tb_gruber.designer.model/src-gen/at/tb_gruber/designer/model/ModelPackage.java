@@ -213,13 +213,22 @@ public interface ModelPackage extends EPackage {
 	int OBJEKT__GPSSTANDORT = 7;
 
 	/**
+	 * The feature id for the '<em><b>Externe Quelle</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJEKT__EXTERNE_QUELLE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Objekt</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT_FEATURE_COUNT = 8;
+	int OBJEKT_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Objekt</em>' class.
@@ -422,13 +431,40 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG__RESERVE10 = 5;
 
 	/**
+	 * The feature id for the '<em><b>Quell Sicherung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERBINDUNG__QUELL_SICHERUNG = 6;
+
+	/**
+	 * The feature id for the '<em><b>Ziel Sicherung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERBINDUNG__ZIEL_SICHERUNG = 7;
+
+	/**
+	 * The feature id for the '<em><b>Kabeltype</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERBINDUNG__KABELTYPE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Verbindung</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG_FEATURE_COUNT = 6;
+	int VERBINDUNG_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Verbindung</em>' class.
@@ -1224,6 +1260,16 @@ public interface ModelPackage extends EPackage {
 	int SPANNUNGSARTTYPE = 13;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.externe_datenquelle
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getexterne_datenquelle()
+	 * @generated
+	 */
+	int EXTERNE_DATENQUELLE = 14;
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1385,6 +1431,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getObjekt_Gpsstandort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Externe Quelle</em>'.
+	 * @see at.tb_gruber.designer.model.Objekt#getExterneQuelle()
+	 * @see #getObjekt()
+	 * @generated
+	 */
+	EAttribute getObjekt_ExterneQuelle();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Anlage <em>Anlage</em>}'.
@@ -1594,6 +1651,39 @@ public interface ModelPackage extends EPackage {
 	EAttribute getVerbindung_Reserve10();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Quell Sicherung</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getQuellSicherung()
+	 * @see #getVerbindung()
+	 * @generated
+	 */
+	EAttribute getVerbindung_QuellSicherung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ziel Sicherung</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getZielSicherung()
+	 * @see #getVerbindung()
+	 * @generated
+	 */
+	EAttribute getVerbindung_ZielSicherung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getKabeltype <em>Kabeltype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kabeltype</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getKabeltype()
+	 * @see #getVerbindung()
+	 * @generated
+	 */
+	EAttribute getVerbindung_Kabeltype();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Plankopf <em>Plankopf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1771,6 +1861,16 @@ public interface ModelPackage extends EPackage {
 	EEnum getspannungsarttype();
 
 	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>externe datenquelle</em>'.
+	 * @see at.tb_gruber.designer.model.externe_datenquelle
+	 * @generated
+	 */
+	EEnum getexterne_datenquelle();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1916,6 +2016,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OBJEKT__GPSSTANDORT = eINSTANCE.getObjekt_Gpsstandort();
+
+		/**
+		 * The meta object literal for the '<em><b>Externe Quelle</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OBJEKT__EXTERNE_QUELLE = eINSTANCE.getObjekt_ExterneQuelle();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.AnlageImpl <em>Anlage</em>}' class.
@@ -2074,6 +2182,30 @@ public interface ModelPackage extends EPackage {
 		EAttribute VERBINDUNG__RESERVE10 = eINSTANCE.getVerbindung_Reserve10();
 
 		/**
+		 * The meta object literal for the '<em><b>Quell Sicherung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERBINDUNG__QUELL_SICHERUNG = eINSTANCE.getVerbindung_QuellSicherung();
+
+		/**
+		 * The meta object literal for the '<em><b>Ziel Sicherung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERBINDUNG__ZIEL_SICHERUNG = eINSTANCE.getVerbindung_ZielSicherung();
+
+		/**
+		 * The meta object literal for the '<em><b>Kabeltype</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERBINDUNG__KABELTYPE = eINSTANCE.getVerbindung_Kabeltype();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.PlankopfImpl <em>Plankopf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2228,6 +2360,16 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum SPANNUNGSARTTYPE = eINSTANCE.getspannungsarttype();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.externe_datenquelle
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getexterne_datenquelle()
+		 * @generated
+		 */
+		EEnum EXTERNE_DATENQUELLE = eINSTANCE.getexterne_datenquelle();
 
 	}
 

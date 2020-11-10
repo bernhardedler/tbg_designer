@@ -20,6 +20,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gpsstandort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externeQuelle" eType="#//externe_datenquelle"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="objektarttype">
     <eLiterals name="Trafostation" literal="Trafostation"/>
@@ -71,6 +72,9 @@
         eType="#//Anlage"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve9" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve10" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quellSicherung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zielSicherung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kabeltype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plankopf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="textbaustein" upperBound="-1"
@@ -92,4 +96,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Versorgungsknoten" eSuperTypes="#//Anlage"/>
   <eClassifiers xsi:type="ecore:EClass" name="Energietechnikanlage" eSuperTypes="#//Anlage"/>
   <eClassifiers xsi:type="ecore:EClass" name="VersorgungsknotenMitET" eSuperTypes="#//Anlage"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="externe_datenquelle">
+    <eLiterals name="immo" literal="immo"/>
+    <eLiterals name="vs" value="1"/>
+    <eLiterals name="gebaeude" value="2"/>
+  </eClassifiers>
 </ecore:EPackage>

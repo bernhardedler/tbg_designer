@@ -1,8 +1,6 @@
 package at.tb_gruber.designer.design;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
@@ -195,24 +193,24 @@ public class Services {
 	public String getZielAdresse(EObject self) {
 		ensurePropsInitialized();
 		String adresse = "";
-		if (self instanceof Verbindung){
-			Objekt objekt = (Objekt)((Verbindung)self).getZiel().eContainer();
+		if (self instanceof Verbindung) {
+			Objekt objekt = (Objekt) ((Verbindung) self).getZiel().eContainer();
 			String id = objekt.getObjektId();
-			adresse = props.getAdresseForId(id);
+			adresse = props.getAdresseForId(id, objekt.getExterneQuelle());
 			if (adresse.isEmpty()) {
 				adresse = objekt.getOrt_Adresse();
 			}
 		}
 		return adresse;
 	}
-	
+
 	public String getZielObjektName(EObject self) {
 		ensurePropsInitialized();
 		String objektName = "";
-		if (self instanceof Verbindung){
-			Objekt objekt = (Objekt)((Verbindung)self).getZiel().eContainer();
+		if (self instanceof Verbindung) {
+			Objekt objekt = (Objekt) ((Verbindung) self).getZiel().eContainer();
 			String id = objekt.getObjektId();
-			objektName = props.getObjektNameForId(id);
+			objektName = props.getObjektNameForId(id, objekt.getExterneQuelle());
 			if (objektName.isEmpty()) {
 				objektName = objekt.getName();
 			}
@@ -220,13 +218,36 @@ public class Services {
 		return objektName;
 	}
 
-	
-	
+	public String getZielGebaeudeart(EObject self) {
+		ensurePropsInitialized();
+		String objektName = "";
+		if (self instanceof Verbindung) {
+			Objekt objekt = (Objekt) ((Verbindung) self).getZiel().eContainer();
+			String id = objekt.getObjektId();
+			objektName = props.getGebaeudeartForId(id, objekt.getExterneQuelle());
+			if (objektName.isEmpty()) {
+				objektName = objekt.getReserve1();
+			}
+		}
+		return objektName;
+	}
+
+	public String getUrsprungVersorgtVonPK(EObject self) {
+		String pk = "";
+		if (self instanceof Verbindung) {
+			Anlage ursprung = ((Verbindung) self).getUrsprung();
+			if (!ursprung.getVersorgtVon().isEmpty()) {
+				Objekt objekt = (Objekt) ((Verbindung) self).getZiel().eContainer();
+				Bahnhof bahnhof = (Bahnhof) objekt.eContainer();
+				pk = bahnhof.getName() + "_" + ursprung.getVersorgtVon().get(0).getNr();
+			}
+		}
+		return pk;
+	}
+
 	private void ensurePropsInitialized() {
 		if (props == null) {
 			props = new CSVPropertyProvider();
-			props.registerListener();
-			props.loadImmobilienDatei();
 		}
 	}
 }
