@@ -102,9 +102,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VersorgungsknotenMitET" eSuperTypes="#//Anlage"/>
   <eClassifiers xsi:type="ecore:EEnum" name="externe_datenquelle">
-    <eLiterals name="immo" literal="immo"/>
-    <eLiterals name="vs" value="1"/>
-    <eLiterals name="gebaeude" value="2"/>
+    <eLiterals name="undefined"/>
+    <eLiterals name="immo" value="1" literal="immo"/>
+    <eLiterals name="vs" value="2"/>
+    <eLiterals name="gebaeude" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ET_Type">
     <eLiterals name="IG"/>

@@ -204,7 +204,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final externe_datenquelle EXTERNE_QUELLE_EDEFAULT = externe_datenquelle.IMMO;
+	protected static final externe_datenquelle EXTERNE_QUELLE_EDEFAULT = externe_datenquelle.UNDEFINED;
 
 	/**
 	 * The cached value of the '{@link #getExterneQuelle() <em>Externe Quelle</em>}' attribute.

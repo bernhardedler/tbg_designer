@@ -19,14 +19,23 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum externe_datenquelle implements Enumerator {
 	/**
-	 * The '<em><b>Immo</b></em>' literal object.
+	 * The '<em><b>Undefined</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #UNDEFINED_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNDEFINED(0, "undefined", "undefined"),
+	/**
+	 * The '<em><b>Immo</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #IMMO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	IMMO(0, "immo", "immo"),
+	IMMO(1, "immo", "immo"),
 
 	/**
 	 * The '<em><b>Vs</b></em>' literal object.
@@ -36,7 +45,7 @@ public enum externe_datenquelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	VS(1, "vs", "vs"),
+	VS(2, "vs", "vs"),
 
 	/**
 	 * The '<em><b>Gebaeude</b></em>' literal object.
@@ -46,7 +55,18 @@ public enum externe_datenquelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GEBAEUDE(2, "gebaeude", "gebaeude");
+	GEBAEUDE(3, "gebaeude", "gebaeude");
+
+	/**
+	 * The '<em><b>Undefined</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNDEFINED
+	 * @model name="undefined"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNDEFINED_VALUE = 0;
 
 	/**
 	 * The '<em><b>Immo</b></em>' literal value.
@@ -57,7 +77,7 @@ public enum externe_datenquelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int IMMO_VALUE = 0;
+	public static final int IMMO_VALUE = 1;
 
 	/**
 	 * The '<em><b>Vs</b></em>' literal value.
@@ -68,7 +88,7 @@ public enum externe_datenquelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VS_VALUE = 1;
+	public static final int VS_VALUE = 2;
 
 	/**
 	 * The '<em><b>Gebaeude</b></em>' literal value.
@@ -79,7 +99,7 @@ public enum externe_datenquelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int GEBAEUDE_VALUE = 2;
+	public static final int GEBAEUDE_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>externe datenquelle</b></em>' enumerators.
@@ -87,7 +107,8 @@ public enum externe_datenquelle implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final externe_datenquelle[] VALUES_ARRAY = new externe_datenquelle[] { IMMO, VS, GEBAEUDE, };
+	private static final externe_datenquelle[] VALUES_ARRAY = new externe_datenquelle[] { UNDEFINED, IMMO, VS,
+			GEBAEUDE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>externe datenquelle</b></em>' enumerators.
@@ -143,6 +164,8 @@ public enum externe_datenquelle implements Enumerator {
 	 */
 	public static externe_datenquelle get(int value) {
 		switch (value) {
+		case UNDEFINED_VALUE:
+			return UNDEFINED;
 		case IMMO_VALUE:
 			return IMMO;
 		case VS_VALUE:

@@ -1150,6 +1150,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_HELLBRAUN);
 
 		initEEnum(externe_datenquelleEEnum, externe_datenquelle.class, "externe_datenquelle");
+		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.UNDEFINED);
 		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.IMMO);
 		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.VS);
 		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.GEBAEUDE);

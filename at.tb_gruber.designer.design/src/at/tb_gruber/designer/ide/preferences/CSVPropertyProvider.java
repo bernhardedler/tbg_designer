@@ -249,12 +249,15 @@ public class CSVPropertyProvider {
 	 * gefiltert werden. sonst geht das Duplikat-Objekt zurück
 	 */
 	private Optional<ObjektInfo> getForId(String id, externe_datenquelle quelle) {
-		List<ObjektInfo> collect = objektInfos.parallelStream().filter(obj -> obj.getObjektId().equals(id))
+		// Wenn eine Quelle angegeben ist, muss sie übereinstimmen, wenn undefined, dann egal
+		List<ObjektInfo> collect = objektInfos.parallelStream()
+				.filter(obj -> obj.getObjektId().equals(id)
+						&& (externe_datenquelle.UNDEFINED.equals(quelle) ? true : obj.quelle.equals(quelle)))
 				.collect(Collectors.toList());
 
 		if (collect.isEmpty()) {
 			if (externe_datenquelle.GEBAEUDE.equals(quelle)) { // bei gebäuden notfalls über sekundäre Id suchen
-				List<ObjektInfo> collect2 = objektInfos.parallelStream().filter(obj -> obj.getObjektId2().equals(id))
+				List<ObjektInfo> collect2 = objektInfos.parallelStream().filter(obj -> id.equals(obj.getObjektId2()))
 						.collect(Collectors.toList());
 				if (collect2.isEmpty()) {// wenn über sekundäre Id auch nichts gefunden wird, dann leer
 					return Optional.empty();
@@ -269,7 +272,7 @@ public class CSVPropertyProvider {
 		if (collect.size() == 1) { // wenn genau eins, super
 			return Optional.of(collect.get(0));
 		} else { // wenn mehrere, dann muss er die quelle wählen
-			if (quelle == null) {
+			if (externe_datenquelle.UNDEFINED.equals(quelle)) {
 				return Optional.of(ObjektInfo.duplicate);
 			} else {
 				return collect.stream().filter(oi -> oi.getQuelle().equals(quelle)).findFirst();

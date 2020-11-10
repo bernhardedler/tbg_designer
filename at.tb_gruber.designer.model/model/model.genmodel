@@ -36,6 +36,7 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_hellbraun"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//externe_datenquelle">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/immo"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/vs"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/gebaeude"/>
