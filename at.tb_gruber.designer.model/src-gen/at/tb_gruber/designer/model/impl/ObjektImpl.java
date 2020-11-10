@@ -37,8 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getOrt_Adresse <em>Ort Adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getObjektId <em>Objekt Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getAnlage <em>Anlage</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getReserve1 <em>Reserve1</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getReserve2 <em>Reserve2</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGebaeudeArt <em>Gebaeude Art</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getDb776ua <em>Db776ua</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGpsstandort <em>Gpsstandort</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getExterneQuelle <em>Externe Quelle</em>}</li>
  * </ul>
@@ -137,44 +137,44 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	protected EList<Anlage> anlage;
 
 	/**
-	 * The default value of the '{@link #getReserve1() <em>Reserve1</em>}' attribute.
+	 * The default value of the '{@link #getGebaeudeArt() <em>Gebaeude Art</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve1()
+	 * @see #getGebaeudeArt()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESERVE1_EDEFAULT = null;
+	protected static final String GEBAEUDE_ART_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReserve1() <em>Reserve1</em>}' attribute.
+	 * The cached value of the '{@link #getGebaeudeArt() <em>Gebaeude Art</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve1()
+	 * @see #getGebaeudeArt()
 	 * @generated
 	 * @ordered
 	 */
-	protected String reserve1 = RESERVE1_EDEFAULT;
+	protected String gebaeudeArt = GEBAEUDE_ART_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getReserve2() <em>Reserve2</em>}' attribute.
+	 * The default value of the '{@link #getDb776ua() <em>Db776ua</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve2()
+	 * @see #getDb776ua()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESERVE2_EDEFAULT = null;
+	protected static final String DB776UA_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReserve2() <em>Reserve2</em>}' attribute.
+	 * The cached value of the '{@link #getDb776ua() <em>Db776ua</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve2()
+	 * @see #getDb776ua()
 	 * @generated
 	 * @ordered
 	 */
-	protected String reserve2 = RESERVE2_EDEFAULT;
+	protected String db776ua = DB776UA_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getGpsstandort() <em>Gpsstandort</em>}' attribute.
@@ -349,8 +349,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public String getReserve1() {
-		return reserve1;
+	public String getGebaeudeArt() {
+		return gebaeudeArt;
 	}
 
 	/**
@@ -359,12 +359,12 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public void setReserve1(String newReserve1) {
-		String oldReserve1 = reserve1;
-		reserve1 = newReserve1;
+	public void setGebaeudeArt(String newGebaeudeArt) {
+		String oldGebaeudeArt = gebaeudeArt;
+		gebaeudeArt = newGebaeudeArt;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__RESERVE1, oldReserve1,
-					reserve1));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__GEBAEUDE_ART, oldGebaeudeArt,
+					gebaeudeArt));
 	}
 
 	/**
@@ -373,8 +373,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public String getReserve2() {
-		return reserve2;
+	public String getDb776ua() {
+		return db776ua;
 	}
 
 	/**
@@ -383,12 +383,11 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public void setReserve2(String newReserve2) {
-		String oldReserve2 = reserve2;
-		reserve2 = newReserve2;
+	public void setDb776ua(String newDb776ua) {
+		String oldDb776ua = db776ua;
+		db776ua = newDb776ua;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__RESERVE2, oldReserve2,
-					reserve2));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__DB776UA, oldDb776ua, db776ua));
 	}
 
 	/**
@@ -471,10 +470,10 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return getObjektId();
 		case ModelPackage.OBJEKT__ANLAGE:
 			return getAnlage();
-		case ModelPackage.OBJEKT__RESERVE1:
-			return getReserve1();
-		case ModelPackage.OBJEKT__RESERVE2:
-			return getReserve2();
+		case ModelPackage.OBJEKT__GEBAEUDE_ART:
+			return getGebaeudeArt();
+		case ModelPackage.OBJEKT__DB776UA:
+			return getDb776ua();
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			return getGpsstandort();
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
@@ -508,11 +507,11 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			getAnlage().clear();
 			getAnlage().addAll((Collection<? extends Anlage>) newValue);
 			return;
-		case ModelPackage.OBJEKT__RESERVE1:
-			setReserve1((String) newValue);
+		case ModelPackage.OBJEKT__GEBAEUDE_ART:
+			setGebaeudeArt((String) newValue);
 			return;
-		case ModelPackage.OBJEKT__RESERVE2:
-			setReserve2((String) newValue);
+		case ModelPackage.OBJEKT__DB776UA:
+			setDb776ua((String) newValue);
 			return;
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			setGpsstandort((String) newValue);
@@ -547,11 +546,11 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__ANLAGE:
 			getAnlage().clear();
 			return;
-		case ModelPackage.OBJEKT__RESERVE1:
-			setReserve1(RESERVE1_EDEFAULT);
+		case ModelPackage.OBJEKT__GEBAEUDE_ART:
+			setGebaeudeArt(GEBAEUDE_ART_EDEFAULT);
 			return;
-		case ModelPackage.OBJEKT__RESERVE2:
-			setReserve2(RESERVE2_EDEFAULT);
+		case ModelPackage.OBJEKT__DB776UA:
+			setDb776ua(DB776UA_EDEFAULT);
 			return;
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			setGpsstandort(GPSSTANDORT_EDEFAULT);
@@ -581,10 +580,10 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return OBJEKT_ID_EDEFAULT == null ? objektId != null : !OBJEKT_ID_EDEFAULT.equals(objektId);
 		case ModelPackage.OBJEKT__ANLAGE:
 			return anlage != null && !anlage.isEmpty();
-		case ModelPackage.OBJEKT__RESERVE1:
-			return RESERVE1_EDEFAULT == null ? reserve1 != null : !RESERVE1_EDEFAULT.equals(reserve1);
-		case ModelPackage.OBJEKT__RESERVE2:
-			return RESERVE2_EDEFAULT == null ? reserve2 != null : !RESERVE2_EDEFAULT.equals(reserve2);
+		case ModelPackage.OBJEKT__GEBAEUDE_ART:
+			return GEBAEUDE_ART_EDEFAULT == null ? gebaeudeArt != null : !GEBAEUDE_ART_EDEFAULT.equals(gebaeudeArt);
+		case ModelPackage.OBJEKT__DB776UA:
+			return DB776UA_EDEFAULT == null ? db776ua != null : !DB776UA_EDEFAULT.equals(db776ua);
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			return GPSSTANDORT_EDEFAULT == null ? gpsstandort != null : !GPSSTANDORT_EDEFAULT.equals(gpsstandort);
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
@@ -612,10 +611,10 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		result.append(ort_Adresse);
 		result.append(", objektId: ");
 		result.append(objektId);
-		result.append(", reserve1: ");
-		result.append(reserve1);
-		result.append(", reserve2: ");
-		result.append(reserve2);
+		result.append(", gebaeudeArt: ");
+		result.append(gebaeudeArt);
+		result.append(", db776ua: ");
+		result.append(db776ua);
 		result.append(", gpsstandort: ");
 		result.append(gpsstandort);
 		result.append(", externeQuelle: ");

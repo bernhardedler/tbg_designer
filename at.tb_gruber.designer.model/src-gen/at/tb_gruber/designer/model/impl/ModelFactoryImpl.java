@@ -97,6 +97,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createspannungsarttypeFromString(eDataType, initialValue);
 		case ModelPackage.EXTERNE_DATENQUELLE:
 			return createexterne_datenquelleFromString(eDataType, initialValue);
+		case ModelPackage.ET_TYPE:
+			return createET_TypeFromString(eDataType, initialValue);
+		case ModelPackage.ARGU_SRELEVANT:
+			return createARGUSrelevantFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -118,6 +122,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return convertspannungsarttypeToString(eDataType, instanceValue);
 		case ModelPackage.EXTERNE_DATENQUELLE:
 			return convertexterne_datenquelleToString(eDataType, instanceValue);
+		case ModelPackage.ET_TYPE:
+			return convertET_TypeToString(eDataType, instanceValue);
+		case ModelPackage.ARGU_SRELEVANT:
+			return convertARGUSrelevantToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -318,6 +326,50 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertexterne_datenquelleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ET_Type createET_TypeFromString(EDataType eDataType, String initialValue) {
+		ET_Type result = ET_Type.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertET_TypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ARGUSrelevant createARGUSrelevantFromString(EDataType eDataType, String initialValue) {
+		ARGUSrelevant result = ARGUSrelevant.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertARGUSrelevantToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

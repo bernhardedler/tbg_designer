@@ -60,6 +60,7 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 			addQuellSicherungPropertyDescriptor(object);
 			addZielSicherungPropertyDescriptor(object);
 			addKabeltypePropertyDescriptor(object);
+			addArgusrelevantPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -207,6 +208,22 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
+	 * This adds a property descriptor for the Argusrelevant feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArgusrelevantPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Verbindung_argusrelevant_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_argusrelevant_feature",
+								"_UI_Verbindung_type"),
+						ModelPackage.Literals.VERBINDUNG__ARGUSRELEVANT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Verbindung.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,6 +275,7 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
 		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
 		case ModelPackage.VERBINDUNG__KABELTYPE:
+		case ModelPackage.VERBINDUNG__ARGUSRELEVANT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

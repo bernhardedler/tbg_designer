@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltype <em>Kabeltype</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getArgusrelevant <em>Argusrelevant</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung()
@@ -229,5 +230,30 @@ public interface Verbindung extends EObject {
 	 * @generated
 	 */
 	void setKabeltype(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Argusrelevant</b></em>' attribute.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.ARGUSrelevant}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Argusrelevant</em>' attribute.
+	 * @see at.tb_gruber.designer.model.ARGUSrelevant
+	 * @see #setArgusrelevant(ARGUSrelevant)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Argusrelevant()
+	 * @model
+	 * @generated
+	 */
+	ARGUSrelevant getArgusrelevant();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getArgusrelevant <em>Argusrelevant</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Argusrelevant</em>' attribute.
+	 * @see at.tb_gruber.designer.model.ARGUSrelevant
+	 * @see #getArgusrelevant()
+	 * @generated
+	 */
+	void setArgusrelevant(ARGUSrelevant value);
 
 } // Verbindung

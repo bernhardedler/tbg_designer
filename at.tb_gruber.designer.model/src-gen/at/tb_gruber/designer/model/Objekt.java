@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getOrt_Adresse <em>Ort Adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getObjektId <em>Objekt Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getAnlage <em>Anlage</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Objekt#getReserve1 <em>Reserve1</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Objekt#getReserve2 <em>Reserve2</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getGebaeudeArt <em>Gebaeude Art</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getDb776ua <em>Db776ua</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}</li>
  * </ul>
@@ -135,48 +135,48 @@ public interface Objekt extends EObject {
 	EList<Anlage> getAnlage();
 
 	/**
-	 * Returns the value of the '<em><b>Reserve1</b></em>' attribute.
+	 * Returns the value of the '<em><b>Gebaeude Art</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve1</em>' attribute.
-	 * @see #setReserve1(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Reserve1()
+	 * @return the value of the '<em>Gebaeude Art</em>' attribute.
+	 * @see #setGebaeudeArt(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_GebaeudeArt()
 	 * @model
 	 * @generated
 	 */
-	String getReserve1();
+	String getGebaeudeArt();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getReserve1 <em>Reserve1</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getGebaeudeArt <em>Gebaeude Art</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve1</em>' attribute.
-	 * @see #getReserve1()
+	 * @param value the new value of the '<em>Gebaeude Art</em>' attribute.
+	 * @see #getGebaeudeArt()
 	 * @generated
 	 */
-	void setReserve1(String value);
+	void setGebaeudeArt(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Reserve2</b></em>' attribute.
+	 * Returns the value of the '<em><b>Db776ua</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve2</em>' attribute.
-	 * @see #setReserve2(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Reserve2()
+	 * @return the value of the '<em>Db776ua</em>' attribute.
+	 * @see #setDb776ua(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Db776ua()
 	 * @model
 	 * @generated
 	 */
-	String getReserve2();
+	String getDb776ua();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getReserve2 <em>Reserve2</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getDb776ua <em>Db776ua</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve2</em>' attribute.
-	 * @see #getReserve2()
+	 * @param value the new value of the '<em>Db776ua</em>' attribute.
+	 * @see #getDb776ua()
 	 * @generated
 	 */
-	void setReserve2(String value);
+	void setDb776ua(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Gpsstandort</b></em>' attribute.

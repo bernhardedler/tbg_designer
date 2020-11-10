@@ -166,6 +166,8 @@ public class Services {
 		}
 	}
 
+	
+	// TODO: evaluate if necessary
 	public String getZpNrHaupt(EObject self) {
 		if (self instanceof Zaehlpunkt) {
 			return ((Zaehlpunkt) self).getNrHauptversorgung();
@@ -174,6 +176,7 @@ public class Services {
 		}
 	}
 
+	// TODO: evaluate if necessary
 	public String getZpNrReserveEinsp(EObject self) {
 		if (self instanceof Zaehlpunkt) {
 			return ((Zaehlpunkt) self).getNrReserveEinspeisung();
@@ -183,11 +186,14 @@ public class Services {
 	}
 
 	public String getAnlageart(EObject self) {
+		String art = "";
 		if (self instanceof Anlage) {
-			return self.getClass().getInterfaces()[0].getSimpleName();
-		} else {
-			return "";
+			art = self.getClass().getInterfaces()[0].getSimpleName();
+			if (self instanceof Energietechnikanlage) {
+				art += " (" + ((Energietechnikanlage) self).getEtType() + ")";
+			}
 		}
+		return art;
 	}
 
 	public String getZielAdresse(EObject self) {
@@ -226,7 +232,7 @@ public class Services {
 			String id = objekt.getObjektId();
 			objektName = props.getGebaeudeartForId(id, objekt.getExterneQuelle());
 			if (objektName.isEmpty()) {
-				objektName = objekt.getReserve1();
+				objektName = objekt.getGebaeudeArt();
 			}
 		}
 		return objektName;

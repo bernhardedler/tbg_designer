@@ -40,6 +40,15 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/vs"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/gebaeude"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ET_Type">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ET_Type/IG"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ET_Type/IF"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ET_Type/FV"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ARGUSrelevant">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ARGUSrelevant/Y"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ARGUSrelevant/N"/>
+    </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>
@@ -53,8 +62,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/Ort_Adresse"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/objektId"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Objekt/anlage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/reserve1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/reserve2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/gebaeudeArt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/db776ua"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/gpsstandort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/externeQuelle"/>
     </genClasses>
@@ -66,10 +75,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/verbindungNach"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/versorgtVon"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/primaerspannung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/reserve3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/inObjektteil"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/reserve4"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagenIdImmoAssi"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/eadbVersorgungArt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/verteilerbezeichnung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/abgangVT"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
@@ -81,6 +92,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/quellSicherung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/zielSicherung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/kabeltype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/argusrelevant"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Plankopf">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Plankopf/textbaustein"/>
@@ -98,7 +110,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Zaehlpunkt/nrReserveEinspeisung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Versorgungsknoten"/>
-    <genClasses ecoreClass="model.ecore#//Energietechnikanlage"/>
+    <genClasses ecoreClass="model.ecore#//Energietechnikanlage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Energietechnikanlage/etType"/>
+    </genClasses>
     <genClasses ecoreClass="model.ecore#//VersorgungsknotenMitET"/>
   </genPackages>
 </genmodel:GenModel>

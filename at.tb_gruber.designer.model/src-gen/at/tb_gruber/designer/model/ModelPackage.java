@@ -186,22 +186,22 @@ public interface ModelPackage extends EPackage {
 	int OBJEKT__ANLAGE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * The feature id for the '<em><b>Gebaeude Art</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__RESERVE1 = 5;
+	int OBJEKT__GEBAEUDE_ART = 5;
 
 	/**
-	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * The feature id for the '<em><b>Db776ua</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__RESERVE2 = 6;
+	int OBJEKT__DB776UA = 6;
 
 	/**
 	 * The feature id for the '<em><b>Gpsstandort</b></em>' attribute.
@@ -313,13 +313,13 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__PRIMAERSPANNUNG = 6;
 
 	/**
-	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE__RESERVE3 = 7;
+	int ANLAGE__IN_OBJEKTTEIL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -349,13 +349,31 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__EADB_VERSORGUNG_ART = 10;
 
 	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANLAGE__VERTEILERBEZEICHNUNG = 11;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANLAGE__ABGANG_VT = 12;
+
+	/**
 	 * The number of structural features of the '<em>Anlage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_FEATURE_COUNT = 11;
+	int ANLAGE_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Anlage</em>' class.
@@ -458,13 +476,22 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG__KABELTYPE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Argusrelevant</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERBINDUNG__ARGUSRELEVANT = 9;
+
+	/**
 	 * The number of structural features of the '<em>Verbindung</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG_FEATURE_COUNT = 9;
+	int VERBINDUNG_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Verbindung</em>' class.
@@ -623,13 +650,13 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
-	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__RESERVE3 = ANLAGE__RESERVE3;
+	int TRAFO__IN_OBJEKTTEIL = ANLAGE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -657,6 +684,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRAFO__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__VERTEILERBEZEICHNUNG = ANLAGE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__ABGANG_VT = ANLAGE__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Sekundaerspannung</b></em>' attribute.
@@ -777,13 +822,13 @@ public interface ModelPackage extends EPackage {
 	int ZAEHLPUNKT__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
-	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZAEHLPUNKT__RESERVE3 = ANLAGE__RESERVE3;
+	int ZAEHLPUNKT__IN_OBJEKTTEIL = ANLAGE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -811,6 +856,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ZAEHLPUNKT__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__VERTEILERBEZEICHNUNG = ANLAGE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZAEHLPUNKT__ABGANG_VT = ANLAGE__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Nr Hauptversorgung</b></em>' attribute.
@@ -922,13 +985,13 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
-	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__RESERVE3 = ANLAGE__RESERVE3;
+	int VERSORGUNGSKNOTEN__IN_OBJEKTTEIL = ANLAGE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -956,6 +1019,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSORGUNGSKNOTEN__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__VERTEILERBEZEICHNUNG = ANLAGE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__ABGANG_VT = ANLAGE__ABGANG_VT;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten</em>' class.
@@ -1049,13 +1130,13 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
-	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__RESERVE3 = ANLAGE__RESERVE3;
+	int ENERGIETECHNIKANLAGE__IN_OBJEKTTEIL = ANLAGE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -1085,13 +1166,40 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
 
 	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__VERTEILERBEZEICHNUNG = ANLAGE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__ABGANG_VT = ANLAGE__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Et Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__ET_TYPE = ANLAGE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Energietechnikanlage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 0;
+	int ENERGIETECHNIKANLAGE_FEATURE_COUNT = ANLAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Energietechnikanlage</em>' class.
@@ -1176,13 +1284,13 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN_MIT_ET__PRIMAERSPANNUNG = ANLAGE__PRIMAERSPANNUNG;
 
 	/**
-	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN_MIT_ET__RESERVE3 = ANLAGE__RESERVE3;
+	int VERSORGUNGSKNOTEN_MIT_ET__IN_OBJEKTTEIL = ANLAGE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -1210,6 +1318,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSORGUNGSKNOTEN_MIT_ET__EADB_VERSORGUNG_ART = ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__VERTEILERBEZEICHNUNG = ANLAGE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN_MIT_ET__ABGANG_VT = ANLAGE__ABGANG_VT;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten Mit ET</em>' class.
@@ -1268,6 +1394,26 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	int EXTERNE_DATENQUELLE = 14;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.ET_Type
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getET_Type()
+	 * @generated
+	 */
+	int ET_TYPE = 15;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.ARGUSrelevant
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getARGUSrelevant()
+	 * @generated
+	 */
+	int ARGU_SRELEVANT = 16;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -1400,26 +1546,26 @@ public interface ModelPackage extends EPackage {
 	EReference getObjekt_Anlage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getReserve1 <em>Reserve1</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getGebaeudeArt <em>Gebaeude Art</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve1</em>'.
-	 * @see at.tb_gruber.designer.model.Objekt#getReserve1()
+	 * @return the meta object for the attribute '<em>Gebaeude Art</em>'.
+	 * @see at.tb_gruber.designer.model.Objekt#getGebaeudeArt()
 	 * @see #getObjekt()
 	 * @generated
 	 */
-	EAttribute getObjekt_Reserve1();
+	EAttribute getObjekt_GebaeudeArt();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getReserve2 <em>Reserve2</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getDb776ua <em>Db776ua</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve2</em>'.
-	 * @see at.tb_gruber.designer.model.Objekt#getReserve2()
+	 * @return the meta object for the attribute '<em>Db776ua</em>'.
+	 * @see at.tb_gruber.designer.model.Objekt#getDb776ua()
 	 * @see #getObjekt()
 	 * @generated
 	 */
-	EAttribute getObjekt_Reserve2();
+	EAttribute getObjekt_Db776ua();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}'.
@@ -1531,15 +1677,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAnlage_Primaerspannung();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getReserve3 <em>Reserve3</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getInObjektteil <em>In Objektteil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve3</em>'.
-	 * @see at.tb_gruber.designer.model.Anlage#getReserve3()
+	 * @return the meta object for the attribute '<em>In Objektteil</em>'.
+	 * @see at.tb_gruber.designer.model.Anlage#getInObjektteil()
 	 * @see #getAnlage()
 	 * @generated
 	 */
-	EAttribute getAnlage_Reserve3();
+	EAttribute getAnlage_InObjektteil();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getReserve4 <em>Reserve4</em>}'.
@@ -1573,6 +1719,28 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAnlage_EadbVersorgungArt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Verteilerbezeichnung</em>'.
+	 * @see at.tb_gruber.designer.model.Anlage#getVerteilerbezeichnung()
+	 * @see #getAnlage()
+	 * @generated
+	 */
+	EAttribute getAnlage_Verteilerbezeichnung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Anlage#getAbgangVT <em>Abgang VT</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Abgang VT</em>'.
+	 * @see at.tb_gruber.designer.model.Anlage#getAbgangVT()
+	 * @see #getAnlage()
+	 * @generated
+	 */
+	EAttribute getAnlage_AbgangVT();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Verbindung <em>Verbindung</em>}'.
@@ -1682,6 +1850,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVerbindung_Kabeltype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getArgusrelevant <em>Argusrelevant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Argusrelevant</em>'.
+	 * @see at.tb_gruber.designer.model.Verbindung#getArgusrelevant()
+	 * @see #getVerbindung()
+	 * @generated
+	 */
+	EAttribute getVerbindung_Argusrelevant();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Plankopf <em>Plankopf</em>}'.
@@ -1821,6 +2000,17 @@ public interface ModelPackage extends EPackage {
 	EClass getEnergietechnikanlage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Energietechnikanlage#getEtType <em>Et Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Et Type</em>'.
+	 * @see at.tb_gruber.designer.model.Energietechnikanlage#getEtType()
+	 * @see #getEnergietechnikanlage()
+	 * @generated
+	 */
+	EAttribute getEnergietechnikanlage_EtType();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VersorgungsknotenMitET <em>Versorgungsknoten Mit ET</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1869,6 +2059,26 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getexterne_datenquelle();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ET Type</em>'.
+	 * @see at.tb_gruber.designer.model.ET_Type
+	 * @generated
+	 */
+	EEnum getET_Type();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ARGU Srelevant</em>'.
+	 * @see at.tb_gruber.designer.model.ARGUSrelevant
+	 * @generated
+	 */
+	EEnum getARGUSrelevant();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1994,20 +2204,20 @@ public interface ModelPackage extends EPackage {
 		EReference OBJEKT__ANLAGE = eINSTANCE.getObjekt_Anlage();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve1</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Gebaeude Art</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OBJEKT__RESERVE1 = eINSTANCE.getObjekt_Reserve1();
+		EAttribute OBJEKT__GEBAEUDE_ART = eINSTANCE.getObjekt_GebaeudeArt();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve2</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Db776ua</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OBJEKT__RESERVE2 = eINSTANCE.getObjekt_Reserve2();
+		EAttribute OBJEKT__DB776UA = eINSTANCE.getObjekt_Db776ua();
 
 		/**
 		 * The meta object literal for the '<em><b>Gpsstandort</b></em>' attribute feature.
@@ -2092,12 +2302,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute ANLAGE__PRIMAERSPANNUNG = eINSTANCE.getAnlage_Primaerspannung();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve3</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>In Objektteil</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ANLAGE__RESERVE3 = eINSTANCE.getAnlage_Reserve3();
+		EAttribute ANLAGE__IN_OBJEKTTEIL = eINSTANCE.getAnlage_InObjektteil();
 
 		/**
 		 * The meta object literal for the '<em><b>Reserve4</b></em>' attribute feature.
@@ -2122,6 +2332,22 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ANLAGE__EADB_VERSORGUNG_ART = eINSTANCE.getAnlage_EadbVersorgungArt();
+
+		/**
+		 * The meta object literal for the '<em><b>Verteilerbezeichnung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANLAGE__VERTEILERBEZEICHNUNG = eINSTANCE.getAnlage_Verteilerbezeichnung();
+
+		/**
+		 * The meta object literal for the '<em><b>Abgang VT</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANLAGE__ABGANG_VT = eINSTANCE.getAnlage_AbgangVT();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerbindungImpl <em>Verbindung</em>}' class.
@@ -2204,6 +2430,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VERBINDUNG__KABELTYPE = eINSTANCE.getVerbindung_Kabeltype();
+
+		/**
+		 * The meta object literal for the '<em><b>Argusrelevant</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERBINDUNG__ARGUSRELEVANT = eINSTANCE.getVerbindung_Argusrelevant();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.PlankopfImpl <em>Plankopf</em>}' class.
@@ -2322,6 +2556,14 @@ public interface ModelPackage extends EPackage {
 		EClass ENERGIETECHNIKANLAGE = eINSTANCE.getEnergietechnikanlage();
 
 		/**
+		 * The meta object literal for the '<em><b>Et Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENERGIETECHNIKANLAGE__ET_TYPE = eINSTANCE.getEnergietechnikanlage_EtType();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenMitETImpl <em>Versorgungsknoten Mit ET</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2370,6 +2612,26 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EXTERNE_DATENQUELLE = eINSTANCE.getexterne_datenquelle();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.ET_Type
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getET_Type()
+		 * @generated
+		 */
+		EEnum ET_TYPE = eINSTANCE.getET_Type();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.ARGUSrelevant
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getARGUSrelevant()
+		 * @generated
+		 */
+		EEnum ARGU_SRELEVANT = eINSTANCE.getARGUSrelevant();
 
 	}
 

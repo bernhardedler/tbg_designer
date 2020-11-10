@@ -39,10 +39,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVerbindungNach <em>Verbindung Nach</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVersorgtVon <em>Versorgt Von</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getReserve3 <em>Reserve3</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getInObjektteil <em>In Objektteil</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getReserve4 <em>Reserve4</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAbgangVT <em>Abgang VT</em>}</li>
  * </ul>
  *
  * @generated
@@ -169,24 +171,24 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	protected spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
+	 * The default value of the '{@link #getInObjektteil() <em>In Objektteil</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve3()
+	 * @see #getInObjektteil()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESERVE3_EDEFAULT = null;
+	protected static final String IN_OBJEKTTEIL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
+	 * The cached value of the '{@link #getInObjektteil() <em>In Objektteil</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve3()
+	 * @see #getInObjektteil()
 	 * @generated
 	 * @ordered
 	 */
-	protected String reserve3 = RESERVE3_EDEFAULT;
+	protected String inObjektteil = IN_OBJEKTTEIL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getReserve4() <em>Reserve4</em>}' attribute.
@@ -247,6 +249,46 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String eadbVersorgungArt = EADB_VERSORGUNG_ART_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVerteilerbezeichnung() <em>Verteilerbezeichnung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVerteilerbezeichnung()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VERTEILERBEZEICHNUNG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getVerteilerbezeichnung() <em>Verteilerbezeichnung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVerteilerbezeichnung()
+	 * @generated
+	 * @ordered
+	 */
+	protected String verteilerbezeichnung = VERTEILERBEZEICHNUNG_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAbgangVT() <em>Abgang VT</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAbgangVT()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ABGANG_VT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAbgangVT() <em>Abgang VT</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAbgangVT()
+	 * @generated
+	 * @ordered
+	 */
+	protected String abgangVT = ABGANG_VT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -419,8 +461,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public String getReserve3() {
-		return reserve3;
+	public String getInObjektteil() {
+		return inObjektteil;
 	}
 
 	/**
@@ -429,12 +471,12 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setReserve3(String newReserve3) {
-		String oldReserve3 = reserve3;
-		reserve3 = newReserve3;
+	public void setInObjektteil(String newInObjektteil) {
+		String oldInObjektteil = inObjektteil;
+		inObjektteil = newInObjektteil;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__RESERVE3, oldReserve3,
-					reserve3));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__IN_OBJEKTTEIL, oldInObjektteil,
+					inObjektteil));
 	}
 
 	/**
@@ -515,6 +557,54 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public String getVerteilerbezeichnung() {
+		return verteilerbezeichnung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setVerteilerbezeichnung(String newVerteilerbezeichnung) {
+		String oldVerteilerbezeichnung = verteilerbezeichnung;
+		verteilerbezeichnung = newVerteilerbezeichnung;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG,
+					oldVerteilerbezeichnung, verteilerbezeichnung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAbgangVT() {
+		return abgangVT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAbgangVT(String newAbgangVT) {
+		String oldAbgangVT = abgangVT;
+		abgangVT = newAbgangVT;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__ABGANG_VT, oldAbgangVT,
+					abgangVT));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
@@ -545,14 +635,18 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return getVersorgtVon();
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			return getPrimaerspannung();
-		case ModelPackage.ANLAGE__RESERVE3:
-			return getReserve3();
+		case ModelPackage.ANLAGE__IN_OBJEKTTEIL:
+			return getInObjektteil();
 		case ModelPackage.ANLAGE__RESERVE4:
 			return getReserve4();
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 			return getAnlagenIdImmoAssi();
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
 			return getEadbVersorgungArt();
+		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
+			return getVerteilerbezeichnung();
+		case ModelPackage.ANLAGE__ABGANG_VT:
+			return getAbgangVT();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -589,8 +683,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			setPrimaerspannung((spannungsarttype) newValue);
 			return;
-		case ModelPackage.ANLAGE__RESERVE3:
-			setReserve3((String) newValue);
+		case ModelPackage.ANLAGE__IN_OBJEKTTEIL:
+			setInObjektteil((String) newValue);
 			return;
 		case ModelPackage.ANLAGE__RESERVE4:
 			setReserve4((String) newValue);
@@ -600,6 +694,12 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
 			setEadbVersorgungArt((String) newValue);
+			return;
+		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
+			setVerteilerbezeichnung((String) newValue);
+			return;
+		case ModelPackage.ANLAGE__ABGANG_VT:
+			setAbgangVT((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -634,8 +734,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			setPrimaerspannung(PRIMAERSPANNUNG_EDEFAULT);
 			return;
-		case ModelPackage.ANLAGE__RESERVE3:
-			setReserve3(RESERVE3_EDEFAULT);
+		case ModelPackage.ANLAGE__IN_OBJEKTTEIL:
+			setInObjektteil(IN_OBJEKTTEIL_EDEFAULT);
 			return;
 		case ModelPackage.ANLAGE__RESERVE4:
 			setReserve4(RESERVE4_EDEFAULT);
@@ -645,6 +745,12 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
 			setEadbVersorgungArt(EADB_VERSORGUNG_ART_EDEFAULT);
+			return;
+		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
+			setVerteilerbezeichnung(VERTEILERBEZEICHNUNG_EDEFAULT);
+			return;
+		case ModelPackage.ANLAGE__ABGANG_VT:
+			setAbgangVT(ABGANG_VT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -673,8 +779,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return versorgtVon != null && !versorgtVon.isEmpty();
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
 			return primaerspannung != PRIMAERSPANNUNG_EDEFAULT;
-		case ModelPackage.ANLAGE__RESERVE3:
-			return RESERVE3_EDEFAULT == null ? reserve3 != null : !RESERVE3_EDEFAULT.equals(reserve3);
+		case ModelPackage.ANLAGE__IN_OBJEKTTEIL:
+			return IN_OBJEKTTEIL_EDEFAULT == null ? inObjektteil != null : !IN_OBJEKTTEIL_EDEFAULT.equals(inObjektteil);
 		case ModelPackage.ANLAGE__RESERVE4:
 			return RESERVE4_EDEFAULT == null ? reserve4 != null : !RESERVE4_EDEFAULT.equals(reserve4);
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
@@ -683,6 +789,11 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
 			return EADB_VERSORGUNG_ART_EDEFAULT == null ? eadbVersorgungArt != null
 					: !EADB_VERSORGUNG_ART_EDEFAULT.equals(eadbVersorgungArt);
+		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
+			return VERTEILERBEZEICHNUNG_EDEFAULT == null ? verteilerbezeichnung != null
+					: !VERTEILERBEZEICHNUNG_EDEFAULT.equals(verteilerbezeichnung);
+		case ModelPackage.ANLAGE__ABGANG_VT:
+			return ABGANG_VT_EDEFAULT == null ? abgangVT != null : !ABGANG_VT_EDEFAULT.equals(abgangVT);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -708,14 +819,18 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		result.append(eadbId);
 		result.append(", primaerspannung: ");
 		result.append(primaerspannung);
-		result.append(", reserve3: ");
-		result.append(reserve3);
+		result.append(", inObjektteil: ");
+		result.append(inObjektteil);
 		result.append(", reserve4: ");
 		result.append(reserve4);
 		result.append(", anlagenIdImmoAssi: ");
 		result.append(anlagenIdImmoAssi);
 		result.append(", eadbVersorgungArt: ");
 		result.append(eadbVersorgungArt);
+		result.append(", verteilerbezeichnung: ");
+		result.append(verteilerbezeichnung);
+		result.append(", abgangVT: ");
+		result.append(abgangVT);
 		result.append(')');
 		return result.toString();
 	}

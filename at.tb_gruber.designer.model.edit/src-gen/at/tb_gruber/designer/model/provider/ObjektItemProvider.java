@@ -60,8 +60,8 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 			addObjektartPropertyDescriptor(object);
 			addOrt_AdressePropertyDescriptor(object);
 			addObjektIdPropertyDescriptor(object);
-			addReserve1PropertyDescriptor(object);
-			addReserve2PropertyDescriptor(object);
+			addGebaeudeArtPropertyDescriptor(object);
+			addDb776uaPropertyDescriptor(object);
 			addGpsstandortPropertyDescriptor(object);
 			addExterneQuellePropertyDescriptor(object);
 		}
@@ -132,34 +132,34 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Reserve1 feature.
+	 * This adds a property descriptor for the Gebaeude Art feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReserve1PropertyDescriptor(Object object) {
+	protected void addGebaeudeArtPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Objekt_reserve1_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_reserve1_feature",
+						getResourceLocator(), getString("_UI_Objekt_gebaeudeArt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_gebaeudeArt_feature",
 								"_UI_Objekt_type"),
-						ModelPackage.Literals.OBJEKT__RESERVE1, true, false, false,
+						ModelPackage.Literals.OBJEKT__GEBAEUDE_ART, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Reserve2 feature.
+	 * This adds a property descriptor for the Db776ua feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReserve2PropertyDescriptor(Object object) {
+	protected void addDb776uaPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Objekt_reserve2_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_reserve2_feature",
+						getResourceLocator(), getString("_UI_Objekt_db776ua_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_db776ua_feature",
 								"_UI_Objekt_type"),
-						ModelPackage.Literals.OBJEKT__RESERVE2, true, false, false,
+						ModelPackage.Literals.OBJEKT__DB776UA, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -275,8 +275,8 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		case ModelPackage.OBJEKT__OBJEKTART:
 		case ModelPackage.OBJEKT__ORT_ADRESSE:
 		case ModelPackage.OBJEKT__OBJEKT_ID:
-		case ModelPackage.OBJEKT__RESERVE1:
-		case ModelPackage.OBJEKT__RESERVE2:
+		case ModelPackage.OBJEKT__GEBAEUDE_ART:
+		case ModelPackage.OBJEKT__DB776UA:
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

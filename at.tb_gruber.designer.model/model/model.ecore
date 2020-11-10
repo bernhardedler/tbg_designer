@@ -17,8 +17,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="anlage" upperBound="-1"
         eType="#//Anlage" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gebaeudeArt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="db776ua" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gpsstandort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="externeQuelle" eType="#//externe_datenquelle"/>
   </eClassifiers>
@@ -42,10 +42,12 @@
         eType="#//Verbindung"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//spannungsarttype"
         defaultValueLiteral="NSP 50Hz (grün)"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inObjektteil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenIdImmoAssi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verteilerbezeichnung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abgangVT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="anlagearttype">
     <eLiterals name="UEGSZaehlpunkt" literal="ÜGS/Zählpunkt"/>
@@ -75,6 +77,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quellSicherung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zielSicherung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kabeltype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argusrelevant" eType="#//ARGUSrelevant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plankopf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="textbaustein" upperBound="-1"
@@ -94,11 +97,22 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrReserveEinspeisung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Versorgungsknoten" eSuperTypes="#//Anlage"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Energietechnikanlage" eSuperTypes="#//Anlage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Energietechnikanlage" eSuperTypes="#//Anlage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etType" eType="#//ET_Type"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VersorgungsknotenMitET" eSuperTypes="#//Anlage"/>
   <eClassifiers xsi:type="ecore:EEnum" name="externe_datenquelle">
     <eLiterals name="immo" literal="immo"/>
     <eLiterals name="vs" value="1"/>
     <eLiterals name="gebaeude" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ET_Type">
+    <eLiterals name="IG"/>
+    <eLiterals name="IF" value="1"/>
+    <eLiterals name="FV" value="2" literal="FV"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ARGUSrelevant">
+    <eLiterals name="Y" value="1"/>
+    <eLiterals name="N" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

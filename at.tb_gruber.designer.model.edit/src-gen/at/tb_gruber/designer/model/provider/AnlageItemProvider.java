@@ -60,10 +60,12 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			addEadbIdPropertyDescriptor(object);
 			addVersorgtVonPropertyDescriptor(object);
 			addPrimaerspannungPropertyDescriptor(object);
-			addReserve3PropertyDescriptor(object);
+			addInObjektteilPropertyDescriptor(object);
 			addReserve4PropertyDescriptor(object);
 			addAnlagenIdImmoAssiPropertyDescriptor(object);
 			addEadbVersorgungArtPropertyDescriptor(object);
+			addVerteilerbezeichnungPropertyDescriptor(object);
+			addAbgangVTPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -162,18 +164,18 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Reserve3 feature.
+	 * This adds a property descriptor for the In Objektteil feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReserve3PropertyDescriptor(Object object) {
+	protected void addInObjektteilPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_reserve3_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_reserve3_feature",
+						getResourceLocator(), getString("_UI_Anlage_inObjektteil_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_inObjektteil_feature",
 								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__RESERVE3, true, false, false,
+						ModelPackage.Literals.ANLAGE__IN_OBJEKTTEIL, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -222,6 +224,38 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_eadbVersorgungArt_feature",
 								"_UI_Anlage_type"),
 						ModelPackage.Literals.ANLAGE__EADB_VERSORGUNG_ART, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Verteilerbezeichnung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVerteilerbezeichnungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_verteilerbezeichnung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_verteilerbezeichnung_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__VERTEILERBEZEICHNUNG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Abgang VT feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAbgangVTPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_abgangVT_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_abgangVT_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__ABGANG_VT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -306,10 +340,12 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 		case ModelPackage.ANLAGE__OBJEKTTEIL:
 		case ModelPackage.ANLAGE__EADB_ID:
 		case ModelPackage.ANLAGE__PRIMAERSPANNUNG:
-		case ModelPackage.ANLAGE__RESERVE3:
+		case ModelPackage.ANLAGE__IN_OBJEKTTEIL:
 		case ModelPackage.ANLAGE__RESERVE4:
 		case ModelPackage.ANLAGE__ANLAGEN_ID_IMMO_ASSI:
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
+		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
+		case ModelPackage.ANLAGE__ABGANG_VT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:

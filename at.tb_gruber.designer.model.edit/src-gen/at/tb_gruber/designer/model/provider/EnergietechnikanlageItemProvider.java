@@ -4,13 +4,17 @@ package at.tb_gruber.designer.model.provider;
 
 import at.tb_gruber.designer.model.Energietechnikanlage;
 
+import at.tb_gruber.designer.model.ModelPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Energietechnikanlage} object.
@@ -40,8 +44,25 @@ public class EnergietechnikanlageItemProvider extends AnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addEtTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Et Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEtTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Energietechnikanlage_etType_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Energietechnikanlage_etType_feature",
+								"_UI_Energietechnikanlage_type"),
+						ModelPackage.Literals.ENERGIETECHNIKANLAGE__ET_TYPE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +109,12 @@ public class EnergietechnikanlageItemProvider extends AnlageItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Energietechnikanlage.class)) {
+		case ModelPackage.ENERGIETECHNIKANLAGE__ET_TYPE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

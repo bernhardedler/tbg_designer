@@ -833,32 +833,32 @@
       <ownedColumnMappings name="objAdresse" headerLabelExpression="Ort/Adresse" featureName="ursprung" labelExpression="service:getZielAdresse()"/>
       <ownedColumnMappings name="objId" headerLabelExpression="Objekt-ID" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().objektId"/>
       <ownedColumnMappings name="objGebaeudeart" headerLabelExpression="Gebäudeart" featureName="ursprung" labelExpression="service:getZielGebaeudeart()"/>
-      <ownedColumnMappings name="objDB776UA" headerLabelExpression="DB776 UA" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().reserve2"/>
+      <ownedColumnMappings name="objDB776UA" headerLabelExpression="DB776 UA" featureName="ursprung" labelExpression="aql:self.ziel.eContainer().db776ua"/>
       <ownedColumnMappings name="anlAnlagenname" headerLabelExpression="Anlagenname" featureName="ursprung" labelExpression="aql:self.ziel.name"/>
       <ownedColumnMappings name="anlAnlagenart" headerLabelExpression="Anlagennart" featureName="ursprung" labelExpression="aql:self.ziel.getAnlageart()"/>
       <ownedColumnMappings name="anlAnlagennummer" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:self.ziel.anlagennummer"/>
       <ownedColumnMappings name="vbdPrimaryKey" headerLabelExpression="Anlagennummer" featureName="ursprung" labelExpression="aql:(self.ziel.eContainer().eContainer().name + '_' + self.nr)"/>
       <ownedColumnMappings name="anlEadbId" headerLabelExpression="EADB_ID" featureName="ursprung" labelExpression="aql:self.ziel.eadbId"/>
-      <ownedColumnMappings name="anlInObjektTeil" headerLabelExpression="in Objektteil" featureName="ursprung" labelExpression="aql:self.ziel.reserve3"/>
+      <ownedColumnMappings name="anlInObjektTeil" headerLabelExpression="in Objektteil" featureName="ursprung" labelExpression="aql:self.ziel.inObjektteil"/>
       <ownedColumnMappings name="anlEadbVersorgungArt" headerLabelExpression="EADB Versorgung Art" featureName="ursprung" labelExpression="aql:self.ziel.eadbVersorgungArt"/>
       <ownedColumnMappings name="anlPrimaerspannung" headerLabelExpression="Primaerspannung" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
       <ownedColumnMappings name="anlReserve4" headerLabelExpression="Reserve 4" featureName="ursprung" labelExpression="aql:self.ziel.reserve4"/>
       <ownedColumnMappings name="anlSekundaerspannung" headerLabelExpression="Sekundaerspannung" featureName="ursprung" labelExpression="aql:self.ziel.getsekundaerspannung()"/>
       <ownedColumnMappings name="anlTrafoKva" headerLabelExpression="Trafo-kVA" featureName="ursprung" labelExpression="aql:self.ziel.getTrafoKVA()"/>
       <ownedColumnMappings name="anlReserve5" headerLabelExpression="Reserve 5" featureName="ursprung" labelExpression="aql:self.ziel.getReserve5()"/>
-      <ownedColumnMappings name="anlReserveZPNrHauptversorgung" headerLabelExpression="Zählpunktnummer Hauptversorgung" featureName="ursprung" labelExpression="aql:self.ziel.getzpNrHaupt()"/>
+      <ownedColumnMappings name="anlReserveZPNrHauptversorgung" headerLabelExpression="Zählpunktnummer Hauptversorgung" featureName="ursprung" labelExpression="aql:self.ziel.getZpNrHaupt()"/>
       <ownedColumnMappings name="anlReserveZPNrReserveEinspeisung" headerLabelExpression="Zählpunktnummer Reserve Einspeisung" featureName="ursprung" labelExpression="aql:self.ziel.getZpNrReserveEinsp()"/>
       <ownedColumnMappings name="vbdVersorgtVonAnl" headerLabelExpression="versorgt von Anlagenname" featureName="ursprung" labelExpression="aql:self.ursprung.name"/>
       <ownedColumnMappings name="vbdVersorgtVonNr" headerLabelExpression="versorgt von Anlagennummer" featureName="ursprung" labelExpression="aql:self.ursprung.anlagennummer"/>
       <ownedColumnMappings name="vbdVersorgtVonPK" headerLabelExpression="vesorgt von PrimaryKey" featureName="ursprung" labelExpression="service:getUrsprungVersorgtVonPK()"/>
       <ownedColumnMappings name="vbdVersorgtVonEadbId" headerLabelExpression="vesorgt von EADB_ID" featureName="ursprung" labelExpression="aql:self.ursprung.eadbId"/>
-      <ownedColumnMappings name="vbdAbgangEadbId" headerLabelExpression="Abgang VT EADB_ID_VERS" featureName="ursprung" labelExpression="aql:self.ziel.eadbId"/>
+      <ownedColumnMappings name="vbdAbgangVT" headerLabelExpression="Abgang VT" featureName="ursprung" labelExpression="aql:self.ziel.abgangVT"/>
       <ownedColumnMappings name="vbdSpannung" headerLabelExpression="Kabelversorgungsspannung" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
       <ownedColumnMappings name="vbdKabeltype" headerLabelExpression="Kabeltype" featureName="ursprung" labelExpression="aql:self.kabeltype"/>
       <ownedColumnMappings name="vbdQuellSicherung" headerLabelExpression="Sicherung Quelle" featureName="ursprung" labelExpression="aql:self.quellSicherung"/>
       <ownedColumnMappings name="vbdZielSicherung" headerLabelExpression="Sicherung Ziel" featureName="ursprung" labelExpression="aql:self.zielSicherung"/>
-      <ownedColumnMappings name="vbdReserve9" headerLabelExpression="Reserve 9" featureName="ursprung" labelExpression="aql:self.reserve9"/>
-      <ownedColumnMappings name="vbdReserve10" headerLabelExpression="Reserve 10" featureName="ursprung" labelExpression="aql:self.reserve10"/>
+      <ownedColumnMappings name="anlVerBez" headerLabelExpression="VER_BEZ" featureName="ursprung" labelExpression="aql:self.ziel.verteilerbezeichnung"/>
+      <ownedColumnMappings name="vbdArgus" headerLabelExpression="ARGUS relevant" featureName="ursprung" labelExpression="aql:self.argusrelevant"/>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="at.tb_gruber.designer.design.Services"/>
   </ownedViewpoints>

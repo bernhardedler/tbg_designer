@@ -22,10 +22,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVerbindungNach <em>Verbindung Nach</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVersorgtVon <em>Versorgt Von</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getPrimaerspannung <em>Primaerspannung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Anlage#getReserve3 <em>Reserve3</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getInObjektteil <em>In Objektteil</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getReserve4 <em>Reserve4</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getAbgangVT <em>Abgang VT</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getAnlage()
@@ -172,26 +174,26 @@ public interface Anlage extends EObject {
 	void setPrimaerspannung(spannungsarttype value);
 
 	/**
-	 * Returns the value of the '<em><b>Reserve3</b></em>' attribute.
+	 * Returns the value of the '<em><b>In Objektteil</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve3</em>' attribute.
-	 * @see #setReserve3(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Reserve3()
+	 * @return the value of the '<em>In Objektteil</em>' attribute.
+	 * @see #setInObjektteil(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_InObjektteil()
 	 * @model
 	 * @generated
 	 */
-	String getReserve3();
+	String getInObjektteil();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getReserve3 <em>Reserve3</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getInObjektteil <em>In Objektteil</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve3</em>' attribute.
-	 * @see #getReserve3()
+	 * @param value the new value of the '<em>In Objektteil</em>' attribute.
+	 * @see #getInObjektteil()
 	 * @generated
 	 */
-	void setReserve3(String value);
+	void setInObjektteil(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Reserve4</b></em>' attribute.
@@ -258,5 +260,49 @@ public interface Anlage extends EObject {
 	 * @generated
 	 */
 	void setEadbVersorgungArt(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Verteilerbezeichnung</em>' attribute.
+	 * @see #setVerteilerbezeichnung(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Verteilerbezeichnung()
+	 * @model
+	 * @generated
+	 */
+	String getVerteilerbezeichnung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Verteilerbezeichnung</em>' attribute.
+	 * @see #getVerteilerbezeichnung()
+	 * @generated
+	 */
+	void setVerteilerbezeichnung(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Abgang VT</em>' attribute.
+	 * @see #setAbgangVT(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_AbgangVT()
+	 * @model
+	 * @generated
+	 */
+	String getAbgangVT();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getAbgangVT <em>Abgang VT</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Abgang VT</em>' attribute.
+	 * @see #getAbgangVT()
+	 * @generated
+	 */
+	void setAbgangVT(String value);
 
 } // Anlage

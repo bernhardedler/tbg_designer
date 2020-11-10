@@ -2,6 +2,7 @@
  */
 package at.tb_gruber.designer.model.impl;
 
+import at.tb_gruber.designer.model.ARGUSrelevant;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getQuellSicherung <em>Quell Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZielSicherung <em>Ziel Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltype <em>Kabeltype</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getArgusrelevant <em>Argusrelevant</em>}</li>
  * </ul>
  *
  * @generated
@@ -196,6 +198,26 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @ordered
 	 */
 	protected String kabeltype = KABELTYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getArgusrelevant() <em>Argusrelevant</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArgusrelevant()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ARGUSrelevant ARGUSRELEVANT_EDEFAULT = ARGUSrelevant.Y;
+
+	/**
+	 * The cached value of the '{@link #getArgusrelevant() <em>Argusrelevant</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArgusrelevant()
+	 * @generated
+	 * @ordered
+	 */
+	protected ARGUSrelevant argusrelevant = ARGUSRELEVANT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -472,6 +494,30 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
+	public ARGUSrelevant getArgusrelevant() {
+		return argusrelevant;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setArgusrelevant(ARGUSrelevant newArgusrelevant) {
+		ARGUSrelevant oldArgusrelevant = argusrelevant;
+		argusrelevant = newArgusrelevant == null ? ARGUSRELEVANT_EDEFAULT : newArgusrelevant;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__ARGUSRELEVANT,
+					oldArgusrelevant, argusrelevant));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.VERBINDUNG__NR:
@@ -496,6 +542,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return getZielSicherung();
 		case ModelPackage.VERBINDUNG__KABELTYPE:
 			return getKabeltype();
+		case ModelPackage.VERBINDUNG__ARGUSRELEVANT:
+			return getArgusrelevant();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -534,6 +582,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return;
 		case ModelPackage.VERBINDUNG__KABELTYPE:
 			setKabeltype((String) newValue);
+			return;
+		case ModelPackage.VERBINDUNG__ARGUSRELEVANT:
+			setArgusrelevant((ARGUSrelevant) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -574,6 +625,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__KABELTYPE:
 			setKabeltype(KABELTYPE_EDEFAULT);
 			return;
+		case ModelPackage.VERBINDUNG__ARGUSRELEVANT:
+			setArgusrelevant(ARGUSRELEVANT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -606,6 +660,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 					: !ZIEL_SICHERUNG_EDEFAULT.equals(zielSicherung);
 		case ModelPackage.VERBINDUNG__KABELTYPE:
 			return KABELTYPE_EDEFAULT == null ? kabeltype != null : !KABELTYPE_EDEFAULT.equals(kabeltype);
+		case ModelPackage.VERBINDUNG__ARGUSRELEVANT:
+			return argusrelevant != ARGUSRELEVANT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -635,6 +691,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		result.append(zielSicherung);
 		result.append(", kabeltype: ");
 		result.append(kabeltype);
+		result.append(", argusrelevant: ");
+		result.append(argusrelevant);
 		result.append(')');
 		return result.toString();
 	}
