@@ -83,8 +83,8 @@ Wird in `at.tb_gruber.designer.design.Services` instanziert und verwendet.
 |22|Sekundärspannung|manuell, enum|trafo.sekundaerspannung|
 |23|Trafo-kVA|manuell|trafo.trafoKva|
 |24|Reserve3|manuell|trafo.reserve5|
-|**25**|Zählpunktnummer Hauptversorgung|???|???|
-|**26**|Zählpunktnummer Reserve Einspeisung|???|???|
+|**25**|Zählpunktnummer Hauptversorgung|manuell|???|
+|**26**|Zählpunktnummer Reserve Einspeisung|manuell|???|
 |27|versorgt von Anlagenname|ermittelt|quelle.anlagenname|
 |28|versorgt von Anlagennummer|ermittelt|quelle.anlagennummer|
 |29|versorgt von Primary Key - Versorgungsschema|ermittelt|(bahnhof.name + '_' + quelle.anlagennummer)

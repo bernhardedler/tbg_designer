@@ -167,7 +167,6 @@ public class Services {
 	}
 
 	
-	// TODO: evaluate if necessary
 	public String getZpNrHaupt(EObject self) {
 		if (self instanceof Zaehlpunkt) {
 			return ((Zaehlpunkt) self).getNrHauptversorgung();
@@ -176,7 +175,6 @@ public class Services {
 		}
 	}
 
-	// TODO: evaluate if necessary
 	public String getZpNrReserveEinsp(EObject self) {
 		if (self instanceof Zaehlpunkt) {
 			return ((Zaehlpunkt) self).getNrReserveEinspeisung();

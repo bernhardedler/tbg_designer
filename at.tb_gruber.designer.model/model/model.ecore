@@ -45,7 +45,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inObjektteil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenIdImmoAssi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="#//eadb_versorgung_art"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verteilerbezeichnung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abgangVT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -115,5 +115,13 @@
   <eClassifiers xsi:type="ecore:EEnum" name="ARGUSrelevant">
     <eLiterals name="Y" value="1"/>
     <eLiterals name="N" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="eadb_versorgung_art">
+    <eLiterals name="ÜGS"/>
+    <eLiterals name="VK" value="1"/>
+    <eLiterals name="IF" value="2" literal="IF"/>
+    <eLiterals name="IG" value="3"/>
+    <eLiterals name="WHZ" value="4"/>
+    <eLiterals name="FV" value="5"/>
   </eClassifiers>
 </ecore:EPackage>

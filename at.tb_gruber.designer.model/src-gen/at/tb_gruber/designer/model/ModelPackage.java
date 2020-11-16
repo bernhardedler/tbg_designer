@@ -1416,6 +1416,16 @@ public interface ModelPackage extends EPackage {
 	int ARGU_SRELEVANT = 16;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.eadb_versorgung_art
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#geteadb_versorgung_art()
+	 * @generated
+	 */
+	int EADB_VERSORGUNG_ART = 17;
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2081,6 +2091,16 @@ public interface ModelPackage extends EPackage {
 	EEnum getARGUSrelevant();
 
 	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>eadb versorgung art</em>'.
+	 * @see at.tb_gruber.designer.model.eadb_versorgung_art
+	 * @generated
+	 */
+	EEnum geteadb_versorgung_art();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2632,6 +2652,16 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ARGU_SRELEVANT = eINSTANCE.getARGUSrelevant();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.eadb_versorgung_art
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#geteadb_versorgung_art()
+		 * @generated
+		 */
+		EEnum EADB_VERSORGUNG_ART = eINSTANCE.geteadb_versorgung_art();
 
 	}
 

@@ -18,6 +18,7 @@ import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VersorgungsknotenMitET;
 import at.tb_gruber.designer.model.Zaehlpunkt;
 import at.tb_gruber.designer.model.anlagearttype;
+import at.tb_gruber.designer.model.eadb_versorgung_art;
 import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
 import at.tb_gruber.designer.model.spannungsarttype;
@@ -155,6 +156,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EEnum arguSrelevantEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eadb_versorgung_artEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -846,6 +854,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum geteadb_versorgung_art() {
+		return eadb_versorgung_artEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ModelFactory getModelFactory() {
 		return (ModelFactory) getEFactoryInstance();
 	}
@@ -944,6 +962,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		externe_datenquelleEEnum = createEEnum(EXTERNE_DATENQUELLE);
 		eT_TypeEEnum = createEEnum(ET_TYPE);
 		arguSrelevantEEnum = createEEnum(ARGU_SRELEVANT);
+		eadb_versorgung_artEEnum = createEEnum(EADB_VERSORGUNG_ART);
 	}
 
 	/**
@@ -1044,7 +1063,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getAnlage_AnlagenIdImmoAssi(), ecorePackage.getEString(), "anlagenIdImmoAssi", null, 0, 1,
 				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnlage_EadbVersorgungArt(), ecorePackage.getEString(), "eadbVersorgungArt", null, 0, 1,
+		initEAttribute(getAnlage_EadbVersorgungArt(), this.geteadb_versorgung_art(), "eadbVersorgungArt", null, 0, 1,
 				Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_Verteilerbezeichnung(), ecorePackage.getEString(), "verteilerbezeichnung", null, 0, 1,
@@ -1163,6 +1182,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEEnum(arguSrelevantEEnum, ARGUSrelevant.class, "ARGUSrelevant");
 		addEEnumLiteral(arguSrelevantEEnum, ARGUSrelevant.Y);
 		addEEnumLiteral(arguSrelevantEEnum, ARGUSrelevant.N);
+
+		initEEnum(eadb_versorgung_artEEnum, eadb_versorgung_art.class, "eadb_versorgung_art");
+		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.ÜGS);
+		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.VK);
+		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.IF);
+		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.IG);
+		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.WHZ);
+		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.FV);
 
 		// Create resource
 		createResource(eNS_URI);

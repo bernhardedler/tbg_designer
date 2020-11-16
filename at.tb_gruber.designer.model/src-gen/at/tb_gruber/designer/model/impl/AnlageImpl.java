@@ -5,6 +5,7 @@ package at.tb_gruber.designer.model.impl;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
+import at.tb_gruber.designer.model.eadb_versorgung_art;
 import at.tb_gruber.designer.model.spannungsarttype;
 
 import java.util.Collection;
@@ -238,7 +239,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EADB_VERSORGUNG_ART_EDEFAULT = null;
+	protected static final eadb_versorgung_art EADB_VERSORGUNG_ART_EDEFAULT = eadb_versorgung_art.ÜGS;
 
 	/**
 	 * The cached value of the '{@link #getEadbVersorgungArt() <em>Eadb Versorgung Art</em>}' attribute.
@@ -248,7 +249,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected String eadbVersorgungArt = EADB_VERSORGUNG_ART_EDEFAULT;
+	protected eadb_versorgung_art eadbVersorgungArt = EADB_VERSORGUNG_ART_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVerteilerbezeichnung() <em>Verteilerbezeichnung</em>}' attribute.
@@ -533,7 +534,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public String getEadbVersorgungArt() {
+	public eadb_versorgung_art getEadbVersorgungArt() {
 		return eadbVersorgungArt;
 	}
 
@@ -543,9 +544,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setEadbVersorgungArt(String newEadbVersorgungArt) {
-		String oldEadbVersorgungArt = eadbVersorgungArt;
-		eadbVersorgungArt = newEadbVersorgungArt;
+	public void setEadbVersorgungArt(eadb_versorgung_art newEadbVersorgungArt) {
+		eadb_versorgung_art oldEadbVersorgungArt = eadbVersorgungArt;
+		eadbVersorgungArt = newEadbVersorgungArt == null ? EADB_VERSORGUNG_ART_EDEFAULT : newEadbVersorgungArt;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__EADB_VERSORGUNG_ART,
 					oldEadbVersorgungArt, eadbVersorgungArt));
@@ -693,7 +694,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			setAnlagenIdImmoAssi((String) newValue);
 			return;
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
-			setEadbVersorgungArt((String) newValue);
+			setEadbVersorgungArt((eadb_versorgung_art) newValue);
 			return;
 		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
 			setVerteilerbezeichnung((String) newValue);
@@ -787,8 +788,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return ANLAGEN_ID_IMMO_ASSI_EDEFAULT == null ? anlagenIdImmoAssi != null
 					: !ANLAGEN_ID_IMMO_ASSI_EDEFAULT.equals(anlagenIdImmoAssi);
 		case ModelPackage.ANLAGE__EADB_VERSORGUNG_ART:
-			return EADB_VERSORGUNG_ART_EDEFAULT == null ? eadbVersorgungArt != null
-					: !EADB_VERSORGUNG_ART_EDEFAULT.equals(eadbVersorgungArt);
+			return eadbVersorgungArt != EADB_VERSORGUNG_ART_EDEFAULT;
 		case ModelPackage.ANLAGE__VERTEILERBEZEICHNUNG:
 			return VERTEILERBEZEICHNUNG_EDEFAULT == null ? verteilerbezeichnung != null
 					: !VERTEILERBEZEICHNUNG_EDEFAULT.equals(verteilerbezeichnung);

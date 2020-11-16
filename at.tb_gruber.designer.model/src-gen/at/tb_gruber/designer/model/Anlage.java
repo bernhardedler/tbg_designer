@@ -241,25 +241,28 @@ public interface Anlage extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.eadb_versorgung_art}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Eadb Versorgung Art</em>' attribute.
-	 * @see #setEadbVersorgungArt(String)
+	 * @see at.tb_gruber.designer.model.eadb_versorgung_art
+	 * @see #setEadbVersorgungArt(eadb_versorgung_art)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_EadbVersorgungArt()
 	 * @model
 	 * @generated
 	 */
-	String getEadbVersorgungArt();
+	eadb_versorgung_art getEadbVersorgungArt();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Eadb Versorgung Art</em>' attribute.
+	 * @see at.tb_gruber.designer.model.eadb_versorgung_art
 	 * @see #getEadbVersorgungArt()
 	 * @generated
 	 */
-	void setEadbVersorgungArt(String value);
+	void setEadbVersorgungArt(eadb_versorgung_art value);
 
 	/**
 	 * Returns the value of the '<em><b>Verteilerbezeichnung</b></em>' attribute.

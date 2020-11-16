@@ -50,6 +50,14 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ARGUSrelevant/Y"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ARGUSrelevant/N"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//eadb_versorgung_art">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/ÜGS"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/VK"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/IF"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/IG"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/WHZ"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/FV"/>
+    </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>

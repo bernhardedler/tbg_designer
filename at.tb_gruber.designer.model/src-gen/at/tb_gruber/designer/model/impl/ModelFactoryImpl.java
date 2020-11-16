@@ -101,6 +101,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createET_TypeFromString(eDataType, initialValue);
 		case ModelPackage.ARGU_SRELEVANT:
 			return createARGUSrelevantFromString(eDataType, initialValue);
+		case ModelPackage.EADB_VERSORGUNG_ART:
+			return createeadb_versorgung_artFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -126,6 +128,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return convertET_TypeToString(eDataType, instanceValue);
 		case ModelPackage.ARGU_SRELEVANT:
 			return convertARGUSrelevantToString(eDataType, instanceValue);
+		case ModelPackage.EADB_VERSORGUNG_ART:
+			return converteadb_versorgung_artToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -370,6 +374,28 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertARGUSrelevantToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public eadb_versorgung_art createeadb_versorgung_artFromString(EDataType eDataType, String initialValue) {
+		eadb_versorgung_art result = eadb_versorgung_art.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String converteadb_versorgung_artToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
