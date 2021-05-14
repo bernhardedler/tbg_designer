@@ -1,0 +1,17 @@
+<svg width="82" height="62" xmlns="http://www.w3.org/2000/svg">
+  <g>
+  <title>background</title>
+  <rect x="0" y="0" width="82" height="62" id="canvas_background" fill="#fff"/>
+    <g id="canvasGrid" display="none">
+    <rect id="svg_2" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+    </g>
+  </g>
+  <g>
+    <title>Rahmen</title>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="80" height="60" id="r1" stroke="#ff0090"/>
+  </g>
+  <g>
+    <title>Text</title>
+    <text x="6" y="46" fill="#ff0090" font-size="35px" font-family="sans-serif">ESP</text>
+  </g>
+</svg>

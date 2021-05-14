@@ -1,0 +1,14 @@
+<svg width="102" height="102" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <ellipse fill="#fff" cx="51" cy="51" rx="50" ry="50" id="b1" />
+  </g>
+  <g>
+    <title>Rahmen</title>
+    <ellipse fill="none" stroke-width="2" stroke="#0070c0" cx="51" cy="51" rx="50" ry="50" id="r1" />
+  </g>
+  <g>
+    <title>Text</title>
+    <text x="22" y="77" fill="#0070c0" font-size="70px" font-family="sans-serif">G</text>
+  </g>
+</svg>

@@ -19,21 +19,14 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Verkehrsstation"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Sonstiges"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//anlagearttype">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/UEGSZaehlpunkt"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/Trafo"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/Versorgungsknoten"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/Energietechnikanlage"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//anlagearttype/VK_ET"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//spannungsarttype">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_violett"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/_20kV50Hz"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/_10kV50Hz"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP50Hz"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/_15kV16_7Hz"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP16_7Hz"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_hellbraun"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP%20rot"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP%20grün"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP%20magenta"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP%20cyan"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/blau"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve%201"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve%202"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//externe_datenquelle">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/undefined"/>
@@ -58,6 +51,17 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/WHZ"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//eadb_versorgung_art/FV"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//NapPosition">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//NapPosition/DAVOR"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//NapPosition/MITTE"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//NapPosition/DANACH"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//LinienType">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Hauptversorgung"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/EVU"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage%20ÖBB"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage%20Dritter%23"/>
+    </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>
@@ -75,6 +79,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/db776ua"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/gpsstandort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/externeQuelle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Objekt/verteilercontainer"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Anlage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/name"/>
@@ -90,6 +95,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/eadbVersorgungArt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/verteilerbezeichnung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/abgangVT"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/betreiber"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
@@ -102,26 +108,48 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/zielSicherung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/kabeltype"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/argusrelevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/linientype"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Plankopf">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Plankopf/textbaustein"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Textbaustein">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Trafo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/sekundaerspannung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/trafoKva"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/reserve5"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Zaehlpunkt">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Zaehlpunkt/nrHauptversorgung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Zaehlpunkt/nrReserveEinspeisung"/>
+    <genClasses ecoreClass="model.ecore#//Netzanschlusspunkt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/nrHauptversorgung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/nrReserveEinspeisung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/beschreibung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/postition"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Versorgungsknoten"/>
+    <genClasses ecoreClass="model.ecore#//Versorgungsknoten">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>
+    </genClasses>
     <genClasses ecoreClass="model.ecore#//Energietechnikanlage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Energietechnikanlage/etType"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//VersorgungsknotenMitET"/>
+    <genClasses ecoreClass="model.ecore#//Generator"/>
+    <genClasses ecoreClass="model.ecore#//SelbststAnlage"/>
+    <genClasses ecoreClass="model.ecore#//Umrichter"/>
+    <genClasses ecoreClass="model.ecore#//Verteiler">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verteiler/hasZaehler"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/verteilerdetails"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/netzanschlusspunkt"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Energiespeicher"/>
+    <genClasses ecoreClass="model.ecore#//VerteilerDetails">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/betreiber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/nummer"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//VerteilerContainer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Betreiber"/>
   </genPackages>
 </genmodel:GenModel>

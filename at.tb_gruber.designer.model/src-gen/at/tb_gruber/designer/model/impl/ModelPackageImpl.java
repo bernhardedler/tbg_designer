@@ -17,7 +17,6 @@ import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VersorgungsknotenMitET;
 import at.tb_gruber.designer.model.Zaehlpunkt;
-import at.tb_gruber.designer.model.anlagearttype;
 import at.tb_gruber.designer.model.eadb_versorgung_art;
 import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
@@ -121,13 +120,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EEnum objektarttypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum anlagearttypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -804,16 +796,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EEnum getanlagearttype() {
-		return anlagearttypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getspannungsarttype() {
 		return spannungsarttypeEEnum;
 	}
@@ -957,7 +939,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
-		anlagearttypeEEnum = createEEnum(ANLAGEARTTYPE);
 		spannungsarttypeEEnum = createEEnum(SPANNUNGSARTTYPE);
 		externe_datenquelleEEnum = createEEnum(EXTERNE_DATENQUELLE);
 		eT_TypeEEnum = createEEnum(ET_TYPE);
@@ -1151,13 +1132,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.FREISTEHENDER_VT);
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.VERKEHRSSTATION);
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.SONSTIGES);
-
-		initEEnum(anlagearttypeEEnum, anlagearttype.class, "anlagearttype");
-		addEEnumLiteral(anlagearttypeEEnum, anlagearttype.UEGS_ZAEHLPUNKT);
-		addEEnumLiteral(anlagearttypeEEnum, anlagearttype.TRAFO);
-		addEEnumLiteral(anlagearttypeEEnum, anlagearttype.VERSORGUNGSKNOTEN);
-		addEEnumLiteral(anlagearttypeEEnum, anlagearttype.ENERGIETECHNIKANLAGE);
-		addEEnumLiteral(anlagearttypeEEnum, anlagearttype.VK_ET);
 
 		initEEnum(spannungsarttypeEEnum, spannungsarttype.class, "spannungsarttype");
 		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_VIOLETT);

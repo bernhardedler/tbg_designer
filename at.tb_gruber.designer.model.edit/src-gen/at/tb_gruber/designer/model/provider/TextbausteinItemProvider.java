@@ -70,7 +70,7 @@ public class TextbausteinItemProvider extends ItemProviderAdapter implements IEd
 						getResourceLocator(), getString("_UI_Textbaustein_Label_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Textbaustein_Label_feature",
 								"_UI_Textbaustein_type"),
-						ModelPackage.Literals.TEXTBAUSTEIN__LABEL, true, false, false,
+						ModelPackage.Literals.TEXTBAUSTEIN__LABEL, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -103,7 +103,7 @@ public class TextbausteinItemProvider extends ItemProviderAdapter implements IEd
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Textbaustein) object).getLabel();
+		String label = crop(((Textbaustein) object).getLabel());
 		return label == null || label.length() == 0 ? getString("_UI_Textbaustein_type")
 				: getString("_UI_Textbaustein_type") + " " + label;
 	}

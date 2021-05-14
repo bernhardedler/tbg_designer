@@ -91,8 +91,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 		switch (eDataType.getClassifierID()) {
 		case ModelPackage.OBJEKTARTTYPE:
 			return createobjektarttypeFromString(eDataType, initialValue);
-		case ModelPackage.ANLAGEARTTYPE:
-			return createanlagearttypeFromString(eDataType, initialValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
 			return createspannungsarttypeFromString(eDataType, initialValue);
 		case ModelPackage.EXTERNE_DATENQUELLE:
@@ -118,8 +116,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 		switch (eDataType.getClassifierID()) {
 		case ModelPackage.OBJEKTARTTYPE:
 			return convertobjektarttypeToString(eDataType, instanceValue);
-		case ModelPackage.ANLAGEARTTYPE:
-			return convertanlagearttypeToString(eDataType, instanceValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
 			return convertspannungsarttypeToString(eDataType, instanceValue);
 		case ModelPackage.EXTERNE_DATENQUELLE:
@@ -264,28 +260,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertobjektarttypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public anlagearttype createanlagearttypeFromString(EDataType eDataType, String initialValue) {
-		anlagearttype result = anlagearttype.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertanlagearttypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

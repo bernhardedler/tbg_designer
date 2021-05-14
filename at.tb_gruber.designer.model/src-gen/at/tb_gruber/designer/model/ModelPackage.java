@@ -1366,16 +1366,6 @@ public interface ModelPackage extends EPackage {
 	int OBJEKTARTTYPE = 11;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.anlagearttype
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getanlagearttype()
-	 * @generated
-	 */
-	int ANLAGEARTTYPE = 12;
-
-	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1383,7 +1373,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 13;
+	int SPANNUNGSARTTYPE = 12;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}' enum.
@@ -1393,7 +1383,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getexterne_datenquelle()
 	 * @generated
 	 */
-	int EXTERNE_DATENQUELLE = 14;
+	int EXTERNE_DATENQUELLE = 13;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
@@ -1403,7 +1393,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getET_Type()
 	 * @generated
 	 */
-	int ET_TYPE = 15;
+	int ET_TYPE = 14;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}' enum.
@@ -1413,7 +1403,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getARGUSrelevant()
 	 * @generated
 	 */
-	int ARGU_SRELEVANT = 16;
+	int ARGU_SRELEVANT = 15;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}' enum.
@@ -1423,7 +1413,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#geteadb_versorgung_art()
 	 * @generated
 	 */
-	int EADB_VERSORGUNG_ART = 17;
+	int EADB_VERSORGUNG_ART = 16;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -2041,16 +2031,6 @@ public interface ModelPackage extends EPackage {
 	EEnum getobjektarttype();
 
 	/**
-	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>anlagearttype</em>'.
-	 * @see at.tb_gruber.designer.model.anlagearttype
-	 * @generated
-	 */
-	EEnum getanlagearttype();
-
-	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2602,16 +2582,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum OBJEKTARTTYPE = eINSTANCE.getobjektarttype();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.anlagearttype <em>anlagearttype</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.anlagearttype
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getanlagearttype()
-		 * @generated
-		 */
-		EEnum ANLAGEARTTYPE = eINSTANCE.getanlagearttype();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.

@@ -1,0 +1,21 @@
+<svg width="302" height="142" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="0" y="0" width="302" height="142" id="canvas_background" fill="#fff"/>
+ </g>
+ <g>
+  <title>Form</title>
+  <rect fill="#fff" stroke-width="2" x="1" y="1" width="300" height="100" id="svg_3" stroke="#ff0000"/>
+  <line fill="none" stroke="#ff0000" stroke-width="2" x1="0" y1="50" x2="300" y2="50" id="svg_4"/>
+  <line fill="none" stroke="#ff0000" stroke-width="2" x1="90" y1="50" x2="90" y2="100" id="svg_5"/>
+  <line fill="none" stroke="#ff0000" stroke-width="2" x1="210" y1="50" x2="210" y2="100" id="svg_10"/>
+ </g>
+  <g>
+  <title>NAP</title>
+  <ellipse fill="none" stroke-width="2" stroke="#000" cx="151" cy="101" rx="25" ry="25" id="svg21" />
+  <line fill="none" stroke="#000" stroke-width="2" x1="106" y1="101" x2="196" y2="101" id="svg22"/>
+  <line fill="none" stroke="#000" stroke-width="2" x1="151" y1="101" x2="151" y2="141" id="svg23"/>
+ </g> 
+</svg>
