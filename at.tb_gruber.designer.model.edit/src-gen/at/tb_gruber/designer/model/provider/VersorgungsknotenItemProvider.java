@@ -2,6 +2,7 @@
  */
 package at.tb_gruber.designer.model.provider;
 
+import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 
 import java.util.Collection;
@@ -10,6 +11,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -18,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VersorgungsknotenItemProvider extends AnlageItemProvider {
+public class VersorgungsknotenItemProvider extends SelbststAnlageItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -40,8 +42,24 @@ public class VersorgungsknotenItemProvider extends AnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNetzanschlusspunktPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Netzanschlusspunkt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNetzanschlusspunktPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Versorgungsknoten_netzanschlusspunkt_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Versorgungsknoten_netzanschlusspunkt_feature",
+						"_UI_Versorgungsknoten_type"),
+				ModelPackage.Literals.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT, true, false, true, null, null, null));
 	}
 
 	/**

@@ -18,8 +18,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Energietechnikanlage extends Anlage {
-
+public interface Energietechnikanlage extends SelbststAnlage {
 	/**
 	 * Returns the value of the '<em><b>Et Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.ET_Type}.
@@ -44,4 +43,5 @@ public interface Energietechnikanlage extends Anlage {
 	 * @generated
 	 */
 	void setEtType(ET_Type value);
+
 } // Energietechnikanlage

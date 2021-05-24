@@ -7,7 +7,9 @@ import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.ModelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -23,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EnergietechnikanlageImpl extends AnlageImpl implements Energietechnikanlage {
+public class EnergietechnikanlageImpl extends SelbststAnlageImpl implements Energietechnikanlage {
 	/**
 	 * The default value of the '{@link #getEtType() <em>Et Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,6 +35,7 @@ public class EnergietechnikanlageImpl extends AnlageImpl implements Energietechn
 	 * @ordered
 	 */
 	protected static final ET_Type ET_TYPE_EDEFAULT = ET_Type.IG;
+
 	/**
 	 * The cached value of the '{@link #getEtType() <em>Et Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

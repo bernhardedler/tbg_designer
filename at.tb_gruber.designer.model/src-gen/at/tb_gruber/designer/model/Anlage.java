@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getAbgangVT <em>Abgang VT</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getAnlage()
@@ -307,5 +308,27 @@ public interface Anlage extends EObject {
 	 * @generated
 	 */
 	void setAbgangVT(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Betreiber</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Betreiber</em>' reference.
+	 * @see #setBetreiber(Betreiber)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Betreiber()
+	 * @model
+	 * @generated
+	 */
+	Betreiber getBetreiber();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Betreiber</em>' reference.
+	 * @see #getBetreiber()
+	 * @generated
+	 */
+	void setBetreiber(Betreiber value);
 
 } // Anlage

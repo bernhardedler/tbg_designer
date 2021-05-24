@@ -5,18 +5,27 @@ package at.tb_gruber.designer.model.impl;
 import at.tb_gruber.designer.model.ARGUSrelevant;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.Betreiber;
 import at.tb_gruber.designer.model.ET_Type;
+import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.Energietechnikanlage;
+import at.tb_gruber.designer.model.Generator;
+import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
+import at.tb_gruber.designer.model.NapPosition;
+import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Plankopf;
+import at.tb_gruber.designer.model.SelbststAnlage;
 import at.tb_gruber.designer.model.Textbaustein;
 import at.tb_gruber.designer.model.Trafo;
+import at.tb_gruber.designer.model.Umrichter;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
-import at.tb_gruber.designer.model.VersorgungsknotenMitET;
-import at.tb_gruber.designer.model.Zaehlpunkt;
+import at.tb_gruber.designer.model.Verteiler;
+import at.tb_gruber.designer.model.VerteilerContainer;
+import at.tb_gruber.designer.model.VerteilerDetails;
 import at.tb_gruber.designer.model.eadb_versorgung_art;
 import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
@@ -29,6 +38,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +102,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass zaehlpunktEClass = null;
+	private EClass netzanschlusspunktEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +123,56 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass versorgungsknotenMitETEClass = null;
+	private EClass generatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass selbststAnlageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass umrichterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass verteilerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass energiespeicherEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass verteilerDetailsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass verteilerContainerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass betreiberEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,6 +215,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EEnum eadb_versorgung_artEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum napPositionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum linienTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -205,6 +279,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				: new ModelPackageImpl();
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theModelPackage.createPackageContents();
@@ -386,6 +463,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getObjekt_Verteilercontainer() {
+		return (EReference) objektEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAnlage() {
 		return anlageEClass;
 	}
@@ -526,6 +613,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getAnlage_Betreiber() {
+		return (EReference) anlageEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVerbindung() {
 		return verbindungEClass;
 	}
@@ -636,6 +733,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getVerbindung_Linientype() {
+		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPlankopf() {
 		return plankopfEClass;
 	}
@@ -716,8 +823,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getZaehlpunkt() {
-		return zaehlpunktEClass;
+	public EClass getNetzanschlusspunkt() {
+		return netzanschlusspunktEClass;
 	}
 
 	/**
@@ -726,8 +833,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getZaehlpunkt_NrHauptversorgung() {
-		return (EAttribute) zaehlpunktEClass.getEStructuralFeatures().get(0);
+	public EAttribute getNetzanschlusspunkt_NrHauptversorgung() {
+		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -736,8 +843,28 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getZaehlpunkt_NrReserveEinspeisung() {
-		return (EAttribute) zaehlpunktEClass.getEStructuralFeatures().get(1);
+	public EAttribute getNetzanschlusspunkt_NrReserveEinspeisung() {
+		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNetzanschlusspunkt_Beschreibung() {
+		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNetzanschlusspunkt_Postition() {
+		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -748,6 +875,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EClass getVersorgungsknoten() {
 		return versorgungsknotenEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVersorgungsknoten_Netzanschlusspunkt() {
+		return (EReference) versorgungsknotenEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -776,8 +913,148 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getVersorgungsknotenMitET() {
-		return versorgungsknotenMitETEClass;
+	public EClass getGenerator() {
+		return generatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSelbststAnlage() {
+		return selbststAnlageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUmrichter() {
+		return umrichterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVerteiler() {
+		return verteilerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerteiler_HasZaehler() {
+		return (EAttribute) verteilerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVerteiler_Verteilerdetails() {
+		return (EReference) verteilerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVerteiler_Netzanschlusspunkt() {
+		return (EReference) verteilerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEnergiespeicher() {
+		return energiespeicherEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVerteilerDetails() {
+		return verteilerDetailsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerteilerDetails_Betreiber() {
+		return (EAttribute) verteilerDetailsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerteilerDetails_Nummer() {
+		return (EAttribute) verteilerDetailsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVerteilerContainer() {
+		return verteilerContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVerteilerContainer_Netzanschlusspunkt() {
+		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVerteilerContainer_Verteiler() {
+		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBetreiber() {
+		return betreiberEClass;
 	}
 
 	/**
@@ -846,6 +1123,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getNapPosition() {
+		return napPositionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getLinienType() {
+		return linienTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ModelFactory getModelFactory() {
 		return (ModelFactory) getEFactoryInstance();
 	}
@@ -887,6 +1184,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(objektEClass, OBJEKT__DB776UA);
 		createEAttribute(objektEClass, OBJEKT__GPSSTANDORT);
 		createEAttribute(objektEClass, OBJEKT__EXTERNE_QUELLE);
+		createEReference(objektEClass, OBJEKT__VERTEILERCONTAINER);
 
 		anlageEClass = createEClass(ANLAGE);
 		createEAttribute(anlageEClass, ANLAGE__NAME);
@@ -902,6 +1200,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(anlageEClass, ANLAGE__EADB_VERSORGUNG_ART);
 		createEAttribute(anlageEClass, ANLAGE__VERTEILERBEZEICHNUNG);
 		createEAttribute(anlageEClass, ANLAGE__ABGANG_VT);
+		createEReference(anlageEClass, ANLAGE__BETREIBER);
 
 		verbindungEClass = createEClass(VERBINDUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__NR);
@@ -914,6 +1213,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(verbindungEClass, VERBINDUNG__ZIEL_SICHERUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__KABELTYPE);
 		createEAttribute(verbindungEClass, VERBINDUNG__ARGUSRELEVANT);
+		createEAttribute(verbindungEClass, VERBINDUNG__LINIENTYPE);
 
 		plankopfEClass = createEClass(PLANKOPF);
 		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
@@ -926,16 +1226,40 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(trafoEClass, TRAFO__TRAFO_KVA);
 		createEAttribute(trafoEClass, TRAFO__RESERVE5);
 
-		zaehlpunktEClass = createEClass(ZAEHLPUNKT);
-		createEAttribute(zaehlpunktEClass, ZAEHLPUNKT__NR_HAUPTVERSORGUNG);
-		createEAttribute(zaehlpunktEClass, ZAEHLPUNKT__NR_RESERVE_EINSPEISUNG);
+		netzanschlusspunktEClass = createEClass(NETZANSCHLUSSPUNKT);
+		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__NR_HAUPTVERSORGUNG);
+		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__NR_RESERVE_EINSPEISUNG);
+		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__BESCHREIBUNG);
+		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__POSTITION);
 
 		versorgungsknotenEClass = createEClass(VERSORGUNGSKNOTEN);
+		createEReference(versorgungsknotenEClass, VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT);
 
 		energietechnikanlageEClass = createEClass(ENERGIETECHNIKANLAGE);
 		createEAttribute(energietechnikanlageEClass, ENERGIETECHNIKANLAGE__ET_TYPE);
 
-		versorgungsknotenMitETEClass = createEClass(VERSORGUNGSKNOTEN_MIT_ET);
+		generatorEClass = createEClass(GENERATOR);
+
+		selbststAnlageEClass = createEClass(SELBSTST_ANLAGE);
+
+		umrichterEClass = createEClass(UMRICHTER);
+
+		verteilerEClass = createEClass(VERTEILER);
+		createEAttribute(verteilerEClass, VERTEILER__HAS_ZAEHLER);
+		createEReference(verteilerEClass, VERTEILER__VERTEILERDETAILS);
+		createEReference(verteilerEClass, VERTEILER__NETZANSCHLUSSPUNKT);
+
+		energiespeicherEClass = createEClass(ENERGIESPEICHER);
+
+		verteilerDetailsEClass = createEClass(VERTEILER_DETAILS);
+		createEAttribute(verteilerDetailsEClass, VERTEILER_DETAILS__BETREIBER);
+		createEAttribute(verteilerDetailsEClass, VERTEILER_DETAILS__NUMMER);
+
+		verteilerContainerEClass = createEClass(VERTEILER_CONTAINER);
+		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
+		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__VERTEILER);
+
+		betreiberEClass = createEClass(BETREIBER);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
@@ -944,6 +1268,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		eT_TypeEEnum = createEEnum(ET_TYPE);
 		arguSrelevantEEnum = createEEnum(ARGU_SRELEVANT);
 		eadb_versorgung_artEEnum = createEEnum(EADB_VERSORGUNG_ART);
+		napPositionEEnum = createEEnum(NAP_POSITION);
+		linienTypeEEnum = createEEnum(LINIEN_TYPE);
 	}
 
 	/**
@@ -970,16 +1296,23 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		trafoEClass.getESuperTypes().add(this.getAnlage());
-		zaehlpunktEClass.getESuperTypes().add(this.getAnlage());
-		versorgungsknotenEClass.getESuperTypes().add(this.getAnlage());
-		energietechnikanlageEClass.getESuperTypes().add(this.getAnlage());
-		versorgungsknotenMitETEClass.getESuperTypes().add(this.getAnlage());
+		trafoEClass.getESuperTypes().add(this.getSelbststAnlage());
+		versorgungsknotenEClass.getESuperTypes().add(this.getSelbststAnlage());
+		energietechnikanlageEClass.getESuperTypes().add(this.getSelbststAnlage());
+		generatorEClass.getESuperTypes().add(this.getSelbststAnlage());
+		selbststAnlageEClass.getESuperTypes().add(this.getAnlage());
+		umrichterEClass.getESuperTypes().add(this.getSelbststAnlage());
+		verteilerEClass.getESuperTypes().add(this.getAnlage());
+		energiespeicherEClass.getESuperTypes().add(this.getSelbststAnlage());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bahnhofEClass, Bahnhof.class, "Bahnhof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1018,6 +1351,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getObjekt_ExterneQuelle(), this.getexterne_datenquelle(), "externeQuelle", null, 0, 1,
 				Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getObjekt_Verteilercontainer(), this.getVerteilerContainer(), null, "verteilercontainer", null,
+				0, -1, Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(anlageEClass, Anlage.class, "Anlage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnlage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Anlage.class, !IS_TRANSIENT,
@@ -1052,6 +1388,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnlage_AbgangVT(), ecorePackage.getEString(), "abgangVT", null, 0, 1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnlage_Betreiber(), this.getBetreiber(), null, "betreiber", null, 0, 1, Anlage.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(verbindungEClass, Verbindung.class, "Verbindung", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1081,6 +1420,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerbindung_Argusrelevant(), this.getARGUSrelevant(), "argusrelevant", null, 0, 1,
 				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerbindung_Linientype(), this.getLinienType(), "linientype", null, 0, 1, Verbindung.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1102,17 +1443,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getTrafo_Reserve5(), ecorePackage.getEString(), "reserve5", null, 0, 1, Trafo.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(zaehlpunktEClass, Zaehlpunkt.class, "Zaehlpunkt", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getZaehlpunkt_NrHauptversorgung(), ecorePackage.getEString(), "nrHauptversorgung", null, 0, 1,
-				Zaehlpunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEClass(netzanschlusspunktEClass, Netzanschlusspunkt.class, "Netzanschlusspunkt", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNetzanschlusspunkt_NrHauptversorgung(), ecorePackage.getEString(), "nrHauptversorgung", null,
+				0, 1, Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNetzanschlusspunkt_NrReserveEinspeisung(), ecorePackage.getEString(), "nrReserveEinspeisung",
+				null, 0, 1, Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNetzanschlusspunkt_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1,
+				Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getZaehlpunkt_NrReserveEinspeisung(), ecorePackage.getEString(), "nrReserveEinspeisung", null, 0,
-				1, Zaehlpunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getNetzanschlusspunkt_Postition(), this.getNapPosition(), "postition", null, 0, 1,
+				Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(versorgungsknotenEClass, Versorgungsknoten.class, "Versorgungsknoten", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVersorgungsknoten_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
+				"netzanschlusspunkt", null, 0, 1, Versorgungsknoten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energietechnikanlageEClass, Energietechnikanlage.class, "Energietechnikanlage", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1120,8 +1470,50 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				Energietechnikanlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(versorgungsknotenMitETEClass, VersorgungsknotenMitET.class, "VersorgungsknotenMitET", !IS_ABSTRACT,
+		initEClass(generatorEClass, Generator.class, "Generator", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(selbststAnlageEClass, SelbststAnlage.class, "SelbststAnlage", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(umrichterEClass, Umrichter.class, "Umrichter", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(verteilerEClass, Verteiler.class, "Verteiler", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVerteiler_HasZaehler(), theXMLTypePackage.getBoolean(), "hasZaehler", null, 0, 1,
+				Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getVerteiler_Verteilerdetails(), this.getVerteilerDetails(), null, "verteilerdetails", null, 1,
+				1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerteiler_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null, "netzanschlusspunkt",
+				null, 0, 1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(verteilerDetailsEClass, VerteilerDetails.class, "VerteilerDetails", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVerteilerDetails_Betreiber(), ecorePackage.getEString(), "betreiber", null, 0, 1,
+				VerteilerDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerteilerDetails_Nummer(), ecorePackage.getEString(), "nummer", null, 0, 1,
+				VerteilerDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(verteilerContainerEClass, VerteilerContainer.class, "VerteilerContainer", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVerteilerContainer_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
+				"netzanschlusspunkt", null, 0, 1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerteilerContainer_Verteiler(), this.getVerteiler(), null, "verteiler", null, 0, -1,
+				VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(betreiberEClass, Betreiber.class, "Betreiber", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");
@@ -1134,13 +1526,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.SONSTIGES);
 
 		initEEnum(spannungsarttypeEEnum, spannungsarttype.class, "spannungsarttype");
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_VIOLETT);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype._20K_V50_HZ);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype._10K_V50_HZ);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.NSP50_HZ);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype._15K_V16_7HZ);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.NSP16_7HZ);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_HELLBRAUN);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.ROT);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.GRÜN);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.MAGENTA);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.CYAN);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.BLAU);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.VIOLETT);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.BRAUN);
 
 		initEEnum(externe_datenquelleEEnum, externe_datenquelle.class, "externe_datenquelle");
 		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.UNDEFINED);
@@ -1164,6 +1556,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.IG);
 		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.WHZ);
 		addEEnumLiteral(eadb_versorgung_artEEnum, eadb_versorgung_art.FV);
+
+		initEEnum(napPositionEEnum, NapPosition.class, "NapPosition");
+		addEEnumLiteral(napPositionEEnum, NapPosition.DAVOR);
+		addEEnumLiteral(napPositionEEnum, NapPosition.MITTE);
+		addEEnumLiteral(napPositionEEnum, NapPosition.DANACH);
+
+		initEEnum(linienTypeEEnum, LinienType.class, "LinienType");
+		addEEnumLiteral(linienTypeEEnum, LinienType.HAUPTVERSORGUNG);
+		addEEnumLiteral(linienTypeEEnum, LinienType.EVU);
+		addEEnumLiteral(linienTypeEEnum, LinienType.KUNDENANLAGE_ÖBB);
+		addEEnumLiteral(linienTypeEEnum, LinienType.KUNDENANLAGE_DRITTER);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TrafoImpl extends AnlageImpl implements Trafo {
+public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	/**
 	 * The default value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public class TrafoImpl extends AnlageImpl implements Trafo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = spannungsarttype.ROT;
 
 	/**
 	 * The cached value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.

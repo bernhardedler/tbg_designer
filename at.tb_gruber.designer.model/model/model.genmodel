@@ -20,13 +20,13 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Sonstiges"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//spannungsarttype">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP%20rot"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP%20grün"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP%20magenta"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP%20cyan"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/rot"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/grün"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/magenta"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/cyan"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/blau"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve%201"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve%202"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/violett"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/braun"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//externe_datenquelle">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/undefined"/>
@@ -59,8 +59,8 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//LinienType">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Hauptversorgung"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/EVU"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage%20ÖBB"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage%20Dritter%23"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage_ÖBB"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage_Dritter"/>
     </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>

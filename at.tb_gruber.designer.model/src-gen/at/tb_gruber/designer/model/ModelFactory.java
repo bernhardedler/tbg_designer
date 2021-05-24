@@ -76,13 +76,13 @@ public interface ModelFactory extends EFactory {
 	Trafo createTrafo();
 
 	/**
-	 * Returns a new object of class '<em>Zaehlpunkt</em>'.
+	 * Returns a new object of class '<em>Netzanschlusspunkt</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Zaehlpunkt</em>'.
+	 * @return a new object of class '<em>Netzanschlusspunkt</em>'.
 	 * @generated
 	 */
-	Zaehlpunkt createZaehlpunkt();
+	Netzanschlusspunkt createNetzanschlusspunkt();
 
 	/**
 	 * Returns a new object of class '<em>Versorgungsknoten</em>'.
@@ -103,13 +103,67 @@ public interface ModelFactory extends EFactory {
 	Energietechnikanlage createEnergietechnikanlage();
 
 	/**
-	 * Returns a new object of class '<em>Versorgungsknoten Mit ET</em>'.
+	 * Returns a new object of class '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Versorgungsknoten Mit ET</em>'.
+	 * @return a new object of class '<em>Generator</em>'.
 	 * @generated
 	 */
-	VersorgungsknotenMitET createVersorgungsknotenMitET();
+	Generator createGenerator();
+
+	/**
+	 * Returns a new object of class '<em>Umrichter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Umrichter</em>'.
+	 * @generated
+	 */
+	Umrichter createUmrichter();
+
+	/**
+	 * Returns a new object of class '<em>Verteiler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Verteiler</em>'.
+	 * @generated
+	 */
+	Verteiler createVerteiler();
+
+	/**
+	 * Returns a new object of class '<em>Energiespeicher</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Energiespeicher</em>'.
+	 * @generated
+	 */
+	Energiespeicher createEnergiespeicher();
+
+	/**
+	 * Returns a new object of class '<em>Verteiler Details</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Verteiler Details</em>'.
+	 * @generated
+	 */
+	VerteilerDetails createVerteilerDetails();
+
+	/**
+	 * Returns a new object of class '<em>Verteiler Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Verteiler Container</em>'.
+	 * @generated
+	 */
+	VerteilerContainer createVerteilerContainer();
+
+	/**
+	 * Returns a new object of class '<em>Betreiber</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Betreiber</em>'.
+	 * @generated
+	 */
+	Betreiber createBetreiber();
 
 	/**
 	 * Returns the package supported by this factory.

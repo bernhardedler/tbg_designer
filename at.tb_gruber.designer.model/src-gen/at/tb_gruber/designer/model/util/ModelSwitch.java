@@ -112,16 +112,16 @@ public class ModelSwitch<T> extends Switch<T> {
 			Trafo trafo = (Trafo) theEObject;
 			T result = caseTrafo(trafo);
 			if (result == null)
+				result = caseSelbststAnlage(trafo);
+			if (result == null)
 				result = caseAnlage(trafo);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.ZAEHLPUNKT: {
-			Zaehlpunkt zaehlpunkt = (Zaehlpunkt) theEObject;
-			T result = caseZaehlpunkt(zaehlpunkt);
-			if (result == null)
-				result = caseAnlage(zaehlpunkt);
+		case ModelPackage.NETZANSCHLUSSPUNKT: {
+			Netzanschlusspunkt netzanschlusspunkt = (Netzanschlusspunkt) theEObject;
+			T result = caseNetzanschlusspunkt(netzanschlusspunkt);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -129,6 +129,8 @@ public class ModelSwitch<T> extends Switch<T> {
 		case ModelPackage.VERSORGUNGSKNOTEN: {
 			Versorgungsknoten versorgungsknoten = (Versorgungsknoten) theEObject;
 			T result = caseVersorgungsknoten(versorgungsknoten);
+			if (result == null)
+				result = caseSelbststAnlage(versorgungsknoten);
 			if (result == null)
 				result = caseAnlage(versorgungsknoten);
 			if (result == null)
@@ -139,16 +141,81 @@ public class ModelSwitch<T> extends Switch<T> {
 			Energietechnikanlage energietechnikanlage = (Energietechnikanlage) theEObject;
 			T result = caseEnergietechnikanlage(energietechnikanlage);
 			if (result == null)
+				result = caseSelbststAnlage(energietechnikanlage);
+			if (result == null)
 				result = caseAnlage(energietechnikanlage);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.VERSORGUNGSKNOTEN_MIT_ET: {
-			VersorgungsknotenMitET versorgungsknotenMitET = (VersorgungsknotenMitET) theEObject;
-			T result = caseVersorgungsknotenMitET(versorgungsknotenMitET);
+		case ModelPackage.GENERATOR: {
+			Generator generator = (Generator) theEObject;
+			T result = caseGenerator(generator);
 			if (result == null)
-				result = caseAnlage(versorgungsknotenMitET);
+				result = caseSelbststAnlage(generator);
+			if (result == null)
+				result = caseAnlage(generator);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.SELBSTST_ANLAGE: {
+			SelbststAnlage selbststAnlage = (SelbststAnlage) theEObject;
+			T result = caseSelbststAnlage(selbststAnlage);
+			if (result == null)
+				result = caseAnlage(selbststAnlage);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.UMRICHTER: {
+			Umrichter umrichter = (Umrichter) theEObject;
+			T result = caseUmrichter(umrichter);
+			if (result == null)
+				result = caseSelbststAnlage(umrichter);
+			if (result == null)
+				result = caseAnlage(umrichter);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERTEILER: {
+			Verteiler verteiler = (Verteiler) theEObject;
+			T result = caseVerteiler(verteiler);
+			if (result == null)
+				result = caseAnlage(verteiler);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.ENERGIESPEICHER: {
+			Energiespeicher energiespeicher = (Energiespeicher) theEObject;
+			T result = caseEnergiespeicher(energiespeicher);
+			if (result == null)
+				result = caseSelbststAnlage(energiespeicher);
+			if (result == null)
+				result = caseAnlage(energiespeicher);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERTEILER_DETAILS: {
+			VerteilerDetails verteilerDetails = (VerteilerDetails) theEObject;
+			T result = caseVerteilerDetails(verteilerDetails);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERTEILER_CONTAINER: {
+			VerteilerContainer verteilerContainer = (VerteilerContainer) theEObject;
+			T result = caseVerteilerContainer(verteilerContainer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.BETREIBER: {
+			Betreiber betreiber = (Betreiber) theEObject;
+			T result = caseBetreiber(betreiber);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -264,17 +331,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Zaehlpunkt</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Netzanschlusspunkt</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Zaehlpunkt</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Netzanschlusspunkt</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseZaehlpunkt(Zaehlpunkt object) {
+	public T caseNetzanschlusspunkt(Netzanschlusspunkt object) {
 		return null;
 	}
 
@@ -309,17 +376,122 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Versorgungsknoten Mit ET</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Versorgungsknoten Mit ET</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVersorgungsknotenMitET(VersorgungsknotenMitET object) {
+	public T caseGenerator(Generator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Selbstst Anlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Selbstst Anlage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSelbststAnlage(SelbststAnlage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Umrichter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Umrichter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUmrichter(Umrichter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verteiler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verteiler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerteiler(Verteiler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Energiespeicher</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Energiespeicher</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnergiespeicher(Energiespeicher object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Details</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verteiler Details</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerteilerDetails(VerteilerDetails object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verteiler Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerteilerContainer(VerteilerContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Betreiber</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Betreiber</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBetreiber(Betreiber object) {
 		return null;
 	}
 

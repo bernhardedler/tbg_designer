@@ -3,6 +3,7 @@
 package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.Anlage;
+import at.tb_gruber.designer.model.Betreiber;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.eadb_versorgung_art;
@@ -46,6 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAbgangVT <em>Abgang VT</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getBetreiber <em>Betreiber</em>}</li>
  * </ul>
  *
  * @generated
@@ -159,7 +161,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.NSP50_HZ;
+	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.ROT;
 
 	/**
 	 * The cached value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
@@ -290,6 +292,16 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String abgangVT = ABGANG_VT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBetreiber() <em>Betreiber</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBetreiber()
+	 * @generated
+	 * @ordered
+	 */
+	protected Betreiber betreiber;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -606,6 +618,48 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public Betreiber getBetreiber() {
+		if (betreiber != null && betreiber.eIsProxy()) {
+			InternalEObject oldBetreiber = (InternalEObject) betreiber;
+			betreiber = (Betreiber) eResolveProxy(oldBetreiber);
+			if (betreiber != oldBetreiber) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ANLAGE__BETREIBER,
+							oldBetreiber, betreiber));
+			}
+		}
+		return betreiber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Betreiber basicGetBetreiber() {
+		return betreiber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBetreiber(Betreiber newBetreiber) {
+		Betreiber oldBetreiber = betreiber;
+		betreiber = newBetreiber;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__BETREIBER, oldBetreiber,
+					betreiber));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
@@ -648,6 +702,10 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return getVerteilerbezeichnung();
 		case ModelPackage.ANLAGE__ABGANG_VT:
 			return getAbgangVT();
+		case ModelPackage.ANLAGE__BETREIBER:
+			if (resolve)
+				return getBetreiber();
+			return basicGetBetreiber();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -702,6 +760,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__ABGANG_VT:
 			setAbgangVT((String) newValue);
 			return;
+		case ModelPackage.ANLAGE__BETREIBER:
+			setBetreiber((Betreiber) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -753,6 +814,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__ABGANG_VT:
 			setAbgangVT(ABGANG_VT_EDEFAULT);
 			return;
+		case ModelPackage.ANLAGE__BETREIBER:
+			setBetreiber((Betreiber) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -794,6 +858,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 					: !VERTEILERBEZEICHNUNG_EDEFAULT.equals(verteilerbezeichnung);
 		case ModelPackage.ANLAGE__ABGANG_VT:
 			return ABGANG_VT_EDEFAULT == null ? abgangVT != null : !ABGANG_VT_EDEFAULT.equals(abgangVT);
+		case ModelPackage.ANLAGE__BETREIBER:
+			return betreiber != null;
 		}
 		return super.eIsSet(featureID);
 	}

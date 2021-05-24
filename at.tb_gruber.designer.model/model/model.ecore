@@ -57,13 +57,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="betreiber" eType="#//Betreiber"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="spannungsarttype">
-    <eLiterals name="HSP rot" literal="HSP Un > 1kV 50Hz"/>
-    <eLiterals name="NSP grün" value="1" literal="NSP Un bis inkl. 1kV 50Hz AC"/>
-    <eLiterals name="HSP magenta" value="2" literal="HSP Un = 15kV 16,7Hz"/>
-    <eLiterals name="NSP cyan" value="3" literal="NSP Un bis inkl. 1kV 16,7Hz"/>
+    <eLiterals name="rot" literal="HSP Un > 1kV 50Hz"/>
+    <eLiterals name="grün" value="1" literal="NSP Un bis inkl. 1kV 50Hz AC"/>
+    <eLiterals name="magenta" value="2" literal="HSP Un = 15kV 16,7Hz"/>
+    <eLiterals name="cyan" value="3" literal="NSP Un bis inkl. 1kV 16,7Hz"/>
     <eLiterals name="blau" value="4" literal="Un bis inkl. 1,5kV DC"/>
-    <eLiterals name="Reserve 1" value="5"/>
-    <eLiterals name="Reserve 2" value="6"/>
+    <eLiterals name="violett" value="5"/>
+    <eLiterals name="braun" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Verbindung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -156,7 +156,7 @@
   <eClassifiers xsi:type="ecore:EEnum" name="LinienType">
     <eLiterals name="Hauptversorgung"/>
     <eLiterals name="EVU" value="1"/>
-    <eLiterals name="Kundenanlage ÖBB" value="2"/>
-    <eLiterals name="Kundenanlage Dritter#" value="3"/>
+    <eLiterals name="Kundenanlage_ÖBB" value="2"/>
+    <eLiterals name="Kundenanlage_Dritter" value="3" literal="Kundenanlage Dritter"/>
   </eClassifiers>
 </ecore:EPackage>

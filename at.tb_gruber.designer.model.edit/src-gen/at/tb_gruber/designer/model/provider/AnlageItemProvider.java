@@ -66,6 +66,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			addEadbVersorgungArtPropertyDescriptor(object);
 			addVerteilerbezeichnungPropertyDescriptor(object);
 			addAbgangVTPropertyDescriptor(object);
+			addBetreiberPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -257,6 +258,21 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 								"_UI_Anlage_type"),
 						ModelPackage.Literals.ANLAGE__ABGANG_VT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Betreiber feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBetreiberPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Anlage_betreiber_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_betreiber_feature",
+								"_UI_Anlage_type"),
+						ModelPackage.Literals.ANLAGE__BETREIBER, true, false, true, null, null, null));
 	}
 
 	/**

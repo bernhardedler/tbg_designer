@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getDb776ua <em>Db776ua</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getVerteilercontainer <em>Verteilercontainer</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getObjekt()
@@ -127,6 +128,9 @@ public interface Objekt extends EObject {
 	 * The list contents are of type {@link at.tb_gruber.designer.model.Anlage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * besteht aus
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Anlage</em>' containment reference list.
 	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Anlage()
 	 * @model containment="true"
@@ -224,5 +228,17 @@ public interface Objekt extends EObject {
 	 * @generated
 	 */
 	void setExterneQuelle(externe_datenquelle value);
+
+	/**
+	 * Returns the value of the '<em><b>Verteilercontainer</b></em>' containment reference list.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.VerteilerContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Verteilercontainer</em>' containment reference list.
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Verteilercontainer()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VerteilerContainer> getVerteilercontainer();
 
 } // Objekt

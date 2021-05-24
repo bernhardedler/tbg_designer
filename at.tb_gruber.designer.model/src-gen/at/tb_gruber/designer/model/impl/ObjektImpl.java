@@ -5,6 +5,7 @@ package at.tb_gruber.designer.model.impl;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
 
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getDb776ua <em>Db776ua</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGpsstandort <em>Gpsstandort</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getExterneQuelle <em>Externe Quelle</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getVerteilercontainer <em>Verteilercontainer</em>}</li>
  * </ul>
  *
  * @generated
@@ -215,6 +217,16 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @ordered
 	 */
 	protected externe_datenquelle externeQuelle = EXTERNE_QUELLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getVerteilercontainer() <em>Verteilercontainer</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVerteilercontainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VerteilerContainer> verteilercontainer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -444,10 +456,26 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
+	public EList<VerteilerContainer> getVerteilercontainer() {
+		if (verteilercontainer == null) {
+			verteilercontainer = new EObjectContainmentEList<VerteilerContainer>(VerteilerContainer.class, this,
+					ModelPackage.OBJEKT__VERTEILERCONTAINER);
+		}
+		return verteilercontainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.OBJEKT__ANLAGE:
 			return ((InternalEList<?>) getAnlage()).basicRemove(otherEnd, msgs);
+		case ModelPackage.OBJEKT__VERTEILERCONTAINER:
+			return ((InternalEList<?>) getVerteilercontainer()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -478,6 +506,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return getGpsstandort();
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			return getExterneQuelle();
+		case ModelPackage.OBJEKT__VERTEILERCONTAINER:
+			return getVerteilercontainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -519,6 +549,10 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			setExterneQuelle((externe_datenquelle) newValue);
 			return;
+		case ModelPackage.OBJEKT__VERTEILERCONTAINER:
+			getVerteilercontainer().clear();
+			getVerteilercontainer().addAll((Collection<? extends VerteilerContainer>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -558,6 +592,9 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			setExterneQuelle(EXTERNE_QUELLE_EDEFAULT);
 			return;
+		case ModelPackage.OBJEKT__VERTEILERCONTAINER:
+			getVerteilercontainer().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -588,6 +625,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return GPSSTANDORT_EDEFAULT == null ? gpsstandort != null : !GPSSTANDORT_EDEFAULT.equals(gpsstandort);
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			return externeQuelle != EXTERNE_QUELLE_EDEFAULT;
+		case ModelPackage.OBJEKT__VERTEILERCONTAINER:
+			return verteilercontainer != null && !verteilercontainer.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

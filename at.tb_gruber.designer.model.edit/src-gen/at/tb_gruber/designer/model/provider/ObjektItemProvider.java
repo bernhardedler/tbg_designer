@@ -208,6 +208,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.OBJEKT__ANLAGE);
+			childrenFeatures.add(ModelPackage.Literals.OBJEKT__VERTEILERCONTAINER);
 		}
 		return childrenFeatures;
 	}
@@ -282,6 +283,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:
+		case ModelPackage.OBJEKT__VERTEILERCONTAINER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -302,17 +304,26 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		newChildDescriptors
 				.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createTrafo()));
 
-		newChildDescriptors.add(
-				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createZaehlpunkt()));
-
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVersorgungsknoten()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createEnergietechnikanlage()));
 
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createGenerator()));
+
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createUmrichter()));
+
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createVerteiler()));
+
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
-				ModelFactory.eINSTANCE.createVersorgungsknotenMitET()));
+				ModelFactory.eINSTANCE.createEnergiespeicher()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__VERTEILERCONTAINER,
+				ModelFactory.eINSTANCE.createVerteilerContainer()));
 	}
 
 	/**

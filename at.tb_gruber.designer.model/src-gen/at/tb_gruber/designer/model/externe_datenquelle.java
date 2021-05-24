@@ -27,10 +27,11 @@ public enum externe_datenquelle implements Enumerator {
 	 * @ordered
 	 */
 	UNDEFINED(0, "undefined", "undefined"),
+
 	/**
 	 * The '<em><b>Immo</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #IMMO_VALUE
 	 * @generated
 	 * @ordered

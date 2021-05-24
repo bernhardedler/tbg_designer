@@ -211,26 +211,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Zaehlpunkt} instances.
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Netzanschlusspunkt} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ZaehlpunktItemProvider zaehlpunktItemProvider;
+	protected NetzanschlusspunktItemProvider netzanschlusspunktItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Zaehlpunkt}.
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Netzanschlusspunkt}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createZaehlpunktAdapter() {
-		if (zaehlpunktItemProvider == null) {
-			zaehlpunktItemProvider = new ZaehlpunktItemProvider(this);
+	public Adapter createNetzanschlusspunktAdapter() {
+		if (netzanschlusspunktItemProvider == null) {
+			netzanschlusspunktItemProvider = new NetzanschlusspunktItemProvider(this);
 		}
 
-		return zaehlpunktItemProvider;
+		return netzanschlusspunktItemProvider;
 	}
 
 	/**
@@ -280,26 +280,164 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VersorgungsknotenMitET} instances.
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Generator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VersorgungsknotenMitETItemProvider versorgungsknotenMitETItemProvider;
+	protected GeneratorItemProvider generatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VersorgungsknotenMitET}.
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Generator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVersorgungsknotenMitETAdapter() {
-		if (versorgungsknotenMitETItemProvider == null) {
-			versorgungsknotenMitETItemProvider = new VersorgungsknotenMitETItemProvider(this);
+	public Adapter createGeneratorAdapter() {
+		if (generatorItemProvider == null) {
+			generatorItemProvider = new GeneratorItemProvider(this);
 		}
 
-		return versorgungsknotenMitETItemProvider;
+		return generatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Umrichter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UmrichterItemProvider umrichterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Umrichter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUmrichterAdapter() {
+		if (umrichterItemProvider == null) {
+			umrichterItemProvider = new UmrichterItemProvider(this);
+		}
+
+		return umrichterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Verteiler} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VerteilerItemProvider verteilerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Verteiler}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerteilerAdapter() {
+		if (verteilerItemProvider == null) {
+			verteilerItemProvider = new VerteilerItemProvider(this);
+		}
+
+		return verteilerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Energiespeicher} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnergiespeicherItemProvider energiespeicherItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Energiespeicher}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnergiespeicherAdapter() {
+		if (energiespeicherItemProvider == null) {
+			energiespeicherItemProvider = new EnergiespeicherItemProvider(this);
+		}
+
+		return energiespeicherItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerDetails} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VerteilerDetailsItemProvider verteilerDetailsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VerteilerDetails}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerteilerDetailsAdapter() {
+		if (verteilerDetailsItemProvider == null) {
+			verteilerDetailsItemProvider = new VerteilerDetailsItemProvider(this);
+		}
+
+		return verteilerDetailsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VerteilerContainerItemProvider verteilerContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VerteilerContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerteilerContainerAdapter() {
+		if (verteilerContainerItemProvider == null) {
+			verteilerContainerItemProvider = new VerteilerContainerItemProvider(this);
+		}
+
+		return verteilerContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Betreiber} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BetreiberItemProvider betreiberItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Betreiber}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBetreiberAdapter() {
+		if (betreiberItemProvider == null) {
+			betreiberItemProvider = new BetreiberItemProvider(this);
+		}
+
+		return betreiberItemProvider;
 	}
 
 	/**
@@ -419,14 +557,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			textbausteinItemProvider.dispose();
 		if (trafoItemProvider != null)
 			trafoItemProvider.dispose();
-		if (zaehlpunktItemProvider != null)
-			zaehlpunktItemProvider.dispose();
+		if (netzanschlusspunktItemProvider != null)
+			netzanschlusspunktItemProvider.dispose();
 		if (versorgungsknotenItemProvider != null)
 			versorgungsknotenItemProvider.dispose();
 		if (energietechnikanlageItemProvider != null)
 			energietechnikanlageItemProvider.dispose();
-		if (versorgungsknotenMitETItemProvider != null)
-			versorgungsknotenMitETItemProvider.dispose();
+		if (generatorItemProvider != null)
+			generatorItemProvider.dispose();
+		if (umrichterItemProvider != null)
+			umrichterItemProvider.dispose();
+		if (verteilerItemProvider != null)
+			verteilerItemProvider.dispose();
+		if (energiespeicherItemProvider != null)
+			energiespeicherItemProvider.dispose();
+		if (verteilerDetailsItemProvider != null)
+			verteilerDetailsItemProvider.dispose();
+		if (verteilerContainerItemProvider != null)
+			verteilerContainerItemProvider.dispose();
+		if (betreiberItemProvider != null)
+			betreiberItemProvider.dispose();
 	}
 
 }

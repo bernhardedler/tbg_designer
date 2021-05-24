@@ -20,7 +20,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Trafo extends Anlage {
+public interface Trafo extends SelbststAnlage {
 	/**
 	 * Returns the value of the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * The default value is <code>"NSP 50Hz (gr\u00fcn)"</code>.

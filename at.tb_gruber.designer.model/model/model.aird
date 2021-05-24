@@ -5,7 +5,7 @@
     <semanticResources>model.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_NZD3IBYCEeqvjqT_N4bxRw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NfPXoBYCEeqvjqT_N4bxRw" name="model" repPath="#_Na1YwBYCEeqvjqT_N4bxRw" changeId="9d5d2eac-f6b9-4ad0-8ec2-ea862cd242e5">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NfPXoBYCEeqvjqT_N4bxRw" name="model" repPath="#_Na1YwBYCEeqvjqT_N4bxRw" changeId="4e4b1569-df26-44e1-96db-ba44ccc73f2e">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1276,33 +1276,33 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Z0Yu8LMVEeu30c64v9Zucw" name="HSP rot" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/HSP%20rot"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/HSP%20rot"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Z0Yu8LMVEeu30c64v9Zucw" name="rot" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/rot"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/rot"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Z0ZWALMVEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_g9uJILMVEeu30c64v9Zucw" name="NSP grün" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/NSP%20grün"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/NSP%20grün"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_g9uJILMVEeu30c64v9Zucw" name="grün" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/grün"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/grün"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_g9uJIbMVEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_nz7zALMVEeu30c64v9Zucw" name="HSP magenta" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/HSP%20magenta"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/HSP%20magenta"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_nz7zALMVEeu30c64v9Zucw" name="magenta" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/magenta"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/magenta"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_nz7zAbMVEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_tHNDcLMVEeu30c64v9Zucw" name="NSP cyan" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/NSP%20cyan"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/NSP%20cyan"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_tHNDcLMVEeu30c64v9Zucw" name="cyan" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/cyan"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/cyan"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_tHNDcbMVEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
@@ -1316,17 +1316,17 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8AlSgLMVEeu30c64v9Zucw" name="Reserve 1" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/Reserve%201"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/Reserve%201"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_8AlSgLMVEeu30c64v9Zucw" name="violett" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/violett"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/violett"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_8Al5kLMVEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_9LlGALMVEeu30c64v9Zucw" name="Reserve 2" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/Reserve%202"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/Reserve%202"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_9LlGALMVEeu30c64v9Zucw" name="braun" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/braun"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//spannungsarttype/braun"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_9LlGAbMVEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
@@ -2120,17 +2120,17 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_60OCgLMUEeu30c64v9Zucw" name="Kundenanlage ÖBB" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage%20ÖBB"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage%20ÖBB"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_60OCgLMUEeu30c64v9Zucw" name="Kundenanlage_ÖBB" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage_ÖBB"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage_ÖBB"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_60OpkLMUEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_9DkO8LMUEeu30c64v9Zucw" name="Kundenanlage Dritter#" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage%20Dritter%23"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage%20Dritter%23"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_9DkO8LMUEeu30c64v9Zucw" name="Kundenanlage_Dritter" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage_Dritter"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model.ecore#//LinienType/Kundenanlage_Dritter"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_9DkO8bMUEeu30c64v9Zucw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>

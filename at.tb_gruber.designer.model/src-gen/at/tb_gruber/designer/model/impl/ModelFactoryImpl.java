@@ -68,14 +68,26 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createTextbaustein();
 		case ModelPackage.TRAFO:
 			return createTrafo();
-		case ModelPackage.ZAEHLPUNKT:
-			return createZaehlpunkt();
+		case ModelPackage.NETZANSCHLUSSPUNKT:
+			return createNetzanschlusspunkt();
 		case ModelPackage.VERSORGUNGSKNOTEN:
 			return createVersorgungsknoten();
 		case ModelPackage.ENERGIETECHNIKANLAGE:
 			return createEnergietechnikanlage();
-		case ModelPackage.VERSORGUNGSKNOTEN_MIT_ET:
-			return createVersorgungsknotenMitET();
+		case ModelPackage.GENERATOR:
+			return createGenerator();
+		case ModelPackage.UMRICHTER:
+			return createUmrichter();
+		case ModelPackage.VERTEILER:
+			return createVerteiler();
+		case ModelPackage.ENERGIESPEICHER:
+			return createEnergiespeicher();
+		case ModelPackage.VERTEILER_DETAILS:
+			return createVerteilerDetails();
+		case ModelPackage.VERTEILER_CONTAINER:
+			return createVerteilerContainer();
+		case ModelPackage.BETREIBER:
+			return createBetreiber();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +113,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createARGUSrelevantFromString(eDataType, initialValue);
 		case ModelPackage.EADB_VERSORGUNG_ART:
 			return createeadb_versorgung_artFromString(eDataType, initialValue);
+		case ModelPackage.NAP_POSITION:
+			return createNapPositionFromString(eDataType, initialValue);
+		case ModelPackage.LINIEN_TYPE:
+			return createLinienTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -126,6 +142,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return convertARGUSrelevantToString(eDataType, instanceValue);
 		case ModelPackage.EADB_VERSORGUNG_ART:
 			return converteadb_versorgung_artToString(eDataType, instanceValue);
+		case ModelPackage.NAP_POSITION:
+			return convertNapPositionToString(eDataType, instanceValue);
+		case ModelPackage.LINIEN_TYPE:
+			return convertLinienTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -203,9 +223,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public Zaehlpunkt createZaehlpunkt() {
-		ZaehlpunktImpl zaehlpunkt = new ZaehlpunktImpl();
-		return zaehlpunkt;
+	public Netzanschlusspunkt createNetzanschlusspunkt() {
+		NetzanschlusspunktImpl netzanschlusspunkt = new NetzanschlusspunktImpl();
+		return netzanschlusspunkt;
 	}
 
 	/**
@@ -236,9 +256,75 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public VersorgungsknotenMitET createVersorgungsknotenMitET() {
-		VersorgungsknotenMitETImpl versorgungsknotenMitET = new VersorgungsknotenMitETImpl();
-		return versorgungsknotenMitET;
+	public Generator createGenerator() {
+		GeneratorImpl generator = new GeneratorImpl();
+		return generator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Umrichter createUmrichter() {
+		UmrichterImpl umrichter = new UmrichterImpl();
+		return umrichter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Verteiler createVerteiler() {
+		VerteilerImpl verteiler = new VerteilerImpl();
+		return verteiler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Energiespeicher createEnergiespeicher() {
+		EnergiespeicherImpl energiespeicher = new EnergiespeicherImpl();
+		return energiespeicher;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VerteilerDetails createVerteilerDetails() {
+		VerteilerDetailsImpl verteilerDetails = new VerteilerDetailsImpl();
+		return verteilerDetails;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VerteilerContainer createVerteilerContainer() {
+		VerteilerContainerImpl verteilerContainer = new VerteilerContainerImpl();
+		return verteilerContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Betreiber createBetreiber() {
+		BetreiberImpl betreiber = new BetreiberImpl();
+		return betreiber;
 	}
 
 	/**
@@ -370,6 +456,50 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String converteadb_versorgung_artToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NapPosition createNapPositionFromString(EDataType eDataType, String initialValue) {
+		NapPosition result = NapPosition.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNapPositionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinienType createLinienTypeFromString(EDataType eDataType, String initialValue) {
+		LinienType result = LinienType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLinienTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

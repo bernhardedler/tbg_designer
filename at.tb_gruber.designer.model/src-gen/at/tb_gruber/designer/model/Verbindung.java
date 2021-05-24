@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltype <em>Kabeltype</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getArgusrelevant <em>Argusrelevant</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getLinientype <em>Linientype</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung()
@@ -255,5 +256,30 @@ public interface Verbindung extends EObject {
 	 * @generated
 	 */
 	void setArgusrelevant(ARGUSrelevant value);
+
+	/**
+	 * Returns the value of the '<em><b>Linientype</b></em>' attribute.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.LinienType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Linientype</em>' attribute.
+	 * @see at.tb_gruber.designer.model.LinienType
+	 * @see #setLinientype(LinienType)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Linientype()
+	 * @model
+	 * @generated
+	 */
+	LinienType getLinientype();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getLinientype <em>Linientype</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Linientype</em>' attribute.
+	 * @see at.tb_gruber.designer.model.LinienType
+	 * @see #getLinientype()
+	 * @generated
+	 */
+	void setLinientype(LinienType value);
 
 } // Verbindung
