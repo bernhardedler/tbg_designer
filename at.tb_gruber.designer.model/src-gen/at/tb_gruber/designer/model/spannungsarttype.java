@@ -28,40 +28,40 @@ public enum spannungsarttype implements Enumerator {
 	 */
 	ROT(0, "rot", "HSP Un > 1kV 50Hz"),
 	/**
-	* The '<em><b>Grün</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Grün</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #GRÜN_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #GRÜN_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	GRÜN(1, "grün", "NSP Un bis inkl. 1kV 50Hz AC"),
 	/**
-	* The '<em><b>Magenta</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Magenta</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #MAGENTA_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #MAGENTA_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	MAGENTA(2, "magenta", "HSP Un = 15kV 16,7Hz"),
 	/**
-	* The '<em><b>Cyan</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Cyan</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #CYAN_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #CYAN_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	CYAN(3, "cyan", "NSP Un bis inkl. 1kV 16,7Hz"),
 	/**
-	* The '<em><b>Blau</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Blau</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #BLAU_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #BLAU_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	BLAU(4, "blau", "Un bis inkl. 1,5kV DC"),
 
 	/**
@@ -74,13 +74,13 @@ public enum spannungsarttype implements Enumerator {
 	 */
 	VIOLETT(5, "violett", "violett"),
 	/**
-	* The '<em><b>Braun</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Braun</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #BRAUN_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #BRAUN_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	BRAUN(6, "braun", "braun");
 
 	/**

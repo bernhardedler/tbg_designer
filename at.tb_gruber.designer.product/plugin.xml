@@ -10,7 +10,7 @@
             name="Designer">
          <property
                name="windowImages"
-               value="icons/logo_16.png,icons/logo_16.gif,icons/logo_32.png,icons/logo_32.gif,icons/logo_48.gif,icons/logo_64.png">
+               value="images/16x16.png,images/32x32.png,images/48x48.png,images/64x64.png,images/128x128.png,images/256x256.png">
          </property>
          <property
                name="aboutImage"
