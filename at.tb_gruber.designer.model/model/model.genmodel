@@ -128,7 +128,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/postition"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Versorgungsknoten">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Energietechnikanlage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Energietechnikanlage/etType"/>
@@ -139,7 +139,7 @@
     <genClasses ecoreClass="model.ecore#//Verteiler">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verteiler/hasZaehler"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/verteilerdetails"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/netzanschlusspunkt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/netzanschlusspunkt"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Energiespeicher"/>
     <genClasses ecoreClass="model.ecore#//VerteilerDetails">
@@ -147,8 +147,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/nummer"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Betreiber"/>
   </genPackages>

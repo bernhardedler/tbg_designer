@@ -2,6 +2,8 @@
  */
 package at.tb_gruber.designer.model;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Versorgungsknoten</b></em>'.
@@ -20,25 +22,15 @@ package at.tb_gruber.designer.model;
  */
 public interface Versorgungsknoten extends SelbststAnlage {
 	/**
-	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' reference.
+	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference list.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.Netzanschlusspunkt}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Netzanschlusspunkt</em>' reference.
-	 * @see #setNetzanschlusspunkt(Netzanschlusspunkt)
+	 * @return the value of the '<em>Netzanschlusspunkt</em>' containment reference list.
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVersorgungsknoten_Netzanschlusspunkt()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	Netzanschlusspunkt getNetzanschlusspunkt();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Versorgungsknoten#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Netzanschlusspunkt</em>' reference.
-	 * @see #getNetzanschlusspunkt()
-	 * @generated
-	 */
-	void setNetzanschlusspunkt(Netzanschlusspunkt value);
+	EList<Netzanschlusspunkt> getNetzanschlusspunkt();
 
 } // Versorgungsknoten

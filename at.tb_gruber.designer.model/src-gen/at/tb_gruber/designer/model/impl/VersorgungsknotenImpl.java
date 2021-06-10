@@ -6,12 +6,13 @@ import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 
-import org.eclipse.emf.common.notify.Notification;
-
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorgungsknoten {
 	/**
-	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' reference.
+	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNetzanschlusspunkt()
 	 * @generated
 	 * @ordered
 	 */
-	protected Netzanschlusspunkt netzanschlusspunkt;
+	protected EList<Netzanschlusspunkt> netzanschlusspunkt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,16 +63,10 @@ public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorg
 	 * @generated
 	 */
 	@Override
-	public Netzanschlusspunkt getNetzanschlusspunkt() {
-		if (netzanschlusspunkt != null && netzanschlusspunkt.eIsProxy()) {
-			InternalEObject oldNetzanschlusspunkt = (InternalEObject) netzanschlusspunkt;
-			netzanschlusspunkt = (Netzanschlusspunkt) eResolveProxy(oldNetzanschlusspunkt);
-			if (netzanschlusspunkt != oldNetzanschlusspunkt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT, oldNetzanschlusspunkt,
-							netzanschlusspunkt));
-			}
+	public EList<Netzanschlusspunkt> getNetzanschlusspunkt() {
+		if (netzanschlusspunkt == null) {
+			netzanschlusspunkt = new EObjectContainmentEList<Netzanschlusspunkt>(Netzanschlusspunkt.class, this,
+					ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT);
 		}
 		return netzanschlusspunkt;
 	}
@@ -81,22 +76,13 @@ public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Netzanschlusspunkt basicGetNetzanschlusspunkt() {
-		return netzanschlusspunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setNetzanschlusspunkt(Netzanschlusspunkt newNetzanschlusspunkt) {
-		Netzanschlusspunkt oldNetzanschlusspunkt = netzanschlusspunkt;
-		netzanschlusspunkt = newNetzanschlusspunkt;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT,
-					oldNetzanschlusspunkt, netzanschlusspunkt));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
+			return ((InternalEList<?>) getNetzanschlusspunkt()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -108,9 +94,7 @@ public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorg
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
-			if (resolve)
-				return getNetzanschlusspunkt();
-			return basicGetNetzanschlusspunkt();
+			return getNetzanschlusspunkt();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,11 +104,13 @@ public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
-			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
+			getNetzanschlusspunkt().clear();
+			getNetzanschlusspunkt().addAll((Collection<? extends Netzanschlusspunkt>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,7 +125,7 @@ public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorg
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
-			setNetzanschlusspunkt((Netzanschlusspunkt) null);
+			getNetzanschlusspunkt().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -154,7 +140,7 @@ public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorg
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
-			return netzanschlusspunkt != null;
+			return netzanschlusspunkt != null && !netzanschlusspunkt.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

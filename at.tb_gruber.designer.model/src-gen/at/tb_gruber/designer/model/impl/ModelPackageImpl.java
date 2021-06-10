@@ -1034,7 +1034,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EReference getVerteilerContainer_Netzanschlusspunkt() {
-		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(0);
+		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1044,7 +1044,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EReference getVerteilerContainer_Verteiler() {
-		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(1);
+		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1256,8 +1256,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(verteilerDetailsEClass, VERTEILER_DETAILS__NUMMER);
 
 		verteilerContainerEClass = createEClass(VERTEILER_CONTAINER);
-		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
 		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__VERTEILER);
+		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
 
 		betreiberEClass = createEClass(BETREIBER);
 
@@ -1461,8 +1461,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(versorgungsknotenEClass, Versorgungsknoten.class, "Versorgungsknoten", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVersorgungsknoten_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
-				"netzanschlusspunkt", null, 0, 1, Versorgungsknoten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"netzanschlusspunkt", null, 0, -1, Versorgungsknoten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energietechnikanlageEClass, Energietechnikanlage.class, "Energietechnikanlage", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1488,8 +1488,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerteiler_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null, "netzanschlusspunkt",
-				null, 0, 1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				null, 0, -1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1505,12 +1505,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(verteilerContainerEClass, VerteilerContainer.class, "VerteilerContainer", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVerteilerContainer_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
-				"netzanschlusspunkt", null, 0, 1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerteilerContainer_Verteiler(), this.getVerteiler(), null, "verteiler", null, 0, -1,
 				VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerteilerContainer_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
+				"netzanschlusspunkt", null, 0, -1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(betreiberEClass, Betreiber.class, "Betreiber", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

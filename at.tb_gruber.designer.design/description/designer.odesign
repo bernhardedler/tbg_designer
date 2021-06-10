@@ -677,13 +677,29 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerContainer" childrenPresentation="VerticalStack">
+          <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerContainer">
+            <borderedNodeMappings name="nap" label="nap" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Netzanschlusspunkt">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:nrHauptversorgung" hideLabelByDefault="true" sizeComputationExpression="10" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>EAST</forbiddenSides>
+              </style>
+            </borderedNodeMappings>
             <subNodeMappings name="Verteiler" label="Verteiler" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Verteiler">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_blau.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="''" iconPath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg" hideLabelByDefault="true" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" backgroundStyle="Liquid">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -694,7 +710,7 @@
           </style>
         </containerMappings>
         <containerMappings name="Plankopf" domainClass="model::Plankopf">
-          <subNodeMappings name="Textbaustein" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.3/@ownedTools[name='editNodeLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Textbaustein">
+          <subNodeMappings name="Textbaustein" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.4/@ownedTools[name='editNodeLabel']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Textbaustein">
             <style xsi:type="style:NoteDescription" labelSize="14" showIcon="false" labelExpression="feature:Label" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -817,6 +833,35 @@
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ESP 00"/>
                   </subModelOperations>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Verteiler">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VerteilerContainerAnlegen" label="VerteilerContainerAnlegen" containerMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::VerteilerContainer" referenceName="verteilercontainer"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Verteiler" label="Verteiler" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Verteiler" referenceName="verteiler"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="nap" label="Netzanschlusspunkt" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='nap']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Netzanschlusspunkt" referenceName="netzanschlusspunkt"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

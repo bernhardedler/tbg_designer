@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:tbg="http://www.tb-gruber.at/model" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:tbg="http://www.tb-gruber.at/model" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="__oo8YDMaEeqEFsSzkplHhA" selectedViews="_AJZgEDMbEeqEFsSzkplHhA" version="14.5.0.202104161500">
     <semanticResources>Test.model</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_AJZgEDMbEeqEFsSzkplHhA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AUGUMDMbEeqEFsSzkplHhA" name="Anlagendiagramm" repPath="#_AJm7cDMbEeqEFsSzkplHhA" changeId="43c475ce-f0e9-480e-a0f2-0d59b23d0417">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AUGUMDMbEeqEFsSzkplHhA" name="Anlagendiagramm" repPath="#_AJm7cDMbEeqEFsSzkplHhA" changeId="c53100d1-39dc-4f5d-a569-d738d2522fde">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']"/>
         <target xmi:type="tbg:Bahnhof" href="Test.model#/"/>
       </ownedRepresentationDescriptors>
@@ -41,26 +41,42 @@
         <children xmi:type="notation:Node" xmi:id="_U1QBcDOGEeqONZXpZhftoQ" type="2002" element="_U0GK4DOGEeqONZXpZhftoQ">
           <children xmi:type="notation:Node" xmi:id="_U1VhADOGEeqONZXpZhftoQ" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_U1WIEDOGEeqONZXpZhftoQ" type="7001">
-            <children xmi:type="notation:Shape" xmi:id="_jq88sEw4EeqJhscMyL8keA" type="Note" fontName="Segoe UI" description="Kontrolle erforderlich" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jq9jwEw4EeqJhscMyL8keA" source="specificStyles">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jq9jwUw4EeqJhscMyL8keA" key="verticalAlignment" value="8"/>
-              </eAnnotations>
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_jq9jxUw4EeqJhscMyL8keA" type="DiagramName">
-                <element xsi:nil="true"/>
+            <children xmi:type="notation:Node" xmi:id="_RVMk8cnmEeup2d00ofFisQ" type="3008" element="_RVI6kMnmEeup2d00ofFisQ">
+              <children xmi:type="notation:Node" xmi:id="_RVNMAMnmEeup2d00ofFisQ" visible="false" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_RVNMAcnmEeup2d00ofFisQ" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_sb53EMnnEeupU5hexPbaBg" type="3007" element="_sbzJYMnnEeupU5hexPbaBg">
+                  <children xmi:type="notation:Node" xmi:id="_sb6eIMnnEeupU5hexPbaBg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_sb6eIcnnEeupU5hexPbaBg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_scJusMnnEeupU5hexPbaBg" type="3005" element="_sbzJYcnnEeupU5hexPbaBg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_scJuscnnEeupU5hexPbaBg" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_scJussnnEeupU5hexPbaBg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sb53EcnnEeupU5hexPbaBg" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sb53EsnnEeupU5hexPbaBg" x="25" y="70" width="122" height="252"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_RVNMAsnmEeup2d00ofFisQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_RVNMA8nmEeup2d00ofFisQ"/>
               </children>
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_jq9jxkw4EeqJhscMyL8keA" type="Description">
-                <element xsi:nil="true"/>
+              <children xmi:type="notation:Node" xmi:id="_-FpU8MnnEeupU5hexPbaBg" type="3012" element="_-FinQMnnEeupU5hexPbaBg">
+                <children xmi:type="notation:Node" xmi:id="_-FpU88nnEeupU5hexPbaBg" visible="false" type="5010">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_-FpU9MnnEeupU5hexPbaBg" y="-1"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_-FtmYMnnEeupU5hexPbaBg" type="3005" element="_-FjOUMnnEeupU5hexPbaBg">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_-FtmYcnnEeupU5hexPbaBg" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-FtmYsnnEeupU5hexPbaBg"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_-FpU8cnnEeupU5hexPbaBg" fontName="Segoe UI" fontHeight="12"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-FpU8snnEeupU5hexPbaBg" x="120" y="-76" width="100" height="84"/>
               </children>
-              <styles xmi:type="notation:TextStyle" xmi:id="_jq9jwkw4EeqJhscMyL8keA" textAlignment="Center"/>
-              <styles xmi:type="notation:LineTypeStyle" xmi:id="_jq9jw0w4EeqJhscMyL8keA"/>
-              <element xsi:nil="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jq9jxEw4EeqJhscMyL8keA" x="949" y="418"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_RVMk8snmEeup2d00ofFisQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RVMk88nmEeup2d00ofFisQ" x="134" y="144" width="354" height="354"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_U1WIETOGEeqONZXpZhftoQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_U1WIEjOGEeqONZXpZhftoQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_U1QBcTOGEeqONZXpZhftoQ" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U1QBcjOGEeqONZXpZhftoQ" x="265" y="475" width="1118" height="688"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U1QBcjOGEeqONZXpZhftoQ" x="225" y="639" width="1118" height="688"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_ynKW0EtHEeqd-vGE-6hSuQ" type="2002" element="_yhqLwEtHEeqd-vGE-6hSuQ">
           <children xmi:type="notation:Node" xmi:id="_ynP2YEtHEeqd-vGE-6hSuQ" type="5006"/>
@@ -80,7 +96,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_ynQdcktHEeqd-vGE-6hSuQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_ynKW0UtHEeqd-vGE-6hSuQ" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ynKW0ktHEeqd-vGE-6hSuQ" x="1595" y="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ynKW0ktHEeqd-vGE-6hSuQ" x="1945" y="150"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_EknToEw0EeqJhscMyL8keA" type="2002" element="_EeoAYEw0EeqJhscMyL8keA">
           <children xmi:type="notation:Node" xmi:id="_Ekpv4Ew0EeqJhscMyL8keA" type="5006"/>
@@ -126,6 +142,41 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RVI6kMnmEeup2d00ofFisQ" name="''">
+        <target xmi:type="tbg:VerteilerContainer" href="Test.model#//@objekt.2/@verteilercontainer.0"/>
+        <semanticElements xmi:type="tbg:VerteilerContainer" href="Test.model#//@objekt.2/@verteilercontainer.0"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_RVJhosnmEeup2d00ofFisQ"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_-FinQMnnEeupU5hexPbaBg" width="10" height="10">
+          <target xmi:type="tbg:Netzanschlusspunkt" href="Test.model#//@objekt.2/@verteilercontainer.0/@netzanschlusspunkt.0"/>
+          <semanticElements xmi:type="tbg:Netzanschlusspunkt" href="Test.model#//@objekt.2/@verteilercontainer.0/@netzanschlusspunkt.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_-FjOUsnnEeupU5hexPbaBg"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_-FjOUMnnEeupU5hexPbaBg" labelSize="12" showIcon="false" hideLabelByDefault="true" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='nap']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='nap']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RVJhoMnmEeup2d00ofFisQ" labelSize="12" showIcon="false" iconPath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundStyle="Liquid" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_sbzJYMnnEeupU5hexPbaBg" width="-1" height="-1" resizeKind="NSEW">
+          <target xmi:type="tbg:Verteiler" href="Test.model#//@objekt.2/@verteilercontainer.0/@verteiler.0"/>
+          <semanticElements xmi:type="tbg:Verteiler" href="Test.model#//@objekt.2/@verteilercontainer.0/@verteiler.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_sbzJYcnnEeupU5hexPbaBg" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_blau.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yhqLwEtHEeqd-vGE-6hSuQ">
       <target xmi:type="tbg:Plankopf" href="Test.model#//@plankopf"/>

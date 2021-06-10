@@ -8,16 +8,12 @@ import at.tb_gruber.designer.model.Verteiler;
 import at.tb_gruber.designer.model.VerteilerContainer;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -31,23 +27,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getVerteiler <em>Verteiler</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VerteilerContainerImpl extends MinimalEObjectImpl.Container implements VerteilerContainer {
-	/**
-	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNetzanschlusspunkt()
-	 * @generated
-	 * @ordered
-	 */
-	protected Netzanschlusspunkt netzanschlusspunkt;
-
 	/**
 	 * The cached value of the '{@link #getVerteiler() <em>Verteiler</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -57,6 +43,16 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<Verteiler> verteiler;
+
+	/**
+	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNetzanschlusspunkt()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Netzanschlusspunkt> netzanschlusspunkt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,41 +79,12 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public Netzanschlusspunkt getNetzanschlusspunkt() {
-		if (netzanschlusspunkt != null && netzanschlusspunkt.eIsProxy()) {
-			InternalEObject oldNetzanschlusspunkt = (InternalEObject) netzanschlusspunkt;
-			netzanschlusspunkt = (Netzanschlusspunkt) eResolveProxy(oldNetzanschlusspunkt);
-			if (netzanschlusspunkt != oldNetzanschlusspunkt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT, oldNetzanschlusspunkt,
-							netzanschlusspunkt));
-			}
+	public EList<Netzanschlusspunkt> getNetzanschlusspunkt() {
+		if (netzanschlusspunkt == null) {
+			netzanschlusspunkt = new EObjectContainmentEList<Netzanschlusspunkt>(Netzanschlusspunkt.class, this,
+					ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
 		}
 		return netzanschlusspunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Netzanschlusspunkt basicGetNetzanschlusspunkt() {
-		return netzanschlusspunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setNetzanschlusspunkt(Netzanschlusspunkt newNetzanschlusspunkt) {
-		Netzanschlusspunkt oldNetzanschlusspunkt = netzanschlusspunkt;
-		netzanschlusspunkt = newNetzanschlusspunkt;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT,
-					oldNetzanschlusspunkt, netzanschlusspunkt));
 	}
 
 	/**
@@ -144,6 +111,8 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 			return ((InternalEList<?>) getVerteiler()).basicRemove(otherEnd, msgs);
+		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+			return ((InternalEList<?>) getNetzanschlusspunkt()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -156,12 +125,10 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
-			if (resolve)
-				return getNetzanschlusspunkt();
-			return basicGetNetzanschlusspunkt();
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 			return getVerteiler();
+		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+			return getNetzanschlusspunkt();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,12 +142,13 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
-			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
-			return;
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 			getVerteiler().clear();
 			getVerteiler().addAll((Collection<? extends Verteiler>) newValue);
+			return;
+		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+			getNetzanschlusspunkt().clear();
+			getNetzanschlusspunkt().addAll((Collection<? extends Netzanschlusspunkt>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,11 +162,11 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
-			setNetzanschlusspunkt((Netzanschlusspunkt) null);
-			return;
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 			getVerteiler().clear();
+			return;
+		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+			getNetzanschlusspunkt().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -212,10 +180,10 @@ public class VerteilerContainerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
-			return netzanschlusspunkt != null;
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 			return verteiler != null && !verteiler.isEmpty();
+		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+			return netzanschlusspunkt != null && !netzanschlusspunkt.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

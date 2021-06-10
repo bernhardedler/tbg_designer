@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="Kirchberg">
-  <objekt name="Gebäude A">
-  </objekt>
-  <objekt name="Gebäude B">
-  </objekt>
+  <objekt name="Gebäude A"/>
+  <objekt name="Gebäude B"/>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
+    <verteilercontainer>
+      <verteiler/>
+      <netzanschlusspunkt/>
+    </verteilercontainer>
   </objekt>
-  <objekt name="Gebäude D">
-  </objekt>
+  <objekt name="Gebäude D"/>
   <plankopf>
     <textbaustein Label="02/2020"/>
   </plankopf>

@@ -15,8 +15,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -55,24 +53,8 @@ public class VerteilerContainerItemProvider extends ItemProviderAdapter implemen
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNetzanschlusspunktPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Netzanschlusspunkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNetzanschlusspunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_VerteilerContainer_netzanschlusspunkt_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_VerteilerContainer_netzanschlusspunkt_feature",
-						"_UI_VerteilerContainer_type"),
-				ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT, true, false, true, null, null, null));
 	}
 
 	/**
@@ -88,6 +70,7 @@ public class VerteilerContainerItemProvider extends ItemProviderAdapter implemen
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__VERTEILER);
+			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
 		}
 		return childrenFeatures;
 	}
@@ -150,6 +133,7 @@ public class VerteilerContainerItemProvider extends ItemProviderAdapter implemen
 
 		switch (notification.getFeatureID(VerteilerContainer.class)) {
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
+		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -169,6 +153,9 @@ public class VerteilerContainerItemProvider extends ItemProviderAdapter implemen
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__VERTEILER,
 				ModelFactory.eINSTANCE.createVerteiler()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT,
+				ModelFactory.eINSTANCE.createNetzanschlusspunkt()));
 	}
 
 	/**
