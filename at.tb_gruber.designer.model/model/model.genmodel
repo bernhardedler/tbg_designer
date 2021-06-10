@@ -144,7 +144,7 @@
     <genClasses ecoreClass="model.ecore#//Energiespeicher"/>
     <genClasses ecoreClass="model.ecore#//VerteilerDetails">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/betreiber"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/nummer"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/nummer"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>

@@ -2,8 +2,6 @@
  */
 package at.tb_gruber.designer.model;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Verteiler</b></em>'.
@@ -68,15 +66,25 @@ public interface Verteiler extends Anlage {
 	void setVerteilerdetails(VerteilerDetails value);
 
 	/**
-	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference list.
-	 * The list contents are of type {@link at.tb_gruber.designer.model.Netzanschlusspunkt}.
+	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Netzanschlusspunkt</em>' containment reference list.
+	 * @return the value of the '<em>Netzanschlusspunkt</em>' containment reference.
+	 * @see #setNetzanschlusspunkt(Netzanschlusspunkt)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteiler_Netzanschlusspunkt()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Netzanschlusspunkt> getNetzanschlusspunkt();
+	Netzanschlusspunkt getNetzanschlusspunkt();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verteiler#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Netzanschlusspunkt</em>' containment reference.
+	 * @see #getNetzanschlusspunkt()
+	 * @generated
+	 */
+	void setNetzanschlusspunkt(Netzanschlusspunkt value);
 
 } // Verteiler

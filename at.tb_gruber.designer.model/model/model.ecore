@@ -100,8 +100,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="postition" eType="#//NapPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Versorgungsknoten" eSuperTypes="#//SelbststAnlage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" upperBound="-1"
-        eType="#//Netzanschlusspunkt" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" eType="#//Netzanschlusspunkt"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Energietechnikanlage" eSuperTypes="#//SelbststAnlage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="etType" eType="#//ET_Type"/>
@@ -136,8 +136,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasZaehler" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verteilerdetails" lowerBound="1"
         eType="#//VerteilerDetails"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" upperBound="-1"
-        eType="#//Netzanschlusspunkt" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" eType="#//Netzanschlusspunkt"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Energiespeicher" eSuperTypes="#//SelbststAnlage"/>
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerDetails">
@@ -147,8 +147,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="verteiler" upperBound="-1"
         eType="#//Verteiler" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" upperBound="-1"
-        eType="#//Netzanschlusspunkt" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" eType="#//Netzanschlusspunkt"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NapPosition">
     <eLiterals name="DAVOR" literal="DAVOR"/>

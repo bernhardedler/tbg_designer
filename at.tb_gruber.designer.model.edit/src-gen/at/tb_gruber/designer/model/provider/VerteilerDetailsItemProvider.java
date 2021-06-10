@@ -87,7 +87,7 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 						getResourceLocator(), getString("_UI_VerteilerDetails_nummer_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_VerteilerDetails_nummer_feature",
 								"_UI_VerteilerDetails_type"),
-						ModelPackage.Literals.VERTEILER_DETAILS__NUMMER, true, false, false,
+						ModelPackage.Literals.VERTEILER_DETAILS__NUMMER, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 

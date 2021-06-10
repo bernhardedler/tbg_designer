@@ -1139,7 +1139,7 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
 
 	/**
-	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1791,7 +1791,7 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER__VERTEILERDETAILS = ANLAGE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2037,7 +2037,7 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_CONTAINER__VERTEILER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2801,10 +2801,10 @@ public interface ModelPackage extends EPackage {
 	EClass getVersorgungsknoten();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Versorgungsknoten#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Versorgungsknoten#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Netzanschlusspunkt</em>'.
+	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
 	 * @see at.tb_gruber.designer.model.Versorgungsknoten#getNetzanschlusspunkt()
 	 * @see #getVersorgungsknoten()
 	 * @generated
@@ -2895,10 +2895,10 @@ public interface ModelPackage extends EPackage {
 	EReference getVerteiler_Verteilerdetails();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Verteiler#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Verteiler#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Netzanschlusspunkt</em>'.
+	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
 	 * @see at.tb_gruber.designer.model.Verteiler#getNetzanschlusspunkt()
 	 * @see #getVerteiler()
 	 * @generated
@@ -2958,10 +2958,10 @@ public interface ModelPackage extends EPackage {
 	EClass getVerteilerContainer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Netzanschlusspunkt</em>'.
+	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
 	 * @see at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt()
 	 * @see #getVerteilerContainer()
 	 * @generated
@@ -3575,7 +3575,7 @@ public interface ModelPackage extends EPackage {
 		EClass VERSORGUNGSKNOTEN = eINSTANCE.getVersorgungsknoten();
 
 		/**
-		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3657,7 +3657,7 @@ public interface ModelPackage extends EPackage {
 		EReference VERTEILER__VERTEILERDETAILS = eINSTANCE.getVerteiler_Verteilerdetails();
 
 		/**
-		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3711,7 +3711,7 @@ public interface ModelPackage extends EPackage {
 		EClass VERTEILER_CONTAINER = eINSTANCE.getVerteilerContainer();
 
 		/**
-		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

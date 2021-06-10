@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="Kirchberg">
+<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="Kirchberg">
   <objekt name="Gebäude A"/>
   <objekt name="Gebäude B"/>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
@@ -8,7 +8,9 @@
       <netzanschlusspunkt/>
     </verteilercontainer>
   </objekt>
-  <objekt name="Gebäude D"/>
+  <objekt name="Gebäude D">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00"/>
+  </objekt>
   <plankopf>
     <textbaustein Label="02/2020"/>
   </plankopf>

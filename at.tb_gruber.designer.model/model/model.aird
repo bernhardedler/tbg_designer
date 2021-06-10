@@ -5,7 +5,7 @@
     <semanticResources>model.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_NZD3IBYCEeqvjqT_N4bxRw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NfPXoBYCEeqvjqT_N4bxRw" name="model" repPath="#_Na1YwBYCEeqvjqT_N4bxRw" changeId="21eaee68-27dc-47f5-9aca-3c8e12e9ca4b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NfPXoBYCEeqvjqT_N4bxRw" name="model" repPath="#_Na1YwBYCEeqvjqT_N4bxRw" changeId="6800993d-b087-4d4c-9c7a-848b7ebd4729">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -2135,7 +2135,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_eu1flsnmEeuC7sGob-8tDQ" name="[0..*] netzanschlusspunkt" sourceNode="_CgZgYE25EeqifqhDBl7w9g" targetNode="_oVU6oE24EeqifqhDBl7w9g">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_eu1flsnmEeuC7sGob-8tDQ" name="[0..1] netzanschlusspunkt" sourceNode="_CgZgYE25EeqifqhDBl7w9g" targetNode="_oVU6oE24EeqifqhDBl7w9g">
       <target xmi:type="ecore:EReference" href="model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>
       <semanticElements xmi:type="ecore:EReference" href="model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_eu2tsMnmEeuC7sGob-8tDQ" description="_vGvSsBYCEeqvjqT_N4bxRw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -2148,7 +2148,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_gOnQRsnmEeuC7sGob-8tDQ" name="[0..*] netzanschlusspunkt" sourceNode="_Wpy_ELMREeu30c64v9Zucw" targetNode="_oVU6oE24EeqifqhDBl7w9g">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_gOnQRsnmEeuC7sGob-8tDQ" name="[0..1] netzanschlusspunkt" sourceNode="_Wpy_ELMREeu30c64v9Zucw" targetNode="_oVU6oE24EeqifqhDBl7w9g">
       <target xmi:type="ecore:EReference" href="model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
       <semanticElements xmi:type="ecore:EReference" href="model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_gOn3UMnmEeuC7sGob-8tDQ" description="_vGvSsBYCEeqvjqT_N4bxRw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -2161,7 +2161,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iFAKLMnmEeuC7sGob-8tDQ" name="[0..*] netzanschlusspunkt" sourceNode="_x0ENcLMQEeu30c64v9Zucw" targetNode="_oVU6oE24EeqifqhDBl7w9g">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iFAKLMnmEeuC7sGob-8tDQ" name="[0..1] netzanschlusspunkt" sourceNode="_x0ENcLMQEeu30c64v9Zucw" targetNode="_oVU6oE24EeqifqhDBl7w9g">
       <target xmi:type="ecore:EReference" href="model.ecore#//Verteiler/netzanschlusspunkt"/>
       <semanticElements xmi:type="ecore:EReference" href="model.ecore#//Verteiler/netzanschlusspunkt"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iFAxMMnmEeuC7sGob-8tDQ" description="_vGvSsBYCEeqvjqT_N4bxRw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">

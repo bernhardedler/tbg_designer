@@ -6,18 +6,13 @@ import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Verteiler;
 import at.tb_gruber.designer.model.VerteilerDetails;
-
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,14 +61,14 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	protected VerteilerDetails verteilerdetails;
 
 	/**
-	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference list.
+	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNetzanschlusspunkt()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Netzanschlusspunkt> netzanschlusspunkt;
+	protected Netzanschlusspunkt netzanschlusspunkt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,12 +161,51 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	 * @generated
 	 */
 	@Override
-	public EList<Netzanschlusspunkt> getNetzanschlusspunkt() {
-		if (netzanschlusspunkt == null) {
-			netzanschlusspunkt = new EObjectContainmentEList<Netzanschlusspunkt>(Netzanschlusspunkt.class, this,
-					ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT);
-		}
+	public Netzanschlusspunkt getNetzanschlusspunkt() {
 		return netzanschlusspunkt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNetzanschlusspunkt(Netzanschlusspunkt newNetzanschlusspunkt,
+			NotificationChain msgs) {
+		Netzanschlusspunkt oldNetzanschlusspunkt = netzanschlusspunkt;
+		netzanschlusspunkt = newNetzanschlusspunkt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT, oldNetzanschlusspunkt, newNetzanschlusspunkt);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNetzanschlusspunkt(Netzanschlusspunkt newNetzanschlusspunkt) {
+		if (newNetzanschlusspunkt != netzanschlusspunkt) {
+			NotificationChain msgs = null;
+			if (netzanschlusspunkt != null)
+				msgs = ((InternalEObject) netzanschlusspunkt).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT, null, msgs);
+			if (newNetzanschlusspunkt != null)
+				msgs = ((InternalEObject) newNetzanschlusspunkt).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT, null, msgs);
+			msgs = basicSetNetzanschlusspunkt(newNetzanschlusspunkt, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT,
+					newNetzanschlusspunkt, newNetzanschlusspunkt));
 	}
 
 	/**
@@ -183,7 +217,7 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
-			return ((InternalEList<?>) getNetzanschlusspunkt()).basicRemove(otherEnd, msgs);
+			return basicSetNetzanschlusspunkt(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -224,8 +258,7 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 			setVerteilerdetails((VerteilerDetails) newValue);
 			return;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
-			getNetzanschlusspunkt().clear();
-			getNetzanschlusspunkt().addAll((Collection<? extends Netzanschlusspunkt>) newValue);
+			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -246,7 +279,7 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 			setVerteilerdetails((VerteilerDetails) null);
 			return;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
-			getNetzanschlusspunkt().clear();
+			setNetzanschlusspunkt((Netzanschlusspunkt) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -265,7 +298,7 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 		case ModelPackage.VERTEILER__VERTEILERDETAILS:
 			return verteilerdetails != null;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
-			return netzanschlusspunkt != null && !netzanschlusspunkt.isEmpty();
+			return netzanschlusspunkt != null;
 		}
 		return super.eIsSet(featureID);
 	}
