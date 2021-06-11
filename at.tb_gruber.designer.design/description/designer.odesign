@@ -425,7 +425,7 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="Vk" label="Versorgungsknoten" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Versorgungsknoten">
+          <subNodeMappings name="Vk" label="Versorgungsknoten" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Versorgungsknoten">
             <borderedNodeMappings xsi:type="description_1:NodeMappingImport" name="nap vk" label="nap vk DUMMY" importedMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='Netzanschlusspunkt']">
               <style xsi:type="style:NoteDescription" labelSize="12" labelExpression="''" labelPosition="node">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -954,8 +954,15 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
+          <subNodeMappings name="NapDetails" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Netzanschlusspunkt">
+            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelExpression="[beschreibung/]" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
           <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerContainer">
-            <borderedNodeMappings name="nap" label="nap" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Netzanschlusspunkt">
+            <borderedNodeMappings name="nap" label="nap" semanticCandidatesExpression="feature:netzanschlusspunkt" domainClass="model::Netzanschlusspunkt">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:nrHauptversorgung" hideLabelByDefault="true" sizeComputationExpression="10" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -975,10 +982,53 @@
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
                 </style>
               </borderedNodeMappings>
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_blau.svg">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_blau.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_blau_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_blau.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
             </subNodeMappings>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="''" iconPath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg" hideLabelByDefault="true" backgroundStyle="Liquid">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1144,7 +1194,7 @@
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::VerteilerDetails" referenceName="verteilerdetails" variableName="newVerteilerDetails">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="newVerteilerDetails">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="Betreiber"/>
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="nummer" valueExpression="'01234'"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="nummer" valueExpression="ZP-Nr.: 00000"/>
                         <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="newVerteiler">
                           <subModelOperations xsi:type="tool_1:SetValue" featureName="verteilerdetails" valueExpression="newVerteilerDetails"/>
                         </subModelOperations>
@@ -1165,7 +1215,14 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Netzanschlusspunkt" referenceName="netzanschlusspunkt"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Netzanschlusspunkt" referenceName="netzanschlusspunkt">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="beschreibung" valueExpression="NAP"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:containerView">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='NapDetails']" containerViewExpression="containerView"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

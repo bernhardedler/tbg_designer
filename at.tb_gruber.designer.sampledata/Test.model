@@ -4,8 +4,8 @@
   <objekt name="Gebäude B"/>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
     <verteilercontainer>
-      <verteiler>
-        <verteilerdetails betreiber="Netz NÖ" nummer="ZP-Nr: 00AT000266&#xD;&#xA;5059000000052453"/>
+      <verteiler primaerspannung="Un bis inkl. 1,5kV DC" hasZaehler="true">
+        <verteilerdetails betreiber="Betreiber" nummer="ZP-Nr.: 00000"/>
       </verteiler>
     </verteilercontainer>
   </objekt>

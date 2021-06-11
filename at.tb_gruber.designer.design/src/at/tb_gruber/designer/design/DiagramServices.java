@@ -173,5 +173,14 @@ public class DiagramServices {
 		} else {
 			return false;
 		}
-	}
+	}	
+
+	public Boolean hasZaehler(EObject self) {
+		if (self instanceof Verteiler) {
+			return ((Verteiler) self).isHasZaehler();
+		} else {
+			return false;
+		}
+	}	
+
 }
