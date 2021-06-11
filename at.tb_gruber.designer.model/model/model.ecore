@@ -134,10 +134,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Umrichter" eSuperTypes="#//SelbststAnlage"/>
   <eClassifiers xsi:type="ecore:EClass" name="Verteiler" eSuperTypes="#//Anlage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasZaehler" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="verteilerdetails" lowerBound="1"
-        eType="#//VerteilerDetails"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" eType="#//Netzanschlusspunkt"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="verteilerdetails" lowerBound="1"
+        eType="#//VerteilerDetails" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Energiespeicher" eSuperTypes="#//SelbststAnlage"/>
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerDetails">

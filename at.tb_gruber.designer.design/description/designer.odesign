@@ -76,6 +76,14 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
+        <edgeMappings name="VerteilerZuDetails" sourceMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']" targetMapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='VerteilerDetails']" targetFinderExpression="feature:verteilerdetails">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="ObjektContainer" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editObjektLabel']" domainClass="model::Objekt">
           <subNodeMappings name="Et" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
@@ -939,6 +947,13 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
+          <subNodeMappings name="VerteilerDetails" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerDetails">
+            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelExpression="[betreiber  + '\n' + nummer/]" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
           <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerContainer">
             <borderedNodeMappings name="nap" label="nap" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Netzanschlusspunkt">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:nrHauptversorgung" hideLabelByDefault="true" sizeComputationExpression="10" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
@@ -1124,31 +1139,28 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Verteiler" referenceName="verteiler"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Verteiler" referenceName="verteiler" variableName="newVerteiler">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="newVerteiler">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::VerteilerDetails" referenceName="verteilerdetails" variableName="newVerteilerDetails">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="newVerteilerDetails">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="Betreiber"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="nummer" valueExpression="'01234'"/>
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="newVerteiler">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="verteilerdetails" valueExpression="newVerteilerDetails"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="containerView">
+                          <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='VerteilerDetails']" containerViewExpression="[containerView/]"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Netzanschlusspunkt">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="nap vc" label="auf VerteilerContainer" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='nap']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Netzanschlusspunkt" referenceName="netzanschlusspunkt"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="nap vt" label="auf Verteiler" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='Netzanschlusspunkt']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Netzanschlusspunkt" referenceName="netzanschlusspunkt"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="nap vk" label="auf Versorgungsknoten" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='nap%20vk']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="nap" label="Netzanschlusspunkt anlegen" precondition="aql:(container.netzanschlusspunkt = null)" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='nap'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='nap%20vk'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='Netzanschlusspunkt']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>

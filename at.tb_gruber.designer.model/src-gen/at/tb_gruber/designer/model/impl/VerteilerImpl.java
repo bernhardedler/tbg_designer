@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerImpl#isHasZaehler <em>Has Zaehler</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerImpl#getVerteilerdetails <em>Verteilerdetails</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerImpl#getVerteilerdetails <em>Verteilerdetails</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,16 +51,6 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	protected boolean hasZaehler = HAS_ZAEHLER_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVerteilerdetails() <em>Verteilerdetails</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVerteilerdetails()
-	 * @generated
-	 * @ordered
-	 */
-	protected VerteilerDetails verteilerdetails;
-
-	/**
 	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,6 +59,16 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	 * @ordered
 	 */
 	protected Netzanschlusspunkt netzanschlusspunkt;
+
+	/**
+	 * The cached value of the '{@link #getVerteilerdetails() <em>Verteilerdetails</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVerteilerdetails()
+	 * @generated
+	 * @ordered
+	 */
+	protected VerteilerDetails verteilerdetails;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,15 +120,6 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	 */
 	@Override
 	public VerteilerDetails getVerteilerdetails() {
-		if (verteilerdetails != null && verteilerdetails.eIsProxy()) {
-			InternalEObject oldVerteilerdetails = (InternalEObject) verteilerdetails;
-			verteilerdetails = (VerteilerDetails) eResolveProxy(oldVerteilerdetails);
-			if (verteilerdetails != oldVerteilerdetails) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.VERTEILER__VERTEILERDETAILS,
-							oldVerteilerdetails, verteilerdetails));
-			}
-		}
 		return verteilerdetails;
 	}
 
@@ -137,8 +128,18 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VerteilerDetails basicGetVerteilerdetails() {
-		return verteilerdetails;
+	public NotificationChain basicSetVerteilerdetails(VerteilerDetails newVerteilerdetails, NotificationChain msgs) {
+		VerteilerDetails oldVerteilerdetails = verteilerdetails;
+		verteilerdetails = newVerteilerdetails;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.VERTEILER__VERTEILERDETAILS, oldVerteilerdetails, newVerteilerdetails);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -148,11 +149,20 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 	 */
 	@Override
 	public void setVerteilerdetails(VerteilerDetails newVerteilerdetails) {
-		VerteilerDetails oldVerteilerdetails = verteilerdetails;
-		verteilerdetails = newVerteilerdetails;
-		if (eNotificationRequired())
+		if (newVerteilerdetails != verteilerdetails) {
+			NotificationChain msgs = null;
+			if (verteilerdetails != null)
+				msgs = ((InternalEObject) verteilerdetails).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERTEILER__VERTEILERDETAILS, null, msgs);
+			if (newVerteilerdetails != null)
+				msgs = ((InternalEObject) newVerteilerdetails).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.VERTEILER__VERTEILERDETAILS, null, msgs);
+			msgs = basicSetVerteilerdetails(newVerteilerdetails, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER__VERTEILERDETAILS,
-					oldVerteilerdetails, verteilerdetails));
+					newVerteilerdetails, newVerteilerdetails));
 	}
 
 	/**
@@ -218,6 +228,8 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 		switch (featureID) {
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
 			return basicSetNetzanschlusspunkt(null, msgs);
+		case ModelPackage.VERTEILER__VERTEILERDETAILS:
+			return basicSetVerteilerdetails(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -232,12 +244,10 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 		switch (featureID) {
 		case ModelPackage.VERTEILER__HAS_ZAEHLER:
 			return isHasZaehler();
-		case ModelPackage.VERTEILER__VERTEILERDETAILS:
-			if (resolve)
-				return getVerteilerdetails();
-			return basicGetVerteilerdetails();
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
 			return getNetzanschlusspunkt();
+		case ModelPackage.VERTEILER__VERTEILERDETAILS:
+			return getVerteilerdetails();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -254,11 +264,11 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 		case ModelPackage.VERTEILER__HAS_ZAEHLER:
 			setHasZaehler((Boolean) newValue);
 			return;
-		case ModelPackage.VERTEILER__VERTEILERDETAILS:
-			setVerteilerdetails((VerteilerDetails) newValue);
-			return;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
+			return;
+		case ModelPackage.VERTEILER__VERTEILERDETAILS:
+			setVerteilerdetails((VerteilerDetails) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,11 +285,11 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 		case ModelPackage.VERTEILER__HAS_ZAEHLER:
 			setHasZaehler(HAS_ZAEHLER_EDEFAULT);
 			return;
-		case ModelPackage.VERTEILER__VERTEILERDETAILS:
-			setVerteilerdetails((VerteilerDetails) null);
-			return;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) null);
+			return;
+		case ModelPackage.VERTEILER__VERTEILERDETAILS:
+			setVerteilerdetails((VerteilerDetails) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -295,10 +305,10 @@ public class VerteilerImpl extends AnlageImpl implements Verteiler {
 		switch (featureID) {
 		case ModelPackage.VERTEILER__HAS_ZAEHLER:
 			return hasZaehler != HAS_ZAEHLER_EDEFAULT;
-		case ModelPackage.VERTEILER__VERTEILERDETAILS:
-			return verteilerdetails != null;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
 			return netzanschlusspunkt != null;
+		case ModelPackage.VERTEILER__VERTEILERDETAILS:
+			return verteilerdetails != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -138,8 +138,8 @@
     <genClasses ecoreClass="model.ecore#//Umrichter"/>
     <genClasses ecoreClass="model.ecore#//Verteiler">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verteiler/hasZaehler"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/verteilerdetails"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/netzanschlusspunkt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/verteilerdetails"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Energiespeicher"/>
     <genClasses ecoreClass="model.ecore#//VerteilerDetails">

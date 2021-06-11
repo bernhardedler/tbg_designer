@@ -47,7 +47,6 @@ public class VerteilerItemProvider extends AnlageItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addHasZaehlerPropertyDescriptor(object);
-			addVerteilerdetailsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,21 +68,6 @@ public class VerteilerItemProvider extends AnlageItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Verteilerdetails feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVerteilerdetailsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verteiler_verteilerdetails_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verteiler_verteilerdetails_feature",
-								"_UI_Verteiler_type"),
-						ModelPackage.Literals.VERTEILER__VERTEILERDETAILS, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -96,6 +80,7 @@ public class VerteilerItemProvider extends AnlageItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.VERTEILER__NETZANSCHLUSSPUNKT);
+			childrenFeatures.add(ModelPackage.Literals.VERTEILER__VERTEILERDETAILS);
 		}
 		return childrenFeatures;
 	}
@@ -163,6 +148,7 @@ public class VerteilerItemProvider extends AnlageItemProvider {
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.VERTEILER__NETZANSCHLUSSPUNKT:
+		case ModelPackage.VERTEILER__VERTEILERDETAILS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -182,6 +168,9 @@ public class VerteilerItemProvider extends AnlageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER__NETZANSCHLUSSPUNKT,
 				ModelFactory.eINSTANCE.createNetzanschlusspunkt()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER__VERTEILERDETAILS,
+				ModelFactory.eINSTANCE.createVerteilerDetails()));
 	}
 
 }

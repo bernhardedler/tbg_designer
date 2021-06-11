@@ -1782,22 +1782,22 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER__HAS_ZAEHLER = ANLAGE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Verteilerdetails</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER__VERTEILERDETAILS = ANLAGE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER__NETZANSCHLUSSPUNKT = ANLAGE_FEATURE_COUNT + 2;
+	int VERTEILER__NETZANSCHLUSSPUNKT = ANLAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerdetails</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER__VERTEILERDETAILS = ANLAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Verteiler</em>' class.
@@ -2884,10 +2884,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getVerteiler_HasZaehler();
 
 	/**
-	 * Returns the meta object for the reference '{@link at.tb_gruber.designer.model.Verteiler#getVerteilerdetails <em>Verteilerdetails</em>}'.
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Verteiler#getVerteilerdetails <em>Verteilerdetails</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Verteilerdetails</em>'.
+	 * @return the meta object for the containment reference '<em>Verteilerdetails</em>'.
 	 * @see at.tb_gruber.designer.model.Verteiler#getVerteilerdetails()
 	 * @see #getVerteiler()
 	 * @generated
@@ -3649,7 +3649,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute VERTEILER__HAS_ZAEHLER = eINSTANCE.getVerteiler_HasZaehler();
 
 		/**
-		 * The meta object literal for the '<em><b>Verteilerdetails</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Verteilerdetails</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

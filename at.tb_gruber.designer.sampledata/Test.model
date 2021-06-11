@@ -4,7 +4,9 @@
   <objekt name="Gebäude B"/>
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
     <verteilercontainer>
-      <verteiler/>
+      <verteiler>
+        <verteilerdetails betreiber="Netz NÖ" nummer="ZP-Nr: 00AT000266&#xD;&#xA;5059000000052453"/>
+      </verteiler>
     </verteilercontainer>
   </objekt>
   <objekt name="Gebäude D">

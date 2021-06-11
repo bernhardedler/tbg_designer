@@ -12,8 +12,8 @@ package at.tb_gruber.designer.model;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Verteiler#isHasZaehler <em>Has Zaehler</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verteiler#getVerteilerdetails <em>Verteilerdetails</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verteiler#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verteiler#getVerteilerdetails <em>Verteilerdetails</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerteiler()
@@ -44,22 +44,22 @@ public interface Verteiler extends Anlage {
 	void setHasZaehler(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Verteilerdetails</b></em>' reference.
+	 * Returns the value of the '<em><b>Verteilerdetails</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Verteilerdetails</em>' reference.
+	 * @return the value of the '<em>Verteilerdetails</em>' containment reference.
 	 * @see #setVerteilerdetails(VerteilerDetails)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteiler_Verteilerdetails()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	VerteilerDetails getVerteilerdetails();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verteiler#getVerteilerdetails <em>Verteilerdetails</em>}' reference.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verteiler#getVerteilerdetails <em>Verteilerdetails</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Verteilerdetails</em>' reference.
+	 * @param value the new value of the '<em>Verteilerdetails</em>' containment reference.
 	 * @see #getVerteilerdetails()
 	 * @generated
 	 */

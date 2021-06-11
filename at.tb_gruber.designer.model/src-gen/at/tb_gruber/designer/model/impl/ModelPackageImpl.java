@@ -964,7 +964,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EReference getVerteiler_Verteilerdetails() {
-		return (EReference) verteilerEClass.getEStructuralFeatures().get(1);
+		return (EReference) verteilerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -974,7 +974,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	@Override
 	public EReference getVerteiler_Netzanschlusspunkt() {
-		return (EReference) verteilerEClass.getEStructuralFeatures().get(2);
+		return (EReference) verteilerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1246,8 +1246,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		verteilerEClass = createEClass(VERTEILER);
 		createEAttribute(verteilerEClass, VERTEILER__HAS_ZAEHLER);
-		createEReference(verteilerEClass, VERTEILER__VERTEILERDETAILS);
 		createEReference(verteilerEClass, VERTEILER__NETZANSCHLUSSPUNKT);
+		createEReference(verteilerEClass, VERTEILER__VERTEILERDETAILS);
 
 		energiespeicherEClass = createEClass(ENERGIESPEICHER);
 
@@ -1484,12 +1484,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerteiler_HasZaehler(), theXMLTypePackage.getBoolean(), "hasZaehler", null, 0, 1,
 				Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getVerteiler_Verteilerdetails(), this.getVerteilerDetails(), null, "verteilerdetails", null, 1,
-				1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerteiler_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null, "netzanschlusspunkt",
 				null, 0, 1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerteiler_Verteilerdetails(), this.getVerteilerDetails(), null, "verteilerdetails", null, 1,
+				1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
