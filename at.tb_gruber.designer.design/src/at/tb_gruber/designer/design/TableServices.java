@@ -1,8 +1,6 @@
 package at.tb_gruber.designer.design;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -17,7 +15,6 @@ import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.Verteiler;
 import at.tb_gruber.designer.model.VerteilerContainer;
-import at.tb_gruber.designer.model.spannungsarttype;
 
 /**
  * The services class used by VSM.
@@ -49,11 +46,11 @@ public class TableServices {
 	
 	public String getZpNrHaupt(EObject self) {
 		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt().get(0)).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
 		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt().get(0)).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
+			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
 		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt().get(0)).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
 		} else {
 			return "";
 		}
@@ -61,11 +58,11 @@ public class TableServices {
 
 	public String getZpNrReserveEinsp(EObject self) {
 		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt().get(0)).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
 		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt().get(0)).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
+			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
 		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt().get(0)).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
 		} else {
 			return "";
 		}

@@ -1,6 +1,7 @@
 package at.tb_gruber.designer.design;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
@@ -8,10 +9,14 @@ import org.eclipse.emf.ecore.EObject;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
+import at.tb_gruber.designer.model.NapPosition;
+import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
+import at.tb_gruber.designer.model.Verteiler;
+import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.spannungsarttype;
 
 /**
@@ -132,5 +137,41 @@ public class DiagramServices {
 		int cnt = ((Anlage) self).getVerbindungNach().size();
 		return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
 	}
+	
+	public Boolean isNapVor(EObject self) {
+		if (self instanceof VerteilerContainer) {
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+		} else if (self instanceof Verteiler) {
+			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+		} else if (self instanceof Versorgungsknoten) {
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+		} else {
+			return false;
+		}
+	}
 
+	public Boolean isNapMitte(EObject self) {
+		if (self instanceof VerteilerContainer) {
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+		} else if (self instanceof Verteiler) {
+			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+		} else if (self instanceof Versorgungsknoten) {
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+		} else {
+			return false;
+		}
+	}
+	
+
+	public Boolean isNapNach(EObject self) {
+		if (self instanceof VerteilerContainer) {
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+		} else if (self instanceof Verteiler) {
+			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+		} else if (self instanceof Versorgungsknoten) {
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+		} else {
+			return false;
+		}
+	}
 }

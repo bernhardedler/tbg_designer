@@ -5,7 +5,6 @@
   <objekt name="Gebäude C" objektart="Hochbauobjekt">
     <verteilercontainer>
       <verteiler/>
-      <netzanschlusspunkt/>
     </verteilercontainer>
   </objekt>
   <objekt name="Gebäude D">
