@@ -66,7 +66,6 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			addEadbVersorgungArtPropertyDescriptor(object);
 			addVerteilerbezeichnungPropertyDescriptor(object);
 			addAbgangVTPropertyDescriptor(object);
-			addBetreiberPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -261,21 +260,6 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Betreiber feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBetreiberPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Anlage_betreiber_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Anlage_betreiber_feature",
-								"_UI_Anlage_type"),
-						ModelPackage.Literals.ANLAGE__BETREIBER, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -288,6 +272,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.ANLAGE__VERBINDUNG_NACH);
+			childrenFeatures.add(ModelPackage.Literals.ANLAGE__BETREIBER);
 		}
 		return childrenFeatures;
 	}
@@ -365,6 +350,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
+		case ModelPackage.ANLAGE__BETREIBER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -384,6 +370,9 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.ANLAGE__VERBINDUNG_NACH,
 				ModelFactory.eINSTANCE.createVerbindung()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.ANLAGE__BETREIBER,
+				ModelFactory.eINSTANCE.createBetreiber()));
 	}
 
 	/**

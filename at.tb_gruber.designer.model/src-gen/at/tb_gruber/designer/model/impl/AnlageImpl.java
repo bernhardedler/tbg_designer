@@ -294,7 +294,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	protected String abgangVT = ABGANG_VT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBetreiber() <em>Betreiber</em>}' reference.
+	 * The cached value of the '{@link #getBetreiber() <em>Betreiber</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBetreiber()
@@ -619,15 +619,6 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	public Betreiber getBetreiber() {
-		if (betreiber != null && betreiber.eIsProxy()) {
-			InternalEObject oldBetreiber = (InternalEObject) betreiber;
-			betreiber = (Betreiber) eResolveProxy(oldBetreiber);
-			if (betreiber != oldBetreiber) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ANLAGE__BETREIBER,
-							oldBetreiber, betreiber));
-			}
-		}
 		return betreiber;
 	}
 
@@ -636,8 +627,18 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Betreiber basicGetBetreiber() {
-		return betreiber;
+	public NotificationChain basicSetBetreiber(Betreiber newBetreiber, NotificationChain msgs) {
+		Betreiber oldBetreiber = betreiber;
+		betreiber = newBetreiber;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.ANLAGE__BETREIBER, oldBetreiber, newBetreiber);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -647,11 +648,20 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	public void setBetreiber(Betreiber newBetreiber) {
-		Betreiber oldBetreiber = betreiber;
-		betreiber = newBetreiber;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__BETREIBER, oldBetreiber,
-					betreiber));
+		if (newBetreiber != betreiber) {
+			NotificationChain msgs = null;
+			if (betreiber != null)
+				msgs = ((InternalEObject) betreiber).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.ANLAGE__BETREIBER, null, msgs);
+			if (newBetreiber != null)
+				msgs = ((InternalEObject) newBetreiber).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.ANLAGE__BETREIBER, null, msgs);
+			msgs = basicSetBetreiber(newBetreiber, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE__BETREIBER, newBetreiber,
+					newBetreiber));
 	}
 
 	/**
@@ -664,6 +674,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 			return ((InternalEList<?>) getVerbindungNach()).basicRemove(otherEnd, msgs);
+		case ModelPackage.ANLAGE__BETREIBER:
+			return basicSetBetreiber(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -703,9 +715,7 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__ABGANG_VT:
 			return getAbgangVT();
 		case ModelPackage.ANLAGE__BETREIBER:
-			if (resolve)
-				return getBetreiber();
-			return basicGetBetreiber();
+			return getBetreiber();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

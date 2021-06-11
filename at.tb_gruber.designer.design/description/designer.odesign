@@ -86,6 +86,16 @@
         </edgeMappings>
         <containerMappings name="ObjektContainer" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editObjektLabel']" domainClass="model::Objekt">
           <subNodeMappings name="Et" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -130,6 +140,16 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Trafo" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Trafo">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/trafo/trafo_violett_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -434,6 +454,16 @@
                 <forbiddenSides>SOUTH</forbiddenSides>
                 <forbiddenSides>EAST</forbiddenSides>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+              </style>
+            </borderedNodeMappings>
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
@@ -816,6 +846,16 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Generator" label="Generator" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Generator">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/generator/generator_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -860,6 +900,16 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Umrichter" label="Umrichter" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Umrichter">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichter/umrichter_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -904,6 +954,16 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="ESP" label="Energiespeicher" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energiespeicher">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -973,13 +1033,23 @@
             </borderedNodeMappings>
             <subNodeMappings name="Verteiler" label="Verteiler" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Verteiler">
               <borderedNodeMappings name="Netzanschlusspunkt" label="nap vt DUMMY" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Netzanschlusspunkt">
-                <style xsi:type="style:NoteDescription" labelSize="12" labelPosition="node">
+                <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelPosition="node">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <forbiddenSides>WEST</forbiddenSides>
                   <forbiddenSides>SOUTH</forbiddenSides>
                   <forbiddenSides>EAST</forbiddenSides>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+                </style>
+              </borderedNodeMappings>
+              <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+                <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <forbiddenSides>WEST</forbiddenSides>
+                  <forbiddenSides>SOUTH</forbiddenSides>
+                  <forbiddenSides>NORTH</forbiddenSides>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 </style>
               </borderedNodeMappings>
               <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
@@ -1025,6 +1095,258 @@
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.hasZaehler())">
                 <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_blau.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_rot.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_rot_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_rot.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_braun.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_braun_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_braun.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_gruen.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_gruen_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_gruen.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_magenta.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_magenta_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_magenta.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_violett_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_violett.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_violett_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_violett_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_violett.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and not self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and not self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and not self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_cyan.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.hasZaehler() and self.isNapVor())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_nap_vor.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.hasZaehler() and self.isNapMitte())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_cyan_nap_mitte.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.hasZaehler() and self.isNapNach())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_nap_nach.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.hasZaehler())">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/zaehlerverteiler_cyan.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1173,6 +1495,19 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="betreiber" label="Betreiber anzeigen" precondition="aql:(container.betreiber == null)" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='betreiber']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Verteiler">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="VerteilerContainerAnlegen" label="VerteilerContainerAnlegen" containerMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']">
@@ -1197,9 +1532,6 @@
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="nummer" valueExpression="ZP-Nr.: 00000"/>
                         <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="newVerteiler">
                           <subModelOperations xsi:type="tool_1:SetValue" featureName="verteilerdetails" valueExpression="newVerteilerDetails"/>
-                        </subModelOperations>
-                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="containerView">
-                          <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='VerteilerDetails']" containerViewExpression="[containerView/]"/>
                         </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>

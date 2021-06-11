@@ -95,7 +95,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/eadbVersorgungArt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/verteilerbezeichnung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/abgangVT"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/betreiber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/betreiber"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
@@ -150,6 +150,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Betreiber"/>
+    <genClasses ecoreClass="model.ecore#//Betreiber">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Betreiber/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

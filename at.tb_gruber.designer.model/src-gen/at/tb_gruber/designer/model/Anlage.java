@@ -310,22 +310,22 @@ public interface Anlage extends EObject {
 	void setAbgangVT(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Betreiber</b></em>' reference.
+	 * Returns the value of the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Betreiber</em>' reference.
+	 * @return the value of the '<em>Betreiber</em>' containment reference.
 	 * @see #setBetreiber(Betreiber)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Betreiber()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Betreiber getBetreiber();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}' reference.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Betreiber</em>' reference.
+	 * @param value the new value of the '<em>Betreiber</em>' containment reference.
 	 * @see #getBetreiber()
 	 * @generated
 	 */

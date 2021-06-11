@@ -54,7 +54,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="#//eadb_versorgung_art"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verteilerbezeichnung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abgangVT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="betreiber" eType="#//Betreiber"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="betreiber" eType="#//Betreiber"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="spannungsarttype">
     <eLiterals name="rot" literal="HSP Un > 1kV 50Hz"/>
@@ -155,7 +156,9 @@
     <eLiterals name="MITTE" value="1"/>
     <eLiterals name="DANACH" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Betreiber"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Betreiber">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LinienType">
     <eLiterals name="Hauptversorgung"/>
     <eLiterals name="EVU" value="1"/>

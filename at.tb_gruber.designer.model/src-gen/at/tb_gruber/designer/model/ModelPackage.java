@@ -376,7 +376,7 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__ABGANG_VT = 12;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -731,7 +731,7 @@ public interface ModelPackage extends EPackage {
 	int SELBSTST_ANLAGE__ABGANG_VT = ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -885,7 +885,7 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1130,7 +1130,7 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1293,7 +1293,7 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1456,7 +1456,7 @@ public interface ModelPackage extends EPackage {
 	int GENERATOR__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1610,7 +1610,7 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1764,7 +1764,7 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER__ABGANG_VT = ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1945,7 +1945,7 @@ public interface ModelPackage extends EPackage {
 	int ENERGIESPEICHER__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' reference.
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2074,13 +2074,22 @@ public interface ModelPackage extends EPackage {
 	int BETREIBER = 17;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BETREIBER__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Betreiber</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BETREIBER_FEATURE_COUNT = 0;
+	int BETREIBER_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Betreiber</em>' class.
@@ -2510,10 +2519,10 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAnlage_AbgangVT();
 
 	/**
-	 * Returns the meta object for the reference '{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}'.
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Betreiber</em>'.
+	 * @return the meta object for the containment reference '<em>Betreiber</em>'.
 	 * @see at.tb_gruber.designer.model.Anlage#getBetreiber()
 	 * @see #getAnlage()
 	 * @generated
@@ -2990,6 +2999,17 @@ public interface ModelPackage extends EPackage {
 	EClass getBetreiber();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Betreiber#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see at.tb_gruber.designer.model.Betreiber#getName()
+	 * @see #getBetreiber()
+	 * @generated
+	 */
+	EAttribute getBetreiber_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3347,7 +3367,7 @@ public interface ModelPackage extends EPackage {
 		EAttribute ANLAGE__ABGANG_VT = eINSTANCE.getAnlage_AbgangVT();
 
 		/**
-		 * The meta object literal for the '<em><b>Betreiber</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Betreiber</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3735,6 +3755,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BETREIBER = eINSTANCE.getBetreiber();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BETREIBER__NAME = eINSTANCE.getBetreiber_Name();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
