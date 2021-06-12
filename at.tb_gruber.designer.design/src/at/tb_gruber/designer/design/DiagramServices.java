@@ -1,16 +1,17 @@
 package at.tb_gruber.designer.design;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
 
+import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.NapPosition;
-import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Verbindung;
@@ -24,6 +25,14 @@ import at.tb_gruber.designer.model.spannungsarttype;
  */
 public class DiagramServices {
 
+	private CSVPropertyProvider props = null;
+	
+	private void ensurePropsInitialized() {
+		if (props == null) {
+			props = new CSVPropertyProvider();
+		}
+	}
+	
 	/**
 	 * Erstellt die nächst niedrige, noch nicht vergebene ID
 	 * 
@@ -181,6 +190,11 @@ public class DiagramServices {
 		} else {
 			return false;
 		}
-	}	
-
+	}
+	
+	public List<String> getAllBetreiber(EObject self){
+		ensurePropsInitialized();
+		return props.getBetreiber();
+	}
+	
 }

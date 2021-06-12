@@ -24,6 +24,7 @@ import at.tb_gruber.designer.model.externe_datenquelle;
 public class CSVPropertyProvider {
 
 	private List<ObjektInfo> objektInfos = new ArrayList<CSVPropertyProvider.ObjektInfo>();
+	private List<String> betreiberList = new ArrayList<>();
 	private static IPreferenceStore preferenceStore = new ScopedPreferenceStore(InstanceScope.INSTANCE,
 			TBGPreferencePage.PREFERENCE_SCOPE_IDENTIFIER);
 
@@ -32,6 +33,7 @@ public class CSVPropertyProvider {
 		loadImmobilienDatei();
 		loadVerkehrsstationenDatei();
 		loadGebaeudeDatei();
+		loadBetreiberDatei();
 	}
 
 	public void registerListener() {
@@ -47,12 +49,14 @@ public class CSVPropertyProvider {
 					loadVerkehrsstationenDatei();
 				} else if (TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI.contentEquals(event.getProperty())) {
 					loadGebaeudeDatei();
+				} else if (TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI.contentEquals(event.getProperty())) {
+					loadBetreiberDatei();
 				}
 			}
 		});
 	}
 
-	public void loadImmobilienDatei() {
+	private void loadImmobilienDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
 			return;
@@ -104,7 +108,7 @@ public class CSVPropertyProvider {
 
 	}
 
-	public void loadVerkehrsstationenDatei() {
+	private void loadVerkehrsstationenDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
 			return;
@@ -154,7 +158,7 @@ public class CSVPropertyProvider {
 
 	}
 
-	public void loadGebaeudeDatei() {
+	private void loadGebaeudeDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
 			return;
@@ -380,5 +384,30 @@ public class CSVPropertyProvider {
 			this.quelle = quelle;
 		}
 
+	}
+
+
+	private void loadBetreiberDatei() {
+		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
+		if (csvPath == null || csvPath.isEmpty()) {
+			return;
+		}
+
+		try (FileInputStream fis = new FileInputStream(csvPath);
+				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
+			String line ="";
+			while ((line = br.readLine()) != null) {
+				betreiberList.add(line);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public List<String> getBetreiber(){
+		return betreiberList;
 	}
 }

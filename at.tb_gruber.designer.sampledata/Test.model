@@ -11,7 +11,9 @@
     </verteilercontainer>
   </objekt>
   <objekt name="Gebäude D">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00"/>
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
+      <betreiber name="Immo (MA)"/>
+    </anlage>
   </objekt>
   <plankopf>
     <textbaustein Label="02/2020"/>

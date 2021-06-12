@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="designer" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="designer" version="12.0.0.2017041100">
   <ownedViewpoints name="AnlagenDesigner" modelFileExtension="model">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Anlagendiagramm" initialisation="true" domainClass="model::Bahnhof">
       <metamodel href="http://www.tb-gruber.at/model#/"/>
@@ -86,7 +86,7 @@
         </edgeMappings>
         <containerMappings name="ObjektContainer" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editObjektLabel']" domainClass="model::Objekt">
           <subNodeMappings name="Et" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
               <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -140,7 +140,7 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Trafo" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Trafo">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
               <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -456,7 +456,7 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
               </style>
             </borderedNodeMappings>
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
               <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -846,7 +846,7 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Generator" label="Generator" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Generator">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
               <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -900,7 +900,7 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Umrichter" label="Umrichter" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Umrichter">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
               <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -954,7 +954,7 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="ESP" label="Energiespeicher" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energiespeicher">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
               <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1042,7 +1042,7 @@
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
                 </style>
               </borderedNodeMappings>
-              <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber">
+              <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
                 <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1495,16 +1495,51 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="betreiber" label="Betreiber anzeigen" precondition="aql:(container.betreiber == null)" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='betreiber']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="betreiber" label="Betreiber hinzufügen" precondition="aql:(container.betreiber == null)" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='betreiber']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber"/>
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Betreiberauswahl">
+                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation/>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='betreiber']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                    <groups name="Default Group" domainClass="model::Betreiber" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:SelectDescription" name="betreiberSelect" labelExpression="Betreiber:" valueExpression="aql:self.name" candidatesExpression="service:getAllBetreiber()" candidateDisplayExpression="aql:candidate.toString()">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                        </initialOperation>
+                      </controls>
+                    </groups>
                   </subModelOperations>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="editBetreiber" mappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='betreiber']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Betreiberauswahl">
+                <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                  <initialOperation/>
+                </buttons>
+                <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                  <initialOperation/>
+                </buttons>
+                <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']/@initialOperation/@firstModelOperations/@groups.0"/>
+                <groups name="Default Group" domainClass="model::Betreiber" semanticCandidateExpression="var:self">
+                  <controls xsi:type="properties:SelectDescription" name="betreiberSelect" labelExpression="Betreiber:" valueExpression="aql:self.name" candidatesExpression="service:getAllBetreiber()" candidateDisplayExpression="aql:candidate.toString()">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </initialOperation>
+                  </controls>
+                </groups>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
