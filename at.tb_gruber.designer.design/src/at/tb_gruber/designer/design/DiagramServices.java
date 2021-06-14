@@ -1,6 +1,5 @@
 package at.tb_gruber.designer.design;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -11,6 +10,7 @@ import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
+import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.NapPosition;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
@@ -191,10 +191,27 @@ public class DiagramServices {
 			return false;
 		}
 	}
-	
+
 	public List<String> getAllBetreiber(EObject self){
 		ensurePropsInitialized();
+		
 		return props.getBetreiber();
+	}
+	
+	public Boolean isSolid(EObject self){
+		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.HAUPTVERSORGUNG);
+	}
+
+	public Boolean isDot(EObject self){
+		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.EVU);
+	}
+
+	public Boolean isDash(EObject self){
+		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_ÖBB);
+	}
+
+	public Boolean isDashDot(EObject self){
+		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_DRITTER);
 	}
 	
 }
