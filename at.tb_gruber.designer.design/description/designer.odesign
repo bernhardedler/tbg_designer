@@ -296,16 +296,6 @@
         </edgeMappings>
         <containerMappings name="ObjektContainer" labelDirectEdit="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editObjektLabel']" domainClass="model::Objekt">
           <subNodeMappings name="Et" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energietechnikanlage">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
-                <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>NORTH</forbiddenSides>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -350,16 +340,6 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Trafo" deletionDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Trafo">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
-                <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>NORTH</forbiddenSides>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isTspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/trafo/trafo_violett_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -660,22 +640,12 @@
               <style xsi:type="style:NoteDescription" labelSize="12" labelExpression="''" labelPosition="node">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
                 <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>EAST</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
               </style>
             </borderedNodeMappings>
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
-                <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>NORTH</forbiddenSides>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </borderedNodeMappings>
+            <borderedNodeMappings name="betreiber" label="betreiber dummy" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Betreiber"/>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_violett_s_nap_vor.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1056,16 +1026,6 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Generator" label="Generator" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Generator">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
-                <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>NORTH</forbiddenSides>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/generator/generator_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1110,16 +1070,6 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Umrichter" label="Umrichter" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Umrichter">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
-                <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>NORTH</forbiddenSides>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichter/umrichter_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1164,16 +1114,6 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="ESP" label="Energiespeicher" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energiespeicher">
-            <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <forbiddenSides>WEST</forbiddenSides>
-                <forbiddenSides>SOUTH</forbiddenSides>
-                <forbiddenSides>NORTH</forbiddenSides>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1231,6 +1171,13 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
+          <subNodeMappings name="Betreiber" label="Betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
+            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
           <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerContainer">
             <borderedNodeMappings name="nap" label="nap" semanticCandidatesExpression="feature:netzanschlusspunkt" domainClass="model::Netzanschlusspunkt">
               <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:nrHauptversorgung" hideLabelByDefault="true" sizeComputationExpression="10" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
@@ -1246,20 +1193,8 @@
                 <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelPosition="node">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <forbiddenSides>WEST</forbiddenSides>
                   <forbiddenSides>SOUTH</forbiddenSides>
-                  <forbiddenSides>EAST</forbiddenSides>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
-                </style>
-              </borderedNodeMappings>
-              <borderedNodeMappings name="betreiber" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='editBetreiber']" domainClass="model::Betreiber">
-                <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" width="10" height="5">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <forbiddenSides>WEST</forbiddenSides>
-                  <forbiddenSides>SOUTH</forbiddenSides>
-                  <forbiddenSides>NORTH</forbiddenSides>
-                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 </style>
               </borderedNodeMappings>
               <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
@@ -1586,7 +1521,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/plankopf_legende_skaliert.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/plankopf.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -1618,8 +1553,17 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Trafo" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="sekundaerspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="sekundaerspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:model::spannungsarttype::NSP50Hz"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1632,7 +1576,16 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1645,7 +1598,16 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Energietechnikanlage" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ET 00"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ET 00"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1673,7 +1635,16 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Generator" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="G 00"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="G 00"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1686,7 +1657,16 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Umrichter" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="UR 00"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="UR 00"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1699,39 +1679,22 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Energiespeicher" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ESP 00"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ESP 00"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="betreiber" label="Betreiber hinzufügen" precondition="aql:(container.betreiber == null)" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='betreiber']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Betreiberauswahl">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.1/@ownedTools[name='betreiber']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" domainClass="model::Betreiber" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:SelectDescription" name="betreiberSelect" labelExpression="Betreiber:" valueExpression="aql:self.name" candidatesExpression="service:getAllBetreiber()" candidateDisplayExpression="aql:candidate.toString()">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="editBetreiber" mappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='betreiber'] //@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='betreiber']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="editBetreiber" mappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1753,9 +1716,28 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" label="Betreiber" precondition="aql:(container.betreiber == null)" nodeMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@borderedNodeMappings[name='betreiber']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:instance">
+                          <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']" containerViewExpression="aql:containerView.getparentDiagram()"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Verteiler">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VerteilerContainerAnlegen" label="VerteilerContainerAnlegen" containerMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VerteilerContainerAnlegen" label="Verteilercontainer" containerMappings="//@ownedViewpoints[name='AnlagenDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>

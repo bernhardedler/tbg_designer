@@ -17,7 +17,7 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Tunnelobjekt"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Freistehender_VT"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Verkehrsstation"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Sonstiges"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Oberleitungsmast"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//spannungsarttype">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/rot"/>
@@ -124,7 +124,7 @@
     <genClasses ecoreClass="model.ecore#//Netzanschlusspunkt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/nrHauptversorgung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/nrReserveEinspeisung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/beschreibung"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/beschreibung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/postition"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Versorgungsknoten">

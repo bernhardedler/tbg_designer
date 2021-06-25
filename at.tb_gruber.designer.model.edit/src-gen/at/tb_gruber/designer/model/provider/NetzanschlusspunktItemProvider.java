@@ -105,7 +105,7 @@ public class NetzanschlusspunktItemProvider extends ItemProviderAdapter implemen
 						getResourceLocator(), getString("_UI_Netzanschlusspunkt_beschreibung_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Netzanschlusspunkt_beschreibung_feature",
 								"_UI_Netzanschlusspunkt_type"),
-						ModelPackage.Literals.NETZANSCHLUSSPUNKT__BESCHREIBUNG, true, false, false,
+						ModelPackage.Literals.NETZANSCHLUSSPUNKT__BESCHREIBUNG, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 

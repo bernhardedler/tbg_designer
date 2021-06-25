@@ -35,7 +35,7 @@
     <eLiterals name="Tunnelobjekt" value="3" literal="Tunnelobjekt"/>
     <eLiterals name="Freistehender_VT" value="4" literal="Freistehender VT"/>
     <eLiterals name="Verkehrsstation" value="5" literal="Verkehrsstation"/>
-    <eLiterals name="Sonstiges" value="6" literal="Sonstiges"/>
+    <eLiterals name="Oberleitungsmast" value="6" literal="Oberleitungsmast"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anlage" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
