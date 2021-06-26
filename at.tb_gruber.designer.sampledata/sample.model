@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample">
+  <objekt name="123">
+    <anlage xsi:type="tbg:VerteilerContainer">
+      <verteiler xsi:type="tbg:VerteilerOhneZaehler"/>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <netzanschlusspunkt beschreibung="NAP"/>
+        <verteilerdetails nummer="ZP-Nr.: 00000"/>
+      </verteiler>
+      <netzanschlusspunkt beschreibung="NAP"/>
+    </anlage>
+  </objekt>
+</tbg:Bahnhof>

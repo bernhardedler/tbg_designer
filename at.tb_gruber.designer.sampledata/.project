@@ -3,6 +3,7 @@
 	<name>at.tb_gruber.designer.sampledata</name>
 	<comment></comment>
 	<projects>
+		<project>at.tb_gruber.designer.design</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>

@@ -326,26 +326,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Verteiler} instances.
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerMitZaehler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VerteilerItemProvider verteilerItemProvider;
+	protected VerteilerMitZaehlerItemProvider verteilerMitZaehlerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Verteiler}.
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VerteilerMitZaehler}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVerteilerAdapter() {
-		if (verteilerItemProvider == null) {
-			verteilerItemProvider = new VerteilerItemProvider(this);
+	public Adapter createVerteilerMitZaehlerAdapter() {
+		if (verteilerMitZaehlerItemProvider == null) {
+			verteilerMitZaehlerItemProvider = new VerteilerMitZaehlerItemProvider(this);
 		}
 
-		return verteilerItemProvider;
+		return verteilerMitZaehlerItemProvider;
 	}
 
 	/**
@@ -438,6 +438,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 		}
 
 		return betreiberItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerOhneZaehler} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VerteilerOhneZaehlerItemProvider verteilerOhneZaehlerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VerteilerOhneZaehler}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerteilerOhneZaehlerAdapter() {
+		if (verteilerOhneZaehlerItemProvider == null) {
+			verteilerOhneZaehlerItemProvider = new VerteilerOhneZaehlerItemProvider(this);
+		}
+
+		return verteilerOhneZaehlerItemProvider;
 	}
 
 	/**
@@ -567,8 +590,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			generatorItemProvider.dispose();
 		if (umrichterItemProvider != null)
 			umrichterItemProvider.dispose();
-		if (verteilerItemProvider != null)
-			verteilerItemProvider.dispose();
+		if (verteilerMitZaehlerItemProvider != null)
+			verteilerMitZaehlerItemProvider.dispose();
 		if (energiespeicherItemProvider != null)
 			energiespeicherItemProvider.dispose();
 		if (verteilerDetailsItemProvider != null)
@@ -577,6 +600,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			verteilerContainerItemProvider.dispose();
 		if (betreiberItemProvider != null)
 			betreiberItemProvider.dispose();
+		if (verteilerOhneZaehlerItemProvider != null)
+			verteilerOhneZaehlerItemProvider.dispose();
 	}
 
 }

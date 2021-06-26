@@ -23,9 +23,11 @@ import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Umrichter;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
-import at.tb_gruber.designer.model.Verteiler;
+import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.VerteilerDetails;
+import at.tb_gruber.designer.model.VerteilerMitZaehler;
+import at.tb_gruber.designer.model.VerteilerOhneZaehler;
 import at.tb_gruber.designer.model.eadb_versorgung_art;
 import at.tb_gruber.designer.model.externe_datenquelle;
 import at.tb_gruber.designer.model.objektarttype;
@@ -38,8 +40,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -144,7 +144,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass verteilerEClass = null;
+	private EClass verteilerMitZaehlerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,6 +173,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass betreiberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass verteilerBaseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass verteilerOhneZaehlerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -279,9 +293,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				: new ModelPackageImpl();
 
 		isInited = true;
-
-		// Initialize simple dependencies
-		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theModelPackage.createPackageContents();
@@ -455,16 +466,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EAttribute getObjekt_ExterneQuelle() {
 		return (EAttribute) objektEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getObjekt_Verteilercontainer() {
-		return (EReference) objektEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -943,8 +944,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getVerteiler() {
-		return verteilerEClass;
+	public EClass getVerteilerMitZaehler() {
+		return verteilerMitZaehlerEClass;
 	}
 
 	/**
@@ -953,28 +954,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerteiler_HasZaehler() {
-		return (EAttribute) verteilerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getVerteiler_Verteilerdetails() {
-		return (EReference) verteilerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getVerteiler_Netzanschlusspunkt() {
-		return (EReference) verteilerEClass.getEStructuralFeatures().get(1);
+	public EReference getVerteilerMitZaehler_Verteilerdetails() {
+		return (EReference) verteilerMitZaehlerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1003,18 +984,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerteilerDetails_Betreiber() {
-		return (EAttribute) verteilerDetailsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getVerteilerDetails_Nummer() {
-		return (EAttribute) verteilerDetailsEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) verteilerDetailsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1065,6 +1036,36 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EAttribute getBetreiber_Name() {
 		return (EAttribute) betreiberEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVerteilerBase() {
+		return verteilerBaseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVerteilerBase_Netzanschlusspunkt() {
+		return (EReference) verteilerBaseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVerteilerOhneZaehler() {
+		return verteilerOhneZaehlerEClass;
 	}
 
 	/**
@@ -1194,7 +1195,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(objektEClass, OBJEKT__DB776UA);
 		createEAttribute(objektEClass, OBJEKT__GPSSTANDORT);
 		createEAttribute(objektEClass, OBJEKT__EXTERNE_QUELLE);
-		createEReference(objektEClass, OBJEKT__VERTEILERCONTAINER);
 
 		anlageEClass = createEClass(ANLAGE);
 		createEAttribute(anlageEClass, ANLAGE__NAME);
@@ -1254,15 +1254,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		umrichterEClass = createEClass(UMRICHTER);
 
-		verteilerEClass = createEClass(VERTEILER);
-		createEAttribute(verteilerEClass, VERTEILER__HAS_ZAEHLER);
-		createEReference(verteilerEClass, VERTEILER__NETZANSCHLUSSPUNKT);
-		createEReference(verteilerEClass, VERTEILER__VERTEILERDETAILS);
+		verteilerMitZaehlerEClass = createEClass(VERTEILER_MIT_ZAEHLER);
+		createEReference(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS);
 
 		energiespeicherEClass = createEClass(ENERGIESPEICHER);
 
 		verteilerDetailsEClass = createEClass(VERTEILER_DETAILS);
-		createEAttribute(verteilerDetailsEClass, VERTEILER_DETAILS__BETREIBER);
 		createEAttribute(verteilerDetailsEClass, VERTEILER_DETAILS__NUMMER);
 
 		verteilerContainerEClass = createEClass(VERTEILER_CONTAINER);
@@ -1271,6 +1268,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		betreiberEClass = createEClass(BETREIBER);
 		createEAttribute(betreiberEClass, BETREIBER__NAME);
+
+		verteilerBaseEClass = createEClass(VERTEILER_BASE);
+		createEReference(verteilerBaseEClass, VERTEILER_BASE__NETZANSCHLUSSPUNKT);
+
+		verteilerOhneZaehlerEClass = createEClass(VERTEILER_OHNE_ZAEHLER);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
@@ -1307,10 +1309,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
-				.getEPackage(XMLTypePackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -1322,8 +1320,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		generatorEClass.getESuperTypes().add(this.getSelbststAnlage());
 		selbststAnlageEClass.getESuperTypes().add(this.getAnlage());
 		umrichterEClass.getESuperTypes().add(this.getSelbststAnlage());
-		verteilerEClass.getESuperTypes().add(this.getAnlage());
+		verteilerMitZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
 		energiespeicherEClass.getESuperTypes().add(this.getSelbststAnlage());
+		verteilerContainerEClass.getESuperTypes().add(this.getAnlage());
+		verteilerBaseEClass.getESuperTypes().add(this.getAnlage());
+		verteilerOhneZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bahnhofEClass, Bahnhof.class, "Bahnhof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1362,9 +1363,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getObjekt_ExterneQuelle(), this.getexterne_datenquelle(), "externeQuelle", null, 0, 1,
 				Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getObjekt_Verteilercontainer(), this.getVerteilerContainer(), null, "verteilercontainer", null,
-				0, -1, Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(anlageEClass, Anlage.class, "Anlage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnlage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Anlage.class, !IS_TRANSIENT,
@@ -1490,33 +1488,24 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(umrichterEClass, Umrichter.class, "Umrichter", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(verteilerEClass, Verteiler.class, "Verteiler", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVerteiler_HasZaehler(), theXMLTypePackage.getBoolean(), "hasZaehler", null, 0, 1,
-				Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getVerteiler_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null, "netzanschlusspunkt",
-				null, 0, 1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEClass(verteilerMitZaehlerEClass, VerteilerMitZaehler.class, "VerteilerMitZaehler", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVerteilerMitZaehler_Verteilerdetails(), this.getVerteilerDetails(), null, "verteilerdetails",
+				null, 1, 1, VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVerteiler_Verteilerdetails(), this.getVerteilerDetails(), null, "verteilerdetails", null, 1,
-				1, Verteiler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(verteilerDetailsEClass, VerteilerDetails.class, "VerteilerDetails", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVerteilerDetails_Betreiber(), ecorePackage.getEString(), "betreiber", null, 0, 1,
-				VerteilerDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVerteilerDetails_Nummer(), ecorePackage.getEString(), "nummer", null, 0, 1,
 				VerteilerDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(verteilerContainerEClass, VerteilerContainer.class, "VerteilerContainer", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVerteilerContainer_Verteiler(), this.getVerteiler(), null, "verteiler", null, 0, -1,
+		initEReference(getVerteilerContainer_Verteiler(), this.getVerteilerBase(), null, "verteiler", null, 0, -1,
 				VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVerteilerContainer_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
@@ -1528,6 +1517,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getBetreiber_Name(), ecorePackage.getEString(), "name", null, 0, 1, Betreiber.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(verteilerBaseEClass, VerteilerBase.class, "VerteilerBase", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVerteilerBase_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null, "netzanschlusspunkt",
+				null, 0, 1, VerteilerBase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(verteilerOhneZaehlerEClass, VerteilerOhneZaehler.class, "VerteilerOhneZaehler", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.TRAFOSTATION);
@@ -1536,16 +1534,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.TUNNELOBJEKT);
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.FREISTEHENDER_VT);
 		addEEnumLiteral(objektarttypeEEnum, objektarttype.VERKEHRSSTATION);
-		addEEnumLiteral(objektarttypeEEnum, objektarttype.SONSTIGES);
+		addEEnumLiteral(objektarttypeEEnum, objektarttype.OBERLEITUNGSMAST);
 
 		initEEnum(spannungsarttypeEEnum, spannungsarttype.class, "spannungsarttype");
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.ROT);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.GRÜN);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.MAGENTA);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.CYAN);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.BLAU);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.VIOLETT);
-		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.BRAUN);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.HSP_UN_AB_1K_V50_HZ);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.HSP_UN_15K_V16_7HZ);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.UN_BIS_INKL_15K_VDC);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_1);
+		addEEnumLiteral(spannungsarttypeEEnum, spannungsarttype.RESERVE_2);
 
 		initEEnum(externe_datenquelleEEnum, externe_datenquelle.class, "externe_datenquelle");
 		addEEnumLiteral(externe_datenquelleEEnum, externe_datenquelle.UNDEFINED);

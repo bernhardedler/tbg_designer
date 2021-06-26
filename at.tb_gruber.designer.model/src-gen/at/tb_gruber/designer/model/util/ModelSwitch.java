@@ -179,11 +179,13 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.VERTEILER: {
-			Verteiler verteiler = (Verteiler) theEObject;
-			T result = caseVerteiler(verteiler);
+		case ModelPackage.VERTEILER_MIT_ZAEHLER: {
+			VerteilerMitZaehler verteilerMitZaehler = (VerteilerMitZaehler) theEObject;
+			T result = caseVerteilerMitZaehler(verteilerMitZaehler);
 			if (result == null)
-				result = caseAnlage(verteiler);
+				result = caseVerteilerBase(verteilerMitZaehler);
+			if (result == null)
+				result = caseAnlage(verteilerMitZaehler);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -210,12 +212,34 @@ public class ModelSwitch<T> extends Switch<T> {
 			VerteilerContainer verteilerContainer = (VerteilerContainer) theEObject;
 			T result = caseVerteilerContainer(verteilerContainer);
 			if (result == null)
+				result = caseAnlage(verteilerContainer);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case ModelPackage.BETREIBER: {
 			Betreiber betreiber = (Betreiber) theEObject;
 			T result = caseBetreiber(betreiber);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERTEILER_BASE: {
+			VerteilerBase verteilerBase = (VerteilerBase) theEObject;
+			T result = caseVerteilerBase(verteilerBase);
+			if (result == null)
+				result = caseAnlage(verteilerBase);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.VERTEILER_OHNE_ZAEHLER: {
+			VerteilerOhneZaehler verteilerOhneZaehler = (VerteilerOhneZaehler) theEObject;
+			T result = caseVerteilerOhneZaehler(verteilerOhneZaehler);
+			if (result == null)
+				result = caseVerteilerBase(verteilerOhneZaehler);
+			if (result == null)
+				result = caseAnlage(verteilerOhneZaehler);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -421,17 +445,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Verteiler</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Mit Zaehler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Verteiler</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Verteiler Mit Zaehler</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVerteiler(Verteiler object) {
+	public T caseVerteilerMitZaehler(VerteilerMitZaehler object) {
 		return null;
 	}
 
@@ -492,6 +516,36 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBetreiber(Betreiber object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Base</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verteiler Base</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerteilerBase(VerteilerBase object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Ohne Zaehler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verteiler Ohne Zaehler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerteilerOhneZaehler(VerteilerOhneZaehler object) {
 		return null;
 	}
 

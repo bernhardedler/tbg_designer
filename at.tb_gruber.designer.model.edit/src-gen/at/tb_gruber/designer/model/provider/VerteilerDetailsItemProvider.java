@@ -53,26 +53,9 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addBetreiberPropertyDescriptor(object);
 			addNummerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Betreiber feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBetreiberPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_VerteilerDetails_betreiber_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_VerteilerDetails_betreiber_feature",
-								"_UI_VerteilerDetails_type"),
-						ModelPackage.Literals.VERTEILER_DETAILS__BETREIBER, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -120,7 +103,7 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VerteilerDetails) object).getBetreiber();
+		String label = crop(((VerteilerDetails) object).getNummer());
 		return label == null || label.length() == 0 ? getString("_UI_VerteilerDetails_type")
 				: getString("_UI_VerteilerDetails_type") + " " + label;
 	}
@@ -137,7 +120,6 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VerteilerDetails.class)) {
-		case ModelPackage.VERTEILER_DETAILS__BETREIBER:
 		case ModelPackage.VERTEILER_DETAILS__NUMMER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

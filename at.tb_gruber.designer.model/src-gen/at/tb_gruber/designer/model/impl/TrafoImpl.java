@@ -36,7 +36,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = spannungsarttype.ROT;
+	protected static final spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = spannungsarttype.HSP_UN_AB_1K_V50_HZ;
 
 	/**
 	 * The cached value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.

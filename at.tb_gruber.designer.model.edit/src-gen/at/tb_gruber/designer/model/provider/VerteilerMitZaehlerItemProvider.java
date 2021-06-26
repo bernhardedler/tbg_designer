@@ -4,31 +4,33 @@ package at.tb_gruber.designer.model.provider;
 
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.VerteilerContainer;
+import at.tb_gruber.designer.model.VerteilerMitZaehler;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.VerteilerContainer} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.VerteilerMitZaehler} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VerteilerContainerItemProvider extends AnlageItemProvider {
+public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VerteilerContainerItemProvider(AdapterFactory adapterFactory) {
+	public VerteilerMitZaehlerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,8 +61,7 @@ public class VerteilerContainerItemProvider extends AnlageItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__VERTEILER);
-			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
+			childrenFeatures.add(ModelPackage.Literals.VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS);
 		}
 		return childrenFeatures;
 	}
@@ -79,14 +80,14 @@ public class VerteilerContainerItemProvider extends AnlageItemProvider {
 	}
 
 	/**
-	 * This returns VerteilerContainer.gif.
+	 * This returns VerteilerMitZaehler.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/VerteilerContainer"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/VerteilerMitZaehler"));
 	}
 
 	/**
@@ -107,9 +108,9 @@ public class VerteilerContainerItemProvider extends AnlageItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VerteilerContainer) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_VerteilerContainer_type")
-				: getString("_UI_VerteilerContainer_type") + " " + label;
+		String label = ((VerteilerMitZaehler) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_VerteilerMitZaehler_type")
+				: getString("_UI_VerteilerMitZaehler_type") + " " + label;
 	}
 
 	/**
@@ -123,9 +124,8 @@ public class VerteilerContainerItemProvider extends AnlageItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(VerteilerContainer.class)) {
-		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
-		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+		switch (notification.getFeatureID(VerteilerMitZaehler.class)) {
+		case ModelPackage.VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -143,14 +143,8 @@ public class VerteilerContainerItemProvider extends AnlageItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__VERTEILER,
-				ModelFactory.eINSTANCE.createVerteilerMitZaehler()));
-
-		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__VERTEILER,
-				ModelFactory.eINSTANCE.createVerteilerOhneZaehler()));
-
-		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT,
-				ModelFactory.eINSTANCE.createNetzanschlusspunkt()));
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS,
+				ModelFactory.eINSTANCE.createVerteilerDetails()));
 	}
 
 }

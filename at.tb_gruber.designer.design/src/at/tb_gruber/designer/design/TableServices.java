@@ -13,7 +13,7 @@ import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
-import at.tb_gruber.designer.model.Verteiler;
+import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
 
 /**
@@ -47,8 +47,8 @@ public class TableServices {
 	public String getZpNrHaupt(EObject self) {
 		if (self instanceof VerteilerContainer) {
 			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
-		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
+		} else if (self instanceof VerteilerBase) {
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
 		} else if (self instanceof Versorgungsknoten) {
 			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
 		} else {
@@ -59,8 +59,8 @@ public class TableServices {
 	public String getZpNrReserveEinsp(EObject self) {
 		if (self instanceof VerteilerContainer) {
 			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
-		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
+		} else if (self instanceof VerteilerBase) {
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
 		} else if (self instanceof Versorgungsknoten) {
 			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
 		} else {

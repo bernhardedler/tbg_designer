@@ -4,8 +4,6 @@ package at.tb_gruber.designer.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Verteiler Container</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VerteilerContainer extends EObject {
+public interface VerteilerContainer extends Anlage {
 	/**
 	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -48,7 +46,7 @@ public interface VerteilerContainer extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Verteiler</b></em>' containment reference list.
-	 * The list contents are of type {@link at.tb_gruber.designer.model.Verteiler}.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.VerteilerBase}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verteiler</em>' containment reference list.
@@ -56,6 +54,6 @@ public interface VerteilerContainer extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Verteiler> getVerteiler();
+	EList<VerteilerBase> getVerteiler();
 
 } // VerteilerContainer

@@ -132,8 +132,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseVerteiler(Verteiler object) {
-			return createVerteilerAdapter();
+		public Adapter caseVerteilerMitZaehler(VerteilerMitZaehler object) {
+			return createVerteilerMitZaehlerAdapter();
 		}
 
 		@Override
@@ -154,6 +154,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseBetreiber(Betreiber object) {
 			return createBetreiberAdapter();
+		}
+
+		@Override
+		public Adapter caseVerteilerBase(VerteilerBase object) {
+			return createVerteilerBaseAdapter();
+		}
+
+		@Override
+		public Adapter caseVerteilerOhneZaehler(VerteilerOhneZaehler object) {
+			return createVerteilerOhneZaehlerAdapter();
 		}
 
 		@Override
@@ -358,16 +368,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Verteiler <em>Verteiler</em>}'.
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.VerteilerMitZaehler <em>Verteiler Mit Zaehler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see at.tb_gruber.designer.model.Verteiler
+	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler
 	 * @generated
 	 */
-	public Adapter createVerteilerAdapter() {
+	public Adapter createVerteilerMitZaehlerAdapter() {
 		return null;
 	}
 
@@ -424,6 +434,34 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBetreiberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.VerteilerBase <em>Verteiler Base</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.VerteilerBase
+	 * @generated
+	 */
+	public Adapter createVerteilerBaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.VerteilerOhneZaehler <em>Verteiler Ohne Zaehler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.VerteilerOhneZaehler
+	 * @generated
+	 */
+	public Adapter createVerteilerOhneZaehlerAdapter() {
 		return null;
 	}
 

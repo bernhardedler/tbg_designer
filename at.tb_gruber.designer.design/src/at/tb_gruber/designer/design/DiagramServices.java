@@ -16,7 +16,7 @@ import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
-import at.tb_gruber.designer.model.Verteiler;
+import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.spannungsarttype;
 
@@ -41,8 +41,17 @@ public class DiagramServices {
 	 */
 	public Integer generateID(EObject self) {
 		Anlage parent = (Anlage) self.eContainer();
-		Objekt container = (Objekt) parent.eContainer();
-		Bahnhof project = (Bahnhof) container.eContainer();
+		EObject container = parent.eContainer();
+		Bahnhof project = null;
+		if (container instanceof Objekt) {
+			Objekt containerObj = (Objekt) container;
+			project = (Bahnhof) containerObj.eContainer();
+		} else if (container instanceof VerteilerContainer) {
+			VerteilerContainer vtc = (VerteilerContainer) container;
+			Objekt containerObj = (Objekt) vtc.eContainer();
+			project = (Bahnhof) containerObj.eContainer();
+		}
+		
 		List<Integer> alleIds = project.getObjekt().stream().flatMap(obj -> obj.getAnlage().stream())
 				.flatMap(anl -> anl.getVerbindungNach().stream()).map(ver -> ver.getNr()).collect(Collectors.toList());
 		alleIds.sort((x, y) -> x.compareTo(y));
@@ -80,59 +89,59 @@ public class DiagramServices {
 	}
 
 	public Boolean isVspViolett(EObject self) {
-		return isSpannungsart(self, spannungsarttype.VIOLETT_VALUE);
+		return isSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	public Boolean isVspRot(EObject self) {
-		return isSpannungsart(self, spannungsarttype.ROT_VALUE);
+		return isSpannungsart(self, spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
 	}
 
 	public Boolean isVspBlau(EObject self) {
-		return isSpannungsart(self, spannungsarttype.BLAU_VALUE);
+		return isSpannungsart(self, spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
 	}
 
 	public Boolean isVspGruen(EObject self) {
-		return isSpannungsart(self, spannungsarttype.GRÜN_VALUE);
+		return isSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE);
 	}
 
 	public Boolean isVspMagenta(EObject self) {
-		return isSpannungsart(self, spannungsarttype.MAGENTA_VALUE);
+		return isSpannungsart(self, spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isVspCyan(EObject self) {
-		return isSpannungsart(self, spannungsarttype.CYAN_VALUE);
+		return isSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isVspBraun(EObject self) {
-		return isSpannungsart(self, spannungsarttype.BRAUN_VALUE);
+		return isSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	public Boolean isTspViolett(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.VIOLETT_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	public Boolean isTspRot(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.ROT_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
 	}
 
 	public Boolean isTspBlau(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.BLAU_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
 	}
 
 	public Boolean isTspGruen(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.GRÜN_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE);
 	}
 
 	public Boolean isTspMagenta(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.MAGENTA_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isTspCyan(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.CYAN_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isTspBraun(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.BRAUN_VALUE);
+		return isTrafoSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	private Boolean isTrafoSpannungsart(EObject self, Integer target) {
@@ -150,8 +159,8 @@ public class DiagramServices {
 	public Boolean isNapVor(EObject self) {
 		if (self instanceof VerteilerContainer) {
 			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
-		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+		} else if (self instanceof VerteilerBase) {
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
 		} else if (self instanceof Versorgungsknoten) {
 			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
 		} else {
@@ -162,8 +171,8 @@ public class DiagramServices {
 	public Boolean isNapMitte(EObject self) {
 		if (self instanceof VerteilerContainer) {
 			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
-		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+		} else if (self instanceof VerteilerBase) {
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
 		} else if (self instanceof Versorgungsknoten) {
 			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
 		} else {
@@ -175,22 +184,14 @@ public class DiagramServices {
 	public Boolean isNapNach(EObject self) {
 		if (self instanceof VerteilerContainer) {
 			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
-		} else if (self instanceof Verteiler) {
-			return Optional.ofNullable(((Verteiler) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+		} else if (self instanceof VerteilerBase) {
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
 		} else if (self instanceof Versorgungsknoten) {
 			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
 		} else {
 			return false;
 		}
 	}	
-
-	public Boolean hasZaehler(EObject self) {
-		if (self instanceof Verteiler) {
-			return ((Verteiler) self).isHasZaehler();
-		} else {
-			return false;
-		}
-	}
 
 	public List<String> getAllBetreiber(EObject self){
 		ensurePropsInitialized();

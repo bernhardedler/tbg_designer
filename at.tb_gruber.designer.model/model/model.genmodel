@@ -20,13 +20,13 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Oberleitungsmast"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//spannungsarttype">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/rot"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/grün"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/magenta"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/cyan"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/blau"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/violett"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/braun"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP_Un_ab_1kV_50Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP_Un_bis_inkl_1kV_50Hz_AC"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP_Un_15kV_16_7Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP_Un_bis_inkl_1kV_16_7Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Un_bis_inkl_1_5kV_DC"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_1"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Reserve_2"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//externe_datenquelle">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//externe_datenquelle/undefined"/>
@@ -79,7 +79,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/db776ua"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/gpsstandort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/externeQuelle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Objekt/verteilercontainer"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Anlage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/name"/>
@@ -136,14 +135,11 @@
     <genClasses ecoreClass="model.ecore#//Generator"/>
     <genClasses ecoreClass="model.ecore#//SelbststAnlage"/>
     <genClasses ecoreClass="model.ecore#//Umrichter"/>
-    <genClasses ecoreClass="model.ecore#//Verteiler">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verteiler/hasZaehler"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/netzanschlusspunkt"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Verteiler/verteilerdetails"/>
+    <genClasses ecoreClass="model.ecore#//VerteilerMitZaehler">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerMitZaehler/verteilerdetails"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Energiespeicher"/>
     <genClasses ecoreClass="model.ecore#//VerteilerDetails">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/betreiber"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/nummer"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
@@ -153,5 +149,9 @@
     <genClasses ecoreClass="model.ecore#//Betreiber">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Betreiber/name"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//VerteilerBase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerBase/netzanschlusspunkt"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//VerteilerOhneZaehler"/>
   </genPackages>
 </genmodel:GenModel>

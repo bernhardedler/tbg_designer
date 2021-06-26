@@ -19,146 +19,151 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum spannungsarttype implements Enumerator {
 	/**
-	 * The '<em><b>Rot</b></em>' literal object.
+	 * The '<em><b>HSP Un ab 1k V50 Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ROT_VALUE
+	 * @see #HSP_UN_AB_1K_V50_HZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ROT(0, "rot", "HSP Un > 1kV 50Hz"),
-	/**
-	 * The '<em><b>Grün</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #GRÜN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	GRÜN(1, "grün", "NSP Un bis inkl. 1kV 50Hz AC"),
-	/**
-	 * The '<em><b>Magenta</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #MAGENTA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MAGENTA(2, "magenta", "HSP Un = 15kV 16,7Hz"),
-	/**
-	 * The '<em><b>Cyan</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #CYAN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	CYAN(3, "cyan", "NSP Un bis inkl. 1kV 16,7Hz"),
-	/**
-	 * The '<em><b>Blau</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #BLAU_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	BLAU(4, "blau", "Un bis inkl. 1,5kV DC"),
+	HSP_UN_AB_1K_V50_HZ(0, "HSP_Un_ab_1kV_50Hz", "rot"),
 
 	/**
-	 * The '<em><b>Violett</b></em>' literal object.
+	 * The '<em><b>NSP Un bis inkl 1k V50 Hz AC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #VIOLETT_VALUE
+	 * @see #NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	VIOLETT(5, "violett", "violett"),
-	/**
-	 * The '<em><b>Braun</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #BRAUN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	BRAUN(6, "braun", "braun");
+	NSP_UN_BIS_INKL_1K_V50_HZ_AC(1, "NSP_Un_bis_inkl_1kV_50Hz_AC", "gruen"),
 
 	/**
-	 * The '<em><b>Rot</b></em>' literal value.
+	 * The '<em><b>HSP Un 15k V16 7Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ROT
-	 * @model name="rot" literal="HSP Un &gt; 1kV 50Hz"
+	 * @see #HSP_UN_15K_V16_7HZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ROT_VALUE = 0;
+	HSP_UN_15K_V16_7HZ(2, "HSP_Un_15kV_16_7Hz", "magenta"),
 
 	/**
-	 * The '<em><b>Grün</b></em>' literal value.
+	 * The '<em><b>NSP Un bis inkl 1k V16 7Hz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GRÜN
-	 * @model name="grün" literal="NSP Un bis inkl. 1kV 50Hz AC"
+	 * @see #NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int GRÜN_VALUE = 1;
+	NSP_UN_BIS_INKL_1K_V16_7HZ(3, "NSP_Un_bis_inkl_1kV_16_7Hz", "cyan"),
 
 	/**
-	 * The '<em><b>Magenta</b></em>' literal value.
+	 * The '<em><b>Un bis inkl 15k VDC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MAGENTA
-	 * @model name="magenta" literal="HSP Un = 15kV 16,7Hz"
+	 * @see #UN_BIS_INKL_15K_VDC_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MAGENTA_VALUE = 2;
+	UN_BIS_INKL_15K_VDC(4, "Un_bis_inkl_1_5kV_DC", "blau"),
 
 	/**
-	 * The '<em><b>Cyan</b></em>' literal value.
+	 * The '<em><b>Reserve 1</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CYAN
-	 * @model name="cyan" literal="NSP Un bis inkl. 1kV 16,7Hz"
+	 * @see #RESERVE_1_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CYAN_VALUE = 3;
+	RESERVE_1(5, "Reserve_1", "Reserve 1"),
 
 	/**
-	 * The '<em><b>Blau</b></em>' literal value.
+	 * The '<em><b>Reserve 2</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BLAU
-	 * @model name="blau" literal="Un bis inkl. 1,5kV DC"
+	 * @see #RESERVE_2_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BLAU_VALUE = 4;
+	RESERVE_2(6, "Reserve_2", "Reserve_2");
 
 	/**
-	 * The '<em><b>Violett</b></em>' literal value.
+	 * The '<em><b>HSP Un ab 1k V50 Hz</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #VIOLETT
-	 * @model name="violett"
+	 * @see #HSP_UN_AB_1K_V50_HZ
+	 * @model name="HSP_Un_ab_1kV_50Hz" literal="rot"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VIOLETT_VALUE = 5;
+	public static final int HSP_UN_AB_1K_V50_HZ_VALUE = 0;
 
 	/**
-	 * The '<em><b>Braun</b></em>' literal value.
+	 * The '<em><b>NSP Un bis inkl 1k V50 Hz AC</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BRAUN
-	 * @model name="braun"
+	 * @see #NSP_UN_BIS_INKL_1K_V50_HZ_AC
+	 * @model name="NSP_Un_bis_inkl_1kV_50Hz_AC" literal="gruen"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BRAUN_VALUE = 6;
+	public static final int NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE = 1;
+
+	/**
+	 * The '<em><b>HSP Un 15k V16 7Hz</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #HSP_UN_15K_V16_7HZ
+	 * @model name="HSP_Un_15kV_16_7Hz" literal="magenta"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int HSP_UN_15K_V16_7HZ_VALUE = 2;
+
+	/**
+	 * The '<em><b>NSP Un bis inkl 1k V16 7Hz</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NSP_UN_BIS_INKL_1K_V16_7HZ
+	 * @model name="NSP_Un_bis_inkl_1kV_16_7Hz" literal="cyan"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE = 3;
+
+	/**
+	 * The '<em><b>Un bis inkl 15k VDC</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UN_BIS_INKL_15K_VDC
+	 * @model name="Un_bis_inkl_1_5kV_DC" literal="blau"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UN_BIS_INKL_15K_VDC_VALUE = 4;
+
+	/**
+	 * The '<em><b>Reserve 1</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RESERVE_1
+	 * @model name="Reserve_1" literal="Reserve 1"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RESERVE_1_VALUE = 5;
+
+	/**
+	 * The '<em><b>Reserve 2</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RESERVE_2
+	 * @model name="Reserve_2"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RESERVE_2_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>spannungsarttype</b></em>' enumerators.
@@ -166,8 +171,9 @@ public enum spannungsarttype implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final spannungsarttype[] VALUES_ARRAY = new spannungsarttype[] { ROT, GRÜN, MAGENTA, CYAN, BLAU,
-			VIOLETT, BRAUN, };
+	private static final spannungsarttype[] VALUES_ARRAY = new spannungsarttype[] { HSP_UN_AB_1K_V50_HZ,
+			NSP_UN_BIS_INKL_1K_V50_HZ_AC, HSP_UN_15K_V16_7HZ, NSP_UN_BIS_INKL_1K_V16_7HZ, UN_BIS_INKL_15K_VDC,
+			RESERVE_1, RESERVE_2, };
 
 	/**
 	 * A public read-only list of all the '<em><b>spannungsarttype</b></em>' enumerators.
@@ -223,20 +229,20 @@ public enum spannungsarttype implements Enumerator {
 	 */
 	public static spannungsarttype get(int value) {
 		switch (value) {
-		case ROT_VALUE:
-			return ROT;
-		case GRÜN_VALUE:
-			return GRÜN;
-		case MAGENTA_VALUE:
-			return MAGENTA;
-		case CYAN_VALUE:
-			return CYAN;
-		case BLAU_VALUE:
-			return BLAU;
-		case VIOLETT_VALUE:
-			return VIOLETT;
-		case BRAUN_VALUE:
-			return BRAUN;
+		case HSP_UN_AB_1K_V50_HZ_VALUE:
+			return HSP_UN_AB_1K_V50_HZ;
+		case NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE:
+			return NSP_UN_BIS_INKL_1K_V50_HZ_AC;
+		case HSP_UN_15K_V16_7HZ_VALUE:
+			return HSP_UN_15K_V16_7HZ;
+		case NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE:
+			return NSP_UN_BIS_INKL_1K_V16_7HZ;
+		case UN_BIS_INKL_15K_VDC_VALUE:
+			return UN_BIS_INKL_15K_VDC;
+		case RESERVE_1_VALUE:
+			return RESERVE_1;
+		case RESERVE_2_VALUE:
+			return RESERVE_2;
 		}
 		return null;
 	}

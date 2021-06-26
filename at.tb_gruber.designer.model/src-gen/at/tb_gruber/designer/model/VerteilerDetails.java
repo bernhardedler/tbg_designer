@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.VerteilerDetails#getBetreiber <em>Betreiber</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerDetails#getNummer <em>Nummer</em>}</li>
  * </ul>
  *
@@ -22,28 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface VerteilerDetails extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Betreiber</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Betreiber</em>' attribute.
-	 * @see #setBetreiber(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerDetails_Betreiber()
-	 * @model
-	 * @generated
-	 */
-	String getBetreiber();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.VerteilerDetails#getBetreiber <em>Betreiber</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Betreiber</em>' attribute.
-	 * @see #getBetreiber()
-	 * @generated
-	 */
-	void setBetreiber(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Nummer</b></em>' attribute.
 	 * <!-- begin-user-doc -->

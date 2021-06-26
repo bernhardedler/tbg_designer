@@ -78,8 +78,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createGenerator();
 		case ModelPackage.UMRICHTER:
 			return createUmrichter();
-		case ModelPackage.VERTEILER:
-			return createVerteiler();
+		case ModelPackage.VERTEILER_MIT_ZAEHLER:
+			return createVerteilerMitZaehler();
 		case ModelPackage.ENERGIESPEICHER:
 			return createEnergiespeicher();
 		case ModelPackage.VERTEILER_DETAILS:
@@ -88,6 +88,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createVerteilerContainer();
 		case ModelPackage.BETREIBER:
 			return createBetreiber();
+		case ModelPackage.VERTEILER_OHNE_ZAEHLER:
+			return createVerteilerOhneZaehler();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -278,9 +280,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public Verteiler createVerteiler() {
-		VerteilerImpl verteiler = new VerteilerImpl();
-		return verteiler;
+	public VerteilerMitZaehler createVerteilerMitZaehler() {
+		VerteilerMitZaehlerImpl verteilerMitZaehler = new VerteilerMitZaehlerImpl();
+		return verteilerMitZaehler;
 	}
 
 	/**
@@ -325,6 +327,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Betreiber createBetreiber() {
 		BetreiberImpl betreiber = new BetreiberImpl();
 		return betreiber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VerteilerOhneZaehler createVerteilerOhneZaehler() {
+		VerteilerOhneZaehlerImpl verteilerOhneZaehler = new VerteilerOhneZaehlerImpl();
+		return verteilerOhneZaehler;
 	}
 
 	/**

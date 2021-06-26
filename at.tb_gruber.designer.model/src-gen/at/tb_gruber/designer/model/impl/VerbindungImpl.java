@@ -69,7 +69,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.ROT;
+	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.HSP_UN_AB_1K_V50_HZ;
 
 	/**
 	 * The cached value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.

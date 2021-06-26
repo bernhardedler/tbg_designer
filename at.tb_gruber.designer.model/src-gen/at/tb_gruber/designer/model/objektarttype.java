@@ -79,14 +79,14 @@ public enum objektarttype implements Enumerator {
 	VERKEHRSSTATION(5, "Verkehrsstation", "Verkehrsstation"),
 
 	/**
-	 * The '<em><b>Sonstiges</b></em>' literal object.
+	 * The '<em><b>Oberleitungsmast</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SONSTIGES_VALUE
+	 * @see #OBERLEITUNGSMAST_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SONSTIGES(6, "Sonstiges", "Sonstiges");
+	OBERLEITUNGSMAST(6, "Oberleitungsmast", "Oberleitungsmast");
 
 	/**
 	 * The '<em><b>Trafostation</b></em>' literal value.
@@ -155,15 +155,15 @@ public enum objektarttype implements Enumerator {
 	public static final int VERKEHRSSTATION_VALUE = 5;
 
 	/**
-	 * The '<em><b>Sonstiges</b></em>' literal value.
+	 * The '<em><b>Oberleitungsmast</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SONSTIGES
-	 * @model name="Sonstiges"
+	 * @see #OBERLEITUNGSMAST
+	 * @model name="Oberleitungsmast"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SONSTIGES_VALUE = 6;
+	public static final int OBERLEITUNGSMAST_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>objektarttype</b></em>' enumerators.
@@ -172,7 +172,7 @@ public enum objektarttype implements Enumerator {
 	 * @generated
 	 */
 	private static final objektarttype[] VALUES_ARRAY = new objektarttype[] { TRAFOSTATION, HOCHBAUOBJEKT,
-			SCHALTHAEUSER, TUNNELOBJEKT, FREISTEHENDER_VT, VERKEHRSSTATION, SONSTIGES, };
+			SCHALTHAEUSER, TUNNELOBJEKT, FREISTEHENDER_VT, VERKEHRSSTATION, OBERLEITUNGSMAST, };
 
 	/**
 	 * A public read-only list of all the '<em><b>objektarttype</b></em>' enumerators.
@@ -240,8 +240,8 @@ public enum objektarttype implements Enumerator {
 			return FREISTEHENDER_VT;
 		case VERKEHRSSTATION_VALUE:
 			return VERKEHRSSTATION;
-		case SONSTIGES_VALUE:
-			return SONSTIGES;
+		case OBERLEITUNGSMAST_VALUE:
+			return OBERLEITUNGSMAST;
 		}
 		return null;
 	}
