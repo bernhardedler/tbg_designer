@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class NetzanschlusspunktImpl extends MinimalEObjectImpl.Container implements Netzanschlusspunkt {
+public class NetzanschlusspunktImpl extends SelbststAnlageImpl implements Netzanschlusspunkt {
 	/**
 	 * The default value of the '{@link #getNrHauptversorgung() <em>Nr Hauptversorgung</em>}' attribute.
 	 * <!-- begin-user-doc -->

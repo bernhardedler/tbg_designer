@@ -3,24 +3,24 @@
 package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.Umrichter;
+import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Umrichter</b></em>'.
+ * An implementation of the model object '<em><b>Umrichter Mit Energiespeicher</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class UmrichterImpl extends UmrichterBaseImpl implements Umrichter {
+public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implements UmrichterMitEnergiespeicher {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UmrichterImpl() {
+	protected UmrichterMitEnergiespeicherImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class UmrichterImpl extends UmrichterBaseImpl implements Umrichter {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.UMRICHTER;
+		return ModelPackage.Literals.UMRICHTER_MIT_ENERGIESPEICHER;
 	}
 
-} //UmrichterImpl
+} //UmrichterMitEnergiespeicherImpl

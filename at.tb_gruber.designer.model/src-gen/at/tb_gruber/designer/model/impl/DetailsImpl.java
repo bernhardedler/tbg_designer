@@ -2,8 +2,8 @@
  */
 package at.tb_gruber.designer.model.impl;
 
+import at.tb_gruber.designer.model.Details;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.VerteilerDetails;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,44 +14,44 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Verteiler Details</b></em>'.
+ * An implementation of the model object '<em><b>Details</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerDetailsImpl#getNummer <em>Nummer</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.DetailsImpl#getAnzeigetext <em>Anzeigetext</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implements VerteilerDetails {
+public class DetailsImpl extends MinimalEObjectImpl.Container implements Details {
 	/**
-	 * The default value of the '{@link #getNummer() <em>Nummer</em>}' attribute.
+	 * The default value of the '{@link #getAnzeigetext() <em>Anzeigetext</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNummer()
+	 * @see #getAnzeigetext()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NUMMER_EDEFAULT = null;
+	protected static final String ANZEIGETEXT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNummer() <em>Nummer</em>}' attribute.
+	 * The cached value of the '{@link #getAnzeigetext() <em>Anzeigetext</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNummer()
+	 * @see #getAnzeigetext()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nummer = NUMMER_EDEFAULT;
+	protected String anzeigetext = ANZEIGETEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VerteilerDetailsImpl() {
+	protected DetailsImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.VERTEILER_DETAILS;
+		return ModelPackage.Literals.DETAILS;
 	}
 
 	/**
@@ -71,8 +71,8 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public String getNummer() {
-		return nummer;
+	public String getAnzeigetext() {
+		return anzeigetext;
 	}
 
 	/**
@@ -81,12 +81,12 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setNummer(String newNummer) {
-		String oldNummer = nummer;
-		nummer = newNummer;
+	public void setAnzeigetext(String newAnzeigetext) {
+		String oldAnzeigetext = anzeigetext;
+		anzeigetext = newAnzeigetext;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER_DETAILS__NUMMER, oldNummer,
-					nummer));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.DETAILS__ANZEIGETEXT, oldAnzeigetext,
+					anzeigetext));
 	}
 
 	/**
@@ -97,8 +97,8 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_DETAILS__NUMMER:
-			return getNummer();
+		case ModelPackage.DETAILS__ANZEIGETEXT:
+			return getAnzeigetext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,8 +111,8 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_DETAILS__NUMMER:
-			setNummer((String) newValue);
+		case ModelPackage.DETAILS__ANZEIGETEXT:
+			setAnzeigetext((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,8 +126,8 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_DETAILS__NUMMER:
-			setNummer(NUMMER_EDEFAULT);
+		case ModelPackage.DETAILS__ANZEIGETEXT:
+			setAnzeigetext(ANZEIGETEXT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -141,8 +141,8 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ModelPackage.VERTEILER_DETAILS__NUMMER:
-			return NUMMER_EDEFAULT == null ? nummer != null : !NUMMER_EDEFAULT.equals(nummer);
+		case ModelPackage.DETAILS__ANZEIGETEXT:
+			return ANZEIGETEXT_EDEFAULT == null ? anzeigetext != null : !ANZEIGETEXT_EDEFAULT.equals(anzeigetext);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,10 +158,10 @@ public class VerteilerDetailsImpl extends MinimalEObjectImpl.Container implement
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (nummer: ");
-		result.append(nummer);
+		result.append(" (anzeigetext: ");
+		result.append(anzeigetext);
 		result.append(')');
 		return result.toString();
 	}
 
-} //VerteilerDetailsImpl
+} //DetailsImpl

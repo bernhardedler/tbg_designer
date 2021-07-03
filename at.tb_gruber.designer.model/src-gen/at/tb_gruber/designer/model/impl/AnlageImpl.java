@@ -4,6 +4,7 @@ package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Betreiber;
+import at.tb_gruber.designer.model.Details;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.eadb_versorgung_art;
@@ -48,6 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getAbgangVT <em>Abgang VT</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getBetreiber <em>Betreiber</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.AnlageImpl#getDetails <em>Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -302,6 +304,16 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected Betreiber betreiber;
+
+	/**
+	 * The cached value of the '{@link #getDetails() <em>Details</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDetails()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Details> details;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -670,12 +682,27 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public EList<Details> getDetails() {
+		if (details == null) {
+			details = new EObjectContainmentEList<Details>(Details.class, this, ModelPackage.ANLAGE__DETAILS);
+		}
+		return details;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 			return ((InternalEList<?>) getVerbindungNach()).basicRemove(otherEnd, msgs);
 		case ModelPackage.ANLAGE__BETREIBER:
 			return basicSetBetreiber(null, msgs);
+		case ModelPackage.ANLAGE__DETAILS:
+			return ((InternalEList<?>) getDetails()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -716,6 +743,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return getAbgangVT();
 		case ModelPackage.ANLAGE__BETREIBER:
 			return getBetreiber();
+		case ModelPackage.ANLAGE__DETAILS:
+			return getDetails();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -773,6 +802,10 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__BETREIBER:
 			setBetreiber((Betreiber) newValue);
 			return;
+		case ModelPackage.ANLAGE__DETAILS:
+			getDetails().clear();
+			getDetails().addAll((Collection<? extends Details>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -827,6 +860,9 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 		case ModelPackage.ANLAGE__BETREIBER:
 			setBetreiber((Betreiber) null);
 			return;
+		case ModelPackage.ANLAGE__DETAILS:
+			getDetails().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -870,6 +906,8 @@ public abstract class AnlageImpl extends MinimalEObjectImpl.Container implements
 			return ABGANG_VT_EDEFAULT == null ? abgangVT != null : !ABGANG_VT_EDEFAULT.equals(abgangVT);
 		case ModelPackage.ANLAGE__BETREIBER:
 			return betreiber != null;
+		case ModelPackage.ANLAGE__DETAILS:
+			return details != null && !details.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -7,7 +7,7 @@ import org.eclipse.sirius.diagram.ui.tools.api.figure.locator.DBorderItemLocator
 
 public class NetzanschlusspunktBorderItemLocator extends DBorderItemLocator {
 	
-	private static final Dimension OFFSET = new Dimension(8, 35);
+	private static final Dimension OFFSET = new Dimension(29, 29);
 	
 	public NetzanschlusspunktBorderItemLocator(IFigure parentFigure) {
 		super(parentFigure);

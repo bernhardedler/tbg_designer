@@ -349,49 +349,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Energiespeicher} instances.
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnergiespeicherItemProvider energiespeicherItemProvider;
+	protected UmrichterMitEnergiespeicherItemProvider umrichterMitEnergiespeicherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Energiespeicher}.
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEnergiespeicherAdapter() {
-		if (energiespeicherItemProvider == null) {
-			energiespeicherItemProvider = new EnergiespeicherItemProvider(this);
+	public Adapter createUmrichterMitEnergiespeicherAdapter() {
+		if (umrichterMitEnergiespeicherItemProvider == null) {
+			umrichterMitEnergiespeicherItemProvider = new UmrichterMitEnergiespeicherItemProvider(this);
 		}
 
-		return energiespeicherItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerDetails} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VerteilerDetailsItemProvider verteilerDetailsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.VerteilerDetails}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVerteilerDetailsAdapter() {
-		if (verteilerDetailsItemProvider == null) {
-			verteilerDetailsItemProvider = new VerteilerDetailsItemProvider(this);
-		}
-
-		return verteilerDetailsItemProvider;
+		return umrichterMitEnergiespeicherItemProvider;
 	}
 
 	/**
@@ -461,6 +438,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 		}
 
 		return verteilerOhneZaehlerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Details} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DetailsItemProvider detailsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Details}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDetailsAdapter() {
+		if (detailsItemProvider == null) {
+			detailsItemProvider = new DetailsItemProvider(this);
+		}
+
+		return detailsItemProvider;
 	}
 
 	/**
@@ -588,20 +588,20 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			energietechnikanlageItemProvider.dispose();
 		if (generatorItemProvider != null)
 			generatorItemProvider.dispose();
-		if (umrichterItemProvider != null)
-			umrichterItemProvider.dispose();
 		if (verteilerMitZaehlerItemProvider != null)
 			verteilerMitZaehlerItemProvider.dispose();
-		if (energiespeicherItemProvider != null)
-			energiespeicherItemProvider.dispose();
-		if (verteilerDetailsItemProvider != null)
-			verteilerDetailsItemProvider.dispose();
+		if (umrichterMitEnergiespeicherItemProvider != null)
+			umrichterMitEnergiespeicherItemProvider.dispose();
 		if (verteilerContainerItemProvider != null)
 			verteilerContainerItemProvider.dispose();
 		if (betreiberItemProvider != null)
 			betreiberItemProvider.dispose();
 		if (verteilerOhneZaehlerItemProvider != null)
 			verteilerOhneZaehlerItemProvider.dispose();
+		if (detailsItemProvider != null)
+			detailsItemProvider.dispose();
+		if (umrichterItemProvider != null)
+			umrichterItemProvider.dispose();
 	}
 
 }

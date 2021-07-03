@@ -2,25 +2,25 @@
  */
 package at.tb_gruber.designer.model.impl;
 
-import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.ModelPackage;
+import at.tb_gruber.designer.model.UmrichterBase;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Energiespeicher</b></em>'.
+ * An implementation of the model object '<em><b>Umrichter Base</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class EnergiespeicherImpl extends SelbststAnlageImpl implements Energiespeicher {
+public abstract class UmrichterBaseImpl extends SelbststAnlageImpl implements UmrichterBase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnergiespeicherImpl() {
+	protected UmrichterBaseImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class EnergiespeicherImpl extends SelbststAnlageImpl implements Energiesp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.ENERGIESPEICHER;
+		return ModelPackage.Literals.UMRICHTER_BASE;
 	}
 
-} //EnergiespeicherImpl
+} //UmrichterBaseImpl

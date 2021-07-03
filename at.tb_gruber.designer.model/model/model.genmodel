@@ -95,6 +95,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/verteilerbezeichnung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/abgangVT"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/betreiber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/details"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
@@ -134,14 +135,11 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Generator"/>
     <genClasses ecoreClass="model.ecore#//SelbststAnlage"/>
-    <genClasses ecoreClass="model.ecore#//Umrichter"/>
+    <genClasses ecoreClass="model.ecore#//UmrichterBase"/>
     <genClasses ecoreClass="model.ecore#//VerteilerMitZaehler">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerMitZaehler/verteilerdetails"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/zpNr"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Energiespeicher"/>
-    <genClasses ecoreClass="model.ecore#//VerteilerDetails">
-      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerDetails/nummer"/>
-    </genClasses>
+    <genClasses ecoreClass="model.ecore#//UmrichterMitEnergiespeicher"/>
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
@@ -153,5 +151,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerBase/netzanschlusspunkt"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerOhneZaehler"/>
+    <genClasses ecoreClass="model.ecore#//Details">
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Details/anzeigetext"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Umrichter"/>
   </genPackages>
 </genmodel:GenModel>

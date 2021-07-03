@@ -2,8 +2,6 @@
  */
 package at.tb_gruber.designer.model;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Netzanschlusspunkt</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Netzanschlusspunkt extends EObject {
+public interface Netzanschlusspunkt extends SelbststAnlage {
 	/**
 	 * Returns the value of the '<em><b>Nr Hauptversorgung</b></em>' attribute.
 	 * <!-- begin-user-doc -->

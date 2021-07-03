@@ -273,6 +273,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.ANLAGE__VERBINDUNG_NACH);
 			childrenFeatures.add(ModelPackage.Literals.ANLAGE__BETREIBER);
+			childrenFeatures.add(ModelPackage.Literals.ANLAGE__DETAILS);
 		}
 		return childrenFeatures;
 	}
@@ -351,6 +352,7 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 			return;
 		case ModelPackage.ANLAGE__VERBINDUNG_NACH:
 		case ModelPackage.ANLAGE__BETREIBER:
+		case ModelPackage.ANLAGE__DETAILS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -373,6 +375,9 @@ public class AnlageItemProvider extends ItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.ANLAGE__BETREIBER,
 				ModelFactory.eINSTANCE.createBetreiber()));
+
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.ANLAGE__DETAILS, ModelFactory.eINSTANCE.createDetails()));
 	}
 
 	/**

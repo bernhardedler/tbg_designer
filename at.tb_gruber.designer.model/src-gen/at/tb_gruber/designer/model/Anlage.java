@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getAbgangVT <em>Abgang VT</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Anlage#getBetreiber <em>Betreiber</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Anlage#getDetails <em>Details</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getAnlage()
@@ -330,5 +331,17 @@ public interface Anlage extends EObject {
 	 * @generated
 	 */
 	void setBetreiber(Betreiber value);
+
+	/**
+	 * Returns the value of the '<em><b>Details</b></em>' containment reference list.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.Details}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Details</em>' containment reference list.
+	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlage_Details()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Details> getDetails();
 
 } // Anlage

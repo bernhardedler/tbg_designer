@@ -6,8 +6,8 @@ import at.tb_gruber.designer.model.ARGUSrelevant;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Betreiber;
+import at.tb_gruber.designer.model.Details;
 import at.tb_gruber.designer.model.ET_Type;
-import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Generator;
 import at.tb_gruber.designer.model.LinienType;
@@ -21,11 +21,12 @@ import at.tb_gruber.designer.model.SelbststAnlage;
 import at.tb_gruber.designer.model.Textbaustein;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Umrichter;
+import at.tb_gruber.designer.model.UmrichterBase;
+import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
-import at.tb_gruber.designer.model.VerteilerDetails;
 import at.tb_gruber.designer.model.VerteilerMitZaehler;
 import at.tb_gruber.designer.model.VerteilerOhneZaehler;
 import at.tb_gruber.designer.model.eadb_versorgung_art;
@@ -137,6 +138,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass umrichterBaseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass umrichterEClass = null;
 
 	/**
@@ -151,14 +159,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass energiespeicherEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass verteilerDetailsEClass = null;
+	private EClass umrichterMitEnergiespeicherEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,6 +188,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass verteilerOhneZaehlerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass detailsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -624,6 +632,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getAnlage_Details() {
+		return (EReference) anlageEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVerbindung() {
 		return verbindungEClass;
 	}
@@ -934,6 +952,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getUmrichterBase() {
+		return umrichterBaseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getUmrichter() {
 		return umrichterEClass;
 	}
@@ -954,8 +982,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getVerteilerMitZaehler_Verteilerdetails() {
-		return (EReference) verteilerMitZaehlerEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVerteilerMitZaehler_ZpNr() {
+		return (EAttribute) verteilerMitZaehlerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -964,28 +992,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getEnergiespeicher() {
-		return energiespeicherEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getVerteilerDetails() {
-		return verteilerDetailsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getVerteilerDetails_Nummer() {
-		return (EAttribute) verteilerDetailsEClass.getEStructuralFeatures().get(0);
+	public EClass getUmrichterMitEnergiespeicher() {
+		return umrichterMitEnergiespeicherEClass;
 	}
 
 	/**
@@ -1066,6 +1074,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EClass getVerteilerOhneZaehler() {
 		return verteilerOhneZaehlerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDetails() {
+		return detailsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDetails_Anzeigetext() {
+		return (EAttribute) detailsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1211,6 +1239,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(anlageEClass, ANLAGE__VERTEILERBEZEICHNUNG);
 		createEAttribute(anlageEClass, ANLAGE__ABGANG_VT);
 		createEReference(anlageEClass, ANLAGE__BETREIBER);
+		createEReference(anlageEClass, ANLAGE__DETAILS);
 
 		verbindungEClass = createEClass(VERBINDUNG);
 		createEAttribute(verbindungEClass, VERBINDUNG__NR);
@@ -1252,15 +1281,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		selbststAnlageEClass = createEClass(SELBSTST_ANLAGE);
 
-		umrichterEClass = createEClass(UMRICHTER);
+		umrichterBaseEClass = createEClass(UMRICHTER_BASE);
 
 		verteilerMitZaehlerEClass = createEClass(VERTEILER_MIT_ZAEHLER);
-		createEReference(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS);
+		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__ZP_NR);
 
-		energiespeicherEClass = createEClass(ENERGIESPEICHER);
-
-		verteilerDetailsEClass = createEClass(VERTEILER_DETAILS);
-		createEAttribute(verteilerDetailsEClass, VERTEILER_DETAILS__NUMMER);
+		umrichterMitEnergiespeicherEClass = createEClass(UMRICHTER_MIT_ENERGIESPEICHER);
 
 		verteilerContainerEClass = createEClass(VERTEILER_CONTAINER);
 		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__VERTEILER);
@@ -1273,6 +1299,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEReference(verteilerBaseEClass, VERTEILER_BASE__NETZANSCHLUSSPUNKT);
 
 		verteilerOhneZaehlerEClass = createEClass(VERTEILER_OHNE_ZAEHLER);
+
+		detailsEClass = createEClass(DETAILS);
+		createEAttribute(detailsEClass, DETAILS__ANZEIGETEXT);
+
+		umrichterEClass = createEClass(UMRICHTER);
 
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
@@ -1315,16 +1346,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		// Add supertypes to classes
 		trafoEClass.getESuperTypes().add(this.getSelbststAnlage());
+		netzanschlusspunktEClass.getESuperTypes().add(this.getSelbststAnlage());
 		versorgungsknotenEClass.getESuperTypes().add(this.getSelbststAnlage());
 		energietechnikanlageEClass.getESuperTypes().add(this.getSelbststAnlage());
 		generatorEClass.getESuperTypes().add(this.getSelbststAnlage());
 		selbststAnlageEClass.getESuperTypes().add(this.getAnlage());
-		umrichterEClass.getESuperTypes().add(this.getSelbststAnlage());
+		umrichterBaseEClass.getESuperTypes().add(this.getSelbststAnlage());
 		verteilerMitZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
-		energiespeicherEClass.getESuperTypes().add(this.getSelbststAnlage());
+		umrichterMitEnergiespeicherEClass.getESuperTypes().add(this.getUmrichterBase());
 		verteilerContainerEClass.getESuperTypes().add(this.getAnlage());
 		verteilerBaseEClass.getESuperTypes().add(this.getAnlage());
 		verteilerOhneZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
+		umrichterEClass.getESuperTypes().add(this.getUmrichterBase());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bahnhofEClass, Bahnhof.class, "Bahnhof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1398,6 +1431,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getAnlage_AbgangVT(), ecorePackage.getEString(), "abgangVT", null, 0, 1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnlage_Betreiber(), this.getBetreiber(), null, "betreiber", null, 0, 1, Anlage.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnlage_Details(), this.getDetails(), null, "details", null, 0, -1, Anlage.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1485,23 +1521,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(selbststAnlageEClass, SelbststAnlage.class, "SelbststAnlage", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(umrichterEClass, Umrichter.class, "Umrichter", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(umrichterBaseEClass, UmrichterBase.class, "UmrichterBase", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(verteilerMitZaehlerEClass, VerteilerMitZaehler.class, "VerteilerMitZaehler", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVerteilerMitZaehler_Verteilerdetails(), this.getVerteilerDetails(), null, "verteilerdetails",
-				null, 1, 1, VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerteilerMitZaehler_ZpNr(), ecorePackage.getEString(), "zpNr", null, 0, 1,
+				VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(verteilerDetailsEClass, VerteilerDetails.class, "VerteilerDetails", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVerteilerDetails_Nummer(), ecorePackage.getEString(), "nummer", null, 0, 1,
-				VerteilerDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(umrichterMitEnergiespeicherEClass, UmrichterMitEnergiespeicher.class, "UmrichterMitEnergiespeicher",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(verteilerContainerEClass, VerteilerContainer.class, "VerteilerContainer", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1525,6 +1555,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(verteilerOhneZaehlerEClass, VerteilerOhneZaehler.class, "VerteilerOhneZaehler", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(detailsEClass, Details.class, "Details", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDetails_Anzeigetext(), ecorePackage.getEString(), "anzeigetext", null, 0, 1, Details.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(umrichterEClass, Umrichter.class, "Umrichter", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, objektarttype.class, "objektarttype");

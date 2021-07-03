@@ -2,7 +2,7 @@
  */
 package at.tb_gruber.designer.model.provider;
 
-import at.tb_gruber.designer.model.Umrichter;
+import at.tb_gruber.designer.model.UmrichterBase;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,19 +13,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Umrichter} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.UmrichterBase} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UmrichterItemProvider extends UmrichterBaseItemProvider {
+public class UmrichterBaseItemProvider extends SelbststAnlageItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UmrichterItemProvider(AdapterFactory adapterFactory) {
+	public UmrichterBaseItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,14 +45,14 @@ public class UmrichterItemProvider extends UmrichterBaseItemProvider {
 	}
 
 	/**
-	 * This returns Umrichter.gif.
+	 * This returns UmrichterBase.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Umrichter"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/UmrichterBase"));
 	}
 
 	/**
@@ -73,9 +73,9 @@ public class UmrichterItemProvider extends UmrichterBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Umrichter) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Umrichter_type")
-				: getString("_UI_Umrichter_type") + " " + label;
+		String label = ((UmrichterBase) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_UmrichterBase_type")
+				: getString("_UI_UmrichterBase_type") + " " + label;
 	}
 
 	/**

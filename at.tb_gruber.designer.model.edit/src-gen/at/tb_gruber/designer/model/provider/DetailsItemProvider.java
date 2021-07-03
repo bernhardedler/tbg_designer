@@ -2,8 +2,8 @@
  */
 package at.tb_gruber.designer.model.provider;
 
+import at.tb_gruber.designer.model.Details;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.VerteilerDetails;
 
 import java.util.Collection;
 import java.util.List;
@@ -25,12 +25,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.VerteilerDetails} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Details} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class DetailsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +38,7 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VerteilerDetailsItemProvider(AdapterFactory adapterFactory) {
+	public DetailsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,36 +53,36 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNummerPropertyDescriptor(object);
+			addAnzeigetextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nummer feature.
+	 * This adds a property descriptor for the Anzeigetext feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNummerPropertyDescriptor(Object object) {
+	protected void addAnzeigetextPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_VerteilerDetails_nummer_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_VerteilerDetails_nummer_feature",
-								"_UI_VerteilerDetails_type"),
-						ModelPackage.Literals.VERTEILER_DETAILS__NUMMER, true, true, false,
+						getResourceLocator(), getString("_UI_Details_anzeigetext_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Details_anzeigetext_feature",
+								"_UI_Details_type"),
+						ModelPackage.Literals.DETAILS__ANZEIGETEXT, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns VerteilerDetails.gif.
+	 * This returns Details.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/VerteilerDetails"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Details"));
 	}
 
 	/**
@@ -103,9 +103,9 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = crop(((VerteilerDetails) object).getNummer());
-		return label == null || label.length() == 0 ? getString("_UI_VerteilerDetails_type")
-				: getString("_UI_VerteilerDetails_type") + " " + label;
+		String label = crop(((Details) object).getAnzeigetext());
+		return label == null || label.length() == 0 ? getString("_UI_Details_type")
+				: getString("_UI_Details_type") + " " + label;
 	}
 
 	/**
@@ -119,8 +119,8 @@ public class VerteilerDetailsItemProvider extends ItemProviderAdapter implements
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(VerteilerDetails.class)) {
-		case ModelPackage.VERTEILER_DETAILS__NUMMER:
+		switch (notification.getFeatureID(Details.class)) {
+		case ModelPackage.DETAILS__ANZEIGETEXT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

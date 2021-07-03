@@ -303,6 +303,9 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 				.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createTrafo()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
+				ModelFactory.eINSTANCE.createNetzanschlusspunkt()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVersorgungsknoten()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
@@ -311,20 +314,20 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		newChildDescriptors.add(
 				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createGenerator()));
 
-		newChildDescriptors.add(
-				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createUmrichter()));
-
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVerteilerMitZaehler()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
-				ModelFactory.eINSTANCE.createEnergiespeicher()));
+				ModelFactory.eINSTANCE.createUmrichterMitEnergiespeicher()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVerteilerContainer()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVerteilerOhneZaehler()));
+
+		newChildDescriptors.add(
+				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createUmrichter()));
 	}
 
 	/**

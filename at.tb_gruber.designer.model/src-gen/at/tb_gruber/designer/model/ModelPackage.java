@@ -376,13 +376,22 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE__BETREIBER = 13;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANLAGE__DETAILS = 14;
+
+	/**
 	 * The number of structural features of the '<em>Anlage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_FEATURE_COUNT = 14;
+	int ANLAGE_FEATURE_COUNT = 15;
 
 	/**
 	 * The number of operations of the '<em>Anlage</em>' class.
@@ -731,6 +740,15 @@ public interface ModelPackage extends EPackage {
 	int SELBSTST_ANLAGE__BETREIBER = ANLAGE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELBSTST_ANLAGE__DETAILS = ANLAGE__DETAILS;
+
+	/**
 	 * The number of structural features of the '<em>Selbstst Anlage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -885,6 +903,15 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__DETAILS = SELBSTST_ANLAGE__DETAILS;
+
+	/**
 	 * The feature id for the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,13 +967,148 @@ public interface ModelPackage extends EPackage {
 	int NETZANSCHLUSSPUNKT = 7;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__NAME = SELBSTST_ANLAGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__OBJEKTTEIL = SELBSTST_ANLAGE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+
+	/**
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__ANLAGEN_ID_IMMO_ASSI = SELBSTST_ANLAGE__ANLAGEN_ID_IMMO_ASSI;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+
+	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__DETAILS = SELBSTST_ANLAGE__DETAILS;
+
+	/**
 	 * The feature id for the '<em><b>Nr Hauptversorgung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__NR_HAUPTVERSORGUNG = 0;
+	int NETZANSCHLUSSPUNKT__NR_HAUPTVERSORGUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Nr Reserve Einspeisung</b></em>' attribute.
@@ -955,7 +1117,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__NR_RESERVE_EINSPEISUNG = 1;
+	int NETZANSCHLUSSPUNKT__NR_RESERVE_EINSPEISUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
@@ -964,7 +1126,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__BESCHREIBUNG = 2;
+	int NETZANSCHLUSSPUNKT__BESCHREIBUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Postition</b></em>' attribute.
@@ -973,7 +1135,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__POSTITION = 3;
+	int NETZANSCHLUSSPUNKT__POSTITION = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Netzanschlusspunkt</em>' class.
@@ -982,7 +1144,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT_FEATURE_COUNT = 4;
+	int NETZANSCHLUSSPUNKT_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Netzanschlusspunkt</em>' class.
@@ -991,7 +1153,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT_OPERATION_COUNT = 0;
+	int NETZANSCHLUSSPUNKT_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl <em>Versorgungsknoten</em>}' class.
@@ -1128,6 +1290,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSORGUNGSKNOTEN__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+
+	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__DETAILS = SELBSTST_ANLAGE__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -1293,6 +1464,15 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__DETAILS = SELBSTST_ANLAGE__DETAILS;
+
+	/**
 	 * The feature id for the '<em><b>Et Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1456,6 +1636,15 @@ public interface ModelPackage extends EPackage {
 	int GENERATOR__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__DETAILS = SELBSTST_ANLAGE__DETAILS;
+
+	/**
 	 * The number of structural features of the '<em>Generator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1474,14 +1663,14 @@ public interface ModelPackage extends EPackage {
 	int GENERATOR_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.UmrichterImpl <em>Umrichter</em>}' class.
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.UmrichterBaseImpl <em>Umrichter Base</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.UmrichterImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichter()
+	 * @see at.tb_gruber.designer.model.impl.UmrichterBaseImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterBase()
 	 * @generated
 	 */
-	int UMRICHTER = 12;
+	int UMRICHTER_BASE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1490,7 +1679,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__NAME = SELBSTST_ANLAGE__NAME;
+	int UMRICHTER_BASE__NAME = SELBSTST_ANLAGE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -1499,7 +1688,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int UMRICHTER_BASE__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
@@ -1508,7 +1697,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__OBJEKTTEIL = SELBSTST_ANLAGE__OBJEKTTEIL;
+	int UMRICHTER_BASE__OBJEKTTEIL = SELBSTST_ANLAGE__OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -1517,7 +1706,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int UMRICHTER_BASE__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -1526,7 +1715,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int UMRICHTER_BASE__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -1535,7 +1724,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int UMRICHTER_BASE__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -1544,7 +1733,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int UMRICHTER_BASE__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -1553,7 +1742,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int UMRICHTER_BASE__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -1562,7 +1751,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
+	int UMRICHTER_BASE__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
 
 	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
@@ -1571,7 +1760,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__ANLAGEN_ID_IMMO_ASSI = SELBSTST_ANLAGE__ANLAGEN_ID_IMMO_ASSI;
+	int UMRICHTER_BASE__ANLAGEN_ID_IMMO_ASSI = SELBSTST_ANLAGE__ANLAGEN_ID_IMMO_ASSI;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -1580,7 +1769,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int UMRICHTER_BASE__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -1589,7 +1778,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int UMRICHTER_BASE__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -1598,7 +1787,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int UMRICHTER_BASE__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -1607,25 +1796,44 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int UMRICHTER_BASE__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
 
 	/**
-	 * The number of structural features of the '<em>Umrichter</em>' class.
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int UMRICHTER_BASE__DETAILS = SELBSTST_ANLAGE__DETAILS;
 
 	/**
-	 * The number of operations of the '<em>Umrichter</em>' class.
+	 * The number of structural features of the '<em>Umrichter Base</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int UMRICHTER_BASE_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Umrichter Base</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_BASE_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.UmrichterImpl <em>Umrichter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.UmrichterImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichter()
+	 * @generated
+	 */
+	int UMRICHTER = 20;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl <em>Verteiler Base</em>}' class.
@@ -1635,7 +1843,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerBase()
 	 * @generated
 	 */
-	int VERTEILER_BASE = 18;
+	int VERTEILER_BASE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1762,6 +1970,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEILER_BASE__BETREIBER = ANLAGE__BETREIBER;
+
+	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_BASE__DETAILS = ANLAGE__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -1927,6 +2144,15 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__BETREIBER = VERTEILER_BASE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_MIT_ZAEHLER__DETAILS = VERTEILER_BASE__DETAILS;
+
+	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1936,13 +2162,13 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__NETZANSCHLUSSPUNKT = VERTEILER_BASE__NETZANSCHLUSSPUNKT;
 
 	/**
-	 * The feature id for the '<em><b>Verteilerdetails</b></em>' containment reference.
+	 * The feature id for the '<em><b>Zp Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS = VERTEILER_BASE_FEATURE_COUNT + 0;
+	int VERTEILER_MIT_ZAEHLER__ZP_NR = VERTEILER_BASE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Verteiler Mit Zaehler</em>' class.
@@ -1963,14 +2189,14 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER_OPERATION_COUNT = VERTEILER_BASE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl <em>Energiespeicher</em>}' class.
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl <em>Umrichter Mit Energiespeicher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.EnergiespeicherImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicher()
+	 * @see at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterMitEnergiespeicher()
 	 * @generated
 	 */
-	int ENERGIESPEICHER = 14;
+	int UMRICHTER_MIT_ENERGIESPEICHER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1979,7 +2205,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__NAME = SELBSTST_ANLAGE__NAME;
+	int UMRICHTER_MIT_ENERGIESPEICHER__NAME = UMRICHTER_BASE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -1988,7 +2214,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int UMRICHTER_MIT_ENERGIESPEICHER__ANLAGENNUMMER = UMRICHTER_BASE__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
@@ -1997,7 +2223,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__OBJEKTTEIL = SELBSTST_ANLAGE__OBJEKTTEIL;
+	int UMRICHTER_MIT_ENERGIESPEICHER__OBJEKTTEIL = UMRICHTER_BASE__OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -2006,7 +2232,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int UMRICHTER_MIT_ENERGIESPEICHER__EADB_ID = UMRICHTER_BASE__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -2015,7 +2241,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int UMRICHTER_MIT_ENERGIESPEICHER__VERBINDUNG_NACH = UMRICHTER_BASE__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -2024,7 +2250,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int UMRICHTER_MIT_ENERGIESPEICHER__VERSORGT_VON = UMRICHTER_BASE__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -2033,7 +2259,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int UMRICHTER_MIT_ENERGIESPEICHER__PRIMAERSPANNUNG = UMRICHTER_BASE__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -2042,7 +2268,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int UMRICHTER_MIT_ENERGIESPEICHER__IN_OBJEKTTEIL = UMRICHTER_BASE__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
@@ -2051,7 +2277,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
+	int UMRICHTER_MIT_ENERGIESPEICHER__RESERVE4 = UMRICHTER_BASE__RESERVE4;
 
 	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
@@ -2060,7 +2286,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ANLAGEN_ID_IMMO_ASSI = SELBSTST_ANLAGE__ANLAGEN_ID_IMMO_ASSI;
+	int UMRICHTER_MIT_ENERGIESPEICHER__ANLAGEN_ID_IMMO_ASSI = UMRICHTER_BASE__ANLAGEN_ID_IMMO_ASSI;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -2069,7 +2295,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int UMRICHTER_MIT_ENERGIESPEICHER__EADB_VERSORGUNG_ART = UMRICHTER_BASE__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -2078,7 +2304,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int UMRICHTER_MIT_ENERGIESPEICHER__VERTEILERBEZEICHNUNG = UMRICHTER_BASE__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -2087,7 +2313,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int UMRICHTER_MIT_ENERGIESPEICHER__ABGANG_VT = UMRICHTER_BASE__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -2096,62 +2322,34 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int UMRICHTER_MIT_ENERGIESPEICHER__BETREIBER = UMRICHTER_BASE__BETREIBER;
 
 	/**
-	 * The number of structural features of the '<em>Energiespeicher</em>' class.
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int UMRICHTER_MIT_ENERGIESPEICHER__DETAILS = UMRICHTER_BASE__DETAILS;
 
 	/**
-	 * The number of operations of the '<em>Energiespeicher</em>' class.
+	 * The number of structural features of the '<em>Umrichter Mit Energiespeicher</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int UMRICHTER_MIT_ENERGIESPEICHER_FEATURE_COUNT = UMRICHTER_BASE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerDetailsImpl <em>Verteiler Details</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.VerteilerDetailsImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerDetails()
-	 * @generated
-	 */
-	int VERTEILER_DETAILS = 15;
-
-	/**
-	 * The feature id for the '<em><b>Nummer</b></em>' attribute.
+	 * The number of operations of the '<em>Umrichter Mit Energiespeicher</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_DETAILS__NUMMER = 0;
-
-	/**
-	 * The number of structural features of the '<em>Verteiler Details</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_DETAILS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Verteiler Details</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_DETAILS_OPERATION_COUNT = 0;
+	int UMRICHTER_MIT_ENERGIESPEICHER_OPERATION_COUNT = UMRICHTER_BASE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl <em>Verteiler Container</em>}' class.
@@ -2161,7 +2359,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerContainer()
 	 * @generated
 	 */
-	int VERTEILER_CONTAINER = 16;
+	int VERTEILER_CONTAINER = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2290,6 +2488,15 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_CONTAINER__BETREIBER = ANLAGE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__DETAILS = ANLAGE__DETAILS;
+
+	/**
 	 * The feature id for the '<em><b>Verteiler</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2333,7 +2540,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getBetreiber()
 	 * @generated
 	 */
-	int BETREIBER = 17;
+	int BETREIBER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2370,7 +2577,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerOhneZaehler()
 	 * @generated
 	 */
-	int VERTEILER_OHNE_ZAEHLER = 19;
+	int VERTEILER_OHNE_ZAEHLER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2499,6 +2706,15 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_OHNE_ZAEHLER__BETREIBER = VERTEILER_BASE__BETREIBER;
 
 	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_OHNE_ZAEHLER__DETAILS = VERTEILER_BASE__DETAILS;
+
+	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2526,6 +2742,196 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_OHNE_ZAEHLER_OPERATION_COUNT = VERTEILER_BASE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.DetailsImpl <em>Details</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.DetailsImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getDetails()
+	 * @generated
+	 */
+	int DETAILS = 19;
+
+	/**
+	 * The feature id for the '<em><b>Anzeigetext</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS__ANZEIGETEXT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Details</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Details</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETAILS_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__NAME = UMRICHTER_BASE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__ANLAGENNUMMER = UMRICHTER_BASE__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__OBJEKTTEIL = UMRICHTER_BASE__OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__EADB_ID = UMRICHTER_BASE__EADB_ID;
+
+	/**
+	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__VERBINDUNG_NACH = UMRICHTER_BASE__VERBINDUNG_NACH;
+
+	/**
+	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__VERSORGT_VON = UMRICHTER_BASE__VERSORGT_VON;
+
+	/**
+	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__PRIMAERSPANNUNG = UMRICHTER_BASE__PRIMAERSPANNUNG;
+
+	/**
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__IN_OBJEKTTEIL = UMRICHTER_BASE__IN_OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__RESERVE4 = UMRICHTER_BASE__RESERVE4;
+
+	/**
+	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__ANLAGEN_ID_IMMO_ASSI = UMRICHTER_BASE__ANLAGEN_ID_IMMO_ASSI;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__EADB_VERSORGUNG_ART = UMRICHTER_BASE__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__VERTEILERBEZEICHNUNG = UMRICHTER_BASE__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__ABGANG_VT = UMRICHTER_BASE__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__BETREIBER = UMRICHTER_BASE__BETREIBER;
+
+	/**
+	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__DETAILS = UMRICHTER_BASE__DETAILS;
+
+	/**
+	 * The number of structural features of the '<em>Umrichter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_FEATURE_COUNT = UMRICHTER_BASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Umrichter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_OPERATION_COUNT = UMRICHTER_BASE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2533,7 +2939,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 20;
+	int OBJEKTARTTYPE = 21;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
@@ -2543,7 +2949,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 21;
+	int SPANNUNGSARTTYPE = 22;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}' enum.
@@ -2553,7 +2959,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getexterne_datenquelle()
 	 * @generated
 	 */
-	int EXTERNE_DATENQUELLE = 22;
+	int EXTERNE_DATENQUELLE = 23;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
@@ -2563,7 +2969,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getET_Type()
 	 * @generated
 	 */
-	int ET_TYPE = 23;
+	int ET_TYPE = 24;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}' enum.
@@ -2573,7 +2979,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getARGUSrelevant()
 	 * @generated
 	 */
-	int ARGU_SRELEVANT = 24;
+	int ARGU_SRELEVANT = 25;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}' enum.
@@ -2583,7 +2989,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#geteadb_versorgung_art()
 	 * @generated
 	 */
-	int EADB_VERSORGUNG_ART = 25;
+	int EADB_VERSORGUNG_ART = 26;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.NapPosition <em>Nap Position</em>}' enum.
@@ -2593,7 +2999,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getNapPosition()
 	 * @generated
 	 */
-	int NAP_POSITION = 26;
+	int NAP_POSITION = 27;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.LinienType <em>Linien Type</em>}' enum.
@@ -2603,7 +3009,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getLinienType()
 	 * @generated
 	 */
-	int LINIEN_TYPE = 27;
+	int LINIEN_TYPE = 28;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -2944,6 +3350,17 @@ public interface ModelPackage extends EPackage {
 	EReference getAnlage_Betreiber();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Anlage#getDetails <em>Details</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Details</em>'.
+	 * @see at.tb_gruber.designer.model.Anlage#getDetails()
+	 * @see #getAnlage()
+	 * @generated
+	 */
+	EReference getAnlage_Details();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Verbindung <em>Verbindung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3276,6 +3693,16 @@ public interface ModelPackage extends EPackage {
 	EClass getSelbststAnlage();
 
 	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.UmrichterBase <em>Umrichter Base</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Umrichter Base</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterBase
+	 * @generated
+	 */
+	EClass getUmrichterBase();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Umrichter <em>Umrichter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3296,46 +3723,25 @@ public interface ModelPackage extends EPackage {
 	EClass getVerteilerMitZaehler();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.VerteilerMitZaehler#getVerteilerdetails <em>Verteilerdetails</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerMitZaehler#getZpNr <em>Zp Nr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Verteilerdetails</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler#getVerteilerdetails()
+	 * @return the meta object for the attribute '<em>Zp Nr</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler#getZpNr()
 	 * @see #getVerteilerMitZaehler()
 	 * @generated
 	 */
-	EReference getVerteilerMitZaehler_Verteilerdetails();
+	EAttribute getVerteilerMitZaehler_ZpNr();
 
 	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Energiespeicher <em>Energiespeicher</em>}'.
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher <em>Umrichter Mit Energiespeicher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Energiespeicher</em>'.
-	 * @see at.tb_gruber.designer.model.Energiespeicher
+	 * @return the meta object for class '<em>Umrichter Mit Energiespeicher</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher
 	 * @generated
 	 */
-	EClass getEnergiespeicher();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerDetails <em>Verteiler Details</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Verteiler Details</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerDetails
-	 * @generated
-	 */
-	EClass getVerteilerDetails();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerDetails#getNummer <em>Nummer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nummer</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerDetails#getNummer()
-	 * @see #getVerteilerDetails()
-	 * @generated
-	 */
-	EAttribute getVerteilerDetails_Nummer();
+	EClass getUmrichterMitEnergiespeicher();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerContainer <em>Verteiler Container</em>}'.
@@ -3420,6 +3826,27 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVerteilerOhneZaehler();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Details <em>Details</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Details</em>'.
+	 * @see at.tb_gruber.designer.model.Details
+	 * @generated
+	 */
+	EClass getDetails();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Details#getAnzeigetext <em>Anzeigetext</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Anzeigetext</em>'.
+	 * @see at.tb_gruber.designer.model.Details#getAnzeigetext()
+	 * @see #getDetails()
+	 * @generated
+	 */
+	EAttribute getDetails_Anzeigetext();
 
 	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
@@ -3779,6 +4206,14 @@ public interface ModelPackage extends EPackage {
 		EReference ANLAGE__BETREIBER = eINSTANCE.getAnlage_Betreiber();
 
 		/**
+		 * The meta object literal for the '<em><b>Details</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANLAGE__DETAILS = eINSTANCE.getAnlage_Details();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerbindungImpl <em>Verbindung</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4045,6 +4480,16 @@ public interface ModelPackage extends EPackage {
 		EClass SELBSTST_ANLAGE = eINSTANCE.getSelbststAnlage();
 
 		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.UmrichterBaseImpl <em>Umrichter Base</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.UmrichterBaseImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterBase()
+		 * @generated
+		 */
+		EClass UMRICHTER_BASE = eINSTANCE.getUmrichterBase();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.UmrichterImpl <em>Umrichter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4065,40 +4510,22 @@ public interface ModelPackage extends EPackage {
 		EClass VERTEILER_MIT_ZAEHLER = eINSTANCE.getVerteilerMitZaehler();
 
 		/**
-		 * The meta object literal for the '<em><b>Verteilerdetails</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Zp Nr</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VERTEILER_MIT_ZAEHLER__VERTEILERDETAILS = eINSTANCE.getVerteilerMitZaehler_Verteilerdetails();
+		EAttribute VERTEILER_MIT_ZAEHLER__ZP_NR = eINSTANCE.getVerteilerMitZaehler_ZpNr();
 
 		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl <em>Energiespeicher</em>}' class.
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl <em>Umrichter Mit Energiespeicher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.EnergiespeicherImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicher()
+		 * @see at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterMitEnergiespeicher()
 		 * @generated
 		 */
-		EClass ENERGIESPEICHER = eINSTANCE.getEnergiespeicher();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerDetailsImpl <em>Verteiler Details</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.VerteilerDetailsImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerDetails()
-		 * @generated
-		 */
-		EClass VERTEILER_DETAILS = eINSTANCE.getVerteilerDetails();
-
-		/**
-		 * The meta object literal for the '<em><b>Nummer</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VERTEILER_DETAILS__NUMMER = eINSTANCE.getVerteilerDetails_Nummer();
+		EClass UMRICHTER_MIT_ENERGIESPEICHER = eINSTANCE.getUmrichterMitEnergiespeicher();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl <em>Verteiler Container</em>}' class.
@@ -4171,6 +4598,24 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VERTEILER_OHNE_ZAEHLER = eINSTANCE.getVerteilerOhneZaehler();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.DetailsImpl <em>Details</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.DetailsImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getDetails()
+		 * @generated
+		 */
+		EClass DETAILS = eINSTANCE.getDetails();
+
+		/**
+		 * The meta object literal for the '<em><b>Anzeigetext</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DETAILS__ANZEIGETEXT = eINSTANCE.getDetails_Anzeigetext();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.

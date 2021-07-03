@@ -123,6 +123,10 @@ public class ModelSwitch<T> extends Switch<T> {
 			Netzanschlusspunkt netzanschlusspunkt = (Netzanschlusspunkt) theEObject;
 			T result = caseNetzanschlusspunkt(netzanschlusspunkt);
 			if (result == null)
+				result = caseSelbststAnlage(netzanschlusspunkt);
+			if (result == null)
+				result = caseAnlage(netzanschlusspunkt);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -168,13 +172,13 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.UMRICHTER: {
-			Umrichter umrichter = (Umrichter) theEObject;
-			T result = caseUmrichter(umrichter);
+		case ModelPackage.UMRICHTER_BASE: {
+			UmrichterBase umrichterBase = (UmrichterBase) theEObject;
+			T result = caseUmrichterBase(umrichterBase);
 			if (result == null)
-				result = caseSelbststAnlage(umrichter);
+				result = caseSelbststAnlage(umrichterBase);
 			if (result == null)
-				result = caseAnlage(umrichter);
+				result = caseAnlage(umrichterBase);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -190,20 +194,15 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.ENERGIESPEICHER: {
-			Energiespeicher energiespeicher = (Energiespeicher) theEObject;
-			T result = caseEnergiespeicher(energiespeicher);
+		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER: {
+			UmrichterMitEnergiespeicher umrichterMitEnergiespeicher = (UmrichterMitEnergiespeicher) theEObject;
+			T result = caseUmrichterMitEnergiespeicher(umrichterMitEnergiespeicher);
 			if (result == null)
-				result = caseSelbststAnlage(energiespeicher);
+				result = caseUmrichterBase(umrichterMitEnergiespeicher);
 			if (result == null)
-				result = caseAnlage(energiespeicher);
+				result = caseSelbststAnlage(umrichterMitEnergiespeicher);
 			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ModelPackage.VERTEILER_DETAILS: {
-			VerteilerDetails verteilerDetails = (VerteilerDetails) theEObject;
-			T result = caseVerteilerDetails(verteilerDetails);
+				result = caseAnlage(umrichterMitEnergiespeicher);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -240,6 +239,26 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = caseVerteilerBase(verteilerOhneZaehler);
 			if (result == null)
 				result = caseAnlage(verteilerOhneZaehler);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.DETAILS: {
+			Details details = (Details) theEObject;
+			T result = caseDetails(details);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.UMRICHTER: {
+			Umrichter umrichter = (Umrichter) theEObject;
+			T result = caseUmrichter(umrichter);
+			if (result == null)
+				result = caseUmrichterBase(umrichter);
+			if (result == null)
+				result = caseSelbststAnlage(umrichter);
+			if (result == null)
+				result = caseAnlage(umrichter);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -430,6 +449,21 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Umrichter Base</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Umrichter Base</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUmrichterBase(UmrichterBase object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Umrichter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -460,32 +494,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Energiespeicher</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Umrichter Mit Energiespeicher</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Energiespeicher</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Umrichter Mit Energiespeicher</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEnergiespeicher(Energiespeicher object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Details</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Verteiler Details</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVerteilerDetails(VerteilerDetails object) {
+	public T caseUmrichterMitEnergiespeicher(UmrichterMitEnergiespeicher object) {
 		return null;
 	}
 
@@ -546,6 +565,21 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVerteilerOhneZaehler(VerteilerOhneZaehler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Details</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Details</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDetails(Details object) {
 		return null;
 	}
 

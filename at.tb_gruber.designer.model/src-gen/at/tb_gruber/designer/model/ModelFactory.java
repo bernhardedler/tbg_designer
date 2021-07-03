@@ -130,22 +130,13 @@ public interface ModelFactory extends EFactory {
 	VerteilerMitZaehler createVerteilerMitZaehler();
 
 	/**
-	 * Returns a new object of class '<em>Energiespeicher</em>'.
+	 * Returns a new object of class '<em>Umrichter Mit Energiespeicher</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energiespeicher</em>'.
+	 * @return a new object of class '<em>Umrichter Mit Energiespeicher</em>'.
 	 * @generated
 	 */
-	Energiespeicher createEnergiespeicher();
-
-	/**
-	 * Returns a new object of class '<em>Verteiler Details</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Verteiler Details</em>'.
-	 * @generated
-	 */
-	VerteilerDetails createVerteilerDetails();
+	UmrichterMitEnergiespeicher createUmrichterMitEnergiespeicher();
 
 	/**
 	 * Returns a new object of class '<em>Verteiler Container</em>'.
@@ -173,6 +164,15 @@ public interface ModelFactory extends EFactory {
 	 * @generated
 	 */
 	VerteilerOhneZaehler createVerteilerOhneZaehler();
+
+	/**
+	 * Returns a new object of class '<em>Details</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Details</em>'.
+	 * @generated
+	 */
+	Details createDetails();
 
 	/**
 	 * Returns the package supported by this factory.

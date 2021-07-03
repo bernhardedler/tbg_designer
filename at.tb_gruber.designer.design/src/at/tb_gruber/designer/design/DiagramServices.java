@@ -10,14 +10,18 @@ import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
+import at.tb_gruber.designer.model.Generator;
 import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.NapPosition;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Trafo;
+import at.tb_gruber.designer.model.Umrichter;
+import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
+import at.tb_gruber.designer.model.VerteilerMitZaehler;
 import at.tb_gruber.designer.model.spannungsarttype;
 
 /**
@@ -26,13 +30,13 @@ import at.tb_gruber.designer.model.spannungsarttype;
 public class DiagramServices {
 
 	private CSVPropertyProvider props = null;
-	
+
 	private void ensurePropsInitialized() {
 		if (props == null) {
 			props = new CSVPropertyProvider();
 		}
 	}
-	
+
 	/**
 	 * Erstellt die nächst niedrige, noch nicht vergebene ID
 	 * 
@@ -51,7 +55,7 @@ public class DiagramServices {
 			Objekt containerObj = (Objekt) vtc.eContainer();
 			project = (Bahnhof) containerObj.eContainer();
 		}
-		
+
 		List<Integer> alleIds = project.getObjekt().stream().flatMap(obj -> obj.getAnlage().stream())
 				.flatMap(anl -> anl.getVerbindungNach().stream()).map(ver -> ver.getNr()).collect(Collectors.toList());
 		alleIds.sort((x, y) -> x.compareTo(y));
@@ -155,14 +159,17 @@ public class DiagramServices {
 		int cnt = ((Anlage) self).getVerbindungNach().size();
 		return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
 	}
-	
+
 	public Boolean isNapVor(EObject self) {
 		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
 		} else if (self instanceof VerteilerBase) {
-			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
 		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.DAVOR)).orElse(Boolean.FALSE);
 		} else {
 			return false;
 		}
@@ -170,49 +177,73 @@ public class DiagramServices {
 
 	public Boolean isNapMitte(EObject self) {
 		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
 		} else if (self instanceof VerteilerBase) {
-			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
 		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.MITTE)).orElse(Boolean.FALSE);
 		} else {
 			return false;
 		}
 	}
-	
 
 	public Boolean isNapNach(EObject self) {
 		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
 		} else if (self instanceof VerteilerBase) {
-			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
 		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
+			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt())
+					.map(nap -> nap.getPostition().equals(NapPosition.DANACH)).orElse(Boolean.FALSE);
 		} else {
 			return false;
 		}
-	}	
+	}
 
-	public List<String> getAllBetreiber(EObject self){
+	public List<String> getAllBetreiber(EObject self) {
 		ensurePropsInitialized();
-		
+
 		return props.getBetreiber();
 	}
-	
-	public Boolean isSolid(EObject self){
+
+	public Boolean isSolid(EObject self) {
 		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.HAUPTVERSORGUNG);
 	}
 
-	public Boolean isDot(EObject self){
+	public Boolean isDot(EObject self) {
 		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.EVU);
 	}
 
-	public Boolean isDash(EObject self){
+	public Boolean isDash(EObject self) {
 		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_ÖBB);
 	}
 
-	public Boolean isDashDot(EObject self){
-		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_DRITTER);
+	public Boolean isDashDot(EObject self) {
+		return self instanceof Verbindung
+				&& ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_DRITTER);
 	}
-	
+
+	public String createDetailsTextTemplate(EObject self) {
+		if (self instanceof Umrichter) {
+			return "0 kVA";
+		} else if (self.eContainer() instanceof UmrichterMitEnergiespeicher) {
+			return "0 kVA\n\n\n\n0 min";
+		} else if (self.eContainer() instanceof Trafo) {
+			return "0 kV/0 V\n0 kVA";
+		} else if (self.eContainer() instanceof Generator) {
+			Generator anlage = (Generator) self;
+			return "0 kWP";
+		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
+			VerteilerMitZaehler anlage = (VerteilerMitZaehler) self;
+			return "ZP-NR.: " + anlage.getZpNr();
+		}
+
+		return "";
+	}
+
 }

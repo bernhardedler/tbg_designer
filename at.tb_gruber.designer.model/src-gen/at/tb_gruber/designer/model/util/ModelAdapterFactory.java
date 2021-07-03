@@ -127,8 +127,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseUmrichter(Umrichter object) {
-			return createUmrichterAdapter();
+		public Adapter caseUmrichterBase(UmrichterBase object) {
+			return createUmrichterBaseAdapter();
 		}
 
 		@Override
@@ -137,13 +137,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEnergiespeicher(Energiespeicher object) {
-			return createEnergiespeicherAdapter();
-		}
-
-		@Override
-		public Adapter caseVerteilerDetails(VerteilerDetails object) {
-			return createVerteilerDetailsAdapter();
+		public Adapter caseUmrichterMitEnergiespeicher(UmrichterMitEnergiespeicher object) {
+			return createUmrichterMitEnergiespeicherAdapter();
 		}
 
 		@Override
@@ -164,6 +159,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseVerteilerOhneZaehler(VerteilerOhneZaehler object) {
 			return createVerteilerOhneZaehlerAdapter();
+		}
+
+		@Override
+		public Adapter caseDetails(Details object) {
+			return createDetailsAdapter();
+		}
+
+		@Override
+		public Adapter caseUmrichter(Umrichter object) {
+			return createUmrichterAdapter();
 		}
 
 		@Override
@@ -354,6 +359,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.UmrichterBase <em>Umrichter Base</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.UmrichterBase
+	 * @generated
+	 */
+	public Adapter createUmrichterBaseAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Umrichter <em>Umrichter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -382,30 +401,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Energiespeicher <em>Energiespeicher</em>}'.
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher <em>Umrichter Mit Energiespeicher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see at.tb_gruber.designer.model.Energiespeicher
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher
 	 * @generated
 	 */
-	public Adapter createEnergiespeicherAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.VerteilerDetails <em>Verteiler Details</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see at.tb_gruber.designer.model.VerteilerDetails
-	 * @generated
-	 */
-	public Adapter createVerteilerDetailsAdapter() {
+	public Adapter createUmrichterMitEnergiespeicherAdapter() {
 		return null;
 	}
 
@@ -462,6 +467,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVerteilerOhneZaehlerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Details <em>Details</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.Details
+	 * @generated
+	 */
+	public Adapter createDetailsAdapter() {
 		return null;
 	}
 

@@ -12,5 +12,5 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Umrichter extends SelbststAnlage {
+public interface Umrichter extends UmrichterBase {
 } // Umrichter

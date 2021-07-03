@@ -76,20 +76,20 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createEnergietechnikanlage();
 		case ModelPackage.GENERATOR:
 			return createGenerator();
-		case ModelPackage.UMRICHTER:
-			return createUmrichter();
 		case ModelPackage.VERTEILER_MIT_ZAEHLER:
 			return createVerteilerMitZaehler();
-		case ModelPackage.ENERGIESPEICHER:
-			return createEnergiespeicher();
-		case ModelPackage.VERTEILER_DETAILS:
-			return createVerteilerDetails();
+		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER:
+			return createUmrichterMitEnergiespeicher();
 		case ModelPackage.VERTEILER_CONTAINER:
 			return createVerteilerContainer();
 		case ModelPackage.BETREIBER:
 			return createBetreiber();
 		case ModelPackage.VERTEILER_OHNE_ZAEHLER:
 			return createVerteilerOhneZaehler();
+		case ModelPackage.DETAILS:
+			return createDetails();
+		case ModelPackage.UMRICHTER:
+			return createUmrichter();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -291,20 +291,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public Energiespeicher createEnergiespeicher() {
-		EnergiespeicherImpl energiespeicher = new EnergiespeicherImpl();
-		return energiespeicher;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public VerteilerDetails createVerteilerDetails() {
-		VerteilerDetailsImpl verteilerDetails = new VerteilerDetailsImpl();
-		return verteilerDetails;
+	public UmrichterMitEnergiespeicher createUmrichterMitEnergiespeicher() {
+		UmrichterMitEnergiespeicherImpl umrichterMitEnergiespeicher = new UmrichterMitEnergiespeicherImpl();
+		return umrichterMitEnergiespeicher;
 	}
 
 	/**
@@ -338,6 +327,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public VerteilerOhneZaehler createVerteilerOhneZaehler() {
 		VerteilerOhneZaehlerImpl verteilerOhneZaehler = new VerteilerOhneZaehlerImpl();
 		return verteilerOhneZaehler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Details createDetails() {
+		DetailsImpl details = new DetailsImpl();
+		return details;
 	}
 
 	/**

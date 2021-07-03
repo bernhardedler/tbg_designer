@@ -1,0 +1,23 @@
+<svg width="82" height="142" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <rect x="0" y="0" width="82" height="82" id="canvas_background" fill="#fff"/>
+  </g>
+  <g>
+    <title>Rahmen</title>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="80" height="80" id="r1" stroke="#ff0000"/>
+  </g>
+  <g>
+    <title>Text</title>
+    <text x="16" y="41" fill="#ff0000" font-size="35px" font-family="sans-serif">UR</text>
+    <text x="10" y="66" fill="#ff0000" font-size="20px" font-family="sans-serif">AC/DC</text>
+  </g>
+  <g>
+    <title>Rahmen ESP</title>
+    <rect fill="#fff" stroke-width="2" x="1" y="81" width="80" height="60" id="r1" stroke="#ff0000"/>
+  </g>
+  <g>
+    <title>Text ESP</title>
+    <text x="6" y="128" fill="#ff0000" font-size="35px" font-family="sans-serif">ESP</text>
+  </g>
+</svg>
