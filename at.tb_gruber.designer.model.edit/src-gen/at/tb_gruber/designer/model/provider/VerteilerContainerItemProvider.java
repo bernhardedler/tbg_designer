@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VerteilerContainerItemProvider extends AnlageItemProvider {
+public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -107,9 +107,7 @@ public class VerteilerContainerItemProvider extends AnlageItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VerteilerContainer) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_VerteilerContainer_type")
-				: getString("_UI_VerteilerContainer_type") + " " + label;
+		return getString("_UI_VerteilerContainer_type");
 	}
 
 	/**

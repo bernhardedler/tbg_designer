@@ -1,7 +1,7 @@
 <svg width="82" height="69" xmlns="http://www.w3.org/2000/svg">
  <g>
   <title>background</title>
-  <rect x="0" y="0" width="302" height="142" id="canvas_background" fill="#fff"/>
+  <rect x="0" y="0" width="302" height="142" id="canvas_background" fill="none" opacity="0"/>
  </g>
  <g>
   <title>NAP</title>

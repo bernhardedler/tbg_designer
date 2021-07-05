@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VerteilerContainerImpl extends AnlageImpl implements VerteilerContainer {
+public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements VerteilerContainer {
 	/**
 	 * The cached value of the '{@link #getVerteiler() <em>Verteiler</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

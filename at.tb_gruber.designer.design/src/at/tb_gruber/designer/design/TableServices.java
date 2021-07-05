@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.Anlage;
+import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
@@ -124,7 +125,7 @@ public class TableServices {
 	public String getUrsprungVersorgtVonPK(EObject self) {
 		String pk = "";
 		if (self instanceof Verbindung) {
-			Anlage ursprung = ((Verbindung) self).getUrsprung();
+			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
 			if (!ursprung.getVersorgtVon().isEmpty()) {
 				Objekt objekt = (Objekt) ((Verbindung) self).getZiel().eContainer();
 				Bahnhof bahnhof = (Bahnhof) objekt.eContainer();

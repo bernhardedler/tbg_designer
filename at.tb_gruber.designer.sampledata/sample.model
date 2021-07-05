@@ -1,16 +1,150 @@
 <?xml version="1.0" encoding="ASCII"?>
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample">
-  <objekt name="123">
-    <anlage xsi:type="tbg:VerteilerContainer" primaerspannung="blau">
-      <verteiler xsi:type="tbg:VerteilerOhneZaehler" name=""/>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler">
-        <netzanschlusspunkt beschreibung="NAP"/>
-      </verteiler>
-      <netzanschlusspunkt versorgtVon="1" primaerspannung="blau" beschreibung="NAP"/>
+  <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" primaerspannung="gruen">
+      <verbindungNach nr="1" primaerspannung="gruen" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
+      <betreiber name="EVU"/>
+      <netzanschlusspunkt name="" beschreibung="&#xdc;GS Abgang Schleifenkasten TST" postition="DANACH"/>
     </anlage>
-    <anlage xsi:type="tbg:Generator" anlagennummer="G 00" primaerspannung="blau">
-      <verbindungNach nr="1" primaerspannung="blau" ziel="//@objekt.0/@anlage.0/@netzanschlusspunkt" ursprung="//@objekt.0/@anlage.1"/>
+  </objekt>
+  <objekt name="Aufnahmegeb&#xe4;ude Bahnhof Muster">
+    <anlage xsi:type="tbg:VerteilerContainer" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;" versorgtVon="1" primaerspannung="gruen">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <verbindungNach nr="1" primaerspannung="gruen" ziel="//@objekt.1/@anlage.1" ursprung="//@objekt.1/@anlage.0/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
+        <details anzeigetext="ZP-Nr.: 00AT0001234567890&#xD;&#xA;"/>
+      </verteiler>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <verbindungNach nr="1" primaerspannung="gruen" ziel="//@objekt.1/@anlage.2" ursprung="//@objekt.1/@anlage.0/@verteiler.1" linientype="Kundenanlage_&#xd6;BB"/>
+        <details anzeigetext="ZP-Nr.:00AT001234465789"/>
+      </verteiler>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <verbindungNach nr="1" primaerspannung="gruen" ziel="//@objekt.1/@anlage.3" ursprung="//@objekt.1/@anlage.0/@verteiler.2" linientype="Kundenanlage_&#xd6;BB"/>
+        <details anzeigetext="ZP-Nr.:00AT001234465789"/>
+      </verteiler>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" name="VT Wohnung 1" anlagennummer="ET 01" versorgtVon="1" primaerspannung="gruen">
+      <betreiber name="Immo (ET)"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" name="VT Wohnung 2" anlagennummer="ET 02" versorgtVon="1" primaerspannung="gruen">
+      <betreiber name="Immo (ET)"/>
+    </anlage>
+    <anlage xsi:type="tbg:Versorgungsknoten" name="Haupt-VT AG BF Muster" anlagennummer="VK 00" versorgtVon="1" primaerspannung="gruen">
+      <verbindungNach nr="2" primaerspannung="gruen" ziel="//@objekt.1/@anlage.4" ursprung="//@objekt.1/@anlage.3" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="3" primaerspannung="gruen" ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.1/@anlage.3"/>
+      <betreiber name="SAE (ET)"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" name="TK-VT" anlagennummer="ET 03" versorgtVon="2" primaerspannung="gruen">
       <betreiber name="Betreiber"/>
+    </anlage>
+  </objekt>
+  <objekt name="Verkehrsstation BF Muster" objektart="Verkehrsstation">
+    <anlage xsi:type="tbg:VerteilerContainer" name="Bahnhofs-VT" anlagennummer="" versorgtVon="3" primaerspannung="gruen">
+      <betreiber name="EN"/>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <verbindungNach nr="1" primaerspannung="gruen" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.2/@anlage.0/@verteiler.0" linientype="Kundenanlage Dritter"/>
+        <details anzeigetext="ZP-NR.: 00AT00"/>
+      </verteiler>
+      <verteiler xsi:type="tbg:VerteilerOhneZaehler" primaerspannung="gruen"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" name="B&#xe4;cker" anlagennummer="ET 00" versorgtVon="1" primaerspannung="gruen">
+      <betreiber name="KA Dritte "/>
+    </anlage>
+  </objekt>
+  <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" primaerspannung="gruen">
+      <verbindungNach nr="4" primaerspannung="gruen" ziel="//@objekt.4/@anlage.0/@netzanschlusspunkt" ursprung="//@objekt.3/@anlage.0"/>
+      <betreiber name="EVU"/>
+    </anlage>
+  </objekt>
+  <objekt name="Aufnahmegeb&#xe4;ude 2 Bahnhof Muster">
+    <anlage xsi:type="tbg:VerteilerContainer" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;" versorgtVon="1" primaerspannung="gruen">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <details anzeigetext="ZP-Nr.: 00AT0001234567890&#xD;&#xA;"/>
+      </verteiler>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <details anzeigetext="ZP-Nr.:00AT001234465789"/>
+      </verteiler>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <details anzeigetext="ZP-Nr.:00AT001234465789"/>
+      </verteiler>
+      <netzanschlusspunkt versorgtVon="4" primaerspannung="gruen" beschreibung="NAP"/>
+    </anlage>
+  </objekt>
+  <objekt name="&#xd6;BB TG M&#xfc;llerdorf">
+    <anlage xsi:type="tbg:VerteilerContainer" name="Schaltanlage TG M&#xfc;llerdorf">
+      <betreiber name="EN"/>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="5">
+        <verbindungNach nr="1" ziel="//@objekt.5/@anlage.1" ursprung="//@objekt.5/@anlage.0/@verteiler.0"/>
+        <details anzeigetext="Netz N&#xd6;&#xD;&#xA;ZP-NR.: 00AT00234783503&#xD;&#xA;"/>
+        <netzanschlusspunkt beschreibung="Trennzelle nach Messzelle" postition="MITTE"/>
+      </verteiler>
+    </anlage>
+    <anlage xsi:type="tbg:Trafo" name="Trafo 1" versorgtVon="1" sekundaerspannung="gruen">
+      <verbindungNach nr="6" primaerspannung="gruen" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>
+      <betreiber name="EN"/>
+      <details anzeigetext="20kV/400V&#xD;&#xA;&#xD;&#xA;400kVA"/>
+    </anlage>
+    <anlage xsi:type="tbg:VerteilerContainer" name="Haupt-VT TG M&#xfc;llerdorf" versorgtVon="8" primaerspannung="gruen">
+      <betreiber name="EN"/>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="6" primaerspannung="gruen">
+        <verbindungNach nr="1" primaerspannung="gruen" ziel="//@objekt.8/@anlage.0" ursprung="//@objekt.5/@anlage.2/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
+        <details anzeigetext="ZP-NR.: 00AT00"/>
+      </verteiler>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="gruen">
+        <details anzeigetext="ZP-NR.: 00AT00"/>
+      </verteiler>
+    </anlage>
+    <anlage xsi:type="tbg:Umrichter" name="PV_Wechselrichter" anlagennummer="UR 00" versorgtVon="7" primaerspannung="gruen">
+      <verbindungNach nr="8" primaerspannung="gruen" ziel="//@objekt.5/@anlage.2" ursprung="//@objekt.5/@anlage.3"/>
+      <betreiber name="EN"/>
+      <details anzeigetext="15kVA"/>
+    </anlage>
+  </objekt>
+  <objekt name="TST Netz N&#xd6; M&#xfc;llerdorf">
+    <anlage xsi:type="tbg:Versorgungsknoten" name="Schaltanlage Netz N&#xf6;" anlagennummer="VK 00">
+      <verbindungNach nr="5" ziel="//@objekt.5/@anlage.0/@verteiler.0" ursprung="//@objekt.6/@anlage.0"/>
+      <betreiber name="EVU"/>
+    </anlage>
+  </objekt>
+  <objekt name="Dach TG M&#xfc;llerdorf">
+    <anlage xsi:type="tbg:Generator" name="PV Generator" anlagennummer="G 01" primaerspannung="blau">
+      <verbindungNach nr="7" primaerspannung="blau" ziel="//@objekt.5/@anlage.3" ursprung="//@objekt.7/@anlage.0"/>
+      <betreiber name="EN"/>
+      <details anzeigetext="8kWP"/>
+    </anlage>
+  </objekt>
+  <objekt name="M&#xfc;llerdorf WHZ Schalthaus 1">
+    <anlage xsi:type="tbg:Versorgungsknoten" name="WHZ - VT" anlagennummer="VK 00" versorgtVon="1" primaerspannung="gruen">
+      <betreiber name="SAE (ET)"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" name="WHZ-VT" anlagennummer="ET 00" versorgtVon="10" primaerspannung="cyan">
+      <betreiber name="SAE (ET)"/>
+    </anlage>
+  </objekt>
+  <objekt name="OL-Mast 37b">
+    <anlage xsi:type="tbg:Versorgungsknoten" name="WHZ-1" anlagennummer="VK 00" primaerspannung="magenta">
+      <verbindungNach nr="9" primaerspannung="magenta" ziel="//@objekt.9/@anlage.1" ursprung="//@objekt.9/@anlage.0"/>
+      <betreiber name="SAE (ET)"/>
+    </anlage>
+    <anlage xsi:type="tbg:Trafo" name="WHZ1" versorgtVon="9" primaerspannung="magenta" sekundaerspannung="cyan">
+      <verbindungNach nr="10" primaerspannung="cyan" ziel="//@objekt.8/@anlage.1" ursprung="//@objekt.9/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
+      <betreiber name="SAE (ET)"/>
+      <details anzeigetext="15kV/2x231V&#xD;&#xA;125kVA"/>
+    </anlage>
+  </objekt>
+  <objekt name="&#xd6;BB SH Mustertunnelportal West">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" versorgtVon="13" primaerspannung="gruen">
+      <verbindungNach nr="11" primaerspannung="gruen" ziel="//@objekt.10/@anlage.1" ursprung="//@objekt.10/@anlage.0" linientype="Kundenanlage_&#xd6;BB"/>
+      <betreiber name="SAE (ET)"/>
+    </anlage>
+    <anlage xsi:type="tbg:UmrichterMitEnergiespeicher" anlagennummer="ESP 00" versorgtVon="11" primaerspannung="gruen">
+      <verbindungNach nr="12" primaerspannung="gruen" ziel="//@objekt.10/@anlage.2" ursprung="//@objekt.10/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
+      <betreiber name="SAE (ET)"/>
+      <details anzeigetext="15kVA&#xD;&#xA;&#xD;&#xA;&#xA;90 min"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" name="T-VT MT West" anlagennummer="ET 00" versorgtVon="12" primaerspannung="gruen">
+      <verbindungNach nr="13" primaerspannung="gruen" ziel="//@objekt.10/@anlage.0" ursprung="//@objekt.10/@anlage.2" linientype="Kundenanlage_&#xd6;BB"/>
+      <betreiber name="SAE (ET)"/>
     </anlage>
   </objekt>
   <plankopf/>

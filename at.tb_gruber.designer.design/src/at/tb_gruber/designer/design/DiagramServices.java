@@ -230,17 +230,15 @@ public class DiagramServices {
 
 	public String createDetailsTextTemplate(EObject self) {
 		if (self instanceof Umrichter) {
-			return "0 kVA";
+			return "0kVA";
 		} else if (self.eContainer() instanceof UmrichterMitEnergiespeicher) {
-			return "0 kVA\n\n\n\n0 min";
+			return "0kVA\n \n \n \n0 min";
 		} else if (self.eContainer() instanceof Trafo) {
-			return "0 kV/0 V\n0 kVA";
+			return "0kV/0V\n0kVA";
 		} else if (self.eContainer() instanceof Generator) {
-			Generator anlage = (Generator) self;
-			return "0 kWP";
+			return "0kWP";
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
-			VerteilerMitZaehler anlage = (VerteilerMitZaehler) self;
-			return "ZP-NR.: " + anlage.getZpNr();
+			return "ZP-NR.: 00AT00";
 		}
 
 		return "";

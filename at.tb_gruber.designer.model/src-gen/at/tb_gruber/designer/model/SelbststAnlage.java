@@ -12,5 +12,5 @@ package at.tb_gruber.designer.model;
  * @model abstract="true"
  * @generated
  */
-public interface SelbststAnlage extends Anlage {
+public interface SelbststAnlage extends AnlageMitAttributen {
 } // SelbststAnlage

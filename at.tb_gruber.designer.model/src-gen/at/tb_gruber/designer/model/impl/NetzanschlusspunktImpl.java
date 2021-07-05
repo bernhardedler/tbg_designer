@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class NetzanschlusspunktImpl extends SelbststAnlageImpl implements Netzanschlusspunkt {
+public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements Netzanschlusspunkt {
 	/**
 	 * The default value of the '{@link #getNrHauptversorgung() <em>Nr Hauptversorgung</em>}' attribute.
 	 * <!-- begin-user-doc -->

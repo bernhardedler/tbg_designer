@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NetzanschlusspunktItemProvider extends SelbststAnlageItemProvider {
+public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -144,7 +144,7 @@ public class NetzanschlusspunktItemProvider extends SelbststAnlageItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Netzanschlusspunkt) object).getName();
+		String label = ((Netzanschlusspunkt) object).getNrHauptversorgung();
 		return label == null || label.length() == 0 ? getString("_UI_Netzanschlusspunkt_type")
 				: getString("_UI_Netzanschlusspunkt_type") + " " + label;
 	}

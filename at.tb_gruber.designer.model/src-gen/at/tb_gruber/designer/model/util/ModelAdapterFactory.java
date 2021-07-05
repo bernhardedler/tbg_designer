@@ -77,8 +77,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAnlage(Anlage object) {
-			return createAnlageAdapter();
+		public Adapter caseAnlageMitAttributen(AnlageMitAttributen object) {
+			return createAnlageMitAttributenAdapter();
 		}
 
 		@Override
@@ -172,6 +172,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAnlageBase(AnlageBase object) {
+			return createAnlageBaseAdapter();
+		}
+
+		@Override
+		public Adapter caseAnlageOhneAttribute(AnlageOhneAttribute object) {
+			return createAnlageOhneAttributeAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -219,16 +229,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.Anlage <em>Anlage</em>}'.
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.AnlageMitAttributen <em>Anlage Mit Attributen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see at.tb_gruber.designer.model.Anlage
+	 * @see at.tb_gruber.designer.model.AnlageMitAttributen
 	 * @generated
 	 */
-	public Adapter createAnlageAdapter() {
+	public Adapter createAnlageMitAttributenAdapter() {
 		return null;
 	}
 
@@ -383,6 +393,34 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUmrichterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.AnlageBase <em>Anlage Base</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.AnlageBase
+	 * @generated
+	 */
+	public Adapter createAnlageBaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.AnlageOhneAttribute <em>Anlage Ohne Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.AnlageOhneAttribute
+	 * @generated
+	 */
+	public Adapter createAnlageOhneAttributeAdapter() {
 		return null;
 	}
 

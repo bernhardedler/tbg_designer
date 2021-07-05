@@ -21,7 +21,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Netzanschlusspunkt extends SelbststAnlage {
+public interface Netzanschlusspunkt extends AnlageOhneAttribute {
 	/**
 	 * Returns the value of the '<em><b>Nr Hauptversorgung</b></em>' attribute.
 	 * <!-- begin-user-doc -->

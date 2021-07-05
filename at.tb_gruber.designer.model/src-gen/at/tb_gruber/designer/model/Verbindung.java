@@ -55,6 +55,7 @@ public interface Verbindung extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Primaerspannung</b></em>' attribute.
+	 * The default value is <code>"NSP_Un_bis_inkl_1kV_50Hz_AC"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,7 +63,7 @@ public interface Verbindung extends EObject {
 	 * @see at.tb_gruber.designer.model.spannungsarttype
 	 * @see #setPrimaerspannung(spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Primaerspannung()
-	 * @model
+	 * @model default="NSP_Un_bis_inkl_1kV_50Hz_AC"
 	 * @generated
 	 */
 	spannungsarttype getPrimaerspannung();
@@ -83,12 +84,12 @@ public interface Verbindung extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ziel</em>' reference.
-	 * @see #setZiel(Anlage)
+	 * @see #setZiel(AnlageBase)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Ziel()
 	 * @model required="true"
 	 * @generated
 	 */
-	Anlage getZiel();
+	AnlageBase getZiel();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getZiel <em>Ziel</em>}' reference.
@@ -98,19 +99,19 @@ public interface Verbindung extends EObject {
 	 * @see #getZiel()
 	 * @generated
 	 */
-	void setZiel(Anlage value);
+	void setZiel(AnlageBase value);
 
 	/**
 	 * Returns the value of the '<em><b>Ursprung</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ursprung</em>' reference.
-	 * @see #setUrsprung(Anlage)
+	 * @see #setUrsprung(AnlageBase)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Ursprung()
 	 * @model required="true"
 	 * @generated
 	 */
-	Anlage getUrsprung();
+	AnlageBase getUrsprung();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getUrsprung <em>Ursprung</em>}' reference.
@@ -120,7 +121,7 @@ public interface Verbindung extends EObject {
 	 * @see #getUrsprung()
 	 * @generated
 	 */
-	void setUrsprung(Anlage value);
+	void setUrsprung(AnlageBase value);
 
 	/**
 	 * Returns the value of the '<em><b>Reserve9</b></em>' attribute.

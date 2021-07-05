@@ -80,9 +80,11 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.ANLAGE: {
-			Anlage anlage = (Anlage) theEObject;
-			T result = caseAnlage(anlage);
+		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN: {
+			AnlageMitAttributen anlageMitAttributen = (AnlageMitAttributen) theEObject;
+			T result = caseAnlageMitAttributen(anlageMitAttributen);
+			if (result == null)
+				result = caseAnlageBase(anlageMitAttributen);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -114,7 +116,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(trafo);
 			if (result == null)
-				result = caseAnlage(trafo);
+				result = caseAnlageMitAttributen(trafo);
+			if (result == null)
+				result = caseAnlageBase(trafo);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -123,9 +127,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			Netzanschlusspunkt netzanschlusspunkt = (Netzanschlusspunkt) theEObject;
 			T result = caseNetzanschlusspunkt(netzanschlusspunkt);
 			if (result == null)
-				result = caseSelbststAnlage(netzanschlusspunkt);
+				result = caseAnlageOhneAttribute(netzanschlusspunkt);
 			if (result == null)
-				result = caseAnlage(netzanschlusspunkt);
+				result = caseAnlageBase(netzanschlusspunkt);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -136,7 +140,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(versorgungsknoten);
 			if (result == null)
-				result = caseAnlage(versorgungsknoten);
+				result = caseAnlageMitAttributen(versorgungsknoten);
+			if (result == null)
+				result = caseAnlageBase(versorgungsknoten);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -147,7 +153,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(energietechnikanlage);
 			if (result == null)
-				result = caseAnlage(energietechnikanlage);
+				result = caseAnlageMitAttributen(energietechnikanlage);
+			if (result == null)
+				result = caseAnlageBase(energietechnikanlage);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -158,7 +166,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(generator);
 			if (result == null)
-				result = caseAnlage(generator);
+				result = caseAnlageMitAttributen(generator);
+			if (result == null)
+				result = caseAnlageBase(generator);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -167,7 +177,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			SelbststAnlage selbststAnlage = (SelbststAnlage) theEObject;
 			T result = caseSelbststAnlage(selbststAnlage);
 			if (result == null)
-				result = caseAnlage(selbststAnlage);
+				result = caseAnlageMitAttributen(selbststAnlage);
+			if (result == null)
+				result = caseAnlageBase(selbststAnlage);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -178,7 +190,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(umrichterBase);
 			if (result == null)
-				result = caseAnlage(umrichterBase);
+				result = caseAnlageMitAttributen(umrichterBase);
+			if (result == null)
+				result = caseAnlageBase(umrichterBase);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -189,7 +203,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseVerteilerBase(verteilerMitZaehler);
 			if (result == null)
-				result = caseAnlage(verteilerMitZaehler);
+				result = caseAnlageMitAttributen(verteilerMitZaehler);
+			if (result == null)
+				result = caseAnlageBase(verteilerMitZaehler);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -202,7 +218,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(umrichterMitEnergiespeicher);
 			if (result == null)
-				result = caseAnlage(umrichterMitEnergiespeicher);
+				result = caseAnlageMitAttributen(umrichterMitEnergiespeicher);
+			if (result == null)
+				result = caseAnlageBase(umrichterMitEnergiespeicher);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -211,7 +229,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			VerteilerContainer verteilerContainer = (VerteilerContainer) theEObject;
 			T result = caseVerteilerContainer(verteilerContainer);
 			if (result == null)
-				result = caseAnlage(verteilerContainer);
+				result = caseAnlageOhneAttribute(verteilerContainer);
+			if (result == null)
+				result = caseAnlageBase(verteilerContainer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -227,7 +247,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			VerteilerBase verteilerBase = (VerteilerBase) theEObject;
 			T result = caseVerteilerBase(verteilerBase);
 			if (result == null)
-				result = caseAnlage(verteilerBase);
+				result = caseAnlageMitAttributen(verteilerBase);
+			if (result == null)
+				result = caseAnlageBase(verteilerBase);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -238,7 +260,9 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseVerteilerBase(verteilerOhneZaehler);
 			if (result == null)
-				result = caseAnlage(verteilerOhneZaehler);
+				result = caseAnlageMitAttributen(verteilerOhneZaehler);
+			if (result == null)
+				result = caseAnlageBase(verteilerOhneZaehler);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -258,7 +282,25 @@ public class ModelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSelbststAnlage(umrichter);
 			if (result == null)
-				result = caseAnlage(umrichter);
+				result = caseAnlageMitAttributen(umrichter);
+			if (result == null)
+				result = caseAnlageBase(umrichter);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.ANLAGE_BASE: {
+			AnlageBase anlageBase = (AnlageBase) theEObject;
+			T result = caseAnlageBase(anlageBase);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.ANLAGE_OHNE_ATTRIBUTE: {
+			AnlageOhneAttribute anlageOhneAttribute = (AnlageOhneAttribute) theEObject;
+			T result = caseAnlageOhneAttribute(anlageOhneAttribute);
+			if (result == null)
+				result = caseAnlageBase(anlageOhneAttribute);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -299,17 +341,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Anlage</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Anlage Mit Attributen</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Anlage</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Anlage Mit Attributen</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAnlage(Anlage object) {
+	public T caseAnlageMitAttributen(AnlageMitAttributen object) {
 		return null;
 	}
 
@@ -475,6 +517,36 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUmrichter(Umrichter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anlage Base</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anlage Base</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnlageBase(AnlageBase object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anlage Ohne Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anlage Ohne Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnlageOhneAttribute(AnlageOhneAttribute object) {
 		return null;
 	}
 

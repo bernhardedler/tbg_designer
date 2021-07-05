@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum spannungsarttype implements Enumerator {
 	/**
-	 * The '<em><b>HSP Un ab 1k V50 Hz</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #HSP_UN_AB_1K_V50_HZ_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	HSP_UN_AB_1K_V50_HZ(0, "HSP_Un_ab_1kV_50Hz", "rot"),
-
-	/**
 	 * The '<em><b>NSP Un bis inkl 1k V50 Hz AC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +26,16 @@ public enum spannungsarttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NSP_UN_BIS_INKL_1K_V50_HZ_AC(1, "NSP_Un_bis_inkl_1kV_50Hz_AC", "gruen"),
+	NSP_UN_BIS_INKL_1K_V50_HZ_AC(0, "NSP_Un_bis_inkl_1kV_50Hz_AC", "gruen"),
+	/**
+	* The '<em><b>HSP Un ab 1k V50 Hz</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #HSP_UN_AB_1K_V50_HZ_VALUE
+	* @generated
+	* @ordered
+	*/
+	HSP_UN_AB_1K_V50_HZ(1, "HSP_Un_ab_1kV_50Hz", "rot"),
 
 	/**
 	 * The '<em><b>HSP Un 15k V16 7Hz</b></em>' literal object.
@@ -89,17 +88,6 @@ public enum spannungsarttype implements Enumerator {
 	RESERVE_2(6, "Reserve_2", "Reserve_2");
 
 	/**
-	 * The '<em><b>HSP Un ab 1k V50 Hz</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #HSP_UN_AB_1K_V50_HZ
-	 * @model name="HSP_Un_ab_1kV_50Hz" literal="rot"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int HSP_UN_AB_1K_V50_HZ_VALUE = 0;
-
-	/**
 	 * The '<em><b>NSP Un bis inkl 1k V50 Hz AC</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,7 +96,18 @@ public enum spannungsarttype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE = 1;
+	public static final int NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE = 0;
+
+	/**
+	 * The '<em><b>HSP Un ab 1k V50 Hz</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #HSP_UN_AB_1K_V50_HZ
+	 * @model name="HSP_Un_ab_1kV_50Hz" literal="rot"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int HSP_UN_AB_1K_V50_HZ_VALUE = 1;
 
 	/**
 	 * The '<em><b>HSP Un 15k V16 7Hz</b></em>' literal value.
@@ -171,9 +170,9 @@ public enum spannungsarttype implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final spannungsarttype[] VALUES_ARRAY = new spannungsarttype[] { HSP_UN_AB_1K_V50_HZ,
-			NSP_UN_BIS_INKL_1K_V50_HZ_AC, HSP_UN_15K_V16_7HZ, NSP_UN_BIS_INKL_1K_V16_7HZ, UN_BIS_INKL_15K_VDC,
-			RESERVE_1, RESERVE_2, };
+	private static final spannungsarttype[] VALUES_ARRAY = new spannungsarttype[] { NSP_UN_BIS_INKL_1K_V50_HZ_AC,
+			HSP_UN_AB_1K_V50_HZ, HSP_UN_15K_V16_7HZ, NSP_UN_BIS_INKL_1K_V16_7HZ, UN_BIS_INKL_15K_VDC, RESERVE_1,
+			RESERVE_2, };
 
 	/**
 	 * A public read-only list of all the '<em><b>spannungsarttype</b></em>' enumerators.
@@ -229,10 +228,10 @@ public enum spannungsarttype implements Enumerator {
 	 */
 	public static spannungsarttype get(int value) {
 		switch (value) {
-		case HSP_UN_AB_1K_V50_HZ_VALUE:
-			return HSP_UN_AB_1K_V50_HZ;
 		case NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE:
 			return NSP_UN_BIS_INKL_1K_V50_HZ_AC;
+		case HSP_UN_AB_1K_V50_HZ_VALUE:
+			return HSP_UN_AB_1K_V50_HZ;
 		case HSP_UN_15K_V16_7HZ_VALUE:
 			return HSP_UN_15K_V16_7HZ;
 		case NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE:

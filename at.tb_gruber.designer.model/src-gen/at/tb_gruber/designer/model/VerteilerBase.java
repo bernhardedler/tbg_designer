@@ -18,7 +18,7 @@ package at.tb_gruber.designer.model;
  * @model abstract="true"
  * @generated
  */
-public interface VerteilerBase extends Anlage {
+public interface VerteilerBase extends AnlageMitAttributen {
 	/**
 	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

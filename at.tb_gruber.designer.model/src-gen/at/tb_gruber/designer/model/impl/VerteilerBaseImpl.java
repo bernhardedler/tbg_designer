@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public abstract class VerteilerBaseImpl extends AnlageImpl implements VerteilerBase {
+public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implements VerteilerBase {
 	/**
 	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->

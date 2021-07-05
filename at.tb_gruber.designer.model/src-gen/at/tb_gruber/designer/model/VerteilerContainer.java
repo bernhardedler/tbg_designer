@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VerteilerContainer extends Anlage {
+public interface VerteilerContainer extends AnlageOhneAttribute {
 	/**
 	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

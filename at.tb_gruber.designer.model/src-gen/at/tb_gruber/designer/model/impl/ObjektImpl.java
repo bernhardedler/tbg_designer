@@ -2,7 +2,7 @@
  */
 package at.tb_gruber.designer.model.impl;
 
-import at.tb_gruber.designer.model.Anlage;
+import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.externe_datenquelle;
@@ -134,7 +134,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Anlage> anlage;
+	protected EList<AnlageBase> anlage;
 
 	/**
 	 * The default value of the '{@link #getGebaeudeArt() <em>Gebaeude Art</em>}' attribute.
@@ -336,9 +336,9 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public EList<Anlage> getAnlage() {
+	public EList<AnlageBase> getAnlage() {
 		if (anlage == null) {
-			anlage = new EObjectContainmentEList<Anlage>(Anlage.class, this, ModelPackage.OBJEKT__ANLAGE);
+			anlage = new EObjectContainmentEList<AnlageBase>(AnlageBase.class, this, ModelPackage.OBJEKT__ANLAGE);
 		}
 		return anlage;
 	}
@@ -505,7 +505,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:
 			getAnlage().clear();
-			getAnlage().addAll((Collection<? extends Anlage>) newValue);
+			getAnlage().addAll((Collection<? extends AnlageBase>) newValue);
 			return;
 		case ModelPackage.OBJEKT__GEBAEUDE_ART:
 			setGebaeudeArt((String) newValue);

@@ -20,8 +20,8 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//objektarttype/Oberleitungsmast"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//spannungsarttype">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP_Un_ab_1kV_50Hz"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP_Un_bis_inkl_1kV_50Hz_AC"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP_Un_ab_1kV_50Hz"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/HSP_Un_15kV_16_7Hz"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/NSP_Un_bis_inkl_1kV_16_7Hz"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//spannungsarttype/Un_bis_inkl_1_5kV_DC"/>
@@ -80,22 +80,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/gpsstandort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/externeQuelle"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Anlage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagennummer"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/objektteil"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/eadbId"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/verbindungNach"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/versorgtVon"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/primaerspannung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/inObjektteil"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/reserve4"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/anlagenIdImmoAssi"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/eadbVersorgungArt"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/verteilerbezeichnung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Anlage/abgangVT"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/betreiber"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Anlage/details"/>
+    <genClasses ecoreClass="model.ecore#//AnlageMitAttributen">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/anlagennummer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/objektteil"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/eadbId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/primaerspannung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/inObjektteil"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/reserve4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/anlagenIdImmoAssi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/eadbVersorgungArt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/verteilerbezeichnung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AnlageMitAttributen/abgangVT"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Verbindung">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/nr"/>
@@ -155,5 +151,12 @@
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Details/anzeigetext"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Umrichter"/>
+    <genClasses ecoreClass="model.ecore#//AnlageBase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//AnlageBase/details"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//AnlageBase/betreiber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//AnlageBase/versorgtVon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//AnlageBase/verbindungNach"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//AnlageOhneAttribute"/>
   </genPackages>
 </genmodel:GenModel>

@@ -124,7 +124,7 @@ public interface Objekt extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Anlage</b></em>' containment reference list.
-	 * The list contents are of type {@link at.tb_gruber.designer.model.Anlage}.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.AnlageBase}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -135,7 +135,7 @@ public interface Objekt extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Anlage> getAnlage();
+	EList<AnlageBase> getAnlage();
 
 	/**
 	 * Returns the value of the '<em><b>Gebaeude Art</b></em>' attribute.

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class SelbststAnlageImpl extends AnlageImpl implements SelbststAnlage {
+public abstract class SelbststAnlageImpl extends AnlageMitAttributenImpl implements SelbststAnlage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

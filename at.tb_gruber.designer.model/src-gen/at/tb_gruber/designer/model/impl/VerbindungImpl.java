@@ -3,7 +3,7 @@
 package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.ARGUSrelevant;
-import at.tb_gruber.designer.model.Anlage;
+import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Verbindung;
@@ -69,7 +69,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.HSP_UN_AB_1K_V50_HZ;
+	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC;
 
 	/**
 	 * The cached value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
@@ -89,7 +89,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected Anlage ziel;
+	protected AnlageBase ziel;
 
 	/**
 	 * The cached value of the '{@link #getUrsprung() <em>Ursprung</em>}' reference.
@@ -99,7 +99,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected Anlage ursprung;
+	protected AnlageBase ursprung;
 
 	/**
 	 * The default value of the '{@link #getReserve9() <em>Reserve9</em>}' attribute.
@@ -313,10 +313,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public Anlage getZiel() {
+	public AnlageBase getZiel() {
 		if (ziel != null && ziel.eIsProxy()) {
 			InternalEObject oldZiel = (InternalEObject) ziel;
-			ziel = (Anlage) eResolveProxy(oldZiel);
+			ziel = (AnlageBase) eResolveProxy(oldZiel);
 			if (ziel != oldZiel) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.VERBINDUNG__ZIEL, oldZiel,
@@ -331,7 +331,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anlage basicGetZiel() {
+	public AnlageBase basicGetZiel() {
 		return ziel;
 	}
 
@@ -341,8 +341,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setZiel(Anlage newZiel) {
-		Anlage oldZiel = ziel;
+	public void setZiel(AnlageBase newZiel) {
+		AnlageBase oldZiel = ziel;
 		ziel = newZiel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__ZIEL, oldZiel, ziel));
@@ -354,10 +354,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public Anlage getUrsprung() {
+	public AnlageBase getUrsprung() {
 		if (ursprung != null && ursprung.eIsProxy()) {
 			InternalEObject oldUrsprung = (InternalEObject) ursprung;
-			ursprung = (Anlage) eResolveProxy(oldUrsprung);
+			ursprung = (AnlageBase) eResolveProxy(oldUrsprung);
 			if (ursprung != oldUrsprung) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.VERBINDUNG__URSPRUNG,
@@ -372,7 +372,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anlage basicGetUrsprung() {
+	public AnlageBase basicGetUrsprung() {
 		return ursprung;
 	}
 
@@ -382,8 +382,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setUrsprung(Anlage newUrsprung) {
-		Anlage oldUrsprung = ursprung;
+	public void setUrsprung(AnlageBase newUrsprung) {
+		AnlageBase oldUrsprung = ursprung;
 		ursprung = newUrsprung;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__URSPRUNG, oldUrsprung,
@@ -611,10 +611,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			setPrimaerspannung((spannungsarttype) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__ZIEL:
-			setZiel((Anlage) newValue);
+			setZiel((AnlageBase) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
-			setUrsprung((Anlage) newValue);
+			setUrsprung((AnlageBase) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__RESERVE9:
 			setReserve9((String) newValue);
@@ -656,10 +656,10 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			setPrimaerspannung(PRIMAERSPANNUNG_EDEFAULT);
 			return;
 		case ModelPackage.VERBINDUNG__ZIEL:
-			setZiel((Anlage) null);
+			setZiel((AnlageBase) null);
 			return;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
-			setUrsprung((Anlage) null);
+			setUrsprung((AnlageBase) null);
 			return;
 		case ModelPackage.VERBINDUNG__RESERVE9:
 			setReserve9(RESERVE9_EDEFAULT);
