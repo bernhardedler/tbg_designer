@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.eclipse.emf.ecore.EObject;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
-import at.tb_gruber.designer.model.Anlage;
 import at.tb_gruber.designer.model.AnlageBase;
+import at.tb_gruber.designer.model.AnlageMitAttributen;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
@@ -37,9 +37,9 @@ public class TableServices {
 		return self.eClass().getName();
 	}
 
-	public String getReserve5(EObject self) {
+	public String getReserve3(EObject self) {
 		if (self instanceof Trafo) {
-			return ((Trafo) self).getReserve5();
+			return ((Trafo) self).getReserve3();
 		} else {
 			return "";
 		}
@@ -71,7 +71,7 @@ public class TableServices {
 
 	public String getAnlageart(EObject self) {
 		String art = "";
-		if (self instanceof Anlage) {
+		if (self instanceof AnlageMitAttributen) {
 			art = self.getClass().getInterfaces()[0].getSimpleName();
 			if (self instanceof Energietechnikanlage) {
 				art += " (" + ((Energietechnikanlage) self).getEtType() + ")";
@@ -88,7 +88,7 @@ public class TableServices {
 			String id = objekt.getObjektId();
 			adresse = props.getAdresseForId(id, objekt.getExterneQuelle());
 			if (adresse.isEmpty()) {
-				adresse = objekt.getOrt_Adresse();
+				adresse = objekt.getOrt_adresse();
 			}
 		}
 		return adresse;
@@ -116,7 +116,7 @@ public class TableServices {
 			String id = objekt.getObjektId();
 			objektName = props.getGebaeudeartForId(id, objekt.getExterneQuelle());
 			if (objektName.isEmpty()) {
-				objektName = objekt.getGebaeudeArt();
+				objektName = objekt.getGebaeudeart();
 			}
 		}
 		return objektName;

@@ -2,7 +2,7 @@
  */
 package at.tb_gruber.designer.model.provider;
 
-import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
 
@@ -23,17 +23,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Bahnhof} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.AnlageBase} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class BahnhofItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class AnlageBaseItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -41,7 +40,7 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BahnhofItemProvider(AdapterFactory adapterFactory) {
+	public AnlageBaseItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -56,41 +55,24 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addProjektnamePropertyDescriptor(object);
+			addVersorgtVonPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Versorgt Von feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addVersorgtVonPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Bahnhof_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Bahnhof_name_feature", "_UI_Bahnhof_type"),
-						ModelPackage.Literals.BAHNHOF__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Projektname feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProjektnamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Bahnhof_projektname_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Bahnhof_projektname_feature",
-								"_UI_Bahnhof_type"),
-						ModelPackage.Literals.BAHNHOF__PROJEKTNAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_AnlageBase_versorgtVon_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_AnlageBase_versorgtVon_feature",
+								"_UI_AnlageBase_type"),
+						ModelPackage.Literals.ANLAGE_BASE__VERSORGT_VON, true, false, true, null, null, null));
 	}
 
 	/**
@@ -105,8 +87,9 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModelPackage.Literals.BAHNHOF__OBJEKT);
-			childrenFeatures.add(ModelPackage.Literals.BAHNHOF__PLANKOPF);
+			childrenFeatures.add(ModelPackage.Literals.ANLAGE_BASE__DETAILS);
+			childrenFeatures.add(ModelPackage.Literals.ANLAGE_BASE__BETREIBER);
+			childrenFeatures.add(ModelPackage.Literals.ANLAGE_BASE__VERBINDUNG_NACH);
 		}
 		return childrenFeatures;
 	}
@@ -125,14 +108,14 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 	}
 
 	/**
-	 * This returns Bahnhof.gif.
+	 * This returns AnlageBase.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Bahnhof"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AnlageBase"));
 	}
 
 	/**
@@ -153,9 +136,7 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Bahnhof) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Bahnhof_type")
-				: getString("_UI_Bahnhof_type") + " " + label;
+		return getString("_UI_AnlageBase_type");
 	}
 
 	/**
@@ -169,13 +150,10 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Bahnhof.class)) {
-		case ModelPackage.BAHNHOF__NAME:
-		case ModelPackage.BAHNHOF__PROJEKTNAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case ModelPackage.BAHNHOF__OBJEKT:
-		case ModelPackage.BAHNHOF__PLANKOPF:
+		switch (notification.getFeatureID(AnlageBase.class)) {
+		case ModelPackage.ANLAGE_BASE__DETAILS:
+		case ModelPackage.ANLAGE_BASE__BETREIBER:
+		case ModelPackage.ANLAGE_BASE__VERBINDUNG_NACH:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -193,11 +171,14 @@ public class BahnhofItemProvider extends ItemProviderAdapter implements IEditing
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(
-				createChildParameter(ModelPackage.Literals.BAHNHOF__OBJEKT, ModelFactory.eINSTANCE.createObjekt()));
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.ANLAGE_BASE__DETAILS,
+				ModelFactory.eINSTANCE.createDetails()));
 
-		newChildDescriptors.add(
-				createChildParameter(ModelPackage.Literals.BAHNHOF__PLANKOPF, ModelFactory.eINSTANCE.createPlankopf()));
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.ANLAGE_BASE__BETREIBER,
+				ModelFactory.eINSTANCE.createBetreiber()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.ANLAGE_BASE__VERBINDUNG_NACH,
+				ModelFactory.eINSTANCE.createVerbindung()));
 	}
 
 	/**

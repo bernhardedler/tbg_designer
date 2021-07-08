@@ -10,126 +10,84 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Externe Datenquelle</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Umrichterfunktion</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see at.tb_gruber.designer.model.ModelPackage#getExterne_Datenquelle()
+ * @see at.tb_gruber.designer.model.ModelPackage#getUmrichterfunktion()
  * @model
  * @generated
  */
-public enum Externe_Datenquelle implements Enumerator {
+public enum Umrichterfunktion implements Enumerator {
 	/**
-	 * The '<em><b>Undefined</b></em>' literal object.
+	 * The '<em><b>Ersatzstromversorgung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNDEFINED_VALUE
+	 * @see #ERSATZSTROMVERSORGUNG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(0, "undefined", "undefined"),
+	ERSATZSTROMVERSORGUNG(0, "Ersatzstromversorgung", "Ersatzstromversorgung"),
 
 	/**
-	 * The '<em><b>Immo</b></em>' literal object.
+	 * The '<em><b>Energieerzeugung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #IMMO_VALUE
+	 * @see #ENERGIEERZEUGUNG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	IMMO(1, "immo", "immo"),
+	ENERGIEERZEUGUNG(1, "Energieerzeugung", "Energieerzeugung");
 
 	/**
-	 * The '<em><b>Vs</b></em>' literal object.
+	 * The '<em><b>Ersatzstromversorgung</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #VS_VALUE
+	 * @see #ERSATZSTROMVERSORGUNG
+	 * @model name="Ersatzstromversorgung"
 	 * @generated
 	 * @ordered
 	 */
-	VS(2, "vs", "vs"),
+	public static final int ERSATZSTROMVERSORGUNG_VALUE = 0;
 
 	/**
-	 * The '<em><b>Gebaeude</b></em>' literal object.
+	 * The '<em><b>Energieerzeugung</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GEBAEUDE_VALUE
+	 * @see #ENERGIEERZEUGUNG
+	 * @model name="Energieerzeugung"
 	 * @generated
 	 * @ordered
 	 */
-	GEBAEUDE(3, "gebaeude", "gebaeude");
+	public static final int ENERGIEERZEUGUNG_VALUE = 1;
 
 	/**
-	 * The '<em><b>Undefined</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UNDEFINED
-	 * @model name="undefined"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int UNDEFINED_VALUE = 0;
-
-	/**
-	 * The '<em><b>Immo</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #IMMO
-	 * @model name="immo"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int IMMO_VALUE = 1;
-
-	/**
-	 * The '<em><b>Vs</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #VS
-	 * @model name="vs"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int VS_VALUE = 2;
-
-	/**
-	 * The '<em><b>Gebaeude</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #GEBAEUDE
-	 * @model name="gebaeude"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int GEBAEUDE_VALUE = 3;
-
-	/**
-	 * An array of all the '<em><b>Externe Datenquelle</b></em>' enumerators.
+	 * An array of all the '<em><b>Umrichterfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Externe_Datenquelle[] VALUES_ARRAY = new Externe_Datenquelle[] { UNDEFINED, IMMO, VS,
-			GEBAEUDE, };
+	private static final Umrichterfunktion[] VALUES_ARRAY = new Umrichterfunktion[] { ERSATZSTROMVERSORGUNG,
+			ENERGIEERZEUGUNG, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Externe Datenquelle</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Umrichterfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Externe_Datenquelle> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Umrichterfunktion> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Externe Datenquelle</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Umrichterfunktion</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Externe_Datenquelle get(String literal) {
+	public static Umrichterfunktion get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Externe_Datenquelle result = VALUES_ARRAY[i];
+			Umrichterfunktion result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -138,16 +96,16 @@ public enum Externe_Datenquelle implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Externe Datenquelle</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Umrichterfunktion</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Externe_Datenquelle getByName(String name) {
+	public static Umrichterfunktion getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Externe_Datenquelle result = VALUES_ARRAY[i];
+			Umrichterfunktion result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -156,23 +114,19 @@ public enum Externe_Datenquelle implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Externe Datenquelle</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Umrichterfunktion</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Externe_Datenquelle get(int value) {
+	public static Umrichterfunktion get(int value) {
 		switch (value) {
-		case UNDEFINED_VALUE:
-			return UNDEFINED;
-		case IMMO_VALUE:
-			return IMMO;
-		case VS_VALUE:
-			return VS;
-		case GEBAEUDE_VALUE:
-			return GEBAEUDE;
+		case ERSATZSTROMVERSORGUNG_VALUE:
+			return ERSATZSTROMVERSORGUNG;
+		case ENERGIEERZEUGUNG_VALUE:
+			return ENERGIEERZEUGUNG;
 		}
 		return null;
 	}
@@ -204,7 +158,7 @@ public enum Externe_Datenquelle implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Externe_Datenquelle(int value, String name, String literal) {
+	private Umrichterfunktion(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -251,4 +205,4 @@ public enum Externe_Datenquelle implements Enumerator {
 		return literal;
 	}
 
-} //Externe_Datenquelle
+} //Umrichterfunktion

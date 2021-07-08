@@ -8,6 +8,7 @@ import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -15,7 +16,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -29,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getVerteiler <em>Verteiler</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,6 +59,26 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 	protected Netzanschlusspunkt netzanschlusspunkt;
 
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,6 +95,20 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 	@Override
 	protected EClass eStaticClass() {
 		return ModelPackage.Literals.VERTEILER_CONTAINER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<VerteilerBase> getVerteiler() {
+		if (verteiler == null) {
+			verteiler = new EObjectContainmentEList<VerteilerBase>(VerteilerBase.class, this,
+					ModelPackage.VERTEILER_CONTAINER__VERTEILER);
+		}
+		return verteiler;
 	}
 
 	/**
@@ -132,12 +170,22 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 	 * @generated
 	 */
 	@Override
-	public EList<VerteilerBase> getVerteiler() {
-		if (verteiler == null) {
-			verteiler = new EObjectContainmentEList<VerteilerBase>(VerteilerBase.class, this,
-					ModelPackage.VERTEILER_CONTAINER__VERTEILER);
-		}
-		return verteiler;
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER_CONTAINER__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -168,6 +216,8 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 			return getVerteiler();
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			return getNetzanschlusspunkt();
+		case ModelPackage.VERTEILER_CONTAINER__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,6 +238,9 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
 			return;
+		case ModelPackage.VERTEILER_CONTAINER__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -206,6 +259,9 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) null);
 			return;
+		case ModelPackage.VERTEILER_CONTAINER__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -222,8 +278,27 @@ public class VerteilerContainerImpl extends AnlageOhneAttributeImpl implements V
 			return verteiler != null && !verteiler.isEmpty();
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			return netzanschlusspunkt != null;
+		case ModelPackage.VERTEILER_CONTAINER__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VerteilerContainerImpl

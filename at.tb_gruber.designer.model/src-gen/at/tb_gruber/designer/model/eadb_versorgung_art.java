@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>eadb versorgung art</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Eadb Versorgung Art</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see at.tb_gruber.designer.model.ModelPackage#geteadb_versorgung_art()
+ * @see at.tb_gruber.designer.model.ModelPackage#getEadb_Versorgung_Art()
  * @model
  * @generated
  */
-public enum eadb_versorgung_art implements Enumerator {
+public enum Eadb_Versorgung_Art implements Enumerator {
 	/**
 	 * The '<em><b>ÜGS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -145,32 +145,32 @@ public enum eadb_versorgung_art implements Enumerator {
 	public static final int FV_VALUE = 5;
 
 	/**
-	 * An array of all the '<em><b>eadb versorgung art</b></em>' enumerators.
+	 * An array of all the '<em><b>Eadb Versorgung Art</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final eadb_versorgung_art[] VALUES_ARRAY = new eadb_versorgung_art[] { ÜGS, VK, IF, IG, WHZ, FV, };
+	private static final Eadb_Versorgung_Art[] VALUES_ARRAY = new Eadb_Versorgung_Art[] { ÜGS, VK, IF, IG, WHZ, FV, };
 
 	/**
-	 * A public read-only list of all the '<em><b>eadb versorgung art</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Eadb Versorgung Art</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<eadb_versorgung_art> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Eadb_Versorgung_Art> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>eadb versorgung art</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Eadb Versorgung Art</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static eadb_versorgung_art get(String literal) {
+	public static Eadb_Versorgung_Art get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			eadb_versorgung_art result = VALUES_ARRAY[i];
+			Eadb_Versorgung_Art result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -179,16 +179,16 @@ public enum eadb_versorgung_art implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>eadb versorgung art</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Eadb Versorgung Art</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static eadb_versorgung_art getByName(String name) {
+	public static Eadb_Versorgung_Art getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			eadb_versorgung_art result = VALUES_ARRAY[i];
+			Eadb_Versorgung_Art result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -197,14 +197,14 @@ public enum eadb_versorgung_art implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>eadb versorgung art</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Eadb Versorgung Art</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static eadb_versorgung_art get(int value) {
+	public static Eadb_Versorgung_Art get(int value) {
 		switch (value) {
 		case ÜGS_VALUE:
 			return ÜGS;
@@ -249,7 +249,7 @@ public enum eadb_versorgung_art implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private eadb_versorgung_art(int value, String name, String literal) {
+	private Eadb_Versorgung_Art(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -296,4 +296,4 @@ public enum eadb_versorgung_art implements Enumerator {
 		return literal;
 	}
 
-} //eadb_versorgung_art
+} //Eadb_Versorgung_Art

@@ -1187,7 +1187,7 @@
             </style>
           </subNodeMappings>
           <subNodeMappings name="Details" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Details">
-            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelExpression="feature:anzeigetext" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelExpression="aql:self.createDetailsText()" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1594,11 +1594,7 @@
                         </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newDetails">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="anzeigetext" valueExpression="service:createDetailsTextTemplate()"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1680,11 +1676,7 @@
                         </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newDetails">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="anzeigetext" valueExpression="service:createDetailsTextTemplate()"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1707,11 +1699,7 @@
                         </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newDetails">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="anzeigetext" valueExpression="service:createDetailsTextTemplate()"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1734,11 +1722,7 @@
                         </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newDetails">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="anzeigetext" valueExpression="service:createDetailsTextTemplate()"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -1796,11 +1780,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::VerteilerMitZaehler" referenceName="verteiler" variableName="newVerteiler">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newDetails">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="anzeigetext" valueExpression="service:createDetailsTextTemplate()"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>

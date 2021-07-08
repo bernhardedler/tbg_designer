@@ -13,7 +13,7 @@ package at.tb_gruber.designer.model;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Trafo#getReserve5 <em>Reserve5</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Trafo#getReserve3 <em>Reserve3</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getTrafo()
@@ -24,28 +24,28 @@ public interface Trafo extends SelbststAnlage {
 	/**
 	 * Returns the value of the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * The default value is <code>"NSP_Un_bis_inkl_1kV_50Hz_AC"</code>.
-	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sekundaerspannung</em>' attribute.
-	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #setSekundaerspannung(spannungsarttype)
+	 * @see at.tb_gruber.designer.model.Spannungsarttype
+	 * @see #setSekundaerspannung(Spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Sekundaerspannung()
 	 * @model default="NSP_Un_bis_inkl_1kV_50Hz_AC"
 	 * @generated
 	 */
-	spannungsarttype getSekundaerspannung();
+	Spannungsarttype getSekundaerspannung();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Sekundaerspannung</em>' attribute.
-	 * @see at.tb_gruber.designer.model.spannungsarttype
+	 * @see at.tb_gruber.designer.model.Spannungsarttype
 	 * @see #getSekundaerspannung()
 	 * @generated
 	 */
-	void setSekundaerspannung(spannungsarttype value);
+	void setSekundaerspannung(Spannungsarttype value);
 
 	/**
 	 * Returns the value of the '<em><b>Trafo Kva</b></em>' attribute.
@@ -70,25 +70,25 @@ public interface Trafo extends SelbststAnlage {
 	void setTrafoKva(long value);
 
 	/**
-	 * Returns the value of the '<em><b>Reserve5</b></em>' attribute.
+	 * Returns the value of the '<em><b>Reserve3</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve5</em>' attribute.
-	 * @see #setReserve5(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Reserve5()
+	 * @return the value of the '<em>Reserve3</em>' attribute.
+	 * @see #setReserve3(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Reserve3()
 	 * @model
 	 * @generated
 	 */
-	String getReserve5();
+	String getReserve3();
 
 	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getReserve5 <em>Reserve5</em>}' attribute.
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getReserve3 <em>Reserve3</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve5</em>' attribute.
-	 * @see #getReserve5()
+	 * @param value the new value of the '<em>Reserve3</em>' attribute.
+	 * @see #getReserve3()
 	 * @generated
 	 */
-	void setReserve5(String value);
+	void setReserve3(String value);
 
 } // Trafo

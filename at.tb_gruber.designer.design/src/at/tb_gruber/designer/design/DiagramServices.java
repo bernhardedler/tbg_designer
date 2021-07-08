@@ -7,13 +7,16 @@ import java.util.stream.Collectors;
 import org.eclipse.emf.ecore.EObject;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
-import at.tb_gruber.designer.model.Anlage;
+import at.tb_gruber.designer.model.AnlageBase;
+import at.tb_gruber.designer.model.AnlageMitAttributen;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Generator;
 import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.NapPosition;
+import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.Spannungsarttype;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Umrichter;
 import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
@@ -22,7 +25,6 @@ import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.VerteilerMitZaehler;
-import at.tb_gruber.designer.model.spannungsarttype;
 
 /**
  * The services class used by VSM.
@@ -44,7 +46,7 @@ public class DiagramServices {
 	 * @return
 	 */
 	public Integer generateID(EObject self) {
-		Anlage parent = (Anlage) self.eContainer();
+		AnlageBase parent = (AnlageBase) self.eContainer();
 		EObject container = parent.eContainer();
 		Bahnhof project = null;
 		if (container instanceof Objekt) {
@@ -74,8 +76,8 @@ public class DiagramServices {
 	private Boolean isSpannungsart(EObject self, Integer target) {
 		if (self instanceof Verbindung) {
 			return target.equals(((Verbindung) self).getPrimaerspannung().getValue());
-		} else if (self instanceof Anlage) {
-			return target.equals(((Anlage) self).getPrimaerspannung().getValue());
+		} else if (self instanceof AnlageMitAttributen) {
+			return target.equals(((AnlageMitAttributen) self).getPrimaerspannung().getValue());
 		}
 		return false;
 	}
@@ -93,59 +95,59 @@ public class DiagramServices {
 	}
 
 	public Boolean isVspViolett(EObject self) {
-		return isSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
+		return isSpannungsart(self, Spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	public Boolean isVspRot(EObject self) {
-		return isSpannungsart(self, spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
+		return isSpannungsart(self, Spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
 	}
 
 	public Boolean isVspBlau(EObject self) {
-		return isSpannungsart(self, spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
+		return isSpannungsart(self, Spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
 	}
 
 	public Boolean isVspGruen(EObject self) {
-		return isSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE);
+		return isSpannungsart(self, Spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE);
 	}
 
 	public Boolean isVspMagenta(EObject self) {
-		return isSpannungsart(self, spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
+		return isSpannungsart(self, Spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isVspCyan(EObject self) {
-		return isSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
+		return isSpannungsart(self, Spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isVspBraun(EObject self) {
-		return isSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
+		return isSpannungsart(self, Spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	public Boolean isTspViolett(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	public Boolean isTspRot(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
 	}
 
 	public Boolean isTspBlau(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
 	}
 
 	public Boolean isTspGruen(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC_VALUE);
 	}
 
 	public Boolean isTspMagenta(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isTspCyan(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
 	}
 
 	public Boolean isTspBraun(EObject self) {
-		return isTrafoSpannungsart(self, spannungsarttype.RESERVE_1_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.RESERVE_1_VALUE);
 	}
 
 	private Boolean isTrafoSpannungsart(EObject self, Integer target) {
@@ -156,7 +158,7 @@ public class DiagramServices {
 	}
 
 	public String getVersorgungsknotenSize(EObject self) {
-		int cnt = ((Anlage) self).getVerbindungNach().size();
+		int cnt = ((AnlageMitAttributen) self).getVerbindungNach().size();
 		return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
 	}
 
@@ -228,20 +230,34 @@ public class DiagramServices {
 				&& ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_DRITTER);
 	}
 
-	public String createDetailsTextTemplate(EObject self) {
-		if (self instanceof Umrichter) {
-			return "0kVA";
+	public String createDetailsText(EObject self) {
+		if (self.eContainer() instanceof Umrichter) {
+			return ((Umrichter) self.eContainer()).getNennleistung();
 		} else if (self.eContainer() instanceof UmrichterMitEnergiespeicher) {
-			return "0kVA\n \n \n \n0 min";
+			UmrichterMitEnergiespeicher uresp = (UmrichterMitEnergiespeicher) self.eContainer();
+			return uresp.getNennleistung() + "\n \n \n \n" + uresp.getAutonomiezeit();
 		} else if (self.eContainer() instanceof Trafo) {
-			return "0kV/0V\n0kVA";
+			Trafo trafo = (Trafo) self.eContainer();
+			return trafo.getPrimaerspannung() + "/" + trafo.getSekundaerspannung() + "\n\n" + trafo.getTrafoKva();
 		} else if (self.eContainer() instanceof Generator) {
-			return "0kWP";
+			Generator gen = (Generator) self.eContainer();
+			return gen.getPrimaerspannung() + "\n\n" + gen.getElektrischeLeistung();
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
-			return "ZP-NR.: 00AT00";
+			return Optional.ofNullable(getNapForVerteiler(self)).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
 		}
 
 		return "";
+	}
+
+	private Netzanschlusspunkt getNapForVerteiler(EObject self) {
+		if (self instanceof Versorgungsknoten) {
+			return ((Versorgungsknoten) self).getNetzanschlusspunkt();
+		} else if (self instanceof VerteilerBase) {
+			return ((VerteilerBase) self).getNetzanschlusspunkt();
+		} else if (self instanceof VerteilerContainer) {
+			return ((VerteilerContainer) self).getNetzanschlusspunkt();
+		}
+		return null;
 	}
 
 }

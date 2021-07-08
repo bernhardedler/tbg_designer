@@ -2,25 +2,25 @@
  */
 package at.tb_gruber.designer.model.impl;
 
+import at.tb_gruber.designer.model.AnlageOhneAttribute;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.VerteilerMitZaehler;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Verteiler Mit Zaehler</b></em>'.
+ * An implementation of the model object '<em><b>Anlage Ohne Attribute</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class VerteilerMitZaehlerImpl extends VerteilerBaseImpl implements VerteilerMitZaehler {
+public abstract class AnlageOhneAttributeImpl extends AnlageBaseImpl implements AnlageOhneAttribute {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VerteilerMitZaehlerImpl() {
+	protected AnlageOhneAttributeImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class VerteilerMitZaehlerImpl extends VerteilerBaseImpl implements Vertei
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.VERTEILER_MIT_ZAEHLER;
+		return ModelPackage.Literals.ANLAGE_OHNE_ATTRIBUTE;
 	}
 
-} //VerteilerMitZaehlerImpl
+} //AnlageOhneAttributeImpl

@@ -17,8 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getPrimaerspannung <em>Primaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getUrsprung <em>Ursprung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getReserve9 <em>Reserve9</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Verbindung#getReserve10 <em>Reserve10</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getZielSicherung <em>Ziel Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltype <em>Kabeltype</em>}</li>
@@ -56,28 +54,28 @@ public interface Verbindung extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Primaerspannung</b></em>' attribute.
 	 * The default value is <code>"NSP_Un_bis_inkl_1kV_50Hz_AC"</code>.
-	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.spannungsarttype}.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Primaerspannung</em>' attribute.
-	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see #setPrimaerspannung(spannungsarttype)
+	 * @see at.tb_gruber.designer.model.Spannungsarttype
+	 * @see #setPrimaerspannung(Spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Primaerspannung()
 	 * @model default="NSP_Un_bis_inkl_1kV_50Hz_AC"
 	 * @generated
 	 */
-	spannungsarttype getPrimaerspannung();
+	Spannungsarttype getPrimaerspannung();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getPrimaerspannung <em>Primaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Primaerspannung</em>' attribute.
-	 * @see at.tb_gruber.designer.model.spannungsarttype
+	 * @see at.tb_gruber.designer.model.Spannungsarttype
 	 * @see #getPrimaerspannung()
 	 * @generated
 	 */
-	void setPrimaerspannung(spannungsarttype value);
+	void setPrimaerspannung(Spannungsarttype value);
 
 	/**
 	 * Returns the value of the '<em><b>Ziel</b></em>' reference.
@@ -122,50 +120,6 @@ public interface Verbindung extends EObject {
 	 * @generated
 	 */
 	void setUrsprung(AnlageBase value);
-
-	/**
-	 * Returns the value of the '<em><b>Reserve9</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve9</em>' attribute.
-	 * @see #setReserve9(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Reserve9()
-	 * @model
-	 * @generated
-	 */
-	String getReserve9();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getReserve9 <em>Reserve9</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve9</em>' attribute.
-	 * @see #getReserve9()
-	 * @generated
-	 */
-	void setReserve9(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Reserve10</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve10</em>' attribute.
-	 * @see #setReserve10(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Reserve10()
-	 * @model
-	 * @generated
-	 */
-	String getReserve10();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getReserve10 <em>Reserve10</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve10</em>' attribute.
-	 * @see #getReserve10()
-	 * @generated
-	 */
-	void setReserve10(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Quell Sicherung</b></em>' attribute.

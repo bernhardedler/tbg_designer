@@ -2,29 +2,28 @@
  */
 package at.tb_gruber.designer.model.provider;
 
-import at.tb_gruber.designer.model.VerteilerMitZaehler;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.VerteilerMitZaehler} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.AnlageOhneAttribute} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
+public class AnlageOhneAttributeItemProvider extends AnlageBaseItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VerteilerMitZaehlerItemProvider(AdapterFactory adapterFactory) {
+	public AnlageOhneAttributeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -44,14 +43,14 @@ public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
 	}
 
 	/**
-	 * This returns VerteilerMitZaehler.gif.
+	 * This returns AnlageOhneAttribute.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/VerteilerMitZaehler"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AnlageOhneAttribute"));
 	}
 
 	/**
@@ -72,9 +71,7 @@ public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VerteilerMitZaehler) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_VerteilerMitZaehler_type")
-				: getString("_UI_VerteilerMitZaehler_type") + " " + label;
+		return getString("_UI_AnlageOhneAttribute_type");
 	}
 
 	/**

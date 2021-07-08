@@ -8,12 +8,10 @@
         eType="#//Objekt" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="plankopf" eType="#//Plankopf"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve2Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Objekt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektart" eType="#//objektarttype"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Ort_Adresse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektart" eType="#//Objektarttype"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="anlage" upperBound="-1"
         eType="#//AnlageBase" containment="true">
@@ -21,15 +19,16 @@
         <details key="documentation" value="besteht aus"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gebaeudeArt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="db776ua" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gpsstandort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externeQuelle" eType="#//externe_datenquelle"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externeQuelle" eType="#//Externe_Datenquelle"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ort_adresse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gebaeudeart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="objektarttype">
+  <eClassifiers xsi:type="ecore:EEnum" name="Objektarttype">
     <eLiterals name="Trafostation" literal="Trafostation"/>
     <eLiterals name="Hochbauobjekt" value="1" literal="Hochbauobjekt"/>
-    <eLiterals name="Schalthaeuser" value="2" literal="Schalthaus"/>
+    <eLiterals name="Schalthaus" value="2" literal="Schalthaus"/>
     <eLiterals name="Tunnelobjekt" value="3" literal="Tunnelobjekt"/>
     <eLiterals name="Freistehender_VT" value="4" literal="Freistehender VT"/>
     <eLiterals name="Verkehrsstation" value="5" literal="Verkehrsstation"/>
@@ -41,34 +40,33 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagennummer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="objektteil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//spannungsarttype"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//Spannungsarttype"
         defaultValueLiteral="NSP_Un_bis_inkl_1kV_50Hz_AC"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inObjektteil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anlagenIdImmoAssi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="#//eadb_versorgung_art"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eadbVersorgungArt" eType="#//Eadb_Versorgung_Art"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verteilerbezeichnung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abgangVT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="spannungsarttype">
-    <eLiterals name="NSP_Un_bis_inkl_1kV_50Hz_AC" literal="gruen"/>
-    <eLiterals name="HSP_Un_ab_1kV_50Hz" value="1" literal="rot"/>
-    <eLiterals name="HSP_Un_15kV_16_7Hz" value="2" literal="magenta"/>
-    <eLiterals name="NSP_Un_bis_inkl_1kV_16_7Hz" value="3" literal="cyan"/>
-    <eLiterals name="Un_bis_inkl_1_5kV_DC" value="4" literal="blau"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Spannungsarttype">
+    <eLiterals name="NSP_Un_bis_inkl_1kV_50Hz_AC" literal="NSP Un bis inkl 1kV 50Hz AC"/>
+    <eLiterals name="HSP_Un_ab_1kV_50Hz" value="1" literal="HSP Un ab 1kV 50Hz"/>
+    <eLiterals name="HSP_Un_15kV_16_7Hz" value="2" literal="HSP Un 15kV 16,7Hz"/>
+    <eLiterals name="NSP_Un_bis_inkl_1kV_16_7Hz" value="3" literal="NSP Un bis inkl 1kV 16,7Hz"/>
+    <eLiterals name="Un_bis_inkl_1_5kV_DC" value="4" literal="Un bis inkl 1,5kV DC"/>
     <eLiterals name="Reserve_1" value="5" literal="Reserve 1"/>
     <eLiterals name="Reserve_2" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Verbindung">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//spannungsarttype"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaerspannung" eType="#//Spannungsarttype"
         defaultValueLiteral="NSP_Un_bis_inkl_1kV_50Hz_AC"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ziel" lowerBound="1" eType="#//AnlageBase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ursprung" lowerBound="1"
         eType="#//AnlageBase"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve9" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve10" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quellSicherung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zielSicherung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kabeltype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -83,15 +81,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trafo" eSuperTypes="#//SelbststAnlage">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sekundaerspannung" eType="#//spannungsarttype"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sekundaerspannung" eType="#//Spannungsarttype"
         defaultValueLiteral="NSP_Un_bis_inkl_1kV_50Hz_AC"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trafoKva" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve5" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserve3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Netzanschlusspunkt" eSuperTypes="#//AnlageOhneAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrHauptversorgung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrHauptversorgung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="ZP-NR.: 00AT00"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrReserveEinspeisung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="langbeschreibung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="postition" eType="#//NapPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Versorgungsknoten" eSuperTypes="#//SelbststAnlage">
@@ -101,8 +101,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Energietechnikanlage" eSuperTypes="#//SelbststAnlage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="etType" eType="#//ET_Type"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Generator" eSuperTypes="#//SelbststAnlage"/>
-  <eClassifiers xsi:type="ecore:EEnum" name="externe_datenquelle">
+  <eClassifiers xsi:type="ecore:EClass" name="Generator" eSuperTypes="#//SelbststAnlage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorfunktion" eType="#//Generatorfunktion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="erzeugteEnergie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elektrischeLeistung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Externe_Datenquelle">
     <eLiterals name="undefined"/>
     <eLiterals name="immo" value="1" literal="immo"/>
     <eLiterals name="vs" value="2"/>
@@ -117,7 +121,7 @@
     <eLiterals name="Y" value="1"/>
     <eLiterals name="N" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="eadb_versorgung_art">
+  <eClassifiers xsi:type="ecore:EEnum" name="Eadb_Versorgung_Art">
     <eLiterals name="ÜGS"/>
     <eLiterals name="VK" value="1"/>
     <eLiterals name="IF" value="2" literal="IF"/>
@@ -126,16 +130,26 @@
     <eLiterals name="FV" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelbststAnlage" abstract="true" eSuperTypes="#//AnlageMitAttributen"/>
-  <eClassifiers xsi:type="ecore:EClass" name="UmrichterBase" abstract="true" eSuperTypes="#//SelbststAnlage"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VerteilerMitZaehler" eSuperTypes="#//VerteilerBase">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zpNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UmrichterBase" abstract="true" eSuperTypes="#//SelbststAnlage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="umrichterfunktion" eType="#//Umrichterfunktion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="umrichterart" eType="#//Umrichterart"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nennleistung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UmrichterMitEnergiespeicher" eSuperTypes="#//UmrichterBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VerteilerMitZaehler" eSuperTypes="#//VerteilerBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UmrichterMitEnergiespeicher" eSuperTypes="#//UmrichterBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="energiespeicherfunktion"
+        eType="#//Energiespeicherfunktion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="energiespeicherart" eType="#//Energiespeicherart"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autonomiezeit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kapazitaet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerContainer" eSuperTypes="#//AnlageOhneAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="verteiler" upperBound="-1"
         eType="#//VerteilerBase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" eType="#//Netzanschlusspunkt"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NapPosition">
     <eLiterals name="DAVOR" literal="DAVOR"/>
@@ -156,9 +170,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerOhneZaehler" eSuperTypes="#//VerteilerBase"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Details">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anzeigetext" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Details"/>
   <eClassifiers xsi:type="ecore:EClass" name="Umrichter" eSuperTypes="#//UmrichterBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="AnlageBase" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="details" upperBound="-1"
@@ -172,4 +184,27 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnlageOhneAttribute" abstract="true"
       eSuperTypes="#//AnlageBase"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Generatorfunktion">
+    <eLiterals name="PV_Generator" literal="PV-Generator"/>
+    <eLiterals name="Dieselaggregat" value="1" literal="Dieselaggregat"/>
+    <eLiterals name="Windkraftgenerator" value="2" literal="Windkraftgenerator"/>
+    <eLiterals name="Wasserkraft" value="3" literal="Wasserkraft"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Umrichterart">
+    <eLiterals name="Gleichrichter" literal="Gleichrichter"/>
+    <eLiterals name="Wechselrichter" value="1" literal="Wechselrichter"/>
+    <eLiterals name="USV_Anlage" value="2" literal="USV-Anlage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Energiespeicherart">
+    <eLiterals name="Batterie" literal="Batterie"/>
+    <eLiterals name="Schwungrad" value="1" literal="Schwungrad"/>
+    <eLiterals name="Ersatzstromversorgung" value="2" literal="Ersatzstromversorgung"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Umrichterfunktion">
+    <eLiterals name="Ersatzstromversorgung" literal="Ersatzstromversorgung"/>
+    <eLiterals name="Energieerzeugung" value="1" literal="Energieerzeugung"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Energiespeicherfunktion">
+    <eLiterals name="Batterie" literal="Batterie"/>
+  </eClassifiers>
 </ecore:EPackage>

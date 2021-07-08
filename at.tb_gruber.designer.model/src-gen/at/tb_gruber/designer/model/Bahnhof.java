@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getProjektname <em>Projektname</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getObjekt <em>Objekt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getPlankopf <em>Plankopf</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getReserve2Value <em>Reserve2 Value</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getBahnhof()
@@ -104,27 +103,5 @@ public interface Bahnhof extends EObject {
 	 * @generated
 	 */
 	void setPlankopf(Plankopf value);
-
-	/**
-	 * Returns the value of the '<em><b>Reserve2 Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserve2 Value</em>' attribute.
-	 * @see #setReserve2Value(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getBahnhof_Reserve2Value()
-	 * @model
-	 * @generated
-	 */
-	String getReserve2Value();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Bahnhof#getReserve2Value <em>Reserve2 Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserve2 Value</em>' attribute.
-	 * @see #getReserve2Value()
-	 * @generated
-	 */
-	void setReserve2Value(String value);
 
 } // Bahnhof

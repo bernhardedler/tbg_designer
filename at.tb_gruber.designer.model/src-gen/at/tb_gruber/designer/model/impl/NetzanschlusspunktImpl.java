@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getNrHauptversorgung <em>Nr Hauptversorgung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getNrReserveEinspeisung <em>Nr Reserve Einspeisung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getLangbeschreibung <em>Langbeschreibung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getPostition <em>Postition</em>}</li>
  * </ul>
  *
@@ -37,7 +38,7 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NR_HAUPTVERSORGUNG_EDEFAULT = null;
+	protected static final String NR_HAUPTVERSORGUNG_EDEFAULT = "ZP-NR.: 00AT00";
 
 	/**
 	 * The cached value of the '{@link #getNrHauptversorgung() <em>Nr Hauptversorgung</em>}' attribute.
@@ -88,6 +89,26 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	 * @ordered
 	 */
 	protected String beschreibung = BESCHREIBUNG_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLangbeschreibung() <em>Langbeschreibung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLangbeschreibung()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LANGBESCHREIBUNG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLangbeschreibung() <em>Langbeschreibung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLangbeschreibung()
+	 * @generated
+	 * @ordered
+	 */
+	protected String langbeschreibung = LANGBESCHREIBUNG_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPostition() <em>Postition</em>}' attribute.
@@ -207,6 +228,30 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	 * @generated
 	 */
 	@Override
+	public String getLangbeschreibung() {
+		return langbeschreibung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLangbeschreibung(String newLangbeschreibung) {
+		String oldLangbeschreibung = langbeschreibung;
+		langbeschreibung = newLangbeschreibung;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG,
+					oldLangbeschreibung, langbeschreibung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NapPosition getPostition() {
 		return postition;
 	}
@@ -239,6 +284,8 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 			return getNrReserveEinspeisung();
 		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
 			return getBeschreibung();
+		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
+			return getLangbeschreibung();
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			return getPostition();
 		}
@@ -261,6 +308,9 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
 			setBeschreibung((String) newValue);
+			return;
+		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
+			setLangbeschreibung((String) newValue);
 			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			setPostition((NapPosition) newValue);
@@ -286,6 +336,9 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
 			setBeschreibung(BESCHREIBUNG_EDEFAULT);
 			return;
+		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
+			setLangbeschreibung(LANGBESCHREIBUNG_EDEFAULT);
+			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			setPostition(POSTITION_EDEFAULT);
 			return;
@@ -309,6 +362,9 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 					: !NR_RESERVE_EINSPEISUNG_EDEFAULT.equals(nrReserveEinspeisung);
 		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
 			return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
+		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
+			return LANGBESCHREIBUNG_EDEFAULT == null ? langbeschreibung != null
+					: !LANGBESCHREIBUNG_EDEFAULT.equals(langbeschreibung);
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			return postition != POSTITION_EDEFAULT;
 		}
@@ -332,6 +388,8 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 		result.append(nrReserveEinspeisung);
 		result.append(", beschreibung: ");
 		result.append(beschreibung);
+		result.append(", langbeschreibung: ");
+		result.append(langbeschreibung);
 		result.append(", postition: ");
 		result.append(postition);
 		result.append(')');

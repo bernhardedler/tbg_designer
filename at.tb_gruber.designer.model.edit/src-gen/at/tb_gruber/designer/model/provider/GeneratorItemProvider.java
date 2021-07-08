@@ -4,13 +4,17 @@ package at.tb_gruber.designer.model.provider;
 
 import at.tb_gruber.designer.model.Generator;
 
+import at.tb_gruber.designer.model.ModelPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Generator} object.
@@ -40,8 +44,59 @@ public class GeneratorItemProvider extends SelbststAnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addGeneratorfunktionPropertyDescriptor(object);
+			addErzeugteEnergiePropertyDescriptor(object);
+			addElektrischeLeistungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Generatorfunktion feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGeneratorfunktionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Generator_generatorfunktion_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Generator_generatorfunktion_feature",
+								"_UI_Generator_type"),
+						ModelPackage.Literals.GENERATOR__GENERATORFUNKTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Erzeugte Energie feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addErzeugteEnergiePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Generator_erzeugteEnergie_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Generator_erzeugteEnergie_feature",
+								"_UI_Generator_type"),
+						ModelPackage.Literals.GENERATOR__ERZEUGTE_ENERGIE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Elektrische Leistung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addElektrischeLeistungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Generator_elektrischeLeistung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Generator_elektrischeLeistung_feature",
+								"_UI_Generator_type"),
+						ModelPackage.Literals.GENERATOR__ELEKTRISCHE_LEISTUNG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +143,14 @@ public class GeneratorItemProvider extends SelbststAnlageItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Generator.class)) {
+		case ModelPackage.GENERATOR__GENERATORFUNKTION:
+		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
+		case ModelPackage.GENERATOR__ELEKTRISCHE_LEISTUNG:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

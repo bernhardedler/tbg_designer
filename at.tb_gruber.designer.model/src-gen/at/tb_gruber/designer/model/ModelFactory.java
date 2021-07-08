@@ -112,15 +112,6 @@ public interface ModelFactory extends EFactory {
 	Generator createGenerator();
 
 	/**
-	 * Returns a new object of class '<em>Umrichter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Umrichter</em>'.
-	 * @generated
-	 */
-	Umrichter createUmrichter();
-
-	/**
 	 * Returns a new object of class '<em>Verteiler Mit Zaehler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,6 +164,15 @@ public interface ModelFactory extends EFactory {
 	 * @generated
 	 */
 	Details createDetails();
+
+	/**
+	 * Returns a new object of class '<em>Umrichter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Umrichter</em>'.
+	 * @generated
+	 */
+	Umrichter createUmrichter();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -55,8 +55,6 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 			addPrimaerspannungPropertyDescriptor(object);
 			addZielPropertyDescriptor(object);
 			addUrsprungPropertyDescriptor(object);
-			addReserve9PropertyDescriptor(object);
-			addReserve10PropertyDescriptor(object);
 			addQuellSicherungPropertyDescriptor(object);
 			addZielSicherungPropertyDescriptor(object);
 			addKabeltypePropertyDescriptor(object);
@@ -126,38 +124,6 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_ursprung_feature",
 								"_UI_Verbindung_type"),
 						ModelPackage.Literals.VERBINDUNG__URSPRUNG, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Reserve9 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addReserve9PropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verbindung_reserve9_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_reserve9_feature",
-								"_UI_Verbindung_type"),
-						ModelPackage.Literals.VERBINDUNG__RESERVE9, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Reserve10 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addReserve10PropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Verbindung_reserve10_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_reserve10_feature",
-								"_UI_Verbindung_type"),
-						ModelPackage.Literals.VERBINDUNG__RESERVE10, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -287,8 +253,6 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 		switch (notification.getFeatureID(Verbindung.class)) {
 		case ModelPackage.VERBINDUNG__NR:
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
-		case ModelPackage.VERBINDUNG__RESERVE9:
-		case ModelPackage.VERBINDUNG__RESERVE10:
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
 		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
 		case ModelPackage.VERBINDUNG__KABELTYPE:

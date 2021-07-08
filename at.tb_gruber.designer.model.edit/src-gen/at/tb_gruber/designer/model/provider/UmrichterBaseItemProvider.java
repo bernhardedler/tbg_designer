@@ -2,6 +2,7 @@
  */
 package at.tb_gruber.designer.model.provider;
 
+import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.UmrichterBase;
 
 import java.util.Collection;
@@ -10,7 +11,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link at.tb_gruber.designer.model.UmrichterBase} object.
@@ -40,8 +44,59 @@ public class UmrichterBaseItemProvider extends SelbststAnlageItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addUmrichterfunktionPropertyDescriptor(object);
+			addUmrichterartPropertyDescriptor(object);
+			addNennleistungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Umrichterfunktion feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUmrichterfunktionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_UmrichterBase_umrichterfunktion_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UmrichterBase_umrichterfunktion_feature",
+								"_UI_UmrichterBase_type"),
+						ModelPackage.Literals.UMRICHTER_BASE__UMRICHTERFUNKTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Umrichterart feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUmrichterartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_UmrichterBase_umrichterart_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UmrichterBase_umrichterart_feature",
+								"_UI_UmrichterBase_type"),
+						ModelPackage.Literals.UMRICHTER_BASE__UMRICHTERART, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nennleistung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNennleistungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_UmrichterBase_nennleistung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UmrichterBase_nennleistung_feature",
+								"_UI_UmrichterBase_type"),
+						ModelPackage.Literals.UMRICHTER_BASE__NENNLEISTUNG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +143,14 @@ public class UmrichterBaseItemProvider extends SelbststAnlageItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(UmrichterBase.class)) {
+		case ModelPackage.UMRICHTER_BASE__UMRICHTERFUNKTION:
+		case ModelPackage.UMRICHTER_BASE__UMRICHTERART:
+		case ModelPackage.UMRICHTER_BASE__NENNLEISTUNG:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

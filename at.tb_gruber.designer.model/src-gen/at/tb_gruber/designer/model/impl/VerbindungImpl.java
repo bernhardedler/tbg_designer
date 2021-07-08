@@ -6,8 +6,8 @@ import at.tb_gruber.designer.model.ARGUSrelevant;
 import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.ModelPackage;
+import at.tb_gruber.designer.model.Spannungsarttype;
 import at.tb_gruber.designer.model.Verbindung;
-import at.tb_gruber.designer.model.spannungsarttype;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -29,8 +29,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZiel <em>Ziel</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getUrsprung <em>Ursprung</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getReserve9 <em>Reserve9</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getReserve10 <em>Reserve10</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getQuellSicherung <em>Quell Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getZielSicherung <em>Ziel Sicherung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltype <em>Kabeltype</em>}</li>
@@ -69,7 +67,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype PRIMAERSPANNUNG_EDEFAULT = spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC;
+	protected static final Spannungsarttype PRIMAERSPANNUNG_EDEFAULT = Spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC;
 
 	/**
 	 * The cached value of the '{@link #getPrimaerspannung() <em>Primaerspannung</em>}' attribute.
@@ -79,7 +77,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 * @ordered
 	 */
-	protected spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
+	protected Spannungsarttype primaerspannung = PRIMAERSPANNUNG_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getZiel() <em>Ziel</em>}' reference.
@@ -100,46 +98,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @ordered
 	 */
 	protected AnlageBase ursprung;
-
-	/**
-	 * The default value of the '{@link #getReserve9() <em>Reserve9</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReserve9()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RESERVE9_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getReserve9() <em>Reserve9</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReserve9()
-	 * @generated
-	 * @ordered
-	 */
-	protected String reserve9 = RESERVE9_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getReserve10() <em>Reserve10</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReserve10()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RESERVE10_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getReserve10() <em>Reserve10</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReserve10()
-	 * @generated
-	 * @ordered
-	 */
-	protected String reserve10 = RESERVE10_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getQuellSicherung() <em>Quell Sicherung</em>}' attribute.
@@ -289,7 +247,7 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public spannungsarttype getPrimaerspannung() {
+	public Spannungsarttype getPrimaerspannung() {
 		return primaerspannung;
 	}
 
@@ -299,8 +257,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
-	public void setPrimaerspannung(spannungsarttype newPrimaerspannung) {
-		spannungsarttype oldPrimaerspannung = primaerspannung;
+	public void setPrimaerspannung(Spannungsarttype newPrimaerspannung) {
+		Spannungsarttype oldPrimaerspannung = primaerspannung;
 		primaerspannung = newPrimaerspannung == null ? PRIMAERSPANNUNG_EDEFAULT : newPrimaerspannung;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__PRIMAERSPANNUNG,
@@ -388,54 +346,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__URSPRUNG, oldUrsprung,
 					ursprung));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getReserve9() {
-		return reserve9;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setReserve9(String newReserve9) {
-		String oldReserve9 = reserve9;
-		reserve9 = newReserve9;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__RESERVE9, oldReserve9,
-					reserve9));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getReserve10() {
-		return reserve10;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setReserve10(String newReserve10) {
-		String oldReserve10 = reserve10;
-		reserve10 = newReserve10;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__RESERVE10, oldReserve10,
-					reserve10));
 	}
 
 	/**
@@ -578,10 +488,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			if (resolve)
 				return getUrsprung();
 			return basicGetUrsprung();
-		case ModelPackage.VERBINDUNG__RESERVE9:
-			return getReserve9();
-		case ModelPackage.VERBINDUNG__RESERVE10:
-			return getReserve10();
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
 			return getQuellSicherung();
 		case ModelPackage.VERBINDUNG__ZIEL_SICHERUNG:
@@ -608,19 +514,13 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			setNr((Integer) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__PRIMAERSPANNUNG:
-			setPrimaerspannung((spannungsarttype) newValue);
+			setPrimaerspannung((Spannungsarttype) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__ZIEL:
 			setZiel((AnlageBase) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((AnlageBase) newValue);
-			return;
-		case ModelPackage.VERBINDUNG__RESERVE9:
-			setReserve9((String) newValue);
-			return;
-		case ModelPackage.VERBINDUNG__RESERVE10:
-			setReserve10((String) newValue);
 			return;
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
 			setQuellSicherung((String) newValue);
@@ -661,12 +561,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			setUrsprung((AnlageBase) null);
 			return;
-		case ModelPackage.VERBINDUNG__RESERVE9:
-			setReserve9(RESERVE9_EDEFAULT);
-			return;
-		case ModelPackage.VERBINDUNG__RESERVE10:
-			setReserve10(RESERVE10_EDEFAULT);
-			return;
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
 			setQuellSicherung(QUELL_SICHERUNG_EDEFAULT);
 			return;
@@ -702,10 +596,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return ziel != null;
 		case ModelPackage.VERBINDUNG__URSPRUNG:
 			return ursprung != null;
-		case ModelPackage.VERBINDUNG__RESERVE9:
-			return RESERVE9_EDEFAULT == null ? reserve9 != null : !RESERVE9_EDEFAULT.equals(reserve9);
-		case ModelPackage.VERBINDUNG__RESERVE10:
-			return RESERVE10_EDEFAULT == null ? reserve10 != null : !RESERVE10_EDEFAULT.equals(reserve10);
 		case ModelPackage.VERBINDUNG__QUELL_SICHERUNG:
 			return QUELL_SICHERUNG_EDEFAULT == null ? quellSicherung != null
 					: !QUELL_SICHERUNG_EDEFAULT.equals(quellSicherung);
@@ -737,10 +627,6 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		result.append(nr);
 		result.append(", primaerspannung: ");
 		result.append(primaerspannung);
-		result.append(", reserve9: ");
-		result.append(reserve9);
-		result.append(", reserve10: ");
-		result.append(reserve10);
 		result.append(", quellSicherung: ");
 		result.append(quellSicherung);
 		result.append(", zielSicherung: ");

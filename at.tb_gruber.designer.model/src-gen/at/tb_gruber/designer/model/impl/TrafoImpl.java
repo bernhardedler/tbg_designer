@@ -3,8 +3,8 @@
 package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.ModelPackage;
+import at.tb_gruber.designer.model.Spannungsarttype;
 import at.tb_gruber.designer.model.Trafo;
-import at.tb_gruber.designer.model.spannungsarttype;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getTrafoKva <em>Trafo Kva</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getReserve5 <em>Reserve5</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getReserve3 <em>Reserve3</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,7 +36,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC;
+	protected static final Spannungsarttype SEKUNDAERSPANNUNG_EDEFAULT = Spannungsarttype.NSP_UN_BIS_INKL_1K_V50_HZ_AC;
 
 	/**
 	 * The cached value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.
@@ -46,7 +46,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 * @ordered
 	 */
-	protected spannungsarttype sekundaerspannung = SEKUNDAERSPANNUNG_EDEFAULT;
+	protected Spannungsarttype sekundaerspannung = SEKUNDAERSPANNUNG_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTrafoKva() <em>Trafo Kva</em>}' attribute.
@@ -69,24 +69,24 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	protected long trafoKva = TRAFO_KVA_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getReserve5() <em>Reserve5</em>}' attribute.
+	 * The default value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve5()
+	 * @see #getReserve3()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESERVE5_EDEFAULT = null;
+	protected static final String RESERVE3_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReserve5() <em>Reserve5</em>}' attribute.
+	 * The cached value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReserve5()
+	 * @see #getReserve3()
 	 * @generated
 	 * @ordered
 	 */
-	protected String reserve5 = RESERVE5_EDEFAULT;
+	protected String reserve3 = RESERVE3_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public spannungsarttype getSekundaerspannung() {
+	public Spannungsarttype getSekundaerspannung() {
 		return sekundaerspannung;
 	}
 
@@ -123,8 +123,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public void setSekundaerspannung(spannungsarttype newSekundaerspannung) {
-		spannungsarttype oldSekundaerspannung = sekundaerspannung;
+	public void setSekundaerspannung(Spannungsarttype newSekundaerspannung) {
+		Spannungsarttype oldSekundaerspannung = sekundaerspannung;
 		sekundaerspannung = newSekundaerspannung == null ? SEKUNDAERSPANNUNG_EDEFAULT : newSekundaerspannung;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__SEKUNDAERSPANNUNG,
@@ -161,8 +161,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public String getReserve5() {
-		return reserve5;
+	public String getReserve3() {
+		return reserve3;
 	}
 
 	/**
@@ -171,11 +171,11 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public void setReserve5(String newReserve5) {
-		String oldReserve5 = reserve5;
-		reserve5 = newReserve5;
+	public void setReserve3(String newReserve3) {
+		String oldReserve3 = reserve3;
+		reserve3 = newReserve3;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__RESERVE5, oldReserve5, reserve5));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__RESERVE3, oldReserve3, reserve3));
 	}
 
 	/**
@@ -190,8 +190,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 			return getSekundaerspannung();
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			return getTrafoKva();
-		case ModelPackage.TRAFO__RESERVE5:
-			return getReserve5();
+		case ModelPackage.TRAFO__RESERVE3:
+			return getReserve3();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,13 +205,13 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
-			setSekundaerspannung((spannungsarttype) newValue);
+			setSekundaerspannung((Spannungsarttype) newValue);
 			return;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			setTrafoKva((Long) newValue);
 			return;
-		case ModelPackage.TRAFO__RESERVE5:
-			setReserve5((String) newValue);
+		case ModelPackage.TRAFO__RESERVE3:
+			setReserve3((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -231,8 +231,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			setTrafoKva(TRAFO_KVA_EDEFAULT);
 			return;
-		case ModelPackage.TRAFO__RESERVE5:
-			setReserve5(RESERVE5_EDEFAULT);
+		case ModelPackage.TRAFO__RESERVE3:
+			setReserve3(RESERVE3_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -250,8 +250,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 			return sekundaerspannung != SEKUNDAERSPANNUNG_EDEFAULT;
 		case ModelPackage.TRAFO__TRAFO_KVA:
 			return trafoKva != TRAFO_KVA_EDEFAULT;
-		case ModelPackage.TRAFO__RESERVE5:
-			return RESERVE5_EDEFAULT == null ? reserve5 != null : !RESERVE5_EDEFAULT.equals(reserve5);
+		case ModelPackage.TRAFO__RESERVE3:
+			return RESERVE3_EDEFAULT == null ? reserve3 != null : !RESERVE3_EDEFAULT.equals(reserve3);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,8 +271,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 		result.append(sekundaerspannung);
 		result.append(", trafoKva: ");
 		result.append(trafoKva);
-		result.append(", reserve5: ");
-		result.append(reserve5);
+		result.append(", reserve3: ");
+		result.append(reserve3);
 		result.append(')');
 		return result.toString();
 	}

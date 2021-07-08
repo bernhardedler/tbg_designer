@@ -46,6 +46,7 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 			addNrHauptversorgungPropertyDescriptor(object);
 			addNrReserveEinspeisungPropertyDescriptor(object);
 			addBeschreibungPropertyDescriptor(object);
+			addLangbeschreibungPropertyDescriptor(object);
 			addPostitionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -97,6 +98,22 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 								"_UI_Netzanschlusspunkt_type"),
 						ModelPackage.Literals.NETZANSCHLUSSPUNKT__BESCHREIBUNG, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Langbeschreibung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLangbeschreibungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Netzanschlusspunkt_langbeschreibung_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Netzanschlusspunkt_langbeschreibung_feature",
+						"_UI_Netzanschlusspunkt_type"),
+				ModelPackage.Literals.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG, true, true, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -164,6 +181,7 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 		case ModelPackage.NETZANSCHLUSSPUNKT__NR_HAUPTVERSORGUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__NR_RESERVE_EINSPEISUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
+		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

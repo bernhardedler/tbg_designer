@@ -6,6 +6,7 @@ import at.tb_gruber.designer.model.Betreiber;
 import at.tb_gruber.designer.model.ModelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -34,6 +35,7 @@ public class BetreiberImpl extends MinimalEObjectImpl.Container implements Betre
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerContainer#getVerteiler <em>Verteiler</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.VerteilerContainer#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerContainer()
@@ -22,6 +23,18 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface VerteilerContainer extends AnlageOhneAttribute {
+	/**
+	 * Returns the value of the '<em><b>Verteiler</b></em>' containment reference list.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.VerteilerBase}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Verteiler</em>' containment reference list.
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerContainer_Verteiler()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VerteilerBase> getVerteiler();
+
 	/**
 	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -45,15 +58,25 @@ public interface VerteilerContainer extends AnlageOhneAttribute {
 	void setNetzanschlusspunkt(Netzanschlusspunkt value);
 
 	/**
-	 * Returns the value of the '<em><b>Verteiler</b></em>' containment reference list.
-	 * The list contents are of type {@link at.tb_gruber.designer.model.VerteilerBase}.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Verteiler</em>' containment reference list.
-	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerContainer_Verteiler()
-	 * @model containment="true"
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerContainer_Name()
+	 * @model
 	 * @generated
 	 */
-	EList<VerteilerBase> getVerteiler();
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.VerteilerContainer#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // VerteilerContainer

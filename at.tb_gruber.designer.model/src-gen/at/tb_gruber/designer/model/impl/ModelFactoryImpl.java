@@ -104,21 +104,31 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
 		case ModelPackage.OBJEKTARTTYPE:
-			return createobjektarttypeFromString(eDataType, initialValue);
+			return createObjektarttypeFromString(eDataType, initialValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
-			return createspannungsarttypeFromString(eDataType, initialValue);
+			return createSpannungsarttypeFromString(eDataType, initialValue);
 		case ModelPackage.EXTERNE_DATENQUELLE:
-			return createexterne_datenquelleFromString(eDataType, initialValue);
+			return createExterne_DatenquelleFromString(eDataType, initialValue);
 		case ModelPackage.ET_TYPE:
 			return createET_TypeFromString(eDataType, initialValue);
 		case ModelPackage.ARGU_SRELEVANT:
 			return createARGUSrelevantFromString(eDataType, initialValue);
 		case ModelPackage.EADB_VERSORGUNG_ART:
-			return createeadb_versorgung_artFromString(eDataType, initialValue);
+			return createEadb_Versorgung_ArtFromString(eDataType, initialValue);
 		case ModelPackage.NAP_POSITION:
 			return createNapPositionFromString(eDataType, initialValue);
 		case ModelPackage.LINIEN_TYPE:
 			return createLinienTypeFromString(eDataType, initialValue);
+		case ModelPackage.GENERATORFUNKTION:
+			return createGeneratorfunktionFromString(eDataType, initialValue);
+		case ModelPackage.UMRICHTERART:
+			return createUmrichterartFromString(eDataType, initialValue);
+		case ModelPackage.ENERGIESPEICHERART:
+			return createEnergiespeicherartFromString(eDataType, initialValue);
+		case ModelPackage.UMRICHTERFUNKTION:
+			return createUmrichterfunktionFromString(eDataType, initialValue);
+		case ModelPackage.ENERGIESPEICHERFUNKTION:
+			return createEnergiespeicherfunktionFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -133,21 +143,31 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
 		case ModelPackage.OBJEKTARTTYPE:
-			return convertobjektarttypeToString(eDataType, instanceValue);
+			return convertObjektarttypeToString(eDataType, instanceValue);
 		case ModelPackage.SPANNUNGSARTTYPE:
-			return convertspannungsarttypeToString(eDataType, instanceValue);
+			return convertSpannungsarttypeToString(eDataType, instanceValue);
 		case ModelPackage.EXTERNE_DATENQUELLE:
-			return convertexterne_datenquelleToString(eDataType, instanceValue);
+			return convertExterne_DatenquelleToString(eDataType, instanceValue);
 		case ModelPackage.ET_TYPE:
 			return convertET_TypeToString(eDataType, instanceValue);
 		case ModelPackage.ARGU_SRELEVANT:
 			return convertARGUSrelevantToString(eDataType, instanceValue);
 		case ModelPackage.EADB_VERSORGUNG_ART:
-			return converteadb_versorgung_artToString(eDataType, instanceValue);
+			return convertEadb_Versorgung_ArtToString(eDataType, instanceValue);
 		case ModelPackage.NAP_POSITION:
 			return convertNapPositionToString(eDataType, instanceValue);
 		case ModelPackage.LINIEN_TYPE:
 			return convertLinienTypeToString(eDataType, instanceValue);
+		case ModelPackage.GENERATORFUNKTION:
+			return convertGeneratorfunktionToString(eDataType, instanceValue);
+		case ModelPackage.UMRICHTERART:
+			return convertUmrichterartToString(eDataType, instanceValue);
+		case ModelPackage.ENERGIESPEICHERART:
+			return convertEnergiespeicherartToString(eDataType, instanceValue);
+		case ModelPackage.UMRICHTERFUNKTION:
+			return convertUmrichterfunktionToString(eDataType, instanceValue);
+		case ModelPackage.ENERGIESPEICHERFUNKTION:
+			return convertEnergiespeicherfunktionToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -269,17 +289,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public Umrichter createUmrichter() {
-		UmrichterImpl umrichter = new UmrichterImpl();
-		return umrichter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public VerteilerMitZaehler createVerteilerMitZaehler() {
 		VerteilerMitZaehlerImpl verteilerMitZaehler = new VerteilerMitZaehlerImpl();
 		return verteilerMitZaehler;
@@ -345,8 +354,19 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public objektarttype createobjektarttypeFromString(EDataType eDataType, String initialValue) {
-		objektarttype result = objektarttype.get(initialValue);
+	@Override
+	public Umrichter createUmrichter() {
+		UmrichterImpl umrichter = new UmrichterImpl();
+		return umrichter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Objektarttype createObjektarttypeFromString(EDataType eDataType, String initialValue) {
+		Objektarttype result = Objektarttype.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -358,7 +378,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertobjektarttypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertObjektarttypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -367,8 +387,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public spannungsarttype createspannungsarttypeFromString(EDataType eDataType, String initialValue) {
-		spannungsarttype result = spannungsarttype.get(initialValue);
+	public Spannungsarttype createSpannungsarttypeFromString(EDataType eDataType, String initialValue) {
+		Spannungsarttype result = Spannungsarttype.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -380,7 +400,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertspannungsarttypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertSpannungsarttypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -389,8 +409,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public externe_datenquelle createexterne_datenquelleFromString(EDataType eDataType, String initialValue) {
-		externe_datenquelle result = externe_datenquelle.get(initialValue);
+	public Externe_Datenquelle createExterne_DatenquelleFromString(EDataType eDataType, String initialValue) {
+		Externe_Datenquelle result = Externe_Datenquelle.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -402,7 +422,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertexterne_datenquelleToString(EDataType eDataType, Object instanceValue) {
+	public String convertExterne_DatenquelleToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -455,8 +475,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public eadb_versorgung_art createeadb_versorgung_artFromString(EDataType eDataType, String initialValue) {
-		eadb_versorgung_art result = eadb_versorgung_art.get(initialValue);
+	public Eadb_Versorgung_Art createEadb_Versorgung_ArtFromString(EDataType eDataType, String initialValue) {
+		Eadb_Versorgung_Art result = Eadb_Versorgung_Art.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -468,7 +488,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String converteadb_versorgung_artToString(EDataType eDataType, Object instanceValue) {
+	public String convertEadb_Versorgung_ArtToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -513,6 +533,116 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertLinienTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Generatorfunktion createGeneratorfunktionFromString(EDataType eDataType, String initialValue) {
+		Generatorfunktion result = Generatorfunktion.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGeneratorfunktionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Umrichterart createUmrichterartFromString(EDataType eDataType, String initialValue) {
+		Umrichterart result = Umrichterart.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUmrichterartToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Energiespeicherart createEnergiespeicherartFromString(EDataType eDataType, String initialValue) {
+		Energiespeicherart result = Energiespeicherart.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEnergiespeicherartToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Umrichterfunktion createUmrichterfunktionFromString(EDataType eDataType, String initialValue) {
+		Umrichterfunktion result = Umrichterfunktion.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUmrichterfunktionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Energiespeicherfunktion createEnergiespeicherfunktionFromString(EDataType eDataType, String initialValue) {
+		Energiespeicherfunktion result = Energiespeicherfunktion.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEnergiespeicherfunktionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

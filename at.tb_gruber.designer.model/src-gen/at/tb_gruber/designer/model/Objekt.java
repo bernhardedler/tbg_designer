@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getObjektart <em>Objektart</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Objekt#getOrt_Adresse <em>Ort Adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getObjektId <em>Objekt Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getAnlage <em>Anlage</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Objekt#getGebaeudeArt <em>Gebaeude Art</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getDb776ua <em>Db776ua</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getGpsstandort <em>Gpsstandort</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getOrt_adresse <em>Ort adresse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getGebaeudeart <em>Gebaeudeart</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getObjekt()
@@ -55,50 +55,28 @@ public interface Objekt extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Objektart</b></em>' attribute.
-	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.objektarttype}.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Objektarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Objektart</em>' attribute.
-	 * @see at.tb_gruber.designer.model.objektarttype
-	 * @see #setObjektart(objektarttype)
+	 * @see at.tb_gruber.designer.model.Objektarttype
+	 * @see #setObjektart(Objektarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Objektart()
 	 * @model
 	 * @generated
 	 */
-	objektarttype getObjektart();
+	Objektarttype getObjektart();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getObjektart <em>Objektart</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Objektart</em>' attribute.
-	 * @see at.tb_gruber.designer.model.objektarttype
+	 * @see at.tb_gruber.designer.model.Objektarttype
 	 * @see #getObjektart()
 	 * @generated
 	 */
-	void setObjektart(objektarttype value);
-
-	/**
-	 * Returns the value of the '<em><b>Ort Adresse</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ort Adresse</em>' attribute.
-	 * @see #setOrt_Adresse(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Ort_Adresse()
-	 * @model
-	 * @generated
-	 */
-	String getOrt_Adresse();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getOrt_Adresse <em>Ort Adresse</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ort Adresse</em>' attribute.
-	 * @see #getOrt_Adresse()
-	 * @generated
-	 */
-	void setOrt_Adresse(String value);
+	void setObjektart(Objektarttype value);
 
 	/**
 	 * Returns the value of the '<em><b>Objekt Id</b></em>' attribute.
@@ -136,28 +114,6 @@ public interface Objekt extends EObject {
 	 * @generated
 	 */
 	EList<AnlageBase> getAnlage();
-
-	/**
-	 * Returns the value of the '<em><b>Gebaeude Art</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gebaeude Art</em>' attribute.
-	 * @see #setGebaeudeArt(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_GebaeudeArt()
-	 * @model
-	 * @generated
-	 */
-	String getGebaeudeArt();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getGebaeudeArt <em>Gebaeude Art</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gebaeude Art</em>' attribute.
-	 * @see #getGebaeudeArt()
-	 * @generated
-	 */
-	void setGebaeudeArt(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Db776ua</b></em>' attribute.
@@ -205,27 +161,71 @@ public interface Objekt extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Externe Quelle</b></em>' attribute.
-	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.externe_datenquelle}.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Externe_Datenquelle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Externe Quelle</em>' attribute.
-	 * @see at.tb_gruber.designer.model.externe_datenquelle
-	 * @see #setExterneQuelle(externe_datenquelle)
+	 * @see at.tb_gruber.designer.model.Externe_Datenquelle
+	 * @see #setExterneQuelle(Externe_Datenquelle)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_ExterneQuelle()
 	 * @model
 	 * @generated
 	 */
-	externe_datenquelle getExterneQuelle();
+	Externe_Datenquelle getExterneQuelle();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Externe Quelle</em>' attribute.
-	 * @see at.tb_gruber.designer.model.externe_datenquelle
+	 * @see at.tb_gruber.designer.model.Externe_Datenquelle
 	 * @see #getExterneQuelle()
 	 * @generated
 	 */
-	void setExterneQuelle(externe_datenquelle value);
+	void setExterneQuelle(Externe_Datenquelle value);
+
+	/**
+	 * Returns the value of the '<em><b>Ort adresse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ort adresse</em>' attribute.
+	 * @see #setOrt_adresse(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Ort_adresse()
+	 * @model
+	 * @generated
+	 */
+	String getOrt_adresse();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getOrt_adresse <em>Ort adresse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ort adresse</em>' attribute.
+	 * @see #getOrt_adresse()
+	 * @generated
+	 */
+	void setOrt_adresse(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Gebaeudeart</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gebaeudeart</em>' attribute.
+	 * @see #setGebaeudeart(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Gebaeudeart()
+	 * @model
+	 * @generated
+	 */
+	String getGebaeudeart();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getGebaeudeart <em>Gebaeudeart</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gebaeudeart</em>' attribute.
+	 * @see #getGebaeudeart()
+	 * @generated
+	 */
+	void setGebaeudeart(String value);
 
 } // Objekt

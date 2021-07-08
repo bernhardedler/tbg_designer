@@ -104,22 +104,13 @@ public interface ModelPackage extends EPackage {
 	int BAHNHOF__PLANKOPF = 3;
 
 	/**
-	 * The feature id for the '<em><b>Reserve2 Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BAHNHOF__RESERVE2_VALUE = 4;
-
-	/**
 	 * The number of structural features of the '<em>Bahnhof</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BAHNHOF_FEATURE_COUNT = 5;
+	int BAHNHOF_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Bahnhof</em>' class.
@@ -159,22 +150,13 @@ public interface ModelPackage extends EPackage {
 	int OBJEKT__OBJEKTART = 1;
 
 	/**
-	 * The feature id for the '<em><b>Ort Adresse</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJEKT__ORT_ADRESSE = 2;
-
-	/**
 	 * The feature id for the '<em><b>Objekt Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__OBJEKT_ID = 3;
+	int OBJEKT__OBJEKT_ID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Anlage</b></em>' containment reference list.
@@ -183,16 +165,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__ANLAGE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Gebaeude Art</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJEKT__GEBAEUDE_ART = 5;
+	int OBJEKT__ANLAGE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Db776ua</b></em>' attribute.
@@ -201,7 +174,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__DB776UA = 6;
+	int OBJEKT__DB776UA = 4;
 
 	/**
 	 * The feature id for the '<em><b>Gpsstandort</b></em>' attribute.
@@ -210,7 +183,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__GPSSTANDORT = 7;
+	int OBJEKT__GPSSTANDORT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Externe Quelle</b></em>' attribute.
@@ -219,7 +192,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJEKT__EXTERNE_QUELLE = 8;
+	int OBJEKT__EXTERNE_QUELLE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Ort adresse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJEKT__ORT_ADRESSE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Gebaeudeart</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJEKT__GEBAEUDEART = 8;
 
 	/**
 	 * The number of structural features of the '<em>Objekt</em>' class.
@@ -404,22 +395,13 @@ public interface ModelPackage extends EPackage {
 	int ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL = ANLAGE_BASE_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANLAGE_MIT_ATTRIBUTEN__RESERVE4 = ANLAGE_BASE_FEATURE_COUNT + 6;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI = ANLAGE_BASE_FEATURE_COUNT + 7;
+	int ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI = ANLAGE_BASE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -428,7 +410,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART = ANLAGE_BASE_FEATURE_COUNT + 8;
+	int ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART = ANLAGE_BASE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -437,7 +419,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG = ANLAGE_BASE_FEATURE_COUNT + 9;
+	int ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG = ANLAGE_BASE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -446,7 +428,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT = ANLAGE_BASE_FEATURE_COUNT + 10;
+	int ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT = ANLAGE_BASE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANLAGE_MIT_ATTRIBUTEN__RESERVE1 = ANLAGE_BASE_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANLAGE_MIT_ATTRIBUTEN__RESERVE2 = ANLAGE_BASE_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Anlage Mit Attributen</em>' class.
@@ -455,7 +455,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT = ANLAGE_BASE_FEATURE_COUNT + 11;
+	int ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT = ANLAGE_BASE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Anlage Mit Attributen</em>' class.
@@ -513,31 +513,13 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG__URSPRUNG = 3;
 
 	/**
-	 * The feature id for the '<em><b>Reserve9</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERBINDUNG__RESERVE9 = 4;
-
-	/**
-	 * The feature id for the '<em><b>Reserve10</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERBINDUNG__RESERVE10 = 5;
-
-	/**
 	 * The feature id for the '<em><b>Quell Sicherung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG__QUELL_SICHERUNG = 6;
+	int VERBINDUNG__QUELL_SICHERUNG = 4;
 
 	/**
 	 * The feature id for the '<em><b>Ziel Sicherung</b></em>' attribute.
@@ -546,7 +528,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG__ZIEL_SICHERUNG = 7;
+	int VERBINDUNG__ZIEL_SICHERUNG = 5;
 
 	/**
 	 * The feature id for the '<em><b>Kabeltype</b></em>' attribute.
@@ -555,7 +537,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG__KABELTYPE = 8;
+	int VERBINDUNG__KABELTYPE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Argusrelevant</b></em>' attribute.
@@ -564,7 +546,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG__ARGUSRELEVANT = 9;
+	int VERBINDUNG__ARGUSRELEVANT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Linientype</b></em>' attribute.
@@ -573,7 +555,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG__LINIENTYPE = 10;
+	int VERBINDUNG__LINIENTYPE = 8;
 
 	/**
 	 * The number of structural features of the '<em>Verbindung</em>' class.
@@ -582,7 +564,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERBINDUNG_FEATURE_COUNT = 11;
+	int VERBINDUNG_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Verbindung</em>' class.
@@ -768,15 +750,6 @@ public interface ModelPackage extends EPackage {
 	int SELBSTST_ANLAGE__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__RESERVE4 = ANLAGE_MIT_ATTRIBUTEN__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -811,6 +784,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int SELBSTST_ANLAGE__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELBSTST_ANLAGE__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELBSTST_ANLAGE__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The number of structural features of the '<em>Selbstst Anlage</em>' class.
@@ -931,15 +922,6 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAFO__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -976,6 +958,24 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+
+	/**
 	 * The feature id for the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -994,13 +994,13 @@ public interface ModelPackage extends EPackage {
 	int TRAFO__TRAFO_KVA = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Reserve5</b></em>' attribute.
+	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__RESERVE5 = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+	int TRAFO__RESERVE3 = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Trafo</em>' class.
@@ -1158,13 +1158,22 @@ public interface ModelPackage extends EPackage {
 	int NETZANSCHLUSSPUNKT__BESCHREIBUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Langbeschreibung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Postition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__POSTITION = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 3;
+	int NETZANSCHLUSSPUNKT__POSTITION = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Netzanschlusspunkt</em>' class.
@@ -1173,7 +1182,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 4;
+	int NETZANSCHLUSSPUNKT_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Netzanschlusspunkt</em>' class.
@@ -1285,15 +1294,6 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERSORGUNGSKNOTEN__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1328,6 +1328,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSORGUNGSKNOTEN__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -1457,15 +1475,6 @@ public interface ModelPackage extends EPackage {
 	int ENERGIETECHNIKANLAGE__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGIETECHNIKANLAGE__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1500,6 +1509,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENERGIETECHNIKANLAGE__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGIETECHNIKANLAGE__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Et Type</b></em>' attribute.
@@ -1629,15 +1656,6 @@ public interface ModelPackage extends EPackage {
 	int GENERATOR__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERATOR__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1674,13 +1692,58 @@ public interface ModelPackage extends EPackage {
 	int GENERATOR__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+
+	/**
+	 * The feature id for the '<em><b>Generatorfunktion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__GENERATORFUNKTION = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Erzeugte Energie</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__ERZEUGTE_ENERGIE = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Elektrische Leistung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__ELEKTRISCHE_LEISTUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Generator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int GENERATOR_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Generator</em>' class.
@@ -1792,15 +1855,6 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER_BASE__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UMRICHTER_BASE__RESERVE4 = SELBSTST_ANLAGE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1837,13 +1891,58 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER_BASE__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
 
 	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_BASE__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_BASE__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+
+	/**
+	 * The feature id for the '<em><b>Umrichterfunktion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_BASE__UMRICHTERFUNKTION = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Umrichterart</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_BASE__UMRICHTERART = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Nennleistung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_BASE__NENNLEISTUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Umrichter Base</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER_BASE_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int UMRICHTER_BASE_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Umrichter Base</em>' class.
@@ -1853,16 +1952,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int UMRICHTER_BASE_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.UmrichterImpl <em>Umrichter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.UmrichterImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichter()
-	 * @generated
-	 */
-	int UMRICHTER = 20;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl <em>Verteiler Base</em>}' class.
@@ -1965,15 +2054,6 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_BASE__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__RESERVE4 = ANLAGE_MIT_ATTRIBUTEN__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2008,6 +2088,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEILER_BASE__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_BASE__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_BASE__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -2137,15 +2235,6 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__IN_OBJEKTTEIL = VERTEILER_BASE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__RESERVE4 = VERTEILER_BASE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2182,6 +2271,24 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__ABGANG_VT = VERTEILER_BASE__ABGANG_VT;
 
 	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_MIT_ZAEHLER__RESERVE1 = VERTEILER_BASE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_MIT_ZAEHLER__RESERVE2 = VERTEILER_BASE__RESERVE2;
+
+	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2191,22 +2298,13 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__NETZANSCHLUSSPUNKT = VERTEILER_BASE__NETZANSCHLUSSPUNKT;
 
 	/**
-	 * The feature id for the '<em><b>Zp Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__ZP_NR = VERTEILER_BASE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Verteiler Mit Zaehler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_MIT_ZAEHLER_FEATURE_COUNT = VERTEILER_BASE_FEATURE_COUNT + 1;
+	int VERTEILER_MIT_ZAEHLER_FEATURE_COUNT = VERTEILER_BASE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Mit Zaehler</em>' class.
@@ -2318,15 +2416,6 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER_MIT_ENERGIESPEICHER__IN_OBJEKTTEIL = UMRICHTER_BASE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UMRICHTER_MIT_ENERGIESPEICHER__RESERVE4 = UMRICHTER_BASE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2363,13 +2452,94 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER_MIT_ENERGIESPEICHER__ABGANG_VT = UMRICHTER_BASE__ABGANG_VT;
 
 	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__RESERVE1 = UMRICHTER_BASE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__RESERVE2 = UMRICHTER_BASE__RESERVE2;
+
+	/**
+	 * The feature id for the '<em><b>Umrichterfunktion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__UMRICHTERFUNKTION = UMRICHTER_BASE__UMRICHTERFUNKTION;
+
+	/**
+	 * The feature id for the '<em><b>Umrichterart</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__UMRICHTERART = UMRICHTER_BASE__UMRICHTERART;
+
+	/**
+	 * The feature id for the '<em><b>Nennleistung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__NENNLEISTUNG = UMRICHTER_BASE__NENNLEISTUNG;
+
+	/**
+	 * The feature id for the '<em><b>Energiespeicherfunktion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION = UMRICHTER_BASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Energiespeicherart</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART = UMRICHTER_BASE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Autonomiezeit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT = UMRICHTER_BASE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Kapazitaet</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET = UMRICHTER_BASE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Umrichter Mit Energiespeicher</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER_MIT_ENERGIESPEICHER_FEATURE_COUNT = UMRICHTER_BASE_FEATURE_COUNT + 0;
+	int UMRICHTER_MIT_ENERGIESPEICHER_FEATURE_COUNT = UMRICHTER_BASE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Umrichter Mit Energiespeicher</em>' class.
@@ -2445,13 +2615,22 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__NAME = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Verteiler Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
+	int VERTEILER_CONTAINER_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Container</em>' class.
@@ -2600,15 +2779,6 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_OHNE_ZAEHLER__IN_OBJEKTTEIL = VERTEILER_BASE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__RESERVE4 = VERTEILER_BASE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2643,6 +2813,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEILER_OHNE_ZAEHLER__ABGANG_VT = VERTEILER_BASE__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_OHNE_ZAEHLER__RESERVE1 = VERTEILER_BASE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_OHNE_ZAEHLER__RESERVE2 = VERTEILER_BASE__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -2682,22 +2870,13 @@ public interface ModelPackage extends EPackage {
 	int DETAILS = 19;
 
 	/**
-	 * The feature id for the '<em><b>Anzeigetext</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DETAILS__ANZEIGETEXT = 0;
-
-	/**
 	 * The number of structural features of the '<em>Details</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DETAILS_FEATURE_COUNT = 1;
+	int DETAILS_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Details</em>' class.
@@ -2707,6 +2886,16 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int DETAILS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.UmrichterImpl <em>Umrichter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.impl.UmrichterImpl
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichter()
+	 * @generated
+	 */
+	int UMRICHTER = 20;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2799,15 +2988,6 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER__IN_OBJEKTTEIL = UMRICHTER_BASE__IN_OBJEKTTEIL;
 
 	/**
-	 * The feature id for the '<em><b>Reserve4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UMRICHTER__RESERVE4 = UMRICHTER_BASE__RESERVE4;
-
-	/**
 	 * The feature id for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2844,6 +3024,51 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER__ABGANG_VT = UMRICHTER_BASE__ABGANG_VT;
 
 	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__RESERVE1 = UMRICHTER_BASE__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__RESERVE2 = UMRICHTER_BASE__RESERVE2;
+
+	/**
+	 * The feature id for the '<em><b>Umrichterfunktion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__UMRICHTERFUNKTION = UMRICHTER_BASE__UMRICHTERFUNKTION;
+
+	/**
+	 * The feature id for the '<em><b>Umrichterart</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__UMRICHTERART = UMRICHTER_BASE__UMRICHTERART;
+
+	/**
+	 * The feature id for the '<em><b>Nennleistung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UMRICHTER__NENNLEISTUNG = UMRICHTER_BASE__NENNLEISTUNG;
+
+	/**
 	 * The number of structural features of the '<em>Umrichter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2862,31 +3087,31 @@ public interface ModelPackage extends EPackage {
 	int UMRICHTER_OPERATION_COUNT = UMRICHTER_BASE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Objektarttype <em>Objektarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.objektarttype
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
+	 * @see at.tb_gruber.designer.model.Objektarttype
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getObjektarttype()
 	 * @generated
 	 */
 	int OBJEKTARTTYPE = 23;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Spannungsarttype <em>Spannungsarttype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
+	 * @see at.tb_gruber.designer.model.Spannungsarttype
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSpannungsarttype()
 	 * @generated
 	 */
 	int SPANNUNGSARTTYPE = 24;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}' enum.
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Externe_Datenquelle <em>Externe Datenquelle</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.externe_datenquelle
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getexterne_datenquelle()
+	 * @see at.tb_gruber.designer.model.Externe_Datenquelle
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getExterne_Datenquelle()
 	 * @generated
 	 */
 	int EXTERNE_DATENQUELLE = 25;
@@ -2912,11 +3137,11 @@ public interface ModelPackage extends EPackage {
 	int ARGU_SRELEVANT = 27;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}' enum.
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Eadb_Versorgung_Art <em>Eadb Versorgung Art</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.eadb_versorgung_art
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#geteadb_versorgung_art()
+	 * @see at.tb_gruber.designer.model.Eadb_Versorgung_Art
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEadb_Versorgung_Art()
 	 * @generated
 	 */
 	int EADB_VERSORGUNG_ART = 28;
@@ -2940,6 +3165,56 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	int LINIEN_TYPE = 30;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Generatorfunktion <em>Generatorfunktion</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.Generatorfunktion
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getGeneratorfunktion()
+	 * @generated
+	 */
+	int GENERATORFUNKTION = 31;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Umrichterart <em>Umrichterart</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.Umrichterart
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterart()
+	 * @generated
+	 */
+	int UMRICHTERART = 32;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Energiespeicherart <em>Energiespeicherart</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.Energiespeicherart
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherart()
+	 * @generated
+	 */
+	int ENERGIESPEICHERART = 33;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Umrichterfunktion <em>Umrichterfunktion</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.Umrichterfunktion
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterfunktion()
+	 * @generated
+	 */
+	int UMRICHTERFUNKTION = 34;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Energiespeicherfunktion <em>Energiespeicherfunktion</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.Energiespeicherfunktion
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherfunktion()
+	 * @generated
+	 */
+	int ENERGIESPEICHERFUNKTION = 35;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -2996,17 +3271,6 @@ public interface ModelPackage extends EPackage {
 	EReference getBahnhof_Plankopf();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getReserve2Value <em>Reserve2 Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve2 Value</em>'.
-	 * @see at.tb_gruber.designer.model.Bahnhof#getReserve2Value()
-	 * @see #getBahnhof()
-	 * @generated
-	 */
-	EAttribute getBahnhof_Reserve2Value();
-
-	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Objekt <em>Objekt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3039,17 +3303,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getObjekt_Objektart();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getOrt_Adresse <em>Ort Adresse</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ort Adresse</em>'.
-	 * @see at.tb_gruber.designer.model.Objekt#getOrt_Adresse()
-	 * @see #getObjekt()
-	 * @generated
-	 */
-	EAttribute getObjekt_Ort_Adresse();
-
-	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getObjektId <em>Objekt Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3070,17 +3323,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getObjekt_Anlage();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getGebaeudeArt <em>Gebaeude Art</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Gebaeude Art</em>'.
-	 * @see at.tb_gruber.designer.model.Objekt#getGebaeudeArt()
-	 * @see #getObjekt()
-	 * @generated
-	 */
-	EAttribute getObjekt_GebaeudeArt();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getDb776ua <em>Db776ua</em>}'.
@@ -3114,6 +3356,28 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getObjekt_ExterneQuelle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getOrt_adresse <em>Ort adresse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ort adresse</em>'.
+	 * @see at.tb_gruber.designer.model.Objekt#getOrt_adresse()
+	 * @see #getObjekt()
+	 * @generated
+	 */
+	EAttribute getObjekt_Ort_adresse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Objekt#getGebaeudeart <em>Gebaeudeart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gebaeudeart</em>'.
+	 * @see at.tb_gruber.designer.model.Objekt#getGebaeudeart()
+	 * @see #getObjekt()
+	 * @generated
+	 */
+	EAttribute getObjekt_Gebaeudeart();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.AnlageMitAttributen <em>Anlage Mit Attributen</em>}'.
@@ -3192,17 +3456,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getAnlageMitAttributen_InObjektteil();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.AnlageMitAttributen#getReserve4 <em>Reserve4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve4</em>'.
-	 * @see at.tb_gruber.designer.model.AnlageMitAttributen#getReserve4()
-	 * @see #getAnlageMitAttributen()
-	 * @generated
-	 */
-	EAttribute getAnlageMitAttributen_Reserve4();
-
-	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.AnlageMitAttributen#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3245,6 +3498,28 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAnlageMitAttributen_AbgangVT();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.AnlageMitAttributen#getReserve1 <em>Reserve1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reserve1</em>'.
+	 * @see at.tb_gruber.designer.model.AnlageMitAttributen#getReserve1()
+	 * @see #getAnlageMitAttributen()
+	 * @generated
+	 */
+	EAttribute getAnlageMitAttributen_Reserve1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.AnlageMitAttributen#getReserve2 <em>Reserve2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reserve2</em>'.
+	 * @see at.tb_gruber.designer.model.AnlageMitAttributen#getReserve2()
+	 * @see #getAnlageMitAttributen()
+	 * @generated
+	 */
+	EAttribute getAnlageMitAttributen_Reserve2();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Verbindung <em>Verbindung</em>}'.
@@ -3299,28 +3574,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVerbindung_Ursprung();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getReserve9 <em>Reserve9</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve9</em>'.
-	 * @see at.tb_gruber.designer.model.Verbindung#getReserve9()
-	 * @see #getVerbindung()
-	 * @generated
-	 */
-	EAttribute getVerbindung_Reserve9();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getReserve10 <em>Reserve10</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve10</em>'.
-	 * @see at.tb_gruber.designer.model.Verbindung#getReserve10()
-	 * @see #getVerbindung()
-	 * @generated
-	 */
-	EAttribute getVerbindung_Reserve10();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Verbindung#getQuellSicherung <em>Quell Sicherung</em>}'.
@@ -3452,15 +3705,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getTrafo_TrafoKva();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getReserve5 <em>Reserve5</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getReserve3 <em>Reserve3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reserve5</em>'.
-	 * @see at.tb_gruber.designer.model.Trafo#getReserve5()
+	 * @return the meta object for the attribute '<em>Reserve3</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo#getReserve3()
 	 * @see #getTrafo()
 	 * @generated
 	 */
-	EAttribute getTrafo_Reserve5();
+	EAttribute getTrafo_Reserve3();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Netzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
@@ -3504,6 +3757,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNetzanschlusspunkt_Beschreibung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getLangbeschreibung <em>Langbeschreibung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Langbeschreibung</em>'.
+	 * @see at.tb_gruber.designer.model.Netzanschlusspunkt#getLangbeschreibung()
+	 * @see #getNetzanschlusspunkt()
+	 * @generated
+	 */
+	EAttribute getNetzanschlusspunkt_Langbeschreibung();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getPostition <em>Postition</em>}'.
@@ -3569,6 +3833,39 @@ public interface ModelPackage extends EPackage {
 	EClass getGenerator();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Generator#getGeneratorfunktion <em>Generatorfunktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generatorfunktion</em>'.
+	 * @see at.tb_gruber.designer.model.Generator#getGeneratorfunktion()
+	 * @see #getGenerator()
+	 * @generated
+	 */
+	EAttribute getGenerator_Generatorfunktion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Generator#getErzeugteEnergie <em>Erzeugte Energie</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Erzeugte Energie</em>'.
+	 * @see at.tb_gruber.designer.model.Generator#getErzeugteEnergie()
+	 * @see #getGenerator()
+	 * @generated
+	 */
+	EAttribute getGenerator_ErzeugteEnergie();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Generator#getElektrischeLeistung <em>Elektrische Leistung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Elektrische Leistung</em>'.
+	 * @see at.tb_gruber.designer.model.Generator#getElektrischeLeistung()
+	 * @see #getGenerator()
+	 * @generated
+	 */
+	EAttribute getGenerator_ElektrischeLeistung();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.SelbststAnlage <em>Selbstst Anlage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3587,6 +3884,208 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getUmrichterBase();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterBase#getUmrichterfunktion <em>Umrichterfunktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Umrichterfunktion</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterBase#getUmrichterfunktion()
+	 * @see #getUmrichterBase()
+	 * @generated
+	 */
+	EAttribute getUmrichterBase_Umrichterfunktion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterBase#getUmrichterart <em>Umrichterart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Umrichterart</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterBase#getUmrichterart()
+	 * @see #getUmrichterBase()
+	 * @generated
+	 */
+	EAttribute getUmrichterBase_Umrichterart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterBase#getNennleistung <em>Nennleistung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nennleistung</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterBase#getNennleistung()
+	 * @see #getUmrichterBase()
+	 * @generated
+	 */
+	EAttribute getUmrichterBase_Nennleistung();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerMitZaehler <em>Verteiler Mit Zaehler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Verteiler Mit Zaehler</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler
+	 * @generated
+	 */
+	EClass getVerteilerMitZaehler();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher <em>Umrichter Mit Energiespeicher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Umrichter Mit Energiespeicher</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher
+	 * @generated
+	 */
+	EClass getUmrichterMitEnergiespeicher();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getEnergiespeicherfunktion <em>Energiespeicherfunktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Energiespeicherfunktion</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getEnergiespeicherfunktion()
+	 * @see #getUmrichterMitEnergiespeicher()
+	 * @generated
+	 */
+	EAttribute getUmrichterMitEnergiespeicher_Energiespeicherfunktion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getEnergiespeicherart <em>Energiespeicherart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Energiespeicherart</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getEnergiespeicherart()
+	 * @see #getUmrichterMitEnergiespeicher()
+	 * @generated
+	 */
+	EAttribute getUmrichterMitEnergiespeicher_Energiespeicherart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getAutonomiezeit <em>Autonomiezeit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Autonomiezeit</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getAutonomiezeit()
+	 * @see #getUmrichterMitEnergiespeicher()
+	 * @generated
+	 */
+	EAttribute getUmrichterMitEnergiespeicher_Autonomiezeit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getKapazitaet <em>Kapazitaet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kapazitaet</em>'.
+	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher#getKapazitaet()
+	 * @see #getUmrichterMitEnergiespeicher()
+	 * @generated
+	 */
+	EAttribute getUmrichterMitEnergiespeicher_Kapazitaet();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerContainer <em>Verteiler Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Verteiler Container</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerContainer
+	 * @generated
+	 */
+	EClass getVerteilerContainer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.VerteilerContainer#getVerteiler <em>Verteiler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Verteiler</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerContainer#getVerteiler()
+	 * @see #getVerteilerContainer()
+	 * @generated
+	 */
+	EReference getVerteilerContainer_Verteiler();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt()
+	 * @see #getVerteilerContainer()
+	 * @generated
+	 */
+	EReference getVerteilerContainer_Netzanschlusspunkt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerContainer#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerContainer#getName()
+	 * @see #getVerteilerContainer()
+	 * @generated
+	 */
+	EAttribute getVerteilerContainer_Name();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Betreiber <em>Betreiber</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Betreiber</em>'.
+	 * @see at.tb_gruber.designer.model.Betreiber
+	 * @generated
+	 */
+	EClass getBetreiber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Betreiber#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see at.tb_gruber.designer.model.Betreiber#getName()
+	 * @see #getBetreiber()
+	 * @generated
+	 */
+	EAttribute getBetreiber_Name();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerBase <em>Verteiler Base</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Verteiler Base</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerBase
+	 * @generated
+	 */
+	EClass getVerteilerBase();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.VerteilerBase#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerBase#getNetzanschlusspunkt()
+	 * @see #getVerteilerBase()
+	 * @generated
+	 */
+	EReference getVerteilerBase_Netzanschlusspunkt();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerOhneZaehler <em>Verteiler Ohne Zaehler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Verteiler Ohne Zaehler</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerOhneZaehler
+	 * @generated
+	 */
+	EClass getVerteilerOhneZaehler();
+
+	/**
+	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Details <em>Details</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Details</em>'.
+	 * @see at.tb_gruber.designer.model.Details
+	 * @generated
+	 */
+	EClass getDetails();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Umrichter <em>Umrichter</em>}'.
@@ -3663,170 +4162,34 @@ public interface ModelPackage extends EPackage {
 	EClass getAnlageOhneAttribute();
 
 	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerMitZaehler <em>Verteiler Mit Zaehler</em>}'.
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Objektarttype <em>Objektarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Verteiler Mit Zaehler</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler
+	 * @return the meta object for enum '<em>Objektarttype</em>'.
+	 * @see at.tb_gruber.designer.model.Objektarttype
 	 * @generated
 	 */
-	EClass getVerteilerMitZaehler();
+	EEnum getObjektarttype();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerMitZaehler#getZpNr <em>Zp Nr</em>}'.
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Spannungsarttype <em>Spannungsarttype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Zp Nr</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler#getZpNr()
-	 * @see #getVerteilerMitZaehler()
+	 * @return the meta object for enum '<em>Spannungsarttype</em>'.
+	 * @see at.tb_gruber.designer.model.Spannungsarttype
 	 * @generated
 	 */
-	EAttribute getVerteilerMitZaehler_ZpNr();
+	EEnum getSpannungsarttype();
 
 	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher <em>Umrichter Mit Energiespeicher</em>}'.
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Externe_Datenquelle <em>Externe Datenquelle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Umrichter Mit Energiespeicher</em>'.
-	 * @see at.tb_gruber.designer.model.UmrichterMitEnergiespeicher
+	 * @return the meta object for enum '<em>Externe Datenquelle</em>'.
+	 * @see at.tb_gruber.designer.model.Externe_Datenquelle
 	 * @generated
 	 */
-	EClass getUmrichterMitEnergiespeicher();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerContainer <em>Verteiler Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Verteiler Container</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerContainer
-	 * @generated
-	 */
-	EClass getVerteilerContainer();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt()
-	 * @see #getVerteilerContainer()
-	 * @generated
-	 */
-	EReference getVerteilerContainer_Netzanschlusspunkt();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.VerteilerContainer#getVerteiler <em>Verteiler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Verteiler</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerContainer#getVerteiler()
-	 * @see #getVerteilerContainer()
-	 * @generated
-	 */
-	EReference getVerteilerContainer_Verteiler();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Betreiber <em>Betreiber</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Betreiber</em>'.
-	 * @see at.tb_gruber.designer.model.Betreiber
-	 * @generated
-	 */
-	EClass getBetreiber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Betreiber#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see at.tb_gruber.designer.model.Betreiber#getName()
-	 * @see #getBetreiber()
-	 * @generated
-	 */
-	EAttribute getBetreiber_Name();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerBase <em>Verteiler Base</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Verteiler Base</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerBase
-	 * @generated
-	 */
-	EClass getVerteilerBase();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.VerteilerBase#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Netzanschlusspunkt</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerBase#getNetzanschlusspunkt()
-	 * @see #getVerteilerBase()
-	 * @generated
-	 */
-	EReference getVerteilerBase_Netzanschlusspunkt();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerOhneZaehler <em>Verteiler Ohne Zaehler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Verteiler Ohne Zaehler</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerOhneZaehler
-	 * @generated
-	 */
-	EClass getVerteilerOhneZaehler();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Details <em>Details</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Details</em>'.
-	 * @see at.tb_gruber.designer.model.Details
-	 * @generated
-	 */
-	EClass getDetails();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Details#getAnzeigetext <em>Anzeigetext</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Anzeigetext</em>'.
-	 * @see at.tb_gruber.designer.model.Details#getAnzeigetext()
-	 * @see #getDetails()
-	 * @generated
-	 */
-	EAttribute getDetails_Anzeigetext();
-
-	/**
-	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>objektarttype</em>'.
-	 * @see at.tb_gruber.designer.model.objektarttype
-	 * @generated
-	 */
-	EEnum getobjektarttype();
-
-	/**
-	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>spannungsarttype</em>'.
-	 * @see at.tb_gruber.designer.model.spannungsarttype
-	 * @generated
-	 */
-	EEnum getspannungsarttype();
-
-	/**
-	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>externe datenquelle</em>'.
-	 * @see at.tb_gruber.designer.model.externe_datenquelle
-	 * @generated
-	 */
-	EEnum getexterne_datenquelle();
+	EEnum getExterne_Datenquelle();
 
 	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}'.
@@ -3849,14 +4212,14 @@ public interface ModelPackage extends EPackage {
 	EEnum getARGUSrelevant();
 
 	/**
-	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}'.
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Eadb_Versorgung_Art <em>Eadb Versorgung Art</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>eadb versorgung art</em>'.
-	 * @see at.tb_gruber.designer.model.eadb_versorgung_art
+	 * @return the meta object for enum '<em>Eadb Versorgung Art</em>'.
+	 * @see at.tb_gruber.designer.model.Eadb_Versorgung_Art
 	 * @generated
 	 */
-	EEnum geteadb_versorgung_art();
+	EEnum getEadb_Versorgung_Art();
 
 	/**
 	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.NapPosition <em>Nap Position</em>}'.
@@ -3877,6 +4240,56 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getLinienType();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Generatorfunktion <em>Generatorfunktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Generatorfunktion</em>'.
+	 * @see at.tb_gruber.designer.model.Generatorfunktion
+	 * @generated
+	 */
+	EEnum getGeneratorfunktion();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Umrichterart <em>Umrichterart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Umrichterart</em>'.
+	 * @see at.tb_gruber.designer.model.Umrichterart
+	 * @generated
+	 */
+	EEnum getUmrichterart();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Energiespeicherart <em>Energiespeicherart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Energiespeicherart</em>'.
+	 * @see at.tb_gruber.designer.model.Energiespeicherart
+	 * @generated
+	 */
+	EEnum getEnergiespeicherart();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Umrichterfunktion <em>Umrichterfunktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Umrichterfunktion</em>'.
+	 * @see at.tb_gruber.designer.model.Umrichterfunktion
+	 * @generated
+	 */
+	EEnum getUmrichterfunktion();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Energiespeicherfunktion <em>Energiespeicherfunktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Energiespeicherfunktion</em>'.
+	 * @see at.tb_gruber.designer.model.Energiespeicherfunktion
+	 * @generated
+	 */
+	EEnum getEnergiespeicherfunktion();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3944,14 +4357,6 @@ public interface ModelPackage extends EPackage {
 		EReference BAHNHOF__PLANKOPF = eINSTANCE.getBahnhof_Plankopf();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve2 Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BAHNHOF__RESERVE2_VALUE = eINSTANCE.getBahnhof_Reserve2Value();
-
-		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.ObjektImpl <em>Objekt</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3978,14 +4383,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute OBJEKT__OBJEKTART = eINSTANCE.getObjekt_Objektart();
 
 		/**
-		 * The meta object literal for the '<em><b>Ort Adresse</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OBJEKT__ORT_ADRESSE = eINSTANCE.getObjekt_Ort_Adresse();
-
-		/**
 		 * The meta object literal for the '<em><b>Objekt Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4000,14 +4397,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OBJEKT__ANLAGE = eINSTANCE.getObjekt_Anlage();
-
-		/**
-		 * The meta object literal for the '<em><b>Gebaeude Art</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OBJEKT__GEBAEUDE_ART = eINSTANCE.getObjekt_GebaeudeArt();
 
 		/**
 		 * The meta object literal for the '<em><b>Db776ua</b></em>' attribute feature.
@@ -4032,6 +4421,22 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OBJEKT__EXTERNE_QUELLE = eINSTANCE.getObjekt_ExterneQuelle();
+
+		/**
+		 * The meta object literal for the '<em><b>Ort adresse</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OBJEKT__ORT_ADRESSE = eINSTANCE.getObjekt_Ort_adresse();
+
+		/**
+		 * The meta object literal for the '<em><b>Gebaeudeart</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OBJEKT__GEBAEUDEART = eINSTANCE.getObjekt_Gebaeudeart();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl <em>Anlage Mit Attributen</em>}' class.
@@ -4092,14 +4497,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL = eINSTANCE.getAnlageMitAttributen_InObjektteil();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve4</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANLAGE_MIT_ATTRIBUTEN__RESERVE4 = eINSTANCE.getAnlageMitAttributen_Reserve4();
-
-		/**
 		 * The meta object literal for the '<em><b>Anlagen Id Immo Assi</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4131,6 +4528,22 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT = eINSTANCE.getAnlageMitAttributen_AbgangVT();
+
+		/**
+		 * The meta object literal for the '<em><b>Reserve1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANLAGE_MIT_ATTRIBUTEN__RESERVE1 = eINSTANCE.getAnlageMitAttributen_Reserve1();
+
+		/**
+		 * The meta object literal for the '<em><b>Reserve2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANLAGE_MIT_ATTRIBUTEN__RESERVE2 = eINSTANCE.getAnlageMitAttributen_Reserve2();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerbindungImpl <em>Verbindung</em>}' class.
@@ -4173,22 +4586,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VERBINDUNG__URSPRUNG = eINSTANCE.getVerbindung_Ursprung();
-
-		/**
-		 * The meta object literal for the '<em><b>Reserve9</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VERBINDUNG__RESERVE9 = eINSTANCE.getVerbindung_Reserve9();
-
-		/**
-		 * The meta object literal for the '<em><b>Reserve10</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VERBINDUNG__RESERVE10 = eINSTANCE.getVerbindung_Reserve10();
 
 		/**
 		 * The meta object literal for the '<em><b>Quell Sicherung</b></em>' attribute feature.
@@ -4293,12 +4690,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute TRAFO__TRAFO_KVA = eINSTANCE.getTrafo_TrafoKva();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve5</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Reserve3</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRAFO__RESERVE5 = eINSTANCE.getTrafo_Reserve5();
+		EAttribute TRAFO__RESERVE3 = eINSTANCE.getTrafo_Reserve3();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl <em>Netzanschlusspunkt</em>}' class.
@@ -4333,6 +4730,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NETZANSCHLUSSPUNKT__BESCHREIBUNG = eINSTANCE.getNetzanschlusspunkt_Beschreibung();
+
+		/**
+		 * The meta object literal for the '<em><b>Langbeschreibung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG = eINSTANCE.getNetzanschlusspunkt_Langbeschreibung();
 
 		/**
 		 * The meta object literal for the '<em><b>Postition</b></em>' attribute feature.
@@ -4389,6 +4794,30 @@ public interface ModelPackage extends EPackage {
 		EClass GENERATOR = eINSTANCE.getGenerator();
 
 		/**
+		 * The meta object literal for the '<em><b>Generatorfunktion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATOR__GENERATORFUNKTION = eINSTANCE.getGenerator_Generatorfunktion();
+
+		/**
+		 * The meta object literal for the '<em><b>Erzeugte Energie</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATOR__ERZEUGTE_ENERGIE = eINSTANCE.getGenerator_ErzeugteEnergie();
+
+		/**
+		 * The meta object literal for the '<em><b>Elektrische Leistung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATOR__ELEKTRISCHE_LEISTUNG = eINSTANCE.getGenerator_ElektrischeLeistung();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.SelbststAnlageImpl <em>Selbstst Anlage</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4407,6 +4836,175 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass UMRICHTER_BASE = eINSTANCE.getUmrichterBase();
+
+		/**
+		 * The meta object literal for the '<em><b>Umrichterfunktion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_BASE__UMRICHTERFUNKTION = eINSTANCE.getUmrichterBase_Umrichterfunktion();
+
+		/**
+		 * The meta object literal for the '<em><b>Umrichterart</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_BASE__UMRICHTERART = eINSTANCE.getUmrichterBase_Umrichterart();
+
+		/**
+		 * The meta object literal for the '<em><b>Nennleistung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_BASE__NENNLEISTUNG = eINSTANCE.getUmrichterBase_Nennleistung();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerMitZaehlerImpl <em>Verteiler Mit Zaehler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.VerteilerMitZaehlerImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerMitZaehler()
+		 * @generated
+		 */
+		EClass VERTEILER_MIT_ZAEHLER = eINSTANCE.getVerteilerMitZaehler();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl <em>Umrichter Mit Energiespeicher</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterMitEnergiespeicher()
+		 * @generated
+		 */
+		EClass UMRICHTER_MIT_ENERGIESPEICHER = eINSTANCE.getUmrichterMitEnergiespeicher();
+
+		/**
+		 * The meta object literal for the '<em><b>Energiespeicherfunktion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION = eINSTANCE
+				.getUmrichterMitEnergiespeicher_Energiespeicherfunktion();
+
+		/**
+		 * The meta object literal for the '<em><b>Energiespeicherart</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART = eINSTANCE
+				.getUmrichterMitEnergiespeicher_Energiespeicherart();
+
+		/**
+		 * The meta object literal for the '<em><b>Autonomiezeit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT = eINSTANCE
+				.getUmrichterMitEnergiespeicher_Autonomiezeit();
+
+		/**
+		 * The meta object literal for the '<em><b>Kapazitaet</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET = eINSTANCE.getUmrichterMitEnergiespeicher_Kapazitaet();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl <em>Verteiler Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.VerteilerContainerImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerContainer()
+		 * @generated
+		 */
+		EClass VERTEILER_CONTAINER = eINSTANCE.getVerteilerContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Verteiler</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERTEILER_CONTAINER__VERTEILER = eINSTANCE.getVerteilerContainer_Verteiler();
+
+		/**
+		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerContainer_Netzanschlusspunkt();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERTEILER_CONTAINER__NAME = eINSTANCE.getVerteilerContainer_Name();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.BetreiberImpl <em>Betreiber</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.BetreiberImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getBetreiber()
+		 * @generated
+		 */
+		EClass BETREIBER = eINSTANCE.getBetreiber();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BETREIBER__NAME = eINSTANCE.getBetreiber_Name();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl <em>Verteiler Base</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.VerteilerBaseImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerBase()
+		 * @generated
+		 */
+		EClass VERTEILER_BASE = eINSTANCE.getVerteilerBase();
+
+		/**
+		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERTEILER_BASE__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerBase_Netzanschlusspunkt();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerOhneZaehlerImpl <em>Verteiler Ohne Zaehler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.VerteilerOhneZaehlerImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerOhneZaehler()
+		 * @generated
+		 */
+		EClass VERTEILER_OHNE_ZAEHLER = eINSTANCE.getVerteilerOhneZaehler();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.DetailsImpl <em>Details</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.impl.DetailsImpl
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getDetails()
+		 * @generated
+		 */
+		EClass DETAILS = eINSTANCE.getDetails();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.UmrichterImpl <em>Umrichter</em>}' class.
@@ -4471,152 +5069,34 @@ public interface ModelPackage extends EPackage {
 		EClass ANLAGE_OHNE_ATTRIBUTE = eINSTANCE.getAnlageOhneAttribute();
 
 		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerMitZaehlerImpl <em>Verteiler Mit Zaehler</em>}' class.
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Objektarttype <em>Objektarttype</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.VerteilerMitZaehlerImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerMitZaehler()
+		 * @see at.tb_gruber.designer.model.Objektarttype
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getObjektarttype()
 		 * @generated
 		 */
-		EClass VERTEILER_MIT_ZAEHLER = eINSTANCE.getVerteilerMitZaehler();
+		EEnum OBJEKTARTTYPE = eINSTANCE.getObjektarttype();
 
 		/**
-		 * The meta object literal for the '<em><b>Zp Nr</b></em>' attribute feature.
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Spannungsarttype <em>Spannungsarttype</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Spannungsarttype
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSpannungsarttype()
 		 * @generated
 		 */
-		EAttribute VERTEILER_MIT_ZAEHLER__ZP_NR = eINSTANCE.getVerteilerMitZaehler_ZpNr();
+		EEnum SPANNUNGSARTTYPE = eINSTANCE.getSpannungsarttype();
 
 		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl <em>Umrichter Mit Energiespeicher</em>}' class.
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Externe_Datenquelle <em>Externe Datenquelle</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterMitEnergiespeicher()
+		 * @see at.tb_gruber.designer.model.Externe_Datenquelle
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getExterne_Datenquelle()
 		 * @generated
 		 */
-		EClass UMRICHTER_MIT_ENERGIESPEICHER = eINSTANCE.getUmrichterMitEnergiespeicher();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl <em>Verteiler Container</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.VerteilerContainerImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerContainer()
-		 * @generated
-		 */
-		EClass VERTEILER_CONTAINER = eINSTANCE.getVerteilerContainer();
-
-		/**
-		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerContainer_Netzanschlusspunkt();
-
-		/**
-		 * The meta object literal for the '<em><b>Verteiler</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VERTEILER_CONTAINER__VERTEILER = eINSTANCE.getVerteilerContainer_Verteiler();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.BetreiberImpl <em>Betreiber</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.BetreiberImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getBetreiber()
-		 * @generated
-		 */
-		EClass BETREIBER = eINSTANCE.getBetreiber();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BETREIBER__NAME = eINSTANCE.getBetreiber_Name();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl <em>Verteiler Base</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.VerteilerBaseImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerBase()
-		 * @generated
-		 */
-		EClass VERTEILER_BASE = eINSTANCE.getVerteilerBase();
-
-		/**
-		 * The meta object literal for the '<em><b>Netzanschlusspunkt</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VERTEILER_BASE__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerBase_Netzanschlusspunkt();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerOhneZaehlerImpl <em>Verteiler Ohne Zaehler</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.VerteilerOhneZaehlerImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerOhneZaehler()
-		 * @generated
-		 */
-		EClass VERTEILER_OHNE_ZAEHLER = eINSTANCE.getVerteilerOhneZaehler();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.DetailsImpl <em>Details</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.DetailsImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getDetails()
-		 * @generated
-		 */
-		EClass DETAILS = eINSTANCE.getDetails();
-
-		/**
-		 * The meta object literal for the '<em><b>Anzeigetext</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DETAILS__ANZEIGETEXT = eINSTANCE.getDetails_Anzeigetext();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.objektarttype <em>objektarttype</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.objektarttype
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getobjektarttype()
-		 * @generated
-		 */
-		EEnum OBJEKTARTTYPE = eINSTANCE.getobjektarttype();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.spannungsarttype <em>spannungsarttype</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.spannungsarttype
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getspannungsarttype()
-		 * @generated
-		 */
-		EEnum SPANNUNGSARTTYPE = eINSTANCE.getspannungsarttype();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.externe_datenquelle <em>externe datenquelle</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.externe_datenquelle
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getexterne_datenquelle()
-		 * @generated
-		 */
-		EEnum EXTERNE_DATENQUELLE = eINSTANCE.getexterne_datenquelle();
+		EEnum EXTERNE_DATENQUELLE = eINSTANCE.getExterne_Datenquelle();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
@@ -4639,14 +5119,14 @@ public interface ModelPackage extends EPackage {
 		EEnum ARGU_SRELEVANT = eINSTANCE.getARGUSrelevant();
 
 		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.eadb_versorgung_art <em>eadb versorgung art</em>}' enum.
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Eadb_Versorgung_Art <em>Eadb Versorgung Art</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.eadb_versorgung_art
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#geteadb_versorgung_art()
+		 * @see at.tb_gruber.designer.model.Eadb_Versorgung_Art
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEadb_Versorgung_Art()
 		 * @generated
 		 */
-		EEnum EADB_VERSORGUNG_ART = eINSTANCE.geteadb_versorgung_art();
+		EEnum EADB_VERSORGUNG_ART = eINSTANCE.getEadb_Versorgung_Art();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.NapPosition <em>Nap Position</em>}' enum.
@@ -4667,6 +5147,56 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LINIEN_TYPE = eINSTANCE.getLinienType();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Generatorfunktion <em>Generatorfunktion</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Generatorfunktion
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getGeneratorfunktion()
+		 * @generated
+		 */
+		EEnum GENERATORFUNKTION = eINSTANCE.getGeneratorfunktion();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Umrichterart <em>Umrichterart</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Umrichterart
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterart()
+		 * @generated
+		 */
+		EEnum UMRICHTERART = eINSTANCE.getUmrichterart();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Energiespeicherart <em>Energiespeicherart</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Energiespeicherart
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherart()
+		 * @generated
+		 */
+		EEnum ENERGIESPEICHERART = eINSTANCE.getEnergiespeicherart();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Umrichterfunktion <em>Umrichterfunktion</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Umrichterfunktion
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterfunktion()
+		 * @generated
+		 */
+		EEnum UMRICHTERFUNKTION = eINSTANCE.getUmrichterfunktion();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Energiespeicherfunktion <em>Energiespeicherfunktion</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Energiespeicherfunktion
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherfunktion()
+		 * @generated
+		 */
+		EEnum ENERGIESPEICHERFUNKTION = eINSTANCE.getEnergiespeicherfunktion();
 
 	}
 

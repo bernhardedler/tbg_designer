@@ -58,12 +58,12 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 
 			addNamePropertyDescriptor(object);
 			addObjektartPropertyDescriptor(object);
-			addOrt_AdressePropertyDescriptor(object);
 			addObjektIdPropertyDescriptor(object);
-			addGebaeudeArtPropertyDescriptor(object);
 			addDb776uaPropertyDescriptor(object);
 			addGpsstandortPropertyDescriptor(object);
 			addExterneQuellePropertyDescriptor(object);
+			addOrt_adressePropertyDescriptor(object);
+			addGebaeudeartPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -100,22 +100,6 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Ort Adresse feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrt_AdressePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Objekt_Ort_Adresse_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_Ort_Adresse_feature",
-								"_UI_Objekt_type"),
-						ModelPackage.Literals.OBJEKT__ORT_ADRESSE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Objekt Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,22 +112,6 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_objektId_feature",
 								"_UI_Objekt_type"),
 						ModelPackage.Literals.OBJEKT__OBJEKT_ID, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Gebaeude Art feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addGebaeudeArtPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Objekt_gebaeudeArt_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_gebaeudeArt_feature",
-								"_UI_Objekt_type"),
-						ModelPackage.Literals.OBJEKT__GEBAEUDE_ART, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -192,6 +160,38 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_externeQuelle_feature",
 								"_UI_Objekt_type"),
 						ModelPackage.Literals.OBJEKT__EXTERNE_QUELLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ort adresse feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOrt_adressePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Objekt_ort_adresse_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_ort_adresse_feature",
+								"_UI_Objekt_type"),
+						ModelPackage.Literals.OBJEKT__ORT_ADRESSE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gebaeudeart feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGebaeudeartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Objekt_gebaeudeart_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Objekt_gebaeudeart_feature",
+								"_UI_Objekt_type"),
+						ModelPackage.Literals.OBJEKT__GEBAEUDEART, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -273,12 +273,12 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		switch (notification.getFeatureID(Objekt.class)) {
 		case ModelPackage.OBJEKT__NAME:
 		case ModelPackage.OBJEKT__OBJEKTART:
-		case ModelPackage.OBJEKT__ORT_ADRESSE:
 		case ModelPackage.OBJEKT__OBJEKT_ID:
-		case ModelPackage.OBJEKT__GEBAEUDE_ART:
 		case ModelPackage.OBJEKT__DB776UA:
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+		case ModelPackage.OBJEKT__GEBAEUDEART:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:

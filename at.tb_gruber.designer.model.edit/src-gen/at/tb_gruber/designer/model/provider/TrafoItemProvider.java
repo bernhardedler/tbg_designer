@@ -46,7 +46,7 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 
 			addSekundaerspannungPropertyDescriptor(object);
 			addTrafoKvaPropertyDescriptor(object);
-			addReserve5PropertyDescriptor(object);
+			addReserve3PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,17 +83,17 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Reserve5 feature.
+	 * This adds a property descriptor for the Reserve3 feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReserve5PropertyDescriptor(Object object) {
+	protected void addReserve3PropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Trafo_reserve5_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_reserve5_feature", "_UI_Trafo_type"),
-						ModelPackage.Literals.TRAFO__RESERVE5, true, false, false,
+						getResourceLocator(), getString("_UI_Trafo_reserve3_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_reserve3_feature", "_UI_Trafo_type"),
+						ModelPackage.Literals.TRAFO__RESERVE3, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -145,7 +145,7 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 		switch (notification.getFeatureID(Trafo.class)) {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
 		case ModelPackage.TRAFO__TRAFO_KVA:
-		case ModelPackage.TRAFO__RESERVE5:
+		case ModelPackage.TRAFO__RESERVE3:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

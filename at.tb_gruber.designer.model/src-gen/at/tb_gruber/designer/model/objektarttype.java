@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>objektarttype</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Objektarttype</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see at.tb_gruber.designer.model.ModelPackage#getobjektarttype()
+ * @see at.tb_gruber.designer.model.ModelPackage#getObjektarttype()
  * @model
  * @generated
  */
-public enum objektarttype implements Enumerator {
+public enum Objektarttype implements Enumerator {
 	/**
 	 * The '<em><b>Trafostation</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -39,14 +39,14 @@ public enum objektarttype implements Enumerator {
 	HOCHBAUOBJEKT(1, "Hochbauobjekt", "Hochbauobjekt"),
 
 	/**
-	 * The '<em><b>Schalthaeuser</b></em>' literal object.
+	 * The '<em><b>Schalthaus</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SCHALTHAEUSER_VALUE
+	 * @see #SCHALTHAUS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SCHALTHAEUSER(2, "Schalthaeuser", "Schalthaus"),
+	SCHALTHAUS(2, "Schalthaus", "Schalthaus"),
 
 	/**
 	 * The '<em><b>Tunnelobjekt</b></em>' literal object.
@@ -111,15 +111,15 @@ public enum objektarttype implements Enumerator {
 	public static final int HOCHBAUOBJEKT_VALUE = 1;
 
 	/**
-	 * The '<em><b>Schalthaeuser</b></em>' literal value.
+	 * The '<em><b>Schalthaus</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SCHALTHAEUSER
-	 * @model name="Schalthaeuser" literal="Schalthaus"
+	 * @see #SCHALTHAUS
+	 * @model name="Schalthaus"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SCHALTHAEUSER_VALUE = 2;
+	public static final int SCHALTHAUS_VALUE = 2;
 
 	/**
 	 * The '<em><b>Tunnelobjekt</b></em>' literal value.
@@ -166,33 +166,33 @@ public enum objektarttype implements Enumerator {
 	public static final int OBERLEITUNGSMAST_VALUE = 6;
 
 	/**
-	 * An array of all the '<em><b>objektarttype</b></em>' enumerators.
+	 * An array of all the '<em><b>Objektarttype</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final objektarttype[] VALUES_ARRAY = new objektarttype[] { TRAFOSTATION, HOCHBAUOBJEKT,
-			SCHALTHAEUSER, TUNNELOBJEKT, FREISTEHENDER_VT, VERKEHRSSTATION, OBERLEITUNGSMAST, };
+	private static final Objektarttype[] VALUES_ARRAY = new Objektarttype[] { TRAFOSTATION, HOCHBAUOBJEKT, SCHALTHAUS,
+			TUNNELOBJEKT, FREISTEHENDER_VT, VERKEHRSSTATION, OBERLEITUNGSMAST, };
 
 	/**
-	 * A public read-only list of all the '<em><b>objektarttype</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Objektarttype</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<objektarttype> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Objektarttype> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>objektarttype</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Objektarttype</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static objektarttype get(String literal) {
+	public static Objektarttype get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			objektarttype result = VALUES_ARRAY[i];
+			Objektarttype result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -201,16 +201,16 @@ public enum objektarttype implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>objektarttype</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Objektarttype</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static objektarttype getByName(String name) {
+	public static Objektarttype getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			objektarttype result = VALUES_ARRAY[i];
+			Objektarttype result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -219,21 +219,21 @@ public enum objektarttype implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>objektarttype</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Objektarttype</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static objektarttype get(int value) {
+	public static Objektarttype get(int value) {
 		switch (value) {
 		case TRAFOSTATION_VALUE:
 			return TRAFOSTATION;
 		case HOCHBAUOBJEKT_VALUE:
 			return HOCHBAUOBJEKT;
-		case SCHALTHAEUSER_VALUE:
-			return SCHALTHAEUSER;
+		case SCHALTHAUS_VALUE:
+			return SCHALTHAUS;
 		case TUNNELOBJEKT_VALUE:
 			return TUNNELOBJEKT;
 		case FREISTEHENDER_VT_VALUE:
@@ -273,7 +273,7 @@ public enum objektarttype implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private objektarttype(int value, String name, String literal) {
+	private Objektarttype(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -320,4 +320,4 @@ public enum objektarttype implements Enumerator {
 		return literal;
 	}
 
-} //objektarttype
+} //Objektarttype

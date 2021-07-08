@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getProjektname <em>Projektname</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getObjekt <em>Objekt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getPlankopf <em>Plankopf</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getReserve2Value <em>Reserve2 Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,26 +99,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 	 * @ordered
 	 */
 	protected Plankopf plankopf;
-
-	/**
-	 * The default value of the '{@link #getReserve2Value() <em>Reserve2 Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReserve2Value()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RESERVE2_VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getReserve2Value() <em>Reserve2 Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReserve2Value()
-	 * @generated
-	 * @ordered
-	 */
-	protected String reserve2Value = RESERVE2_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,30 +237,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 	 * @generated
 	 */
 	@Override
-	public String getReserve2Value() {
-		return reserve2Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setReserve2Value(String newReserve2Value) {
-		String oldReserve2Value = reserve2Value;
-		reserve2Value = newReserve2Value;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BAHNHOF__RESERVE2_VALUE,
-					oldReserve2Value, reserve2Value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.BAHNHOF__OBJEKT:
@@ -308,8 +263,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			return getObjekt();
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			return getPlankopf();
-		case ModelPackage.BAHNHOF__RESERVE2_VALUE:
-			return getReserve2Value();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -336,9 +289,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			setPlankopf((Plankopf) newValue);
 			return;
-		case ModelPackage.BAHNHOF__RESERVE2_VALUE:
-			setReserve2Value((String) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -363,9 +313,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			setPlankopf((Plankopf) null);
 			return;
-		case ModelPackage.BAHNHOF__RESERVE2_VALUE:
-			setReserve2Value(RESERVE2_VALUE_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -386,9 +333,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			return objekt != null && !objekt.isEmpty();
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			return plankopf != null;
-		case ModelPackage.BAHNHOF__RESERVE2_VALUE:
-			return RESERVE2_VALUE_EDEFAULT == null ? reserve2Value != null
-					: !RESERVE2_VALUE_EDEFAULT.equals(reserve2Value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -408,8 +352,6 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 		result.append(name);
 		result.append(", projektname: ");
 		result.append(projektname);
-		result.append(", reserve2Value: ");
-		result.append(reserve2Value);
 		result.append(')');
 		return result.toString();
 	}

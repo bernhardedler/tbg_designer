@@ -18,7 +18,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_2oVGoNZPEeuNGKSJ84nvrw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2oXi4NZPEeuNGKSJ84nvrw" name="Anlagendiagramm" repPath="#_2oVtsNZPEeuNGKSJ84nvrw" changeId="370415f2-2b6b-435a-8ef9-2bde8a211fc6">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2oXi4NZPEeuNGKSJ84nvrw" name="Anlagendiagramm" repPath="#_2oVtsNZPEeuNGKSJ84nvrw" changeId="74e2f918-cade-4250-8dac-7207d8c989ae">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']"/>
         <target xmi:type="tbg:Bahnhof" href="sample.model#/"/>
       </ownedRepresentationDescriptors>
@@ -514,9 +514,9 @@
                     <styles xmi:type="notation:ShapeStyle" xmi:id="_VyZlBtw6EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VyZlB9w6EeuCj4ULZUn3nw" x="114" y="103" width="30" height="30"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_Wfk0ENw6EeuCj4ULZUn3nw" type="3005" element="_Wfgir9w6EeuCj4ULZUn3nw">
-                    <styles xmi:type="notation:ShapeStyle" xmi:id="_Wfk0Edw6EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wfk0Etw6EeuCj4ULZUn3nw"/>
+                  <children xmi:type="notation:Node" xmi:id="_lZqyUN__EeuaeJB2N7t2LQ" type="3005" element="_lW-Dod__EeuaeJB2N7t2LQ">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_lZqyUd__EeuaeJB2N7t2LQ" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lZqyUt__EeuaeJB2N7t2LQ"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_HopcFtw6EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
                   <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HopcF9w6EeuCj4ULZUn3nw" x="24" y="28" width="122" height="252"/>
@@ -586,9 +586,9 @@
               <children xmi:type="notation:Node" xmi:id="_HdMkkNw7EeuCj4ULZUn3nw" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_HdMkkdw7EeuCj4ULZUn3nw" x="-15" y="4"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_YwqQcNw7EeuCj4ULZUn3nw" type="3005" element="_Ywl_Adw7EeuCj4ULZUn3nw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_YwqQcdw7EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YwqQctw7EeuCj4ULZUn3nw"/>
+              <children xmi:type="notation:Node" xmi:id="_laClwN__EeuaeJB2N7t2LQ" type="3005" element="_lXIbsN__EeuaeJB2N7t2LQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_laClwd__EeuaeJB2N7t2LQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laClwt__EeuaeJB2N7t2LQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_HdL9i9w7EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HdL9jNw7EeuCj4ULZUn3nw" x="559" y="273" width="100" height="100"/>
@@ -703,9 +703,9 @@
               <children xmi:type="notation:Node" xmi:id="_1bvxU9w6EeuCj4ULZUn3nw" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_1bvxVNw6EeuCj4ULZUn3nw" x="4" y="-22"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_1by0pdw6EeuCj4ULZUn3nw" type="3005" element="_1bhH0dw6EeuCj4ULZUn3nw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_1by0ptw6EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1by0p9w6EeuCj4ULZUn3nw"/>
+              <children xmi:type="notation:Node" xmi:id="_laDM0N__EeuaeJB2N7t2LQ" type="3005" element="_lXavkd__EeuaeJB2N7t2LQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_laDM0d__EeuaeJB2N7t2LQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laDM0t__EeuaeJB2N7t2LQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_1bvxUdw6EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1bvxUtw6EeuCj4ULZUn3nw" x="159" y="139" width="102" height="102"/>
@@ -734,9 +734,9 @@
               <children xmi:type="notation:Node" xmi:id="_5QxFo9w7EeuCj4ULZUn3nw" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_5QxFpNw7EeuCj4ULZUn3nw" x="4" y="-22"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_C03SENw8EeuCj4ULZUn3nw" type="3005" element="_C0uvNdw8EeuCj4ULZUn3nw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_C03SEdw8EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C03SEtw8EeuCj4ULZUn3nw"/>
+              <children xmi:type="notation:Node" xmi:id="_fDt1gOACEeuhQrR5pBKJKQ" type="3005" element="_fBwGoeACEeuhQrR5pBKJKQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_fDt1geACEeuhQrR5pBKJKQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fDt1guACEeuhQrR5pBKJKQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_5QxFodw7EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5QxFotw7EeuCj4ULZUn3nw" x="125" y="23" width="102" height="102"/>
@@ -809,9 +809,9 @@
               <children xmi:type="notation:Node" xmi:id="_FF5EE9w9EeuCj4ULZUn3nw" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_FF5EFNw9EeuCj4ULZUn3nw" x="4" y="-22"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_H_km8Nw9EeuCj4ULZUn3nw" type="3005" element="_H_d5Rdw9EeuCj4ULZUn3nw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_H_km8dw9EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H_km8tw9EeuCj4ULZUn3nw"/>
+              <children xmi:type="notation:Node" xmi:id="_0AJMIOACEeu6P7sAj4vvmw" type="3005" element="_z90Q4eACEeu6P7sAj4vvmw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_0AJMIeACEeu6P7sAj4vvmw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0AJMIuACEeu6P7sAj4vvmw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_FF5EEdw9EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FF5EEtw9EeuCj4ULZUn3nw" x="507" y="115" width="102" height="102"/>
@@ -829,9 +829,9 @@
               <children xmi:type="notation:Node" xmi:id="_u0CLk9w8EeuCj4ULZUn3nw" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_u0CLlNw8EeuCj4ULZUn3nw" x="4" y="-22"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_ylhgMNw8EeuCj4ULZUn3nw" type="3005" element="_yldOwdw8EeuCj4ULZUn3nw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_ylhgMdw8EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ylhgMtw8EeuCj4ULZUn3nw"/>
+              <children xmi:type="notation:Node" xmi:id="_0ARH8OACEeu6P7sAj4vvmw" type="3005" element="_z-BsQeACEeu6P7sAj4vvmw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_0ARH8eACEeu6P7sAj4vvmw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ARH8uACEeu6P7sAj4vvmw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_u0CLkdw8EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u0CLktw8EeuCj4ULZUn3nw" x="135" y="68" width="102" height="102"/>
@@ -862,9 +862,9 @@
               <children xmi:type="notation:Node" xmi:id="_2J0GWNw8EeuCj4ULZUn3nw" type="5003">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_2J0GWdw8EeuCj4ULZUn3nw" x="-15" y="4"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_D2nNgNw9EeuCj4ULZUn3nw" type="3005" element="_D2iVAdw9EeuCj4ULZUn3nw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_D2nNgdw9EeuCj4ULZUn3nw" fontName="Segoe UI"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D2nNgtw9EeuCj4ULZUn3nw"/>
+              <children xmi:type="notation:Node" xmi:id="_0ARvAOACEeu6P7sAj4vvmw" type="3005" element="_z96XgeACEeu6P7sAj4vvmw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_0ARvAeACEeu6P7sAj4vvmw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ARvAuACEeu6P7sAj4vvmw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_2J0GVtw8EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2J0GV9w8EeuCj4ULZUn3nw" x="136" y="293" width="100" height="100"/>
@@ -1334,22 +1334,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ksiXKtw8EeuCj4ULZUn3nw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ksiXK9w8EeuCj4ULZUn3nw" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_nGDMMNw8EeuCj4ULZUn3nw" type="4001" element="_nF2YCtw8EeuCj4ULZUn3nw" source="_jqPCFdw7EeuCj4ULZUn3nw" target="_kseFsNw8EeuCj4ULZUn3nw">
-          <children xmi:type="notation:Node" xmi:id="_nGDMNNw8EeuCj4ULZUn3nw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGDMNdw8EeuCj4ULZUn3nw" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_nGDMNtw8EeuCj4ULZUn3nw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGDMN9w8EeuCj4ULZUn3nw" x="52" y="408"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_nGDMONw8EeuCj4ULZUn3nw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGDMOdw8EeuCj4ULZUn3nw" x="-379" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_nGDMMdw8EeuCj4ULZUn3nw" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_nGDMMtw8EeuCj4ULZUn3nw" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nGDMM9w8EeuCj4ULZUn3nw" points="[62, 57, 1577, -798]$[62, 471, 1577, -384]$[-1515, 471, 0, -384]$[-1515, 804, 0, -51]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nGDMOtw8EeuCj4ULZUn3nw" id="(0.0,0.7738095238095238)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nGDMO9w8EeuCj4ULZUn3nw" id="(0.5,0.5)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_u0En0Nw8EeuCj4ULZUn3nw" type="4001" element="_u0A9ntw8EeuCj4ULZUn3nw" source="_u0CLkNw8EeuCj4ULZUn3nw" target="_u0EAwNw8EeuCj4ULZUn3nw">
           <children xmi:type="notation:Node" xmi:id="_u0En1Nw8EeuCj4ULZUn3nw" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u0En1dw8EeuCj4ULZUn3nw" x="7" y="-5"/>
@@ -1526,101 +1510,117 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_we9m5tw9EeuCj4ULZUn3nw" id="(0.0,0.3431372549019608)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_we9m59w9EeuCj4ULZUn3nw" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_Si_ncN2zEeuCMbYMzyOnaQ" type="4001" element="_SfNToN2zEeuCMbYMzyOnaQ" source="_ryqJcNw1EeuCj4ULZUn3nw" target="_-M47ANwzEeuzo_64fTHAOw">
-          <children xmi:type="notation:Node" xmi:id="_Sjv1YN2zEeuCMbYMzyOnaQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sjv1Yd2zEeuCMbYMzyOnaQ" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_8X3W8uAAEeukqbom9CTz6A" type="4001" element="_8XlqJuAAEeukqbom9CTz6A" source="_jqPCFdw7EeuCj4ULZUn3nw" target="_kseFsNw8EeuCj4ULZUn3nw">
+          <children xmi:type="notation:Node" xmi:id="_8X3W9uAAEeukqbom9CTz6A" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8X3W9-AAEeukqbom9CTz6A" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_Sj1U8N2zEeuCMbYMzyOnaQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sj1U8d2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_8X3W-OAAEeukqbom9CTz6A" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8X3W-eAAEeukqbom9CTz6A" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_Sj18AN2zEeuCMbYMzyOnaQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sj18Ad2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_8X3W-uAAEeukqbom9CTz6A" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8X3W--AAEeukqbom9CTz6A" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Si_ncd2zEeuCMbYMzyOnaQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_Si_nct2zEeuCMbYMzyOnaQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Si_nc92zEeuCMbYMzyOnaQ" points="[22, 0, -103, -399]$[73, 0, -52, -399]$[73, 399, -52, 0]$[125, 399, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkKFEN2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkKFEd2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_8X3W8-AAEeukqbom9CTz6A" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_8X3W9OAAEeukqbom9CTz6A" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8X3W9eAAEeukqbom9CTz6A" points="[-61, -10, 1515, -934]$[-794, -10, 782, -934]$[-794, 924, 782, 0]$[-1525, 924, 51, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8X3-AOAAEeukqbom9CTz6A" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8X3-AeAAEeukqbom9CTz6A" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_SkKFEt2zEeuCMbYMzyOnaQ" type="4001" element="_SfSMIN2zEeuCMbYMzyOnaQ" source="_0aTxMNw0Eeuzo_64fTHAOw" target="_RI3K4Nw2EeuCj4ULZUn3nw">
-          <children xmi:type="notation:Node" xmi:id="_SkKsIN2zEeuCMbYMzyOnaQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkKsId2zEeuCMbYMzyOnaQ" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_G31q4OADEeuj5O7_PTlj8g" type="4001" element="_G2PvcOADEeuj5O7_PTlj8g" source="_ryqJcNw1EeuCj4ULZUn3nw" target="_-M47ANwzEeuzo_64fTHAOw">
+          <children xmi:type="notation:Node" xmi:id="_G4DtUOADEeuj5O7_PTlj8g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4DtUeADEeuj5O7_PTlj8g" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkKsIt2zEeuCMbYMzyOnaQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkKsI92zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G4KbAOADEeuj5O7_PTlj8g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4KbAeADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkLTMN2zEeuCMbYMzyOnaQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkLTMd2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G4LpIOADEeuj5O7_PTlj8g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4LpIeADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SkKFE92zEeuCMbYMzyOnaQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_SkKFFN2zEeuCMbYMzyOnaQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SkKFFd2zEeuCMbYMzyOnaQ" points="[-61, -10, 295, 75]$[-184, -10, 172, 75]$[-184, -85, 172, 0]$[-305, -85, 51, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkL6QN2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkL6Qd2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_G31q4eADEeuj5O7_PTlj8g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_G31q4uADEeuj5O7_PTlj8g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G31q4-ADEeuj5O7_PTlj8g" points="[22, 0, -103, -399]$[73, 0, -52, -399]$[73, 399, -52, 0]$[125, 399, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G4w38OADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G4w38eADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_SkL6Qt2zEeuCMbYMzyOnaQ" type="4001" element="_SfUBU92zEeuCMbYMzyOnaQ" source="_-KAwstw0Eeuzo_64fTHAOw" target="_h-_agNw2EeuCj4ULZUn3nw">
-          <children xmi:type="notation:Node" xmi:id="_SkMhUN2zEeuCMbYMzyOnaQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkMhUd2zEeuCMbYMzyOnaQ" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_G4w38uADEeuj5O7_PTlj8g" type="4001" element="_G2SLsOADEeuj5O7_PTlj8g" source="_0aTxMNw0Eeuzo_64fTHAOw" target="_RI3K4Nw2EeuCj4ULZUn3nw">
+          <children xmi:type="notation:Node" xmi:id="_G4xfAOADEeuj5O7_PTlj8g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4xfAeADEeuj5O7_PTlj8g" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkMhUt2zEeuCMbYMzyOnaQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkMhU92zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G4yGEOADEeuj5O7_PTlj8g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4yGEeADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkMhVN2zEeuCMbYMzyOnaQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkMhVd2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G4yGEuADEeuj5O7_PTlj8g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4yGE-ADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SkL6Q92zEeuCMbYMzyOnaQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_SkL6RN2zEeuCMbYMzyOnaQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SkL6Rd2zEeuCMbYMzyOnaQ" points="[-61, -10, 436, -151]$[-254, -10, 243, -151]$[-254, 141, 243, 0]$[-446, 141, 51, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkNIYN2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkNIYd2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_G4w38-ADEeuj5O7_PTlj8g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_G4w39OADEeuj5O7_PTlj8g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G4w39eADEeuj5O7_PTlj8g" points="[-61, -10, 295, 75]$[-184, -10, 172, 75]$[-184, -85, 172, 0]$[-305, -85, 51, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G4ytIOADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G4ytIeADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_SkNIYt2zEeuCMbYMzyOnaQ" type="4001" element="_SfVPc92zEeuCMbYMzyOnaQ" source="_Ht9zNdw1Eeuzo_64fTHAOw" target="_tM8gstw2EeuCj4ULZUn3nw">
-          <children xmi:type="notation:Node" xmi:id="_SkOWgN2zEeuCMbYMzyOnaQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkOWgd2zEeuCMbYMzyOnaQ" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_G4ytIuADEeuj5O7_PTlj8g" type="4001" element="_G2TZ0OADEeuj5O7_PTlj8g" source="_-KAwstw0Eeuzo_64fTHAOw" target="_h-_agNw2EeuCj4ULZUn3nw">
+          <children xmi:type="notation:Node" xmi:id="_G4zUMOADEeuj5O7_PTlj8g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4zUMeADEeuj5O7_PTlj8g" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkOWgt2zEeuCMbYMzyOnaQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkOWg92zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G4zUMuADEeuj5O7_PTlj8g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4zUM-ADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkOWhN2zEeuCMbYMzyOnaQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkOWhd2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G4zUNOADEeuj5O7_PTlj8g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G4zUNeADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SkNIY92zEeuCMbYMzyOnaQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_SkNIZN2zEeuCMbYMzyOnaQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SkNIZd2zEeuCMbYMzyOnaQ" points="[61, -10, -255, 85]$[162, -10, -154, 85]$[162, -95, -154, 0]$[265, -95, -51, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkO9kN2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkO9kd2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_G4ytI-ADEeuj5O7_PTlj8g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_G4ytJOADEeuj5O7_PTlj8g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G4ytJeADEeuj5O7_PTlj8g" points="[-61, -10, 436, -151]$[-254, -10, 243, -151]$[-254, 141, 243, 0]$[-446, 141, 51, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G40iUOADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G41JYOADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_SkO9kt2zEeuCMbYMzyOnaQ" type="4001" element="_SflHEN2zEeuCMbYMzyOnaQ" source="_cEmqRdw3EeuCj4ULZUn3nw" target="_qEzOldw3EeuCj4ULZUn3nw">
-          <children xmi:type="notation:Node" xmi:id="_SkPkoN2zEeuCMbYMzyOnaQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkPkod2zEeuCMbYMzyOnaQ" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_G41JYeADEeuj5O7_PTlj8g" type="4001" element="_G2Un8-ADEeuj5O7_PTlj8g" source="_Ht9zNdw1Eeuzo_64fTHAOw" target="_tM8gstw2EeuCj4ULZUn3nw">
+          <children xmi:type="notation:Node" xmi:id="_G41JZeADEeuj5O7_PTlj8g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G41JZuADEeuj5O7_PTlj8g" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkPkot2zEeuCMbYMzyOnaQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkPko92zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G41wcOADEeuj5O7_PTlj8g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G41wceADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkPkpN2zEeuCMbYMzyOnaQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkPkpd2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G41wcuADEeuj5O7_PTlj8g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G41wc-ADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SkO9k92zEeuCMbYMzyOnaQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_SkO9lN2zEeuCMbYMzyOnaQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SkO9ld2zEeuCMbYMzyOnaQ" points="[61, -10, -378, 56]$[223, -10, -216, 56]$[223, -66, -216, 0]$[388, -66, -51, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkQLsN2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkQLsd2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_G41JYuADEeuj5O7_PTlj8g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_G41JY-ADEeuj5O7_PTlj8g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G41JZOADEeuj5O7_PTlj8g" points="[61, -10, -255, 85]$[162, -10, -154, 85]$[162, -95, -154, 0]$[265, -95, -51, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G42XgOADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G42XgeADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_SkQLst2zEeuCMbYMzyOnaQ" type="4001" element="_SgKV4N2zEeuCMbYMzyOnaQ" source="_HopcFdw6EeuCj4ULZUn3nw" target="_HdL9itw7EeuCj4ULZUn3nw">
-          <children xmi:type="notation:Node" xmi:id="_SkQLtt2zEeuCMbYMzyOnaQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkQLt92zEeuCMbYMzyOnaQ" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_G42XguADEeuj5O7_PTlj8g" type="4001" element="_G2m70OADEeuj5O7_PTlj8g" source="_cEmqRdw3EeuCj4ULZUn3nw" target="_qEzOldw3EeuCj4ULZUn3nw">
+          <children xmi:type="notation:Node" xmi:id="_G42XhuADEeuj5O7_PTlj8g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G42Xh-ADEeuj5O7_PTlj8g" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkQywN2zEeuCMbYMzyOnaQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkQywd2zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G42-kOADEeuj5O7_PTlj8g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G42-keADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_SkQywt2zEeuCMbYMzyOnaQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkQyw92zEeuCMbYMzyOnaQ" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_G42-kuADEeuj5O7_PTlj8g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G42-k-ADEeuj5O7_PTlj8g" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SkQLs92zEeuCMbYMzyOnaQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_SkQLtN2zEeuCMbYMzyOnaQ" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SkQLtd2zEeuCMbYMzyOnaQ" points="[61, -10, -387, -43]$[228, -10, -220, -43]$[228, 33, -220, 0]$[398, 33, -50, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkQyxN2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SkRZ0N2zEeuCMbYMzyOnaQ" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_G42Xg-ADEeuj5O7_PTlj8g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_G42XhOADEeuj5O7_PTlj8g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G42XheADEeuj5O7_PTlj8g" points="[61, -10, -378, 56]$[223, -10, -216, 56]$[223, -66, -216, 0]$[388, -66, -51, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G43loOADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G43loeADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_G43louADEeuj5O7_PTlj8g" type="4001" element="_G2rNQ-ADEeuj5O7_PTlj8g" source="_HopcFdw6EeuCj4ULZUn3nw" target="_HdL9itw7EeuCj4ULZUn3nw">
+          <children xmi:type="notation:Node" xmi:id="_G43lpuADEeuj5O7_PTlj8g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G43lp-ADEeuj5O7_PTlj8g" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_G44MsOADEeuj5O7_PTlj8g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G44MseADEeuj5O7_PTlj8g" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_G44MsuADEeuj5O7_PTlj8g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G44Ms-ADEeuj5O7_PTlj8g" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_G43lo-ADEeuj5O7_PTlj8g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_G43lpOADEeuj5O7_PTlj8g" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G43lpeADEeuj5O7_PTlj8g" points="[61, -10, -387, -43]$[228, -10, -220, -43]$[228, 33, -220, 0]$[398, 33, -50, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G44zwOADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G44zweADEeuj5O7_PTlj8g" id="(0.5,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -1634,7 +1634,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ryGv0Nw1EeuCj4ULZUn3nw" name=" / VK 00" outgoingEdges="_ryjbwNw1EeuCj4ULZUn3nw _SfNToN2zEeuCMbYMzyOnaQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ryGv0Nw1EeuCj4ULZUn3nw" name=" / VK 00" outgoingEdges="_ryjbwNw1EeuCj4ULZUn3nw _G2PvcOADEeuj5O7_PTlj8g" width="-1" height="-1">
         <target xmi:type="tbg:Versorgungsknoten" href="sample.model#//@objekt.0/@anlage.0"/>
         <semanticElements xmi:type="tbg:Versorgungsknoten" href="sample.model#//@objekt.0/@anlage.0"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_2HhrgNw1EeuCj4ULZUn3nw" name="''" outgoingEdges="_2fwlUNw1EeuCj4ULZUn3nw" width="3" height="3">
@@ -1689,7 +1689,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-MwYINwzEeuzo_64fTHAOw" name="Zählerverteiler AG / Netz NÖ" incomingEdges="_SfNToN2zEeuCMbYMzyOnaQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-MwYINwzEeuzo_64fTHAOw" name="Zählerverteiler AG / Netz NÖ" incomingEdges="_G2PvcOADEeuj5O7_PTlj8g">
         <target xmi:type="tbg:VerteilerContainer" href="sample.model#//@objekt.1/@anlage.0"/>
         <semanticElements xmi:type="tbg:VerteilerContainer" href="sample.model#//@objekt.1/@anlage.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1699,7 +1699,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_0aKAMNw0Eeuzo_64fTHAOw" outgoingEdges="_SfSMIN2zEeuCMbYMzyOnaQ" width="-1" height="-1">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_0aKAMNw0Eeuzo_64fTHAOw" outgoingEdges="_G2SLsOADEeuj5O7_PTlj8g" width="-1" height="-1">
           <target xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.1/@anlage.0/@verteiler.0"/>
           <semanticElements xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.1/@anlage.0/@verteiler.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1710,7 +1710,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_-J5b8Nw0Eeuzo_64fTHAOw" outgoingEdges="_SfUBU92zEeuCMbYMzyOnaQ" width="-1" height="-1">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_-J5b8Nw0Eeuzo_64fTHAOw" outgoingEdges="_G2TZ0OADEeuj5O7_PTlj8g" width="-1" height="-1">
           <target xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.1/@anlage.0/@verteiler.1"/>
           <semanticElements xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.1/@anlage.0/@verteiler.1"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1721,7 +1721,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_Ht13YNw1Eeuzo_64fTHAOw" outgoingEdges="_SfVPc92zEeuCMbYMzyOnaQ" width="-1" height="-1">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_Ht13YNw1Eeuzo_64fTHAOw" outgoingEdges="_G2Un8-ADEeuj5O7_PTlj8g" width="-1" height="-1">
           <target xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.1/@anlage.0/@verteiler.2"/>
           <semanticElements xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.1/@anlage.0/@verteiler.2"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1733,7 +1733,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']"/>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_0aQt4tw0Eeuzo_64fTHAOw" name="ZP-Nr.: 00AT0001234567890&#xD;&#xA;" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_0aQt4tw0Eeuzo_64fTHAOw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.1/@anlage.0/@verteiler.0/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.1/@anlage.0/@verteiler.0/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1744,7 +1744,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_-J-7gdw0Eeuzo_64fTHAOw" name="ZP-Nr.:00AT001234465789" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_-J-7gdw0Eeuzo_64fTHAOw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.1/@anlage.0/@verteiler.1/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.1/@anlage.0/@verteiler.1/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1755,7 +1755,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Ht7-BNw1Eeuzo_64fTHAOw" name="ZP-Nr.:00AT001234465789" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Ht7-BNw1Eeuzo_64fTHAOw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.1/@anlage.0/@verteiler.2/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.1/@anlage.0/@verteiler.2/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1766,7 +1766,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_RIiawNw2EeuCj4ULZUn3nw" name="VT Wohnung 1 / ET 01" tooltipText="VT Wohnung 1 / ET 01" outgoingEdges="_RI1VtNw2EeuCj4ULZUn3nw" incomingEdges="_SfSMIN2zEeuCMbYMzyOnaQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_RIiawNw2EeuCj4ULZUn3nw" name="VT Wohnung 1 / ET 01" tooltipText="VT Wohnung 1 / ET 01" outgoingEdges="_RI1VtNw2EeuCj4ULZUn3nw" incomingEdges="_G2SLsOADEeuj5O7_PTlj8g" width="-1" height="-1">
         <target xmi:type="tbg:Energietechnikanlage" href="sample.model#//@objekt.1/@anlage.1"/>
         <semanticElements xmi:type="tbg:Energietechnikanlage" href="sample.model#//@objekt.1/@anlage.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1777,7 +1777,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_h-1pgNw2EeuCj4ULZUn3nw" name="VT Wohnung 2 / ET 02" tooltipText="VT Wohnung 2 / ET 02" outgoingEdges="_h--MaNw2EeuCj4ULZUn3nw" incomingEdges="_SfUBU92zEeuCMbYMzyOnaQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_h-1pgNw2EeuCj4ULZUn3nw" name="VT Wohnung 2 / ET 02" tooltipText="VT Wohnung 2 / ET 02" outgoingEdges="_h--MaNw2EeuCj4ULZUn3nw" incomingEdges="_G2TZ0OADEeuj5O7_PTlj8g" width="-1" height="-1">
         <target xmi:type="tbg:Energietechnikanlage" href="sample.model#//@objekt.1/@anlage.2"/>
         <semanticElements xmi:type="tbg:Energietechnikanlage" href="sample.model#//@objekt.1/@anlage.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1843,7 +1843,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_tMw6gNw2EeuCj4ULZUn3nw" name="Haupt-VT AG BF Muster / VK 00" tooltipText="Haupt-VT AG BF Muster" outgoingEdges="_tM6EfNw2EeuCj4ULZUn3nw _K9mtItw3EeuCj4ULZUn3nw _ftQzA9w3EeuCj4ULZUn3nw" incomingEdges="_SfVPc92zEeuCMbYMzyOnaQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_tMw6gNw2EeuCj4ULZUn3nw" name="Haupt-VT AG BF Muster / VK 00" tooltipText="Haupt-VT AG BF Muster" outgoingEdges="_tM6EfNw2EeuCj4ULZUn3nw _K9mtItw3EeuCj4ULZUn3nw _ftQzA9w3EeuCj4ULZUn3nw" incomingEdges="_G2Un8-ADEeuj5O7_PTlj8g" width="-1" height="-1">
         <target xmi:type="tbg:Versorgungsknoten" href="sample.model#//@objekt.1/@anlage.3"/>
         <semanticElements xmi:type="tbg:Versorgungsknoten" href="sample.model#//@objekt.1/@anlage.3"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1930,7 +1930,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_cEWyoNw3EeuCj4ULZUn3nw" outgoingEdges="_SflHEN2zEeuCMbYMzyOnaQ" width="-1" height="-1">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_cEWyoNw3EeuCj4ULZUn3nw" outgoingEdges="_G2m70OADEeuj5O7_PTlj8g" width="-1" height="-1">
           <target xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.2/@anlage.0/@verteiler.0"/>
           <semanticElements xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.2/@anlage.0/@verteiler.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1975,7 +1975,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_cEjnBNw3EeuCj4ULZUn3nw" name="ZP-NR.: 00AT00" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_cEjnBNw3EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.2/@anlage.0/@verteiler.0/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.2/@anlage.0/@verteiler.0/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1986,7 +1986,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_qEqEoNw3EeuCj4ULZUn3nw" name="Bäcker / ET 00" tooltipText="Bäcker / ET 00" outgoingEdges="_qEyAiNw3EeuCj4ULZUn3nw" incomingEdges="_SflHEN2zEeuCMbYMzyOnaQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_qEqEoNw3EeuCj4ULZUn3nw" name="Bäcker / ET 00" tooltipText="Bäcker / ET 00" outgoingEdges="_qEyAiNw3EeuCj4ULZUn3nw" incomingEdges="_G2m70OADEeuj5O7_PTlj8g" width="-1" height="-1">
         <target xmi:type="tbg:Energietechnikanlage" href="sample.model#//@objekt.2/@anlage.1"/>
         <semanticElements xmi:type="tbg:Energietechnikanlage" href="sample.model#//@objekt.2/@anlage.1"/>
         <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_wDeMc9w3EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_gruen.svg">
@@ -2067,7 +2067,7 @@
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ad25dNw4EeuCj4ULZUn3nw" name="Zählerverteiler AG / Netz NÖ">
         <target xmi:type="tbg:VerteilerContainer" href="sample.model#//@objekt.4/@anlage.0"/>
         <semanticElements xmi:type="tbg:VerteilerContainer" href="sample.model#//@objekt.4/@anlage.0"/>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_4mjLUNw4EeuCj4ULZUn3nw" outgoingEdges="_4mruNNw4EeuCj4ULZUn3nw" incomingEdges="_rhXBRtw5EeuCj4ULZUn3nw" width="8" height="8">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_4mjLUNw4EeuCj4ULZUn3nw" name="ZP-NR.: 00AT00" outgoingEdges="_4mruNNw4EeuCj4ULZUn3nw" incomingEdges="_rhXBRtw5EeuCj4ULZUn3nw" width="8" height="8">
           <target xmi:type="tbg:Netzanschlusspunkt" href="sample.model#//@objekt.4/@anlage.0/@netzanschlusspunkt"/>
           <semanticElements xmi:type="tbg:Netzanschlusspunkt" href="sample.model#//@objekt.4/@anlage.0/@netzanschlusspunkt"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_4mjLU9w4EeuCj4ULZUn3nw"/>
@@ -2120,7 +2120,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']"/>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ad4uoNw4EeuCj4ULZUn3nw" name="ZP-Nr.: 00AT0001234567890&#xD;&#xA;" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ad4uoNw4EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.4/@anlage.0/@verteiler.0/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.4/@anlage.0/@verteiler.0/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2131,7 +2131,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ad4uo9w4EeuCj4ULZUn3nw" name="ZP-Nr.:00AT001234465789" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ad4uo9w4EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.4/@anlage.0/@verteiler.1/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.4/@anlage.0/@verteiler.1/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2142,7 +2142,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ad4uptw4EeuCj4ULZUn3nw" name="ZP-Nr.:00AT001234465789" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ad4uptw4EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.4/@anlage.0/@verteiler.2/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.4/@anlage.0/@verteiler.2/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2203,7 +2203,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_HocAsNw6EeuCj4ULZUn3nw" outgoingEdges="_SgKV4N2zEeuCMbYMzyOnaQ" incomingEdges="_DSYJ_Nw7EeuCj4ULZUn3nw" width="-1" height="-1">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_HocAsNw6EeuCj4ULZUn3nw" outgoingEdges="_G2rNQ-ADEeuj5O7_PTlj8g" incomingEdges="_DSYJ_Nw7EeuCj4ULZUn3nw" width="-1" height="-1">
           <target xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.5/@anlage.0/@verteiler.0"/>
           <semanticElements xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.5/@anlage.0/@verteiler.0"/>
           <ownedBorderedNodes xmi:type="diagram:DNode" uid="_VyHRINw6EeuCj4ULZUn3nw" name="''" outgoingEdges="_VyWhvtw6EeuCj4ULZUn3nw" width="3" height="3">
@@ -2217,8 +2217,8 @@
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Wfgir9w6EeuCj4ULZUn3nw" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_rot_nap_mitte.svg">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']/@conditionnalStyles.5/@style"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lW-Dod__EeuaeJB2N7t2LQ" labelSize="12" showIcon="false" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_mitte/zaehlerverteiler_gruen_nap_mitte.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']/@conditionnalStyles.13/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']"/>
         </ownedDiagramElements>
@@ -2267,7 +2267,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Hokjltw6EeuCj4ULZUn3nw" name="Netz NÖ&#xD;&#xA;ZP-NR.: 00AT00234783503&#xD;&#xA;" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Hokjltw6EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.0/@verteiler.0/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.0/@verteiler.0/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2278,7 +2278,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_HdHFCdw7EeuCj4ULZUn3nw" name="20kV/400V&#xD;&#xA;&#xD;&#xA;400kVA" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_HdHFCdw7EeuCj4ULZUn3nw" name="Invalid feature as name" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.1/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.1/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2289,7 +2289,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_jqKwpNw7EeuCj4ULZUn3nw" name="ZP-NR.: 00AT00" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_jqKwpNw7EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.2/@verteiler.0/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.2/@verteiler.0/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2300,7 +2300,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_k8G5tNw7EeuCj4ULZUn3nw" name="ZP-NR.: 00AT00" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_k8G5tNw7EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.2/@verteiler.1/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.2/@verteiler.1/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2311,7 +2311,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Details']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_EvDG5dw8EeuCj4ULZUn3nw" name="15kVA" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_EvDG5dw8EeuCj4ULZUn3nw" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.3/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.5/@anlage.3/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2333,14 +2333,14 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='NapDetails']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Hc5poNw7EeuCj4ULZUn3nw" name="Trafo 1 / " tooltipText="Trafo 1" outgoingEdges="_HdKIcNw7EeuCj4ULZUn3nw _oq6tttw7EeuCj4ULZUn3nw" incomingEdges="_SgKV4N2zEeuCMbYMzyOnaQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Hc5poNw7EeuCj4ULZUn3nw" name="Trafo 1 / " tooltipText="Trafo 1" outgoingEdges="_HdKIcNw7EeuCj4ULZUn3nw _oq6tttw7EeuCj4ULZUn3nw" incomingEdges="_G2rNQ-ADEeuj5O7_PTlj8g" width="-1" height="-1">
         <target xmi:type="tbg:Trafo" href="sample.model#//@objekt.5/@anlage.1"/>
         <semanticElements xmi:type="tbg:Trafo" href="sample.model#//@objekt.5/@anlage.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Ywl_Adw7EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/trafo/trafo_rot_gruen.svg">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@conditionnalStyles.22/@style"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lXIbsN__EeuaeJB2N7t2LQ" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/trafo/trafo_gruen_gruen.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@conditionnalStyles.24/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']"/>
       </ownedDiagramElements>
@@ -2354,7 +2354,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_jqC00Nw7EeuCj4ULZUn3nw" outgoingEdges="_nF2YCtw8EeuCj4ULZUn3nw" incomingEdges="_oq6tttw7EeuCj4ULZUn3nw" width="-1" height="-1">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_jqC00Nw7EeuCj4ULZUn3nw" outgoingEdges="_8XlqJuAAEeukqbom9CTz6A" incomingEdges="_oq6tttw7EeuCj4ULZUn3nw" width="-1" height="-1">
           <target xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.5/@anlage.2/@verteiler.0"/>
           <semanticElements xmi:type="tbg:VerteilerMitZaehler" href="sample.model#//@objekt.5/@anlage.2/@verteiler.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2410,8 +2410,8 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_1bhH0dw6EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/versorgungsknoten_rot_s.svg">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@conditionnalStyles.11/@style"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lXavkd__EeuaeJB2N7t2LQ" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/versorgungsknoten_gruen_s.svg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@conditionnalStyles.29/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']"/>
       </ownedDiagramElements>
@@ -2438,10 +2438,10 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_DSYJ_Nw7EeuCj4ULZUn3nw" sourceNode="_1bhH0Nw6EeuCj4ULZUn3nw" targetNode="_HocAsNw6EeuCj4ULZUn3nw" beginLabel="5" endLabel="5">
       <target xmi:type="tbg:Verbindung" href="sample.model#5"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#5"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_DSYxANw7EeuCj4ULZUn3nw" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="255,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.1/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_DSYxAdw7EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_DSYxAtw7EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_lYSSQN__EeuaeJB2N7t2LQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,255,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.3/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_lYSSQd__EeuaeJB2N7t2LQ" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_lYSSQt__EeuaeJB2N7t2LQ" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
@@ -2476,7 +2476,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_C0uvNdw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/generator/generator_blau.svg">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_fBwGoeACEeuhQrR5pBKJKQ" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/generator/generator_blau.svg">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator']/@conditionnalStyles.2/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator']"/>
@@ -2492,7 +2492,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_5QtbRdw7EeuCj4ULZUn3nw" name="8kWP" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_5QtbRdw7EeuCj4ULZUn3nw" name="Invalid feature as name" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.7/@anlage.0/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.7/@anlage.0/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2523,10 +2523,10 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H3kXBdw8EeuCj4ULZUn3nw" sourceNode="_5QeKsNw7EeuCj4ULZUn3nw" targetNode="_EuxaANw8EeuCj4ULZUn3nw" beginLabel="7" endLabel="7">
       <target xmi:type="tbg:Verbindung" href="sample.model#7"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#7"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_H3k-ANw8EeuCj4ULZUn3nw" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,112,192">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fCqFluACEeuhQrR5pBKJKQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,112,192">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.2/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_H3k-Adw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_H3k-Atw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_fCqFl-ACEeuhQrR5pBKJKQ" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_fCqFmOACEeuhQrR5pBKJKQ" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
@@ -2547,7 +2547,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ksPcMNw8EeuCj4ULZUn3nw" name="WHZ - VT / VK 00" tooltipText="WHZ - VT" outgoingEdges="_kscQgtw8EeuCj4ULZUn3nw" incomingEdges="_nF2YCtw8EeuCj4ULZUn3nw" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ksPcMNw8EeuCj4ULZUn3nw" name="WHZ - VT / VK 00" tooltipText="WHZ - VT" outgoingEdges="_kscQgtw8EeuCj4ULZUn3nw" incomingEdges="_8XlqJuAAEeukqbom9CTz6A" width="-1" height="-1">
         <target xmi:type="tbg:Versorgungsknoten" href="sample.model#//@objekt.8/@anlage.0"/>
         <semanticElements xmi:type="tbg:Versorgungsknoten" href="sample.model#//@objekt.8/@anlage.0"/>
         <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_nF-Tsdw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/versorgungsknoten_gruen_s.svg">
@@ -2583,7 +2583,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_H_d5Rdw9EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_cyan.svg">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_z90Q4eACEeu6P7sAj4vvmw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_cyan.svg">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']/@conditionnalStyles.5/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']"/>
@@ -2596,16 +2596,6 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kscQhNw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false" labelColor="255,255,255"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Anlage%20zu%20Betreiber']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_nF2YCtw8EeuCj4ULZUn3nw" sourceNode="_jqC00Nw7EeuCj4ULZUn3nw" targetNode="_ksPcMNw8EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
-      <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oPNz0tw8EeuCj4ULZUn3nw" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.17/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_oPNz09w8EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_oPNz1Nw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sSFzQNw8EeuCj4ULZUn3nw" name="OL-Mast 37b">
       <target xmi:type="tbg:Objekt" href="sample.model#//@objekt.9"/>
@@ -2623,7 +2613,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_yldOwdw8EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/versorgungsknoten_magenta_s.svg">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_z-BsQeACEeu6P7sAj4vvmw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/versorgungsknoten_magenta_s.svg">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']/@conditionnalStyles.38/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']"/>
@@ -2656,12 +2646,12 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_D2iVAdw9EeuCj4ULZUn3nw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/trafo/trafo_magenta_cyan.svg">
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_z96XgeACEeu6P7sAj4vvmw" labelSize="12" showIcon="false" workspacePath="/at.tb_gruber.designer.design/images/svg/trafo/trafo_magenta_cyan.svg">
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']/@conditionnalStyles.39/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_2JsKgdw8EeuCj4ULZUn3nw" name="15kV/2x231V&#xD;&#xA;125kVA" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_2JsKgdw8EeuCj4ULZUn3nw" name="Invalid feature as name" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.9/@anlage.1/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.9/@anlage.1/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2692,10 +2682,10 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_BA1TQtw9EeuCj4ULZUn3nw" sourceNode="_uz1-UNw8EeuCj4ULZUn3nw" targetNode="_2JWMQNw8EeuCj4ULZUn3nw" beginLabel="9" endLabel="9">
       <target xmi:type="tbg:Verbindung" href="sample.model#9"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#9"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_BA1TQ9w9EeuCj4ULZUn3nw" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="255,0,144">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_z-52AOACEeu6P7sAj4vvmw" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="255,0,144">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.4/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_BA1TRNw9EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_BA1TRdw9EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_z-52AeACEeu6P7sAj4vvmw" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_z-52AuACEeu6P7sAj4vvmw" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
@@ -2710,10 +2700,10 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H_JJLNw9EeuCj4ULZUn3nw" sourceNode="_2JWMQNw8EeuCj4ULZUn3nw" targetNode="_FFqakNw9EeuCj4ULZUn3nw" beginLabel="10" endLabel="10">
       <target xmi:type="tbg:Verbindung" href="sample.model#10"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#10"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_K2MOwNw9EeuCj4ULZUn3nw" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Both" strokeColor="0,255,255">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_z-7rMOACEeu6P7sAj4vvmw" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Both" strokeColor="0,255,255">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.19/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_K2MOwdw9EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_K2MOwtw9EeuCj4ULZUn3nw" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_z-7rMeACEeu6P7sAj4vvmw" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_z-7rMuACEeu6P7sAj4vvmw" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
@@ -2782,7 +2772,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='URmitESP']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_YkBQudw9EeuCj4ULZUn3nw" name="15kVA&#xD;&#xA;&#xD;&#xA;&#xA;90 min" width="5" height="5" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_YkBQudw9EeuCj4ULZUn3nw" name="Invalid feature as name" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="tbg:Details" href="sample.model#//@objekt.10/@anlage.1/@details.0"/>
         <semanticElements xmi:type="tbg:Details" href="sample.model#//@objekt.10/@anlage.1/@details.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2870,63 +2860,73 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='Plankopf']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SfNToN2zEeuCMbYMzyOnaQ" sourceNode="_ryGv0Nw1EeuCj4ULZUn3nw" targetNode="_-MwYINwzEeuzo_64fTHAOw" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_8XlqJuAAEeukqbom9CTz6A" sourceNode="_jqC00Nw7EeuCj4ULZUn3nw" targetNode="_ksPcMNw8EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
       <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SfN6sN2zEeuCMbYMzyOnaQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,255,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8XmRMOAAEeukqbom9CTz6A" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.17/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_8XmRMeAAEeukqbom9CTz6A" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_8XmRMuAAEeukqbom9CTz6A" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_G2PvcOADEeuj5O7_PTlj8g" sourceNode="_ryGv0Nw1EeuCj4ULZUn3nw" targetNode="_-MwYINwzEeuzo_64fTHAOw" beginLabel="1" endLabel="1">
+      <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
+      <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_G2QWgOADEeuj5O7_PTlj8g" targetArrow="NoDecoration" size="2" routingStyle="manhattan" strokeColor="0,255,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.3/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_SfN6sd2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SfN6st2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_G2QWgeADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_G2QWguADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SfSMIN2zEeuCMbYMzyOnaQ" sourceNode="_0aKAMNw0Eeuzo_64fTHAOw" targetNode="_RIiawNw2EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_G2SLsOADEeuj5O7_PTlj8g" sourceNode="_0aKAMNw0Eeuzo_64fTHAOw" targetNode="_RIiawNw2EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
       <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SfTaQN2zEeuCMbYMzyOnaQ" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_G2SywOADEeuj5O7_PTlj8g" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.17/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_SfTaQd2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SfTaQt2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_G2SyweADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_G2SywuADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SfUBU92zEeuCMbYMzyOnaQ" sourceNode="_-J5b8Nw0Eeuzo_64fTHAOw" targetNode="_h-1pgNw2EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_G2TZ0OADEeuj5O7_PTlj8g" sourceNode="_-J5b8Nw0Eeuzo_64fTHAOw" targetNode="_h-1pgNw2EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
       <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SfUoYN2zEeuCMbYMzyOnaQ" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_G2UA4OADEeuj5O7_PTlj8g" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.17/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_SfUoYd2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SfUoYt2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_G2UA4eADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_G2UA4uADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SfVPc92zEeuCMbYMzyOnaQ" sourceNode="_Ht13YNw1Eeuzo_64fTHAOw" targetNode="_tMw6gNw2EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_G2Un8-ADEeuj5O7_PTlj8g" sourceNode="_Ht13YNw1Eeuzo_64fTHAOw" targetNode="_tMw6gNw2EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
       <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SfV2gN2zEeuCMbYMzyOnaQ" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_G2VPAOADEeuj5O7_PTlj8g" lineStyle="dash" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.17/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_SfV2gd2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SfV2gt2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_G2VPAeADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_G2VPAuADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SflHEN2zEeuCMbYMzyOnaQ" sourceNode="_cEWyoNw3EeuCj4ULZUn3nw" targetNode="_qEqEoNw3EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_G2m70OADEeuj5O7_PTlj8g" sourceNode="_cEWyoNw3EeuCj4ULZUn3nw" targetNode="_qEqEoNw3EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
       <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Sf53MN2zEeuCMbYMzyOnaQ" lineStyle="dash_dot" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_G2qmMOADEeuj5O7_PTlj8g" lineStyle="dash_dot" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.24/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_Sf53Md2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_Sf53Mt2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_G2qmMeADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_G2qmMuADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SgKV4N2zEeuCMbYMzyOnaQ" sourceNode="_HocAsNw6EeuCj4ULZUn3nw" targetNode="_Hc5poNw7EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_G2rNQ-ADEeuj5O7_PTlj8g" sourceNode="_HocAsNw6EeuCj4ULZUn3nw" targetNode="_Hc5poNw7EeuCj4ULZUn3nw" beginLabel="1" endLabel="1">
       <target xmi:type="tbg:Verbindung" href="sample.model#1"/>
       <semanticElements xmi:type="tbg:Verbindung" href="sample.model#1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SgRqoN2zEeuCMbYMzyOnaQ" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="255,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.1/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_SgRqod2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SgRqot2zEeuCMbYMzyOnaQ" labelSize="12" showIcon="false"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_G2r0UOADEeuj5O7_PTlj8g" targetArrow="NoDecoration" size="2" routingStyle="manhattan" centered="Target" strokeColor="0,255,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']/@conditionnalStyles.3/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_G2r0UeADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_G2r0UuADEeuj5O7_PTlj8g" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.tb_gruber.designer.design/description/designer.odesign#//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@edgeMappings[name='Verbindung']"/>
     </ownedDiagramElements>

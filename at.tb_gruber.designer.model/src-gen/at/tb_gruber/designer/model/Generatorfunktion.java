@@ -10,126 +10,126 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Externe Datenquelle</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Generatorfunktion</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see at.tb_gruber.designer.model.ModelPackage#getExterne_Datenquelle()
+ * @see at.tb_gruber.designer.model.ModelPackage#getGeneratorfunktion()
  * @model
  * @generated
  */
-public enum Externe_Datenquelle implements Enumerator {
+public enum Generatorfunktion implements Enumerator {
 	/**
-	 * The '<em><b>Undefined</b></em>' literal object.
+	 * The '<em><b>PV Generator</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNDEFINED_VALUE
+	 * @see #PV_GENERATOR_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(0, "undefined", "undefined"),
+	PV_GENERATOR(0, "PV_Generator", "PV-Generator"),
 
 	/**
-	 * The '<em><b>Immo</b></em>' literal object.
+	 * The '<em><b>Dieselaggregat</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #IMMO_VALUE
+	 * @see #DIESELAGGREGAT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	IMMO(1, "immo", "immo"),
+	DIESELAGGREGAT(1, "Dieselaggregat", "Dieselaggregat"),
 
 	/**
-	 * The '<em><b>Vs</b></em>' literal object.
+	 * The '<em><b>Windkraftgenerator</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #VS_VALUE
+	 * @see #WINDKRAFTGENERATOR_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	VS(2, "vs", "vs"),
+	WINDKRAFTGENERATOR(2, "Windkraftgenerator", "Windkraftgenerator"),
 
 	/**
-	 * The '<em><b>Gebaeude</b></em>' literal object.
+	 * The '<em><b>Wasserkraft</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GEBAEUDE_VALUE
+	 * @see #WASSERKRAFT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	GEBAEUDE(3, "gebaeude", "gebaeude");
+	WASSERKRAFT(3, "Wasserkraft", "Wasserkraft");
 
 	/**
-	 * The '<em><b>Undefined</b></em>' literal value.
+	 * The '<em><b>PV Generator</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNDEFINED
-	 * @model name="undefined"
+	 * @see #PV_GENERATOR
+	 * @model name="PV_Generator" literal="PV-Generator"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNDEFINED_VALUE = 0;
+	public static final int PV_GENERATOR_VALUE = 0;
 
 	/**
-	 * The '<em><b>Immo</b></em>' literal value.
+	 * The '<em><b>Dieselaggregat</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #IMMO
-	 * @model name="immo"
+	 * @see #DIESELAGGREGAT
+	 * @model name="Dieselaggregat"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int IMMO_VALUE = 1;
+	public static final int DIESELAGGREGAT_VALUE = 1;
 
 	/**
-	 * The '<em><b>Vs</b></em>' literal value.
+	 * The '<em><b>Windkraftgenerator</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #VS
-	 * @model name="vs"
+	 * @see #WINDKRAFTGENERATOR
+	 * @model name="Windkraftgenerator"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VS_VALUE = 2;
+	public static final int WINDKRAFTGENERATOR_VALUE = 2;
 
 	/**
-	 * The '<em><b>Gebaeude</b></em>' literal value.
+	 * The '<em><b>Wasserkraft</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GEBAEUDE
-	 * @model name="gebaeude"
+	 * @see #WASSERKRAFT
+	 * @model name="Wasserkraft"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int GEBAEUDE_VALUE = 3;
+	public static final int WASSERKRAFT_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>Externe Datenquelle</b></em>' enumerators.
+	 * An array of all the '<em><b>Generatorfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Externe_Datenquelle[] VALUES_ARRAY = new Externe_Datenquelle[] { UNDEFINED, IMMO, VS,
-			GEBAEUDE, };
+	private static final Generatorfunktion[] VALUES_ARRAY = new Generatorfunktion[] { PV_GENERATOR, DIESELAGGREGAT,
+			WINDKRAFTGENERATOR, WASSERKRAFT, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Externe Datenquelle</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Generatorfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Externe_Datenquelle> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Generatorfunktion> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Externe Datenquelle</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Generatorfunktion</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Externe_Datenquelle get(String literal) {
+	public static Generatorfunktion get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Externe_Datenquelle result = VALUES_ARRAY[i];
+			Generatorfunktion result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -138,16 +138,16 @@ public enum Externe_Datenquelle implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Externe Datenquelle</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Generatorfunktion</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Externe_Datenquelle getByName(String name) {
+	public static Generatorfunktion getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Externe_Datenquelle result = VALUES_ARRAY[i];
+			Generatorfunktion result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -156,23 +156,23 @@ public enum Externe_Datenquelle implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Externe Datenquelle</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Generatorfunktion</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Externe_Datenquelle get(int value) {
+	public static Generatorfunktion get(int value) {
 		switch (value) {
-		case UNDEFINED_VALUE:
-			return UNDEFINED;
-		case IMMO_VALUE:
-			return IMMO;
-		case VS_VALUE:
-			return VS;
-		case GEBAEUDE_VALUE:
-			return GEBAEUDE;
+		case PV_GENERATOR_VALUE:
+			return PV_GENERATOR;
+		case DIESELAGGREGAT_VALUE:
+			return DIESELAGGREGAT;
+		case WINDKRAFTGENERATOR_VALUE:
+			return WINDKRAFTGENERATOR;
+		case WASSERKRAFT_VALUE:
+			return WASSERKRAFT;
 		}
 		return null;
 	}
@@ -204,7 +204,7 @@ public enum Externe_Datenquelle implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Externe_Datenquelle(int value, String name, String literal) {
+	private Generatorfunktion(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -251,4 +251,4 @@ public enum Externe_Datenquelle implements Enumerator {
 		return literal;
 	}
 
-} //Externe_Datenquelle
+} //Generatorfunktion

@@ -3,10 +3,10 @@
 package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.AnlageBase;
+import at.tb_gruber.designer.model.Externe_Datenquelle;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
-import at.tb_gruber.designer.model.externe_datenquelle;
-import at.tb_gruber.designer.model.objektarttype;
+import at.tb_gruber.designer.model.Objektarttype;
 
 import java.util.Collection;
 
@@ -34,13 +34,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getObjektart <em>Objektart</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getOrt_Adresse <em>Ort Adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getObjektId <em>Objekt Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getAnlage <em>Anlage</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGebaeudeArt <em>Gebaeude Art</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getDb776ua <em>Db776ua</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGpsstandort <em>Gpsstandort</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getExterneQuelle <em>Externe Quelle</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getOrt_adresse <em>Ort adresse</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGebaeudeart <em>Gebaeudeart</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,7 +74,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final objektarttype OBJEKTART_EDEFAULT = objektarttype.TRAFOSTATION;
+	protected static final Objektarttype OBJEKTART_EDEFAULT = Objektarttype.TRAFOSTATION;
 
 	/**
 	 * The cached value of the '{@link #getObjektart() <em>Objektart</em>}' attribute.
@@ -84,27 +84,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected objektarttype objektart = OBJEKTART_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getOrt_Adresse() <em>Ort Adresse</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrt_Adresse()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ORT_ADRESSE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOrt_Adresse() <em>Ort Adresse</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrt_Adresse()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ort_Adresse = ORT_ADRESSE_EDEFAULT;
+	protected Objektarttype objektart = OBJEKTART_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getObjektId() <em>Objekt Id</em>}' attribute.
@@ -135,26 +115,6 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @ordered
 	 */
 	protected EList<AnlageBase> anlage;
-
-	/**
-	 * The default value of the '{@link #getGebaeudeArt() <em>Gebaeude Art</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGebaeudeArt()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String GEBAEUDE_ART_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getGebaeudeArt() <em>Gebaeude Art</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGebaeudeArt()
-	 * @generated
-	 * @ordered
-	 */
-	protected String gebaeudeArt = GEBAEUDE_ART_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDb776ua() <em>Db776ua</em>}' attribute.
@@ -204,7 +164,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final externe_datenquelle EXTERNE_QUELLE_EDEFAULT = externe_datenquelle.UNDEFINED;
+	protected static final Externe_Datenquelle EXTERNE_QUELLE_EDEFAULT = Externe_Datenquelle.UNDEFINED;
 
 	/**
 	 * The cached value of the '{@link #getExterneQuelle() <em>Externe Quelle</em>}' attribute.
@@ -214,7 +174,47 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 * @ordered
 	 */
-	protected externe_datenquelle externeQuelle = EXTERNE_QUELLE_EDEFAULT;
+	protected Externe_Datenquelle externeQuelle = EXTERNE_QUELLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOrt_adresse() <em>Ort adresse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrt_adresse()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ORT_ADRESSE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOrt_adresse() <em>Ort adresse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrt_adresse()
+	 * @generated
+	 * @ordered
+	 */
+	protected String ort_adresse = ORT_ADRESSE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGebaeudeart() <em>Gebaeudeart</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGebaeudeart()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GEBAEUDEART_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGebaeudeart() <em>Gebaeudeart</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGebaeudeart()
+	 * @generated
+	 * @ordered
+	 */
+	protected String gebaeudeart = GEBAEUDEART_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -264,7 +264,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public objektarttype getObjektart() {
+	public Objektarttype getObjektart() {
 		return objektart;
 	}
 
@@ -274,36 +274,12 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public void setObjektart(objektarttype newObjektart) {
-		objektarttype oldObjektart = objektart;
+	public void setObjektart(Objektarttype newObjektart) {
+		Objektarttype oldObjektart = objektart;
 		objektart = newObjektart == null ? OBJEKTART_EDEFAULT : newObjektart;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__OBJEKTART, oldObjektart,
 					objektart));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getOrt_Adresse() {
-		return ort_Adresse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOrt_Adresse(String newOrt_Adresse) {
-		String oldOrt_Adresse = ort_Adresse;
-		ort_Adresse = newOrt_Adresse;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__ORT_ADRESSE, oldOrt_Adresse,
-					ort_Adresse));
 	}
 
 	/**
@@ -341,30 +317,6 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			anlage = new EObjectContainmentEList<AnlageBase>(AnlageBase.class, this, ModelPackage.OBJEKT__ANLAGE);
 		}
 		return anlage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getGebaeudeArt() {
-		return gebaeudeArt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setGebaeudeArt(String newGebaeudeArt) {
-		String oldGebaeudeArt = gebaeudeArt;
-		gebaeudeArt = newGebaeudeArt;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__GEBAEUDE_ART, oldGebaeudeArt,
-					gebaeudeArt));
 	}
 
 	/**
@@ -420,7 +372,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public externe_datenquelle getExterneQuelle() {
+	public Externe_Datenquelle getExterneQuelle() {
 		return externeQuelle;
 	}
 
@@ -430,12 +382,60 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
-	public void setExterneQuelle(externe_datenquelle newExterneQuelle) {
-		externe_datenquelle oldExterneQuelle = externeQuelle;
+	public void setExterneQuelle(Externe_Datenquelle newExterneQuelle) {
+		Externe_Datenquelle oldExterneQuelle = externeQuelle;
 		externeQuelle = newExterneQuelle == null ? EXTERNE_QUELLE_EDEFAULT : newExterneQuelle;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__EXTERNE_QUELLE, oldExterneQuelle,
 					externeQuelle));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getOrt_adresse() {
+		return ort_adresse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOrt_adresse(String newOrt_adresse) {
+		String oldOrt_adresse = ort_adresse;
+		ort_adresse = newOrt_adresse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__ORT_ADRESSE, oldOrt_adresse,
+					ort_adresse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getGebaeudeart() {
+		return gebaeudeart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGebaeudeart(String newGebaeudeart) {
+		String oldGebaeudeart = gebaeudeart;
+		gebaeudeart = newGebaeudeart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__GEBAEUDEART, oldGebaeudeart,
+					gebaeudeart));
 	}
 
 	/**
@@ -464,20 +464,20 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return getName();
 		case ModelPackage.OBJEKT__OBJEKTART:
 			return getObjektart();
-		case ModelPackage.OBJEKT__ORT_ADRESSE:
-			return getOrt_Adresse();
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			return getObjektId();
 		case ModelPackage.OBJEKT__ANLAGE:
 			return getAnlage();
-		case ModelPackage.OBJEKT__GEBAEUDE_ART:
-			return getGebaeudeArt();
 		case ModelPackage.OBJEKT__DB776UA:
 			return getDb776ua();
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			return getGpsstandort();
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			return getExterneQuelle();
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			return getOrt_adresse();
+		case ModelPackage.OBJEKT__GEBAEUDEART:
+			return getGebaeudeart();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -495,10 +495,7 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			setName((String) newValue);
 			return;
 		case ModelPackage.OBJEKT__OBJEKTART:
-			setObjektart((objektarttype) newValue);
-			return;
-		case ModelPackage.OBJEKT__ORT_ADRESSE:
-			setOrt_Adresse((String) newValue);
+			setObjektart((Objektarttype) newValue);
 			return;
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			setObjektId((String) newValue);
@@ -507,9 +504,6 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			getAnlage().clear();
 			getAnlage().addAll((Collection<? extends AnlageBase>) newValue);
 			return;
-		case ModelPackage.OBJEKT__GEBAEUDE_ART:
-			setGebaeudeArt((String) newValue);
-			return;
 		case ModelPackage.OBJEKT__DB776UA:
 			setDb776ua((String) newValue);
 			return;
@@ -517,7 +511,13 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			setGpsstandort((String) newValue);
 			return;
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
-			setExterneQuelle((externe_datenquelle) newValue);
+			setExterneQuelle((Externe_Datenquelle) newValue);
+			return;
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			setOrt_adresse((String) newValue);
+			return;
+		case ModelPackage.OBJEKT__GEBAEUDEART:
+			setGebaeudeart((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -537,17 +537,11 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__OBJEKTART:
 			setObjektart(OBJEKTART_EDEFAULT);
 			return;
-		case ModelPackage.OBJEKT__ORT_ADRESSE:
-			setOrt_Adresse(ORT_ADRESSE_EDEFAULT);
-			return;
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			setObjektId(OBJEKT_ID_EDEFAULT);
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:
 			getAnlage().clear();
-			return;
-		case ModelPackage.OBJEKT__GEBAEUDE_ART:
-			setGebaeudeArt(GEBAEUDE_ART_EDEFAULT);
 			return;
 		case ModelPackage.OBJEKT__DB776UA:
 			setDb776ua(DB776UA_EDEFAULT);
@@ -557,6 +551,12 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return;
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			setExterneQuelle(EXTERNE_QUELLE_EDEFAULT);
+			return;
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			setOrt_adresse(ORT_ADRESSE_EDEFAULT);
+			return;
+		case ModelPackage.OBJEKT__GEBAEUDEART:
+			setGebaeudeart(GEBAEUDEART_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -574,20 +574,20 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ModelPackage.OBJEKT__OBJEKTART:
 			return objektart != OBJEKTART_EDEFAULT;
-		case ModelPackage.OBJEKT__ORT_ADRESSE:
-			return ORT_ADRESSE_EDEFAULT == null ? ort_Adresse != null : !ORT_ADRESSE_EDEFAULT.equals(ort_Adresse);
 		case ModelPackage.OBJEKT__OBJEKT_ID:
 			return OBJEKT_ID_EDEFAULT == null ? objektId != null : !OBJEKT_ID_EDEFAULT.equals(objektId);
 		case ModelPackage.OBJEKT__ANLAGE:
 			return anlage != null && !anlage.isEmpty();
-		case ModelPackage.OBJEKT__GEBAEUDE_ART:
-			return GEBAEUDE_ART_EDEFAULT == null ? gebaeudeArt != null : !GEBAEUDE_ART_EDEFAULT.equals(gebaeudeArt);
 		case ModelPackage.OBJEKT__DB776UA:
 			return DB776UA_EDEFAULT == null ? db776ua != null : !DB776UA_EDEFAULT.equals(db776ua);
 		case ModelPackage.OBJEKT__GPSSTANDORT:
 			return GPSSTANDORT_EDEFAULT == null ? gpsstandort != null : !GPSSTANDORT_EDEFAULT.equals(gpsstandort);
 		case ModelPackage.OBJEKT__EXTERNE_QUELLE:
 			return externeQuelle != EXTERNE_QUELLE_EDEFAULT;
+		case ModelPackage.OBJEKT__ORT_ADRESSE:
+			return ORT_ADRESSE_EDEFAULT == null ? ort_adresse != null : !ORT_ADRESSE_EDEFAULT.equals(ort_adresse);
+		case ModelPackage.OBJEKT__GEBAEUDEART:
+			return GEBAEUDEART_EDEFAULT == null ? gebaeudeart != null : !GEBAEUDEART_EDEFAULT.equals(gebaeudeart);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -607,18 +607,18 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		result.append(name);
 		result.append(", objektart: ");
 		result.append(objektart);
-		result.append(", Ort_Adresse: ");
-		result.append(ort_Adresse);
 		result.append(", objektId: ");
 		result.append(objektId);
-		result.append(", gebaeudeArt: ");
-		result.append(gebaeudeArt);
 		result.append(", db776ua: ");
 		result.append(db776ua);
 		result.append(", gpsstandort: ");
 		result.append(gpsstandort);
 		result.append(", externeQuelle: ");
 		result.append(externeQuelle);
+		result.append(", ort_adresse: ");
+		result.append(ort_adresse);
+		result.append(", gebaeudeart: ");
+		result.append(gebaeudeart);
 		result.append(')');
 		return result.toString();
 	}

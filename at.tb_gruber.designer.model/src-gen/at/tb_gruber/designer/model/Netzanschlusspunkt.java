@@ -14,6 +14,7 @@ package at.tb_gruber.designer.model;
  *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getNrHauptversorgung <em>Nr Hauptversorgung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getNrReserveEinspeisung <em>Nr Reserve Einspeisung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getLangbeschreibung <em>Langbeschreibung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getPostition <em>Postition</em>}</li>
  * </ul>
  *
@@ -24,12 +25,13 @@ package at.tb_gruber.designer.model;
 public interface Netzanschlusspunkt extends AnlageOhneAttribute {
 	/**
 	 * Returns the value of the '<em><b>Nr Hauptversorgung</b></em>' attribute.
+	 * The default value is <code>"ZP-NR.: 00AT00"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nr Hauptversorgung</em>' attribute.
 	 * @see #setNrHauptversorgung(String)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getNetzanschlusspunkt_NrHauptversorgung()
-	 * @model
+	 * @model default="ZP-NR.: 00AT00"
 	 * @generated
 	 */
 	String getNrHauptversorgung();
@@ -87,6 +89,28 @@ public interface Netzanschlusspunkt extends AnlageOhneAttribute {
 	 * @generated
 	 */
 	void setBeschreibung(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Langbeschreibung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Langbeschreibung</em>' attribute.
+	 * @see #setLangbeschreibung(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getNetzanschlusspunkt_Langbeschreibung()
+	 * @model
+	 * @generated
+	 */
+	String getLangbeschreibung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getLangbeschreibung <em>Langbeschreibung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Langbeschreibung</em>' attribute.
+	 * @see #getLangbeschreibung()
+	 * @generated
+	 */
+	void setLangbeschreibung(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Postition</b></em>' attribute.
