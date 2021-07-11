@@ -23,11 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getAnlagennummer <em>Anlagennummer</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getObjektteil <em>Objektteil</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getEadbId <em>Eadb Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getPrimaerspannung <em>Primaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getInObjektteil <em>In Objektteil</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.AnlageMitAttributenImpl#getAbgangVT <em>Abgang VT</em>}</li>
@@ -77,26 +75,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 	 * @ordered
 	 */
 	protected String anlagennummer = ANLAGENNUMMER_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getObjektteil() <em>Objektteil</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getObjektteil()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String OBJEKTTEIL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getObjektteil() <em>Objektteil</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getObjektteil()
-	 * @generated
-	 * @ordered
-	 */
-	protected String objektteil = OBJEKTTEIL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEadbId() <em>Eadb Id</em>}' attribute.
@@ -157,26 +135,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 	 * @ordered
 	 */
 	protected String inObjektteil = IN_OBJEKTTEIL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAnlagenIdImmoAssi() <em>Anlagen Id Immo Assi</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnlagenIdImmoAssi()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ANLAGEN_ID_IMMO_ASSI_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getAnlagenIdImmoAssi() <em>Anlagen Id Immo Assi</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnlagenIdImmoAssi()
-	 * @generated
-	 * @ordered
-	 */
-	protected String anlagenIdImmoAssi = ANLAGEN_ID_IMMO_ASSI_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEadbVersorgungArt() <em>Eadb Versorgung Art</em>}' attribute.
@@ -351,30 +309,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 	 * @generated
 	 */
 	@Override
-	public String getObjektteil() {
-		return objektteil;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setObjektteil(String newObjektteil) {
-		String oldObjektteil = objektteil;
-		objektteil = newObjektteil;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL,
-					oldObjektteil, objektteil));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getEadbId() {
 		return eadbId;
 	}
@@ -439,30 +373,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL,
 					oldInObjektteil, inObjektteil));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getAnlagenIdImmoAssi() {
-		return anlagenIdImmoAssi;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAnlagenIdImmoAssi(String newAnlagenIdImmoAssi) {
-		String oldAnlagenIdImmoAssi = anlagenIdImmoAssi;
-		anlagenIdImmoAssi = newAnlagenIdImmoAssi;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI, oldAnlagenIdImmoAssi, anlagenIdImmoAssi));
 	}
 
 	/**
@@ -598,16 +508,12 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 			return getName();
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER:
 			return getAnlagennummer();
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL:
-			return getObjektteil();
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_ID:
 			return getEadbId();
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG:
 			return getPrimaerspannung();
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL:
 			return getInObjektteil();
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI:
-			return getAnlagenIdImmoAssi();
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART:
 			return getEadbVersorgungArt();
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG:
@@ -636,9 +542,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER:
 			setAnlagennummer((String) newValue);
 			return;
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL:
-			setObjektteil((String) newValue);
-			return;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_ID:
 			setEadbId((String) newValue);
 			return;
@@ -647,9 +550,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 			return;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL:
 			setInObjektteil((String) newValue);
-			return;
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI:
-			setAnlagenIdImmoAssi((String) newValue);
 			return;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART:
 			setEadbVersorgungArt((Eadb_Versorgung_Art) newValue);
@@ -684,9 +584,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER:
 			setAnlagennummer(ANLAGENNUMMER_EDEFAULT);
 			return;
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL:
-			setObjektteil(OBJEKTTEIL_EDEFAULT);
-			return;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_ID:
 			setEadbId(EADB_ID_EDEFAULT);
 			return;
@@ -695,9 +592,6 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 			return;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL:
 			setInObjektteil(IN_OBJEKTTEIL_EDEFAULT);
-			return;
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI:
-			setAnlagenIdImmoAssi(ANLAGEN_ID_IMMO_ASSI_EDEFAULT);
 			return;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART:
 			setEadbVersorgungArt(EADB_VERSORGUNG_ART_EDEFAULT);
@@ -731,17 +625,12 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER:
 			return ANLAGENNUMMER_EDEFAULT == null ? anlagennummer != null
 					: !ANLAGENNUMMER_EDEFAULT.equals(anlagennummer);
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL:
-			return OBJEKTTEIL_EDEFAULT == null ? objektteil != null : !OBJEKTTEIL_EDEFAULT.equals(objektteil);
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_ID:
 			return EADB_ID_EDEFAULT == null ? eadbId != null : !EADB_ID_EDEFAULT.equals(eadbId);
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG:
 			return primaerspannung != PRIMAERSPANNUNG_EDEFAULT;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL:
 			return IN_OBJEKTTEIL_EDEFAULT == null ? inObjektteil != null : !IN_OBJEKTTEIL_EDEFAULT.equals(inObjektteil);
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI:
-			return ANLAGEN_ID_IMMO_ASSI_EDEFAULT == null ? anlagenIdImmoAssi != null
-					: !ANLAGEN_ID_IMMO_ASSI_EDEFAULT.equals(anlagenIdImmoAssi);
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART:
 			return eadbVersorgungArt != EADB_VERSORGUNG_ART_EDEFAULT;
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG:
@@ -772,16 +661,12 @@ public abstract class AnlageMitAttributenImpl extends AnlageBaseImpl implements 
 		result.append(name);
 		result.append(", anlagennummer: ");
 		result.append(anlagennummer);
-		result.append(", objektteil: ");
-		result.append(objektteil);
 		result.append(", eadbId: ");
 		result.append(eadbId);
 		result.append(", primaerspannung: ");
 		result.append(primaerspannung);
 		result.append(", inObjektteil: ");
 		result.append(inObjektteil);
-		result.append(", anlagenIdImmoAssi: ");
-		result.append(anlagenIdImmoAssi);
 		result.append(", eadbVersorgungArt: ");
 		result.append(eadbVersorgungArt);
 		result.append(", verteilerbezeichnung: ");

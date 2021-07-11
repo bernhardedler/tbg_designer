@@ -25,6 +25,7 @@ public class CSVPropertyProvider {
 
 	private List<ObjektInfo> objektInfos = new ArrayList<CSVPropertyProvider.ObjektInfo>();
 	private List<String> betreiberList = new ArrayList<>();
+	private List<String> eigentuemerList = new ArrayList<>();
 	private static IPreferenceStore preferenceStore = new ScopedPreferenceStore(InstanceScope.INSTANCE,
 			TBGPreferencePage.PREFERENCE_SCOPE_IDENTIFIER);
 
@@ -34,6 +35,7 @@ public class CSVPropertyProvider {
 		loadVerkehrsstationenDatei();
 		loadGebaeudeDatei();
 		loadBetreiberDatei();
+		loadEigentuemerDatei();
 	}
 
 	public void registerListener() {
@@ -406,8 +408,33 @@ public class CSVPropertyProvider {
 		}
 
 	}
+
+
+	private void loadEigentuemerDatei() {
+		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
+		if (csvPath == null || csvPath.isEmpty()) {
+			return;
+		}
+
+		try (FileInputStream fis = new FileInputStream(csvPath);
+				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
+			String line ="";
+			while ((line = br.readLine()) != null) {
+				eigentuemerList.add(line);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
 	
 	public List<String> getBetreiber(){
 		return betreiberList;
+	}	
+	
+	public List<String> getEigentuemer(){
+		return eigentuemerList;
 	}
 }

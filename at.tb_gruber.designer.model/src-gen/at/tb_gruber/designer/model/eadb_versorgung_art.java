@@ -76,7 +76,37 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FV(5, "FV", "FV");
+	FV(5, "FV", "FV"),
+
+	/**
+	 * The '<em><b>G</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #G_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	G(6, "G", "G"),
+
+	/**
+	 * The '<em><b>UR</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UR(7, "UR", "UR"),
+
+	/**
+	 * The '<em><b>ESP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ESP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ESP(8, "ESP", "ESP");
 
 	/**
 	 * The '<em><b>ÜGS</b></em>' literal value.
@@ -145,12 +175,46 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 	public static final int FV_VALUE = 5;
 
 	/**
+	 * The '<em><b>G</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #G
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int G_VALUE = 6;
+
+	/**
+	 * The '<em><b>UR</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UR
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UR_VALUE = 7;
+
+	/**
+	 * The '<em><b>ESP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ESP
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ESP_VALUE = 8;
+
+	/**
 	 * An array of all the '<em><b>Eadb Versorgung Art</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Eadb_Versorgung_Art[] VALUES_ARRAY = new Eadb_Versorgung_Art[] { ÜGS, VK, IF, IG, WHZ, FV, };
+	private static final Eadb_Versorgung_Art[] VALUES_ARRAY = new Eadb_Versorgung_Art[] { ÜGS, VK, IF, IG, WHZ, FV, G,
+			UR, ESP, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Eadb Versorgung Art</b></em>' enumerators.
@@ -218,6 +282,12 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 			return WHZ;
 		case FV_VALUE:
 			return FV;
+		case G_VALUE:
+			return G;
+		case UR_VALUE:
+			return UR;
+		case ESP_VALUE:
+			return ESP;
 		}
 		return null;
 	}

@@ -43,45 +43,11 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNrHauptversorgungPropertyDescriptor(object);
-			addNrReserveEinspeisungPropertyDescriptor(object);
 			addBeschreibungPropertyDescriptor(object);
 			addLangbeschreibungPropertyDescriptor(object);
 			addPostitionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Nr Hauptversorgung feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNrHauptversorgungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_Netzanschlusspunkt_nrHauptversorgung_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Netzanschlusspunkt_nrHauptversorgung_feature",
-						"_UI_Netzanschlusspunkt_type"),
-				ModelPackage.Literals.NETZANSCHLUSSPUNKT__NR_HAUPTVERSORGUNG, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Nr Reserve Einspeisung feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNrReserveEinspeisungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Netzanschlusspunkt_nrReserveEinspeisung_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_Netzanschlusspunkt_nrReserveEinspeisung_feature", "_UI_Netzanschlusspunkt_type"),
-						ModelPackage.Literals.NETZANSCHLUSSPUNKT__NR_RESERVE_EINSPEISUNG, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -161,7 +127,7 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Netzanschlusspunkt) object).getNrHauptversorgung();
+		String label = crop(((Netzanschlusspunkt) object).getBeschreibung());
 		return label == null || label.length() == 0 ? getString("_UI_Netzanschlusspunkt_type")
 				: getString("_UI_Netzanschlusspunkt_type") + " " + label;
 	}
@@ -178,8 +144,6 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Netzanschlusspunkt.class)) {
-		case ModelPackage.NETZANSCHLUSSPUNKT__NR_HAUPTVERSORGUNG:
-		case ModelPackage.NETZANSCHLUSSPUNKT__NR_RESERVE_EINSPEISUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:

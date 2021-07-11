@@ -36,7 +36,16 @@ public enum Umrichterfunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENERGIEERZEUGUNG(1, "Energieerzeugung", "Energieerzeugung");
+	ENERGIEERZEUGUNG(1, "Energieerzeugung", "Energieerzeugung"),
+	/**
+	 * The '<em><b>Sonstig</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #SONSTIG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SONSTIG(2, "Sonstig", "Sonstig");
 
 	/**
 	 * The '<em><b>Ersatzstromversorgung</b></em>' literal value.
@@ -61,13 +70,24 @@ public enum Umrichterfunktion implements Enumerator {
 	public static final int ENERGIEERZEUGUNG_VALUE = 1;
 
 	/**
+	 * The '<em><b>Sonstig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SONSTIG
+	 * @model name="Sonstig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SONSTIG_VALUE = 2;
+
+	/**
 	 * An array of all the '<em><b>Umrichterfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Umrichterfunktion[] VALUES_ARRAY = new Umrichterfunktion[] { ERSATZSTROMVERSORGUNG,
-			ENERGIEERZEUGUNG, };
+			ENERGIEERZEUGUNG, SONSTIG, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Umrichterfunktion</b></em>' enumerators.
@@ -127,6 +147,8 @@ public enum Umrichterfunktion implements Enumerator {
 			return ERSATZSTROMVERSORGUNG;
 		case ENERGIEERZEUGUNG_VALUE:
 			return ENERGIEERZEUGUNG;
+		case SONSTIG_VALUE:
+			return SONSTIG;
 		}
 		return null;
 	}

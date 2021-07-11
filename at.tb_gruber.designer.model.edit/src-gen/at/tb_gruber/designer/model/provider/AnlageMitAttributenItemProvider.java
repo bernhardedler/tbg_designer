@@ -46,11 +46,9 @@ public class AnlageMitAttributenItemProvider extends AnlageBaseItemProvider {
 
 			addNamePropertyDescriptor(object);
 			addAnlagennummerPropertyDescriptor(object);
-			addObjektteilPropertyDescriptor(object);
 			addEadbIdPropertyDescriptor(object);
 			addPrimaerspannungPropertyDescriptor(object);
 			addInObjektteilPropertyDescriptor(object);
-			addAnlagenIdImmoAssiPropertyDescriptor(object);
 			addEadbVersorgungArtPropertyDescriptor(object);
 			addVerteilerbezeichnungPropertyDescriptor(object);
 			addAbgangVTPropertyDescriptor(object);
@@ -89,22 +87,6 @@ public class AnlageMitAttributenItemProvider extends AnlageBaseItemProvider {
 				getString("_UI_PropertyDescriptor_description", "_UI_AnlageMitAttributen_anlagennummer_feature",
 						"_UI_AnlageMitAttributen_type"),
 				ModelPackage.Literals.ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Objektteil feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addObjektteilPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_AnlageMitAttributen_objektteil_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AnlageMitAttributen_objektteil_feature",
-						"_UI_AnlageMitAttributen_type"),
-				ModelPackage.Literals.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -154,22 +136,6 @@ public class AnlageMitAttributenItemProvider extends AnlageBaseItemProvider {
 						"_UI_AnlageMitAttributen_type"),
 				ModelPackage.Literals.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Anlagen Id Immo Assi feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAnlagenIdImmoAssiPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_AnlageMitAttributen_anlagenIdImmoAssi_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_AnlageMitAttributen_anlagenIdImmoAssi_feature", "_UI_AnlageMitAttributen_type"),
-						ModelPackage.Literals.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -300,11 +266,9 @@ public class AnlageMitAttributenItemProvider extends AnlageBaseItemProvider {
 		switch (notification.getFeatureID(AnlageMitAttributen.class)) {
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__NAME:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER:
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__OBJEKTTEIL:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_ID:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL:
-		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ANLAGEN_ID_IMMO_ASSI:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG:
 		case ModelPackage.ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT:

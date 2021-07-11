@@ -23,7 +23,7 @@ package at.tb_gruber.designer.model;
 public interface Trafo extends SelbststAnlage {
 	/**
 	 * Returns the value of the '<em><b>Sekundaerspannung</b></em>' attribute.
-	 * The default value is <code>"NSP_Un_bis_inkl_1kV_50Hz_AC"</code>.
+	 * The default value is <code>"NSP Un bis inkl 1kV 50Hz AC"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -31,7 +31,7 @@ public interface Trafo extends SelbststAnlage {
 	 * @see at.tb_gruber.designer.model.Spannungsarttype
 	 * @see #setSekundaerspannung(Spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Sekundaerspannung()
-	 * @model default="NSP_Un_bis_inkl_1kV_50Hz_AC"
+	 * @model default="NSP Un bis inkl 1kV 50Hz AC"
 	 * @generated
 	 */
 	Spannungsarttype getSekundaerspannung();

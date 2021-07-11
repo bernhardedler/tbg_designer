@@ -326,6 +326,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Eigentuemer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EigentuemerItemProvider eigentuemerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Eigentuemer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEigentuemerAdapter() {
+		if (eigentuemerItemProvider == null) {
+			eigentuemerItemProvider = new EigentuemerItemProvider(this);
+		}
+
+		return eigentuemerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerMitZaehler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,26 +372,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher} instances.
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Energiespeicher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UmrichterMitEnergiespeicherItemProvider umrichterMitEnergiespeicherItemProvider;
+	protected EnergiespeicherItemProvider energiespeicherItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher}.
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Energiespeicher}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUmrichterMitEnergiespeicherAdapter() {
-		if (umrichterMitEnergiespeicherItemProvider == null) {
-			umrichterMitEnergiespeicherItemProvider = new UmrichterMitEnergiespeicherItemProvider(this);
+	public Adapter createEnergiespeicherAdapter() {
+		if (energiespeicherItemProvider == null) {
+			energiespeicherItemProvider = new EnergiespeicherItemProvider(this);
 		}
 
-		return umrichterMitEnergiespeicherItemProvider;
+		return energiespeicherItemProvider;
 	}
 
 	/**
@@ -590,8 +613,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			generatorItemProvider.dispose();
 		if (verteilerMitZaehlerItemProvider != null)
 			verteilerMitZaehlerItemProvider.dispose();
-		if (umrichterMitEnergiespeicherItemProvider != null)
-			umrichterMitEnergiespeicherItemProvider.dispose();
+		if (energiespeicherItemProvider != null)
+			energiespeicherItemProvider.dispose();
 		if (verteilerContainerItemProvider != null)
 			verteilerContainerItemProvider.dispose();
 		if (betreiberItemProvider != null)
@@ -602,6 +625,8 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			detailsItemProvider.dispose();
 		if (umrichterItemProvider != null)
 			umrichterItemProvider.dispose();
+		if (eigentuemerItemProvider != null)
+			eigentuemerItemProvider.dispose();
 	}
 
 }

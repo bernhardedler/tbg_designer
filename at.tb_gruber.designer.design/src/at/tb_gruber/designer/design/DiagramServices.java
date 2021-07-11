@@ -10,6 +10,7 @@ import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.AnlageMitAttributen;
 import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Generator;
 import at.tb_gruber.designer.model.LinienType;
@@ -19,7 +20,6 @@ import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Spannungsarttype;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Umrichter;
-import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
 import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VerteilerBase;
@@ -59,7 +59,7 @@ public class DiagramServices {
 		}
 
 		List<Integer> alleIds = project.getObjekt().stream().flatMap(obj -> obj.getAnlage().stream())
-				.flatMap(anl -> anl.getVerbindungNach().stream()).map(ver -> ver.getNr()).collect(Collectors.toList());
+				.flatMap(anl -> anl.getVerbindungNach().stream()).map(Verbindung::getNr).collect(Collectors.toList());
 		alleIds.sort((x, y) -> x.compareTo(y));
 
 		Integer[] alleIdsArray = new Integer[alleIds.size()];
@@ -78,6 +78,8 @@ public class DiagramServices {
 			return target.equals(((Verbindung) self).getPrimaerspannung().getValue());
 		} else if (self instanceof AnlageMitAttributen) {
 			return target.equals(((AnlageMitAttributen) self).getPrimaerspannung().getValue());
+		} else if (self instanceof VerteilerContainer) {
+			return target.equals(((VerteilerContainer) self).getPrimaerspannung().getValue());
 		}
 		return false;
 	}
@@ -212,6 +214,13 @@ public class DiagramServices {
 
 		return props.getBetreiber();
 	}
+	
+
+	public List<String> getAllEigentuemer(EObject self) {
+		ensurePropsInitialized();
+
+		return props.getEigentuemer();
+	}
 
 	public Boolean isSolid(EObject self) {
 		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.HAUPTVERSORGUNG);
@@ -233,17 +242,17 @@ public class DiagramServices {
 	public String createDetailsText(EObject self) {
 		if (self.eContainer() instanceof Umrichter) {
 			return ((Umrichter) self.eContainer()).getNennleistung();
-		} else if (self.eContainer() instanceof UmrichterMitEnergiespeicher) {
-			UmrichterMitEnergiespeicher uresp = (UmrichterMitEnergiespeicher) self.eContainer();
-			return uresp.getNennleistung() + "\n \n \n \n" + uresp.getAutonomiezeit();
+		} else if (self.eContainer() instanceof Energiespeicher) {
+			Energiespeicher esp = (Energiespeicher) self.eContainer();
+			return esp.getAutonomiezeit();
 		} else if (self.eContainer() instanceof Trafo) {
 			Trafo trafo = (Trafo) self.eContainer();
 			return trafo.getPrimaerspannung() + "/" + trafo.getSekundaerspannung() + "\n\n" + trafo.getTrafoKva();
 		} else if (self.eContainer() instanceof Generator) {
 			Generator gen = (Generator) self.eContainer();
-			return gen.getPrimaerspannung() + "\n\n" + gen.getElektrischeLeistung();
+			return gen.getPrimaerspannung() + "\n\n" + gen.getErzeugteEnergie() + "\n" + gen.getElektrischeLeistung();
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
-			return Optional.ofNullable(getNapForVerteiler(self)).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
+			return ((VerteilerMitZaehler)self.eContainer()).getNrHauptversorgung();
 		}
 
 		return "";
@@ -253,11 +262,23 @@ public class DiagramServices {
 		if (self instanceof Versorgungsknoten) {
 			return ((Versorgungsknoten) self).getNetzanschlusspunkt();
 		} else if (self instanceof VerteilerBase) {
-			return ((VerteilerBase) self).getNetzanschlusspunkt();
+			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).orElse(((VerteilerContainer)((VerteilerBase) self).eContainer()).getNetzanschlusspunkt());
 		} else if (self instanceof VerteilerContainer) {
 			return ((VerteilerContainer) self).getNetzanschlusspunkt();
 		}
 		return null;
 	}
 
+
+	public Boolean isVerteilerContainer(EObject self) {
+		return self instanceof VerteilerContainer;
+	}
+	
+	public Boolean isVerteilerBase(EObject self) {
+		return self instanceof VerteilerBase;
+	}
+	
+	public Boolean isVerteilerContainerNap(EObject self) {
+		return self instanceof Netzanschlusspunkt && ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
+	}
 }

@@ -46,6 +46,7 @@ public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvi
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addPrimaerspannungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -64,6 +65,22 @@ public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvi
 								"_UI_VerteilerContainer_type"),
 						ModelPackage.Literals.VERTEILER_CONTAINER__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Primaerspannung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPrimaerspannungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_VerteilerContainer_primaerspannung_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_VerteilerContainer_primaerspannung_feature",
+						"_UI_VerteilerContainer_type"),
+				ModelPackage.Literals.VERTEILER_CONTAINER__PRIMAERSPANNUNG, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -144,6 +161,7 @@ public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvi
 
 		switch (notification.getFeatureID(VerteilerContainer.class)) {
 		case ModelPackage.VERTEILER_CONTAINER__NAME:
+		case ModelPackage.VERTEILER_CONTAINER__PRIMAERSPANNUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:

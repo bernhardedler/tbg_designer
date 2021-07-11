@@ -184,19 +184,6 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.UMRICHTER_BASE: {
-			UmrichterBase umrichterBase = (UmrichterBase) theEObject;
-			T result = caseUmrichterBase(umrichterBase);
-			if (result == null)
-				result = caseSelbststAnlage(umrichterBase);
-			if (result == null)
-				result = caseAnlageMitAttributen(umrichterBase);
-			if (result == null)
-				result = caseAnlageBase(umrichterBase);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case ModelPackage.VERTEILER_MIT_ZAEHLER: {
 			VerteilerMitZaehler verteilerMitZaehler = (VerteilerMitZaehler) theEObject;
 			T result = caseVerteilerMitZaehler(verteilerMitZaehler);
@@ -210,17 +197,15 @@ public class ModelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER: {
-			UmrichterMitEnergiespeicher umrichterMitEnergiespeicher = (UmrichterMitEnergiespeicher) theEObject;
-			T result = caseUmrichterMitEnergiespeicher(umrichterMitEnergiespeicher);
+		case ModelPackage.ENERGIESPEICHER: {
+			Energiespeicher energiespeicher = (Energiespeicher) theEObject;
+			T result = caseEnergiespeicher(energiespeicher);
 			if (result == null)
-				result = caseUmrichterBase(umrichterMitEnergiespeicher);
+				result = caseSelbststAnlage(energiespeicher);
 			if (result == null)
-				result = caseSelbststAnlage(umrichterMitEnergiespeicher);
+				result = caseAnlageMitAttributen(energiespeicher);
 			if (result == null)
-				result = caseAnlageMitAttributen(umrichterMitEnergiespeicher);
-			if (result == null)
-				result = caseAnlageBase(umrichterMitEnergiespeicher);
+				result = caseAnlageBase(energiespeicher);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -278,8 +263,6 @@ public class ModelSwitch<T> extends Switch<T> {
 			Umrichter umrichter = (Umrichter) theEObject;
 			T result = caseUmrichter(umrichter);
 			if (result == null)
-				result = caseUmrichterBase(umrichter);
-			if (result == null)
 				result = caseSelbststAnlage(umrichter);
 			if (result == null)
 				result = caseAnlageMitAttributen(umrichter);
@@ -301,6 +284,13 @@ public class ModelSwitch<T> extends Switch<T> {
 			T result = caseAnlageOhneAttribute(anlageOhneAttribute);
 			if (result == null)
 				result = caseAnlageBase(anlageOhneAttribute);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.EIGENTUEMER: {
+			Eigentuemer eigentuemer = (Eigentuemer) theEObject;
+			T result = caseEigentuemer(eigentuemer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -491,66 +481,6 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Umrichter Base</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Umrichter Base</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUmrichterBase(UmrichterBase object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Umrichter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Umrichter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUmrichter(Umrichter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Anlage Base</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Anlage Base</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAnlageBase(AnlageBase object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Anlage Ohne Attribute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Anlage Ohne Attribute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAnlageOhneAttribute(AnlageOhneAttribute object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Verteiler Mit Zaehler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -566,17 +496,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Umrichter Mit Energiespeicher</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Energiespeicher</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Umrichter Mit Energiespeicher</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Energiespeicher</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUmrichterMitEnergiespeicher(UmrichterMitEnergiespeicher object) {
+	public T caseEnergiespeicher(Energiespeicher object) {
 		return null;
 	}
 
@@ -652,6 +582,66 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDetails(Details object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Umrichter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Umrichter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUmrichter(Umrichter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anlage Base</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anlage Base</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnlageBase(AnlageBase object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anlage Ohne Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anlage Ohne Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnlageOhneAttribute(AnlageOhneAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Eigentuemer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Eigentuemer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEigentuemer(Eigentuemer object) {
 		return null;
 	}
 

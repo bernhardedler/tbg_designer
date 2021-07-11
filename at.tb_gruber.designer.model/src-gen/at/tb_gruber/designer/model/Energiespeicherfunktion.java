@@ -26,7 +26,16 @@ public enum Energiespeicherfunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BATTERIE(0, "Batterie", "Batterie");
+	BATTERIE(0, "Batterie", "Batterie"),
+	/**
+	 * The '<em><b>Sonstig</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #SONSTIG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SONSTIG(1, "Sonstig", "Sonstig");
 
 	/**
 	 * The '<em><b>Batterie</b></em>' literal value.
@@ -40,12 +49,23 @@ public enum Energiespeicherfunktion implements Enumerator {
 	public static final int BATTERIE_VALUE = 0;
 
 	/**
+	 * The '<em><b>Sonstig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SONSTIG
+	 * @model name="Sonstig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SONSTIG_VALUE = 1;
+
+	/**
 	 * An array of all the '<em><b>Energiespeicherfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Energiespeicherfunktion[] VALUES_ARRAY = new Energiespeicherfunktion[] { BATTERIE, };
+	private static final Energiespeicherfunktion[] VALUES_ARRAY = new Energiespeicherfunktion[] { BATTERIE, SONSTIG, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Energiespeicherfunktion</b></em>' enumerators.
@@ -104,6 +124,8 @@ public enum Energiespeicherfunktion implements Enumerator {
 		switch (value) {
 		case BATTERIE_VALUE:
 			return BATTERIE;
+		case SONSTIG_VALUE:
+			return SONSTIG;
 		}
 		return null;
 	}

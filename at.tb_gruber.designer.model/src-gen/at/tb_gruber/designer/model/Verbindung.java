@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabeltype <em>Kabeltype</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getArgusrelevant <em>Argusrelevant</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Verbindung#getLinientype <em>Linientype</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Verbindung#getKabellaenge <em>Kabellaenge</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung()
@@ -53,7 +54,7 @@ public interface Verbindung extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Primaerspannung</b></em>' attribute.
-	 * The default value is <code>"NSP_Un_bis_inkl_1kV_50Hz_AC"</code>.
+	 * The default value is <code>"NSP Un bis inkl 1kV 50Hz AC"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,7 +62,7 @@ public interface Verbindung extends EObject {
 	 * @see at.tb_gruber.designer.model.Spannungsarttype
 	 * @see #setPrimaerspannung(Spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Primaerspannung()
-	 * @model default="NSP_Un_bis_inkl_1kV_50Hz_AC"
+	 * @model default="NSP Un bis inkl 1kV 50Hz AC"
 	 * @generated
 	 */
 	Spannungsarttype getPrimaerspannung();
@@ -236,5 +237,27 @@ public interface Verbindung extends EObject {
 	 * @generated
 	 */
 	void setLinientype(LinienType value);
+
+	/**
+	 * Returns the value of the '<em><b>Kabellaenge</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Kabellaenge</em>' attribute.
+	 * @see #setKabellaenge(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerbindung_Kabellaenge()
+	 * @model
+	 * @generated
+	 */
+	String getKabellaenge();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Verbindung#getKabellaenge <em>Kabellaenge</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Kabellaenge</em>' attribute.
+	 * @see #getKabellaenge()
+	 * @generated
+	 */
+	void setKabellaenge(String value);
 
 } // Verbindung

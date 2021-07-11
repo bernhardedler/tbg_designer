@@ -16,6 +16,7 @@ import at.tb_gruber.designer.model.Verbindung;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
+import at.tb_gruber.designer.model.VerteilerMitZaehler;
 
 /**
  * The services class used by VSM.
@@ -46,24 +47,16 @@ public class TableServices {
 	}
 	
 	public String getZpNrHaupt(EObject self) {
-		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
-		} else if (self instanceof VerteilerBase) {
-			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
-		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrHauptversorgung).orElse("");
+		if (self instanceof VerteilerMitZaehler) {
+			return ((VerteilerMitZaehler)self).getNrHauptversorgung();
 		} else {
 			return "";
 		}
 	}
 
 	public String getZpNrReserveEinsp(EObject self) {
-		if (self instanceof VerteilerContainer) {
-			return Optional.ofNullable(((VerteilerContainer) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
-		} else if (self instanceof VerteilerBase) {
-			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
-		} else if (self instanceof Versorgungsknoten) {
-			return Optional.ofNullable(((Versorgungsknoten) self).getNetzanschlusspunkt()).map(Netzanschlusspunkt::getNrReserveEinspeisung).orElse("");
+		if (self instanceof VerteilerMitZaehler) {
+			return ((VerteilerMitZaehler)self).getNrReserveEinspeisung();
 		} else {
 			return "";
 		}

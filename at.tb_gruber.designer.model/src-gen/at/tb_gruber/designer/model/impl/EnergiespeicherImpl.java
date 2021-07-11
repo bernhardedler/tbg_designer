@@ -2,10 +2,10 @@
  */
 package at.tb_gruber.designer.model.impl;
 
+import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.Energiespeicherart;
 import at.tb_gruber.designer.model.Energiespeicherfunktion;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,21 +15,22 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Umrichter Mit Energiespeicher</b></em>'.
+ * An implementation of the model object '<em><b>Energiespeicher</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl#getEnergiespeicherfunktion <em>Energiespeicherfunktion</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl#getEnergiespeicherart <em>Energiespeicherart</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl#getAutonomiezeit <em>Autonomiezeit</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.UmrichterMitEnergiespeicherImpl#getKapazitaet <em>Kapazitaet</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl#getEnergiespeicherfunktion <em>Energiespeicherfunktion</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl#getFunktionSonstig <em>Funktion Sonstig</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl#getEnergiespeicherart <em>Energiespeicherart</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl#getKapazitaet <em>Kapazitaet</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl#getAutonomiezeit <em>Autonomiezeit</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implements UmrichterMitEnergiespeicher {
+public class EnergiespeicherImpl extends SelbststAnlageImpl implements Energiespeicher {
 	/**
 	 * The default value of the '{@link #getEnergiespeicherfunktion() <em>Energiespeicherfunktion</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,6 +50,26 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	 * @ordered
 	 */
 	protected Energiespeicherfunktion energiespeicherfunktion = ENERGIESPEICHERFUNKTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFunktionSonstig() <em>Funktion Sonstig</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunktionSonstig()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FUNKTION_SONSTIG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFunktionSonstig() <em>Funktion Sonstig</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunktionSonstig()
+	 * @generated
+	 * @ordered
+	 */
+	protected String funktionSonstig = FUNKTION_SONSTIG_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEnergiespeicherart() <em>Energiespeicherart</em>}' attribute.
@@ -71,26 +92,6 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	protected Energiespeicherart energiespeicherart = ENERGIESPEICHERART_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAutonomiezeit() <em>Autonomiezeit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAutonomiezeit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String AUTONOMIEZEIT_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getAutonomiezeit() <em>Autonomiezeit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAutonomiezeit()
-	 * @generated
-	 * @ordered
-	 */
-	protected String autonomiezeit = AUTONOMIEZEIT_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getKapazitaet() <em>Kapazitaet</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,11 +112,31 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	protected String kapazitaet = KAPAZITAET_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getAutonomiezeit() <em>Autonomiezeit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAutonomiezeit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTONOMIEZEIT_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getAutonomiezeit() <em>Autonomiezeit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAutonomiezeit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String autonomiezeit = AUTONOMIEZEIT_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UmrichterMitEnergiespeicherImpl() {
+	protected EnergiespeicherImpl() {
 		super();
 	}
 
@@ -126,7 +147,7 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.UMRICHTER_MIT_ENERGIESPEICHER;
+		return ModelPackage.Literals.ENERGIESPEICHER;
 	}
 
 	/**
@@ -150,9 +171,8 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 		energiespeicherfunktion = newEnergiespeicherfunktion == null ? ENERGIESPEICHERFUNKTION_EDEFAULT
 				: newEnergiespeicherfunktion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION, oldEnergiespeicherfunktion,
-					energiespeicherfunktion));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION,
+					oldEnergiespeicherfunktion, energiespeicherfunktion));
 	}
 
 	/**
@@ -175,9 +195,8 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 		Energiespeicherart oldEnergiespeicherart = energiespeicherart;
 		energiespeicherart = newEnergiespeicherart == null ? ENERGIESPEICHERART_EDEFAULT : newEnergiespeicherart;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART, oldEnergiespeicherart,
-					energiespeicherart));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERART,
+					oldEnergiespeicherart, energiespeicherart));
 	}
 
 	/**
@@ -200,8 +219,8 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 		String oldAutonomiezeit = autonomiezeit;
 		autonomiezeit = newAutonomiezeit;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT, oldAutonomiezeit, autonomiezeit));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ENERGIESPEICHER__AUTONOMIEZEIT,
+					oldAutonomiezeit, autonomiezeit));
 	}
 
 	/**
@@ -224,8 +243,32 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 		String oldKapazitaet = kapazitaet;
 		kapazitaet = newKapazitaet;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET, oldKapazitaet, kapazitaet));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ENERGIESPEICHER__KAPAZITAET,
+					oldKapazitaet, kapazitaet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFunktionSonstig() {
+		return funktionSonstig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFunktionSonstig(String newFunktionSonstig) {
+		String oldFunktionSonstig = funktionSonstig;
+		funktionSonstig = newFunktionSonstig;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ENERGIESPEICHER__FUNKTION_SONSTIG,
+					oldFunktionSonstig, funktionSonstig));
 	}
 
 	/**
@@ -236,14 +279,16 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
 			return getEnergiespeicherfunktion();
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART:
+		case ModelPackage.ENERGIESPEICHER__FUNKTION_SONSTIG:
+			return getFunktionSonstig();
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERART:
 			return getEnergiespeicherart();
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT:
-			return getAutonomiezeit();
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET:
+		case ModelPackage.ENERGIESPEICHER__KAPAZITAET:
 			return getKapazitaet();
+		case ModelPackage.ENERGIESPEICHER__AUTONOMIEZEIT:
+			return getAutonomiezeit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -256,17 +301,20 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
 			setEnergiespeicherfunktion((Energiespeicherfunktion) newValue);
 			return;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART:
+		case ModelPackage.ENERGIESPEICHER__FUNKTION_SONSTIG:
+			setFunktionSonstig((String) newValue);
+			return;
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERART:
 			setEnergiespeicherart((Energiespeicherart) newValue);
 			return;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT:
-			setAutonomiezeit((String) newValue);
-			return;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET:
+		case ModelPackage.ENERGIESPEICHER__KAPAZITAET:
 			setKapazitaet((String) newValue);
+			return;
+		case ModelPackage.ENERGIESPEICHER__AUTONOMIEZEIT:
+			setAutonomiezeit((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,17 +328,20 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
 			setEnergiespeicherfunktion(ENERGIESPEICHERFUNKTION_EDEFAULT);
 			return;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART:
+		case ModelPackage.ENERGIESPEICHER__FUNKTION_SONSTIG:
+			setFunktionSonstig(FUNKTION_SONSTIG_EDEFAULT);
+			return;
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERART:
 			setEnergiespeicherart(ENERGIESPEICHERART_EDEFAULT);
 			return;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT:
-			setAutonomiezeit(AUTONOMIEZEIT_EDEFAULT);
-			return;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET:
+		case ModelPackage.ENERGIESPEICHER__KAPAZITAET:
 			setKapazitaet(KAPAZITAET_EDEFAULT);
+			return;
+		case ModelPackage.ENERGIESPEICHER__AUTONOMIEZEIT:
+			setAutonomiezeit(AUTONOMIEZEIT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -304,15 +355,18 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
 			return energiespeicherfunktion != ENERGIESPEICHERFUNKTION_EDEFAULT;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART:
+		case ModelPackage.ENERGIESPEICHER__FUNKTION_SONSTIG:
+			return FUNKTION_SONSTIG_EDEFAULT == null ? funktionSonstig != null
+					: !FUNKTION_SONSTIG_EDEFAULT.equals(funktionSonstig);
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERART:
 			return energiespeicherart != ENERGIESPEICHERART_EDEFAULT;
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT:
+		case ModelPackage.ENERGIESPEICHER__KAPAZITAET:
+			return KAPAZITAET_EDEFAULT == null ? kapazitaet != null : !KAPAZITAET_EDEFAULT.equals(kapazitaet);
+		case ModelPackage.ENERGIESPEICHER__AUTONOMIEZEIT:
 			return AUTONOMIEZEIT_EDEFAULT == null ? autonomiezeit != null
 					: !AUTONOMIEZEIT_EDEFAULT.equals(autonomiezeit);
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET:
-			return KAPAZITAET_EDEFAULT == null ? kapazitaet != null : !KAPAZITAET_EDEFAULT.equals(kapazitaet);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -330,14 +384,16 @@ public class UmrichterMitEnergiespeicherImpl extends UmrichterBaseImpl implement
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (energiespeicherfunktion: ");
 		result.append(energiespeicherfunktion);
+		result.append(", funktionSonstig: ");
+		result.append(funktionSonstig);
 		result.append(", energiespeicherart: ");
 		result.append(energiespeicherart);
-		result.append(", autonomiezeit: ");
-		result.append(autonomiezeit);
 		result.append(", kapazitaet: ");
 		result.append(kapazitaet);
+		result.append(", autonomiezeit: ");
+		result.append(autonomiezeit);
 		result.append(')');
 		return result.toString();
 	}
 
-} //UmrichterMitEnergiespeicherImpl
+} //EnergiespeicherImpl

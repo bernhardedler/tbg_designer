@@ -208,6 +208,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.OBJEKT__ANLAGE);
+			childrenFeatures.add(ModelPackage.Literals.OBJEKT__EIGENTUEMER);
 		}
 		return childrenFeatures;
 	}
@@ -282,6 +283,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.OBJEKT__ANLAGE:
+		case ModelPackage.OBJEKT__EIGENTUEMER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -318,7 +320,7 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 				ModelFactory.eINSTANCE.createVerteilerMitZaehler()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
-				ModelFactory.eINSTANCE.createUmrichterMitEnergiespeicher()));
+				ModelFactory.eINSTANCE.createEnergiespeicher()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVerteilerContainer()));
@@ -328,6 +330,9 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(
 				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createUmrichter()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__EIGENTUEMER,
+				ModelFactory.eINSTANCE.createEigentuemer()));
 	}
 
 	/**

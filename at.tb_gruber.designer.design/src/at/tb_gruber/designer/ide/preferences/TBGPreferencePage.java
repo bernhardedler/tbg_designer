@@ -13,6 +13,7 @@ public class TBGPreferencePage extends FieldEditorPreferencePage implements IWor
 		public static final String PROPERTY_ID_VERKEHRSSTATIONEN_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.vs";
 		public static final String PROPERTY_ID_GEBAEUDE_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.gebaeude";
 		public static final String PROPERTY_ID_BETREIBER_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.betreiber";
+		public static final String PROPERTY_ID_EIGENTUEMER_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.eigentuemer";
 		public static final String PREFERENCE_SCOPE_IDENTIFIER = "at.tb_gruber.designer.ide.preferences.page";
 	
 		// https://www.vogella.com/tutorials/EclipsePreferences/article.html
@@ -33,6 +34,9 @@ public class TBGPreferencePage extends FieldEditorPreferencePage implements IWor
 	        FileFieldEditor betreiberDatei = new FileFieldEditor(PROPERTY_ID_BETREIBER_DATEI, "&Betreiber:", getFieldEditorParent());
 	        betreiberDatei.setFileExtensions(new String[] {"*.csv"});
 	        addField(betreiberDatei);
+	        FileFieldEditor eigentuemerDatei = new FileFieldEditor(PROPERTY_ID_EIGENTUEMER_DATEI, "&Eigentümer:", getFieldEditorParent());
+	        eigentuemerDatei.setFileExtensions(new String[] {"*.csv"});
+	        addField(eigentuemerDatei);
 	    }
 
 	    @Override

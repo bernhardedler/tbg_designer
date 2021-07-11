@@ -3,6 +3,7 @@
 package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.AnlageBase;
+import at.tb_gruber.designer.model.Eigentuemer;
 import at.tb_gruber.designer.model.Externe_Datenquelle;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getExterneQuelle <em>Externe Quelle</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getOrt_adresse <em>Ort adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getGebaeudeart <em>Gebaeudeart</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.ObjektImpl#getEigentuemer <em>Eigentuemer</em>}</li>
  * </ul>
  *
  * @generated
@@ -215,6 +217,16 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @ordered
 	 */
 	protected String gebaeudeart = GEBAEUDEART_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEigentuemer() <em>Eigentuemer</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEigentuemer()
+	 * @generated
+	 * @ordered
+	 */
+	protected Eigentuemer eigentuemer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -444,10 +456,64 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 	 * @generated
 	 */
 	@Override
+	public Eigentuemer getEigentuemer() {
+		return eigentuemer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEigentuemer(Eigentuemer newEigentuemer, NotificationChain msgs) {
+		Eigentuemer oldEigentuemer = eigentuemer;
+		eigentuemer = newEigentuemer;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ModelPackage.OBJEKT__EIGENTUEMER, oldEigentuemer, newEigentuemer);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEigentuemer(Eigentuemer newEigentuemer) {
+		if (newEigentuemer != eigentuemer) {
+			NotificationChain msgs = null;
+			if (eigentuemer != null)
+				msgs = ((InternalEObject) eigentuemer).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.OBJEKT__EIGENTUEMER, null, msgs);
+			if (newEigentuemer != null)
+				msgs = ((InternalEObject) newEigentuemer).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ModelPackage.OBJEKT__EIGENTUEMER, null, msgs);
+			msgs = basicSetEigentuemer(newEigentuemer, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJEKT__EIGENTUEMER, newEigentuemer,
+					newEigentuemer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.OBJEKT__ANLAGE:
 			return ((InternalEList<?>) getAnlage()).basicRemove(otherEnd, msgs);
+		case ModelPackage.OBJEKT__EIGENTUEMER:
+			return basicSetEigentuemer(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -478,6 +544,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return getOrt_adresse();
 		case ModelPackage.OBJEKT__GEBAEUDEART:
 			return getGebaeudeart();
+		case ModelPackage.OBJEKT__EIGENTUEMER:
+			return getEigentuemer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -519,6 +587,9 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__GEBAEUDEART:
 			setGebaeudeart((String) newValue);
 			return;
+		case ModelPackage.OBJEKT__EIGENTUEMER:
+			setEigentuemer((Eigentuemer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -558,6 +629,9 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 		case ModelPackage.OBJEKT__GEBAEUDEART:
 			setGebaeudeart(GEBAEUDEART_EDEFAULT);
 			return;
+		case ModelPackage.OBJEKT__EIGENTUEMER:
+			setEigentuemer((Eigentuemer) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -588,6 +662,8 @@ public class ObjektImpl extends MinimalEObjectImpl.Container implements Objekt {
 			return ORT_ADRESSE_EDEFAULT == null ? ort_adresse != null : !ORT_ADRESSE_EDEFAULT.equals(ort_adresse);
 		case ModelPackage.OBJEKT__GEBAEUDEART:
 			return GEBAEUDEART_EDEFAULT == null ? gebaeudeart != null : !GEBAEUDEART_EDEFAULT.equals(gebaeudeart);
+		case ModelPackage.OBJEKT__EIGENTUEMER:
+			return eigentuemer != null;
 		}
 		return super.eIsSet(featureID);
 	}

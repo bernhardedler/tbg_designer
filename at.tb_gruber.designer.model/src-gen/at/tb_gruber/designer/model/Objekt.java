@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getExterneQuelle <em>Externe Quelle</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getOrt_adresse <em>Ort adresse</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Objekt#getGebaeudeart <em>Gebaeudeart</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Objekt#getEigentuemer <em>Eigentuemer</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getObjekt()
@@ -227,5 +228,27 @@ public interface Objekt extends EObject {
 	 * @generated
 	 */
 	void setGebaeudeart(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Eigentuemer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Eigentuemer</em>' containment reference.
+	 * @see #setEigentuemer(Eigentuemer)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getObjekt_Eigentuemer()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Eigentuemer getEigentuemer();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Objekt#getEigentuemer <em>Eigentuemer</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Eigentuemer</em>' containment reference.
+	 * @see #getEigentuemer()
+	 * @generated
+	 */
+	void setEigentuemer(Eigentuemer value);
 
 } // Objekt

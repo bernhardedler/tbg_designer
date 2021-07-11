@@ -2,8 +2,8 @@
  */
 package at.tb_gruber.designer.model.provider;
 
+import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.ModelPackage;
-import at.tb_gruber.designer.model.UmrichterMitEnergiespeicher;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.UmrichterMitEnergiespeicher} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Energiespeicher} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemProvider {
+public class EnergiespeicherItemProvider extends SelbststAnlageItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UmrichterMitEnergiespeicherItemProvider(AdapterFactory adapterFactory) {
+	public EnergiespeicherItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,9 +45,10 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 			super.getPropertyDescriptors(object);
 
 			addEnergiespeicherfunktionPropertyDescriptor(object);
+			addFunktionSonstigPropertyDescriptor(object);
 			addEnergiespeicherartPropertyDescriptor(object);
-			addAutonomiezeitPropertyDescriptor(object);
 			addKapazitaetPropertyDescriptor(object);
+			addAutonomiezeitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -61,11 +62,10 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 	protected void addEnergiespeicherfunktionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_UmrichterMitEnergiespeicher_energiespeicherfunktion_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_UmrichterMitEnergiespeicher_energiespeicherfunktion_feature",
-						"_UI_UmrichterMitEnergiespeicher_type"),
-				ModelPackage.Literals.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION, true, false, false,
+				getString("_UI_Energiespeicher_energiespeicherfunktion_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Energiespeicher_energiespeicherfunktion_feature",
+						"_UI_Energiespeicher_type"),
+				ModelPackage.Literals.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -76,14 +76,13 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 	 * @generated
 	 */
 	protected void addEnergiespeicherartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UmrichterMitEnergiespeicher_energiespeicherart_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_UmrichterMitEnergiespeicher_energiespeicherart_feature",
-								"_UI_UmrichterMitEnergiespeicher_type"),
-						ModelPackage.Literals.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Energiespeicher_energiespeicherart_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Energiespeicher_energiespeicherart_feature",
+						"_UI_Energiespeicher_type"),
+				ModelPackage.Literals.ENERGIESPEICHER__ENERGIESPEICHERART, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -93,13 +92,13 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 	 * @generated
 	 */
 	protected void addAutonomiezeitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_UmrichterMitEnergiespeicher_autonomiezeit_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_UmrichterMitEnergiespeicher_autonomiezeit_feature",
-						"_UI_UmrichterMitEnergiespeicher_type"),
-				ModelPackage.Literals.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Energiespeicher_autonomiezeit_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Energiespeicher_autonomiezeit_feature",
+								"_UI_Energiespeicher_type"),
+						ModelPackage.Literals.ENERGIESPEICHER__AUTONOMIEZEIT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -109,24 +108,40 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 	 * @generated
 	 */
 	protected void addKapazitaetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_UmrichterMitEnergiespeicher_kapazitaet_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_UmrichterMitEnergiespeicher_kapazitaet_feature",
-						"_UI_UmrichterMitEnergiespeicher_type"),
-				ModelPackage.Literals.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Energiespeicher_kapazitaet_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Energiespeicher_kapazitaet_feature",
+								"_UI_Energiespeicher_type"),
+						ModelPackage.Literals.ENERGIESPEICHER__KAPAZITAET, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns UmrichterMitEnergiespeicher.gif.
+	 * This adds a property descriptor for the Funktion Sonstig feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFunktionSonstigPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Energiespeicher_funktionSonstig_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Energiespeicher_funktionSonstig_feature",
+								"_UI_Energiespeicher_type"),
+						ModelPackage.Literals.ENERGIESPEICHER__FUNKTION_SONSTIG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This returns Energiespeicher.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/UmrichterMitEnergiespeicher"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Energiespeicher"));
 	}
 
 	/**
@@ -147,9 +162,9 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((UmrichterMitEnergiespeicher) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_UmrichterMitEnergiespeicher_type")
-				: getString("_UI_UmrichterMitEnergiespeicher_type") + " " + label;
+		String label = ((Energiespeicher) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Energiespeicher_type")
+				: getString("_UI_Energiespeicher_type") + " " + label;
 	}
 
 	/**
@@ -163,11 +178,12 @@ public class UmrichterMitEnergiespeicherItemProvider extends UmrichterBaseItemPr
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(UmrichterMitEnergiespeicher.class)) {
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__ENERGIESPEICHERART:
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__AUTONOMIEZEIT:
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER__KAPAZITAET:
+		switch (notification.getFeatureID(Energiespeicher.class)) {
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERFUNKTION:
+		case ModelPackage.ENERGIESPEICHER__FUNKTION_SONSTIG:
+		case ModelPackage.ENERGIESPEICHER__ENERGIESPEICHERART:
+		case ModelPackage.ENERGIESPEICHER__KAPAZITAET:
+		case ModelPackage.ENERGIESPEICHER__AUTONOMIEZEIT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

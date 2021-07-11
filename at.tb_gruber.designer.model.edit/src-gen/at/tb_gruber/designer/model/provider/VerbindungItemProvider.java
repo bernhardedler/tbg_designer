@@ -60,6 +60,7 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 			addKabeltypePropertyDescriptor(object);
 			addArgusrelevantPropertyDescriptor(object);
 			addLinientypePropertyDescriptor(object);
+			addKabellaengePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -207,6 +208,22 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
+	 * This adds a property descriptor for the Kabellaenge feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addKabellaengePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Verbindung_kabellaenge_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Verbindung_kabellaenge_feature",
+								"_UI_Verbindung_type"),
+						ModelPackage.Literals.VERBINDUNG__KABELLAENGE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Verbindung.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,6 +275,7 @@ public class VerbindungItemProvider extends ItemProviderAdapter implements IEdit
 		case ModelPackage.VERBINDUNG__KABELTYPE:
 		case ModelPackage.VERBINDUNG__ARGUSRELEVANT:
 		case ModelPackage.VERBINDUNG__LINIENTYPE:
+		case ModelPackage.VERBINDUNG__KABELLAENGE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

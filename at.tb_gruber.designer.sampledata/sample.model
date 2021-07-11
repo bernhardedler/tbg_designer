@@ -1,150 +1,153 @@
 <?xml version="1.0" encoding="ASCII"?>
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample">
   <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
       <betreiber name="EVU"/>
+      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
       <netzanschlusspunkt beschreibung="&#xdc;GS Abgang Schleifenkasten TST" postition="DANACH"/>
     </anlage>
   </objekt>
   <objekt name="Aufnahmegeb&#xe4;ude Bahnhof Muster">
-    <anlage xsi:type="tbg:VerteilerContainer" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;" versorgtVon="1">
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <verbindungNach nr="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.1/@anlage.1" ursprung="//@objekt.1/@anlage.0/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
-        <details />
+    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="1" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
+        <verbindungNach nr="1" ziel="//@objekt.1/@anlage.1" ursprung="//@objekt.1/@anlage.0/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
       </verteiler>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <verbindungNach nr="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.1/@anlage.2" ursprung="//@objekt.1/@anlage.0/@verteiler.1" linientype="Kundenanlage_&#xd6;BB"/>
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
+        <verbindungNach nr="1" ziel="//@objekt.1/@anlage.2" ursprung="//@objekt.1/@anlage.0/@verteiler.1" linientype="Kundenanlage_&#xd6;BB"/>
       </verteiler>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <verbindungNach nr="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.1/@anlage.3" ursprung="//@objekt.1/@anlage.0/@verteiler.2" linientype="Kundenanlage_&#xd6;BB"/>
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
+        <verbindungNach nr="1" ziel="//@objekt.1/@anlage.3" ursprung="//@objekt.1/@anlage.0/@verteiler.2" linientype="Kundenanlage_&#xd6;BB"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" name="VT Wohnung 1" anlagennummer="ET 01" versorgtVon="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" name="VT Wohnung 1" anlagennummer="ET 01">
       <betreiber name="Immo (ET)"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" name="VT Wohnung 2" anlagennummer="ET 02" versorgtVon="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" name="VT Wohnung 2" anlagennummer="ET 02">
       <betreiber name="Immo (ET)"/>
     </anlage>
-    <anlage xsi:type="tbg:Versorgungsknoten" name="Haupt-VT AG BF Muster" anlagennummer="VK 00" versorgtVon="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="2" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.1/@anlage.4" ursprung="//@objekt.1/@anlage.3" linientype="Kundenanlage_&#xd6;BB"/>
-      <verbindungNach nr="3" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.1/@anlage.3"/>
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="1" name="Haupt-VT AG BF Muster" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
+      <verbindungNach nr="2" ziel="//@objekt.1/@anlage.4" ursprung="//@objekt.1/@anlage.3" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="3" ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.1/@anlage.3"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" name="TK-VT" anlagennummer="ET 03" versorgtVon="2" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="2" name="TK-VT" anlagennummer="ET 03">
       <betreiber name="Betreiber"/>
     </anlage>
   </objekt>
   <objekt name="Verkehrsstation BF Muster" objektart="Verkehrsstation">
-    <anlage xsi:type="tbg:VerteilerContainer" name="Bahnhofs-VT" versorgtVon="3" >
+    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="3" name="Bahnhofs-VT">
       <betreiber name="EN"/>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <verbindungNach nr="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.2/@anlage.0/@verteiler.0" linientype="Kundenanlage Dritter"/>
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
+        <verbindungNach nr="1" ziel="//@objekt.2/@anlage.1" ursprung="//@objekt.2/@anlage.0/@verteiler.0" linientype="Kundenanlage Dritter"/>
       </verteiler>
-      <verteiler xsi:type="tbg:VerteilerOhneZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC"/>
+      <verteiler xsi:type="tbg:VerteilerOhneZaehler"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" name="B&#xe4;cker" anlagennummer="ET 00" versorgtVon="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" name="B&#xe4;cker" anlagennummer="ET 00">
       <betreiber name="KA Dritte "/>
     </anlage>
   </objekt>
   <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="4" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.4/@anlage.0/@netzanschlusspunkt" ursprung="//@objekt.3/@anlage.0"/>
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
       <betreiber name="EVU"/>
+      <verbindungNach nr="4" ziel="//@objekt.4/@anlage.0/@netzanschlusspunkt" ursprung="//@objekt.3/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="Aufnahmegeb&#xe4;ude 2 Bahnhof Muster">
-    <anlage xsi:type="tbg:VerteilerContainer" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;" versorgtVon="1" >
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <details />
+    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="1" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
       </verteiler>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
       </verteiler>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
       </verteiler>
-      <netzanschlusspunkt versorgtVon="4" beschreibung="NAP"/>
+      <netzanschlusspunkt versorgtVon="4" beschreibung="NAP 1"/>
     </anlage>
   </objekt>
   <objekt name="&#xd6;BB TG M&#xfc;llerdorf">
     <anlage xsi:type="tbg:VerteilerContainer" name="Schaltanlage TG M&#xfc;llerdorf">
       <betreiber name="EN"/>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="5">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
         <verbindungNach nr="1" ziel="//@objekt.5/@anlage.1" ursprung="//@objekt.5/@anlage.0/@verteiler.0"/>
-        <details />
         <netzanschlusspunkt beschreibung="Trennzelle nach Messzelle" postition="MITTE"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Trafo" name="Trafo 1" versorgtVon="1" sekundaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="6" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>
+    <anlage xsi:type="tbg:Trafo" versorgtVon="1" name="Trafo 1">
+      <details/>
       <betreiber name="EN"/>
-      <details />
+      <verbindungNach nr="6" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>
     </anlage>
-    <anlage xsi:type="tbg:VerteilerContainer" name="Haupt-VT TG M&#xfc;llerdorf" versorgtVon="8" >
+    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="8" name="Haupt-VT TG M&#xfc;llerdorf">
       <betreiber name="EN"/>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="6" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <verbindungNach nr="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.8/@anlage.0" ursprung="//@objekt.5/@anlage.2/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="6">
+        <details/>
+        <verbindungNach nr="1" ziel="//@objekt.8/@anlage.0" ursprung="//@objekt.5/@anlage.2/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
       </verteiler>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-        <details />
+      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+        <details/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Umrichter" name="PV_Wechselrichter" anlagennummer="UR 00" versorgtVon="7" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="8" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.5/@anlage.2" ursprung="//@objekt.5/@anlage.3"/>
+    <anlage xsi:type="tbg:Umrichter" versorgtVon="7" name="PV_Wechselrichter" anlagennummer="UR 00">
+      <details/>
       <betreiber name="EN"/>
-      <details />
+      <verbindungNach nr="8" ziel="//@objekt.5/@anlage.2" ursprung="//@objekt.5/@anlage.3"/>
     </anlage>
   </objekt>
   <objekt name="TST Netz N&#xd6; M&#xfc;llerdorf">
     <anlage xsi:type="tbg:Versorgungsknoten" name="Schaltanlage Netz N&#xf6;" anlagennummer="VK 00">
-      <verbindungNach nr="5" ziel="//@objekt.5/@anlage.0/@verteiler.0" ursprung="//@objekt.6/@anlage.0"/>
       <betreiber name="EVU"/>
     </anlage>
   </objekt>
   <objekt name="Dach TG M&#xfc;llerdorf">
     <anlage xsi:type="tbg:Generator" name="PV Generator" anlagennummer="G 01" primaerspannung="Un bis inkl 1,5kV DC">
-      <verbindungNach nr="7" primaerspannung="Un bis inkl 1,5kV DC" ziel="//@objekt.5/@anlage.3" ursprung="//@objekt.7/@anlage.0"/>
+      <details/>
       <betreiber name="EN"/>
-      <details />
+      <verbindungNach nr="7" primaerspannung="Un bis inkl 1,5kV DC" ziel="//@objekt.5/@anlage.3" ursprung="//@objekt.7/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="M&#xfc;llerdorf WHZ Schalthaus 1">
-    <anlage xsi:type="tbg:Versorgungsknoten" name="WHZ - VT" anlagennummer="VK 00" versorgtVon="1" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="1" name="WHZ - VT" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" name="WHZ-VT" anlagennummer="ET 00" versorgtVon="10" primaerspannung="NSP Un bis inkl 1kV 16,7Hz">
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="10" name="WHZ-VT" anlagennummer="ET 00" primaerspannung="NSP Un bis inkl 1kV 16,7Hz">
       <betreiber name="SAE (ET)"/>
     </anlage>
   </objekt>
   <objekt name="OL-Mast 37b">
     <anlage xsi:type="tbg:Versorgungsknoten" name="WHZ-1" anlagennummer="VK 00" primaerspannung="HSP Un 15kV 16,7Hz">
+      <betreiber name="SAE (ET)"/>
       <verbindungNach nr="9" primaerspannung="HSP Un 15kV 16,7Hz" ziel="//@objekt.9/@anlage.1" ursprung="//@objekt.9/@anlage.0"/>
-      <betreiber name="SAE (ET)"/>
     </anlage>
-    <anlage xsi:type="tbg:Trafo" name="WHZ1" versorgtVon="9" primaerspannung="HSP Un 15kV 16,7Hz" sekundaerspannung="NSP Un bis inkl 1kV 16,7Hz">
-      <verbindungNach nr="10" primaerspannung="NSP Un bis inkl 1kV 16,7Hz" ziel="//@objekt.8/@anlage.1" ursprung="//@objekt.9/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
+    <anlage xsi:type="tbg:Trafo" versorgtVon="9" name="WHZ1" primaerspannung="HSP Un 15kV 16,7Hz" sekundaerspannung="NSP Un bis inkl 1kV 16,7Hz">
+      <details/>
       <betreiber name="SAE (ET)"/>
-      <details />
+      <verbindungNach nr="10" primaerspannung="NSP Un bis inkl 1kV 16,7Hz" ziel="//@objekt.8/@anlage.1" ursprung="//@objekt.9/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
     </anlage>
   </objekt>
   <objekt name="&#xd6;BB SH Mustertunnelportal West">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" versorgtVon="13" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="11" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.10/@anlage.1" ursprung="//@objekt.10/@anlage.0" linientype="Kundenanlage_&#xd6;BB"/>
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="13" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
+      <verbindungNach nr="11" ziel="//@objekt.10/@anlage.1" ursprung="//@objekt.10/@anlage.0" linientype="Kundenanlage_&#xd6;BB"/>
     </anlage>
-    <anlage xsi:type="tbg:UmrichterMitEnergiespeicher" anlagennummer="ESP 00" versorgtVon="11" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="12" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.10/@anlage.2" ursprung="//@objekt.10/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
+    <anlage xsi:type="tbg:Umrichter" versorgtVon="11" anlagennummer="UR 00">
+      <details/>
       <betreiber name="SAE (ET)"/>
-      <details />
+      <verbindungNach nr="12" ziel="//@objekt.10/@anlage.2" ursprung="//@objekt.10/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" name="T-VT MT West" anlagennummer="ET 00" versorgtVon="12" primaerspannung="NSP Un bis inkl 1kV 50Hz AC">
-      <verbindungNach nr="13" primaerspannung="NSP Un bis inkl 1kV 50Hz AC" ziel="//@objekt.10/@anlage.0" ursprung="//@objekt.10/@anlage.2" linientype="Kundenanlage_&#xd6;BB"/>
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="12" name="T-VT MT West" anlagennummer="ET 00">
       <betreiber name="SAE (ET)"/>
+      <verbindungNach nr="13" ziel="//@objekt.10/@anlage.0" ursprung="//@objekt.10/@anlage.2" linientype="Kundenanlage_&#xd6;BB"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energiespeicher" anlagennummer="ESP 00" autonomiezeit="30 min">
+      <details/>
+      <betreiber name="Betreiber"/>
     </anlage>
   </objekt>
   <plankopf/>

@@ -13,11 +13,9 @@ package at.tb_gruber.designer.model;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getName <em>Name</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getAnlagennummer <em>Anlagennummer</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getObjektteil <em>Objektteil</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getEadbId <em>Eadb Id</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getPrimaerspannung <em>Primaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getInObjektteil <em>In Objektteil</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getEadbVersorgungArt <em>Eadb Versorgung Art</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getVerteilerbezeichnung <em>Verteilerbezeichnung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.AnlageMitAttributen#getAbgangVT <em>Abgang VT</em>}</li>
@@ -75,28 +73,6 @@ public interface AnlageMitAttributen extends AnlageBase {
 	void setAnlagennummer(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Objektteil</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Objektteil</em>' attribute.
-	 * @see #setObjektteil(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlageMitAttributen_Objektteil()
-	 * @model
-	 * @generated
-	 */
-	String getObjektteil();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.AnlageMitAttributen#getObjektteil <em>Objektteil</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Objektteil</em>' attribute.
-	 * @see #getObjektteil()
-	 * @generated
-	 */
-	void setObjektteil(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Eadb Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,7 +96,7 @@ public interface AnlageMitAttributen extends AnlageBase {
 
 	/**
 	 * Returns the value of the '<em><b>Primaerspannung</b></em>' attribute.
-	 * The default value is <code>"NSP_Un_bis_inkl_1kV_50Hz_AC"</code>.
+	 * The default value is <code>"NSP Un bis inkl 1kV 50Hz AC"</code>.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Spannungsarttype}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,7 +104,7 @@ public interface AnlageMitAttributen extends AnlageBase {
 	 * @see at.tb_gruber.designer.model.Spannungsarttype
 	 * @see #setPrimaerspannung(Spannungsarttype)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlageMitAttributen_Primaerspannung()
-	 * @model default="NSP_Un_bis_inkl_1kV_50Hz_AC"
+	 * @model default="NSP Un bis inkl 1kV 50Hz AC"
 	 * @generated
 	 */
 	Spannungsarttype getPrimaerspannung();
@@ -165,28 +141,6 @@ public interface AnlageMitAttributen extends AnlageBase {
 	 * @generated
 	 */
 	void setInObjektteil(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Anlagen Id Immo Assi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anlagen Id Immo Assi</em>' attribute.
-	 * @see #setAnlagenIdImmoAssi(String)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getAnlageMitAttributen_AnlagenIdImmoAssi()
-	 * @model
-	 * @generated
-	 */
-	String getAnlagenIdImmoAssi();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.AnlageMitAttributen#getAnlagenIdImmoAssi <em>Anlagen Id Immo Assi</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anlagen Id Immo Assi</em>' attribute.
-	 * @see #getAnlagenIdImmoAssi()
-	 * @generated
-	 */
-	void setAnlagenIdImmoAssi(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Eadb Versorgung Art</b></em>' attribute.

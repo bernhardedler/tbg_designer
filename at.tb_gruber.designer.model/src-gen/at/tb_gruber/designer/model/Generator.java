@@ -12,8 +12,9 @@ package at.tb_gruber.designer.model;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.Generator#getGeneratorfunktion <em>Generatorfunktion</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Generator#getErzeugteEnergie <em>Erzeugte Energie</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Generator#getFunktionSonstig <em>Funktion Sonstig</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Generator#getElektrischeLeistung <em>Elektrische Leistung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Generator#getErzeugteEnergie <em>Erzeugte Energie</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getGenerator()
@@ -89,5 +90,27 @@ public interface Generator extends SelbststAnlage {
 	 * @generated
 	 */
 	void setElektrischeLeistung(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Funktion Sonstig</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Funktion Sonstig</em>' attribute.
+	 * @see #setFunktionSonstig(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getGenerator_FunktionSonstig()
+	 * @model
+	 * @generated
+	 */
+	String getFunktionSonstig();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Generator#getFunktionSonstig <em>Funktion Sonstig</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Funktion Sonstig</em>' attribute.
+	 * @see #getFunktionSonstig()
+	 * @generated
+	 */
+	void setFunktionSonstig(String value);
 
 } // Generator

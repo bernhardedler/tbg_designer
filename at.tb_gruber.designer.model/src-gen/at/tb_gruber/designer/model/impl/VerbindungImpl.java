@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabeltype <em>Kabeltype</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getArgusrelevant <em>Argusrelevant</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getLinientype <em>Linientype</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerbindungImpl#getKabellaenge <em>Kabellaenge</em>}</li>
  * </ul>
  *
  * @generated
@@ -198,6 +199,26 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @ordered
 	 */
 	protected LinienType linientype = LINIENTYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getKabellaenge() <em>Kabellaenge</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKabellaenge()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String KABELLAENGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getKabellaenge() <em>Kabellaenge</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKabellaenge()
+	 * @generated
+	 * @ordered
+	 */
+	protected String kabellaenge = KABELLAENGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -474,6 +495,30 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 	 * @generated
 	 */
 	@Override
+	public String getKabellaenge() {
+		return kabellaenge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setKabellaenge(String newKabellaenge) {
+		String oldKabellaenge = kabellaenge;
+		kabellaenge = newKabellaenge;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERBINDUNG__KABELLAENGE, oldKabellaenge,
+					kabellaenge));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.VERBINDUNG__NR:
@@ -498,6 +543,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return getArgusrelevant();
 		case ModelPackage.VERBINDUNG__LINIENTYPE:
 			return getLinientype();
+		case ModelPackage.VERBINDUNG__KABELLAENGE:
+			return getKabellaenge();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -536,6 +583,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return;
 		case ModelPackage.VERBINDUNG__LINIENTYPE:
 			setLinientype((LinienType) newValue);
+			return;
+		case ModelPackage.VERBINDUNG__KABELLAENGE:
+			setKabellaenge((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -576,6 +626,9 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		case ModelPackage.VERBINDUNG__LINIENTYPE:
 			setLinientype(LINIENTYPE_EDEFAULT);
 			return;
+		case ModelPackage.VERBINDUNG__KABELLAENGE:
+			setKabellaenge(KABELLAENGE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -608,6 +661,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 			return argusrelevant != ARGUSRELEVANT_EDEFAULT;
 		case ModelPackage.VERBINDUNG__LINIENTYPE:
 			return linientype != LINIENTYPE_EDEFAULT;
+		case ModelPackage.VERBINDUNG__KABELLAENGE:
+			return KABELLAENGE_EDEFAULT == null ? kabellaenge != null : !KABELLAENGE_EDEFAULT.equals(kabellaenge);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -637,6 +692,8 @@ public class VerbindungImpl extends MinimalEObjectImpl.Container implements Verb
 		result.append(argusrelevant);
 		result.append(", linientype: ");
 		result.append(linientype);
+		result.append(", kabellaenge: ");
+		result.append(kabellaenge);
 		result.append(')');
 		return result.toString();
 	}

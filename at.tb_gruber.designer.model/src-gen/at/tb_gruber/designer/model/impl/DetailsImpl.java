@@ -4,7 +4,9 @@ package at.tb_gruber.designer.model.impl;
 
 import at.tb_gruber.designer.model.Details;
 import at.tb_gruber.designer.model.ModelPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**

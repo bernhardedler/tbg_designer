@@ -21,8 +21,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getGeneratorfunktion <em>Generatorfunktion</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getErzeugteEnergie <em>Erzeugte Energie</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getFunktionSonstig <em>Funktion Sonstig</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getElektrischeLeistung <em>Elektrische Leistung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getErzeugteEnergie <em>Erzeugte Energie</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,24 +50,24 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 	protected Generatorfunktion generatorfunktion = GENERATORFUNKTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getErzeugteEnergie() <em>Erzeugte Energie</em>}' attribute.
+	 * The default value of the '{@link #getFunktionSonstig() <em>Funktion Sonstig</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getErzeugteEnergie()
+	 * @see #getFunktionSonstig()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ERZEUGTE_ENERGIE_EDEFAULT = null;
+	protected static final String FUNKTION_SONSTIG_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getErzeugteEnergie() <em>Erzeugte Energie</em>}' attribute.
+	 * The cached value of the '{@link #getFunktionSonstig() <em>Funktion Sonstig</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getErzeugteEnergie()
+	 * @see #getFunktionSonstig()
 	 * @generated
 	 * @ordered
 	 */
-	protected String erzeugteEnergie = ERZEUGTE_ENERGIE_EDEFAULT;
+	protected String funktionSonstig = FUNKTION_SONSTIG_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getElektrischeLeistung() <em>Elektrische Leistung</em>}' attribute.
@@ -87,6 +88,26 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 	 * @ordered
 	 */
 	protected String elektrischeLeistung = ELEKTRISCHE_LEISTUNG_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getErzeugteEnergie() <em>Erzeugte Energie</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErzeugteEnergie()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ERZEUGTE_ENERGIE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getErzeugteEnergie() <em>Erzeugte Energie</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErzeugteEnergie()
+	 * @generated
+	 * @ordered
+	 */
+	protected String erzeugteEnergie = ERZEUGTE_ENERGIE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,14 +206,40 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 	 * @generated
 	 */
 	@Override
+	public String getFunktionSonstig() {
+		return funktionSonstig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFunktionSonstig(String newFunktionSonstig) {
+		String oldFunktionSonstig = funktionSonstig;
+		funktionSonstig = newFunktionSonstig;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.GENERATOR__FUNKTION_SONSTIG,
+					oldFunktionSonstig, funktionSonstig));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.GENERATOR__GENERATORFUNKTION:
 			return getGeneratorfunktion();
-		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
-			return getErzeugteEnergie();
+		case ModelPackage.GENERATOR__FUNKTION_SONSTIG:
+			return getFunktionSonstig();
 		case ModelPackage.GENERATOR__ELEKTRISCHE_LEISTUNG:
 			return getElektrischeLeistung();
+		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
+			return getErzeugteEnergie();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,11 +255,14 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 		case ModelPackage.GENERATOR__GENERATORFUNKTION:
 			setGeneratorfunktion((Generatorfunktion) newValue);
 			return;
-		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
-			setErzeugteEnergie((String) newValue);
+		case ModelPackage.GENERATOR__FUNKTION_SONSTIG:
+			setFunktionSonstig((String) newValue);
 			return;
 		case ModelPackage.GENERATOR__ELEKTRISCHE_LEISTUNG:
 			setElektrischeLeistung((String) newValue);
+			return;
+		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
+			setErzeugteEnergie((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,11 +279,14 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 		case ModelPackage.GENERATOR__GENERATORFUNKTION:
 			setGeneratorfunktion(GENERATORFUNKTION_EDEFAULT);
 			return;
-		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
-			setErzeugteEnergie(ERZEUGTE_ENERGIE_EDEFAULT);
+		case ModelPackage.GENERATOR__FUNKTION_SONSTIG:
+			setFunktionSonstig(FUNKTION_SONSTIG_EDEFAULT);
 			return;
 		case ModelPackage.GENERATOR__ELEKTRISCHE_LEISTUNG:
 			setElektrischeLeistung(ELEKTRISCHE_LEISTUNG_EDEFAULT);
+			return;
+		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
+			setErzeugteEnergie(ERZEUGTE_ENERGIE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -249,12 +302,15 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 		switch (featureID) {
 		case ModelPackage.GENERATOR__GENERATORFUNKTION:
 			return generatorfunktion != GENERATORFUNKTION_EDEFAULT;
-		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
-			return ERZEUGTE_ENERGIE_EDEFAULT == null ? erzeugteEnergie != null
-					: !ERZEUGTE_ENERGIE_EDEFAULT.equals(erzeugteEnergie);
+		case ModelPackage.GENERATOR__FUNKTION_SONSTIG:
+			return FUNKTION_SONSTIG_EDEFAULT == null ? funktionSonstig != null
+					: !FUNKTION_SONSTIG_EDEFAULT.equals(funktionSonstig);
 		case ModelPackage.GENERATOR__ELEKTRISCHE_LEISTUNG:
 			return ELEKTRISCHE_LEISTUNG_EDEFAULT == null ? elektrischeLeistung != null
 					: !ELEKTRISCHE_LEISTUNG_EDEFAULT.equals(elektrischeLeistung);
+		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
+			return ERZEUGTE_ENERGIE_EDEFAULT == null ? erzeugteEnergie != null
+					: !ERZEUGTE_ENERGIE_EDEFAULT.equals(erzeugteEnergie);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -272,10 +328,12 @@ public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (generatorfunktion: ");
 		result.append(generatorfunktion);
-		result.append(", erzeugteEnergie: ");
-		result.append(erzeugteEnergie);
+		result.append(", funktionSonstig: ");
+		result.append(funktionSonstig);
 		result.append(", elektrischeLeistung: ");
 		result.append(elektrischeLeistung);
+		result.append(", erzeugteEnergie: ");
+		result.append(erzeugteEnergie);
 		result.append(')');
 		return result.toString();
 	}

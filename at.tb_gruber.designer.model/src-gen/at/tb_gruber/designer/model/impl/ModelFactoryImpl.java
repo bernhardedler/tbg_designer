@@ -78,8 +78,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createGenerator();
 		case ModelPackage.VERTEILER_MIT_ZAEHLER:
 			return createVerteilerMitZaehler();
-		case ModelPackage.UMRICHTER_MIT_ENERGIESPEICHER:
-			return createUmrichterMitEnergiespeicher();
+		case ModelPackage.ENERGIESPEICHER:
+			return createEnergiespeicher();
 		case ModelPackage.VERTEILER_CONTAINER:
 			return createVerteilerContainer();
 		case ModelPackage.BETREIBER:
@@ -90,6 +90,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createDetails();
 		case ModelPackage.UMRICHTER:
 			return createUmrichter();
+		case ModelPackage.EIGENTUEMER:
+			return createEigentuemer();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -300,9 +302,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Override
-	public UmrichterMitEnergiespeicher createUmrichterMitEnergiespeicher() {
-		UmrichterMitEnergiespeicherImpl umrichterMitEnergiespeicher = new UmrichterMitEnergiespeicherImpl();
-		return umrichterMitEnergiespeicher;
+	public Energiespeicher createEnergiespeicher() {
+		EnergiespeicherImpl energiespeicher = new EnergiespeicherImpl();
+		return energiespeicher;
 	}
 
 	/**
@@ -358,6 +360,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Umrichter createUmrichter() {
 		UmrichterImpl umrichter = new UmrichterImpl();
 		return umrichter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Eigentuemer createEigentuemer() {
+		EigentuemerImpl eigentuemer = new EigentuemerImpl();
+		return eigentuemer;
 	}
 
 	/**

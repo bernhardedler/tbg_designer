@@ -56,7 +56,16 @@ public enum Generatorfunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	WASSERKRAFT(3, "Wasserkraft", "Wasserkraft");
+	WASSERKRAFT(3, "Wasserkraft", "Wasserkraft"),
+	/**
+	 * The '<em><b>Sonstig</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #SONSTIG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SONSTIG(4, "Sonstig", "Sonstig");
 
 	/**
 	 * The '<em><b>PV Generator</b></em>' literal value.
@@ -103,13 +112,24 @@ public enum Generatorfunktion implements Enumerator {
 	public static final int WASSERKRAFT_VALUE = 3;
 
 	/**
+	 * The '<em><b>Sonstig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SONSTIG
+	 * @model name="Sonstig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SONSTIG_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Generatorfunktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Generatorfunktion[] VALUES_ARRAY = new Generatorfunktion[] { PV_GENERATOR, DIESELAGGREGAT,
-			WINDKRAFTGENERATOR, WASSERKRAFT, };
+			WINDKRAFTGENERATOR, WASSERKRAFT, SONSTIG, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Generatorfunktion</b></em>' enumerators.
@@ -173,6 +193,8 @@ public enum Generatorfunktion implements Enumerator {
 			return WINDKRAFTGENERATOR;
 		case WASSERKRAFT_VALUE:
 			return WASSERKRAFT;
+		case SONSTIG_VALUE:
+			return SONSTIG;
 		}
 		return null;
 	}

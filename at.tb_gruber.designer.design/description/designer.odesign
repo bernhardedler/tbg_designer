@@ -4,7 +4,14 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Anlagendiagramm" initialisation="true" domainClass="model::Bahnhof">
       <metamodel href="http://www.tb-gruber.at/model#/"/>
       <defaultLayer name="Default">
-        <edgeMappings name="Verbindung" sourceMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='URmitESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='URmitESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetFinderExpression="feature:ziel" sourceFinderExpression="feature:ursprung" domainClass="model::Verbindung" useDomainElement="true">
+        <nodeMappings name="Eigentuemer" label="Eigentümer" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editEigentuemer']" domainClass="model::Eigentuemer">
+          <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Verbindung" sourceMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetFinderExpression="feature:ziel" sourceFinderExpression="feature:ursprung" domainClass="model::Verbindung" useDomainElement="true">
           <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
               <beginLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:nr">
@@ -302,7 +309,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Anlage zu Betreiber" sourceMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='URmitESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']" targetFinderExpression="aql:self.betreiber">
+        <edgeMappings name="Anlage zu Betreiber" sourceMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Betreiber']" targetFinderExpression="aql:self.betreiber">
           <style targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false">
@@ -1128,45 +1135,45 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="URmitESP" label="Umrichter mit Energiespeicher" semanticCandidatesExpression="feature:eAllContents" domainClass="model::UmrichterMitEnergiespeicher">
+          <subNodeMappings name="ESP" label="Energiespeicher" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Energiespeicher">
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_violett.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_violett.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_rot.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_rot.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_blau.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_blau.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_gruen.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_gruen.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_magenta.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_magenta.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_cyan.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_cyan.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/umrichtermitenergiespeicher/umrichtermitenergiespeicher_braun.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energiespeicher/energiespeicher_braun.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -1195,7 +1202,7 @@
           </subNodeMappings>
           <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="model::VerteilerContainer">
             <borderedNodeMappings name="BorderNodeNap" label="nap" semanticCandidatesExpression="feature:netzanschlusspunkt" domainClass="model::Netzanschlusspunkt">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:nrHauptversorgung" hideLabelByDefault="true" sizeComputationExpression="8" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:beschreibung" hideLabelByDefault="true" sizeComputationExpression="8" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <forbiddenSides>WEST</forbiddenSides>
@@ -1527,13 +1534,55 @@
                 </style>
               </conditionnalStyles>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" backgroundStyle="Liquid">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
-            </style>
+            <conditionnalStyles predicateExpression="aql:self.isVspViolett()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.isVspRot()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.isVspBlau()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.isVspGruen()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.isVspMagenta()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.isVspCyan()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.isVspBraun()">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" backgroundStyle="Liquid">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1562,7 +1611,15 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Objekt" referenceName="objekt"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Objekt" referenceName="objekt">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Eigentuemer" referenceName="eigentuemer" variableName="newEigentuemer">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newEigentuemer">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Eigentümer"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1571,6 +1628,28 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="editEigentuemer" mappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@nodeMappings[name='Eigentuemer']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Eigentümerauswahl">
+                <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                  <initialOperation/>
+                </buttons>
+                <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                  <initialOperation/>
+                </buttons>
+                <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@toolSections.0/@ownedTools[name='editEigentuemer']/@initialOperation/@firstModelOperations/@groups.0"/>
+                <groups name="Default Group" domainClass="model::Eigentuemer" semanticCandidateExpression="var:self">
+                  <controls xsi:type="properties:SelectDescription" name="eigentuemerSelect" labelExpression="Eigentümer:" valueExpression="aql:self.name" candidatesExpression="service:getAllEigentuemer()" candidateDisplayExpression="aql:candidate.toString()">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                    </initialOperation>
+                  </controls>
+                </groups>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1705,12 +1784,12 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="EspAnlegen" label="Umrichter mit Energiespeicher" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='URmitESP']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="EspAnlegen" label="Energiespeicher" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Anlagendiagramm']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::UmrichterMitEnergiespeicher" referenceName="anlage">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Energiespeicher" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
@@ -1845,6 +1924,20 @@
                   </subModelOperations>
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.primaerspannung"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.isVerteilerContainer()">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:target.oclAsType(model::VerteilerContainer)">
+                    <subModelOperations xsi:type="tool_1:For" expression="feature:verteiler">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.primaerspannung"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.isVerteiler()">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:target.eContainer().oclAsType(model::VerteilerContainer)">
+                    <subModelOperations xsi:type="tool_1:For" expression="feature:verteiler">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="primaerspannung" valueExpression="aql:source.primaerspannung"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
