@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample">
+<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample" projektname="Testprojekt">
   <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" primaerspannung="HSP Un ab 1kV 50Hz">
       <betreiber name="EVU"/>
-      <verbindungNach nr="1" ziel="//@objekt.1/@anlage.0" ursprung="//@objekt.0/@anlage.0"/>
       <netzanschlusspunkt beschreibung="&#xdc;GS Abgang Schleifenkasten TST" postition="DANACH"/>
     </anlage>
   </objekt>
   <objekt name="Aufnahmegeb&#xe4;ude Bahnhof Muster">
-    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="1" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;">
-      <verteiler xsi:type="tbg:VerteilerMitZaehler">
+    <anlage xsi:type="tbg:VerteilerContainer" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="5" name="dudidu">
         <details/>
-        <verbindungNach nr="1" ziel="//@objekt.1/@anlage.1" ursprung="//@objekt.1/@anlage.0/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
       </verteiler>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
-        <verbindungNach nr="1" ziel="//@objekt.1/@anlage.2" ursprung="//@objekt.1/@anlage.0/@verteiler.1" linientype="Kundenanlage_&#xd6;BB"/>
+        <verbindungNach nr="15" ziel="//@objekt.1/@anlage.2" ursprung="//@objekt.1/@anlage.0/@verteiler.1"/>
       </verteiler>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
-        <verbindungNach nr="1" ziel="//@objekt.1/@anlage.3" ursprung="//@objekt.1/@anlage.0/@verteiler.2" linientype="Kundenanlage_&#xd6;BB"/>
+        <verbindungNach nr="14" ziel="//@objekt.1/@anlage.3" ursprung="//@objekt.1/@anlage.0/@verteiler.2"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" name="VT Wohnung 1" anlagennummer="ET 01">
+    <anlage xsi:type="tbg:Energietechnikanlage" name="VT Wohnung 1" anlagennummer="ET 01">
+      <betreiber name="Immo (ET)"/>
+      <verbindungNach nr="5" ziel="//@objekt.1/@anlage.0/@verteiler.0" ursprung="//@objekt.1/@anlage.1"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="15" name="VT Wohnung 2" anlagennummer="ET 02">
       <betreiber name="Immo (ET)"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" name="VT Wohnung 2" anlagennummer="ET 02">
-      <betreiber name="Immo (ET)"/>
-    </anlage>
-    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="1" name="Haupt-VT AG BF Muster" anlagennummer="VK 00">
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="14" name="Haupt-VT AG BF Muster" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
       <verbindungNach nr="2" ziel="//@objekt.1/@anlage.4" ursprung="//@objekt.1/@anlage.3" linientype="Kundenanlage_&#xd6;BB"/>
       <verbindungNach nr="3" ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.1/@anlage.3"/>
@@ -46,18 +45,18 @@
       </verteiler>
       <verteiler xsi:type="tbg:VerteilerOhneZaehler"/>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" name="B&#xe4;cker" anlagennummer="ET 00">
+    <anlage xsi:type="tbg:Energietechnikanlage" name="B&#xe4;cker" anlagennummer="ET 00">
       <betreiber name="KA Dritte "/>
     </anlage>
   </objekt>
   <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
+    <anlage xsi:type="tbg:Versorgungsknoten" name="VT sowieso" anlagennummer="VK 00">
       <betreiber name="EVU"/>
       <verbindungNach nr="4" ziel="//@objekt.4/@anlage.0/@netzanschlusspunkt" ursprung="//@objekt.3/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="Aufnahmegeb&#xe4;ude 2 Bahnhof Muster">
-    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="1" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;">
+    <anlage xsi:type="tbg:VerteilerContainer" name="Z&#xe4;hlerverteiler AG / Netz N&#xd6;">
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
       </verteiler>
@@ -75,11 +74,11 @@
       <betreiber name="EN"/>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
-        <verbindungNach nr="1" ziel="//@objekt.5/@anlage.1" ursprung="//@objekt.5/@anlage.0/@verteiler.0"/>
+        <verbindungNach nr="16" ziel="//@objekt.5/@anlage.1" ursprung="//@objekt.5/@anlage.0/@verteiler.0"/>
         <netzanschlusspunkt beschreibung="Trennzelle nach Messzelle" postition="MITTE"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Trafo" versorgtVon="1" name="Trafo 1">
+    <anlage xsi:type="tbg:Trafo" versorgtVon="16" name="Trafo 1">
       <details/>
       <betreiber name="EN"/>
       <verbindungNach nr="6" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>
@@ -88,7 +87,7 @@
       <betreiber name="EN"/>
       <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="6">
         <details/>
-        <verbindungNach nr="1" ziel="//@objekt.8/@anlage.0" ursprung="//@objekt.5/@anlage.2/@verteiler.0" linientype="Kundenanlage_&#xd6;BB"/>
+        <verbindungNach nr="17" ziel="//@objekt.8/@anlage.0" ursprung="//@objekt.5/@anlage.2/@verteiler.0"/>
       </verteiler>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
@@ -101,7 +100,7 @@
     </anlage>
   </objekt>
   <objekt name="TST Netz N&#xd6; M&#xfc;llerdorf">
-    <anlage xsi:type="tbg:Versorgungsknoten" name="Schaltanlage Netz N&#xf6;" anlagennummer="VK 00">
+    <anlage xsi:type="tbg:Versorgungsknoten" name="Schaltanlage Netz N&#xf6;" anlagennummer="VK 00" primaerspannung="HSP Un ab 1kV 50Hz">
       <betreiber name="EVU"/>
     </anlage>
   </objekt>
@@ -113,7 +112,7 @@
     </anlage>
   </objekt>
   <objekt name="M&#xfc;llerdorf WHZ Schalthaus 1">
-    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="1" name="WHZ - VT" anlagennummer="VK 00">
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="17" name="WHZ - VT" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
     </anlage>
     <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="10" name="WHZ-VT" anlagennummer="ET 00" primaerspannung="NSP Un bis inkl 1kV 16,7Hz">

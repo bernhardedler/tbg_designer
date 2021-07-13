@@ -2,6 +2,8 @@ package at.tb_gruber.designer.design;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
@@ -58,10 +60,22 @@ public class DiagramServices {
 			project = (Bahnhof) containerObj.eContainer();
 		}
 
-		List<Integer> alleIds = project.getObjekt().stream().flatMap(obj -> obj.getAnlage().stream())
-				.flatMap(anl -> anl.getVerbindungNach().stream()).map(Verbindung::getNr).collect(Collectors.toList());
-		alleIds.sort((x, y) -> x.compareTo(y));
-
+		Set<Integer> alleIds = new TreeSet<Integer>(); 
+		for (Objekt objekt : project.getObjekt()) {
+			for (AnlageBase anlage : objekt.getAnlage()) {
+				if (anlage instanceof VerteilerContainer) {
+					for (VerteilerBase verteiler : ((VerteilerContainer)anlage).getVerteiler()) {
+						for (Verbindung verbindung : verteiler.getVerbindungNach()) {
+							alleIds.add(verbindung.getNr());
+						}
+					}
+				}
+				for (Verbindung verbindung : anlage.getVerbindungNach()) {
+					alleIds.add(verbindung.getNr());
+				}
+			}
+		}
+		
 		Integer[] alleIdsArray = new Integer[alleIds.size()];
 		alleIdsArray = alleIds.toArray(alleIdsArray);
 
@@ -269,15 +283,6 @@ public class DiagramServices {
 		return null;
 	}
 
-
-	public Boolean isVerteilerContainer(EObject self) {
-		return self instanceof VerteilerContainer;
-	}
-	
-	public Boolean isVerteilerBase(EObject self) {
-		return self instanceof VerteilerBase;
-	}
-	
 	public Boolean isVerteilerContainerNap(EObject self) {
 		return self instanceof Netzanschlusspunkt && ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
 	}
