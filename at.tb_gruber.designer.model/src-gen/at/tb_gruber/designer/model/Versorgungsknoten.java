@@ -18,7 +18,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Versorgungsknoten extends SelbststAnlage {
+public interface Versorgungsknoten extends AnlageMitAttributen {
 	/**
 	 * Returns the value of the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

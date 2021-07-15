@@ -5,10 +5,10 @@
   </g>
   <g>
     <title>Rahmen</title>
-    <ellipse fill="none" stroke-width="2" stroke="#ff0090" cx="51" cy="51" rx="50" ry="50" id="r1" />
+    <ellipse fill="none" stroke-width="2" stroke="#FF00FF" cx="51" cy="51" rx="50" ry="50" id="r1" />
   </g>
   <g>
     <title>Text</title>
-    <text x="22" y="77" fill="#ff0090" font-size="70px" font-family="sans-serif">G</text>
+    <text x="22" y="77" fill="#FF00FF" font-size="70px" font-family="sans-serif">G</text>
   </g>
 </svg>

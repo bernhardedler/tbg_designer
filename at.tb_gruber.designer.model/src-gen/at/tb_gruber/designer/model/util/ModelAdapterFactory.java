@@ -122,11 +122,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSelbststAnlage(SelbststAnlage object) {
-			return createSelbststAnlageAdapter();
-		}
-
-		@Override
 		public Adapter caseVerteilerMitZaehler(VerteilerMitZaehler object) {
 			return createVerteilerMitZaehlerAdapter();
 		}
@@ -351,20 +346,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeneratorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.SelbststAnlage <em>Selbstst Anlage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see at.tb_gruber.designer.model.SelbststAnlage
-	 * @generated
-	 */
-	public Adapter createSelbststAnlageAdapter() {
 		return null;
 	}
 

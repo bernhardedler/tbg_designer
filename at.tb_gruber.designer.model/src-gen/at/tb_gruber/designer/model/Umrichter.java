@@ -21,7 +21,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Umrichter extends SelbststAnlage {
+public interface Umrichter extends AnlageMitAttributen {
 	/**
 	 * Returns the value of the '<em><b>Umrichterfunktion</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Umrichterfunktion}.

@@ -22,7 +22,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Energiespeicher extends SelbststAnlage {
+public interface Energiespeicher extends AnlageMitAttributen {
 	/**
 	 * Returns the value of the '<em><b>Energiespeicherfunktion</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Energiespeicherfunktion}.

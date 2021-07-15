@@ -27,7 +27,6 @@ import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Objektarttype;
 import at.tb_gruber.designer.model.Plankopf;
-import at.tb_gruber.designer.model.SelbststAnlage;
 import at.tb_gruber.designer.model.Spannungsarttype;
 import at.tb_gruber.designer.model.Textbaustein;
 import at.tb_gruber.designer.model.Trafo;
@@ -132,13 +131,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass generatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass selbststAnlageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -838,6 +830,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTrafo_Oberspannung() {
+		return (EAttribute) trafoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafo_Unterspannung() {
+		return (EAttribute) trafoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNetzanschlusspunkt() {
 		return netzanschlusspunktEClass;
 	}
@@ -968,16 +980,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getSelbststAnlage() {
-		return selbststAnlageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getVerteilerMitZaehler() {
 		return verteilerMitZaehlerEClass;
 	}
@@ -1098,26 +1100,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerteilerContainer_Name() {
-		return (EAttribute) verteilerContainerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getVerteilerContainer_Primaerspannung() {
-		return (EAttribute) verteilerContainerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getBetreiber() {
 		return betreiberEClass;
 	}
@@ -1150,6 +1132,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EReference getVerteilerBase_Netzanschlusspunkt() {
 		return (EReference) verteilerBaseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerteilerBase_Name() {
+		return (EAttribute) verteilerBaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1514,6 +1506,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(trafoEClass, TRAFO__SEKUNDAERSPANNUNG);
 		createEAttribute(trafoEClass, TRAFO__TRAFO_KVA);
 		createEAttribute(trafoEClass, TRAFO__RESERVE3);
+		createEAttribute(trafoEClass, TRAFO__OBERSPANNUNG);
+		createEAttribute(trafoEClass, TRAFO__UNTERSPANNUNG);
 
 		netzanschlusspunktEClass = createEClass(NETZANSCHLUSSPUNKT);
 		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__BESCHREIBUNG);
@@ -1532,8 +1526,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(generatorEClass, GENERATOR__ELEKTRISCHE_LEISTUNG);
 		createEAttribute(generatorEClass, GENERATOR__ERZEUGTE_ENERGIE);
 
-		selbststAnlageEClass = createEClass(SELBSTST_ANLAGE);
-
 		verteilerMitZaehlerEClass = createEClass(VERTEILER_MIT_ZAEHLER);
 		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__NR_RESERVE_EINSPEISUNG);
 		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__NR_HAUPTVERSORGUNG);
@@ -1548,14 +1540,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		verteilerContainerEClass = createEClass(VERTEILER_CONTAINER);
 		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__VERTEILER);
 		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
-		createEAttribute(verteilerContainerEClass, VERTEILER_CONTAINER__NAME);
-		createEAttribute(verteilerContainerEClass, VERTEILER_CONTAINER__PRIMAERSPANNUNG);
 
 		betreiberEClass = createEClass(BETREIBER);
 		createEAttribute(betreiberEClass, BETREIBER__NAME);
 
 		verteilerBaseEClass = createEClass(VERTEILER_BASE);
 		createEReference(verteilerBaseEClass, VERTEILER_BASE__NETZANSCHLUSSPUNKT);
+		createEAttribute(verteilerBaseEClass, VERTEILER_BASE__NAME);
 
 		verteilerOhneZaehlerEClass = createEClass(VERTEILER_OHNE_ZAEHLER);
 
@@ -1624,18 +1615,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		// Add supertypes to classes
 		anlageMitAttributenEClass.getESuperTypes().add(this.getAnlageBase());
-		trafoEClass.getESuperTypes().add(this.getSelbststAnlage());
+		trafoEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 		netzanschlusspunktEClass.getESuperTypes().add(this.getAnlageOhneAttribute());
-		versorgungsknotenEClass.getESuperTypes().add(this.getSelbststAnlage());
-		energietechnikanlageEClass.getESuperTypes().add(this.getSelbststAnlage());
-		generatorEClass.getESuperTypes().add(this.getSelbststAnlage());
-		selbststAnlageEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		versorgungsknotenEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		energietechnikanlageEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		generatorEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 		verteilerMitZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
-		energiespeicherEClass.getESuperTypes().add(this.getSelbststAnlage());
-		verteilerContainerEClass.getESuperTypes().add(this.getAnlageOhneAttribute());
-		verteilerBaseEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		energiespeicherEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		verteilerContainerEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		verteilerBaseEClass.getESuperTypes().add(this.getAnlageOhneAttribute());
 		verteilerOhneZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
-		umrichterEClass.getESuperTypes().add(this.getSelbststAnlage());
+		umrichterEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 		anlageOhneAttributeEClass.getESuperTypes().add(this.getAnlageBase());
 
 		// Initialize classes, features, and operations; add parameters
@@ -1754,9 +1744,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getTrafo_Sekundaerspannung(), this.getSpannungsarttype(), "sekundaerspannung",
 				"NSP Un bis inkl 1kV 50Hz AC", 0, 1, Trafo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTrafo_TrafoKva(), ecorePackage.getELong(), "trafoKva", null, 0, 1, Trafo.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafo_TrafoKva(), ecorePackage.getEString(), "trafoKva", null, 0, 1, Trafo.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrafo_Reserve3(), ecorePackage.getEString(), "reserve3", null, 0, 1, Trafo.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafo_Oberspannung(), ecorePackage.getEString(), "oberspannung", null, 0, 1, Trafo.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafo_Unterspannung(), ecorePackage.getEString(), "unterspannung", null, 0, 1, Trafo.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(netzanschlusspunktEClass, Netzanschlusspunkt.class, "Netzanschlusspunkt", !IS_ABSTRACT,
@@ -1798,9 +1792,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(selbststAnlageEClass, SelbststAnlage.class, "SelbststAnlage", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(verteilerMitZaehlerEClass, VerteilerMitZaehler.class, "VerteilerMitZaehler", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVerteilerMitZaehler_NrReserveEinspeisung(), ecorePackage.getEString(), "nrReserveEinspeisung",
@@ -1836,12 +1827,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getVerteilerContainer_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
 				"netzanschlusspunkt", null, 0, 1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerteilerContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1,
-				VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVerteilerContainer_Primaerspannung(), this.getSpannungsarttype(), "primaerspannung",
-				"NSP Un bis inkl 1kV 50Hz AC", 0, 1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(betreiberEClass, Betreiber.class, "Betreiber", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1853,6 +1838,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getVerteilerBase_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null, "netzanschlusspunkt",
 				null, 0, 1, VerteilerBase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerteilerBase_Name(), ecorePackage.getEString(), "name", null, 0, 1, VerteilerBase.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(verteilerOhneZaehlerEClass, VerteilerOhneZaehler.class, "VerteilerOhneZaehler", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

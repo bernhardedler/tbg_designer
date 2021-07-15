@@ -23,11 +23,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getTrafoKva <em>Trafo Kva</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getReserve3 <em>Reserve3</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getOberspannung <em>Oberspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.TrafoImpl#getUnterspannung <em>Unterspannung</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
+public class TrafoImpl extends AnlageMitAttributenImpl implements Trafo {
 	/**
 	 * The default value of the '{@link #getSekundaerspannung() <em>Sekundaerspannung</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,7 +58,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long TRAFO_KVA_EDEFAULT = 0L;
+	protected static final String TRAFO_KVA_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTrafoKva() <em>Trafo Kva</em>}' attribute.
@@ -66,7 +68,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 * @ordered
 	 */
-	protected long trafoKva = TRAFO_KVA_EDEFAULT;
+	protected String trafoKva = TRAFO_KVA_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getReserve3() <em>Reserve3</em>}' attribute.
@@ -87,6 +89,46 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @ordered
 	 */
 	protected String reserve3 = RESERVE3_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOberspannung() <em>Oberspannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOberspannung()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OBERSPANNUNG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOberspannung() <em>Oberspannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOberspannung()
+	 * @generated
+	 * @ordered
+	 */
+	protected String oberspannung = OBERSPANNUNG_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUnterspannung() <em>Unterspannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnterspannung()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UNTERSPANNUNG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUnterspannung() <em>Unterspannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnterspannung()
+	 * @generated
+	 * @ordered
+	 */
+	protected String unterspannung = UNTERSPANNUNG_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,7 +179,7 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public long getTrafoKva() {
+	public String getTrafoKva() {
 		return trafoKva;
 	}
 
@@ -147,8 +189,8 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
-	public void setTrafoKva(long newTrafoKva) {
-		long oldTrafoKva = trafoKva;
+	public void setTrafoKva(String newTrafoKva) {
+		String oldTrafoKva = trafoKva;
 		trafoKva = newTrafoKva;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__TRAFO_KVA, oldTrafoKva,
@@ -184,6 +226,54 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 	 * @generated
 	 */
 	@Override
+	public String getOberspannung() {
+		return oberspannung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOberspannung(String newOberspannung) {
+		String oldOberspannung = oberspannung;
+		oberspannung = newOberspannung;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__OBERSPANNUNG, oldOberspannung,
+					oberspannung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getUnterspannung() {
+		return unterspannung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUnterspannung(String newUnterspannung) {
+		String oldUnterspannung = unterspannung;
+		unterspannung = newUnterspannung;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRAFO__UNTERSPANNUNG, oldUnterspannung,
+					unterspannung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
@@ -192,6 +282,10 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 			return getTrafoKva();
 		case ModelPackage.TRAFO__RESERVE3:
 			return getReserve3();
+		case ModelPackage.TRAFO__OBERSPANNUNG:
+			return getOberspannung();
+		case ModelPackage.TRAFO__UNTERSPANNUNG:
+			return getUnterspannung();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,10 +302,16 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 			setSekundaerspannung((Spannungsarttype) newValue);
 			return;
 		case ModelPackage.TRAFO__TRAFO_KVA:
-			setTrafoKva((Long) newValue);
+			setTrafoKva((String) newValue);
 			return;
 		case ModelPackage.TRAFO__RESERVE3:
 			setReserve3((String) newValue);
+			return;
+		case ModelPackage.TRAFO__OBERSPANNUNG:
+			setOberspannung((String) newValue);
+			return;
+		case ModelPackage.TRAFO__UNTERSPANNUNG:
+			setUnterspannung((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -234,6 +334,12 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 		case ModelPackage.TRAFO__RESERVE3:
 			setReserve3(RESERVE3_EDEFAULT);
 			return;
+		case ModelPackage.TRAFO__OBERSPANNUNG:
+			setOberspannung(OBERSPANNUNG_EDEFAULT);
+			return;
+		case ModelPackage.TRAFO__UNTERSPANNUNG:
+			setUnterspannung(UNTERSPANNUNG_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,9 +355,14 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
 			return sekundaerspannung != SEKUNDAERSPANNUNG_EDEFAULT;
 		case ModelPackage.TRAFO__TRAFO_KVA:
-			return trafoKva != TRAFO_KVA_EDEFAULT;
+			return TRAFO_KVA_EDEFAULT == null ? trafoKva != null : !TRAFO_KVA_EDEFAULT.equals(trafoKva);
 		case ModelPackage.TRAFO__RESERVE3:
 			return RESERVE3_EDEFAULT == null ? reserve3 != null : !RESERVE3_EDEFAULT.equals(reserve3);
+		case ModelPackage.TRAFO__OBERSPANNUNG:
+			return OBERSPANNUNG_EDEFAULT == null ? oberspannung != null : !OBERSPANNUNG_EDEFAULT.equals(oberspannung);
+		case ModelPackage.TRAFO__UNTERSPANNUNG:
+			return UNTERSPANNUNG_EDEFAULT == null ? unterspannung != null
+					: !UNTERSPANNUNG_EDEFAULT.equals(unterspannung);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -273,6 +384,10 @@ public class TrafoImpl extends SelbststAnlageImpl implements Trafo {
 		result.append(trafoKva);
 		result.append(", reserve3: ");
 		result.append(reserve3);
+		result.append(", oberspannung: ");
+		result.append(oberspannung);
+		result.append(", unterspannung: ");
+		result.append(unterspannung);
 		result.append(')');
 		return result.toString();
 	}

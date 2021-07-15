@@ -1,7 +1,7 @@
 rot: ff0000
-grün: 00ff00
+grün: 00FF00
 magenta: ff0090
-cyan: 00ffff
+cyan: 00FFFF
 blau: 0070c0
-violett: 7030a0
+violett: 8D7EBD
 hellbraun: c65911

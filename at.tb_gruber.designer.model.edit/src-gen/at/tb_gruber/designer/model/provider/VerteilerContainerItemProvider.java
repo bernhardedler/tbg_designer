@@ -12,9 +12,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -23,7 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvider {
+public class VerteilerContainerItemProvider extends AnlageMitAttributenItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -45,42 +43,8 @@ public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addPrimaerspannungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_VerteilerContainer_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_VerteilerContainer_name_feature",
-								"_UI_VerteilerContainer_type"),
-						ModelPackage.Literals.VERTEILER_CONTAINER__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Primaerspannung feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrimaerspannungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_VerteilerContainer_primaerspannung_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_VerteilerContainer_primaerspannung_feature",
-						"_UI_VerteilerContainer_type"),
-				ModelPackage.Literals.VERTEILER_CONTAINER__PRIMAERSPANNUNG, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -160,10 +124,6 @@ public class VerteilerContainerItemProvider extends AnlageOhneAttributeItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VerteilerContainer.class)) {
-		case ModelPackage.VERTEILER_CONTAINER__NAME:
-		case ModelPackage.VERTEILER_CONTAINER__PRIMAERSPANNUNG:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));

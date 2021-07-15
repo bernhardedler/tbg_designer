@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GeneratorImpl extends SelbststAnlageImpl implements Generator {
+public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator {
 	/**
 	 * The default value of the '{@link #getGeneratorfunktion() <em>Generatorfunktion</em>}' attribute.
 	 * <!-- begin-user-doc -->

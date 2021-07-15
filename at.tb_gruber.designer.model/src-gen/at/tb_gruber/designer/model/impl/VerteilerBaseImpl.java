@@ -23,11 +23,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implements VerteilerBase {
+public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implements VerteilerBase {
 	/**
 	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -37,6 +38,25 @@ public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implemen
 	 * @ordered
 	 */
 	protected Netzanschlusspunkt netzanschlusspunkt;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,6 +136,29 @@ public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implemen
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER_BASE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:
@@ -134,6 +177,8 @@ public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implemen
 		switch (featureID) {
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:
 			return getNetzanschlusspunkt();
+		case ModelPackage.VERTEILER_BASE__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,6 +193,9 @@ public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implemen
 		switch (featureID) {
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
+			return;
+		case ModelPackage.VERTEILER_BASE__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,6 +212,9 @@ public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implemen
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) null);
 			return;
+		case ModelPackage.VERTEILER_BASE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,8 +229,27 @@ public abstract class VerteilerBaseImpl extends AnlageMitAttributenImpl implemen
 		switch (featureID) {
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:
 			return netzanschlusspunkt != null;
+		case ModelPackage.VERTEILER_BASE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VerteilerBaseImpl

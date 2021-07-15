@@ -247,7 +247,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getAnlageBase()
 	 * @generated
 	 */
-	int ANLAGE_BASE = 20;
+	int ANLAGE_BASE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -650,160 +650,6 @@ public interface ModelPackage extends EPackage {
 	int TEXTBAUSTEIN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.SelbststAnlageImpl <em>Selbstst Anlage</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.SelbststAnlageImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSelbststAnlage()
-	 * @generated
-	 */
-	int SELBSTST_ANLAGE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
-
-	/**
-	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
-
-	/**
-	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
-
-	/**
-	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
-
-	/**
-	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
-
-	/**
-	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
-
-	/**
-	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
-
-	/**
-	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
-
-	/**
-	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
-
-	/**
-	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
-
-	/**
-	 * The number of structural features of the '<em>Selbstst Anlage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Selbstst Anlage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELBSTST_ANLAGE_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.TrafoImpl <em>Trafo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -820,7 +666,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__DETAILS = SELBSTST_ANLAGE__DETAILS;
+	int TRAFO__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -829,7 +675,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int TRAFO__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -838,7 +684,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int TRAFO__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -847,7 +693,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int TRAFO__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -856,7 +702,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__NAME = SELBSTST_ANLAGE__NAME;
+	int TRAFO__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -865,7 +711,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int TRAFO__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -874,7 +720,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int TRAFO__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -883,7 +729,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int TRAFO__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -892,7 +738,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int TRAFO__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -901,7 +747,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int TRAFO__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -910,7 +756,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int TRAFO__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -919,7 +765,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int TRAFO__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
@@ -928,7 +774,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+	int TRAFO__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
@@ -937,7 +783,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+	int TRAFO__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Sekundaerspannung</b></em>' attribute.
@@ -946,7 +792,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__SEKUNDAERSPANNUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int TRAFO__SEKUNDAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Trafo Kva</b></em>' attribute.
@@ -955,7 +801,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__TRAFO_KVA = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+	int TRAFO__TRAFO_KVA = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve3</b></em>' attribute.
@@ -964,7 +810,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO__RESERVE3 = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+	int TRAFO__RESERVE3 = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Oberspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__OBERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Unterspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFO__UNTERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Trafo</em>' class.
@@ -973,7 +837,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
+	int TRAFO_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Trafo</em>' class.
@@ -982,7 +846,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAFO_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int TRAFO_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.AnlageOhneAttributeImpl <em>Anlage Ohne Attribute</em>}' class.
@@ -992,7 +856,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getAnlageOhneAttribute()
 	 * @generated
 	 */
-	int ANLAGE_OHNE_ATTRIBUTE = 21;
+	int ANLAGE_OHNE_ATTRIBUTE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1156,7 +1020,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__DETAILS = SELBSTST_ANLAGE__DETAILS;
+	int VERSORGUNGSKNOTEN__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -1165,7 +1029,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int VERSORGUNGSKNOTEN__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -1174,7 +1038,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int VERSORGUNGSKNOTEN__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -1183,7 +1047,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int VERSORGUNGSKNOTEN__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1192,7 +1056,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__NAME = SELBSTST_ANLAGE__NAME;
+	int VERSORGUNGSKNOTEN__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -1201,7 +1065,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int VERSORGUNGSKNOTEN__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -1210,7 +1074,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int VERSORGUNGSKNOTEN__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -1219,7 +1083,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int VERSORGUNGSKNOTEN__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -1228,7 +1092,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int VERSORGUNGSKNOTEN__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -1237,7 +1101,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int VERSORGUNGSKNOTEN__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -1246,7 +1110,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int VERSORGUNGSKNOTEN__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -1255,7 +1119,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int VERSORGUNGSKNOTEN__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
@@ -1264,7 +1128,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+	int VERSORGUNGSKNOTEN__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
@@ -1273,7 +1137,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+	int VERSORGUNGSKNOTEN__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -1282,7 +1146,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Versorgungsknoten</em>' class.
@@ -1291,7 +1155,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+	int VERSORGUNGSKNOTEN_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Versorgungsknoten</em>' class.
@@ -1300,7 +1164,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int VERSORGUNGSKNOTEN_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.EnergietechnikanlageImpl <em>Energietechnikanlage</em>}' class.
@@ -1319,7 +1183,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__DETAILS = SELBSTST_ANLAGE__DETAILS;
+	int ENERGIETECHNIKANLAGE__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -1328,7 +1192,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int ENERGIETECHNIKANLAGE__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -1337,7 +1201,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int ENERGIETECHNIKANLAGE__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -1346,7 +1210,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int ENERGIETECHNIKANLAGE__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1355,7 +1219,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__NAME = SELBSTST_ANLAGE__NAME;
+	int ENERGIETECHNIKANLAGE__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -1364,7 +1228,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int ENERGIETECHNIKANLAGE__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -1373,7 +1237,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int ENERGIETECHNIKANLAGE__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -1382,7 +1246,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int ENERGIETECHNIKANLAGE__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -1391,7 +1255,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int ENERGIETECHNIKANLAGE__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -1400,7 +1264,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int ENERGIETECHNIKANLAGE__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -1409,7 +1273,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int ENERGIETECHNIKANLAGE__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -1418,7 +1282,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int ENERGIETECHNIKANLAGE__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
@@ -1427,7 +1291,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+	int ENERGIETECHNIKANLAGE__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
@@ -1436,7 +1300,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+	int ENERGIETECHNIKANLAGE__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Et Type</b></em>' attribute.
@@ -1445,7 +1309,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE__ET_TYPE = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int ENERGIETECHNIKANLAGE__ET_TYPE = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Energietechnikanlage</em>' class.
@@ -1454,7 +1318,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+	int ENERGIETECHNIKANLAGE_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Energietechnikanlage</em>' class.
@@ -1463,7 +1327,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIETECHNIKANLAGE_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int ENERGIETECHNIKANLAGE_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.GeneratorImpl <em>Generator</em>}' class.
@@ -1482,7 +1346,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__DETAILS = SELBSTST_ANLAGE__DETAILS;
+	int GENERATOR__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -1491,7 +1355,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int GENERATOR__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -1500,7 +1364,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int GENERATOR__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -1509,7 +1373,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int GENERATOR__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1518,7 +1382,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__NAME = SELBSTST_ANLAGE__NAME;
+	int GENERATOR__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -1527,7 +1391,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int GENERATOR__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -1536,7 +1400,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int GENERATOR__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -1545,7 +1409,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int GENERATOR__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -1554,7 +1418,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int GENERATOR__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -1563,7 +1427,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int GENERATOR__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -1572,7 +1436,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int GENERATOR__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -1581,7 +1445,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int GENERATOR__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
@@ -1590,7 +1454,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+	int GENERATOR__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
@@ -1599,7 +1463,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+	int GENERATOR__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Generatorfunktion</b></em>' attribute.
@@ -1608,7 +1472,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__GENERATORFUNKTION = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int GENERATOR__GENERATORFUNKTION = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Funktion Sonstig</b></em>' attribute.
@@ -1617,7 +1481,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__FUNKTION_SONSTIG = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+	int GENERATOR__FUNKTION_SONSTIG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Elektrische Leistung</b></em>' attribute.
@@ -1626,7 +1490,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__ELEKTRISCHE_LEISTUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+	int GENERATOR__ELEKTRISCHE_LEISTUNG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Erzeugte Energie</b></em>' attribute.
@@ -1635,7 +1499,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR__ERZEUGTE_ENERGIE = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
+	int GENERATOR__ERZEUGTE_ENERGIE = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Generator</em>' class.
@@ -1644,7 +1508,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 4;
+	int GENERATOR_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Generator</em>' class.
@@ -1653,7 +1517,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int GENERATOR_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl <em>Verteiler Base</em>}' class.
@@ -1663,7 +1527,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerBase()
 	 * @generated
 	 */
-	int VERTEILER_BASE = 16;
+	int VERTEILER_BASE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1672,7 +1536,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
+	int VERTEILER_BASE__DETAILS = ANLAGE_OHNE_ATTRIBUTE__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -1681,7 +1545,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
+	int VERTEILER_BASE__BETREIBER = ANLAGE_OHNE_ATTRIBUTE__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -1690,7 +1554,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
+	int VERTEILER_BASE__VERSORGT_VON = ANLAGE_OHNE_ATTRIBUTE__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -1699,97 +1563,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
-
-	/**
-	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
-
-	/**
-	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
-
-	/**
-	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
-
-	/**
-	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
-
-	/**
-	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
-
-	/**
-	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_BASE__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
+	int VERTEILER_BASE__VERBINDUNG_NACH = ANLAGE_OHNE_ATTRIBUTE__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
@@ -1798,7 +1572,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE__NETZANSCHLUSSPUNKT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
+	int VERTEILER_BASE__NETZANSCHLUSSPUNKT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_BASE__NAME = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Verteiler Base</em>' class.
@@ -1807,7 +1590,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
+	int VERTEILER_BASE_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Base</em>' class.
@@ -1816,7 +1599,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
+	int VERTEILER_BASE_OPERATION_COUNT = ANLAGE_OHNE_ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerMitZaehlerImpl <em>Verteiler Mit Zaehler</em>}' class.
@@ -1826,7 +1609,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerMitZaehler()
 	 * @generated
 	 */
-	int VERTEILER_MIT_ZAEHLER = 12;
+	int VERTEILER_MIT_ZAEHLER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1865,96 +1648,6 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__VERBINDUNG_NACH = VERTEILER_BASE__VERBINDUNG_NACH;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__NAME = VERTEILER_BASE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__ANLAGENNUMMER = VERTEILER_BASE__ANLAGENNUMMER;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__EADB_ID = VERTEILER_BASE__EADB_ID;
-
-	/**
-	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__PRIMAERSPANNUNG = VERTEILER_BASE__PRIMAERSPANNUNG;
-
-	/**
-	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__IN_OBJEKTTEIL = VERTEILER_BASE__IN_OBJEKTTEIL;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__EADB_VERSORGUNG_ART = VERTEILER_BASE__EADB_VERSORGUNG_ART;
-
-	/**
-	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__VERTEILERBEZEICHNUNG = VERTEILER_BASE__VERTEILERBEZEICHNUNG;
-
-	/**
-	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__ABGANG_VT = VERTEILER_BASE__ABGANG_VT;
-
-	/**
-	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__RESERVE1 = VERTEILER_BASE__RESERVE1;
-
-	/**
-	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_MIT_ZAEHLER__RESERVE2 = VERTEILER_BASE__RESERVE2;
-
-	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1962,6 +1655,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEILER_MIT_ZAEHLER__NETZANSCHLUSSPUNKT = VERTEILER_BASE__NETZANSCHLUSSPUNKT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_MIT_ZAEHLER__NAME = VERTEILER_BASE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Nr Reserve Einspeisung</b></em>' attribute.
@@ -2007,7 +1709,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicher()
 	 * @generated
 	 */
-	int ENERGIESPEICHER = 13;
+	int ENERGIESPEICHER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2016,7 +1718,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__DETAILS = SELBSTST_ANLAGE__DETAILS;
+	int ENERGIESPEICHER__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -2025,7 +1727,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int ENERGIESPEICHER__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -2034,7 +1736,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int ENERGIESPEICHER__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -2043,7 +1745,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int ENERGIESPEICHER__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2052,7 +1754,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__NAME = SELBSTST_ANLAGE__NAME;
+	int ENERGIESPEICHER__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -2061,7 +1763,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int ENERGIESPEICHER__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -2070,7 +1772,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int ENERGIESPEICHER__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -2079,7 +1781,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int ENERGIESPEICHER__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -2088,7 +1790,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int ENERGIESPEICHER__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -2097,7 +1799,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int ENERGIESPEICHER__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -2106,7 +1808,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int ENERGIESPEICHER__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -2115,7 +1817,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int ENERGIESPEICHER__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
@@ -2124,7 +1826,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+	int ENERGIESPEICHER__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
@@ -2133,7 +1835,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+	int ENERGIESPEICHER__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Energiespeicherfunktion</b></em>' attribute.
@@ -2142,7 +1844,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ENERGIESPEICHERFUNKTION = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int ENERGIESPEICHER__ENERGIESPEICHERFUNKTION = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Funktion Sonstig</b></em>' attribute.
@@ -2151,7 +1853,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__FUNKTION_SONSTIG = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+	int ENERGIESPEICHER__FUNKTION_SONSTIG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Energiespeicherart</b></em>' attribute.
@@ -2160,7 +1862,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__ENERGIESPEICHERART = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+	int ENERGIESPEICHER__ENERGIESPEICHERART = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Kapazitaet</b></em>' attribute.
@@ -2169,7 +1871,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__KAPAZITAET = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
+	int ENERGIESPEICHER__KAPAZITAET = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Autonomiezeit</b></em>' attribute.
@@ -2178,7 +1880,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER__AUTONOMIEZEIT = SELBSTST_ANLAGE_FEATURE_COUNT + 4;
+	int ENERGIESPEICHER__AUTONOMIEZEIT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Energiespeicher</em>' class.
@@ -2187,7 +1889,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 5;
+	int ENERGIESPEICHER_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Energiespeicher</em>' class.
@@ -2196,7 +1898,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGIESPEICHER_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int ENERGIESPEICHER_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl <em>Verteiler Container</em>}' class.
@@ -2206,7 +1908,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerContainer()
 	 * @generated
 	 */
-	int VERTEILER_CONTAINER = 14;
+	int VERTEILER_CONTAINER = 13;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2215,7 +1917,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER__DETAILS = ANLAGE_OHNE_ATTRIBUTE__DETAILS;
+	int VERTEILER_CONTAINER__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -2224,7 +1926,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER__BETREIBER = ANLAGE_OHNE_ATTRIBUTE__BETREIBER;
+	int VERTEILER_CONTAINER__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -2233,7 +1935,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER__VERSORGT_VON = ANLAGE_OHNE_ATTRIBUTE__VERSORGT_VON;
+	int VERTEILER_CONTAINER__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -2242,25 +1944,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER__VERBINDUNG_NACH = ANLAGE_OHNE_ATTRIBUTE__VERBINDUNG_NACH;
-
-	/**
-	 * The feature id for the '<em><b>Verteiler</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_CONTAINER__VERTEILER = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 1;
+	int VERTEILER_CONTAINER__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2269,7 +1953,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER__NAME = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
+	int VERTEILER_CONTAINER__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -2278,7 +1980,79 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER__PRIMAERSPANNUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 3;
+	int VERTEILER_CONTAINER__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
+
+	/**
+	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
+
+	/**
+	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
+
+	/**
+	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
+
+	/**
+	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
+
+	/**
+	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
+
+	/**
+	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
+
+	/**
+	 * The feature id for the '<em><b>Verteiler</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__VERTEILER = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Verteiler Container</em>' class.
@@ -2287,7 +2061,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 4;
+	int VERTEILER_CONTAINER_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Container</em>' class.
@@ -2296,7 +2070,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER_OPERATION_COUNT = ANLAGE_OHNE_ATTRIBUTE_OPERATION_COUNT + 0;
+	int VERTEILER_CONTAINER_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.BetreiberImpl <em>Betreiber</em>}' class.
@@ -2306,7 +2080,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getBetreiber()
 	 * @generated
 	 */
-	int BETREIBER = 15;
+	int BETREIBER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2343,7 +2117,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerOhneZaehler()
 	 * @generated
 	 */
-	int VERTEILER_OHNE_ZAEHLER = 17;
+	int VERTEILER_OHNE_ZAEHLER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2382,96 +2156,6 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_OHNE_ZAEHLER__VERBINDUNG_NACH = VERTEILER_BASE__VERBINDUNG_NACH;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__NAME = VERTEILER_BASE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__ANLAGENNUMMER = VERTEILER_BASE__ANLAGENNUMMER;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__EADB_ID = VERTEILER_BASE__EADB_ID;
-
-	/**
-	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__PRIMAERSPANNUNG = VERTEILER_BASE__PRIMAERSPANNUNG;
-
-	/**
-	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__IN_OBJEKTTEIL = VERTEILER_BASE__IN_OBJEKTTEIL;
-
-	/**
-	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__EADB_VERSORGUNG_ART = VERTEILER_BASE__EADB_VERSORGUNG_ART;
-
-	/**
-	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__VERTEILERBEZEICHNUNG = VERTEILER_BASE__VERTEILERBEZEICHNUNG;
-
-	/**
-	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__ABGANG_VT = VERTEILER_BASE__ABGANG_VT;
-
-	/**
-	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__RESERVE1 = VERTEILER_BASE__RESERVE1;
-
-	/**
-	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERTEILER_OHNE_ZAEHLER__RESERVE2 = VERTEILER_BASE__RESERVE2;
-
-	/**
 	 * The feature id for the '<em><b>Netzanschlusspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2479,6 +2163,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEILER_OHNE_ZAEHLER__NETZANSCHLUSSPUNKT = VERTEILER_BASE__NETZANSCHLUSSPUNKT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_OHNE_ZAEHLER__NAME = VERTEILER_BASE__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Verteiler Ohne Zaehler</em>' class.
@@ -2506,7 +2199,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getDetails()
 	 * @generated
 	 */
-	int DETAILS = 18;
+	int DETAILS = 17;
 
 	/**
 	 * The number of structural features of the '<em>Details</em>' class.
@@ -2534,7 +2227,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichter()
 	 * @generated
 	 */
-	int UMRICHTER = 19;
+	int UMRICHTER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2543,7 +2236,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__DETAILS = SELBSTST_ANLAGE__DETAILS;
+	int UMRICHTER__DETAILS = ANLAGE_MIT_ATTRIBUTEN__DETAILS;
 
 	/**
 	 * The feature id for the '<em><b>Betreiber</b></em>' containment reference.
@@ -2552,7 +2245,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__BETREIBER = SELBSTST_ANLAGE__BETREIBER;
+	int UMRICHTER__BETREIBER = ANLAGE_MIT_ATTRIBUTEN__BETREIBER;
 
 	/**
 	 * The feature id for the '<em><b>Versorgt Von</b></em>' reference list.
@@ -2561,7 +2254,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__VERSORGT_VON = SELBSTST_ANLAGE__VERSORGT_VON;
+	int UMRICHTER__VERSORGT_VON = ANLAGE_MIT_ATTRIBUTEN__VERSORGT_VON;
 
 	/**
 	 * The feature id for the '<em><b>Verbindung Nach</b></em>' containment reference list.
@@ -2570,7 +2263,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__VERBINDUNG_NACH = SELBSTST_ANLAGE__VERBINDUNG_NACH;
+	int UMRICHTER__VERBINDUNG_NACH = ANLAGE_MIT_ATTRIBUTEN__VERBINDUNG_NACH;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2579,7 +2272,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__NAME = SELBSTST_ANLAGE__NAME;
+	int UMRICHTER__NAME = ANLAGE_MIT_ATTRIBUTEN__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Anlagennummer</b></em>' attribute.
@@ -2588,7 +2281,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__ANLAGENNUMMER = SELBSTST_ANLAGE__ANLAGENNUMMER;
+	int UMRICHTER__ANLAGENNUMMER = ANLAGE_MIT_ATTRIBUTEN__ANLAGENNUMMER;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Id</b></em>' attribute.
@@ -2597,7 +2290,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__EADB_ID = SELBSTST_ANLAGE__EADB_ID;
+	int UMRICHTER__EADB_ID = ANLAGE_MIT_ATTRIBUTEN__EADB_ID;
 
 	/**
 	 * The feature id for the '<em><b>Primaerspannung</b></em>' attribute.
@@ -2606,7 +2299,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__PRIMAERSPANNUNG = SELBSTST_ANLAGE__PRIMAERSPANNUNG;
+	int UMRICHTER__PRIMAERSPANNUNG = ANLAGE_MIT_ATTRIBUTEN__PRIMAERSPANNUNG;
 
 	/**
 	 * The feature id for the '<em><b>In Objektteil</b></em>' attribute.
@@ -2615,7 +2308,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__IN_OBJEKTTEIL = SELBSTST_ANLAGE__IN_OBJEKTTEIL;
+	int UMRICHTER__IN_OBJEKTTEIL = ANLAGE_MIT_ATTRIBUTEN__IN_OBJEKTTEIL;
 
 	/**
 	 * The feature id for the '<em><b>Eadb Versorgung Art</b></em>' attribute.
@@ -2624,7 +2317,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__EADB_VERSORGUNG_ART = SELBSTST_ANLAGE__EADB_VERSORGUNG_ART;
+	int UMRICHTER__EADB_VERSORGUNG_ART = ANLAGE_MIT_ATTRIBUTEN__EADB_VERSORGUNG_ART;
 
 	/**
 	 * The feature id for the '<em><b>Verteilerbezeichnung</b></em>' attribute.
@@ -2633,7 +2326,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__VERTEILERBEZEICHNUNG = SELBSTST_ANLAGE__VERTEILERBEZEICHNUNG;
+	int UMRICHTER__VERTEILERBEZEICHNUNG = ANLAGE_MIT_ATTRIBUTEN__VERTEILERBEZEICHNUNG;
 
 	/**
 	 * The feature id for the '<em><b>Abgang VT</b></em>' attribute.
@@ -2642,7 +2335,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__ABGANG_VT = SELBSTST_ANLAGE__ABGANG_VT;
+	int UMRICHTER__ABGANG_VT = ANLAGE_MIT_ATTRIBUTEN__ABGANG_VT;
 
 	/**
 	 * The feature id for the '<em><b>Reserve1</b></em>' attribute.
@@ -2651,7 +2344,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__RESERVE1 = SELBSTST_ANLAGE__RESERVE1;
+	int UMRICHTER__RESERVE1 = ANLAGE_MIT_ATTRIBUTEN__RESERVE1;
 
 	/**
 	 * The feature id for the '<em><b>Reserve2</b></em>' attribute.
@@ -2660,7 +2353,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__RESERVE2 = SELBSTST_ANLAGE__RESERVE2;
+	int UMRICHTER__RESERVE2 = ANLAGE_MIT_ATTRIBUTEN__RESERVE2;
 
 	/**
 	 * The feature id for the '<em><b>Umrichterfunktion</b></em>' attribute.
@@ -2669,7 +2362,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__UMRICHTERFUNKTION = SELBSTST_ANLAGE_FEATURE_COUNT + 0;
+	int UMRICHTER__UMRICHTERFUNKTION = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Funktion Sonstig</b></em>' attribute.
@@ -2678,7 +2371,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__FUNKTION_SONSTIG = SELBSTST_ANLAGE_FEATURE_COUNT + 1;
+	int UMRICHTER__FUNKTION_SONSTIG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Umrichterart</b></em>' attribute.
@@ -2687,7 +2380,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__UMRICHTERART = SELBSTST_ANLAGE_FEATURE_COUNT + 2;
+	int UMRICHTER__UMRICHTERART = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Nennleistung</b></em>' attribute.
@@ -2696,7 +2389,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER__NENNLEISTUNG = SELBSTST_ANLAGE_FEATURE_COUNT + 3;
+	int UMRICHTER__NENNLEISTUNG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Umrichter</em>' class.
@@ -2705,7 +2398,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER_FEATURE_COUNT = SELBSTST_ANLAGE_FEATURE_COUNT + 4;
+	int UMRICHTER_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Umrichter</em>' class.
@@ -2714,7 +2407,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UMRICHTER_OPERATION_COUNT = SELBSTST_ANLAGE_OPERATION_COUNT + 0;
+	int UMRICHTER_OPERATION_COUNT = ANLAGE_MIT_ATTRIBUTEN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.EigentuemerImpl <em>Eigentuemer</em>}' class.
@@ -2724,7 +2417,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEigentuemer()
 	 * @generated
 	 */
-	int EIGENTUEMER = 22;
+	int EIGENTUEMER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2761,7 +2454,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getObjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 23;
+	int OBJEKTARTTYPE = 22;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Spannungsarttype <em>Spannungsarttype</em>}' enum.
@@ -2771,7 +2464,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSpannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 24;
+	int SPANNUNGSARTTYPE = 23;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Externe_Datenquelle <em>Externe Datenquelle</em>}' enum.
@@ -2781,7 +2474,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getExterne_Datenquelle()
 	 * @generated
 	 */
-	int EXTERNE_DATENQUELLE = 25;
+	int EXTERNE_DATENQUELLE = 24;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
@@ -2791,7 +2484,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getET_Type()
 	 * @generated
 	 */
-	int ET_TYPE = 26;
+	int ET_TYPE = 25;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}' enum.
@@ -2801,7 +2494,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getARGUSrelevant()
 	 * @generated
 	 */
-	int ARGU_SRELEVANT = 27;
+	int ARGU_SRELEVANT = 26;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Eadb_Versorgung_Art <em>Eadb Versorgung Art</em>}' enum.
@@ -2811,7 +2504,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEadb_Versorgung_Art()
 	 * @generated
 	 */
-	int EADB_VERSORGUNG_ART = 28;
+	int EADB_VERSORGUNG_ART = 27;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.NapPosition <em>Nap Position</em>}' enum.
@@ -2821,7 +2514,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getNapPosition()
 	 * @generated
 	 */
-	int NAP_POSITION = 29;
+	int NAP_POSITION = 28;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.LinienType <em>Linien Type</em>}' enum.
@@ -2831,7 +2524,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getLinienType()
 	 * @generated
 	 */
-	int LINIEN_TYPE = 30;
+	int LINIEN_TYPE = 29;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Generatorfunktion <em>Generatorfunktion</em>}' enum.
@@ -2841,7 +2534,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getGeneratorfunktion()
 	 * @generated
 	 */
-	int GENERATORFUNKTION = 31;
+	int GENERATORFUNKTION = 30;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Umrichterart <em>Umrichterart</em>}' enum.
@@ -2851,7 +2544,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterart()
 	 * @generated
 	 */
-	int UMRICHTERART = 32;
+	int UMRICHTERART = 31;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Energiespeicherart <em>Energiespeicherart</em>}' enum.
@@ -2861,7 +2554,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherart()
 	 * @generated
 	 */
-	int ENERGIESPEICHERART = 33;
+	int ENERGIESPEICHERART = 32;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Umrichterfunktion <em>Umrichterfunktion</em>}' enum.
@@ -2871,7 +2564,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterfunktion()
 	 * @generated
 	 */
-	int UMRICHTERFUNKTION = 34;
+	int UMRICHTERFUNKTION = 33;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Energiespeicherfunktion <em>Energiespeicherfunktion</em>}' enum.
@@ -2881,7 +2574,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherfunktion()
 	 * @generated
 	 */
-	int ENERGIESPEICHERFUNKTION = 35;
+	int ENERGIESPEICHERFUNKTION = 34;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -3383,6 +3076,28 @@ public interface ModelPackage extends EPackage {
 	EAttribute getTrafo_Reserve3();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getOberspannung <em>Oberspannung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Oberspannung</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo#getOberspannung()
+	 * @see #getTrafo()
+	 * @generated
+	 */
+	EAttribute getTrafo_Oberspannung();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Trafo#getUnterspannung <em>Unterspannung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unterspannung</em>'.
+	 * @see at.tb_gruber.designer.model.Trafo#getUnterspannung()
+	 * @see #getTrafo()
+	 * @generated
+	 */
+	EAttribute getTrafo_Unterspannung();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Netzanschlusspunkt <em>Netzanschlusspunkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3522,16 +3237,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getGenerator_FunktionSonstig();
 
 	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.SelbststAnlage <em>Selbstst Anlage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Selbstst Anlage</em>'.
-	 * @see at.tb_gruber.designer.model.SelbststAnlage
-	 * @generated
-	 */
-	EClass getSelbststAnlage();
-
-	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerMitZaehler <em>Verteiler Mit Zaehler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3661,28 +3366,6 @@ public interface ModelPackage extends EPackage {
 	EReference getVerteilerContainer_Netzanschlusspunkt();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerContainer#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerContainer#getName()
-	 * @see #getVerteilerContainer()
-	 * @generated
-	 */
-	EAttribute getVerteilerContainer_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerContainer#getPrimaerspannung <em>Primaerspannung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Primaerspannung</em>'.
-	 * @see at.tb_gruber.designer.model.VerteilerContainer#getPrimaerspannung()
-	 * @see #getVerteilerContainer()
-	 * @generated
-	 */
-	EAttribute getVerteilerContainer_Primaerspannung();
-
-	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Betreiber <em>Betreiber</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3723,6 +3406,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVerteilerBase_Netzanschlusspunkt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerBase#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerBase#getName()
+	 * @see #getVerteilerBase()
+	 * @generated
+	 */
+	EAttribute getVerteilerBase_Name();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerOhneZaehler <em>Verteiler Ohne Zaehler</em>}'.
@@ -4420,6 +4114,22 @@ public interface ModelPackage extends EPackage {
 		EAttribute TRAFO__RESERVE3 = eINSTANCE.getTrafo_Reserve3();
 
 		/**
+		 * The meta object literal for the '<em><b>Oberspannung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFO__OBERSPANNUNG = eINSTANCE.getTrafo_Oberspannung();
+
+		/**
+		 * The meta object literal for the '<em><b>Unterspannung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFO__UNTERSPANNUNG = eINSTANCE.getTrafo_Unterspannung();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl <em>Netzanschlusspunkt</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4532,16 +4242,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute GENERATOR__FUNKTION_SONSTIG = eINSTANCE.getGenerator_FunktionSonstig();
 
 		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.SelbststAnlageImpl <em>Selbstst Anlage</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.SelbststAnlageImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSelbststAnlage()
-		 * @generated
-		 */
-		EClass SELBSTST_ANLAGE = eINSTANCE.getSelbststAnlage();
-
-		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerMitZaehlerImpl <em>Verteiler Mit Zaehler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4645,22 +4345,6 @@ public interface ModelPackage extends EPackage {
 		EReference VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerContainer_Netzanschlusspunkt();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VERTEILER_CONTAINER__NAME = eINSTANCE.getVerteilerContainer_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Primaerspannung</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VERTEILER_CONTAINER__PRIMAERSPANNUNG = eINSTANCE.getVerteilerContainer_Primaerspannung();
-
-		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.BetreiberImpl <em>Betreiber</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4695,6 +4379,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VERTEILER_BASE__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerBase_Netzanschlusspunkt();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERTEILER_BASE__NAME = eINSTANCE.getVerteilerBase_Name();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerOhneZaehlerImpl <em>Verteiler Ohne Zaehler</em>}' class.

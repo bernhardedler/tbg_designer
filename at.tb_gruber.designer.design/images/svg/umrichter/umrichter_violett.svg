@@ -5,11 +5,11 @@
   </g>
   <g>
     <title>Rahmen</title>
-    <rect fill="#fff" stroke-width="2" x="1" y="1" width="80" height="80" id="r1" stroke="#7030a0"/>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="80" height="80" id="r1" stroke="#8D7EBD"/>
   </g>
   <g>
     <title>Text</title>
-    <text x="16" y="41" fill="#7030a0" font-size="35px" font-family="sans-serif">UR</text>
-    <text x="10" y="66" fill="#7030a0" font-size="20px" font-family="sans-serif">AC/DC</text>
+    <text x="16" y="41" fill="#8D7EBD" font-size="35px" font-family="sans-serif">UR</text>
+    <text x="10" y="66" fill="#8D7EBD" font-size="20px" font-family="sans-serif">AC/DC</text>
   </g>
 </svg>

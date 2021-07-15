@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EnergiespeicherImpl extends SelbststAnlageImpl implements Energiespeicher {
+public class EnergiespeicherImpl extends AnlageMitAttributenImpl implements Energiespeicher {
 	/**
 	 * The default value of the '{@link #getEnergiespeicherfunktion() <em>Energiespeicherfunktion</em>}' attribute.
 	 * <!-- begin-user-doc -->

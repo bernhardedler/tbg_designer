@@ -255,7 +255,8 @@ public class CSVPropertyProvider {
 	 * gefiltert werden. sonst geht das Duplikat-Objekt zurück
 	 */
 	private Optional<ObjektInfo> getForId(String id, Externe_Datenquelle quelle) {
-		// Wenn eine Quelle angegeben ist, muss sie übereinstimmen, wenn undefined, dann egal
+		// Wenn eine Quelle angegeben ist, muss sie übereinstimmen, wenn undefined, dann
+		// egal
 		List<ObjektInfo> collect = objektInfos.parallelStream()
 				.filter(obj -> obj.getObjektId().equals(id)
 						&& (Externe_Datenquelle.UNDEFINED.equals(quelle) ? true : obj.quelle.equals(quelle)))
@@ -388,7 +389,6 @@ public class CSVPropertyProvider {
 
 	}
 
-
 	private void loadBetreiberDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
@@ -397,7 +397,13 @@ public class CSVPropertyProvider {
 
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
-			String line ="";
+			String line = br.readLine();
+			if (line.startsWith("EVU")) {
+				/* heade, do nothing */
+			} else {
+				betreiberList.add(line);
+			}
+
 			while ((line = br.readLine()) != null) {
 				betreiberList.add(line);
 			}
@@ -409,7 +415,6 @@ public class CSVPropertyProvider {
 
 	}
 
-
 	private void loadEigentuemerDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
@@ -418,7 +423,13 @@ public class CSVPropertyProvider {
 
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
-			String line ="";
+			String line = br.readLine();
+			if (line.startsWith("EVU")) {
+				/* heade, do nothing */
+			} else {
+				betreiberList.add(line);
+			}
+			
 			while ((line = br.readLine()) != null) {
 				eigentuemerList.add(line);
 			}
@@ -429,12 +440,12 @@ public class CSVPropertyProvider {
 		}
 
 	}
-	
-	public List<String> getBetreiber(){
+
+	public List<String> getBetreiber() {
 		return betreiberList;
-	}	
-	
-	public List<String> getEigentuemer(){
+	}
+
+	public List<String> getEigentuemer() {
 		return eigentuemerList;
 	}
 }

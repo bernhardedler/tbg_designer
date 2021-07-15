@@ -1,17 +1,17 @@
-EVU
-EN
-Immo (MA)
-Immo (ET)
-TS (MA)
-TS (ET)
-PR (MA)
-PR (ET)
-SAE (MA)
-SAE (ET)
-SAE (LS)
-SAE (TK)
-Mungos (MA)
-Mungos (ET)
-RCA (MA)
-RCA (ET)
-KA Dritte 
+﻿EVU;Energieversorgungsunternehmen;EVU
+EN;Energie;Hauptversorgung
+Immo (MA);Immobilien Maschinelle Anlagen;Kundenanlage ÖBB
+Immo (ET);Immobilien Energietechnikanlagen  ;Kundenanlage ÖBB
+TS (MA);Technisches Service Maschinelle Anlagen;Kundenanlage ÖBB
+TS (ET);Technisches Service Energietechnikanlagen;Kundenanlage ÖBB
+PR (MA);Produktion Maschinelle Anlagen;Kundenanlage ÖBB
+PR (ET);Produktion Energietechnikanlagen;Kundenanlage ÖBB
+SAE (MA);SAE (MA);Kundenanlage ÖBB
+SAE (ET);SAE (ET);Kundenanlage ÖBB
+SAE (LS);SAE (LS);Kundenanlage ÖBB
+SAE (TK);SAE (TK);Kundenanlage ÖBB
+Mungas (MA);Mungos Maschinelle Anlagen;Kundenanlage ÖBB
+Mungos (ET);Mungos Energietechnikanlagen;Kundenanlage ÖBB
+RCA (MA);Rail Cargo Group Maschinelle Anlagen;Kundenanlage ÖBB
+RCA (ET);Rail Cargo Group Energietechnikanlagen;Kundenanlage ÖBB
+KA Dritte;SAE (TK);Kundenanlage ÖBB

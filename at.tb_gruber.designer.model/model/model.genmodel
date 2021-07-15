@@ -143,6 +143,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/sekundaerspannung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/trafoKva"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/reserve3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/oberspannung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/unterspannung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Netzanschlusspunkt">
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/beschreibung"/>
@@ -161,7 +163,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Generator/elektrischeLeistung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Generator/erzeugteEnergie"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//SelbststAnlage"/>
     <genClasses ecoreClass="model.ecore#//VerteilerMitZaehler">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/nrReserveEinspeisung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/nrHauptversorgung"/>
@@ -176,14 +177,13 @@
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerContainer/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerContainer/primaerspannung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Betreiber">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Betreiber/name"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerBase">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerBase/netzanschlusspunkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerBase/name"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerOhneZaehler"/>
     <genClasses ecoreClass="model.ecore#//Details"/>

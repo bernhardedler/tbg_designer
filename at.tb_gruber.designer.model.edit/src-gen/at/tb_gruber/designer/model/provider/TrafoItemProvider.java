@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TrafoItemProvider extends SelbststAnlageItemProvider {
+public class TrafoItemProvider extends AnlageMitAttributenItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,6 +47,8 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 			addSekundaerspannungPropertyDescriptor(object);
 			addTrafoKvaPropertyDescriptor(object);
 			addReserve3PropertyDescriptor(object);
+			addOberspannungPropertyDescriptor(object);
+			addUnterspannungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,7 +81,7 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 						getResourceLocator(), getString("_UI_Trafo_trafoKva_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_trafoKva_feature", "_UI_Trafo_type"),
 						ModelPackage.Literals.TRAFO__TRAFO_KVA, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -94,6 +96,38 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 						getResourceLocator(), getString("_UI_Trafo_reserve3_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_reserve3_feature", "_UI_Trafo_type"),
 						ModelPackage.Literals.TRAFO__RESERVE3, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Oberspannung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOberspannungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Trafo_oberspannung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_oberspannung_feature",
+								"_UI_Trafo_type"),
+						ModelPackage.Literals.TRAFO__OBERSPANNUNG, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Unterspannung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnterspannungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Trafo_unterspannung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Trafo_unterspannung_feature",
+								"_UI_Trafo_type"),
+						ModelPackage.Literals.TRAFO__UNTERSPANNUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -146,6 +180,8 @@ public class TrafoItemProvider extends SelbststAnlageItemProvider {
 		case ModelPackage.TRAFO__SEKUNDAERSPANNUNG:
 		case ModelPackage.TRAFO__TRAFO_KVA:
 		case ModelPackage.TRAFO__RESERVE3:
+		case ModelPackage.TRAFO__OBERSPANNUNG:
+		case ModelPackage.TRAFO__UNTERSPANNUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

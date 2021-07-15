@@ -3,7 +3,6 @@
 package at.tb_gruber.designer.model.provider;
 
 import at.tb_gruber.designer.model.VerteilerOhneZaehler;
-
 import java.util.Collection;
 import java.util.List;
 

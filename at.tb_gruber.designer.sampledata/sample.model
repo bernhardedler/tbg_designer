@@ -37,7 +37,7 @@
     </anlage>
   </objekt>
   <objekt name="Verkehrsstation BF Muster" objektart="Verkehrsstation">
-    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="3" name="Bahnhofs-VT">
+    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="3" name="Bahnhofs-VT" verteilerbezeichnung="woswasi" abgangVT="1234">
       <betreiber name="EN"/>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
@@ -78,7 +78,7 @@
         <netzanschlusspunkt beschreibung="Trennzelle nach Messzelle" postition="MITTE"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Trafo" versorgtVon="16" name="Trafo 1">
+    <anlage xsi:type="tbg:Trafo" versorgtVon="16" name="Trafo 1" trafoKva="400kVA" oberspannung="20kV" unterspannung="400V">
       <details/>
       <betreiber name="EN"/>
       <verbindungNach nr="6" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>
@@ -93,7 +93,7 @@
         <details/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Umrichter" versorgtVon="7" name="PV_Wechselrichter" anlagennummer="UR 00">
+    <anlage xsi:type="tbg:Umrichter" versorgtVon="7" name="PV_Wechselrichter" anlagennummer="UR 00" nennleistung="37kW">
       <details/>
       <betreiber name="EN"/>
       <verbindungNach nr="8" ziel="//@objekt.5/@anlage.2" ursprung="//@objekt.5/@anlage.3"/>

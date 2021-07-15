@@ -8,10 +8,10 @@
   </g>
   <g>
     <title>Rahmen</title>
-    <rect fill="#fff" stroke-width="2" x="1" y="1" width="80" height="60" id="r1" stroke="#00ff00"/>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="80" height="60" id="r1" stroke="#00FF00"/>
   </g>
   <g>
     <title>Text</title>
-    <text x="6" y="46" fill="#00ff00" font-size="35px" font-family="sans-serif">ESP</text>
+    <text x="6" y="46" fill="#00FF00" font-size="35px" font-family="sans-serif">ESP</text>
   </g>
 </svg>

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -60,11 +59,11 @@ public class DiagramServices {
 			project = (Bahnhof) containerObj.eContainer();
 		}
 
-		Set<Integer> alleIds = new TreeSet<Integer>(); 
+		Set<Integer> alleIds = new TreeSet<Integer>();
 		for (Objekt objekt : project.getObjekt()) {
 			for (AnlageBase anlage : objekt.getAnlage()) {
 				if (anlage instanceof VerteilerContainer) {
-					for (VerteilerBase verteiler : ((VerteilerContainer)anlage).getVerteiler()) {
+					for (VerteilerBase verteiler : ((VerteilerContainer) anlage).getVerteiler()) {
 						for (Verbindung verbindung : verteiler.getVerbindungNach()) {
 							alleIds.add(verbindung.getNr());
 						}
@@ -75,7 +74,7 @@ public class DiagramServices {
 				}
 			}
 		}
-		
+
 		Integer[] alleIdsArray = new Integer[alleIds.size()];
 		alleIdsArray = alleIds.toArray(alleIdsArray);
 
@@ -87,13 +86,44 @@ public class DiagramServices {
 		return alleIdsArray.length;
 	}
 
+	public String getLabelUrsprung(EObject self) {
+		StringBuilder label = new StringBuilder();
+		if (self instanceof Verbindung) {
+			Verbindung v = (Verbindung) self;
+			label.append(v.getNr());
+			label.append(System.lineSeparator());
+			label.append(v.getQuellSicherung());
+			label.append(System.lineSeparator());
+			label.append(v.getKabeltype());
+			label.append(System.lineSeparator());
+			label.append(v.getKabellaenge());
+		}
+		return label.toString();
+	}
+
+	public String getLabelZiel(EObject self) {
+		StringBuilder label = new StringBuilder();
+		if (self instanceof Verbindung) {
+			Verbindung v = (Verbindung) self;
+			label.append(v.getNr());
+			label.append(System.lineSeparator());
+			label.append(v.getZielSicherung());
+			label.append(System.lineSeparator());
+			label.append(v.getKabeltype());
+			label.append(System.lineSeparator());
+			label.append(v.getKabellaenge());
+		}
+		return label.toString();
+	}
+
 	private Boolean isSpannungsart(EObject self, Integer target) {
 		if (self instanceof Verbindung) {
 			return target.equals(((Verbindung) self).getPrimaerspannung().getValue());
 		} else if (self instanceof AnlageMitAttributen) {
 			return target.equals(((AnlageMitAttributen) self).getPrimaerspannung().getValue());
-		} else if (self instanceof VerteilerContainer) {
-			return target.equals(((VerteilerContainer) self).getPrimaerspannung().getValue());
+		} else if (self instanceof VerteilerBase) {
+			return target
+					.equals(((VerteilerContainer) ((VerteilerBase) self).eContainer()).getPrimaerspannung().getValue());
 		}
 		return false;
 	}
@@ -135,7 +165,7 @@ public class DiagramServices {
 	}
 
 	public Boolean isVspBraun(EObject self) {
-		return isSpannungsart(self, Spannungsarttype.RESERVE_1_VALUE);
+		return isSpannungsart(self, Spannungsarttype.RESERVE_2_VALUE);
 	}
 
 	public Boolean isTspViolett(EObject self) {
@@ -163,7 +193,7 @@ public class DiagramServices {
 	}
 
 	public Boolean isTspBraun(EObject self) {
-		return isTrafoSpannungsart(self, Spannungsarttype.RESERVE_1_VALUE);
+		return isTrafoSpannungsart(self, Spannungsarttype.RESERVE_2_VALUE);
 	}
 
 	private Boolean isTrafoSpannungsart(EObject self, Integer target) {
@@ -228,7 +258,6 @@ public class DiagramServices {
 
 		return props.getBetreiber();
 	}
-	
 
 	public List<String> getAllEigentuemer(EObject self) {
 		ensurePropsInitialized();
@@ -261,29 +290,20 @@ public class DiagramServices {
 			return esp.getAutonomiezeit();
 		} else if (self.eContainer() instanceof Trafo) {
 			Trafo trafo = (Trafo) self.eContainer();
-			return trafo.getPrimaerspannung() + "/" + trafo.getSekundaerspannung() + "\n\n" + trafo.getTrafoKva();
+			return trafo.getOberspannung() + "/" + trafo.getUnterspannung() + System.lineSeparator()
+					+ System.lineSeparator() + trafo.getTrafoKva();
 		} else if (self.eContainer() instanceof Generator) {
 			Generator gen = (Generator) self.eContainer();
-			return gen.getPrimaerspannung() + "\n\n" + gen.getErzeugteEnergie() + "\n" + gen.getElektrischeLeistung();
+			return gen.getPrimaerspannung() + System.lineSeparator() + System.lineSeparator() + gen.getErzeugteEnergie()
+					+ System.lineSeparator() + gen.getElektrischeLeistung();
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
-			return ((VerteilerMitZaehler)self.eContainer()).getNrHauptversorgung();
+			return ((VerteilerMitZaehler) self.eContainer()).getNrHauptversorgung();
 		}
-
 		return "";
 	}
 
-	private Netzanschlusspunkt getNapForVerteiler(EObject self) {
-		if (self instanceof Versorgungsknoten) {
-			return ((Versorgungsknoten) self).getNetzanschlusspunkt();
-		} else if (self instanceof VerteilerBase) {
-			return Optional.ofNullable(((VerteilerBase) self).getNetzanschlusspunkt()).orElse(((VerteilerContainer)((VerteilerBase) self).eContainer()).getNetzanschlusspunkt());
-		} else if (self instanceof VerteilerContainer) {
-			return ((VerteilerContainer) self).getNetzanschlusspunkt();
-		}
-		return null;
-	}
-
 	public Boolean isVerteilerContainerNap(EObject self) {
-		return self instanceof Netzanschlusspunkt && ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
+		return self instanceof Netzanschlusspunkt
+				&& ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
 	}
 }

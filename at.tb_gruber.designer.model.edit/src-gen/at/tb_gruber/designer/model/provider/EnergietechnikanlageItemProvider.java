@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EnergietechnikanlageItemProvider extends SelbststAnlageItemProvider {
+public class EnergietechnikanlageItemProvider extends AnlageMitAttributenItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

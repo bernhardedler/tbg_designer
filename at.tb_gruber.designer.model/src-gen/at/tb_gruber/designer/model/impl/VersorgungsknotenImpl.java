@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VersorgungsknotenImpl extends SelbststAnlageImpl implements Versorgungsknoten {
+public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Versorgungsknoten {
 	/**
 	 * The cached value of the '{@link #getNetzanschlusspunkt() <em>Netzanschlusspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->

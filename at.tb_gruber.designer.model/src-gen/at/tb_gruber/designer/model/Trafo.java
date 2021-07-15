@@ -14,13 +14,15 @@ package at.tb_gruber.designer.model;
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getSekundaerspannung <em>Sekundaerspannung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Trafo#getReserve3 <em>Reserve3</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Trafo#getOberspannung <em>Oberspannung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Trafo#getUnterspannung <em>Unterspannung</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getTrafo()
  * @model
  * @generated
  */
-public interface Trafo extends SelbststAnlage {
+public interface Trafo extends AnlageMitAttributen {
 	/**
 	 * Returns the value of the '<em><b>Sekundaerspannung</b></em>' attribute.
 	 * The default value is <code>"NSP Un bis inkl 1kV 50Hz AC"</code>.
@@ -52,12 +54,12 @@ public interface Trafo extends SelbststAnlage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Trafo Kva</em>' attribute.
-	 * @see #setTrafoKva(long)
+	 * @see #setTrafoKva(String)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_TrafoKva()
 	 * @model
 	 * @generated
 	 */
-	long getTrafoKva();
+	String getTrafoKva();
 
 	/**
 	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getTrafoKva <em>Trafo Kva</em>}' attribute.
@@ -67,7 +69,7 @@ public interface Trafo extends SelbststAnlage {
 	 * @see #getTrafoKva()
 	 * @generated
 	 */
-	void setTrafoKva(long value);
+	void setTrafoKva(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Reserve3</b></em>' attribute.
@@ -90,5 +92,49 @@ public interface Trafo extends SelbststAnlage {
 	 * @generated
 	 */
 	void setReserve3(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Oberspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Oberspannung</em>' attribute.
+	 * @see #setOberspannung(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Oberspannung()
+	 * @model
+	 * @generated
+	 */
+	String getOberspannung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getOberspannung <em>Oberspannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Oberspannung</em>' attribute.
+	 * @see #getOberspannung()
+	 * @generated
+	 */
+	void setOberspannung(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Unterspannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unterspannung</em>' attribute.
+	 * @see #setUnterspannung(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getTrafo_Unterspannung()
+	 * @model
+	 * @generated
+	 */
+	String getUnterspannung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Trafo#getUnterspannung <em>Unterspannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unterspannung</em>' attribute.
+	 * @see #getUnterspannung()
+	 * @generated
+	 */
+	void setUnterspannung(String value);
 
 } // Trafo

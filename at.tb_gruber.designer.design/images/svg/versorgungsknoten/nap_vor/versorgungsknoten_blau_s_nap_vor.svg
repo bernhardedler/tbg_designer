@@ -5,10 +5,10 @@
  </g>
  <g>
   <title>Form</title>
-  <rect stroke="#0070c0" id="svg_3" height="100" width="100" y="41" x="1" stroke-width="2" fill="#fff"/>
-  <line id="svg_4" y2="90" x2="100" y1="90" x1="0" stroke-width="2" stroke="#0070c0" fill="none"/>
-  <line id="svg_5" y2="140" x2="30" y1="90" x1="30" stroke-width="2" stroke="#0070c0" fill="none"/>
-  <line id="svg_10" y2="140" x2="70" y1="90" x1="70" stroke-width="2" stroke="#0070c0" fill="none"/>
+  <rect stroke="#0000FF" id="svg_3" height="100" width="100" y="41" x="1" stroke-width="2" fill="#fff"/>
+  <line id="svg_4" y2="90" x2="100" y1="90" x1="0" stroke-width="2" stroke="#0000FF" fill="none"/>
+  <line id="svg_5" y2="140" x2="30" y1="90" x1="30" stroke-width="2" stroke="#0000FF" fill="none"/>
+  <line id="svg_10" y2="140" x2="70" y1="90" x1="70" stroke-width="2" stroke="#0000FF" fill="none"/>
  </g>
  <g>
   <title>NAP</title>

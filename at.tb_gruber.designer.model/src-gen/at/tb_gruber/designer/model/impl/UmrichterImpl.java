@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class UmrichterImpl extends SelbststAnlageImpl implements Umrichter {
+public class UmrichterImpl extends AnlageMitAttributenImpl implements Umrichter {
 	/**
 	 * The default value of the '{@link #getUmrichterfunktion() <em>Umrichterfunktion</em>}' attribute.
 	 * <!-- begin-user-doc -->

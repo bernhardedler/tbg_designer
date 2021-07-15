@@ -21,7 +21,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Generator extends SelbststAnlage {
+public interface Generator extends AnlageMitAttributen {
 	/**
 	 * Returns the value of the '<em><b>Generatorfunktion</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Generatorfunktion}.
