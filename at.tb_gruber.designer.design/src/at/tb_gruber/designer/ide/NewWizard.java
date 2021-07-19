@@ -1,10 +1,7 @@
 package at.tb_gruber.designer.ide;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.net.URI;
 
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;

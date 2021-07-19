@@ -1502,13 +1502,22 @@ public interface ModelPackage extends EPackage {
 	int GENERATOR__ERZEUGTE_ENERGIE = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Erzeugte Spannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR__ERZEUGTE_SPANNUNG = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Generator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 4;
+	int GENERATOR_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Generator</em>' class.
@@ -3215,6 +3224,17 @@ public interface ModelPackage extends EPackage {
 	EAttribute getGenerator_ErzeugteEnergie();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Generator#getErzeugteSpannung <em>Erzeugte Spannung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Erzeugte Spannung</em>'.
+	 * @see at.tb_gruber.designer.model.Generator#getErzeugteSpannung()
+	 * @see #getGenerator()
+	 * @generated
+	 */
+	EAttribute getGenerator_ErzeugteSpannung();
+
+	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Generator#getElektrischeLeistung <em>Elektrische Leistung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4224,6 +4244,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GENERATOR__ERZEUGTE_ENERGIE = eINSTANCE.getGenerator_ErzeugteEnergie();
+
+		/**
+		 * The meta object literal for the '<em><b>Erzeugte Spannung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATOR__ERZEUGTE_SPANNUNG = eINSTANCE.getGenerator_ErzeugteSpannung();
 
 		/**
 		 * The meta object literal for the '<em><b>Elektrische Leistung</b></em>' attribute feature.

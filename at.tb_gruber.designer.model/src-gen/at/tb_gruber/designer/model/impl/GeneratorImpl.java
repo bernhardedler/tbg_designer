@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getFunktionSonstig <em>Funktion Sonstig</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getElektrischeLeistung <em>Elektrische Leistung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getErzeugteEnergie <em>Erzeugte Energie</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.GeneratorImpl#getErzeugteSpannung <em>Erzeugte Spannung</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +111,26 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 	protected String erzeugteEnergie = ERZEUGTE_ENERGIE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getErzeugteSpannung() <em>Erzeugte Spannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErzeugteSpannung()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ERZEUGTE_SPANNUNG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getErzeugteSpannung() <em>Erzeugte Spannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErzeugteSpannung()
+	 * @generated
+	 * @ordered
+	 */
+	protected String erzeugteSpannung = ERZEUGTE_SPANNUNG_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -182,6 +203,30 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 	 * @generated
 	 */
 	@Override
+	public String getErzeugteSpannung() {
+		return erzeugteSpannung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setErzeugteSpannung(String newErzeugteSpannung) {
+		String oldErzeugteSpannung = erzeugteSpannung;
+		erzeugteSpannung = newErzeugteSpannung;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.GENERATOR__ERZEUGTE_SPANNUNG,
+					oldErzeugteSpannung, erzeugteSpannung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getElektrischeLeistung() {
 		return elektrischeLeistung;
 	}
@@ -240,6 +285,8 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 			return getElektrischeLeistung();
 		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
 			return getErzeugteEnergie();
+		case ModelPackage.GENERATOR__ERZEUGTE_SPANNUNG:
+			return getErzeugteSpannung();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,6 +310,9 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 			return;
 		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
 			setErzeugteEnergie((String) newValue);
+			return;
+		case ModelPackage.GENERATOR__ERZEUGTE_SPANNUNG:
+			setErzeugteSpannung((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -288,6 +338,9 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
 			setErzeugteEnergie(ERZEUGTE_ENERGIE_EDEFAULT);
 			return;
+		case ModelPackage.GENERATOR__ERZEUGTE_SPANNUNG:
+			setErzeugteSpannung(ERZEUGTE_SPANNUNG_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,6 +364,9 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
 			return ERZEUGTE_ENERGIE_EDEFAULT == null ? erzeugteEnergie != null
 					: !ERZEUGTE_ENERGIE_EDEFAULT.equals(erzeugteEnergie);
+		case ModelPackage.GENERATOR__ERZEUGTE_SPANNUNG:
+			return ERZEUGTE_SPANNUNG_EDEFAULT == null ? erzeugteSpannung != null
+					: !ERZEUGTE_SPANNUNG_EDEFAULT.equals(erzeugteSpannung);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -334,6 +390,8 @@ public class GeneratorImpl extends AnlageMitAttributenImpl implements Generator 
 		result.append(elektrischeLeistung);
 		result.append(", erzeugteEnergie: ");
 		result.append(erzeugteEnergie);
+		result.append(", erzeugteSpannung: ");
+		result.append(erzeugteSpannung);
 		result.append(')');
 		return result.toString();
 	}

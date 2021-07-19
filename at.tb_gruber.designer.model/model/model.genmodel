@@ -62,7 +62,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//LinienType">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Hauptversorgung"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/EVU"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage_ÖBB"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage_OEBB"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//LinienType/Kundenanlage_Dritter"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//Generatorfunktion">
@@ -162,6 +162,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Generator/funktionSonstig"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Generator/elektrischeLeistung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Generator/erzeugteEnergie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Generator/erzeugteSpannung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerMitZaehler">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/nrReserveEinspeisung"/>

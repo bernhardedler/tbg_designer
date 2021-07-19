@@ -48,6 +48,7 @@ public class GeneratorItemProvider extends AnlageMitAttributenItemProvider {
 			addFunktionSonstigPropertyDescriptor(object);
 			addElektrischeLeistungPropertyDescriptor(object);
 			addErzeugteEnergiePropertyDescriptor(object);
+			addErzeugteSpannungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,6 +82,22 @@ public class GeneratorItemProvider extends AnlageMitAttributenItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Generator_erzeugteEnergie_feature",
 								"_UI_Generator_type"),
 						ModelPackage.Literals.GENERATOR__ERZEUGTE_ENERGIE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Erzeugte Spannung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addErzeugteSpannungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Generator_erzeugteSpannung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Generator_erzeugteSpannung_feature",
+								"_UI_Generator_type"),
+						ModelPackage.Literals.GENERATOR__ERZEUGTE_SPANNUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -166,6 +183,7 @@ public class GeneratorItemProvider extends AnlageMitAttributenItemProvider {
 		case ModelPackage.GENERATOR__FUNKTION_SONSTIG:
 		case ModelPackage.GENERATOR__ELEKTRISCHE_LEISTUNG:
 		case ModelPackage.GENERATOR__ERZEUGTE_ENERGIE:
+		case ModelPackage.GENERATOR__ERZEUGTE_SPANNUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -92,11 +92,11 @@ public class DiagramServices {
 			Verbindung v = (Verbindung) self;
 			label.append(v.getNr());
 			label.append(System.lineSeparator());
-			label.append(v.getQuellSicherung());
+			label.append(Optional.ofNullable(v.getQuellSicherung()).orElse(""));
 			label.append(System.lineSeparator());
-			label.append(v.getKabeltype());
+			label.append(Optional.ofNullable(v.getKabeltype()).orElse(""));
 			label.append(System.lineSeparator());
-			label.append(v.getKabellaenge());
+			label.append(Optional.ofNullable(v.getKabellaenge()).orElse(""));
 		}
 		return label.toString();
 	}
@@ -107,11 +107,11 @@ public class DiagramServices {
 			Verbindung v = (Verbindung) self;
 			label.append(v.getNr());
 			label.append(System.lineSeparator());
-			label.append(v.getZielSicherung());
+			label.append(Optional.ofNullable(v.getZielSicherung()).orElse(""));
 			label.append(System.lineSeparator());
-			label.append(v.getKabeltype());
+			label.append(Optional.ofNullable(v.getKabeltype()).orElse(""));
 			label.append(System.lineSeparator());
-			label.append(v.getKabellaenge());
+			label.append(Optional.ofNullable(v.getKabellaenge()).orElse(""));
 		}
 		return label.toString();
 	}
@@ -274,7 +274,7 @@ public class DiagramServices {
 	}
 
 	public Boolean isDash(EObject self) {
-		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_ÖBB);
+		return self instanceof Verbindung && ((Verbindung) self).getLinientype().equals(LinienType.KUNDENANLAGE_OEBB);
 	}
 
 	public Boolean isDashDot(EObject self) {
@@ -287,15 +287,21 @@ public class DiagramServices {
 			return ((Umrichter) self.eContainer()).getNennleistung();
 		} else if (self.eContainer() instanceof Energiespeicher) {
 			Energiespeicher esp = (Energiespeicher) self.eContainer();
-			return esp.getAutonomiezeit();
+			return Optional.ofNullable(esp.getAutonomiezeit()).orElse("");
 		} else if (self.eContainer() instanceof Trafo) {
 			Trafo trafo = (Trafo) self.eContainer();
-			return trafo.getOberspannung() + "/" + trafo.getUnterspannung() + System.lineSeparator()
-					+ System.lineSeparator() + trafo.getTrafoKva();
+			return Optional.ofNullable(trafo.getOberspannung()).orElse("0V") + "/" + Optional.ofNullable(trafo.getUnterspannung()).orElse("0V") 
+					+ System.lineSeparator()
+					+ System.lineSeparator() 
+					+ Optional.ofNullable(trafo.getTrafoKva()).orElse("0kVA");
 		} else if (self.eContainer() instanceof Generator) {
 			Generator gen = (Generator) self.eContainer();
-			return gen.getPrimaerspannung() + System.lineSeparator() + System.lineSeparator() + gen.getErzeugteEnergie()
-					+ System.lineSeparator() + gen.getElektrischeLeistung();
+			return Optional.ofNullable(gen.getErzeugteSpannung()).orElse("0V") 
+					+ System.lineSeparator() 
+					+ System.lineSeparator() 
+					+ Optional.ofNullable(gen.getErzeugteEnergie()).orElse("0")
+					+ System.lineSeparator() 
+					+ Optional.ofNullable(gen.getElektrischeLeistung()).orElse("0W");
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
 			return ((VerteilerMitZaehler) self.eContainer()).getNrHauptversorgung();
 		}

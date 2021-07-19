@@ -14,7 +14,7 @@
          </property>
          <property
                name="aboutImage"
-               value="icons/about.gif">
+               value="images/128x128.png">
          </property>
          <property
                name="appName"

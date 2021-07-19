@@ -63,7 +63,7 @@ public class CSVPropertyProvider {
 		if (csvPath == null || csvPath.isEmpty()) {
 			return;
 		}
-		int idxObjektId, idxObjektName, idxGebaeudeArt, idxLand, idxPlz, idxOrt, idxStrasse;
+		int idxObjektId = -1, idxObjektName = -1, idxGebaeudeArt = -1, idxLand = -1, idxPlz = -1, idxOrt = -1, idxStrasse = -1;
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
 			String line = "";
@@ -106,6 +106,15 @@ public class CSVPropertyProvider {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.err.println(idxObjektId);
+			System.err.println(idxObjektName);
+			System.err.println(idxGebaeudeArt);
+			System.err.println(idxLand);
+			System.err.println(idxPlz);
+			System.err.println(idxOrt);
+			System.err.println(idxStrasse);
+			e.printStackTrace();
 		}
 
 	}
@@ -115,7 +124,7 @@ public class CSVPropertyProvider {
 		if (csvPath == null || csvPath.isEmpty()) {
 			return;
 		}
-		int idxObjektId, idxObjektName, idxLand, idxPlz, idxOrt, idxStrasse;
+		int idxObjektId = -1, idxObjektName = -1, idxLand = -1, idxPlz = -1, idxOrt = -1, idxStrasse = -1;
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
 			String line = "";
@@ -155,6 +164,14 @@ public class CSVPropertyProvider {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.err.println(idxObjektId);
+			System.err.println(idxObjektName);
+			System.err.println(idxLand);
+			System.err.println(idxPlz);
+			System.err.println(idxOrt);
+			System.err.println(idxStrasse);
 			e.printStackTrace();
 		}
 
@@ -399,13 +416,13 @@ public class CSVPropertyProvider {
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
 			String line = br.readLine();
 			if (line.startsWith("EVU")) {
-				/* heade, do nothing */
+				/* header, do nothing */
 			} else {
-				betreiberList.add(line);
+				betreiberList.add(line.split(";")[0]);
 			}
 
 			while ((line = br.readLine()) != null) {
-				betreiberList.add(line);
+				betreiberList.add(line.split(";")[0]);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -427,11 +444,11 @@ public class CSVPropertyProvider {
 			if (line.startsWith("EVU")) {
 				/* heade, do nothing */
 			} else {
-				betreiberList.add(line);
+				betreiberList.add(line.split(";")[0]);
 			}
 			
 			while ((line = br.readLine()) != null) {
-				eigentuemerList.add(line);
+				eigentuemerList.add(line.split(";")[0]);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

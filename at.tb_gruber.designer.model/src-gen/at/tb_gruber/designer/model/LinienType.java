@@ -39,23 +39,22 @@ public enum LinienType implements Enumerator {
 	EVU(1, "EVU", "EVU"),
 
 	/**
-	 * The '<em><b>Kundenanlage ÖBB</b></em>' literal object.
+	 * The '<em><b>Kundenanlage OEBB</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #KUNDENANLAGE_ÖBB_VALUE
+	 * @see #KUNDENANLAGE_OEBB_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	KUNDENANLAGE_ÖBB(2, "Kundenanlage_ÖBB", "Kundenanlage_\u00d6BB"),
-
+	KUNDENANLAGE_OEBB(2, "Kundenanlage_OEBB", "Kundenanlage_OEBB"),
 	/**
-	 * The '<em><b>Kundenanlage Dritter</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #KUNDENANLAGE_DRITTER_VALUE
-	 * @generated
-	 * @ordered
-	 */
+	* The '<em><b>Kundenanlage Dritter</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #KUNDENANLAGE_DRITTER_VALUE
+	* @generated
+	* @ordered
+	*/
 	KUNDENANLAGE_DRITTER(3, "Kundenanlage_Dritter", "Kundenanlage Dritter");
 
 	/**
@@ -81,15 +80,15 @@ public enum LinienType implements Enumerator {
 	public static final int EVU_VALUE = 1;
 
 	/**
-	 * The '<em><b>Kundenanlage ÖBB</b></em>' literal value.
+	 * The '<em><b>Kundenanlage OEBB</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #KUNDENANLAGE_ÖBB
-	 * @model name="Kundenanlage_ÖBB"
+	 * @see #KUNDENANLAGE_OEBB
+	 * @model name="Kundenanlage_OEBB"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int KUNDENANLAGE_ÖBB_VALUE = 2;
+	public static final int KUNDENANLAGE_OEBB_VALUE = 2;
 
 	/**
 	 * The '<em><b>Kundenanlage Dritter</b></em>' literal value.
@@ -108,7 +107,7 @@ public enum LinienType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LinienType[] VALUES_ARRAY = new LinienType[] { HAUPTVERSORGUNG, EVU, KUNDENANLAGE_ÖBB,
+	private static final LinienType[] VALUES_ARRAY = new LinienType[] { HAUPTVERSORGUNG, EVU, KUNDENANLAGE_OEBB,
 			KUNDENANLAGE_DRITTER, };
 
 	/**
@@ -169,8 +168,8 @@ public enum LinienType implements Enumerator {
 			return HAUPTVERSORGUNG;
 		case EVU_VALUE:
 			return EVU;
-		case KUNDENANLAGE_ÖBB_VALUE:
-			return KUNDENANLAGE_ÖBB;
+		case KUNDENANLAGE_OEBB_VALUE:
+			return KUNDENANLAGE_OEBB;
 		case KUNDENANLAGE_DRITTER_VALUE:
 			return KUNDENANLAGE_DRITTER;
 		}

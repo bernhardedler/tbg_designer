@@ -39,7 +39,7 @@ import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.impl.ModelFactoryImpl;
 
 public class ProjectServices {
-	public static final String TBG_VP = "AnlagenDesigner";
+	public static final String TBG_VP = "TBGDesigner";
 
 	public void createProject(IProgressMonitor monitor, IProject project) {
 		try {

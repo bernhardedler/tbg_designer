@@ -15,6 +15,7 @@ package at.tb_gruber.designer.model;
  *   <li>{@link at.tb_gruber.designer.model.Generator#getFunktionSonstig <em>Funktion Sonstig</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Generator#getElektrischeLeistung <em>Elektrische Leistung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Generator#getErzeugteEnergie <em>Erzeugte Energie</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.Generator#getErzeugteSpannung <em>Erzeugte Spannung</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getGenerator()
@@ -68,6 +69,28 @@ public interface Generator extends AnlageMitAttributen {
 	 * @generated
 	 */
 	void setErzeugteEnergie(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Erzeugte Spannung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Erzeugte Spannung</em>' attribute.
+	 * @see #setErzeugteSpannung(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getGenerator_ErzeugteSpannung()
+	 * @model
+	 * @generated
+	 */
+	String getErzeugteSpannung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Generator#getErzeugteSpannung <em>Erzeugte Spannung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Erzeugte Spannung</em>' attribute.
+	 * @see #getErzeugteSpannung()
+	 * @generated
+	 */
+	void setErzeugteSpannung(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Elektrische Leistung</b></em>' attribute.

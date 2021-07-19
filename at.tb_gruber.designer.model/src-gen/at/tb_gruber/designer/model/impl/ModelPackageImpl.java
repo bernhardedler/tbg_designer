@@ -960,6 +960,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getGenerator_ErzeugteSpannung() {
+		return (EAttribute) generatorEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getGenerator_ElektrischeLeistung() {
 		return (EAttribute) generatorEClass.getEStructuralFeatures().get(2);
 	}
@@ -1525,6 +1535,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(generatorEClass, GENERATOR__FUNKTION_SONSTIG);
 		createEAttribute(generatorEClass, GENERATOR__ELEKTRISCHE_LEISTUNG);
 		createEAttribute(generatorEClass, GENERATOR__ERZEUGTE_ENERGIE);
+		createEAttribute(generatorEClass, GENERATOR__ERZEUGTE_SPANNUNG);
 
 		verteilerMitZaehlerEClass = createEClass(VERTEILER_MIT_ZAEHLER);
 		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__NR_RESERVE_EINSPEISUNG);
@@ -1791,6 +1802,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getGenerator_ErzeugteEnergie(), ecorePackage.getEString(), "erzeugteEnergie", null, 0, 1,
 				Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGenerator_ErzeugteSpannung(), ecorePackage.getEString(), "erzeugteSpannung", null, 0, 1,
+				Generator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(verteilerMitZaehlerEClass, VerteilerMitZaehler.class, "VerteilerMitZaehler", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1936,7 +1950,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEEnum(linienTypeEEnum, LinienType.class, "LinienType");
 		addEEnumLiteral(linienTypeEEnum, LinienType.HAUPTVERSORGUNG);
 		addEEnumLiteral(linienTypeEEnum, LinienType.EVU);
-		addEEnumLiteral(linienTypeEEnum, LinienType.KUNDENANLAGE_ÖBB);
+		addEEnumLiteral(linienTypeEEnum, LinienType.KUNDENANLAGE_OEBB);
 		addEEnumLiteral(linienTypeEEnum, LinienType.KUNDENANLAGE_DRITTER);
 
 		initEEnum(generatorfunktionEEnum, Generatorfunktion.class, "Generatorfunktion");

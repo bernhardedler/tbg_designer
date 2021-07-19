@@ -106,6 +106,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="funktionSonstig" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="elektrischeLeistung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="erzeugteEnergie" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="erzeugteSpannung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Externe_Datenquelle">
     <eLiterals name="undefined"/>
@@ -164,7 +165,7 @@
   <eClassifiers xsi:type="ecore:EEnum" name="LinienType">
     <eLiterals name="Hauptversorgung"/>
     <eLiterals name="EVU" value="1"/>
-    <eLiterals name="Kundenanlage_ÖBB" value="2"/>
+    <eLiterals name="Kundenanlage_OEBB" value="2" literal="Kundenanlage_OEBB"/>
     <eLiterals name="Kundenanlage_Dritter" value="3" literal="Kundenanlage Dritter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerBase" abstract="true" eSuperTypes="#//AnlageOhneAttribute">

@@ -1,13 +1,15 @@
 package at.tb_gruber.designer.ide.print;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.core.runtime.CoreException;
+import org.apache.batik.transcoder.TranscoderException;
+import org.apache.batik.transcoder.TranscoderInput;
+import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.fop.svg.PDFTranscoder;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
@@ -16,7 +18,6 @@ import org.eclipse.gmf.runtime.diagram.ui.printing.internal.util.PrintHelperUtil
 import org.eclipse.gmf.runtime.diagram.ui.printing.internal.util.SWTDiagramPrinter;
 import org.eclipse.gmf.runtime.diagram.ui.render.clipboard.DiagramSVGGenerator;
 import org.eclipse.gmf.runtime.draw2d.ui.render.awt.internal.svg.SVGImage;
-import org.eclipse.gmf.runtime.draw2d.ui.render.awt.internal.svg.SVGImageConverter;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.printing.PrintDialog;
@@ -61,12 +62,20 @@ public class TBGPrintActionHelper {
 					List editParts = dgrmEP.getPrimaryEditParts();
 					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
 							false);
-					SVGImageConverter.exportToPDF((SVGImage) generator.getRenderedImage(), os);
+					SVGImage svg = (SVGImage) generator.getRenderedImage();
+					TranscoderOutput transcoderOutput = new TranscoderOutput(os);
+					TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());
+					PDFTranscoder pdfTranscoder = new PDFTranscoder();
+//					pdfTranscoder.addTranscodingHint(PDFTranscoder.KEY_PIXEL_UNIT_TO_MILLIMETER, (25.4f / 72f));
+					pdfTranscoder.transcode(transcoderInput, transcoderOutput);
+
 					MessageBox success = new MessageBox(editorPart.getSite().getShell());
 					success.setText("Export erfolgreich");
 					success.setMessage("Das Diagramm wurde erfolgreich exportiert.");
 					success.open();
-				} catch (CoreException | IOException e) {
+				} catch (IOException e) {
+					e.printStackTrace();
+				} catch (TranscoderException e) {
 					e.printStackTrace();
 				}
 			}

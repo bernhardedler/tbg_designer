@@ -34,7 +34,7 @@ public class TBGPreferencePage extends FieldEditorPreferencePage implements IWor
 	        FileFieldEditor betreiberDatei = new FileFieldEditor(PROPERTY_ID_BETREIBER_DATEI, "&Betreiber:", getFieldEditorParent());
 	        betreiberDatei.setFileExtensions(new String[] {"*.csv"});
 	        addField(betreiberDatei);
-	        FileFieldEditor eigentuemerDatei = new FileFieldEditor(PROPERTY_ID_EIGENTUEMER_DATEI, "&Eigentümer:", getFieldEditorParent());
+	        FileFieldEditor eigentuemerDatei = new FileFieldEditor(PROPERTY_ID_EIGENTUEMER_DATEI, "&Eigentuemer:", getFieldEditorParent());
 	        eigentuemerDatei.setFileExtensions(new String[] {"*.csv"});
 	        addField(eigentuemerDatei);
 	    }
