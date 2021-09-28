@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="designer" version="12.0.0.201704030900">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="designer" version="12.0.0.2017041100">
   <ownedViewpoints name="TBGDesigner" modelFileExtension="model">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Versorgungsschema" initialisation="true" domainClass="model::Bahnhof">
       <metamodel href="http://www.tb-gruber.at/model#/"/>
@@ -1511,56 +1511,56 @@
               </conditionnalStyles>
             </subNodeMappings>
             <conditionnalStyles predicateExpression="aql:self.isVspViolett()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.isVspRot()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.isVspBlau()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.isVspGruen()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.isVspMagenta()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.isVspCyan()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.isVspBraun()">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" backgroundStyle="Liquid">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" backgroundStyle="Liquid">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.objektart.toString())" backgroundStyle="Liquid">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1576,10 +1576,22 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/plankopf.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/legende.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
+          <conditionnalStyles predicateExpression="aql:self.oclAsType(model::Plankopf).hochformat">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="''" hideLabelByDefault="true" workspacePath="/at.tb_gruber.designer.design/images/legende_hoch.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:not self.oclAsType(model::Plankopf).hochformat">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="''" hideLabelByDefault="true" workspacePath="/at.tb_gruber.designer.design/images/legende.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
         </containerMappings>
         <toolSections name="Gebäude">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="GebaeudeAnlegen" label="Gebäude" containerMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']">

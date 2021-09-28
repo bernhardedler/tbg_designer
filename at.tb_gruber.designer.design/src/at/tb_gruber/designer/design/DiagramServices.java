@@ -32,13 +32,7 @@ import at.tb_gruber.designer.model.VerteilerMitZaehler;
  */
 public class DiagramServices {
 
-	private CSVPropertyProvider props = null;
-
-	private void ensurePropsInitialized() {
-		if (props == null) {
-			props = new CSVPropertyProvider();
-		}
-	}
+	private CSVPropertyProvider props = CSVPropertyProvider.getInstance();
 
 	/**
 	 * Erstellt die nächst niedrige, noch nicht vergebene ID
@@ -254,14 +248,10 @@ public class DiagramServices {
 	}
 
 	public List<String> getAllBetreiber(EObject self) {
-		ensurePropsInitialized();
-
 		return props.getBetreiber();
 	}
 
 	public List<String> getAllEigentuemer(EObject self) {
-		ensurePropsInitialized();
-
 		return props.getEigentuemer();
 	}
 
@@ -312,4 +302,5 @@ public class DiagramServices {
 		return self instanceof Netzanschlusspunkt
 				&& ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
 	}
+	
 }

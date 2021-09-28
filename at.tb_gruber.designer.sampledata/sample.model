@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample" projektname="Testprojekt">
+<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample1" projektname="Testprojekt">
   <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
     <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00" primaerspannung="HSP Un ab 1kV 50Hz">
       <betreiber name="EVU"/>
@@ -29,7 +29,7 @@
     </anlage>
     <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="14" name="Haupt-VT AG BF Muster" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
-      <verbindungNach nr="2" ziel="//@objekt.1/@anlage.4" ursprung="//@objekt.1/@anlage.3" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="2" ziel="//@objekt.1/@anlage.4" ursprung="//@objekt.1/@anlage.3" linientype="Kundenanlage_OEBB"/>
       <verbindungNach nr="3" ziel="//@objekt.2/@anlage.0" ursprung="//@objekt.1/@anlage.3"/>
     </anlage>
     <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="2" name="TK-VT" anlagennummer="ET 03">
@@ -69,7 +69,7 @@
       <netzanschlusspunkt versorgtVon="4" beschreibung="NAP 1"/>
     </anlage>
   </objekt>
-  <objekt name="&#xd6;BB TG M&#xfc;llerdorf">
+  <objekt name="2017050_SH   WHZ. 1  ASCHBACH  HL. 2" objektId="10015859" ort_adresse="AT 3361 ASCHBACH BAHNHOFSTRASSE 1" gebaeudeart="Verkehrsstation">
     <anlage xsi:type="tbg:VerteilerContainer" name="Schaltanlage TG M&#xfc;llerdorf">
       <betreiber name="EN"/>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
@@ -83,7 +83,7 @@
       <betreiber name="EN"/>
       <verbindungNach nr="6" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>
     </anlage>
-    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="8" name="Haupt-VT TG M&#xfc;llerdorf">
+    <anlage xsi:type="tbg:VerteilerContainer" versorgtVon="8" name="Haupt-VT TG M&#xfc;llerdorf" anlagennummer="12345">
       <betreiber name="EN"/>
       <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="6">
         <details/>
@@ -127,22 +127,22 @@
     <anlage xsi:type="tbg:Trafo" versorgtVon="9" name="WHZ1" primaerspannung="HSP Un 15kV 16,7Hz" sekundaerspannung="NSP Un bis inkl 1kV 16,7Hz">
       <details/>
       <betreiber name="SAE (ET)"/>
-      <verbindungNach nr="10" primaerspannung="NSP Un bis inkl 1kV 16,7Hz" ziel="//@objekt.8/@anlage.1" ursprung="//@objekt.9/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="10" primaerspannung="NSP Un bis inkl 1kV 16,7Hz" ziel="//@objekt.8/@anlage.1" ursprung="//@objekt.9/@anlage.1" linientype="Kundenanlage_OEBB"/>
     </anlage>
   </objekt>
   <objekt name="&#xd6;BB SH Mustertunnelportal West">
     <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="13" anlagennummer="VK 00">
       <betreiber name="SAE (ET)"/>
-      <verbindungNach nr="11" ziel="//@objekt.10/@anlage.1" ursprung="//@objekt.10/@anlage.0" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="11" ziel="//@objekt.10/@anlage.1" ursprung="//@objekt.10/@anlage.0" linientype="Kundenanlage_OEBB"/>
     </anlage>
     <anlage xsi:type="tbg:Umrichter" versorgtVon="11" anlagennummer="UR 00">
       <details/>
       <betreiber name="SAE (ET)"/>
-      <verbindungNach nr="12" ziel="//@objekt.10/@anlage.2" ursprung="//@objekt.10/@anlage.1" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="12" ziel="//@objekt.10/@anlage.2" ursprung="//@objekt.10/@anlage.1" linientype="Kundenanlage_OEBB"/>
     </anlage>
     <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="12" name="T-VT MT West" anlagennummer="ET 00">
       <betreiber name="SAE (ET)"/>
-      <verbindungNach nr="13" ziel="//@objekt.10/@anlage.0" ursprung="//@objekt.10/@anlage.2" linientype="Kundenanlage_&#xd6;BB"/>
+      <verbindungNach nr="13" ziel="//@objekt.10/@anlage.0" ursprung="//@objekt.10/@anlage.2" linientype="Kundenanlage_OEBB"/>
     </anlage>
     <anlage xsi:type="tbg:Energiespeicher" anlagennummer="ESP 00" autonomiezeit="30 min">
       <details/>

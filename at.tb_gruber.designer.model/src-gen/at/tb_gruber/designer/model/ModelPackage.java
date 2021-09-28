@@ -595,13 +595,22 @@ public interface ModelPackage extends EPackage {
 	int PLANKOPF__TEXTBAUSTEIN = 0;
 
 	/**
+	 * The feature id for the '<em><b>Hochformat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANKOPF__HOCHFORMAT = 1;
+
+	/**
 	 * The number of structural features of the '<em>Plankopf</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANKOPF_FEATURE_COUNT = 1;
+	int PLANKOPF_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Plankopf</em>' class.
@@ -3021,6 +3030,17 @@ public interface ModelPackage extends EPackage {
 	EReference getPlankopf_Textbaustein();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Plankopf#isHochformat <em>Hochformat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hochformat</em>'.
+	 * @see at.tb_gruber.designer.model.Plankopf#isHochformat()
+	 * @see #getPlankopf()
+	 * @generated
+	 */
+	EAttribute getPlankopf_Hochformat();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Textbaustein <em>Textbaustein</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4080,6 +4100,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLANKOPF__TEXTBAUSTEIN = eINSTANCE.getPlankopf_Textbaustein();
+
+		/**
+		 * The meta object literal for the '<em><b>Hochformat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANKOPF__HOCHFORMAT = eINSTANCE.getPlankopf_Hochformat();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.TextbausteinImpl <em>Textbaustein</em>}' class.

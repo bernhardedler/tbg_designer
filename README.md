@@ -20,6 +20,9 @@ https://www.eclipse.org/sirius/doc/developer/extensions-provide_custom_style.htm
 - `product\designer.product` definiert Runtime-Eclipse
 - `product\pom.xml` Tycho goal für build
 
+## Auslieferung fertiges Artefakt
+in product/designer.product "Export an Eclipse Product". Sollte ein ca. 330MB großes Zip generieren.
+
 # Code
 ## Eclipse Projekt
 `at.tb_gruber.designer.ide.*` kümmert sich um den Projekt-Wizard, die Natures und die korrekte Initialisierung des Datemodells.

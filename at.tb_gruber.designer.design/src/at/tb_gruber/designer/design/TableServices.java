@@ -31,7 +31,7 @@ import at.tb_gruber.designer.model.VerteilerMitZaehler;
  */
 public class TableServices {
 
-	private CSVPropertyProvider props = null;
+	private CSVPropertyProvider props = CSVPropertyProvider.getInstance();
 
 	public String getBahnhof(EObject self) {
 		String bahnhof = "";
@@ -54,7 +54,6 @@ public class TableServices {
 	}
 
 	public String getZielObjektName(EObject self) {
-		ensurePropsInitialized();
 		String objektName = "";
 		if (self instanceof Verbindung) {
 			Objekt objekt = getObjektForVerbindung((Verbindung) self);
@@ -86,7 +85,6 @@ public class TableServices {
 	}
 
 	public String getZielAdresse(EObject self) {
-		ensurePropsInitialized();
 		String adresse = "";
 		if (self instanceof Verbindung) {
 			Objekt objekt = getObjektForVerbindung((Verbindung) self);
@@ -109,7 +107,6 @@ public class TableServices {
 	}
 
 	public String getZielGebaeudeart(EObject self) {
-		ensurePropsInitialized();
 		String gebaeudeart = "";
 		if (self instanceof Verbindung) {
 			Objekt objekt = getObjektForVerbindung((Verbindung) self);
@@ -544,9 +541,4 @@ public class TableServices {
 		return result;
 	}
 
-	private void ensurePropsInitialized() {
-		if (props == null) {
-			props = new CSVPropertyProvider();
-		}
-	}
 }

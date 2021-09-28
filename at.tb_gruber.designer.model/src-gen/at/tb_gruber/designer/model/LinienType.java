@@ -48,13 +48,13 @@ public enum LinienType implements Enumerator {
 	 */
 	KUNDENANLAGE_OEBB(2, "Kundenanlage_OEBB", "Kundenanlage_OEBB"),
 	/**
-	* The '<em><b>Kundenanlage Dritter</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Kundenanlage Dritter</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #KUNDENANLAGE_DRITTER_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #KUNDENANLAGE_DRITTER_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	KUNDENANLAGE_DRITTER(3, "Kundenanlage_Dritter", "Kundenanlage Dritter");
 
 	/**

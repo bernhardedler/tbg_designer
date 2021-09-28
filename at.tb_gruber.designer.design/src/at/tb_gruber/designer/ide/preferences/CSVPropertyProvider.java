@@ -28,8 +28,16 @@ public class CSVPropertyProvider {
 	private List<String> eigentuemerList = new ArrayList<>();
 	private static IPreferenceStore preferenceStore = new ScopedPreferenceStore(InstanceScope.INSTANCE,
 			TBGPreferencePage.PREFERENCE_SCOPE_IDENTIFIER);
+	
+	private static CSVPropertyProvider INSTANCE;
+	public static CSVPropertyProvider getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new CSVPropertyProvider();
+		}
+		return INSTANCE;
+	}
 
-	public CSVPropertyProvider() {
+	private CSVPropertyProvider() {
 		registerListener();
 		loadImmobilienDatei();
 		loadVerkehrsstationenDatei();

@@ -61,4 +61,10 @@
            providerClass="at.tb_gruber.designer.design.style.StyleConfigurationProvider">
      </styleConfigurationProvider>
   </extension>
+  <extension
+        point="org.eclipse.sirius.sessionFactory">
+     <sessionFactory
+           class="at.tb_gruber.designer.transaction.TBGSessionFactory">
+     </sessionFactory>
+  </extension>
 </plugin>

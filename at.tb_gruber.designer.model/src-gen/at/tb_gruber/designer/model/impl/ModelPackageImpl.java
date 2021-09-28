@@ -770,6 +770,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getPlankopf_Hochformat() {
+		return (EAttribute) plankopfEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTextbaustein() {
 		return textbausteinEClass;
 	}
@@ -1508,6 +1518,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		plankopfEClass = createEClass(PLANKOPF);
 		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
+		createEAttribute(plankopfEClass, PLANKOPF__HOCHFORMAT);
 
 		textbausteinEClass = createEClass(TEXTBAUSTEIN);
 		createEAttribute(textbausteinEClass, TEXTBAUSTEIN__LABEL);
@@ -1745,6 +1756,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getPlankopf_Textbaustein(), this.getTextbaustein(), null, "textbaustein", null, 0, -1,
 				Plankopf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlankopf_Hochformat(), ecorePackage.getEBoolean(), "hochformat", "true", 0, 1, Plankopf.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textbausteinEClass, Textbaustein.class, "Textbaustein", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

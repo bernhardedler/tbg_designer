@@ -8,6 +8,7 @@ import at.tb_gruber.designer.model.Textbaustein;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -29,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.PlankopfImpl#getTextbaustein <em>Textbaustein</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.PlankopfImpl#isHochformat <em>Hochformat</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +46,25 @@ public class PlankopfImpl extends MinimalEObjectImpl.Container implements Planko
 	 * @ordered
 	 */
 	protected EList<Textbaustein> textbaustein;
+
+	/**
+	 * The default value of the '{@link #isHochformat() <em>Hochformat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHochformat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean HOCHFORMAT_EDEFAULT = true;
+	/**
+	 * The cached value of the '{@link #isHochformat() <em>Hochformat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHochformat()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean hochformat = HOCHFORMAT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +105,30 @@ public class PlankopfImpl extends MinimalEObjectImpl.Container implements Planko
 	 * @generated
 	 */
 	@Override
+	public boolean isHochformat() {
+		return hochformat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHochformat(boolean newHochformat) {
+		boolean oldHochformat = hochformat;
+		hochformat = newHochformat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PLANKOPF__HOCHFORMAT, oldHochformat,
+					hochformat));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.PLANKOPF__TEXTBAUSTEIN:
@@ -101,6 +147,8 @@ public class PlankopfImpl extends MinimalEObjectImpl.Container implements Planko
 		switch (featureID) {
 		case ModelPackage.PLANKOPF__TEXTBAUSTEIN:
 			return getTextbaustein();
+		case ModelPackage.PLANKOPF__HOCHFORMAT:
+			return isHochformat();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,6 +166,9 @@ public class PlankopfImpl extends MinimalEObjectImpl.Container implements Planko
 			getTextbaustein().clear();
 			getTextbaustein().addAll((Collection<? extends Textbaustein>) newValue);
 			return;
+		case ModelPackage.PLANKOPF__HOCHFORMAT:
+			setHochformat((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -133,6 +184,9 @@ public class PlankopfImpl extends MinimalEObjectImpl.Container implements Planko
 		case ModelPackage.PLANKOPF__TEXTBAUSTEIN:
 			getTextbaustein().clear();
 			return;
+		case ModelPackage.PLANKOPF__HOCHFORMAT:
+			setHochformat(HOCHFORMAT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -147,8 +201,27 @@ public class PlankopfImpl extends MinimalEObjectImpl.Container implements Planko
 		switch (featureID) {
 		case ModelPackage.PLANKOPF__TEXTBAUSTEIN:
 			return textbaustein != null && !textbaustein.isEmpty();
+		case ModelPackage.PLANKOPF__HOCHFORMAT:
+			return hochformat != HOCHFORMAT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (hochformat: ");
+		result.append(hochformat);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PlankopfImpl

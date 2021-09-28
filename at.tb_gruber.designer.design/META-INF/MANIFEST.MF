@@ -47,3 +47,4 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: TB Gruber
 Automatic-Module-Name: at.tb_gruber.designer.design
+Export-Package: at.tb_gruber.designer.ide.preferences
