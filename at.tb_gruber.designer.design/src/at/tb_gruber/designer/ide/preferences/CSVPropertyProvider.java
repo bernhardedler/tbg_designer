@@ -28,8 +28,9 @@ public class CSVPropertyProvider {
 	private List<String> eigentuemerList = new ArrayList<>();
 	private static IPreferenceStore preferenceStore = new ScopedPreferenceStore(InstanceScope.INSTANCE,
 			TBGPreferencePage.PREFERENCE_SCOPE_IDENTIFIER);
-	
+
 	private static CSVPropertyProvider INSTANCE;
+
 	public static CSVPropertyProvider getInstance() {
 		if (INSTANCE == null) {
 			INSTANCE = new CSVPropertyProvider();
@@ -69,9 +70,13 @@ public class CSVPropertyProvider {
 	private void loadImmobilienDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			return;
+			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
+			if (csvPath == null || csvPath.isEmpty()) {
+				return;
+			}
 		}
-		int idxObjektId = -1, idxObjektName = -1, idxGebaeudeArt = -1, idxLand = -1, idxPlz = -1, idxOrt = -1, idxStrasse = -1;
+		int idxObjektId = -1, idxObjektName = -1, idxGebaeudeArt = -1, idxLand = -1, idxPlz = -1, idxOrt = -1,
+				idxStrasse = -1;
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
 			String line = "";
@@ -107,7 +112,7 @@ public class CSVPropertyProvider {
 				} else {
 					objektInfos.add(new ObjektInfo(values[idxObjektId], null, values[idxObjektName],
 							values[idxGebaeudeArt], values[idxLand], values[idxPlz], values[idxOrt], values[idxStrasse],
-							Externe_Datenquelle.IMMO));
+							"", "", Externe_Datenquelle.IMMO));
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -130,7 +135,10 @@ public class CSVPropertyProvider {
 	private void loadVerkehrsstationenDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			return;
+			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
+			if (csvPath == null || csvPath.isEmpty()) {
+				return;
+			}
 		}
 		int idxObjektId = -1, idxObjektName = -1, idxLand = -1, idxPlz = -1, idxOrt = -1, idxStrasse = -1;
 		try (FileInputStream fis = new FileInputStream(csvPath);
@@ -165,7 +173,7 @@ public class CSVPropertyProvider {
 					objekt.setStrasse(values[idxStrasse]);
 				} else {
 					objektInfos.add(new ObjektInfo(values[idxObjektId], null, values[idxObjektName], "Verkehrsstation",
-							values[idxLand], values[idxPlz], values[idxOrt], values[idxStrasse],
+							values[idxLand], values[idxPlz], values[idxOrt], values[idxStrasse], "", "",
 							Externe_Datenquelle.VS));
 				}
 			}
@@ -188,9 +196,13 @@ public class CSVPropertyProvider {
 	private void loadGebaeudeDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			return;
+			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
+			if (csvPath == null || csvPath.isEmpty()) {
+				return;
+			}
 		}
-		int idxStrNr, idxGebaeudeBezeichnung, idxGebNr, idxEntNr, idxPlz, idxOrt, idxStrasse, idxHausnummer;
+		int idxStrNr, idxGebaeudeBezeichnung, idxGebNr, idxEntNr, idxPlz, idxOrt, idxStrasse, idxHausnummer, idxGpsLon,
+				idxGpsLat;
 
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
@@ -209,6 +221,8 @@ public class CSVPropertyProvider {
 				idxHausnummer = values.indexOf("Nr");
 				idxOrt = values.indexOf("Ort");
 				idxPlz = values.indexOf("Plz");
+				idxGpsLon = values.indexOf("Gps Lon");
+				idxGpsLat = values.indexOf("Gps Lat");
 			} else {
 				return;
 			}
@@ -227,9 +241,12 @@ public class CSVPropertyProvider {
 					objekt.setPlz(values[idxPlz]);
 					objekt.setOrt(values[idxOrt]);
 					objekt.setStrasse(strasseUndHausnummer);
+					objekt.setGpsLon(values[idxGpsLon]);
+					objekt.setGpsLat(values[idxGpsLat]);
 				} else {
 					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, "Verkehrsstation",
-							"AT", values[idxPlz], values[idxOrt], strasseUndHausnummer, Externe_Datenquelle.GEBAEUDE));
+							"AT", values[idxPlz], values[idxOrt], strasseUndHausnummer, values[idxGpsLon],
+							values[idxGpsLat], Externe_Datenquelle.GEBAEUDE));
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -266,6 +283,16 @@ public class CSVPropertyProvider {
 		if (objektOpt.isPresent()) {
 			ObjektInfo objekt = objektOpt.get();
 			return objekt.getGebaeudeArt();
+		} else {
+			return "";
+		}
+	}
+
+	public String getGPSStandortForId(String id, Externe_Datenquelle quelle) {
+		Optional<ObjektInfo> objektOpt = getForId(id, quelle);
+		if (objektOpt.isPresent()) {
+			ObjektInfo objekt = objektOpt.get();
+			return objekt.getGpsLon() + " " + objekt.getGpsLat();
 		} else {
 			return "";
 		}
@@ -315,7 +342,8 @@ public class CSVPropertyProvider {
 	public static class ObjektInfo {
 		private static String duplicateWarning = "Eintrag doppelt vorhanden, bitte Datenquelle wählen";
 		private static ObjektInfo duplicate = new ObjektInfo(duplicateWarning, duplicateWarning, duplicateWarning,
-				duplicateWarning, duplicateWarning, duplicateWarning, duplicateWarning, duplicateWarning, null);
+				duplicateWarning, duplicateWarning, duplicateWarning, duplicateWarning, duplicateWarning,
+				duplicateWarning, duplicateWarning, null);
 
 		String objektId;
 		String objektId2;
@@ -325,10 +353,13 @@ public class CSVPropertyProvider {
 		String plz;
 		String ort;
 		String strasse;
+		String gpsLon;
+		String gpsLat;
+
 		Externe_Datenquelle quelle;
 
 		public ObjektInfo(String objektId, String objektId2, String objektName, String gebaeudeArt, String land,
-				String plz, String ort, String strasse, Externe_Datenquelle quelle) {
+				String plz, String ort, String strasse, String gpsLon, String gpsLat, Externe_Datenquelle quelle) {
 			this.objektId = objektId;
 			this.objektId2 = objektId2;
 			this.objektName = objektName;
@@ -338,6 +369,8 @@ public class CSVPropertyProvider {
 			this.ort = ort;
 			this.strasse = strasse;
 			this.quelle = quelle;
+			this.gpsLon = gpsLon;
+			this.gpsLat = gpsLat;
 		}
 
 		public String getObjektId() {
@@ -412,12 +445,31 @@ public class CSVPropertyProvider {
 			this.quelle = quelle;
 		}
 
+		public String getGpsLon() {
+			return gpsLon;
+		}
+
+		public void setGpsLon(String gpsLon) {
+			this.gpsLon = gpsLon;
+		}
+
+		public String getGpsLat() {
+			return gpsLat;
+		}
+
+		public void setGpsLat(String gpsLat) {
+			this.gpsLat = gpsLat;
+		}
+
 	}
 
 	private void loadBetreiberDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			return;
+			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
+			if (csvPath == null || csvPath.isEmpty()) {
+				return;
+			}
 		}
 
 		try (FileInputStream fis = new FileInputStream(csvPath);
@@ -443,7 +495,10 @@ public class CSVPropertyProvider {
 	private void loadEigentuemerDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			return;
+			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
+			if (csvPath == null || csvPath.isEmpty()) {
+				return;
+			}
 		}
 
 		try (FileInputStream fis = new FileInputStream(csvPath);
@@ -454,7 +509,7 @@ public class CSVPropertyProvider {
 			} else {
 				betreiberList.add(line.split(";")[0]);
 			}
-			
+
 			while ((line = br.readLine()) != null) {
 				eigentuemerList.add(line.split(";")[0]);
 			}

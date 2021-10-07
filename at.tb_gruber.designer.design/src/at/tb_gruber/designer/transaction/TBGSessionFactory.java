@@ -128,7 +128,7 @@ public class TBGSessionFactory implements SessionFactory {
             new ResourceSetImpl.MappedResourceLocator(resourceSetImpl);
         }
         
-        transactionalEditingDomain.addResourceSetListener(new UpdateObjektIdListener());
+        transactionalEditingDomain.addResourceSetListener(new ModelChangePersistListener());
     }
 
     /**

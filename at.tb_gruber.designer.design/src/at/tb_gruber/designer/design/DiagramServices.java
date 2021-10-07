@@ -1,11 +1,16 @@
 package at.tb_gruber.designer.design;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.sirius.diagram.DDiagramElementContainer;
+import org.eclipse.sirius.diagram.business.api.query.EObjectQuery;
+import org.eclipse.sirius.viewpoint.ViewpointPackage;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.AnlageBase;
@@ -301,6 +306,23 @@ public class DiagramServices {
 	public Boolean isVerteilerContainerNap(EObject self) {
 		return self instanceof Netzanschlusspunkt
 				&& ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
+	}
+	
+	public void testPlayWithViews(EObject container, EObject newNode) {
+		EObjectQuery eObjectQuery = new EObjectQuery(container);
+		Collection<EObject> targetReferences = eObjectQuery.getInverseReferences(ViewpointPackage.Literals.DSEMANTIC_DECORATOR__TARGET);
+        for (EObject targetReference : targetReferences) {
+            if (targetReference instanceof DDiagramElementContainer) {
+                // or (targetReference instanceof DNode) if the expected element is a Node (use a NodeMapping and not a ContainerMapping)
+                EObjectQuery dDiagElementQuery = new EObjectQuery((DDiagramElementContainer) targetReference);
+                Collection<EObject> elementReferences = dDiagElementQuery.getInverseReferences(NotationPackage.Literals.VIEW__ELEMENT);
+                for (EObject elementReference : elementReferences) {
+                    if (elementReference instanceof org.eclipse.gmf.runtime.notation.Node) {
+                        //Do someting with GMF Node
+                    }
+                }
+            }
+        }
 	}
 	
 }

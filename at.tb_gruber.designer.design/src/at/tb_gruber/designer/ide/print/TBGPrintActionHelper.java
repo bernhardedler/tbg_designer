@@ -60,8 +60,9 @@ public class TBGPrintActionHelper {
 				try (OutputStream os = new FileOutputStream(filePath)) {
 					DiagramSVGGenerator generator = new DiagramSVGGenerator(dgrmEP);
 					List editParts = dgrmEP.getPrimaryEditParts();
+					generator.setImageMargin(30);
 					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
-							false);
+							true);
 					SVGImage svg = (SVGImage) generator.getRenderedImage();
 					TranscoderOutput transcoderOutput = new TranscoderOutput(os);
 					TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());

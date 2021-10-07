@@ -1604,6 +1604,8 @@
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Eigentuemer" referenceName="eigentuemer" variableName="newEigentuemer">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newEigentuemer">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Eigentümer"/>
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:containerView"/>
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -1751,7 +1753,7 @@
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="UrAnlegen" label="Umrichter" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter']">
             <variable name="container"/>
-            <viewVariable name="containerView"/>
+            <viewVariable name="objekt"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Umrichter" referenceName="anlage">
@@ -1768,6 +1770,9 @@
                     </subModelOperations>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:objekt">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.testPlayWithViews(object, containerView)"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

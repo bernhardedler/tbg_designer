@@ -149,5 +149,15 @@
       <betreiber name="Betreiber"/>
     </anlage>
   </objekt>
+  <objekt name="2016250_MAGAZIN + DIENSTGEB&#xc4;UDE" objektId="17069" gpsstandort="15,09856755 48,15794449" externeQuelle="gebaeude" ort_adresse="AT 3373 YBBS/DONAU LINZERSTRASSE 28" gebaeudeart="Verkehrsstation">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
+      <betreiber name="Betreiber"/>
+      <verbindungNach nr="18" ziel="//@objekt.11/@anlage.1" ursprung="//@objekt.11/@anlage.0" linientype="Kundenanlage_OEBB"/>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="18" anlagennummer="ET 00">
+      <betreiber name="Betreiber"/>
+    </anlage>
+    <eigentuemer name="Eigent&#xfc;mer"/>
+  </objekt>
   <plankopf/>
 </tbg:Bahnhof>
