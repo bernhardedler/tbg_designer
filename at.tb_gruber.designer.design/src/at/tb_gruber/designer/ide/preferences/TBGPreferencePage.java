@@ -5,8 +5,6 @@ import org.eclipse.jface.dialogs.PopupDialog;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.FileFieldEditor;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.FocusAdapter;
-import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
@@ -21,12 +19,18 @@ import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
 public class TBGPreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
 
+	public static final String PREFERENCE_SCOPE_IDENTIFIER = "at.tb_gruber.designer.ide.preferences.page";
+
 	public static final String PROPERTY_ID_IMMO_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.immo";
 	public static final String PROPERTY_ID_VERKEHRSSTATIONEN_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.vs";
 	public static final String PROPERTY_ID_GEBAEUDE_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.gebaeude";
 	public static final String PROPERTY_ID_BETREIBER_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.betreiber";
 	public static final String PROPERTY_ID_EIGENTUEMER_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.eigentuemer";
-	public static final String PREFERENCE_SCOPE_IDENTIFIER = "at.tb_gruber.designer.ide.preferences.page";
+
+	public static final String MARGIN_LEFT_VARIABLE_NAME = "at.tb_gruber.designer.ide.preferences.print.margin.left";
+	public static final String MARGIN_RIGHT_VARIABLE_NAME = "at.tb_gruber.designer.ide.preferences.print.margin.right";
+	public static final String MARGIN_TOP_VARIABLE_NAME = "at.tb_gruber.designer.ide.preferences.print.margin.top";
+	public static final String MARGIN_BOTTOM_VARIABLE_NAME = "at.tb_gruber.designer.ide.preferences.print.margin.bottom";
 
 	// https://www.vogella.com/tutorials/EclipsePreferences/article.html
 	public TBGPreferencePage() {
@@ -70,8 +74,11 @@ public class TBGPreferencePage extends FieldEditorPreferencePage implements IWor
 
 	private String getHelpMessage() {
 		return "Immobilien: " + PROPERTY_ID_IMMO_DATEI + "\n" + "Verkehrsstationen: "
-				+ PROPERTY_ID_VERKEHRSSTATIONEN_DATEI + "\n" + "Gebäude: " + PROPERTY_ID_GEBAEUDE_DATEI + "\n"
-				+ "Betreiber: " + PROPERTY_ID_BETREIBER_DATEI + "\n" + "Eigentümer: " + PROPERTY_ID_EIGENTUEMER_DATEI;
+				+ PROPERTY_ID_VERKEHRSSTATIONEN_DATEI + "\n" + "Geb\u00e4ude: " + PROPERTY_ID_GEBAEUDE_DATEI + "\n"
+				+ "Betreiber: " + PROPERTY_ID_BETREIBER_DATEI + "\n" + "Eigent\u00fcmer: "
+				+ PROPERTY_ID_EIGENTUEMER_DATEI + "\n" + "Druckrand Links: " + MARGIN_LEFT_VARIABLE_NAME + "\n"
+				+ "Druckrand Rechts: " + MARGIN_RIGHT_VARIABLE_NAME + "\n" + "Druckrand Oben: "
+				+ MARGIN_TOP_VARIABLE_NAME + "\n" + "Druckrand Unten: " + MARGIN_BOTTOM_VARIABLE_NAME;
 	}
 
 	private class InfoPopupDialog extends PopupDialog {

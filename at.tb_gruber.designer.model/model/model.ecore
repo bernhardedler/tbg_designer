@@ -77,8 +77,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Plankopf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="textbaustein" upperBound="-1"
         eType="#//Textbaustein" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hochformat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Textbaustein">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

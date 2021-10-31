@@ -17,6 +17,8 @@ import org.eclipse.gmf.runtime.diagram.ui.printing.internal.l10n.DiagramUIPrinti
 import org.eclipse.gmf.runtime.diagram.ui.printing.internal.util.PrintHelperUtil;
 import org.eclipse.gmf.runtime.diagram.ui.printing.internal.util.SWTDiagramPrinter;
 import org.eclipse.gmf.runtime.diagram.ui.render.clipboard.DiagramSVGGenerator;
+import org.eclipse.gmf.runtime.draw2d.ui.mapmode.IMapMode;
+import org.eclipse.gmf.runtime.draw2d.ui.mapmode.MapModeUtil;
 import org.eclipse.gmf.runtime.draw2d.ui.render.awt.internal.svg.SVGImage;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
@@ -58,9 +60,9 @@ public class TBGPrintActionHelper {
 						dgrmEP.getDiagramPreferencesHint());
 				Rectangle figureBounds = PrintHelperUtil.getPageBreakBounds(dgrmEP, loadedPreferences);
 				try (OutputStream os = new FileOutputStream(filePath)) {
-					DiagramSVGGenerator generator = new DiagramSVGGenerator(dgrmEP);
+					TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
 					List editParts = dgrmEP.getPrimaryEditParts();
-					generator.setImageMargin(30);
+					
 					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
 							true);
 					SVGImage svg = (SVGImage) generator.getRenderedImage();

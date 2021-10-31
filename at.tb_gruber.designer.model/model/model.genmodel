@@ -135,7 +135,6 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Plankopf">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Plankopf/textbaustein"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Plankopf/hochformat"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Textbaustein">
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>

@@ -26,7 +26,7 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ÜGS(0, "ÜGS", "ÜGS"),
+	ÜGS(0, "ÜGS", "\u00dcGS"),
 
 	/**
 	 * The '<em><b>VK</b></em>' literal object.

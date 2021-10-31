@@ -157,6 +157,13 @@
     <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="18" anlagennummer="ET 00">
       <betreiber name="Betreiber"/>
     </anlage>
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00"/>
+    <eigentuemer name="Eigent&#xfc;mer"/>
+  </objekt>
+  <objekt objektart="Hochbauobjekt">
+    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 00">
+      <betreiber name="Betreiber"/>
+    </anlage>
     <eigentuemer name="Eigent&#xfc;mer"/>
   </objekt>
   <plankopf/>
