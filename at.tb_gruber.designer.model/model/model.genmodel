@@ -53,6 +53,7 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Eadb_Versorgung_Art/G"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Eadb_Versorgung_Art/UR"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Eadb_Versorgung_Art/ESP"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Eadb_Versorgung_Art/ZV"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//NapPosition">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//NapPosition/DAVOR"/>

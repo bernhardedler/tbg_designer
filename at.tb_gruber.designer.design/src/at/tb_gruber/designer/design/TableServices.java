@@ -149,7 +149,7 @@ public class TableServices {
 		String art = "";
 		if (self instanceof Verbindung) {
 			AnlageBase ziel = ((Verbindung) self).getZiel();
-			if (self instanceof AnlageMitAttributen) {
+			if (ziel instanceof AnlageMitAttributen) {
 				art = ziel.getClass().getInterfaces()[0].getSimpleName();
 				if (self instanceof Energietechnikanlage) {
 					art += " (" + ((Energietechnikanlage) self).getEtType() + ")";

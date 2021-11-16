@@ -1770,9 +1770,6 @@
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Details" referenceName="details" variableName="newDetails"/>
                   </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:objekt">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.testPlayWithViews(object, containerView)"/>
-                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

@@ -133,6 +133,7 @@
     <eLiterals name="G" value="6" literal="G"/>
     <eLiterals name="UR" value="7" literal="UR"/>
     <eLiterals name="ESP" value="8" literal="ESP"/>
+    <eLiterals name="ZV" value="9" literal="ZV"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerMitZaehler" eSuperTypes="#//VerteilerBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrReserveEinspeisung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

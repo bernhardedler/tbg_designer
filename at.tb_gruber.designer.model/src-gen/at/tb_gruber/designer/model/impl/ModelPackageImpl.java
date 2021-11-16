@@ -1941,6 +1941,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(eadb_Versorgung_ArtEEnum, Eadb_Versorgung_Art.G);
 		addEEnumLiteral(eadb_Versorgung_ArtEEnum, Eadb_Versorgung_Art.UR);
 		addEEnumLiteral(eadb_Versorgung_ArtEEnum, Eadb_Versorgung_Art.ESP);
+		addEEnumLiteral(eadb_Versorgung_ArtEEnum, Eadb_Versorgung_Art.ZV);
 
 		initEEnum(napPositionEEnum, NapPosition.class, "NapPosition");
 		addEEnumLiteral(napPositionEEnum, NapPosition.DAVOR);

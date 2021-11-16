@@ -106,7 +106,16 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ESP(8, "ESP", "ESP");
+	ESP(8, "ESP", "ESP"),
+	/**
+	* The '<em><b>ZV</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #ZV_VALUE
+	* @generated
+	* @ordered
+	*/
+	ZV(9, "ZV", "ZV");
 
 	/**
 	 * The '<em><b>ÜGS</b></em>' literal value.
@@ -208,13 +217,24 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 	public static final int ESP_VALUE = 8;
 
 	/**
+	 * The '<em><b>ZV</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ZV
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ZV_VALUE = 9;
+
+	/**
 	 * An array of all the '<em><b>Eadb Versorgung Art</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Eadb_Versorgung_Art[] VALUES_ARRAY = new Eadb_Versorgung_Art[] { ÜGS, VK, IF, IG, WHZ, FV, G,
-			UR, ESP, };
+			UR, ESP, ZV, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Eadb Versorgung Art</b></em>' enumerators.
@@ -288,6 +308,8 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 			return UR;
 		case ESP_VALUE:
 			return ESP;
+		case ZV_VALUE:
+			return ZV;
 		}
 		return null;
 	}
