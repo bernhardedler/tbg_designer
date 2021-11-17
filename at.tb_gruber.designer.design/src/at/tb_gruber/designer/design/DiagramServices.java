@@ -126,6 +126,8 @@ public class DiagramServices {
 		} else if (self instanceof VerteilerBase) {
 			return target
 					.equals(((VerteilerContainer) ((VerteilerBase) self).eContainer()).getPrimaerspannung().getValue());
+		} else if (self instanceof VerteilerContainer) {
+			return target.equals(((VerteilerContainer) self).getPrimaerspannung().getValue());
 		}
 		return false;
 	}
@@ -206,8 +208,16 @@ public class DiagramServices {
 	}
 
 	public String getVersorgungsknotenSize(EObject self) {
-		int cnt = ((AnlageMitAttributen) self).getVerbindungNach().size();
-		return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
+		if (self instanceof Versorgungsknoten) {
+			int cnt = ((AnlageMitAttributen) self).getVerbindungNach().size();
+			return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
+		} else if (self instanceof VerteilerBase) {
+			int cnt = ((VerteilerBase) self).getVerbindungNach().size();
+			return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
+			
+		} else {
+			return "";
+		}
 	}
 
 	public Boolean isNapVor(EObject self) {
