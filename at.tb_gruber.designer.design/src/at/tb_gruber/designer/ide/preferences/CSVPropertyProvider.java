@@ -62,6 +62,8 @@ public class CSVPropertyProvider {
 					loadGebaeudeDatei();
 				} else if (TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI.contentEquals(event.getProperty())) {
 					loadBetreiberDatei();
+				} else if (TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI.contentEquals(event.getProperty())) {
+					loadEigentuemerDatei();
 				}
 			}
 		});

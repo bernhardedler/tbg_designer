@@ -1332,7 +1332,7 @@
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
-              <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and)">
+              <conditionnalStyles predicateExpression="aql:(self.isVspCyan())">
                 <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" labelPosition="node" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/verteiler_cyan.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
