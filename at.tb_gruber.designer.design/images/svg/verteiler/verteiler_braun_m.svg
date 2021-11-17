@@ -1,0 +1,21 @@
+<svg width="222" height="253" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <rect x="0" y="0" width="222" height="252" id="canvas_background" fill="#fff"/>
+  </g>
+  <g>
+    <title>Rahmen</title>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="220" height="250" id="r1" stroke="#FF7F00"/>
+  </g>
+  <g>
+    <title>Zaehler</title>
+    <line fill="none" stroke="#FF7F00" stroke-width="2" x1="111" y1="1" x2="111" y2="151" id="z4"/>
+  </g>
+  <g>
+    <title>Verteiler</title>
+    <rect fill="#fff" stroke-width="2" x="11" y="151" width="200" height="100" id="v1" stroke="#FF7F00"/>
+    <line fill="none" stroke="#FF7F00" stroke-width="2" x1="11" y1="201" x2="211" y2="201" id="v2"/>
+    <line fill="none" stroke="#FF7F00" stroke-width="2" x1="81" y1="201" x2="81" y2="251" id="v3"/>
+    <line fill="none" stroke="#FF7F00" stroke-width="2" x1="141" y1="201" x2="141" y2="251" id="v4"/>
+  </g>
+</svg>
