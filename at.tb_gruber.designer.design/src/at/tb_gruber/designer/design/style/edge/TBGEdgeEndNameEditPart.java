@@ -43,7 +43,8 @@ public class TBGEdgeEndNameEditPart extends DEdgeEndNameEditPart {
 		int dy = ((Integer) getStructuralFeatureValue(NotationPackage.eINSTANCE.getLocation_Y())).intValue();
 		int width = ((Integer) getStructuralFeatureValue(NotationPackage.eINSTANCE.getSize_Width())).intValue();
 		int height = ((Integer) getStructuralFeatureValue(NotationPackage.eINSTANCE.getSize_Height())).intValue();
-		Rectangle rectangle = new Rectangle(dx, dy, width, height);
+		
+		Rectangle rectangle = new Rectangle(dx, Math.min(dy,  0), width, height);
 		if (getParent() instanceof AbstractConnectionEditPart) {
 			((AbstractGraphicalEditPart) getParent()).setLayoutConstraint(this, getFigure(),
 					new TBGEdgeLabelLocator(getFigure().getParent(), rectangle, getKeyPoint()));
