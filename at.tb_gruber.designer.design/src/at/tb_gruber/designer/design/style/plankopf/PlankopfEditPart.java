@@ -1,4 +1,4 @@
-package at.tb_gruber.designer.design.style;
+package at.tb_gruber.designer.design.style.plankopf;
 
 import java.lang.reflect.Field;
 import java.util.Optional;

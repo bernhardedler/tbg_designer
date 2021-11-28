@@ -6,6 +6,8 @@ import org.eclipse.sirius.diagram.ui.tools.api.graphical.edit.styles.IStyleConfi
 import org.eclipse.sirius.diagram.ui.tools.api.graphical.edit.styles.StyleConfiguration;
 import org.eclipse.sirius.viewpoint.Style;
 
+import at.tb_gruber.designer.design.style.netzanschlusspunkt.NetzanschlusspunktBorderNodeStyleConfiguration;
+
 public class StyleConfigurationProvider implements IStyleConfigurationProvider {
 
 	public static final String mapping_name = "VerteilerContainer"; // BorderNodeNap

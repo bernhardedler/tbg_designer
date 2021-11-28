@@ -1,4 +1,4 @@
-package at.tb_gruber.designer.design.style;
+package at.tb_gruber.designer.design.style.plankopf;
 
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.geometry.Dimension;

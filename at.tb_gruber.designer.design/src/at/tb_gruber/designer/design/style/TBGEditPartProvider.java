@@ -13,6 +13,12 @@ import org.eclipse.sirius.diagram.ui.internal.edit.parts.DEdgeNameEditPart;
 import org.eclipse.sirius.diagram.ui.internal.edit.parts.DNodeContainerEditPart;
 import org.eclipse.sirius.diagram.ui.part.SiriusVisualIDRegistry;
 
+import at.tb_gruber.designer.design.style.edge.TBGEdgeBeginNameEditPart;
+import at.tb_gruber.designer.design.style.edge.TBGEdgeEditPart;
+import at.tb_gruber.designer.design.style.edge.TBGEdgeEndNameEditPart;
+import at.tb_gruber.designer.design.style.edge.TBGEdgeNameEditPart;
+import at.tb_gruber.designer.design.style.plankopf.PlankopfEditPart;
+
 public class TBGEditPartProvider extends AbstractEditPartProvider {
 
 	@Override

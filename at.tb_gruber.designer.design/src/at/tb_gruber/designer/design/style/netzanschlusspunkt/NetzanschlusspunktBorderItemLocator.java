@@ -1,4 +1,4 @@
-package at.tb_gruber.designer.design.style;
+package at.tb_gruber.designer.design.style.netzanschlusspunkt;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;

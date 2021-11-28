@@ -1,4 +1,4 @@
-package at.tb_gruber.designer.design.style;
+package at.tb_gruber.designer.design.style.edge;
 
 import java.util.Optional;
 
@@ -150,11 +150,6 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 
 		}
 
-		@Override
-		public void setLayoutManager(LayoutManager manager) {
-			super.setLayoutManager(manager);
-		}
-
 		private void setCentering(CenteringStyle centering) {
 			this.centeringStyle = centering;
 		}
@@ -193,7 +188,7 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 		 */
 		private void createCenterLabelFigure(final EObject element) {
 			attachmentToEdgeNameFigure = addNewAttachmentFigure();
-			fFigureViewEdgeNameFigure = new TBGEdgeLabel(LabelViewConstants.MIDDLE_LOCATION,
+			fFigureViewEdgeNameFigure = new TBGEdgeLabel(TBGEdgeLabelLocator.CENTER_LABEL_PERCENTAGE,
 					attachmentToEdgeNameFigure);
 
 			if (element instanceof DEdge) {
@@ -216,8 +211,8 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 		private void createBeginLabelFigure(final EObject element) {
 			attachmentToEdgeBeginNameFigure = addNewAttachmentFigure();
 
-			fFigureViewEdgeBeginNameFigure = new TBGEdgeLabel(
-					5 /* Prozent der Strecke; LabelViewConstants.SOURCE_LOCATION */, attachmentToEdgeBeginNameFigure);
+			fFigureViewEdgeBeginNameFigure = new TBGEdgeLabel(TBGEdgeLabelLocator.BEGIN_LABEL_PERCENTAGE,
+					attachmentToEdgeBeginNameFigure);
 			if (element instanceof DEdge) {
 				DEdge edge = (DEdge) element;
 				fFigureViewEdgeBeginNameFigure.setText(edge.getBeginLabel());
@@ -252,8 +247,8 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 		private void createEndLabelFigure(final EObject element) {
 			attachmentToEdgeEndNameFigure = addNewAttachmentFigure();
 
-			fFigureViewEdgeEndNameFigure = new TBGEdgeLabel(
-					95 /* Prozent der Strecke; LabelViewConstants.TARGET_LOCATION */, attachmentToEdgeEndNameFigure);
+			fFigureViewEdgeEndNameFigure = new TBGEdgeLabel(TBGEdgeLabelLocator.END_LABEL_PERCENTAGE,
+					attachmentToEdgeEndNameFigure);
 			if (element instanceof DEdge) {
 				DEdge edge = (DEdge) element;
 				fFigureViewEdgeEndNameFigure.setText(edge.getEndLabel());
