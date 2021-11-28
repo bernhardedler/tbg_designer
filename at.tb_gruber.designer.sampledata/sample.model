@@ -50,9 +50,8 @@
     </anlage>
   </objekt>
   <objekt name="freistehender VT Netz N&#xd6; xy" objektart="Freistehender VT">
-    <anlage xsi:type="tbg:Versorgungsknoten" name="VT sowieso" anlagennummer="VK 00">
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="4" name="VT sowieso" anlagennummer="VK 00">
       <betreiber name="EVU"/>
-      <verbindungNach nr="4" ziel="//@objekt.4/@anlage.0/@netzanschlusspunkt" ursprung="//@objekt.3/@anlage.0"/>
     </anlage>
   </objekt>
   <objekt name="Aufnahmegeb&#xe4;ude 2 Bahnhof Muster">
@@ -65,8 +64,9 @@
       </verteiler>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
+        <verbindungNach nr="4" ziel="//@objekt.3/@anlage.0" ursprung="//@objekt.4/@anlage.0/@verteiler.2"/>
       </verteiler>
-      <netzanschlusspunkt versorgtVon="4" beschreibung="NAP 1"/>
+      <netzanschlusspunkt beschreibung="NAP 1"/>
     </anlage>
   </objekt>
   <objekt name="2017050_SH   WHZ. 1  ASCHBACH  HL. 2" objektId="10015859" ort_adresse="AT 3361 ASCHBACH BAHNHOFSTRASSE 1" gebaeudeart="Verkehrsstation">
@@ -74,11 +74,9 @@
       <betreiber name="EN"/>
       <verteiler xsi:type="tbg:VerteilerMitZaehler">
         <details/>
-        <verbindungNach nr="16" ziel="//@objekt.5/@anlage.1" ursprung="//@objekt.5/@anlage.0/@verteiler.0"/>
-        <netzanschlusspunkt beschreibung="Trennzelle nach Messzelle" postition="MITTE"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Trafo" versorgtVon="16" name="Trafo 1" trafoKva="400kVA" oberspannung="20kV" unterspannung="400V">
+    <anlage xsi:type="tbg:Trafo" name="Trafo 1" trafoKva="400kVA" oberspannung="20kV" unterspannung="400V">
       <details/>
       <betreiber name="EN"/>
       <verbindungNach nr="6" ziel="//@objekt.5/@anlage.2/@verteiler.0" ursprung="//@objekt.5/@anlage.1"/>

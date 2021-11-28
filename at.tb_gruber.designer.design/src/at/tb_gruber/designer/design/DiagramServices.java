@@ -311,7 +311,10 @@ public class DiagramServices {
 					+ System.lineSeparator() 
 					+ Optional.ofNullable(gen.getElektrischeLeistung()).orElse("0W");
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
-			return ((VerteilerMitZaehler) self.eContainer()).getNrHauptversorgung();
+			VerteilerMitZaehler zv = (VerteilerMitZaehler) self.eContainer();
+			return Optional.ofNullable(zv.getName()).orElse("") 
+					+ System.lineSeparator()
+					+ zv.getNrHauptversorgung();
 		}
 		return "";
 	}

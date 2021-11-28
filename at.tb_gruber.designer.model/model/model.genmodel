@@ -97,6 +97,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/objekt"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/plankopf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/textbaustein"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Objekt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/name"/>
@@ -134,9 +135,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/linientype"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/kabellaenge"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//Plankopf">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Plankopf/textbaustein"/>
-    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Plankopf"/>
     <genClasses ecoreClass="model.ecore#//Textbaustein">
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
     </genClasses>

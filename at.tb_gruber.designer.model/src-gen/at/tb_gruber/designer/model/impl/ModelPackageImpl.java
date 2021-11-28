@@ -420,6 +420,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getBahnhof_Textbaustein() {
+		return (EReference) bahnhofEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getObjekt() {
 		return objektEClass;
 	}
@@ -752,16 +762,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EClass getPlankopf() {
 		return plankopfEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPlankopf_Textbaustein() {
-		return (EReference) plankopfEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1469,6 +1469,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(bahnhofEClass, BAHNHOF__PROJEKTNAME);
 		createEReference(bahnhofEClass, BAHNHOF__OBJEKT);
 		createEReference(bahnhofEClass, BAHNHOF__PLANKOPF);
+		createEReference(bahnhofEClass, BAHNHOF__TEXTBAUSTEIN);
 
 		objektEClass = createEClass(OBJEKT);
 		createEAttribute(objektEClass, OBJEKT__NAME);
@@ -1507,7 +1508,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(verbindungEClass, VERBINDUNG__KABELLAENGE);
 
 		plankopfEClass = createEClass(PLANKOPF);
-		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
 
 		textbausteinEClass = createEClass(TEXTBAUSTEIN);
 		createEAttribute(textbausteinEClass, TEXTBAUSTEIN__LABEL);
@@ -1651,6 +1651,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getBahnhof_Plankopf(), this.getPlankopf(), null, "plankopf", null, 0, 1, Bahnhof.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBahnhof_Textbaustein(), this.getTextbaustein(), null, "textbaustein", null, 0, -1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objektEClass, Objekt.class, "Objekt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjekt_Name(), ecorePackage.getEString(), "name", null, 1, 1, Objekt.class, !IS_TRANSIENT,
@@ -1742,9 +1745,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlankopf_Textbaustein(), this.getTextbaustein(), null, "textbaustein", null, 0, -1,
-				Plankopf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textbausteinEClass, Textbaustein.class, "Textbaustein", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

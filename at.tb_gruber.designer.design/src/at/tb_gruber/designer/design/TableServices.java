@@ -25,6 +25,7 @@ import at.tb_gruber.designer.model.Versorgungsknoten;
 import at.tb_gruber.designer.model.VerteilerBase;
 import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.VerteilerMitZaehler;
+import at.tb_gruber.designer.model.VerteilerOhneZaehler;
 
 /**
  * The services class used by VSM.
@@ -159,8 +160,10 @@ public class TableServices {
 				if (nap.eContainer() instanceof VerteilerContainer) {
 					art = "Verteiler";
 				}
-			} else if (ziel instanceof VerteilerBase) {
+			} else if (ziel instanceof VerteilerOhneZaehler) {
 				art = "Verteiler";
+			} else if (ziel instanceof VerteilerMitZaehler) {
+				art = "Zählerverteiler";
 			}
 		}
 		return art;
@@ -402,6 +405,16 @@ public class TableServices {
 			}
 		}
 		return reserve;
+	}
+	
+	public String getZaehlername(EObject self) {
+		if (self instanceof Verbindung) {
+			Verbindung verbindung = (Verbindung) self;
+			if (verbindung.getZiel() instanceof VerteilerMitZaehler) {
+				return ((VerteilerMitZaehler) verbindung.getZiel()).getName();
+			}
+		}
+		return "";
 	}
 
 	public String getZpNrHaupt(EObject self) {

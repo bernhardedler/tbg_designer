@@ -7,6 +7,7 @@ import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Plankopf;
 
+import at.tb_gruber.designer.model.Textbaustein;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getProjektname <em>Projektname</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getObjekt <em>Objekt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getPlankopf <em>Plankopf</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.BahnhofImpl#getTextbaustein <em>Textbaustein</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +101,16 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 	 * @ordered
 	 */
 	protected Plankopf plankopf;
+
+	/**
+	 * The cached value of the '{@link #getTextbaustein() <em>Textbaustein</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTextbaustein()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Textbaustein> textbaustein;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,12 +249,28 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 	 * @generated
 	 */
 	@Override
+	public EList<Textbaustein> getTextbaustein() {
+		if (textbaustein == null) {
+			textbaustein = new EObjectContainmentEList<Textbaustein>(Textbaustein.class, this,
+					ModelPackage.BAHNHOF__TEXTBAUSTEIN);
+		}
+		return textbaustein;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.BAHNHOF__OBJEKT:
 			return ((InternalEList<?>) getObjekt()).basicRemove(otherEnd, msgs);
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			return basicSetPlankopf(null, msgs);
+		case ModelPackage.BAHNHOF__TEXTBAUSTEIN:
+			return ((InternalEList<?>) getTextbaustein()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -263,6 +291,8 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			return getObjekt();
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			return getPlankopf();
+		case ModelPackage.BAHNHOF__TEXTBAUSTEIN:
+			return getTextbaustein();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,6 +319,10 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			setPlankopf((Plankopf) newValue);
 			return;
+		case ModelPackage.BAHNHOF__TEXTBAUSTEIN:
+			getTextbaustein().clear();
+			getTextbaustein().addAll((Collection<? extends Textbaustein>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -313,6 +347,9 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			setPlankopf((Plankopf) null);
 			return;
+		case ModelPackage.BAHNHOF__TEXTBAUSTEIN:
+			getTextbaustein().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -333,6 +370,8 @@ public class BahnhofImpl extends MinimalEObjectImpl.Container implements Bahnhof
 			return objekt != null && !objekt.isEmpty();
 		case ModelPackage.BAHNHOF__PLANKOPF:
 			return plankopf != null;
+		case ModelPackage.BAHNHOF__TEXTBAUSTEIN:
+			return textbaustein != null && !textbaustein.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

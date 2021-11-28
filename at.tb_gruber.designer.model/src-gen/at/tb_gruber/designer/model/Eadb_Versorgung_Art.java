@@ -108,13 +108,13 @@ public enum Eadb_Versorgung_Art implements Enumerator {
 	 */
 	ESP(8, "ESP", "ESP"),
 	/**
-	* The '<em><b>ZV</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>ZV</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #ZV_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #ZV_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	ZV(9, "ZV", "ZV");
 
 	/**

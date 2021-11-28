@@ -67,4 +67,13 @@
            class="at.tb_gruber.designer.transaction.TBGSessionFactory">
      </sessionFactory>
   </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+     <editpartProvider
+           class="at.tb_gruber.designer.design.style.TBGEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+  </extension>
 </plugin>
