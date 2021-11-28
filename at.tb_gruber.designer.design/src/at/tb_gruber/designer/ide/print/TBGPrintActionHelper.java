@@ -16,9 +16,6 @@ import org.eclipse.gmf.runtime.diagram.ui.parts.IDiagramWorkbenchPart;
 import org.eclipse.gmf.runtime.diagram.ui.printing.internal.l10n.DiagramUIPrintingMessages;
 import org.eclipse.gmf.runtime.diagram.ui.printing.internal.util.PrintHelperUtil;
 import org.eclipse.gmf.runtime.diagram.ui.printing.internal.util.SWTDiagramPrinter;
-import org.eclipse.gmf.runtime.diagram.ui.render.clipboard.DiagramSVGGenerator;
-import org.eclipse.gmf.runtime.draw2d.ui.mapmode.IMapMode;
-import org.eclipse.gmf.runtime.draw2d.ui.mapmode.MapModeUtil;
 import org.eclipse.gmf.runtime.draw2d.ui.render.awt.internal.svg.SVGImage;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
@@ -62,14 +59,14 @@ public class TBGPrintActionHelper {
 				try (OutputStream os = new FileOutputStream(filePath)) {
 					TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
 					List editParts = dgrmEP.getPrimaryEditParts();
-					
+
 					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
 							true);
 					SVGImage svg = (SVGImage) generator.getRenderedImage();
 					TranscoderOutput transcoderOutput = new TranscoderOutput(os);
 					TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());
 					PDFTranscoder pdfTranscoder = new PDFTranscoder();
-//					pdfTranscoder.addTranscodingHint(PDFTranscoder.KEY_PIXEL_UNIT_TO_MILLIMETER, (25.4f / 72f));
+					pdfTranscoder.addTranscodingHint(PDFTranscoder.KEY_PIXEL_UNIT_TO_MILLIMETER, (25.4f / 72f));
 					pdfTranscoder.transcode(transcoderInput, transcoderOutput);
 
 					MessageBox success = new MessageBox(editorPart.getSite().getShell());

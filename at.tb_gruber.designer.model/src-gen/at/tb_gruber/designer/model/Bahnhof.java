@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getProjektname <em>Projektname</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getObjekt <em>Objekt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getPlankopf <em>Plankopf</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Bahnhof#getTextbaustein <em>Textbaustein</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getBahnhof()
@@ -104,17 +103,5 @@ public interface Bahnhof extends EObject {
 	 * @generated
 	 */
 	void setPlankopf(Plankopf value);
-
-	/**
-	 * Returns the value of the '<em><b>Textbaustein</b></em>' containment reference list.
-	 * The list contents are of type {@link at.tb_gruber.designer.model.Textbaustein}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Textbaustein</em>' containment reference list.
-	 * @see at.tb_gruber.designer.model.ModelPackage#getBahnhof_Textbaustein()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Textbaustein> getTextbaustein();
 
 } // Bahnhof

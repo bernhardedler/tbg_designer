@@ -104,22 +104,13 @@ public interface ModelPackage extends EPackage {
 	int BAHNHOF__PLANKOPF = 3;
 
 	/**
-	 * The feature id for the '<em><b>Textbaustein</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BAHNHOF__TEXTBAUSTEIN = 4;
-
-	/**
 	 * The number of structural features of the '<em>Bahnhof</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BAHNHOF_FEATURE_COUNT = 5;
+	int BAHNHOF_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Bahnhof</em>' class.
@@ -595,13 +586,22 @@ public interface ModelPackage extends EPackage {
 	int PLANKOPF = 4;
 
 	/**
+	 * The feature id for the '<em><b>Textbaustein</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANKOPF__TEXTBAUSTEIN = 0;
+
+	/**
 	 * The number of structural features of the '<em>Plankopf</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANKOPF_FEATURE_COUNT = 0;
+	int PLANKOPF_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Plankopf</em>' class.
@@ -2640,17 +2640,6 @@ public interface ModelPackage extends EPackage {
 	EReference getBahnhof_Plankopf();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Bahnhof#getTextbaustein <em>Textbaustein</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Textbaustein</em>'.
-	 * @see at.tb_gruber.designer.model.Bahnhof#getTextbaustein()
-	 * @see #getBahnhof()
-	 * @generated
-	 */
-	EReference getBahnhof_Textbaustein();
-
-	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Objekt <em>Objekt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3019,6 +3008,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPlankopf();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Plankopf#getTextbaustein <em>Textbaustein</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Textbaustein</em>'.
+	 * @see at.tb_gruber.designer.model.Plankopf#getTextbaustein()
+	 * @see #getPlankopf()
+	 * @generated
+	 */
+	EReference getPlankopf_Textbaustein();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Textbaustein <em>Textbaustein</em>}'.
@@ -3793,14 +3793,6 @@ public interface ModelPackage extends EPackage {
 		EReference BAHNHOF__PLANKOPF = eINSTANCE.getBahnhof_Plankopf();
 
 		/**
-		 * The meta object literal for the '<em><b>Textbaustein</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BAHNHOF__TEXTBAUSTEIN = eINSTANCE.getBahnhof_Textbaustein();
-
-		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.ObjektImpl <em>Objekt</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4080,6 +4072,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PLANKOPF = eINSTANCE.getPlankopf();
+
+		/**
+		 * The meta object literal for the '<em><b>Textbaustein</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLANKOPF__TEXTBAUSTEIN = eINSTANCE.getPlankopf_Textbaustein();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.TextbausteinImpl <em>Textbaustein</em>}' class.
