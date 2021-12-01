@@ -3,8 +3,8 @@ package at.tb_gruber.designer.ide.print;
 import java.util.List;
 import java.util.Optional;
 
-import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.draw2d.geometry.Translatable;
@@ -14,22 +14,22 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.figures.IExpandableFigure;
 import org.eclipse.gmf.runtime.diagram.ui.render.clipboard.DiagramSVGGenerator;
-import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
 import at.tb_gruber.designer.ide.preferences.TBGPreferencePage;
 
 public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
+	
 
-	private static final int DEFAULT_MARGIN_LEFT = 10;
-	private static final int DEFAULT_MARGIN_RIGHT = 10;
-	private static final int DEFAULT_MARGIN_TOP = 10;
-	private static final int DEFAULT_MARGIN_BOTTOM = 10;
+	private static final int DIN_A4_WIDTH = 794; // A4 Seite bei 96 dpi
+	private static final int DIN_A4_HEIGHT = 1123; // A4 Setie bei 96 dpi
+
+	private static final int DEFAULT_MARGIN_LEFT = 113; // 3 cm bei 96 dpi
+	private static final int DEFAULT_MARGIN_RIGHT = DIN_A4_WIDTH;
+	private static final int DEFAULT_MARGIN_TOP = 38; // 1 cm bei 96 dpi
+	private static final int DEFAULT_MARGIN_BOTTOM = 38; // 1 cm bei 96 dpi
 	
 	private int margin_left = Optional.ofNullable(System.getenv(TBGPreferencePage.MARGIN_LEFT_VARIABLE_NAME)).map(Integer::valueOf).orElse(DEFAULT_MARGIN_LEFT);
-	private int margin_right = Optional.ofNullable(System.getenv(TBGPreferencePage.MARGIN_RIGHT_VARIABLE_NAME)).map(Integer::valueOf).orElse(DEFAULT_MARGIN_RIGHT);
-	private int margin_top = Optional.ofNullable(System.getenv(TBGPreferencePage.MARGIN_TOP_VARIABLE_NAME)).map(Integer::valueOf).orElse(DEFAULT_MARGIN_TOP);
-	private int margin_bottom = Optional.ofNullable(System.getenv(TBGPreferencePage.MARGIN_BOTTOM_VARIABLE_NAME)).map(Integer::valueOf).orElse(DEFAULT_MARGIN_BOTTOM);
+	private Dimension diagramDimension;
 
 	public TBGDiagramSVGGenerator(DiagramEditPart diagramEditPart) {
 		super(diagramEditPart);
@@ -70,11 +70,13 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 		PrecisionRectangle rect = new PrecisionRectangle();
 		rect.preciseWidth = maxX - minX;
 		rect.preciseHeight = maxY - minY;
+		
+		int margin_top = diagramDimension.height() > DIN_A4_HEIGHT ? DEFAULT_MARGIN_TOP : DIN_A4_HEIGHT;
 
 		rect.preciseX = minX - (margin_left + getImageMargin());
 		rect.preciseY = minY - (margin_top + getImageMargin());
-		rect.preciseWidth += (margin_left + margin_right + 2 * getImageMargin());
-		rect.preciseHeight += (margin_top + margin_bottom + 2 * getImageMargin());
+		rect.preciseWidth += (margin_left + DEFAULT_MARGIN_RIGHT + 2 * getImageMargin());
+		rect.preciseHeight += (margin_top + DEFAULT_MARGIN_BOTTOM + 2 * getImageMargin());
 		rect.updateInts();
 		return rect;
 	}
@@ -84,6 +86,10 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 			walker.translateToParent(t);
 		}
 		return t;
+	}
+
+	public void setDiagramDimension(Dimension bounds) {
+		this.diagramDimension = bounds;
 	}
 
 }

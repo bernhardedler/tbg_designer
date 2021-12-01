@@ -21,12 +21,4 @@
 			</resource>
 		</resources>
 	</build>
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.xmlgraphics</groupId>
-			<artifactId>fop</artifactId>
-			<version>2.6</version>
-		</dependency>
-
-	</dependencies>
 </project>

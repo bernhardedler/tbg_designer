@@ -42,7 +42,10 @@ Require-Bundle: org.eclipse.ui,
  org.apache.batik.svggen;bundle-version="1.6.0",
  org.apache.batik.util;bundle-version="[1.6.0,1.7.0)",
  org.apache.batik.util.gui;bundle-version="1.6.0",
- org.apache.batik.xml;bundle-version="1.6.0"
+ org.apache.batik.xml;bundle-version="1.6.0",
+ org.apache.pdfbox;bundle-version="2.0.24",
+ org.apache.pdfbox.fontbox;bundle-version="2.0.24",
+ org.apache.commons.logging;bundle-version="1.2.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: TB Gruber

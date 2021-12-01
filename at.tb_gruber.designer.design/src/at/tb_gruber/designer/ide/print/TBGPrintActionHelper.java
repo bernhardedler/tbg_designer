@@ -27,6 +27,10 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IEditorPart;
 
 public class TBGPrintActionHelper {
+
+	private TBGPrintActionHelper() {
+	}
+
 	/**
 	 * Prints the diagram after a default print dialog is opened for the user.
 	 * 
@@ -56,27 +60,38 @@ public class TBGPrintActionHelper {
 				boolean loadedPreferences = PrintHelperUtil.initializePreferences(dgrmEP,
 						dgrmEP.getDiagramPreferencesHint());
 				Rectangle figureBounds = PrintHelperUtil.getPageBreakBounds(dgrmEP, loadedPreferences);
-				try (OutputStream os = new FileOutputStream(filePath)) {
-					TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
-					List editParts = dgrmEP.getPrimaryEditParts();
+				try {
+					try (OutputStream os = new FileOutputStream(filePath)) {
+						TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
+						List editParts = dgrmEP.getPrimaryEditParts();
+						generator.setDiagramDimension(dgrmEP.getFigure().getBounds().getSize());
+						generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
+								true);
+						SVGImage svg = (SVGImage) generator.getRenderedImage();
+						TranscoderOutput transcoderOutput = new TranscoderOutput(os);
+						TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());
+						PDFTranscoder pdfTranscoder = new PDFTranscoder();
+						pdfTranscoder.addTranscodingHint(PDFTranscoder.KEY_PIXEL_UNIT_TO_MILLIMETER, (25.4f / 72f));
+						pdfTranscoder.transcode(transcoderInput, transcoderOutput);
 
-					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
-							true);
-					SVGImage svg = (SVGImage) generator.getRenderedImage();
-					TranscoderOutput transcoderOutput = new TranscoderOutput(os);
-					TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());
-					PDFTranscoder pdfTranscoder = new PDFTranscoder();
-					pdfTranscoder.addTranscodingHint(PDFTranscoder.KEY_PIXEL_UNIT_TO_MILLIMETER, (25.4f / 72f));
-					pdfTranscoder.transcode(transcoderInput, transcoderOutput);
+					} catch (IOException e) {
+						e.printStackTrace();
+					} catch (TranscoderException e) {
+						e.printStackTrace();
+					}
+
+					PlankopfPdfPostProcessor.postprocess(filePath, dgrmEP);
 
 					MessageBox success = new MessageBox(editorPart.getSite().getShell());
 					success.setText("Export erfolgreich");
 					success.setMessage("Das Diagramm wurde erfolgreich exportiert.");
 					success.open();
-				} catch (IOException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
-				} catch (TranscoderException e) {
-					e.printStackTrace();
+					MessageBox failure = new MessageBox(editorPart.getSite().getShell());
+					failure.setText("Error");
+					failure.setMessage("Fehler beim erstellen der Datei: " + System.lineSeparator() + e.getMessage());
+					failure.open();
 				}
 			}
 		} else {
@@ -95,10 +110,4 @@ public class TBGPrintActionHelper {
 		}
 	}
 
-	/**
-	 * Private constructor prevents instantiation
-	 */
-	private TBGPrintActionHelper() {
-		// utility class
-	}
 }
