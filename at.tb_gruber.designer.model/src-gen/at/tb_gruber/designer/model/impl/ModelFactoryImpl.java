@@ -62,10 +62,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createObjekt();
 		case ModelPackage.VERBINDUNG:
 			return createVerbindung();
-		case ModelPackage.PLANKOPF:
-			return createPlankopf();
-		case ModelPackage.TEXTBAUSTEIN:
-			return createTextbaustein();
 		case ModelPackage.TRAFO:
 			return createTrafo();
 		case ModelPackage.NETZANSCHLUSSPUNKT:
@@ -206,28 +202,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Verbindung createVerbindung() {
 		VerbindungImpl verbindung = new VerbindungImpl();
 		return verbindung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Plankopf createPlankopf() {
-		PlankopfImpl plankopf = new PlankopfImpl();
-		return plankopf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Textbaustein createTextbaustein() {
-		TextbausteinImpl textbaustein = new TextbausteinImpl();
-		return textbaustein;
 	}
 
 	/**

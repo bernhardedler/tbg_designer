@@ -96,7 +96,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/objekt"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Bahnhof/plankopf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/bearbeitet_am"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/bearbeitet_von"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/gezeichnet_am"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/gezeichnet_von"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/geprueft_am"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/geprueft_von"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/plannummer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/freigegeben_von"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Objekt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Objekt/name"/>
@@ -133,12 +140,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/argusrelevant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/linientype"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Verbindung/kabellaenge"/>
-    </genClasses>
-    <genClasses ecoreClass="model.ecore#//Plankopf">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Plankopf/textbaustein"/>
-    </genClasses>
-    <genClasses ecoreClass="model.ecore#//Textbaustein">
-      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Textbaustein/Label"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Trafo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/sekundaerspannung"/>

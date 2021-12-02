@@ -95,13 +95,76 @@ public interface ModelPackage extends EPackage {
 	int BAHNHOF__OBJEKT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Plankopf</b></em>' containment reference.
+	 * The feature id for the '<em><b>Bearbeitet am</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BAHNHOF__PLANKOPF = 3;
+	int BAHNHOF__BEARBEITET_AM = 3;
+
+	/**
+	 * The feature id for the '<em><b>Bearbeitet von</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__BEARBEITET_VON = 4;
+
+	/**
+	 * The feature id for the '<em><b>Gezeichnet am</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__GEZEICHNET_AM = 5;
+
+	/**
+	 * The feature id for the '<em><b>Gezeichnet von</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__GEZEICHNET_VON = 6;
+
+	/**
+	 * The feature id for the '<em><b>Geprueft am</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__GEPRUEFT_AM = 7;
+
+	/**
+	 * The feature id for the '<em><b>Geprueft von</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__GEPRUEFT_VON = 8;
+
+	/**
+	 * The feature id for the '<em><b>Plannummer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__PLANNUMMER = 9;
+
+	/**
+	 * The feature id for the '<em><b>Freigegeben von</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BAHNHOF__FREIGEGEBEN_VON = 10;
 
 	/**
 	 * The number of structural features of the '<em>Bahnhof</em>' class.
@@ -110,7 +173,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BAHNHOF_FEATURE_COUNT = 4;
+	int BAHNHOF_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Bahnhof</em>' class.
@@ -247,7 +310,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getAnlageBase()
 	 * @generated
 	 */
-	int ANLAGE_BASE = 19;
+	int ANLAGE_BASE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -576,80 +639,6 @@ public interface ModelPackage extends EPackage {
 	int VERBINDUNG_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.PlankopfImpl <em>Plankopf</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.PlankopfImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getPlankopf()
-	 * @generated
-	 */
-	int PLANKOPF = 4;
-
-	/**
-	 * The feature id for the '<em><b>Textbaustein</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANKOPF__TEXTBAUSTEIN = 0;
-
-	/**
-	 * The number of structural features of the '<em>Plankopf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANKOPF_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Plankopf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANKOPF_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.TextbausteinImpl <em>Textbaustein</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.tb_gruber.designer.model.impl.TextbausteinImpl
-	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTextbaustein()
-	 * @generated
-	 */
-	int TEXTBAUSTEIN = 5;
-
-	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXTBAUSTEIN__LABEL = 0;
-
-	/**
-	 * The number of structural features of the '<em>Textbaustein</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXTBAUSTEIN_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Textbaustein</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXTBAUSTEIN_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.impl.TrafoImpl <em>Trafo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -657,7 +646,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTrafo()
 	 * @generated
 	 */
-	int TRAFO = 6;
+	int TRAFO = 4;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -856,7 +845,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getAnlageOhneAttribute()
 	 * @generated
 	 */
-	int ANLAGE_OHNE_ATTRIBUTE = 20;
+	int ANLAGE_OHNE_ATTRIBUTE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -920,7 +909,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getNetzanschlusspunkt()
 	 * @generated
 	 */
-	int NETZANSCHLUSSPUNKT = 7;
+	int NETZANSCHLUSSPUNKT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1011,7 +1000,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVersorgungsknoten()
 	 * @generated
 	 */
-	int VERSORGUNGSKNOTEN = 8;
+	int VERSORGUNGSKNOTEN = 6;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1174,7 +1163,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergietechnikanlage()
 	 * @generated
 	 */
-	int ENERGIETECHNIKANLAGE = 9;
+	int ENERGIETECHNIKANLAGE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1337,7 +1326,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getGenerator()
 	 * @generated
 	 */
-	int GENERATOR = 10;
+	int GENERATOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1536,7 +1525,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerBase()
 	 * @generated
 	 */
-	int VERTEILER_BASE = 15;
+	int VERTEILER_BASE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1618,7 +1607,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerMitZaehler()
 	 * @generated
 	 */
-	int VERTEILER_MIT_ZAEHLER = 11;
+	int VERTEILER_MIT_ZAEHLER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1718,7 +1707,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicher()
 	 * @generated
 	 */
-	int ENERGIESPEICHER = 12;
+	int ENERGIESPEICHER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -1917,7 +1906,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerContainer()
 	 * @generated
 	 */
-	int VERTEILER_CONTAINER = 13;
+	int VERTEILER_CONTAINER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2089,7 +2078,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getBetreiber()
 	 * @generated
 	 */
-	int BETREIBER = 14;
+	int BETREIBER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2126,7 +2115,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilerOhneZaehler()
 	 * @generated
 	 */
-	int VERTEILER_OHNE_ZAEHLER = 16;
+	int VERTEILER_OHNE_ZAEHLER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2208,7 +2197,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getDetails()
 	 * @generated
 	 */
-	int DETAILS = 17;
+	int DETAILS = 15;
 
 	/**
 	 * The number of structural features of the '<em>Details</em>' class.
@@ -2236,7 +2225,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichter()
 	 * @generated
 	 */
-	int UMRICHTER = 18;
+	int UMRICHTER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Details</b></em>' containment reference list.
@@ -2426,7 +2415,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEigentuemer()
 	 * @generated
 	 */
-	int EIGENTUEMER = 21;
+	int EIGENTUEMER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2463,7 +2452,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getObjektarttype()
 	 * @generated
 	 */
-	int OBJEKTARTTYPE = 22;
+	int OBJEKTARTTYPE = 20;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Spannungsarttype <em>Spannungsarttype</em>}' enum.
@@ -2473,7 +2462,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getSpannungsarttype()
 	 * @generated
 	 */
-	int SPANNUNGSARTTYPE = 23;
+	int SPANNUNGSARTTYPE = 21;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Externe_Datenquelle <em>Externe Datenquelle</em>}' enum.
@@ -2483,7 +2472,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getExterne_Datenquelle()
 	 * @generated
 	 */
-	int EXTERNE_DATENQUELLE = 24;
+	int EXTERNE_DATENQUELLE = 22;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ET_Type <em>ET Type</em>}' enum.
@@ -2493,7 +2482,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getET_Type()
 	 * @generated
 	 */
-	int ET_TYPE = 25;
+	int ET_TYPE = 23;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.ARGUSrelevant <em>ARGU Srelevant</em>}' enum.
@@ -2503,7 +2492,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getARGUSrelevant()
 	 * @generated
 	 */
-	int ARGU_SRELEVANT = 26;
+	int ARGU_SRELEVANT = 24;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Eadb_Versorgung_Art <em>Eadb Versorgung Art</em>}' enum.
@@ -2513,7 +2502,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEadb_Versorgung_Art()
 	 * @generated
 	 */
-	int EADB_VERSORGUNG_ART = 27;
+	int EADB_VERSORGUNG_ART = 25;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.NapPosition <em>Nap Position</em>}' enum.
@@ -2523,7 +2512,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getNapPosition()
 	 * @generated
 	 */
-	int NAP_POSITION = 28;
+	int NAP_POSITION = 26;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.LinienType <em>Linien Type</em>}' enum.
@@ -2533,7 +2522,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getLinienType()
 	 * @generated
 	 */
-	int LINIEN_TYPE = 29;
+	int LINIEN_TYPE = 27;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Generatorfunktion <em>Generatorfunktion</em>}' enum.
@@ -2543,7 +2532,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getGeneratorfunktion()
 	 * @generated
 	 */
-	int GENERATORFUNKTION = 30;
+	int GENERATORFUNKTION = 28;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Umrichterart <em>Umrichterart</em>}' enum.
@@ -2553,7 +2542,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterart()
 	 * @generated
 	 */
-	int UMRICHTERART = 31;
+	int UMRICHTERART = 29;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Energiespeicherart <em>Energiespeicherart</em>}' enum.
@@ -2563,7 +2552,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherart()
 	 * @generated
 	 */
-	int ENERGIESPEICHERART = 32;
+	int ENERGIESPEICHERART = 30;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Umrichterfunktion <em>Umrichterfunktion</em>}' enum.
@@ -2573,7 +2562,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getUmrichterfunktion()
 	 * @generated
 	 */
-	int UMRICHTERFUNKTION = 33;
+	int UMRICHTERFUNKTION = 31;
 
 	/**
 	 * The meta object id for the '{@link at.tb_gruber.designer.model.Energiespeicherfunktion <em>Energiespeicherfunktion</em>}' enum.
@@ -2583,7 +2572,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getEnergiespeicherfunktion()
 	 * @generated
 	 */
-	int ENERGIESPEICHERFUNKTION = 34;
+	int ENERGIESPEICHERFUNKTION = 32;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -2629,15 +2618,92 @@ public interface ModelPackage extends EPackage {
 	EReference getBahnhof_Objekt();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link at.tb_gruber.designer.model.Bahnhof#getPlankopf <em>Plankopf</em>}'.
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getPlannummer <em>Plannummer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Plankopf</em>'.
-	 * @see at.tb_gruber.designer.model.Bahnhof#getPlankopf()
+	 * @return the meta object for the attribute '<em>Plannummer</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getPlannummer()
 	 * @see #getBahnhof()
 	 * @generated
 	 */
-	EReference getBahnhof_Plankopf();
+	EAttribute getBahnhof_Plannummer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getFreigegeben_von <em>Freigegeben von</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Freigegeben von</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getFreigegeben_von()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Freigegeben_von();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getBearbeitet_von <em>Bearbeitet von</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bearbeitet von</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getBearbeitet_von()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Bearbeitet_von();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getGezeichnet_von <em>Gezeichnet von</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gezeichnet von</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getGezeichnet_von()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Gezeichnet_von();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getGeprueft_von <em>Geprueft von</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Geprueft von</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getGeprueft_von()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Geprueft_von();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getBearbeitet_am <em>Bearbeitet am</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bearbeitet am</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getBearbeitet_am()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Bearbeitet_am();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getGezeichnet_am <em>Gezeichnet am</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gezeichnet am</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getGezeichnet_am()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Gezeichnet_am();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Bahnhof#getGeprueft_am <em>Geprueft am</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Geprueft am</em>'.
+	 * @see at.tb_gruber.designer.model.Bahnhof#getGeprueft_am()
+	 * @see #getBahnhof()
+	 * @generated
+	 */
+	EAttribute getBahnhof_Geprueft_am();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Objekt <em>Objekt</em>}'.
@@ -2998,48 +3064,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVerbindung_Kabellaenge();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Plankopf <em>Plankopf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Plankopf</em>'.
-	 * @see at.tb_gruber.designer.model.Plankopf
-	 * @generated
-	 */
-	EClass getPlankopf();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.Plankopf#getTextbaustein <em>Textbaustein</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Textbaustein</em>'.
-	 * @see at.tb_gruber.designer.model.Plankopf#getTextbaustein()
-	 * @see #getPlankopf()
-	 * @generated
-	 */
-	EReference getPlankopf_Textbaustein();
-
-	/**
-	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Textbaustein <em>Textbaustein</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Textbaustein</em>'.
-	 * @see at.tb_gruber.designer.model.Textbaustein
-	 * @generated
-	 */
-	EClass getTextbaustein();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Textbaustein#getLabel <em>Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Label</em>'.
-	 * @see at.tb_gruber.designer.model.Textbaustein#getLabel()
-	 * @see #getTextbaustein()
-	 * @generated
-	 */
-	EAttribute getTextbaustein_Label();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Trafo <em>Trafo</em>}'.
@@ -3785,12 +3809,68 @@ public interface ModelPackage extends EPackage {
 		EReference BAHNHOF__OBJEKT = eINSTANCE.getBahnhof_Objekt();
 
 		/**
-		 * The meta object literal for the '<em><b>Plankopf</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Plannummer</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BAHNHOF__PLANKOPF = eINSTANCE.getBahnhof_Plankopf();
+		EAttribute BAHNHOF__PLANNUMMER = eINSTANCE.getBahnhof_Plannummer();
+
+		/**
+		 * The meta object literal for the '<em><b>Freigegeben von</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__FREIGEGEBEN_VON = eINSTANCE.getBahnhof_Freigegeben_von();
+
+		/**
+		 * The meta object literal for the '<em><b>Bearbeitet von</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__BEARBEITET_VON = eINSTANCE.getBahnhof_Bearbeitet_von();
+
+		/**
+		 * The meta object literal for the '<em><b>Gezeichnet von</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__GEZEICHNET_VON = eINSTANCE.getBahnhof_Gezeichnet_von();
+
+		/**
+		 * The meta object literal for the '<em><b>Geprueft von</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__GEPRUEFT_VON = eINSTANCE.getBahnhof_Geprueft_von();
+
+		/**
+		 * The meta object literal for the '<em><b>Bearbeitet am</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__BEARBEITET_AM = eINSTANCE.getBahnhof_Bearbeitet_am();
+
+		/**
+		 * The meta object literal for the '<em><b>Gezeichnet am</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__GEZEICHNET_AM = eINSTANCE.getBahnhof_Gezeichnet_am();
+
+		/**
+		 * The meta object literal for the '<em><b>Geprueft am</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BAHNHOF__GEPRUEFT_AM = eINSTANCE.getBahnhof_Geprueft_am();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.ObjektImpl <em>Objekt</em>}' class.
@@ -4062,42 +4142,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VERBINDUNG__KABELLAENGE = eINSTANCE.getVerbindung_Kabellaenge();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.PlankopfImpl <em>Plankopf</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.PlankopfImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getPlankopf()
-		 * @generated
-		 */
-		EClass PLANKOPF = eINSTANCE.getPlankopf();
-
-		/**
-		 * The meta object literal for the '<em><b>Textbaustein</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PLANKOPF__TEXTBAUSTEIN = eINSTANCE.getPlankopf_Textbaustein();
-
-		/**
-		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.TextbausteinImpl <em>Textbaustein</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.tb_gruber.designer.model.impl.TextbausteinImpl
-		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getTextbaustein()
-		 * @generated
-		 */
-		EClass TEXTBAUSTEIN = eINSTANCE.getTextbaustein();
-
-		/**
-		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEXTBAUSTEIN__LABEL = eINSTANCE.getTextbaustein_Label();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.TrafoImpl <em>Trafo</em>}' class.

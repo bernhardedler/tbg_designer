@@ -6,8 +6,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projektname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objekt" upperBound="-1"
         eType="#//Objekt" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="plankopf" eType="#//Plankopf"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bearbeitet_am" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bearbeitet_von" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gezeichnet_am" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gezeichnet_von" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geprueft_am" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geprueft_von" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="plannummer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="freigegeben_von" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Objekt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -73,13 +82,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="argusrelevant" eType="#//ARGUSrelevant"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linientype" eType="#//LinienType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kabellaenge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Plankopf">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="textbaustein" upperBound="-1"
-        eType="#//Textbaustein" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Textbaustein">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trafo" eSuperTypes="#//AnlageMitAttributen">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sekundaerspannung" eType="#//Spannungsarttype"

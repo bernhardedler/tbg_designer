@@ -3,7 +3,9 @@ package at.tb_gruber.designer.ide;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
@@ -18,6 +20,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
@@ -32,8 +35,6 @@ import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorReference;
 import org.eclipse.ui.PlatformUI;
-
-import com.google.common.collect.Maps;
 
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.impl.ModelFactoryImpl;
@@ -171,9 +172,11 @@ public class ProjectServices {
 						final Bahnhof bhf = factory.createBahnhof();
 						bhf.setName(projectName);
 						res.getContents().add(bhf);
-
+						
 						try {
-							res.save(Maps.newHashMap());
+							Map<Object, Object> options = new HashMap<Object, Object>();
+							options.put(XMLResource.OPTION_ENCODING, "UTF-8"); // für umlaute in .model datei beim drucken
+							res.save(options);
 						} catch (IOException e) {
 							System.out.println("ERROR: Init semantic model failed");
 							e.printStackTrace();

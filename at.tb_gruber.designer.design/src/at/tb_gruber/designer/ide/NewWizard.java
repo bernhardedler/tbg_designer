@@ -46,7 +46,7 @@ public class NewWizard extends Wizard implements INewWizard {
 
 		_pageOne = new WizardNewProjectCreationPage(WIZARD_NAME);
 		_pageOne.setTitle("Neues TBG-Designer Projekt anlegen");
-		_pageOne.setDescription("Erstellt die benötigte Projektstruktur");
+		_pageOne.setDescription("Erstellt die ben\u00f6tigte Projektstruktur");
 		addPage(_pageOne);
 	}
 }

@@ -28,7 +28,6 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 	private static final int DEFAULT_MARGIN_TOP = 38; // 1 cm bei 96 dpi
 	private static final int DEFAULT_MARGIN_BOTTOM = 38; // 1 cm bei 96 dpi
 	
-	private int margin_left = Optional.ofNullable(System.getenv(TBGPreferencePage.MARGIN_LEFT_VARIABLE_NAME)).map(Integer::valueOf).orElse(DEFAULT_MARGIN_LEFT);
 	private Dimension diagramDimension;
 
 	public TBGDiagramSVGGenerator(DiagramEditPart diagramEditPart) {
@@ -73,9 +72,9 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 		
 		int margin_top = diagramDimension.height() > DIN_A4_HEIGHT ? DEFAULT_MARGIN_TOP : DIN_A4_HEIGHT;
 
-		rect.preciseX = minX - (margin_left + getImageMargin());
+		rect.preciseX = minX - (DEFAULT_MARGIN_LEFT + getImageMargin());
 		rect.preciseY = minY - (margin_top + getImageMargin());
-		rect.preciseWidth += (margin_left + DEFAULT_MARGIN_RIGHT + 2 * getImageMargin());
+		rect.preciseWidth += (DEFAULT_MARGIN_LEFT + DEFAULT_MARGIN_RIGHT + 2 * getImageMargin());
 		rect.preciseHeight += (margin_top + DEFAULT_MARGIN_BOTTOM + 2 * getImageMargin());
 		rect.updateInts();
 		return rect;

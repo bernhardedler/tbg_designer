@@ -142,52 +142,6 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Plankopf} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PlankopfItemProvider plankopfItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Plankopf}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPlankopfAdapter() {
-		if (plankopfItemProvider == null) {
-			plankopfItemProvider = new PlankopfItemProvider(this);
-		}
-
-		return plankopfItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Textbaustein} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TextbausteinItemProvider textbausteinItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link at.tb_gruber.designer.model.Textbaustein}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTextbausteinAdapter() {
-		if (textbausteinItemProvider == null) {
-			textbausteinItemProvider = new TextbausteinItemProvider(this);
-		}
-
-		return textbausteinItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.Trafo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,10 +551,6 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			objektItemProvider.dispose();
 		if (verbindungItemProvider != null)
 			verbindungItemProvider.dispose();
-		if (plankopfItemProvider != null)
-			plankopfItemProvider.dispose();
-		if (textbausteinItemProvider != null)
-			textbausteinItemProvider.dispose();
 		if (trafoItemProvider != null)
 			trafoItemProvider.dispose();
 		if (netzanschlusspunktItemProvider != null)

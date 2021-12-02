@@ -26,9 +26,7 @@ import at.tb_gruber.designer.model.NapPosition;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Objekt;
 import at.tb_gruber.designer.model.Objektarttype;
-import at.tb_gruber.designer.model.Plankopf;
 import at.tb_gruber.designer.model.Spannungsarttype;
-import at.tb_gruber.designer.model.Textbaustein;
 import at.tb_gruber.designer.model.Trafo;
 import at.tb_gruber.designer.model.Umrichter;
 import at.tb_gruber.designer.model.Umrichterart;
@@ -82,20 +80,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass verbindungEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass plankopfEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass textbausteinEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -410,8 +394,78 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBahnhof_Plankopf() {
-		return (EReference) bahnhofEClass.getEStructuralFeatures().get(3);
+	public EAttribute getBahnhof_Plannummer() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Freigegeben_von() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Bearbeitet_von() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Gezeichnet_von() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Geprueft_von() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Bearbeitet_am() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Gezeichnet_am() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBahnhof_Geprueft_am() {
+		return (EAttribute) bahnhofEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -742,46 +796,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EAttribute getVerbindung_Kabellaenge() {
 		return (EAttribute) verbindungEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPlankopf() {
-		return plankopfEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPlankopf_Textbaustein() {
-		return (EReference) plankopfEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTextbaustein() {
-		return textbausteinEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTextbaustein_Label() {
-		return (EAttribute) textbausteinEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1468,7 +1482,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(bahnhofEClass, BAHNHOF__NAME);
 		createEAttribute(bahnhofEClass, BAHNHOF__PROJEKTNAME);
 		createEReference(bahnhofEClass, BAHNHOF__OBJEKT);
-		createEReference(bahnhofEClass, BAHNHOF__PLANKOPF);
+		createEAttribute(bahnhofEClass, BAHNHOF__BEARBEITET_AM);
+		createEAttribute(bahnhofEClass, BAHNHOF__BEARBEITET_VON);
+		createEAttribute(bahnhofEClass, BAHNHOF__GEZEICHNET_AM);
+		createEAttribute(bahnhofEClass, BAHNHOF__GEZEICHNET_VON);
+		createEAttribute(bahnhofEClass, BAHNHOF__GEPRUEFT_AM);
+		createEAttribute(bahnhofEClass, BAHNHOF__GEPRUEFT_VON);
+		createEAttribute(bahnhofEClass, BAHNHOF__PLANNUMMER);
+		createEAttribute(bahnhofEClass, BAHNHOF__FREIGEGEBEN_VON);
 
 		objektEClass = createEClass(OBJEKT);
 		createEAttribute(objektEClass, OBJEKT__NAME);
@@ -1505,12 +1526,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(verbindungEClass, VERBINDUNG__ARGUSRELEVANT);
 		createEAttribute(verbindungEClass, VERBINDUNG__LINIENTYPE);
 		createEAttribute(verbindungEClass, VERBINDUNG__KABELLAENGE);
-
-		plankopfEClass = createEClass(PLANKOPF);
-		createEReference(plankopfEClass, PLANKOPF__TEXTBAUSTEIN);
-
-		textbausteinEClass = createEClass(TEXTBAUSTEIN);
-		createEAttribute(textbausteinEClass, TEXTBAUSTEIN__LABEL);
 
 		trafoEClass = createEClass(TRAFO);
 		createEAttribute(trafoEClass, TRAFO__SEKUNDAERSPANNUNG);
@@ -1648,9 +1663,28 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getBahnhof_Objekt(), this.getObjekt(), null, "objekt", null, 0, -1, Bahnhof.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getBahnhof_Plankopf(), this.getPlankopf(), null, "plankopf", null, 0, 1, Bahnhof.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBahnhof_Bearbeitet_am(), ecorePackage.getEString(), "bearbeitet_am", null, 0, 1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBahnhof_Bearbeitet_von(), ecorePackage.getEString(), "bearbeitet_von", null, 0, 1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBahnhof_Gezeichnet_am(), ecorePackage.getEString(), "gezeichnet_am", null, 0, 1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBahnhof_Gezeichnet_von(), ecorePackage.getEString(), "gezeichnet_von", null, 0, 1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBahnhof_Geprueft_am(), ecorePackage.getEString(), "geprueft_am", null, 0, 1, Bahnhof.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getBahnhof_Geprueft_von(), ecorePackage.getEString(), "geprueft_von", null, 0, 1, Bahnhof.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBahnhof_Plannummer(), ecorePackage.getEString(), "plannummer", null, 0, 1, Bahnhof.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBahnhof_Freigegeben_von(), ecorePackage.getEString(), "freigegeben_von", null, 0, 1,
+				Bahnhof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(objektEClass, Objekt.class, "Objekt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjekt_Name(), ecorePackage.getEString(), "name", null, 1, 1, Objekt.class, !IS_TRANSIENT,
@@ -1739,17 +1773,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerbindung_Kabellaenge(), ecorePackage.getEString(), "kabellaenge", null, 0, 1,
 				Verbindung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(plankopfEClass, Plankopf.class, "Plankopf", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlankopf_Textbaustein(), this.getTextbaustein(), null, "textbaustein", null, 0, -1,
-				Plankopf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(textbausteinEClass, Textbaustein.class, "Textbaustein", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTextbaustein_Label(), ecorePackage.getEString(), "Label", null, 1, 1, Textbaustein.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trafoEClass, Trafo.class, "Trafo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrafo_Sekundaerspannung(), this.getSpannungsarttype(), "sekundaerspannung",
