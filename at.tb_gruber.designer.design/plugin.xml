@@ -10,13 +10,15 @@
   <extension
         point="org.eclipse.ui.newWizards">
      <category
-           id="at.tb_gruber.designer.ide.category1"
+           id="at.tb_gruber.designer.ide.category"
            name="TB Gruber">
      </category>
      <wizard
-           category="at.tb_gruber.designer.ide.category1"
+           category="at.tb_gruber.designer.ide.category"
            class="at.tb_gruber.designer.ide.NewWizard"
-           id="at.tb_gruber.designer.ide.wizard1"
+           finalPerspective="org.eclipse.sirius.ui.tools.perspective.modeling"
+           icon="images/icons/32x32.png"
+           id="at.tb_gruber.designer.ide.wizard"
            name="TBG Projekt"
            project="true">
      </wizard>

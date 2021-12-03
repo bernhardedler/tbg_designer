@@ -195,7 +195,6 @@ public class ProjectServices {
 						@Override
 						protected void doExecute() {
 							ViewpointSelectionCallback callback = new ViewpointSelectionCallback();
-
 							for (Viewpoint vp : ViewpointRegistry.getInstance().getViewpoints()) {
 								for (String viewpoint : viewpointsToActivate) {
 									if (viewpoint.equals(vp.getName()))
