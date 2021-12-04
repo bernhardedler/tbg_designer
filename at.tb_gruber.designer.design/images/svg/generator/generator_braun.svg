@@ -1,14 +1,14 @@
-<svg width="102" height="103" xmlns="http://www.w3.org/2000/svg">
+<svg width="115" height="116" xmlns="http://www.w3.org/2000/svg">
   <g>
     <title>background</title>
-    <ellipse fill="#fff" cx="51" cy="51" rx="50" ry="50" id="b1" />
+    <ellipse fill="#fff" cx="57" cy="57" rx="56" ry="56" id="b1" />
   </g>
   <g>
     <title>Rahmen</title>
-    <ellipse fill="none" stroke-width="2" stroke="#FF7F00" cx="51" cy="51" rx="50" ry="50" id="r1" />
+    <ellipse fill="none" stroke-width="2" stroke="#C65911" cx="57" cy="57" rx="56" ry="56" id="r1" />
   </g>
   <g>
     <title>Text</title>
-    <text x="22" y="77" fill="#FF7F00" font-size="70px" font-family="sans-serif">G</text>
+    <text x="30" y="81" fill="#C65911" font-size="70px" font-family="sans-serif">G</text>
   </g>
 </svg>

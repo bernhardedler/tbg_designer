@@ -1,13 +1,13 @@
-<svg width="202" height="103" xmlns="http://www.w3.org/2000/svg">
+<svg width="228" height="116" xmlns="http://www.w3.org/2000/svg">
  <g>
   <title>background</title>
-  <rect x="0" y="0" width="202" height="102" id="canvas_background" fill="#fff"/>
+  <rect fill="#fff" id="canvas_background" height="115" width="228" y="0" x="0"/>
  </g>
  <g>
   <title>Layer 1</title>
-  <rect fill="#fff" stroke-width="2" x="1" y="1" width="200" height="100" id="svg_3" stroke="#0000FF"/>
-  <line fill="none" stroke="#0000FF" stroke-width="2" x1="0" y1="50" x2="200" y2="50" id="svg_4"/>
-  <line fill="none" stroke="#0000FF" stroke-width="2" x1="60" y1="50" x2="60" y2="100" id="svg_5"/>
-  <line fill="none" stroke="#0000FF" stroke-width="2" x1="140" y1="50" x2="140" y2="100" id="svg_10"/>
+  <rect stroke="#0070C0" id="svg_3" height="113" width="226" y="1" x="1" stroke-width="2" fill="#fff"/>
+  <line id="svg_4" y2="57" x2="226" y1="57" x1="0" stroke-width="2" stroke="#0070C0" fill="none"/>
+  <line id="svg_5" y2="115" x2="76" y1="57" x1="76" stroke-width="2" stroke="#0070C0" fill="none"/>
+  <line id="svg_10" y2="115" x2="152" y1="57" x1="152" stroke-width="2" stroke="#0070C0" fill="none"/>
  </g>
 </svg>

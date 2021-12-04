@@ -75,15 +75,15 @@ public class VersorgungsknotenNapNach {
 		for (String color : Icons.colors.keySet()) {
 			String tmpXml = TEMPLATE_S
 					.replaceAll("&color", String.valueOf(Icons.colors.get(color)));
-			String tmpFilePath = subfolder + "versorgungsknoten_" + color + "_s_nap_vor.svg";
+			String tmpFilePath = subfolder + "versorgungsknoten_" + color + "_s_nap_nach.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 			tmpXml = TEMPLATE_M
 					.replaceAll("&color", String.valueOf(Icons.colors.get(color)));
-			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_m_nap_vor.svg";
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_m_nap_nach.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 			tmpXml = TEMPLATE_L
 					.replaceAll("&color", String.valueOf(Icons.colors.get(color)));
-			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_l_nap_vor.svg";
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_l_nap_nach.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 		}
 	}

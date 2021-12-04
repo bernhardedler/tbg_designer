@@ -1,17 +1,9 @@
-<svg width="100" height="101" xmlns="http://www.w3.org/2000/svg">
-
- <g>
-  <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="19.093988" width="19.093988" y="-1" x="-1"/>
-  <g display="none" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_2"/>
-  </g>
- </g>
- <g>
+<svg width="115" height="116" xmlns="http://www.w3.org/2000/svg">
+<g>
   <title>Layer 1</title>
-  <ellipse fill="none" stroke="#00FF00" stroke-width="2" cx="50" cy="37" id="svg_5" rx="30" ry="30"/>
-  <ellipse fill="none" stroke="#FF0000" stroke-width="2" cx="50" cy="63" id="svg_8" rx="30" ry="30"/>
-  <line stroke="#00FF00" id="svg_3" y2="7" x2="50" y1="0" x1="50" stroke-width="2" fill="none"/>
-  <line stroke="#FF0000" id="svg_6" y2="100" x2="50" y1="93" x1="50" stroke-width="2" fill="none"/>
+  <ellipse fill="none" stroke="#00FF00" stroke-width="2" cx="56" cy="43" id="svg_5" rx="30" ry="30"/>
+  <ellipse fill="none" stroke="#00FF00" stroke-width="2" cx="56" cy="71" id="svg_8" rx="30" ry="30"/>
+  <line stroke="#FF0000" id="svg_3" y2="13" x2="56" y1="0" x1="56" stroke-width="2" fill="none"/>
+  <line stroke="#FF0000" id="svg_6" y2="116" x2="56" y1="101" x1="56" stroke-width="2" fill="none"/>
  </g>
 </svg>
