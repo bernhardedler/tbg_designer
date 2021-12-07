@@ -5,14 +5,14 @@ je einmal pro Spannungsebene:
 - ET-Anlage
 -> 4 x 7 = 28 Grafiken
 
-je einmal pro Spannungsebene und NAP-Positionen
-- Versorgungsknoten (2 Positionen)
-- Verteiler ohne Zähler (3 Positionen)
-- Verteiler mit Zähler (2 Positionen)
--> (2 x 2 x 6) + (1 x 3 x 6) = 42 Grafiken
+je einmal pro Spannungsebene und NAP-Positionen (kein, vor, mitte, nach) und Größen
+- Versorgungsknoten (3 Positionen, 3 Größen)
+- Verteiler ohne Zähler (4 Positionen, 3 Größen)
+- Verteiler mit Zähler (4 Positionen, 3 Größen)
+-> (1 x 3 x 7 x 3) + (2 x 4 x 7 x 3) = 231 Grafiken
 
 je einmal pro Kombionation aus den Spannungsebenen 
 - Trafo
--- 6 x 6 = 36 Grafiken 
+-- 7 x 7 = 49 Grafiken 
 
---> 28 + 42 + 36 = 106 Grafiken
+--> 28 + 49 + 231 = 308 Grafiken

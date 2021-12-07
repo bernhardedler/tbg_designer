@@ -1,0 +1,34 @@
+<svg width="115" height="228" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <rect x="0" y="0" width="115" height="228" id="canvas_background" fill="#fff"/>
+  </g>
+  <g>
+    <title>Rahmen</title>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="113" height="226" id="r1" stroke="#78909C"/>
+  </g>
+  <g>
+    <title>Zaehler</title>
+    <rect fill="#fff" stroke-width="2" x="18" y="31" width="80" height="80" id="z1" stroke="#78909C"/>
+    <line fill="none" stroke="#78909C" stroke-width="2" x1="18" y1="56" x2="98" y2="56" id="z2"/>
+    <line fill="none" stroke="#78909C" stroke-width="2" x1="57" y1="0" x2="57" y2="31" id="z3"/>
+    <line fill="none" stroke="#78909C" stroke-width="2" x1="57" y1="111" x2="57" y2="151" id="z4"/>
+  </g>
+  <g>
+    <title>Text</title>
+    <text x="28" y="101" fill="#78909C" font-size="30px" font-family="sans-serif">kWh</text>
+  </g>
+  <g>
+    <title>Verteiler</title>
+    <rect fill="#fff" stroke-width="2" x="7" y="127" width="100" height="100" id="v1" stroke="#78909C"/>
+    <line fill="none" stroke="#78909C" stroke-width="2" x1="6" y1="177" x2="107" y2="177" id="v2"/>
+    <line fill="none" stroke="#78909C" stroke-width="2" x1="75" y1="177" x2="75" y2="226" id="v3"/>
+    <line fill="none" stroke="#78909C" stroke-width="2" x1="39" y1="177" x2="39" y2="226" id="v4"/>
+  </g>
+  <g>
+    <title>NAP</title>
+    <ellipse fill="none" stroke-width="2" stroke="#000" cx="57" cy="127" rx="25" ry="25" id="svg21" />
+    <line fill="none" stroke="#000" stroke-width="2" x1="21" y1="127" x2="101" y2="127" id="svg22"/>
+    <line fill="none" stroke="#000" stroke-width="2" x1="57" y1="127" x2="57" y2="167" id="svg23"/>
+  </g>
+</svg>

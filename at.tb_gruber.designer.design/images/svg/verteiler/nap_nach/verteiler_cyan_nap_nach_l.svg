@@ -12,10 +12,6 @@
     <line fill="none" stroke="#00FFFF" stroke-width="2" x1="169" y1="1" x2="169" y2="151" id="z4"/>
   </g>
   <g>
-    <title>Text</title>
-    <text x="139" y="101" fill="#00FFFF" font-size="30px" font-family="sans-serif">kWh</text>
-  </g>
-  <g>
     <title>Verteiler</title>
     <rect fill="#fff" stroke-width="2" x="7" y="127" width="326" height="100" id="v1" stroke="#00FFFF"/>
     <line fill="none" stroke="#00FFFF" stroke-width="2" x1="6" y1="177" x2="333" y2="177" id="v2"/>

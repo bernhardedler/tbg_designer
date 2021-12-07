@@ -1,28 +1,28 @@
-<svg width="341" height="228" xmlns="http://www.w3.org/2000/svg">
+<svg width="228" height="228" xmlns="http://www.w3.org/2000/svg">
   <g>
     <title>background</title>
-    <rect x="0" y="0" width="341" height="228" id="canvas_background" fill="#fff"/>
+    <rect x="0" y="0" width="228" height="228" id="canvas_background" fill="#fff"/>
   </g>
   <g>
     <title>Rahmen</title>
-    <rect fill="#fff" stroke-width="2" x="1" y="1" width="339" height="226" id="r1" stroke="#00FFFF"/>
+    <rect fill="#fff" stroke-width="2" x="1" y="1" width="226" height="226" id="r1" stroke="#00FFFF"/>
   </g>
   <g>
     <title>Zaehler</title>
-    <rect fill="#fff" stroke-width="2" x="129" y="31" width="80" height="80" id="z1" stroke="#00FFFF"/>
-    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="129" y1="56" x2="209" y2="56" id="z2"/>
-    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="169" y1="0" x2="169" y2="31" id="z3"/>
-    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="169" y1="111" x2="169" y2="151" id="z4"/>
+    <rect fill="#fff" stroke-width="2" x="72" y="31" width="80" height="80" id="z1" stroke="#00FFFF"/>
+    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="72" y1="56" x2="152" y2="56" id="z2"/>
+    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="113" y1="0" x2="113" y2="31" id="z3"/>
+    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="113" y1="111" x2="113" y2="151" id="z4"/>
   </g>
   <g>
     <title>Text</title>
-    <text x="139" y="101" fill="#00FFFF" font-size="30px" font-family="sans-serif">kWh</text>
+    <text x="82" y="101" fill="#00FFFF" font-size="30px" font-family="sans-serif">kWh</text>
   </g>
   <g>
     <title>Verteiler</title>
-    <rect fill="#fff" stroke-width="2" x="7" y="127" width="326" height="100" id="v1" stroke="#00FFFF"/>
-    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="6" y1="177" x2="333" y2="177" id="v2"/>
-    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="113" y1="177" x2="113" y2="226" id="v3"/>
-    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="226" y1="177" x2="226" y2="226" id="v4"/>
+    <rect fill="#fff" stroke-width="2" x="7" y="127" width="213" height="100" id="v1" stroke="#00FFFF"/>
+    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="6" y1="177" x2="220" y2="177" id="v2"/>
+    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="74" y1="177" x2="74" y2="226" id="v3"/>
+    <line fill="none" stroke="#00FFFF" stroke-width="2" x1="150" y1="177" x2="150" y2="226" id="v4"/>
   </g>
 </svg>
