@@ -3,8 +3,6 @@ package at.tb_gruber.designer.icongenerator;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,7 +16,7 @@ import java.util.stream.Stream;
 
 public class Icons {
 
-	public static final String OUTPUT_FOLDER = "target/img-gen/";
+	public static final String OUTPUT_FOLDER = "../at.tb_gruber.designer.design/images/svg/";
 	public static final String COLOR = "#78909C";
 	public static final String COLOR2 = "#FFA000";
 
@@ -35,13 +33,6 @@ public class Icons {
 					Collections::<String, String>unmodifiableMap));
 
 	public static void main(String[] args) throws IOException {
-		File outputFolder = new File(OUTPUT_FOLDER);
-		if (outputFolder.exists()) {
-			deleteDirectoryStream(outputFolder.toPath());
-		}
-
-		outputFolder.mkdir();
-
 		Energietechnikanlage.createAll();
 		Energiespeicher.createAll();
 		Generator.createAll();
@@ -83,10 +74,6 @@ public class Icons {
 		}
 	}
 
-	private static void deleteDirectoryStream(Path path) throws IOException {
-		Files.walk(path).sorted(Comparator.reverseOrder()).map(Path::toFile).forEach(File::delete);
-	}
-	
 	public static String readTemplateFromFile(String templateName) {
 		String templateXML = "";
 		InputStream stream = Icons.class.getClassLoader().getResourceAsStream("templates/" + templateName + ".svg");

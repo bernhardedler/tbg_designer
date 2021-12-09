@@ -1,21 +1,21 @@
-<svg width="341" height="228" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" height="226" width="339">
   <g>
     <title>background</title>
-    <rect x="0" y="0" width="341" height="228" id="canvas_background" fill="#fff"/>
+    <rect fill="#fff" height="226" id="canvas_background" width="339" x="0" y="0"></rect>
   </g>
   <g>
     <title>Rahmen</title>
-    <rect fill="#fff" stroke-width="2" x="1" y="1" width="339" height="226" id="r1" stroke="#C65911"/>
+    <rect fill="#fff" height="224" id="r1" stroke="#C65911" stroke-width="2" width="337" x="1" y="1"></rect>
   </g>
   <g>
     <title>Zaehler</title>
-    <line fill="none" stroke="#C65911" stroke-width="2" x1="169" y1="1" x2="169" y2="151" id="z4"/>
+    <line fill="none" id="z4" stroke="#C65911" stroke-width="2" x1="169" x2="169" y1="1" y2="151"></line>
   </g>
   <g>
     <title>Verteiler</title>
-    <rect fill="#fff" stroke-width="2" x="7" y="127" width="326" height="100" id="v1" stroke="#C65911"/>
-    <line fill="none" stroke="#C65911" stroke-width="2" x1="6" y1="177" x2="333" y2="177" id="v2"/>
-    <line fill="none" stroke="#C65911" stroke-width="2" x1="113" y1="177" x2="113" y2="226" id="v3"/>
-    <line fill="none" stroke="#C65911" stroke-width="2" x1="226" y1="177" x2="226" y2="226" id="v4"/>
+    <rect fill="#fff" height="100" id="v1" stroke="#C65911" stroke-width="2" width="326" x="7" y="125"></rect>
+    <line fill="none" id="v2" stroke="#C65911" stroke-width="2" x1="6" x2="333" y1="177" y2="177"></line>
+    <line fill="none" id="v3" stroke="#C65911" stroke-width="2" x1="113" x2="113" y1="177" y2="226"></line>
+    <line fill="none" id="v4" stroke="#C65911" stroke-width="2" x1="226" x2="226" y1="177" y2="226"></line>
   </g>
 </svg>

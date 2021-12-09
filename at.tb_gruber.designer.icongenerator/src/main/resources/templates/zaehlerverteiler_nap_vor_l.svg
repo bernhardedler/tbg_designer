@@ -1,34 +1,34 @@
-<svg width="341" height="268" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" height="339" width="339">
   <g>
     <title>background</title>
-    <rect x="0" y="0" width="341" height="268" id="canvas_background" fill="#fff"/>
+    <rect fill="#fff" height="339" id="canvas_background" width="339" x="0" y="0"></rect>
   </g>
   <g>
     <title>Rahmen</title>
-    <rect fill="#fff" stroke-width="2" x="1" y="41" width="339" height="226" id="r1" stroke="#78909C"/>
+    <rect fill="#fff" height="225" id="r1" stroke="#78909C" stroke-width="2" width="337" x="1" y="113"></rect>
   </g>
   <g>
     <title>Zaehler</title>
-    <rect fill="#fff" stroke-width="2" x="129" y="71" width="80" height="80" id="z1" stroke="#78909C"/>
-    <line fill="none" stroke="#78909C" stroke-width="2" x1="129" y1="96" x2="209" y2="96" id="z2"/>
-    <line fill="none" stroke="#78909C" stroke-width="2" x1="169" y1="40" x2="169" y2="71" id="z3"/>
-    <line fill="none" stroke="#78909C" stroke-width="2" x1="169" y1="151" x2="169" y2="191" id="z4"/>
+    <rect fill="#fff" height="80" id="z1" stroke="#78909C" stroke-width="2" width="80" x="129" y="145"></rect>
+    <line fill="none" id="z2" stroke="#78909C" stroke-width="2" x1="129" x2="209" y1="164" y2="164"></line>
+    <line fill="none" id="z3" stroke="#78909C" stroke-width="2" x1="169" x2="169" y1="108" y2="145"></line>
+    <line fill="none" id="z4" stroke="#78909C" stroke-width="2" x1="169" x2="169" y1="224" y2="259"></line>
   </g>
   <g>
     <title>Text</title>
-    <text x="139" y="141" fill="#78909C" font-size="30px" font-family="sans-serif">kWh</text>
+    <text fill="#78909C" font-family="sans-serif" font-size="30px" x="139" y="210">kWh</text>
   </g>
   <g>
     <title>Verteiler</title>
-    <rect fill="#fff" stroke-width="2" x="7" y="167" width="326" height="100" id="v1" stroke="#78909C"/>
-    <line fill="none" stroke="#78909C" stroke-width="2" x1="6" y1="217" x2="333" y2="217" id="v2"/>
-    <line fill="none" stroke="#78909C" stroke-width="2" x1="113" y1="217" x2="113" y2="266" id="v3"/>
-    <line fill="none" stroke="#78909C" stroke-width="2" x1="226" y1="217" x2="226" y2="266" id="v4"/>
+    <rect fill="#fff" height="100" id="v1" stroke="#78909C" stroke-width="2" width="326" x="7" y="238"></rect>
+    <line fill="none" id="v2" stroke="#78909C" stroke-width="2" x1="6" x2="333" y1="285" y2="285"></line>
+    <line fill="none" id="v3" stroke="#78909C" stroke-width="2" x1="113" x2="113" y1="285" y2="338"></line>
+    <line fill="none" id="v4" stroke="#78909C" stroke-width="2" x1="226" x2="226" y1="285" y2="338"></line>
   </g>
   <g>
     <title>NAP</title>
-    <ellipse fill="none" stroke-width="2" stroke="#000" cx="169" cy="41" rx="25" ry="25" id="svg21" />
-    <line fill="none" stroke="#000" stroke-width="2" x1="126" y1="41" x2="212" y2="41" id="svg22"/>
-    <line fill="none" stroke="#000" stroke-width="2" x1="169" y1="0" x2="169" y2="41" id="svg23"/>
+    <ellipse cx="169" cy="113" fill="none" id="svg21" rx="25" ry="25" stroke="#000" stroke-width="2"></ellipse>
+    <line fill="none" id="svg22" stroke="#000" stroke-width="2" x1="126" x2="212" y1="113" y2="113"></line>
+    <line fill="none" id="svg23" stroke="#000" stroke-width="2" x1="169" x2="169" y1="68" y2="113"></line>
   </g>
 </svg>

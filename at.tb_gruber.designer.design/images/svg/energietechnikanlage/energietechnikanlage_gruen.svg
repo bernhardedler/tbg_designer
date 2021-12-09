@@ -1,10 +1,10 @@
-<svg width="115" height="116" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" height="113" width="113">
  <g>
   <title>background</title>
-  <rect x="0" y="0" width="115" height="115" id="canvas_background" fill="#fff"/>
+  <rect fill="#fff" height="113" id="canvas_background" width="113" x="0" y="0"></rect>
 </g>
  <g>
   <title>Form</title>
-  <rect fill="none" stroke-width="2" x="1" y="1" width="113" height="113" id="svg_3" stroke="#00FF00"/>
+  <rect fill="none" height="111" id="svg_3" stroke="#00FF00" stroke-width="2" width="111" x="1" y="1"></rect>
  </g>
 </svg>

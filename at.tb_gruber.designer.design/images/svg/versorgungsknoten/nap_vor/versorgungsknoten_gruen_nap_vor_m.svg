@@ -1,19 +1,19 @@
-<svg width="228" height="156" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" height="226" width="226">
  <g>
   <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="156" width="228" y="0" x="0"/>
+  <rect fill="#fff" height="226" id="canvas_background" width="226" x="0" y="0"></rect>
  </g>
  <g>
   <title>Form</title>
-  <rect stroke="#00FF00" id="svg_3" height="113" width="226" y="41" x="1" stroke-width="2" fill="#fff"/>
-  <line id="svg_4" y2="97" x2="226" y1="97" x1="0" stroke-width="2" stroke="#00FF00" fill="none"/>
-  <line id="svg_5" y2="155" x2="76" y1="97" x1="76" stroke-width="2" stroke="#00FF00" fill="none"/>
-  <line id="svg_10" y2="155" x2="152" y1="97" x1="152" stroke-width="2" stroke="#00FF00" fill="none"/>
+  <rect fill="#fff" height="112" id="svg_3" stroke="#00FF00" stroke-width="2" width="224" x="1" y="113"></rect>
+  <line fill="none" id="svg_4" stroke="#00FF00" stroke-width="2" x1="0" x2="226" y1="165" y2="165"></line>
+  <line fill="none" id="svg_5" stroke="#00FF00" stroke-width="2" x1="76" x2="76" y1="165" y2="226"></line>
+  <line fill="none" id="svg_10" stroke="#00FF00" stroke-width="2" x1="152" x2="152" y1="165" y2="226"></line>
  </g>
  <g>
   <title>NAP</title>
-  <ellipse fill="none" stroke-width="2" stroke="#000" cx="113" cy="41" rx="25" ry="25" id="svg21" />
-  <line fill="none" stroke="#000" stroke-width="2" x1="70" y1="41" x2="158" y2="41" id="svg22"/>
-  <line fill="none" stroke="#000" stroke-width="2" x1="113" y1="0" x2="113" y2="41" id="svg23"/>
+  <ellipse cx="113" cy="113" fill="none" id="svg21" rx="25" ry="25" stroke="#000" stroke-width="2"></ellipse>
+  <line fill="none" id="svg22" stroke="#000" stroke-width="2" x1="70" x2="158" y1="113" y2="113"></line>
+  <line fill="none" id="svg23" stroke="#000" stroke-width="2" x1="113" x2="113" y1="68" y2="113"></line>
  </g>
 </svg>

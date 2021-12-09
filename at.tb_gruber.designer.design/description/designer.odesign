@@ -645,13 +645,13 @@
               </style>
             </borderedNodeMappings>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_violett_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_violett_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_violett_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_violett_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -663,13 +663,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_violett_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_violett_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_violett_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_violett_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -681,13 +681,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vorversorgungsknoten_violett_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vorversorgungsknoten_violett_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_violett_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_violett_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -699,13 +699,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_rot_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_rot_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_rot_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_rot_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -717,13 +717,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_rot_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_rot_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_rot_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_rot_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -735,13 +735,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_rot_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_rot_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_rot_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_rot_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -753,13 +753,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_blau_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_blau_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_blau_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_blau_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -771,13 +771,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_blau_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_blau_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_blau_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_blau_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -789,13 +789,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_blau_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_blau_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_blau_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_blau_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -807,13 +807,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_gruen_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_gruen_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_gruen_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_gruen_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -825,13 +825,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_gruen_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_gruen_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_gruen_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_gruen_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -843,13 +843,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_gruen_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_gruen_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_gruen_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_gruen_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -861,13 +861,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_magenta_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_magenta_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_magenta_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_magenta_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -879,13 +879,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_magenta_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_magenta_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_magenta_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_magenta_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -897,13 +897,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_magenta_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_magenta_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_magenta_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_magenta_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -915,13 +915,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_cyan_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_cyan_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_cyan_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_cyan_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -933,13 +933,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_cyan_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_cyan_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_cyan_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_cyan_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -951,13 +951,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_cyan_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_cyan_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_cyan_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_cyan_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -969,13 +969,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_braun_s_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_braun_nap_vor_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_braun_s_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_braun_nap_nach_s.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -987,13 +987,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_braun_m_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_braun_nap_vor_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_braun_m_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_braun_nap_nach_m.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -1005,13 +1005,13 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_braun_l_nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_vor/versorgungsknoten_braun_nap_vor_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_braun_l_nap_nach.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="feature:name" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/versorgungsknoten/nap_nach/versorgungsknoten_braun_nap_nach_l.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -1201,13 +1201,13 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_violett_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_violett_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1219,13 +1219,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_violett_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_violett_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1237,13 +1237,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vorverteiler_violett_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vorverteiler_violett_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_violett_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1255,13 +1255,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1273,13 +1273,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1291,13 +1291,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_rot_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_rot_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1309,13 +1309,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1327,13 +1327,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1345,13 +1345,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_blau_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_blau_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1363,13 +1363,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1381,13 +1381,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1399,13 +1399,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_gruen_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_gruen_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1417,13 +1417,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1435,13 +1435,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1453,13 +1453,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_magenta_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_magenta_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1471,13 +1471,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1489,13 +1489,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1507,13 +1507,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_cyan_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_cyan_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1525,13 +1525,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1543,13 +1543,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1561,13 +1561,13 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_vor/verteiler_braun_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/nap_nach/verteiler_braun_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1594,7 +1594,7 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_violett_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_violett_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1606,7 +1606,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1618,7 +1618,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_violett_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_violett_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1630,7 +1630,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1642,7 +1642,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vorzaehlerverteiler_violett_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vorzaehlerverteiler_violett_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1654,7 +1654,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_violett_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1666,7 +1666,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1678,7 +1678,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1690,7 +1690,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1702,7 +1702,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1714,7 +1714,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_rot_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1726,7 +1726,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_rot_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1738,7 +1738,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1750,7 +1750,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1762,7 +1762,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1774,7 +1774,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1786,7 +1786,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_blau_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1798,7 +1798,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_blau_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1810,7 +1810,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1822,7 +1822,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1834,7 +1834,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1846,7 +1846,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1858,7 +1858,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_gruen_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1870,7 +1870,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_gruen_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1882,7 +1882,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1894,7 +1894,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1906,7 +1906,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1918,7 +1918,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1930,7 +1930,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_magenta_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1942,7 +1942,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_magenta_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1954,7 +1954,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1966,7 +1966,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1978,7 +1978,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -1990,7 +1990,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2002,7 +2002,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_cyan_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2014,7 +2014,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_cyan_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2026,7 +2026,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_s_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_nap_vor_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2038,7 +2038,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 's' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_s_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_nap_nach_s.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2050,7 +2050,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_m_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_nap_vor_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2062,7 +2062,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'm' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_m_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_nap_nach_m.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2074,7 +2074,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l' and self.isNapVor())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_l_nap_vor.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_vor/zaehlerverteiler_braun_nap_vor_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -2086,7 +2086,7 @@
                 </style>
               </conditionnalStyles>
               <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.getVersorgungsknotenSize() = 'l' and self.isNapNach())">
-                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_l_nap_nach.svg">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:''" tooltipExpression="feature:name" hideLabelByDefault="true" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/verteiler/zaehlerverteiler/nap_nach/zaehlerverteiler_braun_nap_nach_l.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
