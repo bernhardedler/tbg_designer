@@ -8,6 +8,9 @@ public class VerteilerNapVor {
 	public static final String TEMPLATE_S = "verteiler_nap_vor_s";
 	public static final String TEMPLATE_M = "verteiler_nap_vor_m";
 	public static final String TEMPLATE_L = "verteiler_nap_vor_l";
+	public static final String TEMPLATE_XL = "verteiler_nap_vor_xl";
+	public static final String TEMPLATE_XXL = "verteiler_nap_vor_xxl";
+	
 	private static String subfolder = Icons.OUTPUT_FOLDER + "verteiler/nap_vor/";
 
 	public static void createAll() throws IOException {
@@ -27,6 +30,14 @@ public class VerteilerNapVor {
 			tmpXml = Icons.readTemplateFromFile(TEMPLATE_L)
 					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
 			tmpFilePath = subfolder + "verteiler_" + color + "_nap_vor_l.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "verteiler_" + color + "_nap_vor_xl.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XXL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "verteiler_" + color + "_nap_vor_xxl.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 		}
 	}

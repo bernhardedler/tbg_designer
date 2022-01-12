@@ -8,6 +8,9 @@ public class VersorgungsknotenNapVor {
 	public static final String TEMPLATE_S = "versorgungsknoten_nap_vor_s";
 	public static final String TEMPLATE_M = "versorgungsknoten_nap_vor_m";
 	public static final String TEMPLATE_L = "versorgungsknoten_nap_vor_l";
+	public static final String TEMPLATE_XL = "versorgungsknoten_nap_vor_xl";
+	public static final String TEMPLATE_XXL = "versorgungsknoten_nap_vor_xxl";
+	
 	private static String subfolder = Icons.OUTPUT_FOLDER + "versorgungsknoten/nap_vor/";
 
 	public static void createAll() throws IOException {
@@ -27,6 +30,14 @@ public class VersorgungsknotenNapVor {
 			tmpXml = Icons.readTemplateFromFile(TEMPLATE_L)
 					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
 			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_nap_vor_l.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_nap_vor_xl.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_nap_vor_xxl.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 		}
 	}

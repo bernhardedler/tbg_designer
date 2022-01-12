@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="339" width="565">
+  <g>
+    <title>background</title>
+    <rect fill="#fff" height="339" id="canvas_background" width="565" x="0" y="0"></rect>
+  </g>
+  <g>
+    <title>Rahmen</title>
+    <rect fill="#fff" height="225" id="r1" stroke="#0070C0" stroke-width="2" width="563" x="1" y="1"></rect>
+  </g>
+  <g>
+    <title>Zaehler</title>
+    <line fill="none" id="z4" stroke="#0070C0" stroke-width="2" x1="283" x2="283" y1="1" y2="151"></line>
+  </g>
+  <g>
+    <title>Verteiler</title>
+    <rect fill="#fff" height="100" id="v1" stroke="#0070C0" stroke-width="2" width="551" x="7" y="126"></rect>
+    <line fill="none" id="v2" stroke="#0070C0" stroke-width="2" x1="6" x2="559" y1="177" y2="177"></line>
+    <line fill="none" id="v3" stroke="#0070C0" stroke-width="2" x1="186" x2="186" y1="177" y2="226"></line>
+    <line fill="none" id="v4" stroke="#0070C0" stroke-width="2" x1="374" x2="374" y1="177" y2="226"></line>
+  </g>
+  <g>
+    <title>NAP</title>
+    <ellipse cx="283" cy="226" fill="none" id="svg21" rx="25" ry="25" stroke="#000" stroke-width="2"></ellipse>
+    <line fill="none" id="svg22" stroke="#000" stroke-width="2" x1="239" x2="326" y1="226" y2="226"></line>
+    <line fill="none" id="svg23" stroke="#000" stroke-width="2" x1="283" x2="283" y1="226" y2="267"></line>
+  </g>
+</svg>

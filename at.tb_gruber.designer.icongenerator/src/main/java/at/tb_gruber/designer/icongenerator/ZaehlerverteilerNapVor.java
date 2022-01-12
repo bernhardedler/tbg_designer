@@ -8,6 +8,8 @@ public class ZaehlerverteilerNapVor {
 	public static final String TEMPLATE_S = "zaehlerverteiler_nap_vor_s";
 	public static final String TEMPLATE_M = "zaehlerverteiler_nap_vor_m";
 	public static final String TEMPLATE_L = "zaehlerverteiler_nap_vor_l";
+	public static final String TEMPLATE_XL = "zaehlerverteiler_nap_vor_xl";
+	public static final String TEMPLATE_XXL = "zaehlerverteiler_nap_vor_xxl";
 
 	private static String subfolder = Icons.OUTPUT_FOLDER + "verteiler/zaehlerverteiler/nap_vor/";
 
@@ -28,6 +30,14 @@ public class ZaehlerverteilerNapVor {
 			tmpXml = Icons.readTemplateFromFile(TEMPLATE_L)
 					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
 			tmpFilePath = subfolder + "zaehlerverteiler_" + color + "_nap_vor_l.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "zaehlerverteiler_" + color + "_nap_vor_xl.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XXL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "zaehlerverteiler_" + color + "_nap_vor_xxl.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 		}
 	}

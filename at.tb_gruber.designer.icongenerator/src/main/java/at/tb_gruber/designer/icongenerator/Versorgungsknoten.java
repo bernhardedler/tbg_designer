@@ -8,6 +8,9 @@ public class Versorgungsknoten {
 	public static final String TEMPLATE_S = "versorgungsknoten_s";
 	public static final String TEMPLATE_M = "versorgungsknoten_m";
 	public static final String TEMPLATE_L = "versorgungsknoten_l";
+	public static final String TEMPLATE_XL = "versorgungsknoten_xl";
+	public static final String TEMPLATE_XXL = "versorgungsknoten_xxl";
+	
 	private static String subfolder = Icons.OUTPUT_FOLDER + "versorgungsknoten/";
 
 	public static void createAll() throws IOException {
@@ -18,15 +21,23 @@ public class Versorgungsknoten {
 		for (String color : Icons.colors.keySet()) {
 			String tmpXml = Icons.readTemplateFromFile(TEMPLATE_S)
 					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
-			String tmpFilePath = subfolder + "versorgungsknoten_" + color + "_s" + ".svg";
+			String tmpFilePath = subfolder + "versorgungsknoten_" + color + "_s.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 			tmpXml = Icons.readTemplateFromFile(TEMPLATE_M)
 					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
-			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_m" + ".svg";
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_m.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 			tmpXml = Icons.readTemplateFromFile(TEMPLATE_L)
 					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
-			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_l" + ".svg";
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_l.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_xl.svg";
+			Icons.writeIconToFile(tmpFilePath, tmpXml);
+			tmpXml = Icons.readTemplateFromFile(TEMPLATE_XXL)
+					.replaceAll(Icons.COLOR, String.valueOf(Icons.colors.get(color)));
+			tmpFilePath = subfolder + "versorgungsknoten_" + color + "_xxl.svg";
 			Icons.writeIconToFile(tmpFilePath, tmpXml);
 		}
 	}
