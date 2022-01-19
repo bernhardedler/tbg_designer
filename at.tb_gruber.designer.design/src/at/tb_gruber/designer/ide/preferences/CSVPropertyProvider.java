@@ -204,7 +204,7 @@ public class CSVPropertyProvider {
 			}
 		}
 		int idxStrNr, idxGebaeudeBezeichnung, idxGebNr, idxEntNr, idxPlz, idxOrt, idxStrasse, idxHausnummer, idxGpsLon,
-				idxGpsLat;
+				idxGpsLat, idxGebaeudeArt;
 
 		try (FileInputStream fis = new FileInputStream(csvPath);
 				BufferedReader br = new BufferedReader(new InputStreamReader(fis, "UTF8"))) {
@@ -225,6 +225,7 @@ public class CSVPropertyProvider {
 				idxPlz = values.indexOf("Plz");
 				idxGpsLon = values.indexOf("Gps Lon");
 				idxGpsLat = values.indexOf("Gps Lat");
+				idxGebaeudeArt = values.indexOf("Gebäudeart");
 			} else {
 				return;
 			}
@@ -245,8 +246,9 @@ public class CSVPropertyProvider {
 					objekt.setStrasse(strasseUndHausnummer);
 					objekt.setGpsLon(values[idxGpsLon]);
 					objekt.setGpsLat(values[idxGpsLat]);
+					objekt.setGebaeudeArt(values[idxGebaeudeArt]);
 				} else {
-					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, "Verkehrsstation",
+					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, values[idxGebaeudeArt],
 							"AT", values[idxPlz], values[idxOrt], strasseUndHausnummer, values[idxGpsLon],
 							values[idxGpsLat], Externe_Datenquelle.GEBAEUDE));
 				}

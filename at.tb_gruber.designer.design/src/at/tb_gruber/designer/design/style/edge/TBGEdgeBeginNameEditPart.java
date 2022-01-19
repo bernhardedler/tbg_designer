@@ -45,7 +45,7 @@ public class TBGEdgeBeginNameEditPart extends DEdgeBeginNameEditPart {
 		int height = ((Integer) getStructuralFeatureValue(NotationPackage.eINSTANCE.getSize_Height())).intValue();
 		
 		
-		Rectangle rectangle = new Rectangle(dx, Math.min(dy,  0), width, height);
+		Rectangle rectangle = new Rectangle(dx, dy, width, height);
 		if (getParent() instanceof AbstractConnectionEditPart) {
 			((AbstractGraphicalEditPart) getParent()).setLayoutConstraint(this, getFigure(),
 					new TBGEdgeLabelLocator(getFigure().getParent(), rectangle, getKeyPoint()));

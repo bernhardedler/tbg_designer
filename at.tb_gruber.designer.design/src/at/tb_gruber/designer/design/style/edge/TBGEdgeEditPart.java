@@ -49,7 +49,6 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 	@Override
 	protected Connection createConnectionFigure() {
 		return new TBGViewEdgeFigure();
-//        return new ViewEdgeFigure();
 	}
 
 	@Override
