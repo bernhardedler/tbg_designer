@@ -19,6 +19,7 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
+import at.tb_gruber.designer.design.Activator;
 import at.tb_gruber.designer.model.Externe_Datenquelle;
 
 public class CSVPropertyProvider {
@@ -72,7 +73,7 @@ public class CSVPropertyProvider {
 	private void loadImmobilienDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
+			csvPath = Activator.APP_PROPS.getProperty(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
@@ -137,7 +138,7 @@ public class CSVPropertyProvider {
 	private void loadVerkehrsstationenDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
+			csvPath = Activator.APP_PROPS.getProperty(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
@@ -198,7 +199,7 @@ public class CSVPropertyProvider {
 	private void loadGebaeudeDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
+			csvPath = Activator.APP_PROPS.getProperty(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
