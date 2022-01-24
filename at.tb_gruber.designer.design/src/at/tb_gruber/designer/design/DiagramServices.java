@@ -1,24 +1,40 @@
 package at.tb_gruber.designer.design;
 
-import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.eclipse.draw2d.Border;
+import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.LineBorder;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmf.runtime.notation.NotationPackage;
-import org.eclipse.sirius.diagram.AbstractDNode;
-import org.eclipse.sirius.diagram.DDiagramElementContainer;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditor;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.common.ui.tools.api.util.EclipseUIUtil;
+import org.eclipse.sirius.diagram.DDiagramElement;
+import org.eclipse.sirius.diagram.DNode;
+import org.eclipse.sirius.diagram.DNodeContainer;
+import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.diagram.business.api.query.EObjectQuery;
+import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
 import org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager;
 import org.eclipse.sirius.diagram.ui.business.internal.view.LayoutData;
-import org.eclipse.sirius.viewpoint.ViewpointPackage;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.ui.IEditorPart;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.AnlageMitAttributen;
 import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.Betreiber;
+import at.tb_gruber.designer.model.Details;
+import at.tb_gruber.designer.model.Eigentuemer;
 import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Generator;
@@ -214,7 +230,7 @@ public class DiagramServices {
 		} else if (self instanceof VerteilerBase) {
 			int cnt = ((VerteilerBase) self).getVerbindungNach().size();
 			return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
-			
+
 		} else {
 			return "";
 		}
@@ -298,23 +314,17 @@ public class DiagramServices {
 			return Optional.ofNullable(esp.getAutonomiezeit()).orElse("");
 		} else if (self.eContainer() instanceof Trafo) {
 			Trafo trafo = (Trafo) self.eContainer();
-			return Optional.ofNullable(trafo.getOberspannung()).orElse("0V") + "/" + Optional.ofNullable(trafo.getUnterspannung()).orElse("0V") 
-					+ System.lineSeparator()
-					+ System.lineSeparator() 
-					+ Optional.ofNullable(trafo.getTrafoKva()).orElse("0kVA");
+			return Optional.ofNullable(trafo.getOberspannung()).orElse("0V") + "/"
+					+ Optional.ofNullable(trafo.getUnterspannung()).orElse("0V") + System.lineSeparator()
+					+ System.lineSeparator() + Optional.ofNullable(trafo.getTrafoKva()).orElse("0kVA");
 		} else if (self.eContainer() instanceof Generator) {
 			Generator gen = (Generator) self.eContainer();
-			return Optional.ofNullable(gen.getErzeugteSpannung()).orElse("0V") 
-					+ System.lineSeparator() 
-					+ System.lineSeparator() 
-					+ Optional.ofNullable(gen.getErzeugteEnergie()).orElse("0")
-					+ System.lineSeparator() 
-					+ Optional.ofNullable(gen.getElektrischeLeistung()).orElse("0W");
+			return Optional.ofNullable(gen.getErzeugteSpannung()).orElse("0V") + System.lineSeparator()
+					+ System.lineSeparator() + Optional.ofNullable(gen.getErzeugteEnergie()).orElse("0")
+					+ System.lineSeparator() + Optional.ofNullable(gen.getElektrischeLeistung()).orElse("0W");
 		} else if (self.eContainer() instanceof VerteilerMitZaehler) {
 			VerteilerMitZaehler zv = (VerteilerMitZaehler) self.eContainer();
-			return Optional.ofNullable(zv.getName()).orElse("") 
-					+ System.lineSeparator()
-					+ zv.getNrHauptversorgung();
+			return Optional.ofNullable(zv.getName()).orElse("") + System.lineSeparator() + zv.getNrHauptversorgung();
 		}
 		return "";
 	}
@@ -323,5 +333,97 @@ public class DiagramServices {
 		return self instanceof Netzanschlusspunkt
 				&& ((Netzanschlusspunkt) self).eContainer() instanceof VerteilerContainer;
 	}
-	
+
+	public void selectBetreiberAndNAP(EObject self) {
+		if (!(self instanceof DNode && ((DNode) self).getSemanticElements().get(0) instanceof AnlageBase)
+				&& !(self instanceof DNodeContainer && ((DNodeContainer) self).getSemanticElements().get(0) instanceof VerteilerContainer)) {
+			return;
+		}
+		
+		Betreiber betreiber = null;
+		EList<Details> details = null;
+		Netzanschlusspunkt nap = null;
+		if (self instanceof DNode) {
+			AnlageBase anlage = (AnlageBase) ((DNode) self).getSemanticElements().get(0);
+			betreiber = anlage.getBetreiber();
+			details = anlage.getDetails();
+			
+			if (anlage instanceof VerteilerBase) {
+				nap = ((VerteilerBase) anlage).getNetzanschlusspunkt();
+			} else if (anlage instanceof Versorgungsknoten) {
+				nap = ((Versorgungsknoten) anlage).getNetzanschlusspunkt();
+			}
+		} else if (self instanceof DNodeContainer) {
+			VerteilerContainer vc = (VerteilerContainer) ((DNodeContainer)self).getSemanticElements().get(0);
+			betreiber = vc.getBetreiber();
+			details = vc.getDetails();
+			nap = vc.getNetzanschlusspunkt();
+		}
+
+
+		for (DDiagramElement element : getAllElements(self)) {
+			if (element instanceof DNode) {
+				DNode node = (DNode) element;
+				IGraphicalEditPart editPart = getEditPart(node);
+				editPart.setSelected(0);
+				if (node.getSemanticElements().contains(betreiber)
+						|| node.getSemanticElements().contains(nap)) {
+					editPart.setSelected(1);
+				}
+
+				for (Details detail : details) {
+					if (node.getSemanticElements().contains(detail)) {
+						editPart.setSelected(1);
+					}
+				}
+			}
+		}
+	}
+
+	public void selectEigentuemer(EObject self) {
+		if (!(self instanceof DNodeContainer) || !(((DNodeContainer) self).getSemanticElements().get(0) instanceof Objekt)) {
+			return;
+		}
+		Objekt objekt = (Objekt) ((DNodeContainer) self).getSemanticElements().get(0);
+		Eigentuemer eigentuemer = objekt.getEigentuemer();
+
+		for (DDiagramElement element : getAllElements(self)) {
+			if (element instanceof DNode) {
+				DNode node = (DNode) element;
+				IGraphicalEditPart editPart = getEditPart(node); 
+				editPart.setSelected(0);
+				if (node.getSemanticElements().contains(eigentuemer)) {
+					editPart.setSelected(1);
+				}
+			}
+		}
+	}
+
+	private IGraphicalEditPart getEditPart(DDiagramElement diagramElement) {
+		IEditorPart editor = EclipseUIUtil.getActiveEditor();
+		if (editor instanceof DiagramEditor) {
+			Session session = new EObjectQuery(diagramElement).getSession();
+			View gmfView = SiriusGMFHelper.getGmfView(diagramElement, session);
+
+			IGraphicalEditPart result = null;
+			if (gmfView != null && editor instanceof DiagramEditor) {
+				final Map<?, ?> editPartRegistry = ((DiagramEditor) editor).getDiagramGraphicalViewer()
+						.getEditPartRegistry();
+				final Object editPart = editPartRegistry.get(gmfView);
+				if (editPart instanceof IGraphicalEditPart) {
+					result = (IGraphicalEditPart) editPart;
+					return result;
+				}
+			}
+		}
+		return null;
+	}
+
+	private List<DDiagramElement> getAllElements(EObject self) {
+		if (self.eContainer() instanceof DSemanticDiagram)  {
+			return ((DSemanticDiagram) self.eContainer()).getDiagramElements();
+		} else {
+			return getAllElements(self.eContainer());
+		}
+	}
 }
