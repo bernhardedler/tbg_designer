@@ -1,14 +1,18 @@
 package at.tb_gruber.designer.design;
 
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.TimeUnit;
 
-import org.eclipse.draw2d.Border;
-import org.eclipse.draw2d.Graphics;
-import org.eclipse.draw2d.LineBorder;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
@@ -22,10 +26,6 @@ import org.eclipse.sirius.diagram.DNodeContainer;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.diagram.business.api.query.EObjectQuery;
 import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
-import org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager;
-import org.eclipse.sirius.diagram.ui.business.internal.view.LayoutData;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.RGB;
 import org.eclipse.ui.IEditorPart;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
@@ -55,7 +55,7 @@ import at.tb_gruber.designer.model.VerteilerMitZaehler;
  * The services class used by VSM.
  */
 public class DiagramServices {
-
+	
 	private CSVPropertyProvider props = CSVPropertyProvider.getInstance();
 
 	/**
@@ -335,68 +335,13 @@ public class DiagramServices {
 	}
 
 	public void selectBetreiberAndNAP(EObject self) {
-		if (!(self instanceof DNode && ((DNode) self).getSemanticElements().get(0) instanceof AnlageBase)
-				&& !(self instanceof DNodeContainer && ((DNodeContainer) self).getSemanticElements().get(0) instanceof VerteilerContainer)) {
-			return;
-		}
-		
-		Betreiber betreiber = null;
-		EList<Details> details = null;
-		Netzanschlusspunkt nap = null;
-		if (self instanceof DNode) {
-			AnlageBase anlage = (AnlageBase) ((DNode) self).getSemanticElements().get(0);
-			betreiber = anlage.getBetreiber();
-			details = anlage.getDetails();
-			
-			if (anlage instanceof VerteilerBase) {
-				nap = ((VerteilerBase) anlage).getNetzanschlusspunkt();
-			} else if (anlage instanceof Versorgungsknoten) {
-				nap = ((Versorgungsknoten) anlage).getNetzanschlusspunkt();
-			}
-		} else if (self instanceof DNodeContainer) {
-			VerteilerContainer vc = (VerteilerContainer) ((DNodeContainer)self).getSemanticElements().get(0);
-			betreiber = vc.getBetreiber();
-			details = vc.getDetails();
-			nap = vc.getNetzanschlusspunkt();
-		}
-
-
-		for (DDiagramElement element : getAllElements(self)) {
-			if (element instanceof DNode) {
-				DNode node = (DNode) element;
-				IGraphicalEditPart editPart = getEditPart(node);
-				editPart.setSelected(0);
-				if (node.getSemanticElements().contains(betreiber)
-						|| node.getSemanticElements().contains(nap)) {
-					editPart.setSelected(1);
-				}
-
-				for (Details detail : details) {
-					if (node.getSemanticElements().contains(detail)) {
-						editPart.setSelected(1);
-					}
-				}
-			}
-		}
+		Set<IGraphicalEditPart> selectedElements = getSelectedBetreiberAndNap(self);
+		selectElements(selectedElements);
 	}
 
 	public void selectEigentuemer(EObject self) {
-		if (!(self instanceof DNodeContainer) || !(((DNodeContainer) self).getSemanticElements().get(0) instanceof Objekt)) {
-			return;
-		}
-		Objekt objekt = (Objekt) ((DNodeContainer) self).getSemanticElements().get(0);
-		Eigentuemer eigentuemer = objekt.getEigentuemer();
-
-		for (DDiagramElement element : getAllElements(self)) {
-			if (element instanceof DNode) {
-				DNode node = (DNode) element;
-				IGraphicalEditPart editPart = getEditPart(node); 
-				editPart.setSelected(0);
-				if (node.getSemanticElements().contains(eigentuemer)) {
-					editPart.setSelected(1);
-				}
-			}
-		}
+		Set<IGraphicalEditPart> selectedElements = getSelectedEigentuemer(self);
+		selectElements(selectedElements);
 	}
 
 	private IGraphicalEditPart getEditPart(DDiagramElement diagramElement) {
@@ -425,5 +370,87 @@ public class DiagramServices {
 		} else {
 			return getAllElements(self.eContainer());
 		}
+	}
+	
+	private Set<IGraphicalEditPart> getSelectedBetreiberAndNap(EObject self){
+		if (!(self instanceof DNode && ((DNode) self).getSemanticElements().get(0) instanceof AnlageBase)
+				&& !(self instanceof DNodeContainer && ((DNodeContainer) self).getSemanticElements().get(0) instanceof VerteilerContainer)) {
+			return Collections.emptySet();
+		}
+		
+		Betreiber betreiber = null;
+		EList<Details> details = null;
+		Netzanschlusspunkt nap = null;
+		if (self instanceof DNode) {
+			AnlageBase anlage = (AnlageBase) ((DNode) self).getSemanticElements().get(0);
+			betreiber = anlage.getBetreiber();
+			details = anlage.getDetails();
+			
+			if (anlage instanceof VerteilerBase) {
+				nap = ((VerteilerBase) anlage).getNetzanschlusspunkt();
+			} else if (anlage instanceof Versorgungsknoten) {
+				nap = ((Versorgungsknoten) anlage).getNetzanschlusspunkt();
+			}
+		} else if (self instanceof DNodeContainer) {
+			VerteilerContainer vc = (VerteilerContainer) ((DNodeContainer)self).getSemanticElements().get(0);
+			betreiber = vc.getBetreiber();
+			details = vc.getDetails();
+			nap = vc.getNetzanschlusspunkt();
+		}
+			
+		Set<IGraphicalEditPart> selectedElements = new HashSet<>();
+		for (DDiagramElement element : getAllElements(self)) {
+			if (element instanceof DNode) {
+				DNode node = (DNode) element;
+				if (node.getSemanticElements().contains(betreiber)
+						|| node.getSemanticElements().contains(nap)) {
+					selectedElements.add(getEditPart(element));
+				}
+
+				for (Details detail : details) {
+					if (node.getSemanticElements().contains(detail)) {
+						selectedElements.add(getEditPart(element));
+					}
+				}
+			}
+		}
+		return selectedElements;
+	}
+	
+	private Set<IGraphicalEditPart> getSelectedEigentuemer(EObject self){
+		if (!(self instanceof DNodeContainer) || !(((DNodeContainer) self).getSemanticElements().get(0) instanceof Objekt)) {
+			return Collections.emptySet();
+		}
+		Objekt objekt = (Objekt) ((DNodeContainer) self).getSemanticElements().get(0);
+		Eigentuemer eigentuemer = objekt.getEigentuemer();
+		Set<IGraphicalEditPart> selectedElements = new HashSet<>();
+		for (DDiagramElement element : getAllElements(self)) {
+			if (element instanceof DNode) {
+				DNode node = (DNode) element;
+				if (node.getSemanticElements().contains(eigentuemer)) {
+					selectedElements.add(getEditPart(element));}
+			}
+		}
+		return selectedElements;
+	}
+	
+	private void selectElements(Set<IGraphicalEditPart> elementsToSelect) {
+		elementsToSelect.forEach(e-> e.setSelected(1));
+		
+		Job j = new Job("selectElements") {
+
+			@Override
+			protected IStatus run(IProgressMonitor monitor) {
+				try {
+					TimeUnit.SECONDS.sleep(1);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+					return Status.CANCEL_STATUS;
+				}
+				elementsToSelect.forEach(e-> e.setSelected(0));
+				return Status.OK_STATUS;
+			}
+		};
+		j.schedule();
 	}
 }
