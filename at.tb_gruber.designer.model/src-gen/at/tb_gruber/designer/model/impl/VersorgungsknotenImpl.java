@@ -6,6 +6,7 @@ import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.Versorgungsknoten;
 
+import at.tb_gruber.designer.model.Verteilergroesse;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl#getGroesse <em>Groesse</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +39,25 @@ public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Ve
 	 * @ordered
 	 */
 	protected Netzanschlusspunkt netzanschlusspunkt;
+
+	/**
+	 * The default value of the '{@link #getGroesse() <em>Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGroesse()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Verteilergroesse GROESSE_EDEFAULT = Verteilergroesse.S;
+	/**
+	 * The cached value of the '{@link #getGroesse() <em>Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGroesse()
+	 * @generated
+	 * @ordered
+	 */
+	protected Verteilergroesse groesse = GROESSE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,6 +137,30 @@ public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Ve
 	 * @generated
 	 */
 	@Override
+	public Verteilergroesse getGroesse() {
+		return groesse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGroesse(Verteilergroesse newGroesse) {
+		Verteilergroesse oldGroesse = groesse;
+		groesse = newGroesse == null ? GROESSE_EDEFAULT : newGroesse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERSORGUNGSKNOTEN__GROESSE, oldGroesse,
+					groesse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
@@ -134,6 +179,8 @@ public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Ve
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
 			return getNetzanschlusspunkt();
+		case ModelPackage.VERSORGUNGSKNOTEN__GROESSE:
+			return getGroesse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,6 +195,9 @@ public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Ve
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
+			return;
+		case ModelPackage.VERSORGUNGSKNOTEN__GROESSE:
+			setGroesse((Verteilergroesse) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,6 +214,9 @@ public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Ve
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) null);
 			return;
+		case ModelPackage.VERSORGUNGSKNOTEN__GROESSE:
+			setGroesse(GROESSE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,8 +231,27 @@ public class VersorgungsknotenImpl extends AnlageMitAttributenImpl implements Ve
 		switch (featureID) {
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
 			return netzanschlusspunkt != null;
+		case ModelPackage.VERSORGUNGSKNOTEN__GROESSE:
+			return groesse != GROESSE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (groesse: ");
+		result.append(groesse);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VersorgungsknotenImpl

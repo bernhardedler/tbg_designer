@@ -47,6 +47,7 @@ public class VerteilerBaseItemProvider extends AnlageOhneAttributeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addGroessePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -64,6 +65,22 @@ public class VerteilerBaseItemProvider extends AnlageOhneAttributeItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_VerteilerBase_name_feature",
 								"_UI_VerteilerBase_type"),
 						ModelPackage.Literals.VERTEILER_BASE__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Groesse feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGroessePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_VerteilerBase_groesse_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_VerteilerBase_groesse_feature",
+								"_UI_VerteilerBase_type"),
+						ModelPackage.Literals.VERTEILER_BASE__GROESSE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -144,6 +161,7 @@ public class VerteilerBaseItemProvider extends AnlageOhneAttributeItemProvider {
 
 		switch (notification.getFeatureID(VerteilerBase.class)) {
 		case ModelPackage.VERTEILER_BASE__NAME:
+		case ModelPackage.VERTEILER_BASE__GROESSE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:

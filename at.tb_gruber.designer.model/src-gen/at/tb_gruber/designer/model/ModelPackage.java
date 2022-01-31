@@ -1138,13 +1138,22 @@ public interface ModelPackage extends EPackage {
 	int VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Groesse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSORGUNGSKNOTEN__GROESSE = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Versorgungsknoten</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSORGUNGSKNOTEN_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
+	int VERSORGUNGSKNOTEN_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Versorgungsknoten</em>' class.
@@ -1582,13 +1591,22 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_BASE__NAME = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Groesse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_BASE__GROESSE = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Verteiler Base</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_BASE_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
+	int VERTEILER_BASE_FEATURE_COUNT = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Base</em>' class.
@@ -1662,6 +1680,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEILER_MIT_ZAEHLER__NAME = VERTEILER_BASE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Groesse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_MIT_ZAEHLER__GROESSE = VERTEILER_BASE__GROESSE;
 
 	/**
 	 * The feature id for the '<em><b>Nr Reserve Einspeisung</b></em>' attribute.
@@ -2172,6 +2199,15 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_OHNE_ZAEHLER__NAME = VERTEILER_BASE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Groesse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_OHNE_ZAEHLER__GROESSE = VERTEILER_BASE__GROESSE;
+
+	/**
 	 * The number of structural features of the '<em>Verteiler Ohne Zaehler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2573,6 +2609,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	int ENERGIESPEICHERFUNKTION = 32;
+
+	/**
+	 * The meta object id for the '{@link at.tb_gruber.designer.model.Verteilergroesse <em>Verteilergroesse</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.tb_gruber.designer.model.Verteilergroesse
+	 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilergroesse()
+	 * @generated
+	 */
+	int VERTEILERGROESSE = 33;
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Bahnhof <em>Bahnhof</em>}'.
@@ -3195,6 +3241,17 @@ public interface ModelPackage extends EPackage {
 	EReference getVersorgungsknoten_Netzanschlusspunkt();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Versorgungsknoten#getGroesse <em>Groesse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Groesse</em>'.
+	 * @see at.tb_gruber.designer.model.Versorgungsknoten#getGroesse()
+	 * @see #getVersorgungsknoten()
+	 * @generated
+	 */
+	EAttribute getVersorgungsknoten_Groesse();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Energietechnikanlage <em>Energietechnikanlage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3461,6 +3518,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVerteilerBase_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerBase#getGroesse <em>Groesse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Groesse</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerBase#getGroesse()
+	 * @see #getVerteilerBase()
+	 * @generated
+	 */
+	EAttribute getVerteilerBase_Groesse();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.VerteilerOhneZaehler <em>Verteiler Ohne Zaehler</em>}'.
@@ -3750,6 +3818,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getEnergiespeicherfunktion();
+
+	/**
+	 * Returns the meta object for enum '{@link at.tb_gruber.designer.model.Verteilergroesse <em>Verteilergroesse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Verteilergroesse</em>'.
+	 * @see at.tb_gruber.designer.model.Verteilergroesse
+	 * @generated
+	 */
+	EEnum getVerteilergroesse();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4246,6 +4324,14 @@ public interface ModelPackage extends EPackage {
 		EReference VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT = eINSTANCE.getVersorgungsknoten_Netzanschlusspunkt();
 
 		/**
+		 * The meta object literal for the '<em><b>Groesse</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERSORGUNGSKNOTEN__GROESSE = eINSTANCE.getVersorgungsknoten_Groesse();
+
+		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.EnergietechnikanlageImpl <em>Energietechnikanlage</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4459,6 +4545,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VERTEILER_BASE__NAME = eINSTANCE.getVerteilerBase_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Groesse</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERTEILER_BASE__GROESSE = eINSTANCE.getVerteilerBase_Groesse();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VerteilerOhneZaehlerImpl <em>Verteiler Ohne Zaehler</em>}' class.
@@ -4721,6 +4815,16 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ENERGIESPEICHERFUNKTION = eINSTANCE.getEnergiespeicherfunktion();
+
+		/**
+		 * The meta object literal for the '{@link at.tb_gruber.designer.model.Verteilergroesse <em>Verteilergroesse</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.tb_gruber.designer.model.Verteilergroesse
+		 * @see at.tb_gruber.designer.model.impl.ModelPackageImpl#getVerteilergroesse()
+		 * @generated
+		 */
+		EEnum VERTEILERGROESSE = eINSTANCE.getVerteilergroesse();
 
 	}
 

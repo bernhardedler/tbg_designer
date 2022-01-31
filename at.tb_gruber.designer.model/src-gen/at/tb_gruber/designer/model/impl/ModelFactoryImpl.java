@@ -127,6 +127,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createUmrichterfunktionFromString(eDataType, initialValue);
 		case ModelPackage.ENERGIESPEICHERFUNKTION:
 			return createEnergiespeicherfunktionFromString(eDataType, initialValue);
+		case ModelPackage.VERTEILERGROESSE:
+			return createVerteilergroesseFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +168,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return convertUmrichterfunktionToString(eDataType, instanceValue);
 		case ModelPackage.ENERGIESPEICHERFUNKTION:
 			return convertEnergiespeicherfunktionToString(eDataType, instanceValue);
+		case ModelPackage.VERTEILERGROESSE:
+			return convertVerteilergroesseToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -630,6 +634,28 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertEnergiespeicherfunktionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Verteilergroesse createVerteilergroesseFromString(EDataType eDataType, String initialValue) {
+		Verteilergroesse result = Verteilergroesse.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVerteilergroesseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

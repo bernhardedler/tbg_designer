@@ -6,6 +6,7 @@ import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.VerteilerBase;
 
+import at.tb_gruber.designer.model.Verteilergroesse;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerBaseImpl#getGroesse <em>Groesse</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +59,26 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGroesse() <em>Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGroesse()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Verteilergroesse GROESSE_EDEFAULT = Verteilergroesse.S;
+
+	/**
+	 * The cached value of the '{@link #getGroesse() <em>Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGroesse()
+	 * @generated
+	 * @ordered
+	 */
+	protected Verteilergroesse groesse = GROESSE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,6 +181,30 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 	 * @generated
 	 */
 	@Override
+	public Verteilergroesse getGroesse() {
+		return groesse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGroesse(Verteilergroesse newGroesse) {
+		Verteilergroesse oldGroesse = groesse;
+		groesse = newGroesse == null ? GROESSE_EDEFAULT : newGroesse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VERTEILER_BASE__GROESSE, oldGroesse,
+					groesse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.VERTEILER_BASE__NETZANSCHLUSSPUNKT:
@@ -179,6 +225,8 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 			return getNetzanschlusspunkt();
 		case ModelPackage.VERTEILER_BASE__NAME:
 			return getName();
+		case ModelPackage.VERTEILER_BASE__GROESSE:
+			return getGroesse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,6 +244,9 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 			return;
 		case ModelPackage.VERTEILER_BASE__NAME:
 			setName((String) newValue);
+			return;
+		case ModelPackage.VERTEILER_BASE__GROESSE:
+			setGroesse((Verteilergroesse) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -215,6 +266,9 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 		case ModelPackage.VERTEILER_BASE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case ModelPackage.VERTEILER_BASE__GROESSE:
+			setGroesse(GROESSE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -231,6 +285,8 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 			return netzanschlusspunkt != null;
 		case ModelPackage.VERTEILER_BASE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case ModelPackage.VERTEILER_BASE__GROESSE:
+			return groesse != GROESSE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -248,6 +304,8 @@ public abstract class VerteilerBaseImpl extends AnlageOhneAttributeImpl implemen
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", groesse: ");
+		result.append(groesse);
 		result.append(')');
 		return result.toString();
 	}

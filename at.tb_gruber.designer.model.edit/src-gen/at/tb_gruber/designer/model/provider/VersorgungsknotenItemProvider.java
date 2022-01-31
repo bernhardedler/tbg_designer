@@ -13,7 +13,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -44,8 +46,25 @@ public class VersorgungsknotenItemProvider extends AnlageMitAttributenItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addGroessePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Groesse feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGroessePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Versorgungsknoten_groesse_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Versorgungsknoten_groesse_feature",
+								"_UI_Versorgungsknoten_type"),
+						ModelPackage.Literals.VERSORGUNGSKNOTEN__GROESSE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -124,6 +143,9 @@ public class VersorgungsknotenItemProvider extends AnlageMitAttributenItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Versorgungsknoten.class)) {
+		case ModelPackage.VERSORGUNGSKNOTEN__GROESSE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case ModelPackage.VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;

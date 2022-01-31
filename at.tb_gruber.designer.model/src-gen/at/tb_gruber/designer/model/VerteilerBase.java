@@ -13,6 +13,7 @@ package at.tb_gruber.designer.model;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerBase#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerBase#getName <em>Name</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.VerteilerBase#getGroesse <em>Groesse</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerBase()
@@ -63,5 +64,30 @@ public interface VerteilerBase extends AnlageOhneAttribute {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Groesse</b></em>' attribute.
+	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.Verteilergroesse}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Groesse</em>' attribute.
+	 * @see at.tb_gruber.designer.model.Verteilergroesse
+	 * @see #setGroesse(Verteilergroesse)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerBase_Groesse()
+	 * @model
+	 * @generated
+	 */
+	Verteilergroesse getGroesse();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.VerteilerBase#getGroesse <em>Groesse</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Groesse</em>' attribute.
+	 * @see at.tb_gruber.designer.model.Verteilergroesse
+	 * @see #getGroesse()
+	 * @generated
+	 */
+	void setGroesse(Verteilergroesse value);
 
 } // VerteilerBase

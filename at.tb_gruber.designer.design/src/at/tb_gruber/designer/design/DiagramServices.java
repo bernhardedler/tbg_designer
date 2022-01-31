@@ -4,10 +4,12 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -225,12 +227,9 @@ public class DiagramServices {
 
 	public String getVersorgungsknotenSize(EObject self) {
 		if (self instanceof Versorgungsknoten) {
-			int cnt = ((AnlageMitAttributen) self).getVerbindungNach().size();
-			return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
+			return ((Versorgungsknoten) self).getGroesse().getLiteral().toLowerCase();
 		} else if (self instanceof VerteilerBase) {
-			int cnt = ((VerteilerBase) self).getVerbindungNach().size();
-			return (cnt >= 0 && cnt <= 6) ? "s" : (cnt >= 7 && cnt <= 12) ? "m" : "l";
-
+			return ((VerteilerBase) self).getGroesse().getLiteral().toLowerCase();
 		} else {
 			return "";
 		}
@@ -336,15 +335,18 @@ public class DiagramServices {
 
 	public void selectBetreiberAndNAP(EObject self) {
 		Set<IGraphicalEditPart> selectedElements = getSelectedBetreiberAndNap(self);
-		selectElements(selectedElements);
+		selectElements(selectedElements.stream().filter(Objects::nonNull).collect(Collectors.toSet()));
 	}
 
 	public void selectEigentuemer(EObject self) {
 		Set<IGraphicalEditPart> selectedElements = getSelectedEigentuemer(self);
-		selectElements(selectedElements);
+		selectElements(selectedElements.stream().filter(Objects::nonNull).collect(Collectors.toSet()));
 	}
 
 	private IGraphicalEditPart getEditPart(DDiagramElement diagramElement) {
+		if (diagramElement.getName().equals("\'\'")) { //Border Node NAP dummy
+			return null;
+		}
 		IEditorPart editor = EclipseUIUtil.getActiveEditor();
 		if (editor instanceof DiagramEditor) {
 			Session session = new EObjectQuery(diagramElement).getSession();

@@ -92,6 +92,13 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Energiespeicherfunktion/Batterie"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Energiespeicherfunktion/Sonstig"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//Verteilergroesse">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/S"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/M"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/L"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/XXL"/>
+    </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/projektname"/>
@@ -155,6 +162,7 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Versorgungsknoten">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Versorgungsknoten/groesse"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Energietechnikanlage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Energietechnikanlage/etType"/>
@@ -187,6 +195,7 @@
     <genClasses ecoreClass="model.ecore#//VerteilerBase">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerBase/netzanschlusspunkt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerBase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerBase/groesse"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//VerteilerOhneZaehler"/>
     <genClasses ecoreClass="model.ecore#//Details"/>

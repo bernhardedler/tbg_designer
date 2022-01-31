@@ -38,6 +38,7 @@ import at.tb_gruber.designer.model.VerteilerContainer;
 import at.tb_gruber.designer.model.VerteilerMitZaehler;
 import at.tb_gruber.designer.model.VerteilerOhneZaehler;
 
+import at.tb_gruber.designer.model.Verteilergroesse;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -283,6 +284,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EEnum energiespeicherfunktionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum verteilergroesseEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -924,6 +932,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getVersorgungsknoten_Groesse() {
+		return (EAttribute) versorgungsknotenEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEnergietechnikanlage() {
 		return energietechnikanlageEClass;
 	}
@@ -1166,6 +1184,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	@Override
 	public EAttribute getVerteilerBase_Name() {
 		return (EAttribute) verteilerBaseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVerteilerBase_Groesse() {
+		return (EAttribute) verteilerBaseEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1454,6 +1482,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getVerteilergroesse() {
+		return verteilergroesseEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ModelFactory getModelFactory() {
 		return (ModelFactory) getEFactoryInstance();
 	}
@@ -1541,6 +1579,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		versorgungsknotenEClass = createEClass(VERSORGUNGSKNOTEN);
 		createEReference(versorgungsknotenEClass, VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT);
+		createEAttribute(versorgungsknotenEClass, VERSORGUNGSKNOTEN__GROESSE);
 
 		energietechnikanlageEClass = createEClass(ENERGIETECHNIKANLAGE);
 		createEAttribute(energietechnikanlageEClass, ENERGIETECHNIKANLAGE__ET_TYPE);
@@ -1573,6 +1612,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		verteilerBaseEClass = createEClass(VERTEILER_BASE);
 		createEReference(verteilerBaseEClass, VERTEILER_BASE__NETZANSCHLUSSPUNKT);
 		createEAttribute(verteilerBaseEClass, VERTEILER_BASE__NAME);
+		createEAttribute(verteilerBaseEClass, VERTEILER_BASE__GROESSE);
 
 		verteilerOhneZaehlerEClass = createEClass(VERTEILER_OHNE_ZAEHLER);
 
@@ -1609,6 +1649,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		energiespeicherartEEnum = createEEnum(ENERGIESPEICHERART);
 		umrichterfunktionEEnum = createEEnum(UMRICHTERFUNKTION);
 		energiespeicherfunktionEEnum = createEEnum(ENERGIESPEICHERFUNKTION);
+		verteilergroesseEEnum = createEEnum(VERTEILERGROESSE);
 	}
 
 	/**
@@ -1804,6 +1845,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getVersorgungsknoten_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
 				"netzanschlusspunkt", null, 0, 1, Versorgungsknoten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVersorgungsknoten_Groesse(), this.getVerteilergroesse(), "groesse", null, 0, 1,
+				Versorgungsknoten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(energietechnikanlageEClass, Energietechnikanlage.class, "Energietechnikanlage", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1877,6 +1921,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVerteilerBase_Name(), ecorePackage.getEString(), "name", null, 0, 1, VerteilerBase.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerteilerBase_Groesse(), this.getVerteilergroesse(), "groesse", null, 0, 1,
+				VerteilerBase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(verteilerOhneZaehlerEClass, VerteilerOhneZaehler.class, "VerteilerOhneZaehler", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2002,6 +2049,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEEnum(energiespeicherfunktionEEnum, Energiespeicherfunktion.class, "Energiespeicherfunktion");
 		addEEnumLiteral(energiespeicherfunktionEEnum, Energiespeicherfunktion.BATTERIE);
 		addEEnumLiteral(energiespeicherfunktionEEnum, Energiespeicherfunktion.SONSTIG);
+
+		initEEnum(verteilergroesseEEnum, Verteilergroesse.class, "Verteilergroesse");
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.S);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.M);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.L);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.XL);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.XXL);
 
 		// Create resource
 		createResource(eNS_URI);
