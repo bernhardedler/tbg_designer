@@ -3063,6 +3063,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Trafo" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
@@ -3080,28 +3081,6 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="VKAnlegen" label="Versorgungsknoten" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
-                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
-                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
-                          </subModelOperations>
-                        </subModelOperations>
-                      </subModelOperations>
-                    </subModelOperations>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="ETAnlegen" label="Energietechnikanlage" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -3109,6 +3088,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Energietechnikanlage" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
@@ -3146,6 +3126,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Generator" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
@@ -3169,6 +3150,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Umrichter" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
@@ -3192,6 +3174,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Energiespeicher" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
@@ -3246,13 +3229,13 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="groesse" valueExpression="aql:model::Verteilergroesse::S"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3269,13 +3252,13 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="groesse" valueExpression="aql:model::Verteilergroesse::M"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3293,12 +3276,12 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="groesse" valueExpression="aql:model::Verteilergroesse::L"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3316,12 +3299,12 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="groesse" valueExpression="aql:model::Verteilergroesse::XL"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3339,12 +3322,12 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Versorgungsknoten" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="groesse" valueExpression="aql:model::Verteilergroesse::XXL"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="VK 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3404,7 +3387,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="ZählerverteilerL" label="Zählerverteiler L" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ZählerverteilerL" label="Zählerverteiler L" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3417,7 +3401,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="ZählerverteilerXL" label="Zählerverteiler XL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ZählerverteilerXL" label="Zählerverteiler XL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3430,7 +3415,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="ZählerverteilerXXL" label="Zählerverteiler XXL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ZählerverteilerXXL" label="Zählerverteiler XXL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3456,7 +3442,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerM" label="Verteiler M" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerM" label="Verteiler M" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3468,7 +3455,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerL" label="Verteiler L" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerL" label="Verteiler L" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3480,7 +3468,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerXL" label="Verteiler XL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerXL" label="Verteiler XL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3492,7 +3481,8 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools><ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerXXL" label="Verteiler XXL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VerteilerXXL" label="Verteiler XXL" nodeMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>

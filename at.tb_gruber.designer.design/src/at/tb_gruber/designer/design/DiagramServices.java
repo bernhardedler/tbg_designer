@@ -61,7 +61,7 @@ public class DiagramServices {
 	private CSVPropertyProvider props = CSVPropertyProvider.getInstance();
 
 	/**
-	 * Erstellt die nächst niedrige, noch nicht vergebene ID
+	 * Erstellt die nächst niedrige, noch nicht vergebene ID für Verbindungen
 	 * 
 	 * @param self
 	 * @return
@@ -104,6 +104,57 @@ public class DiagramServices {
 			}
 		}
 		return alleIdsArray.length;
+	}
+
+	public String generateAnlagenID(EObject self) {
+		String result = "";
+		if (self instanceof AnlageMitAttributen) {
+			AnlageMitAttributen anlage = ((AnlageMitAttributen)self);
+			int number = getNextLowestFreeIdForClass(anlage);
+			String anlPrefix = "";
+			if (anlage instanceof Energietechnikanlage) {
+				anlPrefix = "ET";
+			} else if (anlage instanceof Energiespeicher) {
+				anlPrefix = "ESP";
+			} else if (anlage instanceof Trafo) {
+				anlPrefix = "T";
+			} else if (anlage instanceof Versorgungsknoten) {
+				anlPrefix = "VK";
+			} else if (anlage instanceof Generator) {
+				anlPrefix = "G";
+			} else if (anlage instanceof Umrichter) {
+				anlPrefix = "UR";
+			}
+			
+			result = String.format("%s %02d", anlPrefix, number);
+		}
+		return result;
+	}
+	
+	private int getNextLowestFreeIdForClass(AnlageMitAttributen anlage) {
+		Bahnhof bhf = (Bahnhof) anlage.eContainer().eContainer();
+		Class<? extends AnlageBase> clazz = anlage.getClass();
+		Set<Integer> vergebeneNummern = new TreeSet<>();
+		for (Objekt o : bhf.getObjekt()) {
+			for (AnlageBase a : o.getAnlage()) {
+				if (a.getClass().equals(clazz)) {
+					AnlageMitAttributen aTemp = (AnlageMitAttributen) a;
+					String nTemp = Optional.ofNullable(aTemp.getAnlagennummer()).orElse("X 0");
+					// wenn das nicht im format "VT 03" ist, krachts hier
+					Integer nTempInt = Integer.valueOf(nTemp.split(" ")[1]);
+					vergebeneNummern.add(nTempInt);
+				}
+			}
+		}
+		
+		int i = 0;
+		for (int j : vergebeneNummern) {
+			if (i != j) {
+				break;
+			}
+			i++;
+		}
+		return i;
 	}
 
 	public String getLabelUrsprung(EObject self) {
