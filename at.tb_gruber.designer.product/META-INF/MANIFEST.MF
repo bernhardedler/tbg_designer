@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: launch
 Bundle-SymbolicName: at.tb_gruber.designer.product;singleton:=true
-Bundle-Version: 7.0.0
+Bundle-Version: 7.1.0
 Automatic-Module-Name: at.tb_gruber.designer.product
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: TB Gruber
@@ -10,4 +10,4 @@ Require-Bundle: org.apache.batik.css;bundle-version="1.6.0",
  org.apache.batik.util;bundle-version="1.6.0",
  org.apache.xml.serializer;bundle-version="2.7.1",
  com.google.guava;bundle-version="27.1.0",
- at.tb_gruber.designer.feature;bundle-version="7.0.0"
+ at.tb_gruber.designer.feature;bundle-version="7.1.0"

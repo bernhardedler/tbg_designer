@@ -237,6 +237,10 @@ public class CSVPropertyProvider {
 				String objektName = values[idxStrNr] + "_" + values[idxGebaeudeBezeichnung];
 				String strasseUndHausnummer = values[idxStrasse] + " " + values[idxHausnummer];
 				Optional<ObjektInfo> opt = getForId(values[idxGebNr], Externe_Datenquelle.GEBAEUDE);
+				String gebaeudeart = "Verkehrsstation";
+				if (idxGebaeudeArt >= 0) {
+					 gebaeudeart = values[idxGebaeudeArt];
+				}
 				if (opt.isPresent()) {
 					ObjektInfo objekt = opt.get();
 					objekt.setObjektName(objektName);
@@ -247,9 +251,9 @@ public class CSVPropertyProvider {
 					objekt.setStrasse(strasseUndHausnummer);
 					objekt.setGpsLon(values[idxGpsLon]);
 					objekt.setGpsLat(values[idxGpsLat]);
-					objekt.setGebaeudeArt(values[idxGebaeudeArt]);
+					objekt.setGebaeudeArt(gebaeudeart);
 				} else {
-					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, values[idxGebaeudeArt],
+					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, gebaeudeart,
 							"AT", values[idxPlz], values[idxOrt], strasseUndHausnummer, values[idxGpsLon],
 							values[idxGpsLat], Externe_Datenquelle.GEBAEUDE));
 				}

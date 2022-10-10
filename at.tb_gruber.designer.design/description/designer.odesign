@@ -14,280 +14,280 @@
         <edgeMappings name="Verbindung" sourceMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='ESP'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Generator'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Umrichter'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Zählerverteilererteiler']" targetFinderExpression="feature:ziel" sourceFinderExpression="feature:ursprung" domainClass="model::Verbindung" useDomainElement="true">
           <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()" fontName="Arial">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()" fontName="Arial">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()" fontName="Arial">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()" fontName="Arial">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isSolid())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isDash())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspViolett() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='violett']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspRot() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='rot']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBlau() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='blau']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspGruen() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='grün']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspMagenta() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='magenta']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspCyan() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='cyan']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="aql:(self.isVspBraun() and self.isDashDot())">
             <style strokeColor="//@userColorsPalettes[name='Grundfarben']/@entries[name='hellbraun']" lineStyle="dash_dot" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan" centeredSourceMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo']" centeredTargetMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Et'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Trafo'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='Vk'] //@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@borderedNodeMappings[name='BorderNodeNap']">
-              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelUrsprung()">
+              <beginLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelUrsprung()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
-              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="service:getLabelZiel()">
+              <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:getLabelZiel()">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
