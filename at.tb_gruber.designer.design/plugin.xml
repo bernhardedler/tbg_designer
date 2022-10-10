@@ -78,4 +78,13 @@
         </Priority>
      </editpartProvider>
   </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpolicyProviders">
+     <editpolicyProvider
+           class="at.tb_gruber.designer.gmf.editpolicy.TBGEditPolicyProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpolicyProvider>
+  </extension>
 </plugin>
