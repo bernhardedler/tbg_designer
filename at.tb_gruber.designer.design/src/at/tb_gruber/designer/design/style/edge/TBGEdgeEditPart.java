@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.LayoutManager;
 import org.eclipse.draw2d.Polyline;
 import org.eclipse.draw2d.PositionConstants;
@@ -13,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.internal.util.LabelViewConstants;
+import org.eclipse.gmf.runtime.diagram.ui.layout.FreeFormLayoutEx;
 import org.eclipse.gmf.runtime.draw2d.ui.internal.routers.ITreeConnection;
 import org.eclipse.gmf.runtime.draw2d.ui.internal.routers.ITreeConnection.Orientation;
 import org.eclipse.gmf.runtime.notation.View;
@@ -100,6 +102,11 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 				} finally {
 					graphics.popState();
 				}
+			}
+
+			@Override
+			public void setBounds(Rectangle rect) {
+				super.setBounds(rect);
 			}
 
 		}
@@ -198,7 +205,7 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 				fFigureViewEdgeNameFigure.setVisible(false);
 			}
 			fFigureViewEdgeNameFigure.setLabelAlignment(PositionConstants.CENTER);
-			fFigureViewEdgeNameFigure.setTextWrap(true);
+			fFigureViewEdgeNameFigure.setTextWrap(false);
 			fFigureViewEdgeNameFigure.setTextWrapAlignment(PositionConstants.CENTER);
 			this.add(fFigureViewEdgeNameFigure);
 
@@ -220,7 +227,7 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 				fFigureViewEdgeBeginNameFigure.setVisible(false);
 			}
 			fFigureViewEdgeBeginNameFigure.setLabelAlignment(PositionConstants.LEFT);
-			fFigureViewEdgeBeginNameFigure.setTextWrap(true);
+			fFigureViewEdgeBeginNameFigure.setTextWrap(false);
 			fFigureViewEdgeBeginNameFigure.setTextWrapAlignment(PositionConstants.CENTER);
 			this.add(fFigureViewEdgeBeginNameFigure);
 
@@ -312,6 +319,7 @@ public class TBGEdgeEditPart extends DEdgeEditPart {
 				}
 			}
 		}
+		
 
 		@SuppressWarnings("deprecation")
 		@Override

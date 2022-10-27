@@ -1,6 +1,9 @@
 package at.tb_gruber.designer.design.style.edge;
 
 import org.eclipse.draw2d.geometry.Rectangle;
+import org.eclipse.gef.DragTracker;
+import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.Request;
 import org.eclipse.gef.editparts.AbstractConnectionEditPart;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -10,6 +13,8 @@ import org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelLocato
 import org.eclipse.sirius.ext.gmf.runtime.gef.ui.figures.SiriusWrapLabel;
 
 import at.tb_gruber.designer.design.style.edge.TBGEdgeEditPart.TBGViewEdgeFigure.TBGEdgeLabel;
+import at.tb_gruber.designer.gmf.editpolicy.TBGDragEditPartsTracker;
+import at.tb_gruber.designer.gmf.editpolicy.TBGResizableShapeLabelEditPolicy;
 
 public class TBGEdgeEndNameEditPart extends DEdgeEndNameEditPart {
 
@@ -49,5 +54,16 @@ public class TBGEdgeEndNameEditPart extends DEdgeEndNameEditPart {
 			((AbstractGraphicalEditPart) getParent()).setLayoutConstraint(this, getFigure(),
 					new TBGEdgeLabelLocator(getFigure().getParent(), rectangle, getKeyPoint()));
 		}
+	}
+	
+	@Override
+	protected void createDefaultEditPolicies() {
+		super.createDefaultEditPolicies();
+        installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new TBGResizableShapeLabelEditPolicy());
+	}
+	
+	@Override
+	public DragTracker getDragTracker(Request request) {
+		return new TBGDragEditPartsTracker(this);
 	}
 }

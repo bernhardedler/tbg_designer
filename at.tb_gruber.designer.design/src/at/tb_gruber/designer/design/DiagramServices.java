@@ -162,12 +162,9 @@ public class DiagramServices {
 		if (self instanceof Verbindung) {
 			Verbindung v = (Verbindung) self;
 			label.append(v.getNr());
-			label.append(System.lineSeparator());
-			label.append(Optional.ofNullable(v.getQuellSicherung()).orElse(""));
-			label.append(System.lineSeparator());
-			label.append(Optional.ofNullable(v.getKabeltype()).orElse(""));
-			label.append(System.lineSeparator());
-			label.append(Optional.ofNullable(v.getKabellaenge()).orElse(""));
+			label.append(Optional.ofNullable(v.getQuellSicherung()).map(value -> System.lineSeparator() + value).orElse(""));
+			label.append(Optional.ofNullable(v.getKabeltype()).map(value -> System.lineSeparator() + value).orElse(""));
+			label.append(Optional.ofNullable(v.getKabellaenge()).map(value -> System.lineSeparator() + value).orElse(""));
 		}
 		return label.toString();
 	}
@@ -177,12 +174,9 @@ public class DiagramServices {
 		if (self instanceof Verbindung) {
 			Verbindung v = (Verbindung) self;
 			label.append(v.getNr());
-			label.append(System.lineSeparator());
-			label.append(Optional.ofNullable(v.getZielSicherung()).orElse(""));
-			label.append(System.lineSeparator());
-			label.append(Optional.ofNullable(v.getKabeltype()).orElse(""));
-			label.append(System.lineSeparator());
-			label.append(Optional.ofNullable(v.getKabellaenge()).orElse(""));
+			label.append(Optional.ofNullable(v.getZielSicherung()).map(value -> System.lineSeparator() + value).orElse(""));
+			label.append(Optional.ofNullable(v.getKabeltype()).map(value -> System.lineSeparator() + value).orElse(""));
+			label.append(Optional.ofNullable(v.getKabellaenge()).map(value -> System.lineSeparator() + value).orElse(""));
 		}
 		return label.toString();
 	}
