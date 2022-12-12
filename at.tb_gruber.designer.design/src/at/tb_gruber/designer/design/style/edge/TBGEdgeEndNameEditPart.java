@@ -16,6 +16,7 @@ import at.tb_gruber.designer.design.style.edge.TBGEdgeEditPart.TBGViewEdgeFigure
 import at.tb_gruber.designer.gmf.editpolicy.TBGDragEditPartsTracker;
 import at.tb_gruber.designer.gmf.editpolicy.TBGResizableShapeLabelEditPolicy;
 
+@Deprecated
 public class TBGEdgeEndNameEditPart extends DEdgeEndNameEditPart {
 
 	public TBGEdgeEndNameEditPart(View view) {

@@ -17,6 +17,7 @@ import at.tb_gruber.designer.design.style.edge.TBGEdgeEditPart;
 import at.tb_gruber.designer.design.style.edge.TBGEdgeEndNameEditPart;
 import at.tb_gruber.designer.design.style.edge.TBGEdgeNameEditPart;
 
+@Deprecated
 public class TBGEditPartProvider extends AbstractEditPartProvider {
 
 	@Override

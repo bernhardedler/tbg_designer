@@ -11,6 +11,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.sirius.diagram.ui.tools.api.requests.RequestConstants;
 import org.eclipse.sirius.diagram.ui.tools.internal.edit.command.CommandFactory;
 
+@Deprecated
 public class TBGResetOriginPolicy extends AbstractEditPolicy {
 
 	@Override

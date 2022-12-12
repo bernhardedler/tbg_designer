@@ -13,6 +13,7 @@ import org.eclipse.sirius.diagram.ui.graphical.edit.policies.RevealElementsEditP
 import org.eclipse.sirius.diagram.ui.graphical.edit.policies.RevealSelectedElementsEditPolicy;
 import org.eclipse.sirius.diagram.ui.tools.api.policy.CompoundEditPolicy;
 
+@Deprecated
 public class TBGEditPolicyProvider implements IEditPolicyProvider {
 
 	@Override

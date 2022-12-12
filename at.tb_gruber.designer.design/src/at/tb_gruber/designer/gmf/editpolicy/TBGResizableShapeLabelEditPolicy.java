@@ -30,6 +30,7 @@ import org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelQuery;
 
 import at.tb_gruber.designer.design.style.edge.TBGEdgeLabelLocator;
 
+@Deprecated
 public class TBGResizableShapeLabelEditPolicy extends ResizableShapeEditPolicy {
 
 	private IFigure feedback;

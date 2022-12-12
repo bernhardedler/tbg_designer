@@ -18,7 +18,6 @@ import org.eclipse.gmf.runtime.diagram.ui.render.clipboard.DiagramSVGGenerator;
 import at.tb_gruber.designer.ide.preferences.TBGPreferencePage;
 
 public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
-	
 
 	private static final int DIN_A4_WIDTH = 794; // A4 Seite bei 96 dpi
 	private static final int DIN_A4_HEIGHT = 1123; // A4 Setie bei 96 dpi
@@ -27,7 +26,7 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 	private static final int DEFAULT_MARGIN_RIGHT = DIN_A4_WIDTH;
 	private static final int DEFAULT_MARGIN_TOP = 38; // 1 cm bei 96 dpi
 	private static final int DEFAULT_MARGIN_BOTTOM = 38; // 1 cm bei 96 dpi
-	
+
 	private Dimension diagramDimension;
 
 	public TBGDiagramSVGGenerator(DiagramEditPart diagramEditPart) {
@@ -66,16 +65,20 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 			maxY = Math.max(maxY, bounds.preciseY() + bounds.preciseHeight());
 		}
 
-		PrecisionRectangle rect = new PrecisionRectangle();
-		rect.preciseWidth = maxX - minX;
-		rect.preciseHeight = maxY - minY;
-		
 		int margin_top = diagramDimension.height() > DIN_A4_HEIGHT ? DEFAULT_MARGIN_TOP : DIN_A4_HEIGHT;
+		double deltaX = maxX - minX;
+		double deltaY = maxY - minY;
+
+		PrecisionRectangle rect = new PrecisionRectangle();
+
+		rect.preciseWidth = deltaX + (3 * DEFAULT_MARGIN_LEFT + DEFAULT_MARGIN_RIGHT + 2 * getImageMargin());
+		rect.preciseHeight = deltaY > DIN_A4_HEIGHT
+				? (deltaY + DEFAULT_MARGIN_TOP + DEFAULT_MARGIN_BOTTOM + 2 * getImageMargin())
+				: (DIN_A4_HEIGHT + DEFAULT_MARGIN_BOTTOM + 2 * getImageMargin());
 
 		rect.preciseX = minX - (DEFAULT_MARGIN_LEFT + getImageMargin());
-		rect.preciseY = minY - (margin_top + getImageMargin());
-		rect.preciseWidth += (DEFAULT_MARGIN_LEFT + DEFAULT_MARGIN_RIGHT + 2 * getImageMargin());
-		rect.preciseHeight += (margin_top + DEFAULT_MARGIN_BOTTOM + 2 * getImageMargin());
+		rect.preciseY = minY - (DEFAULT_MARGIN_TOP + getImageMargin());
+
 		rect.updateInts();
 		return rect;
 	}

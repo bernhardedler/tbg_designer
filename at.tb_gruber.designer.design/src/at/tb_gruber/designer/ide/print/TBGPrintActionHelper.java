@@ -60,25 +60,17 @@ public class TBGPrintActionHelper {
 				boolean loadedPreferences = PrintHelperUtil.initializePreferences(dgrmEP,
 						dgrmEP.getDiagramPreferencesHint());
 				Rectangle figureBounds = PrintHelperUtil.getPageBreakBounds(dgrmEP, loadedPreferences);
-				try {
-					try (OutputStream os = new FileOutputStream(filePath)) {
-						TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
-						List editParts = dgrmEP.getPrimaryEditParts();
-						generator.setDiagramDimension(dgrmEP.getFigure().getBounds().getSize());
-						generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
-								true);
-						SVGImage svg = (SVGImage) generator.getRenderedImage();
-						TranscoderOutput transcoderOutput = new TranscoderOutput(os);
-						TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());
-						PDFTranscoder pdfTranscoder = new PDFTranscoder();
-						pdfTranscoder.addTranscodingHint(PDFTranscoder.KEY_PIXEL_UNIT_TO_MILLIMETER, (25.4f / 72f));
-						pdfTranscoder.transcode(transcoderInput, transcoderOutput);
-
-					} catch (IOException e) {
-						e.printStackTrace();
-					} catch (TranscoderException e) {
-						e.printStackTrace();
-					}
+				try (OutputStream os = new FileOutputStream(filePath)) {
+					TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
+					List editParts = dgrmEP.getPrimaryEditParts();
+					generator.setDiagramDimension(dgrmEP.getFigure().getBounds().getSize());
+					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
+							true);
+					SVGImage svg = (SVGImage) generator.getRenderedImage();
+					TranscoderOutput transcoderOutput = new TranscoderOutput(os);
+					TranscoderInput transcoderInput = new TranscoderInput(svg.getDocument());
+					PDFTranscoder pdfTranscoder = new PDFTranscoder();
+					pdfTranscoder.transcode(transcoderInput, transcoderOutput);
 
 					PlankopfPdfPostProcessor.postprocess(filePath, dgrmEP);
 

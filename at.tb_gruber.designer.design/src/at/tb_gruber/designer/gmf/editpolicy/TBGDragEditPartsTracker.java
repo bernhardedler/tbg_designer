@@ -8,6 +8,7 @@ import org.eclipse.gef.requests.ChangeBoundsRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.tools.DragEditPartsTrackerEx;
 
+@Deprecated
 public class TBGDragEditPartsTracker extends DragEditPartsTrackerEx {
 
 	public TBGDragEditPartsTracker(EditPart sourceEditPart) {

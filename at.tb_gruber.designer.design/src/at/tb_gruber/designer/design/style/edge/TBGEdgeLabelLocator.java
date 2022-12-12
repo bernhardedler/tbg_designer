@@ -20,6 +20,7 @@ import org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelQuery;
 
 import at.tb_gruber.designer.design.style.edge.TBGEdgeEditPart.TBGViewEdgeFigure.TBGEdgeLabel;
 
+@Deprecated
 public class TBGEdgeLabelLocator extends EdgeLabelLocator {
 
 	public static final int BEGIN_LABEL_PERCENTAGE = 95;

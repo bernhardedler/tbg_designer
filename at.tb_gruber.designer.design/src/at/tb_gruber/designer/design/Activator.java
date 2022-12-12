@@ -44,7 +44,9 @@ public class Activator extends AbstractUIPlugin {
 		viewpoints = new HashSet<Viewpoint>();
 		viewpoints.addAll(
 				ViewpointRegistry.getInstance().registerFromPlugin(PLUGIN_ID + "/description/designer.odesign"));
-		APP_PROPS.load(new FileInputStream(PROPERTIES_FILE.toFile())); 
+		if (PROPERTIES_FILE.toFile().exists()) {
+			APP_PROPS.load(new FileInputStream(PROPERTIES_FILE.toFile())); 
+		}
 	}
 
 	/*

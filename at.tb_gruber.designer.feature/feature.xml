@@ -2,7 +2,7 @@
 <feature
       id="at.tb_gruber.designer.feature"
       label="Feature"
-      version="7.1.0"
+      version="7.2.0"
       provider-name="TB Gruber">
 
    <description url="http://www.example.com/description">
@@ -75,28 +75,28 @@
          id="at.tb_gruber.designer.design"
          download-size="0"
          install-size="0"
-         version="7.1.0"
+         version="7.2.0"
          unpack="false"/>
 
    <plugin
          id="at.tb_gruber.designer.model"
          download-size="0"
          install-size="0"
-         version="7.1.0"
+         version="7.2.0"
          unpack="false"/>
 
    <plugin
          id="at.tb_gruber.designer.model.edit"
          download-size="0"
          install-size="0"
-         version="7.1.0"
+         version="7.2.0"
          unpack="false"/>
 
    <plugin
          id="at.tb_gruber.designer.model.editor"
          download-size="0"
          install-size="0"
-         version="7.1.0"
+         version="7.2.0"
          unpack="false"/>
 
    <plugin

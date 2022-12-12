@@ -34,6 +34,7 @@ import org.eclipse.sirius.diagram.ui.provider.Messages;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
+@Deprecated
 public class TBGResetOriginModelChangeOperation extends AbstractModelChangeOperation<Void> {
 	/** The margin on top and left around the bounding box of all figures. */
 	public static final int MARGIN = 20;
