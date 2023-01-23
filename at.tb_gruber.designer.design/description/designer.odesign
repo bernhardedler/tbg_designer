@@ -3093,7 +3093,6 @@
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ET 00"/>
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
                           </subModelOperations>
                         </subModelOperations>
@@ -3132,7 +3131,6 @@
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="G 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3156,7 +3154,6 @@
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="UR 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3180,7 +3177,6 @@
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">
                           <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="betreiber" valueExpression="var:newBetreiber"/>
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="ESP 00"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>

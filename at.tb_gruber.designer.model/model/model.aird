@@ -5,7 +5,7 @@
     <semanticResources>model.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_NZD3IBYCEeqvjqT_N4bxRw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NfPXoBYCEeqvjqT_N4bxRw" name="model" repPath="#_Na1YwBYCEeqvjqT_N4bxRw" changeId="903384cd-0e49-4986-a7b2-ae04cd9e16b0">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NfPXoBYCEeqvjqT_N4bxRw" name="model" repPath="#_Na1YwBYCEeqvjqT_N4bxRw" changeId="aae42788-9372-4874-92cc-438b55a0dea3">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -2210,7 +2210,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bvKzSuCvEeuEwZreS2DBlA" name="nrHauptversorgung : EString = ZP-NR.: 00AT00" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bvKzSuCvEeuEwZreS2DBlA" name="nrHauptversorgung : EString = ZP-NR.: " tooltipText="">
         <target xmi:type="ecore:EAttribute" href="model.ecore#//VerteilerMitZaehler/nrHauptversorgung"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//VerteilerMitZaehler/nrHauptversorgung"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_bvKzS-CvEeuEwZreS2DBlA" labelAlignment="LEFT">

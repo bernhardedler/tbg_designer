@@ -44,13 +44,13 @@ public interface VerteilerMitZaehler extends VerteilerBase {
 
 	/**
 	 * Returns the value of the '<em><b>Nr Hauptversorgung</b></em>' attribute.
-	 * The default value is <code>"ZP-NR.: 00AT00"</code>.
+	 * The default value is <code>"ZP-NR.: "</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nr Hauptversorgung</em>' attribute.
 	 * @see #setNrHauptversorgung(String)
 	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerMitZaehler_NrHauptversorgung()
-	 * @model default="ZP-NR.: 00AT00"
+	 * @model default="ZP-NR.: "
 	 * @generated
 	 */
 	String getNrHauptversorgung();

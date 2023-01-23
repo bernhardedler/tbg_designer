@@ -13,6 +13,13 @@
    <launcherArgs>
       <programArgs>-perspective org.eclipse.sirius.ui.tools.perspective.modeling
       </programArgs>
+      <vmArgs>-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=S:\\Korrektur\\490_ÖBB-Listen\\immo.csv
+-Dat.tb_gruber.designer.ide.preferences.csvfile.vs=S:\\Korrektur\\490_ÖBB-Listen\\vs.csv
+-Dat.tb_gruber.designer.ide.preferences.csvfile.gebaeude=S:\\Korrektur\\490_ÖBB-Listen\\gebaeude.csv
+-Dat.tb_gruber.designer.ide.preferences.csvfile.betreiber=S:\\Korrektur\\490_ÖBB-Listen\\betreiber.csv
+-Dat.tb_gruber.designer.ide.preferences.csvfile.eigentuemer=S:\\Korrektur\\490_ÖBB-Listen\\eigentuemer.csv
+-Dat.tb_gruber.designer.ide.preferences.diagram.dash.length=10
+      </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>

@@ -23,9 +23,9 @@
     <stringAttribute key="location" value="${workspace_loc}/../runtime-designer.product"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -perspective org.eclipse.sirius.ui.tools.perspective.modeling"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -perspective org.eclipse.sirius.ui.tools.perspective.modeling --illegal-access=info"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dsun.java2d.dpiaware=true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dsun.java2d.dpiaware=true&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\immo.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.vs=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\vs.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.gebaeude=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\gebaeude.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.betreiber=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\betreiber.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.eigentuemer=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\eigentuemer.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.diagram.dash.length=10"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="at.tb_gruber.designer.product.product"/>
     <stringAttribute key="productFile" value="\at.tb_gruber.designer.product\designer.product"/>
@@ -122,8 +122,7 @@
         <setEntry value="org.apache.commons.io@default:default"/>
         <setEntry value="org.apache.commons.jxpath@default:default"/>
         <setEntry value="org.apache.commons.lang@default:default"/>
-        <setEntry value="org.apache.commons.logging*1.2.0.v20180409-1502@default:default"/>
-        <setEntry value="org.apache.commons.logging*1.2.0@default:default"/>
+        <setEntry value="org.apache.commons.logging@default:default"/>
         <setEntry value="org.apache.felix.gogo.command@default:default"/>
         <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
         <setEntry value="org.apache.felix.gogo.shell@default:default"/>

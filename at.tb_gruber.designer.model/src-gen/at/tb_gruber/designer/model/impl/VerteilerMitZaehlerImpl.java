@@ -54,7 +54,7 @@ public class VerteilerMitZaehlerImpl extends VerteilerBaseImpl implements Vertei
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NR_HAUPTVERSORGUNG_EDEFAULT = "ZP-NR.: 00AT00";
+	protected static final String NR_HAUPTVERSORGUNG_EDEFAULT = "ZP-NR.: ";
 
 	/**
 	 * The cached value of the '{@link #getNrHauptversorgung() <em>Nr Hauptversorgung</em>}' attribute.

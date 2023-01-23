@@ -45,7 +45,9 @@ Require-Bundle: org.eclipse.ui,
  org.apache.batik.xml;bundle-version="1.6.0",
  org.apache.pdfbox;bundle-version="2.0.24",
  org.apache.pdfbox.fontbox;bundle-version="2.0.24",
- org.apache.commons.logging;bundle-version="1.2.0"
+ org.apache.commons.logging;bundle-version="1.2.0",
+ org.eclipse.sirius.ecore.extender;bundle-version="6.5.0",
+ org.eclipse.emf.common.ui;bundle-version="2.18.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: TB Gruber

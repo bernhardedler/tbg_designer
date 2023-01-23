@@ -1,6 +1,8 @@
 package at.tb_gruber.designer.design;
 
 import java.io.FileInputStream;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashSet;
@@ -8,9 +10,12 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.diagram.ui.edit.internal.part.DiagramElementEditPartOperation;
 import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+
+import at.tb_gruber.designer.ide.preferences.TBGPreferencePage;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -18,8 +23,6 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 	// The plug-in ID
 	public static final String PLUGIN_ID = "at.tb_gruber.designer.design";
-	public static final Path PROPERTIES_FILE = Paths.get(System.getenv("LOCALAPPDATA"), "tbgdesigner", "application.properties");
-	public static Properties APP_PROPS = new Properties();
 	
 	// The shared instance
 	private static Activator plugin;
@@ -44,9 +47,23 @@ public class Activator extends AbstractUIPlugin {
 		viewpoints = new HashSet<Viewpoint>();
 		viewpoints.addAll(
 				ViewpointRegistry.getInstance().registerFromPlugin(PLUGIN_ID + "/description/designer.odesign"));
-		if (PROPERTIES_FILE.toFile().exists()) {
-			APP_PROPS.load(new FileInputStream(PROPERTIES_FILE.toFile())); 
+		
+		String dashLength = System.getProperty(TBGPreferencePage.DASH_LENGTH);
+		try {
+			float length = Float.parseFloat(dashLength);
+			
+			Field field = DiagramElementEditPartOperation.class.getDeclaredField("DASH_STYLE");
+			field.setAccessible(true);
+			
+			Field modifiersField = Field.class.getDeclaredField("modifiers");
+			modifiersField.setAccessible(true);
+			modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+			
+			field.set(null, new float[] { length, length });
+		} catch (NumberFormatException e) {
+			// do nothing
 		}
+			
 	}
 
 	/*

@@ -73,7 +73,7 @@ public class CSVPropertyProvider {
 	private void loadImmobilienDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = Activator.APP_PROPS.getProperty(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
+			csvPath = System.getProperty(TBGPreferencePage.PROPERTY_ID_IMMO_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
@@ -138,7 +138,7 @@ public class CSVPropertyProvider {
 	private void loadVerkehrsstationenDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = Activator.APP_PROPS.getProperty(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
+			csvPath = System.getProperty(TBGPreferencePage.PROPERTY_ID_VERKEHRSSTATIONEN_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
@@ -199,7 +199,7 @@ public class CSVPropertyProvider {
 	private void loadGebaeudeDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = Activator.APP_PROPS.getProperty(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
+			csvPath = System.getProperty(TBGPreferencePage.PROPERTY_ID_GEBAEUDE_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
@@ -475,7 +475,7 @@ public class CSVPropertyProvider {
 	private void loadBetreiberDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
+			csvPath = System.getProperty(TBGPreferencePage.PROPERTY_ID_BETREIBER_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}
@@ -504,7 +504,7 @@ public class CSVPropertyProvider {
 	private void loadEigentuemerDatei() {
 		String csvPath = preferenceStore.getString(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
 		if (csvPath == null || csvPath.isEmpty()) {
-			csvPath = System.getenv(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
+			csvPath = System.getProperty(TBGPreferencePage.PROPERTY_ID_EIGENTUEMER_DATEI);
 			if (csvPath == null || csvPath.isEmpty()) {
 				return;
 			}

@@ -38,9 +38,9 @@ public class PlankopfPdfPostProcessor {
 	public static final int FONT_SIZE_MEDIUM = 16;
 	public static final int FONT_SIZE_LARGE = 26;
 
-	public static final Dimension PLANKOPF_SIZE = new Dimension(718, 231); // 190x64 bei 96 dpi
-	public static final Dimension LEGENDE_1_SIZE = new Dimension(356, 473);
-	public static final Dimension LEGENDE_2_SIZE = new Dimension(356, 633);
+	public static final Dimension PLANKOPF_SIZE = new Dimension(703, 226); // 190x64 bei 96 dpi
+	public static final Dimension LEGENDE_1_SIZE = new Dimension(349, 472);
+	public static final Dimension LEGENDE_2_SIZE = new Dimension(349, 619);
 
 	public static void postprocess(String filePath, DiagramEditPart dgrmEP) throws IOException {
 		File file = new File(filePath);
@@ -109,10 +109,34 @@ public class PlankopfPdfPostProcessor {
 				int freigegeben_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 220;
 				writeMediumTextAt(projekt.getFreigegeben_von(), freigegeben_X, freigegeben_Y, cs);
 
-				int projektname_X = positionPlankopf.x() + 115;
-				int projektname_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 190;
-				writeLargeTextAt(projekt.getProjektname(), projektname_X, projektname_Y, cs);
+				String projektname = projekt.getProjektname();
+				String p1, p2, p3;
+				if (projektname.length() <= 25) {
+					p1 = projektname;
+				} else {
+					p1 = projektname.substring(0, 25);
+				}
+				int projektname1_X = positionPlankopf.x() + 115;
+				int projektname1_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 155;
+				writeLargeTextAt(p1, projektname1_X, projektname1_Y, cs);
+				
+				if (projektname.length() > 25 && projektname.length() <= 50) {
+					p2 = projektname.substring(25);
+				} else {
+					p2 = projektname.substring(25, 50);
+				}
+				int projektname2_X = positionPlankopf.x() + 115;
+				int projektname2_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 185;
+				writeLargeTextAt(p2, projektname2_X, projektname2_Y, cs);
 
+				if (projektname.length() > 50 && projektname.length() <= 75) {
+					p3 = projektname.substring(50);
+				} else {
+					p3 = projektname.substring(50, 75);
+				}
+				int projektname3_X = positionPlankopf.x() + 115;
+				int projektname3_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 215;
+				writeLargeTextAt(p3, projektname3_X, projektname3_Y, cs);
 			}
 		} catch (Exception e) {
 			log.error("Fehler beim Drucken des Plankopfs", e);

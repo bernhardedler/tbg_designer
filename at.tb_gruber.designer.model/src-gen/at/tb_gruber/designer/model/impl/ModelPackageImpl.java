@@ -1879,8 +1879,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				null, 0, 1, VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVerteilerMitZaehler_NrHauptversorgung(), ecorePackage.getEString(), "nrHauptversorgung",
-				"ZP-NR.: 00AT00", 0, 1, VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"ZP-NR.: ", 0, 1, VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

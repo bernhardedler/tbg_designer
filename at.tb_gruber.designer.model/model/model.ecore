@@ -141,7 +141,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VerteilerMitZaehler" eSuperTypes="#//VerteilerBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrReserveEinspeisung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrHauptversorgung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="ZP-NR.: 00AT00"/>
+        defaultValueLiteral="ZP-NR.: "/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Energiespeicher" eSuperTypes="#//AnlageMitAttributen">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="energiespeicherfunktion"
