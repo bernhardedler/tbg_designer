@@ -63,7 +63,6 @@ public class TBGPrintActionHelper {
 				try (OutputStream os = new FileOutputStream(filePath)) {
 					TBGDiagramSVGGenerator generator = new TBGDiagramSVGGenerator(dgrmEP);
 					List editParts = dgrmEP.getPrimaryEditParts();
-					generator.setDiagramDimension(dgrmEP.getFigure().getBounds().getSize());
 					generator.createConstrainedSWTImageDecriptorForParts(editParts, figureBounds.x, figureBounds.y,
 							true);
 					SVGImage svg = (SVGImage) generator.getRenderedImage();

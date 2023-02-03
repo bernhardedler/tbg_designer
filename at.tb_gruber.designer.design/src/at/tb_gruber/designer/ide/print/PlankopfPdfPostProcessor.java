@@ -36,12 +36,12 @@ public class PlankopfPdfPostProcessor {
 	public static final PDFont FONT = PDType1Font.HELVETICA;
 	public static final int FONT_SIZE_SMALL = 11;
 	public static final int FONT_SIZE_MEDIUM = 16;
-	public static final int FONT_SIZE_LARGE = 26;
+	public static final int FONT_SIZE_LARGE = 20;
 
-	public static final Dimension PLANKOPF_SIZE = new Dimension(703, 226); // 190x64 bei 96 dpi
-	public static final Dimension LEGENDE_1_SIZE = new Dimension(349, 472);
-	public static final Dimension LEGENDE_2_SIZE = new Dimension(349, 619);
-
+	public static final Dimension PLANKOPF_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(703), TBGDiagramSVGGenerator.applyScaling(226));
+	public static final Dimension LEGENDE_1_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(349), TBGDiagramSVGGenerator.applyScaling(472));
+	public static final Dimension LEGENDE_2_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(349), TBGDiagramSVGGenerator.applyScaling(619));
+	
 	public static void postprocess(String filePath, DiagramEditPart dgrmEP) throws IOException {
 		File file = new File(filePath);
 
@@ -77,36 +77,36 @@ public class PlankopfPdfPostProcessor {
 
 			Bahnhof projekt = resolveBahnhof(dgrmEP);
 			if (projekt != null) {
-				int bearb_Datum_X = positionPlankopf.x() + 360;
-				int bearb_Datum_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 48;
+				int bearb_Datum_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(360);
+				int bearb_Datum_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(48);
 				writeSmallTextAt(projekt.getBearbeitet_am(), bearb_Datum_X, bearb_Datum_Y, cs);
 
-				int bearb_Name_X = positionPlankopf.x() + 455;
-				int bearb_Name_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 48;
+				int bearb_Name_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
+				int bearb_Name_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(48);
 				writeSmallTextAt(projekt.getBearbeitet_von(), bearb_Name_X, bearb_Name_Y, cs);
 
-				int gez_Datum_X = positionPlankopf.x() + 360;
-				int gez_Datum_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 78;
+				int gez_Datum_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(360);
+				int gez_Datum_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(78);
 				writeSmallTextAt(projekt.getGezeichnet_am(), gez_Datum_X, gez_Datum_Y, cs);
 
-				int gez_Name_X = positionPlankopf.x() + 455;
-				int gez_Name_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 78;
+				int gez_Name_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
+				int gez_Name_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(78);
 				writeSmallTextAt(projekt.getGezeichnet_von(), gez_Name_X, gez_Name_Y, cs);
 
-				int gepr_Datum_X = positionPlankopf.x() + 360;
-				int gepr_Datum_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 108;
+				int gepr_Datum_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(360);
+				int gepr_Datum_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(108);
 				writeSmallTextAt(projekt.getGeprueft_am(), gepr_Datum_X, gepr_Datum_Y, cs);
 
-				int gepr_Name_X = positionPlankopf.x() + 455;
-				int gepr_Name_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 108;
+				int gepr_Name_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
+				int gepr_Name_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(108);
 				writeSmallTextAt(projekt.getGeprueft_von(), gepr_Name_X, gepr_Name_Y, cs);
 
-				int plannummer_X = positionPlankopf.x() + 455;
-				int plannummer_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 160;
+				int plannummer_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
+				int plannummer_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(160);
 				writeMediumTextAt(projekt.getPlannummer(), plannummer_X, plannummer_Y, cs);
 
-				int freigegeben_X = positionPlankopf.x() + 455;
-				int freigegeben_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 220;
+				int freigegeben_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
+				int freigegeben_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(220);
 				writeMediumTextAt(projekt.getFreigegeben_von(), freigegeben_X, freigegeben_Y, cs);
 
 				String projektname = projekt.getProjektname();
@@ -116,8 +116,8 @@ public class PlankopfPdfPostProcessor {
 				} else {
 					p1 = projektname.substring(0, 25);
 				}
-				int projektname1_X = positionPlankopf.x() + 115;
-				int projektname1_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 155;
+				int projektname1_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
+				int projektname1_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(155);
 				writeLargeTextAt(p1, projektname1_X, projektname1_Y, cs);
 				
 				if (projektname.length() > 25 && projektname.length() <= 50) {
@@ -125,8 +125,8 @@ public class PlankopfPdfPostProcessor {
 				} else {
 					p2 = projektname.substring(25, 50);
 				}
-				int projektname2_X = positionPlankopf.x() + 115;
-				int projektname2_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 185;
+				int projektname2_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
+				int projektname2_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(185);
 				writeLargeTextAt(p2, projektname2_X, projektname2_Y, cs);
 
 				if (projektname.length() > 50 && projektname.length() <= 75) {
@@ -134,8 +134,8 @@ public class PlankopfPdfPostProcessor {
 				} else {
 					p3 = projektname.substring(50, 75);
 				}
-				int projektname3_X = positionPlankopf.x() + 115;
-				int projektname3_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - 215;
+				int projektname3_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
+				int projektname3_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(215);
 				writeLargeTextAt(p3, projektname3_X, projektname3_Y, cs);
 			}
 		} catch (Exception e) {
