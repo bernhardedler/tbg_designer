@@ -1,11 +1,8 @@
 package at.tb_gruber.designer.ide.print;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Function;
 
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.PrecisionRectangle;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.draw2d.geometry.Translatable;
@@ -15,8 +12,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.figures.IExpandableFigure;
 import org.eclipse.gmf.runtime.diagram.ui.render.clipboard.DiagramSVGGenerator;
-
-import at.tb_gruber.designer.ide.preferences.TBGPreferencePage;
 
 public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 
