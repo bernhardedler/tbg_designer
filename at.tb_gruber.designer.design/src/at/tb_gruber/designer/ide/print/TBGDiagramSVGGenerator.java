@@ -71,9 +71,9 @@ public class TBGDiagramSVGGenerator extends DiagramSVGGenerator {
 		PrecisionRectangle rect = new PrecisionRectangle();
 
 		rect.preciseWidth = deltaX + (3 * DEFAULT_MARGIN_LEFT + DEFAULT_MARGIN_RIGHT + (2 * getImageMargin()));
-		rect.preciseHeight = deltaY > DIN_A4_HEIGHT
+		rect.preciseHeight = deltaY > (DIN_A4_HEIGHT + 200)
 				? (deltaY + DEFAULT_MARGIN_TOP + DEFAULT_MARGIN_BOTTOM + (2 * getImageMargin()))
-				: (DIN_A4_HEIGHT + DEFAULT_MARGIN_BOTTOM + (2 * getImageMargin()));
+				: ((DIN_A4_HEIGHT + 200) + DEFAULT_MARGIN_BOTTOM + (2 * getImageMargin()));
 
 		rect.preciseX = minX - (DEFAULT_MARGIN_LEFT + getImageMargin());
 		rect.preciseY = minY - (DEFAULT_MARGIN_TOP + getImageMargin());

@@ -215,7 +215,7 @@ public class DiagramServices {
 		return isSpannungsart(self, Spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
 	}
 
-	public Boolean isVspBlau(EObject self) {
+	public Boolean isVspDunkelgruen(EObject self) {
 		return isSpannungsart(self, Spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
 	}
 
@@ -227,11 +227,11 @@ public class DiagramServices {
 		return isSpannungsart(self, Spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
 	}
 
-	public Boolean isVspCyan(EObject self) {
+	public Boolean isVspBlau(EObject self) {
 		return isSpannungsart(self, Spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
 	}
 
-	public Boolean isVspBraun(EObject self) {
+	public Boolean isVspOrange(EObject self) {
 		return isSpannungsart(self, Spannungsarttype.RESERVE_2_VALUE);
 	}
 
@@ -243,7 +243,7 @@ public class DiagramServices {
 		return isTrafoSpannungsart(self, Spannungsarttype.HSP_UN_AB_1K_V50_HZ_VALUE);
 	}
 
-	public Boolean isTspBlau(EObject self) {
+	public Boolean isTspDunkelgruen(EObject self) {
 		return isTrafoSpannungsart(self, Spannungsarttype.UN_BIS_INKL_15K_VDC_VALUE);
 	}
 
@@ -255,11 +255,11 @@ public class DiagramServices {
 		return isTrafoSpannungsart(self, Spannungsarttype.HSP_UN_15K_V16_7HZ_VALUE);
 	}
 
-	public Boolean isTspCyan(EObject self) {
+	public Boolean isTspBlau(EObject self) {
 		return isTrafoSpannungsart(self, Spannungsarttype.NSP_UN_BIS_INKL_1K_V16_7HZ_VALUE);
 	}
 
-	public Boolean isTspBraun(EObject self) {
+	public Boolean isTspOrange(EObject self) {
 		return isTrafoSpannungsart(self, Spannungsarttype.RESERVE_2_VALUE);
 	}
 

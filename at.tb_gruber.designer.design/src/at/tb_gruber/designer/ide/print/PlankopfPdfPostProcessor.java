@@ -39,8 +39,8 @@ public class PlankopfPdfPostProcessor {
 	public static final int FONT_SIZE_LARGE = 20;
 
 	public static final Dimension PLANKOPF_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(703), TBGDiagramSVGGenerator.applyScaling(226));
-	public static final Dimension LEGENDE_1_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(349), TBGDiagramSVGGenerator.applyScaling(472));
-	public static final Dimension LEGENDE_2_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(349), TBGDiagramSVGGenerator.applyScaling(619));
+	public static final Dimension LEGENDE_1_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(348), TBGDiagramSVGGenerator.applyScaling(729));
+	public static final Dimension LEGENDE_2_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(348), TBGDiagramSVGGenerator.applyScaling(619));
 	
 	public static void postprocess(String filePath, DiagramEditPart dgrmEP) throws IOException {
 		File file = new File(filePath);
@@ -103,7 +103,7 @@ public class PlankopfPdfPostProcessor {
 
 				int plannummer_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
 				int plannummer_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(160);
-				writeMediumTextAt(projekt.getPlannummer(), plannummer_X, plannummer_Y, cs);
+				writeSmallTextAt(projekt.getPlannummer(), plannummer_X, plannummer_Y, cs);
 
 				int freigegeben_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(455);
 				int freigegeben_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(220);
@@ -151,8 +151,8 @@ public class PlankopfPdfPostProcessor {
 			BufferedImage bim = ImageIO.read(is);
 			PDImageXObject pdfimg = LosslessFactory.createFromImage(doc, bim);
 
-			Point positionPlankopf = getTopLeftForLegende1(page);
-			cs.drawImage(pdfimg, positionPlankopf.x(), positionPlankopf.y(), LEGENDE_1_SIZE.width(),
+			Point positionLegende1 = getTopLeftForLegende1(page);
+			cs.drawImage(pdfimg, positionLegende1.x(), positionLegende1.y(), LEGENDE_1_SIZE.width(),
 					LEGENDE_1_SIZE.height());
 		} catch (Exception e) {
 			log.error("Fehler beim Drucken der Legende 1", e);
@@ -167,8 +167,8 @@ public class PlankopfPdfPostProcessor {
 			BufferedImage bim = ImageIO.read(is);
 			PDImageXObject pdfimg = LosslessFactory.createFromImage(doc, bim);
 
-			Point positionPlankopf = getTopLeftForLegende2(page);
-			cs.drawImage(pdfimg, positionPlankopf.x(), positionPlankopf.y(), LEGENDE_2_SIZE.width(),
+			Point positionLegende2 = getTopLeftForLegende2(page);
+			cs.drawImage(pdfimg, positionLegende2.x(), positionLegende2.y(), LEGENDE_2_SIZE.width(),
 					LEGENDE_2_SIZE.height());
 		} catch (Exception e) {
 			log.error("Fehler beim Drucken der Legende 2", e);
@@ -214,7 +214,7 @@ public class PlankopfPdfPostProcessor {
 		Dimension totalSize = getPdfPageSize(page);
 		int offset = 5;
 
-		int x = totalSize.width() - offset - LEGENDE_2_SIZE.width() - offset - LEGENDE_2_SIZE.width();
+		int x = totalSize.width() - offset - LEGENDE_1_SIZE.width() - offset - LEGENDE_2_SIZE.width();
 		int y = offset + PLANKOPF_SIZE.height() + offset; // wird von unten links nach oben rechts gerechnet
 		return new Point(x, y);
 

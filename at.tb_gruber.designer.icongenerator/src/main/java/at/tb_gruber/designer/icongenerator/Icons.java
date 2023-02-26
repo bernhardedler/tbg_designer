@@ -20,12 +20,12 @@ public class Icons {
 	public static final Map<String, String> colors = Stream
 			.of(new String[][] {
 				{ "rot", "#FF0000" }, 
+				{ "dunkelgruen", "#3F7F3F" }, 
+				{ "magenta", "#FF00FF" },
+				{ "blau", "#00FFFF" }, 
 				{ "gruen", "#00FF00" }, 
-				{ "magenta", "#FF0090" },
-				{ "cyan", "#00FFFF" }, 
-				{ "blau", "#0070C0" }, 
-				{ "violett", "#8D7EBD" },
-				{ "braun", "#C65911" }, })
+				{ "violett", "#6752A5" },
+				{ "orange", "#FF7F00" }, })
 			.collect(Collectors.collectingAndThen(Collectors.toMap(data -> data[0], data -> data[1]),
 					Collections::<String, String>unmodifiableMap));
 

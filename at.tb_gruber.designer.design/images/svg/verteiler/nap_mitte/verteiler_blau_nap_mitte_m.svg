@@ -5,18 +5,18 @@
   </g>
   <g>
     <title>Rahmen</title>
-    <rect fill="#fff" height="224" id="r1" stroke="#0070C0" stroke-width="2" width="224" x="1" y="1"></rect>
+    <rect fill="#fff" height="224" id="r1" stroke="#00FFFF" stroke-width="2" width="224" x="1" y="1"></rect>
   </g>
   <g>
     <title>Zaehler</title>
-    <line fill="none" id="z4" stroke="#0070C0" stroke-width="2" x1="113" x2="113" y1="1" y2="151"></line>
+    <line fill="none" id="z4" stroke="#00FFFF" stroke-width="2" x1="113" x2="113" y1="1" y2="151"></line>
   </g>
   <g>
     <title>Verteiler</title>
-    <rect fill="#fff" height="100" id="v1" stroke="#0070C0" stroke-width="2" width="213" x="7" y="125"></rect>
-    <line fill="none" id="v2" stroke="#0070C0" stroke-width="2" x1="6" x2="220" y1="177" y2="177"></line>
-    <line fill="none" id="v3" stroke="#0070C0" stroke-width="2" x1="74" x2="74" y1="177" y2="226"></line>
-    <line fill="none" id="v4" stroke="#0070C0" stroke-width="2" x1="150" x2="150" y1="177" y2="226"></line>
+    <rect fill="#fff" height="100" id="v1" stroke="#00FFFF" stroke-width="2" width="213" x="7" y="125"></rect>
+    <line fill="none" id="v2" stroke="#00FFFF" stroke-width="2" x1="6" x2="220" y1="177" y2="177"></line>
+    <line fill="none" id="v3" stroke="#00FFFF" stroke-width="2" x1="74" x2="74" y1="177" y2="226"></line>
+    <line fill="none" id="v4" stroke="#00FFFF" stroke-width="2" x1="150" x2="150" y1="177" y2="226"></line>
   </g>
   <g>
     <title>NAP</title>
