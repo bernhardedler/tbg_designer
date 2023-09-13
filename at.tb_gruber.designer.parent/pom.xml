@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>at.tb_gruber.designer</groupId>
 	<artifactId>at.tb_gruber.designer.parent</artifactId>
-	<version>7.2.2</version>
+	<version>7.2.3</version>
 	<packaging>pom</packaging>
 	<properties>
 		<tycho.version>1.5.1</tycho.version>
