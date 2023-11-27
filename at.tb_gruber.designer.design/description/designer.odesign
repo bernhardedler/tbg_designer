@@ -3007,7 +3007,6 @@
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Eigentuemer" referenceName="eigentuemer" variableName="newEigentuemer">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newEigentuemer">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Eigentümer"/>
-                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
