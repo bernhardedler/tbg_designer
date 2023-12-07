@@ -114,7 +114,7 @@ public class PlankopfPdfPostProcessor {
 				if (projektname.length() <= 25) {
 					p1 = projektname;
 				} else {
-					p1 = projektname.substring(0, 25);
+					p1 = projektname.substring(0, Math.min(projektname.length(), 25));
 				}
 				int projektname1_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
 				int projektname1_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(155);
@@ -123,7 +123,7 @@ public class PlankopfPdfPostProcessor {
 				if (projektname.length() > 25 && projektname.length() <= 50) {
 					p2 = projektname.substring(25);
 				} else {
-					p2 = projektname.substring(25, 50);
+					p2 = projektname.substring(25,  Math.min(projektname.length(), 50));
 				}
 				int projektname2_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
 				int projektname2_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(185);
@@ -132,7 +132,7 @@ public class PlankopfPdfPostProcessor {
 				if (projektname.length() > 50 && projektname.length() <= 75) {
 					p3 = projektname.substring(50);
 				} else {
-					p3 = projektname.substring(50, 75);
+					p3 = projektname.substring(50,  Math.min(projektname.length(), 75));
 				}
 				int projektname3_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
 				int projektname3_Y = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(215);
