@@ -66,16 +66,18 @@ public class Activator extends AbstractUIPlugin {
 
 		String dashLength = System.getProperty(TBGPreferencePage.DASH_LENGTH);
 		try {
-			float length = Float.parseFloat(dashLength);
-
-			Field field = DiagramElementEditPartOperation.class.getDeclaredField("DASH_STYLE");
-			field.setAccessible(true);
-
-			Field modifiersField = Field.class.getDeclaredField("modifiers");
-			modifiersField.setAccessible(true);
-			modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
-			field.set(null, new float[] { length, length });
+			if (dashLength != null && dashLength.matches("\\d+")) {
+				float length = Integer.valueOf(dashLength).floatValue();
+				
+				Field field = DiagramElementEditPartOperation.class.getDeclaredField("DASH_STYLE");
+				field.setAccessible(true);
+				
+				Field modifiersField = Field.class.getDeclaredField("modifiers");
+				modifiersField.setAccessible(true);
+				modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+				
+				field.set(null, new float[] { length, length });
+			}
 		} catch (NumberFormatException e) {
 			// do nothing
 		}

@@ -155,16 +155,20 @@ public class TBGResetOriginModelChangeOperation extends AbstractModelChangeOpera
 	 */
 	private Rectangle calculateBoundinBox(List<IGraphicalEditPart> editParts) {
 		Rectangle result = null;
-		Dimension spacing = (Dimension) ((EditPart) editParts.get(0)).getViewer().getProperty(SnapToGrid.PROPERTY_GRID_SPACING);		
-		if (containerEditPart instanceof DiagramEditPart) {
-			result = calculateBoundinBoxRelativeToContainer(editParts, spacing.width, new Dimension(0, 0));
-		} else if (containerEditPart instanceof AbstractDiagramContainerEditPart) {
-			result = calculateBoundinBoxRelativeToContainer(editParts, 0, new Dimension(0, 0));
+		if (!editParts.isEmpty()) {
+			EditPart rootEP = (EditPart) editParts.get(0);
+			Dimension spacing = (Dimension) rootEP.getViewer().getProperty(SnapToGrid.PROPERTY_GRID_SPACING);		
+			if (containerEditPart instanceof DiagramEditPart) {
+				result = calculateBoundinBoxRelativeToContainer(editParts, spacing.width, new Dimension(0, 0));
+			} else if (containerEditPart instanceof AbstractDiagramContainerEditPart) {
+				result = calculateBoundinBoxRelativeToContainer(editParts, 0, new Dimension(0, 0));
+			}
+			if (result == null) {
+				result = new Rectangle();
+			}
+			return result;
 		}
-		if (result == null) {
-			result = new Rectangle();
-		}
-		return result;
+		return new Rectangle();
 	}
 	
 	
