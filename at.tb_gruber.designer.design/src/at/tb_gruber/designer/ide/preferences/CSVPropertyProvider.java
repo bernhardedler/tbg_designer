@@ -1,8 +1,10 @@
 package at.tb_gruber.designer.ide.preferences;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -19,7 +21,6 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
-import at.tb_gruber.designer.design.Activator;
 import at.tb_gruber.designer.model.Externe_Datenquelle;
 
 public class CSVPropertyProvider {
@@ -469,6 +470,13 @@ public class CSVPropertyProvider {
 		public void setGpsLat(String gpsLat) {
 			this.gpsLat = gpsLat;
 		}
+		
+		@Override
+		public String toString() {
+			return "ObjektInfo [objektId=" + objektId + ", objektId2=" + objektId2 + ", objektName=" + objektName
+					+ ", gebaeudeArt=" + gebaeudeArt + ", land=" + land + ", plz=" + plz + ", ort=" + ort + ", strasse="
+					+ strasse + ", gpsLon=" + gpsLon + ", gpsLat=" + gpsLat + ", quelle=" + quelle + "]";
+		}
 
 	}
 
@@ -536,5 +544,21 @@ public class CSVPropertyProvider {
 
 	public List<String> getEigentuemer() {
 		return eigentuemerList;
+	}
+	
+	public void debugAll() {
+		File f = new File("debug_csv.log");
+		try (FileWriter fileWriter = new FileWriter(f)) {
+			objektInfos.stream().sorted((o1, o2) -> o1.objektId.compareTo(o2.objektId)).map(ObjektInfo::toString).forEach(t -> {
+				try {
+					fileWriter.write(t);
+					fileWriter.write(System.lineSeparator());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			});
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
