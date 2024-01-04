@@ -20,34 +20,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getLangbeschreibung <em>Langbeschreibung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#getPostition <em>Postition</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.NetzanschlusspunktImpl#isFernablesung <em>Fernablesung</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements Netzanschlusspunkt {
-	/**
-	 * The default value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBeschreibung()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String BESCHREIBUNG_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getBeschreibung() <em>Beschreibung</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBeschreibung()
-	 * @generated
-	 * @ordered
-	 */
-	protected String beschreibung = BESCHREIBUNG_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getLangbeschreibung() <em>Langbeschreibung</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,6 +69,26 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	protected NapPosition postition = POSTITION_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isFernablesung() <em>Fernablesung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFernablesung()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FERNABLESUNG_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isFernablesung() <em>Fernablesung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFernablesung()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean fernablesung = FERNABLESUNG_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,30 +105,6 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	@Override
 	protected EClass eStaticClass() {
 		return ModelPackage.Literals.NETZANSCHLUSSPUNKT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getBeschreibung() {
-		return beschreibung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setBeschreibung(String newBeschreibung) {
-		String oldBeschreibung = beschreibung;
-		beschreibung = newBeschreibung;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG,
-					oldBeschreibung, beschreibung));
 	}
 
 	/**
@@ -185,14 +161,38 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	 * @generated
 	 */
 	@Override
+	public boolean isFernablesung() {
+		return fernablesung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFernablesung(boolean newFernablesung) {
+		boolean oldFernablesung = fernablesung;
+		fernablesung = newFernablesung;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.NETZANSCHLUSSPUNKT__FERNABLESUNG,
+					oldFernablesung, fernablesung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
-			return getBeschreibung();
 		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 			return getLangbeschreibung();
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			return getPostition();
+		case ModelPackage.NETZANSCHLUSSPUNKT__FERNABLESUNG:
+			return isFernablesung();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,14 +205,14 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
-			setBeschreibung((String) newValue);
-			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 			setLangbeschreibung((String) newValue);
 			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			setPostition((NapPosition) newValue);
+			return;
+		case ModelPackage.NETZANSCHLUSSPUNKT__FERNABLESUNG:
+			setFernablesung((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,14 +226,14 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
-			setBeschreibung(BESCHREIBUNG_EDEFAULT);
-			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 			setLangbeschreibung(LANGBESCHREIBUNG_EDEFAULT);
 			return;
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			setPostition(POSTITION_EDEFAULT);
+			return;
+		case ModelPackage.NETZANSCHLUSSPUNKT__FERNABLESUNG:
+			setFernablesung(FERNABLESUNG_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -247,13 +247,13 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
-			return BESCHREIBUNG_EDEFAULT == null ? beschreibung != null : !BESCHREIBUNG_EDEFAULT.equals(beschreibung);
 		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 			return LANGBESCHREIBUNG_EDEFAULT == null ? langbeschreibung != null
 					: !LANGBESCHREIBUNG_EDEFAULT.equals(langbeschreibung);
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
 			return postition != POSTITION_EDEFAULT;
+		case ModelPackage.NETZANSCHLUSSPUNKT__FERNABLESUNG:
+			return fernablesung != FERNABLESUNG_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -269,12 +269,12 @@ public class NetzanschlusspunktImpl extends AnlageOhneAttributeImpl implements N
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (beschreibung: ");
-		result.append(beschreibung);
-		result.append(", langbeschreibung: ");
+		result.append(" (langbeschreibung: ");
 		result.append(langbeschreibung);
 		result.append(", postition: ");
 		result.append(postition);
+		result.append(", fernablesung: ");
+		result.append(fernablesung);
 		result.append(')');
 		return result.toString();
 	}

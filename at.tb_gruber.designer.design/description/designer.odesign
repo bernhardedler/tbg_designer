@@ -1408,7 +1408,7 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="NapDetails" semanticCandidatesExpression="feature:eAllContents" domainClass="model::Netzanschlusspunkt">
-            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelExpression="[beschreibung/]" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:NoteDescription" labelSize="12" showIcon="false" labelExpression="[langbeschreibung/]" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1430,7 +1430,7 @@
           </subNodeMappings>
           <subContainerMappings name="VerteilerContainer" label="VerteilerContainer" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::VerteilerContainer">
             <borderedNodeMappings name="BorderNodeNap" label="nap" semanticCandidatesExpression="feature:netzanschlusspunkt" domainClass="model::Netzanschlusspunkt">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:beschreibung" hideLabelByDefault="true" sizeComputationExpression="8" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:langbeschreibung" hideLabelByDefault="true" sizeComputationExpression="8" workspacePath="/at.tb_gruber.designer.design/images/svg/nap_vor.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <forbiddenSides>WEST</forbiddenSides>
@@ -3498,9 +3498,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Netzanschlusspunkt" referenceName="netzanschlusspunkt">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="instance">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="beschreibung" valueExpression="NAP"/>
-                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:containerView">
                   <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subNodeMappings[name='NapDetails']" containerViewExpression="containerView"/>
@@ -3603,7 +3601,7 @@
       <ownedColumnMappings name="anlZaehlername" headerLabelExpression="Zählername" featureName="ursprung" labelExpression="service:getZaehlername()"/>
       <ownedColumnMappings name="anlReserveZPNrHauptversorgung" headerLabelExpression="Zählpunktnummer Hauptversorgung" featureName="ursprung" labelExpression="service:getZpNrHaupt()"/>
       <ownedColumnMappings name="anlReserveZPNrReserveEinspeisung" headerLabelExpression="Zählpunktnummer Reserve Einspeisung" featureName="ursprung" labelExpression="service:getZpNrReserve()"/>
-      <ownedColumnMappings name="anlNAPkurz" headerLabelExpression="Netzanschlusspunkt (NAP) Kurzbeschreibung" featureName="ursprung" labelExpression="service:getNapKurz()"/>
+      <ownedColumnMappings name="anlNAPfernablesung" headerLabelExpression="Netzanschlusspunkt (NAP) Fernablesung" featureName="ursprung" labelExpression="service:getNapFernablesung()"/>
       <ownedColumnMappings name="anlNAPlang" headerLabelExpression="Netzanschlusspunkt (NAP) Langbeschreibung" featureName="ursprung" labelExpression="service:getNapLang()"/>
       <ownedColumnMappings name="vbdVersorgtVonAnl" headerLabelExpression="versorgt von Anlagenname" featureName="ursprung" labelExpression="service:getUrsprungAnlagenname()"/>
       <ownedColumnMappings name="vbdVersorgtVonNr" headerLabelExpression="versorgt von Anlagennummer" featureName="ursprung" labelExpression="service:getUrsprungAnlagennummer()"/>

@@ -156,9 +156,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Trafo/unterspannung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Netzanschlusspunkt">
-      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/beschreibung"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/langbeschreibung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/postition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Netzanschlusspunkt/fernablesung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Versorgungsknoten">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Versorgungsknoten/netzanschlusspunkt"/>

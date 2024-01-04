@@ -43,27 +43,11 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addBeschreibungPropertyDescriptor(object);
 			addLangbeschreibungPropertyDescriptor(object);
 			addPostitionPropertyDescriptor(object);
+			addFernablesungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Beschreibung feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBeschreibungPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Netzanschlusspunkt_beschreibung_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Netzanschlusspunkt_beschreibung_feature",
-								"_UI_Netzanschlusspunkt_type"),
-						ModelPackage.Literals.NETZANSCHLUSSPUNKT__BESCHREIBUNG, true, true, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,6 +83,22 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 	}
 
 	/**
+	 * This adds a property descriptor for the Fernablesung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFernablesungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Netzanschlusspunkt_fernablesung_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Netzanschlusspunkt_fernablesung_feature",
+								"_UI_Netzanschlusspunkt_type"),
+						ModelPackage.Literals.NETZANSCHLUSSPUNKT__FERNABLESUNG, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Netzanschlusspunkt.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,7 +127,7 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = crop(((Netzanschlusspunkt) object).getBeschreibung());
+		String label = crop(((Netzanschlusspunkt) object).getLangbeschreibung());
 		return label == null || label.length() == 0 ? getString("_UI_Netzanschlusspunkt_type")
 				: getString("_UI_Netzanschlusspunkt_type") + " " + label;
 	}
@@ -144,9 +144,9 @@ public class NetzanschlusspunktItemProvider extends AnlageOhneAttributeItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Netzanschlusspunkt.class)) {
-		case ModelPackage.NETZANSCHLUSSPUNKT__BESCHREIBUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG:
 		case ModelPackage.NETZANSCHLUSSPUNKT__POSTITION:
+		case ModelPackage.NETZANSCHLUSSPUNKT__FERNABLESUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -439,21 +439,21 @@ public class TableServices {
 		return nrReserve;
 	}
 
-	public String getNapKurz(EObject self) {
-		String napKurz = "";
+	public String getNapFernablesung(EObject self) {
+		boolean fernablesung = false;
 		if (self instanceof Verbindung) {
 			AnlageBase ziel = ((Verbindung) self).getZiel();
 			if (ziel instanceof Netzanschlusspunkt) {
-				napKurz = ((Netzanschlusspunkt) ziel).getBeschreibung();
+				fernablesung = ((Netzanschlusspunkt) ziel).isFernablesung();
 			} else if (ziel instanceof VerteilerBase) {
-				napKurz = Optional.ofNullable(((VerteilerBase) ziel).getNetzanschlusspunkt())
-						.map(Netzanschlusspunkt::getBeschreibung).orElse("");
+				fernablesung = Optional.ofNullable(((VerteilerBase) ziel).getNetzanschlusspunkt())
+						.map(Netzanschlusspunkt::isFernablesung).orElse(false);
 			} else if (ziel instanceof Versorgungsknoten) {
-				napKurz = Optional.ofNullable(((Versorgungsknoten) ziel).getNetzanschlusspunkt())
-						.map(Netzanschlusspunkt::getBeschreibung).orElse("");
+				fernablesung = Optional.ofNullable(((Versorgungsknoten) ziel).getNetzanschlusspunkt())
+						.map(Netzanschlusspunkt::isFernablesung).orElse(false);
 			}
 		}
-		return napKurz;
+		return fernablesung ? "ja" : "nein";
 	}
 
 	public String getNapLang(EObject self) {
