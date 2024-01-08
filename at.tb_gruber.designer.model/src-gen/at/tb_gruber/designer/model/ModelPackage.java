@@ -948,13 +948,22 @@ public interface ModelPackage extends EPackage {
 	int NETZANSCHLUSSPUNKT__VERBINDUNG_NACH = ANLAGE_OHNE_ATTRIBUTE__VERBINDUNG_NACH;
 
 	/**
+	 * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETZANSCHLUSSPUNKT__BESCHREIBUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Langbeschreibung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 0;
+	int NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Postition</b></em>' attribute.
@@ -963,16 +972,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NETZANSCHLUSSPUNKT__POSTITION = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Fernablesung</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NETZANSCHLUSSPUNKT__FERNABLESUNG = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
+	int NETZANSCHLUSSPUNKT__POSTITION = ANLAGE_OHNE_ATTRIBUTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Netzanschlusspunkt</em>' class.
@@ -3187,6 +3187,17 @@ public interface ModelPackage extends EPackage {
 	EClass getNetzanschlusspunkt();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getBeschreibung <em>Beschreibung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Beschreibung</em>'.
+	 * @see at.tb_gruber.designer.model.Netzanschlusspunkt#getBeschreibung()
+	 * @see #getNetzanschlusspunkt()
+	 * @generated
+	 */
+	EAttribute getNetzanschlusspunkt_Beschreibung();
+
+	/**
 	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getLangbeschreibung <em>Langbeschreibung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3207,17 +3218,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNetzanschlusspunkt_Postition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#isFernablesung <em>Fernablesung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fernablesung</em>'.
-	 * @see at.tb_gruber.designer.model.Netzanschlusspunkt#isFernablesung()
-	 * @see #getNetzanschlusspunkt()
-	 * @generated
-	 */
-	EAttribute getNetzanschlusspunkt_Fernablesung();
 
 	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Versorgungsknoten <em>Versorgungsknoten</em>}'.
@@ -4282,6 +4282,14 @@ public interface ModelPackage extends EPackage {
 		EClass NETZANSCHLUSSPUNKT = eINSTANCE.getNetzanschlusspunkt();
 
 		/**
+		 * The meta object literal for the '<em><b>Beschreibung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NETZANSCHLUSSPUNKT__BESCHREIBUNG = eINSTANCE.getNetzanschlusspunkt_Beschreibung();
+
+		/**
 		 * The meta object literal for the '<em><b>Langbeschreibung</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4296,14 +4304,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NETZANSCHLUSSPUNKT__POSTITION = eINSTANCE.getNetzanschlusspunkt_Postition();
-
-		/**
-		 * The meta object literal for the '<em><b>Fernablesung</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NETZANSCHLUSSPUNKT__FERNABLESUNG = eINSTANCE.getNetzanschlusspunkt_Fernablesung();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.VersorgungsknotenImpl <em>Versorgungsknoten</em>}' class.

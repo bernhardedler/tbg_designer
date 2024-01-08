@@ -11,9 +11,9 @@ package at.tb_gruber.designer.model;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getLangbeschreibung <em>Langbeschreibung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getPostition <em>Postition</em>}</li>
- *   <li>{@link at.tb_gruber.designer.model.Netzanschlusspunkt#isFernablesung <em>Fernablesung</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getNetzanschlusspunkt()
@@ -21,6 +21,28 @@ package at.tb_gruber.designer.model;
  * @generated
  */
 public interface Netzanschlusspunkt extends AnlageOhneAttribute {
+	/**
+	 * Returns the value of the '<em><b>Beschreibung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Beschreibung</em>' attribute.
+	 * @see #setBeschreibung(String)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getNetzanschlusspunkt_Beschreibung()
+	 * @model
+	 * @generated
+	 */
+	String getBeschreibung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#getBeschreibung <em>Beschreibung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Beschreibung</em>' attribute.
+	 * @see #getBeschreibung()
+	 * @generated
+	 */
+	void setBeschreibung(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Langbeschreibung</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,28 +89,5 @@ public interface Netzanschlusspunkt extends AnlageOhneAttribute {
 	 * @generated
 	 */
 	void setPostition(NapPosition value);
-
-	/**
-	 * Returns the value of the '<em><b>Fernablesung</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fernablesung</em>' attribute.
-	 * @see #setFernablesung(boolean)
-	 * @see at.tb_gruber.designer.model.ModelPackage#getNetzanschlusspunkt_Fernablesung()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isFernablesung();
-
-	/**
-	 * Sets the value of the '{@link at.tb_gruber.designer.model.Netzanschlusspunkt#isFernablesung <em>Fernablesung</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fernablesung</em>' attribute.
-	 * @see #isFernablesung()
-	 * @generated
-	 */
-	void setFernablesung(boolean value);
 
 } // Netzanschlusspunkt

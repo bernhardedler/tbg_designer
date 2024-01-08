@@ -882,7 +882,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNetzanschlusspunkt_Langbeschreibung() {
+	public EAttribute getNetzanschlusspunkt_Beschreibung() {
 		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -892,7 +892,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNetzanschlusspunkt_Postition() {
+	public EAttribute getNetzanschlusspunkt_Langbeschreibung() {
 		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -902,7 +902,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNetzanschlusspunkt_Fernablesung() {
+	public EAttribute getNetzanschlusspunkt_Postition() {
 		return (EAttribute) netzanschlusspunktEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1573,9 +1573,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(trafoEClass, TRAFO__UNTERSPANNUNG);
 
 		netzanschlusspunktEClass = createEClass(NETZANSCHLUSSPUNKT);
+		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__BESCHREIBUNG);
 		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__LANGBESCHREIBUNG);
 		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__POSTITION);
-		createEAttribute(netzanschlusspunktEClass, NETZANSCHLUSSPUNKT__FERNABLESUNG);
 
 		versorgungsknotenEClass = createEClass(VERSORGUNGSKNOTEN);
 		createEReference(versorgungsknotenEClass, VERSORGUNGSKNOTEN__NETZANSCHLUSSPUNKT);
@@ -1830,13 +1830,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(netzanschlusspunktEClass, Netzanschlusspunkt.class, "Netzanschlusspunkt", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNetzanschlusspunkt_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1,
+				Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNetzanschlusspunkt_Langbeschreibung(), ecorePackage.getEString(), "langbeschreibung", null, 0,
 				1, Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNetzanschlusspunkt_Postition(), this.getNapPosition(), "postition", null, 0, 1,
-				Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNetzanschlusspunkt_Fernablesung(), ecorePackage.getEBoolean(), "fernablesung", "false", 0, 1,
 				Netzanschlusspunkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
