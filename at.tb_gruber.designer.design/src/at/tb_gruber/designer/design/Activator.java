@@ -1,5 +1,7 @@
 package at.tb_gruber.designer.design;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashSet;
@@ -90,9 +92,8 @@ public class Activator extends AbstractUIPlugin {
 		if (preferenceStore.getBoolean(TBGPreferencePage.DEBUG_LOG)) {
 			CSVPropertyProvider.getInstance().debugAll();
 		}
-		
-		if (preferenceStore.getBoolean(TBGPreferencePage.AUTO_RESET_ORIGIN)) {
 
+		if (preferenceStore.getBoolean(TBGPreferencePage.AUTO_RESET_ORIGIN)) {
 			IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 			window.getPartService().addPartListener(new IPartListener() {
 
@@ -114,7 +115,8 @@ public class Activator extends AbstractUIPlugin {
 
 				@Override
 				public void partOpened(IWorkbenchPart part) {
-					resetOriginIfSiriusEditor(part);
+					double initialSpacing = 3.0; // 3 cm
+					resetOriginIfSiriusEditor(part, initialSpacing);
 				}
 
 				/*
@@ -122,7 +124,7 @@ public class Activator extends AbstractUIPlugin {
 				 * org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditor.initializeContents(
 				 * EditPart)
 				 */
-				private void resetOriginIfSiriusEditor(IWorkbenchPart part) {
+				private void resetOriginIfSiriusEditor(IWorkbenchPart part, double spacing) {
 					if (part instanceof DDiagramEditorImpl && "Versorgungsschema".equals(part.getTitle())) {
 						DDiagramEditorImpl impl = (DDiagramEditorImpl) part;
 
@@ -130,12 +132,10 @@ public class Activator extends AbstractUIPlugin {
 						EditPartViewer v = impl.getDiagramEditPart().getViewer();
 						if (v instanceof SiriusDiagramGraphicalViewer) {
 							SiriusDiagramGraphicalViewer viewer = (SiriusDiagramGraphicalViewer) v;
-
+							var root = ((DiagramRootEditPart) impl.getDiagramEditPart().getRoot());
 							/* Einheiten metrisch fixiert */
 							DiagramRootEditPart rep = ((DiagramRootEditPart) viewer.getRootEditPart());
 							int metric = RulerProvider.UNIT_CENTIMETERS;
-							double spacing = 3.0; // 3 cm
-
 							rep.getVerticalRuler().setUnit(metric);
 							rep.getHorizontalRuler().setUnit(metric);
 
@@ -150,17 +150,25 @@ public class Activator extends AbstractUIPlugin {
 							// Grid Origin (always 0, 0)
 							viewer.setProperty(SnapToGrid.PROPERTY_GRID_ORIGIN, new Point());
 							// Grid Spacing
-							((DiagramRootEditPart) impl.getDiagramEditPart().getRoot()).setGridSpacing(spacing);
+							root.setGridSpacing(spacing);
+							/* Reset Origin auslösen */
+							TBGResetOriginModelChangeOperation operation = new TBGResetOriginModelChangeOperation(
+									(DiagramEditPart) impl.getDiagramEditPart());
+							DiagramEditPart editPart = impl.getDiagramEditPart();
+							RecordingCommand command = CommandFactory.createRecordingCommand(
+									((IGraphicalEditPart) editPart).getEditingDomain(), operation);
+							impl.getEditingDomain().getCommandStack().execute(command);
+							
+							viewer.addPropertyChangeListener(new PropertyChangeListener() {
+								@Override
+								public void propertyChange(PropertyChangeEvent evt) {
+									if (evt.getPropertyName().equals(SnapToGrid.PROPERTY_GRID_SPACING)) {
+										/* neues Spacing bereits gesetzt, nur Aktualisierung nötig */
+										resetOriginIfSiriusEditor(part, root.getGridSpacing());
+									}
+								}
+							});
 						}
-
-						/* Reset Origin auslösen */
-						TBGResetOriginModelChangeOperation operation = new TBGResetOriginModelChangeOperation(
-								(DiagramEditPart) impl.getDiagramEditPart());
-						DiagramEditPart editPart = impl.getDiagramEditPart();
-						RecordingCommand command = CommandFactory
-								.createRecordingCommand(((IGraphicalEditPart) editPart).getEditingDomain(), operation);
-						impl.getEditingDomain().getCommandStack().execute(command);
-
 					}
 				}
 			});
