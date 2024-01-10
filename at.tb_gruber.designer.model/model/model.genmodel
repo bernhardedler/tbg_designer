@@ -177,6 +177,7 @@
     <genClasses ecoreClass="model.ecore#//VerteilerMitZaehler">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/nrReserveEinspeisung"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/nrHauptversorgung"/>
+      <genFeatures createChild="false" propertyDescription="Fernablesung (J/N)" ecoreFeature="ecore:EAttribute model.ecore#//VerteilerMitZaehler/fernablesung"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Energiespeicher">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Energiespeicher/energiespeicherfunktion"/>

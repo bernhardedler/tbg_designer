@@ -10,7 +10,7 @@
   <g>
     <title>Zaehler</title>
     <rect fill="#fff" height="80" id="z1" stroke="#FF00FF" stroke-width="2" width="80" x="18" y="145"></rect>
-    <line fill="none" id="z2" stroke="#FF00FF" stroke-width="2" x1="18" x2="99" y1="164" y2="164"></line>
+    <line fill="none" id="z2" stroke="#FF00FF" stroke-width="2" x1="18" x2="99" y1="170" y2="170"></line>
     <line fill="none" id="z3" stroke="#FF00FF" stroke-width="2" x1="56" x2="56" y1="108" y2="145"></line>
     <line fill="none" id="z4" stroke="#FF00FF" stroke-width="2" x1="56" x2="56" y1="224" y2="259"></line>
   </g>

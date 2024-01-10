@@ -132,7 +132,7 @@ public class Activator extends AbstractUIPlugin {
 						EditPartViewer v = impl.getDiagramEditPart().getViewer();
 						if (v instanceof SiriusDiagramGraphicalViewer) {
 							SiriusDiagramGraphicalViewer viewer = (SiriusDiagramGraphicalViewer) v;
-							var root = ((DiagramRootEditPart) impl.getDiagramEditPart().getRoot());
+							DiagramRootEditPart root = ((DiagramRootEditPart) impl.getDiagramEditPart().getRoot());
 							/* Einheiten metrisch fixiert */
 							DiagramRootEditPart rep = ((DiagramRootEditPart) viewer.getRootEditPart());
 							int metric = RulerProvider.UNIT_CENTIMETERS;

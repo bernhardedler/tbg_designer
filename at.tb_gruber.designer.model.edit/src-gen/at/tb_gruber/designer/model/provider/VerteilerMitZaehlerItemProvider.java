@@ -45,6 +45,7 @@ public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
 
 			addNrReserveEinspeisungPropertyDescriptor(object);
 			addNrHauptversorgungPropertyDescriptor(object);
+			addFernablesungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,6 +80,21 @@ public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
 								"_UI_VerteilerMitZaehler_nrHauptversorgung_feature", "_UI_VerteilerMitZaehler_type"),
 						ModelPackage.Literals.VERTEILER_MIT_ZAEHLER__NR_HAUPTVERSORGUNG, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Fernablesung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFernablesungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_VerteilerMitZaehler_fernablesung_feature"),
+						getString("_UI_VerteilerMitZaehler_fernablesung_description"),
+						ModelPackage.Literals.VERTEILER_MIT_ZAEHLER__FERNABLESUNG, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -129,6 +145,7 @@ public class VerteilerMitZaehlerItemProvider extends VerteilerBaseItemProvider {
 		switch (notification.getFeatureID(VerteilerMitZaehler.class)) {
 		case ModelPackage.VERTEILER_MIT_ZAEHLER__NR_RESERVE_EINSPEISUNG:
 		case ModelPackage.VERTEILER_MIT_ZAEHLER__NR_HAUPTVERSORGUNG:
+		case ModelPackage.VERTEILER_MIT_ZAEHLER__FERNABLESUNG:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

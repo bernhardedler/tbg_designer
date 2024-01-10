@@ -1709,13 +1709,22 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_MIT_ZAEHLER__NR_HAUPTVERSORGUNG = VERTEILER_BASE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Fernablesung</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_MIT_ZAEHLER__FERNABLESUNG = VERTEILER_BASE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Verteiler Mit Zaehler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_MIT_ZAEHLER_FEATURE_COUNT = VERTEILER_BASE_FEATURE_COUNT + 2;
+	int VERTEILER_MIT_ZAEHLER_FEATURE_COUNT = VERTEILER_BASE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Mit Zaehler</em>' class.
@@ -3370,6 +3379,17 @@ public interface ModelPackage extends EPackage {
 	EAttribute getVerteilerMitZaehler_NrHauptversorgung();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.tb_gruber.designer.model.VerteilerMitZaehler#isFernablesung <em>Fernablesung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fernablesung</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerMitZaehler#isFernablesung()
+	 * @see #getVerteilerMitZaehler()
+	 * @generated
+	 */
+	EAttribute getVerteilerMitZaehler_Fernablesung();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Energiespeicher <em>Energiespeicher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4425,6 +4445,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VERTEILER_MIT_ZAEHLER__NR_HAUPTVERSORGUNG = eINSTANCE.getVerteilerMitZaehler_NrHauptversorgung();
+
+		/**
+		 * The meta object literal for the '<em><b>Fernablesung</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERTEILER_MIT_ZAEHLER__FERNABLESUNG = eINSTANCE.getVerteilerMitZaehler_Fernablesung();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.EnergiespeicherImpl <em>Energiespeicher</em>}' class.

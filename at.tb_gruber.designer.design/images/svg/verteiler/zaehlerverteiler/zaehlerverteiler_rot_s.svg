@@ -10,7 +10,7 @@
   <g>
     <title>Zaehler</title>
     <rect fill="#fff" height="80" id="z1" stroke="#FF0000" stroke-width="2" width="80" x="18" y="31"></rect>
-    <line fill="none" id="z2" stroke="#FF0000" stroke-width="2" x1="18" x2="99" y1="55" y2="55"></line>
+    <line fill="none" id="z2" stroke="#FF0000" stroke-width="2" x1="18" x2="99" y1="56" y2="56"></line>
     <line fill="none" id="z3" stroke="#FF0000" stroke-width="2" x1="56" x2="56" y1="0" y2="31"></line>
     <line fill="none" id="z4" stroke="#FF0000" stroke-width="2" x1="56" x2="56" y1="111" y2="151"></line>
   </g>
@@ -21,8 +21,8 @@
   <g>
     <title>Verteiler</title>
     <rect fill="#fff" height="100" id="v1" stroke="#FF0000" stroke-width="2" width="101" x="6" y="125"></rect>
-    <line fill="none" id="v2" stroke="#FF0000" stroke-width="2" x1="7" x2="106" y1="175" y2="175"></line>
-    <line fill="none" id="v3" stroke="#FF0000" stroke-width="2" x1="73" x2="73" y1="175" y2="226"></line>
-    <line fill="none" id="v4" stroke="#FF0000" stroke-width="2" x1="38" x2="38" y1="175" y2="226"></line>
+    <line fill="none" id="v2" stroke="#FF0000" stroke-width="2" x1="7" x2="106" y1="177" y2="177"></line>
+    <line fill="none" id="v3" stroke="#FF0000" stroke-width="2" x1="74" x2="74" y1="177" y2="226"></line>
+    <line fill="none" id="v4" stroke="#FF0000" stroke-width="2" x1="38" x2="38" y1="177" y2="226"></line>
   </g>
 </svg>

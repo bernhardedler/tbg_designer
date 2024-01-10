@@ -49,6 +49,11 @@ public class Icons {
 		ZaehlerverteilerNapVor.createAll();
 		ZaehlerverteilerNapMitte.createAll();
 		ZaehlerverteilerNapNach.createAll();
+
+		ZaehlerverteilerFA.createAll();
+		ZaehlerverteilerNapVorFA.createAll();
+		ZaehlerverteilerNapMitteFA.createAll();
+		ZaehlerverteilerNapNachFA.createAll();
 	}
 
 	public static void writeIconToFile(String filepath, String iconAsXML) {

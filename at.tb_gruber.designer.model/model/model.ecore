@@ -142,6 +142,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrReserveEinspeisung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrHauptversorgung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="ZP-NR.: "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fernablesung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Energiespeicher" eSuperTypes="#//AnlageMitAttributen">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="energiespeicherfunktion"
