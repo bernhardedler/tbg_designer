@@ -33,6 +33,7 @@ import at.tb_gruber.designer.model.Objekt;
 
 @SuppressWarnings("deprecated")
 public class PlankopfPdfPostProcessor {
+
 	public static final ILog log = Platform.getLog(PlankopfPdfPostProcessor.class);
 
 	public static final PDFont FONT = PDType1Font.HELVETICA;
@@ -63,7 +64,6 @@ public class PlankopfPdfPostProcessor {
 			insertPlankopf(dgrmEP, doc, page);
 			insertLegende1(dgrmEP, doc, page);
 			insertLegende2(dgrmEP, doc, page);
-
 
 			insertRahmen(dgrmEP, doc, page);
 			insertSchnittkante(dgrmEP, doc, page);
@@ -261,7 +261,7 @@ public class PlankopfPdfPostProcessor {
 		}
 
 	}
-	
+
 	private static Bahnhof resolveBahnhof(DiagramEditPart dgrmEP) {
 		for (Object child : dgrmEP.getChildren()) {
 			if (child instanceof AbstractEditPart) {
@@ -312,7 +312,7 @@ public class PlankopfPdfPostProcessor {
 		return new Point(x, y);
 
 	}
-	
+
 	private static void writeExtraSmallTextAt(String text, int x, int y, PDPageContentStream cs) throws IOException {
 		writeTextAt(text, x, y, FONT_SIZE_XSMALL, cs);
 	}
