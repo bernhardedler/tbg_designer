@@ -12,6 +12,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.image.LosslessFactory;
@@ -30,14 +31,20 @@ import org.osgi.framework.FrameworkUtil;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Objekt;
 
+@SuppressWarnings("deprecated")
 public class PlankopfPdfPostProcessor {
 	public static final ILog log = Platform.getLog(PlankopfPdfPostProcessor.class);
 
 	public static final PDFont FONT = PDType1Font.HELVETICA;
+	public static final int FONT_SIZE_XSMALL = 9;
 	public static final int FONT_SIZE_SMALL = 11;
 	public static final int FONT_SIZE_MEDIUM = 16;
 	public static final int FONT_SIZE_LARGE = 20;
 
+	private static final int spacing = 5;
+	private static final int offset = 14;
+	private static final int offsetLochung = offset * 4;
+	
 	public static final Dimension PLANKOPF_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(703),
 			TBGDiagramSVGGenerator.applyScaling(226));
 	public static final Dimension LEGENDE_1_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(348),
@@ -56,6 +63,10 @@ public class PlankopfPdfPostProcessor {
 			insertPlankopf(dgrmEP, doc, page);
 			insertLegende1(dgrmEP, doc, page);
 			insertLegende2(dgrmEP, doc, page);
+
+
+			insertRahmen(dgrmEP, doc, page);
+			insertSchnittkante(dgrmEP, doc, page);
 
 			doc.save(filePath);
 		} finally {
@@ -192,6 +203,65 @@ public class PlankopfPdfPostProcessor {
 
 	}
 
+	private static void insertRahmen(DiagramEditPart dgrmEP, PDDocument doc, PDPage page) {
+		try (PDPageContentStream cs = new PDPageContentStream(doc, page, AppendMode.APPEND, false, true)) {
+			Dimension totalSize = getPdfPageSize(page);
+
+			cs.setLineWidth(1);
+			cs.drawLine(offsetLochung, offset, offsetLochung, (totalSize.height - offset));
+			cs.drawLine(offsetLochung, (totalSize.height - offset), (totalSize.width - offset),
+					(totalSize.height - offset));
+			cs.drawLine((totalSize.width - offset), (totalSize.height - offset), (totalSize.width - offset), offset);
+			cs.drawLine((totalSize.width - offset), offset, offsetLochung, offset);
+
+			PDRectangle rect = page.getMediaBox();
+
+			float width = rect.getWidth() - offsetLochung - offset;
+			float height = rect.getHeight() - 2 * offset;
+
+			/* Pixel to mm */
+			float MM_TO_UNITS = (1 / (10 * 2.54f)) * 72;
+
+			width /= MM_TO_UNITS;
+			height /= MM_TO_UNITS;
+
+			Point positionPlankopf = getTopLeftForPlankopf(page);
+			int groeszeX = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(10);
+			int groeszeY = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(140);
+			writeMediumTextAt("Größe:", groeszeX, groeszeY, cs);
+
+			float size = (width * height) / 1000000f;
+
+			groeszeY = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(160);
+			writeSmallTextAt(String.format("%.2f", size) + " m\u00B2", groeszeX, groeszeY, cs);
+
+			groeszeY = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(190);
+			writeExtraSmallTextAt("(" + (int) width + " x", groeszeX, groeszeY, cs);
+
+			groeszeY = positionPlankopf.y() + PLANKOPF_SIZE.height() - TBGDiagramSVGGenerator.applyScaling(210);
+			writeExtraSmallTextAt((int) height + " mm)", groeszeX, groeszeY, cs);
+
+		} catch (Exception e) {
+			log.error("Fehler beim Drucken des Rahmens", e);
+		}
+
+	}
+	private static void insertSchnittkante(DiagramEditPart dgrmEP, PDDocument doc, PDPage page) {
+		try (PDPageContentStream cs = new PDPageContentStream(doc, page, AppendMode.APPEND, false, true)) {
+			Dimension totalSize = getPdfPageSize(page);
+
+			cs.setLineDashPattern(new float[] { 3, 9 }, 0);
+			cs.drawLine(0, 0, 0, totalSize.height);
+			cs.drawLine(0, totalSize.height, totalSize.width, totalSize.height);
+			cs.drawLine(totalSize.width, totalSize.height, totalSize.width, 0);
+			cs.drawLine(totalSize.width, 0, 0, 0);
+
+		} catch (Exception e) {
+			log.error("Fehler beim Drucken der Schnittkante", e);
+		}
+
+	}
+	
 	private static Bahnhof resolveBahnhof(DiagramEditPart dgrmEP) {
 		for (Object child : dgrmEP.getChildren()) {
 			if (child instanceof AbstractEditPart) {
@@ -218,7 +288,6 @@ public class PlankopfPdfPostProcessor {
 
 	private static Point getTopLeftForPlankopf(PDPage page) {
 		Dimension totalSize = getPdfPageSize(page);
-		int offset = 5;
 
 		int x = totalSize.width() - offset - PLANKOPF_SIZE.width();
 		int y = offset; // wird von unten links nach oben rechts gerechnet
@@ -228,22 +297,24 @@ public class PlankopfPdfPostProcessor {
 
 	private static Point getTopLeftForLegende1(PDPage page) {
 		Dimension totalSize = getPdfPageSize(page);
-		int offset = 5;
 
-		int x = totalSize.width() - offset - LEGENDE_1_SIZE.width() - offset - LEGENDE_2_SIZE.width();
-		int y = offset + PLANKOPF_SIZE.height() + offset; // wird von unten links nach oben rechts gerechnet
+		int x = totalSize.width() - offset - LEGENDE_1_SIZE.width() - spacing - LEGENDE_2_SIZE.width();
+		int y = offset + PLANKOPF_SIZE.height() + spacing; // wird von unten links nach oben rechts gerechnet
 		return new Point(x, y);
 
 	}
 
 	private static Point getTopLeftForLegende2(PDPage page) {
 		Dimension totalSize = getPdfPageSize(page);
-		int offset = 5;
 
 		int x = totalSize.width() - offset - LEGENDE_2_SIZE.width();
-		int y = offset + PLANKOPF_SIZE.height() + offset; // wird von unten links nach oben rechts gerechnet
+		int y = offset + PLANKOPF_SIZE.height() + spacing; // wird von unten links nach oben rechts gerechnet
 		return new Point(x, y);
 
+	}
+	
+	private static void writeExtraSmallTextAt(String text, int x, int y, PDPageContentStream cs) throws IOException {
+		writeTextAt(text, x, y, FONT_SIZE_XSMALL, cs);
 	}
 
 	private static void writeSmallTextAt(String text, int x, int y, PDPageContentStream cs) throws IOException {
