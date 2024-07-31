@@ -15,8 +15,10 @@ import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.ConnectionEditPart;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalEditPart;
+import org.eclipse.gef.LayerConstants;
 import org.eclipse.gef.SnapToGrid;
 import org.eclipse.gef.editparts.AbstractConnectionEditPart;
+import org.eclipse.gef.editparts.LayerManager;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.figures.IExpandableFigure;
@@ -28,7 +30,9 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.sirius.diagram.ui.business.internal.operation.AbstractModelChangeOperation;
 import org.eclipse.sirius.diagram.ui.edit.api.part.AbstractDiagramContainerEditPart;
+import org.eclipse.sirius.diagram.ui.edit.api.part.AbstractDiagramEdgeEditPart;
 import org.eclipse.sirius.diagram.ui.internal.edit.parts.AbstractDNodeContainerCompartmentEditPart;
+import org.eclipse.sirius.diagram.ui.internal.edit.parts.DEdgeEditPart;
 import org.eclipse.sirius.diagram.ui.provider.Messages;
 
 import com.google.common.collect.Iterables;
@@ -151,18 +155,23 @@ public class TBGResetOriginModelChangeOperation extends AbstractModelChangeOpera
 	 */
 	private Rectangle calculateBoundinBox(List<IGraphicalEditPart> editParts) {
 		Rectangle result = null;
-		Dimension spacing = (Dimension) ((EditPart) editParts.get(0)).getViewer().getProperty(SnapToGrid.PROPERTY_GRID_SPACING);		
-		if (containerEditPart instanceof DiagramEditPart) {
-			result = DiagramImageUtils.calculateImageRectangle(editParts, spacing.width, new Dimension(0, 0));
-		} else if (containerEditPart instanceof AbstractDiagramContainerEditPart) {
-			result = calculateBoundinBoxRelativeToContainer(editParts, 0, new Dimension(0, 0));
+		if (!editParts.isEmpty()) {
+			EditPart rootEP = (EditPart) editParts.get(0);
+			Dimension spacing = (Dimension) rootEP.getViewer().getProperty(SnapToGrid.PROPERTY_GRID_SPACING);		
+			if (containerEditPart instanceof DiagramEditPart) {
+				result = calculateBoundinBoxRelativeToContainer(editParts, spacing.width, new Dimension(0, 0));
+			} else if (containerEditPart instanceof AbstractDiagramContainerEditPart) {
+				result = calculateBoundinBoxRelativeToContainer(editParts, 0, new Dimension(0, 0));
+			}
+			if (result == null) {
+				result = new Rectangle();
+			}
+			return result;
 		}
-		if (result == null) {
-			result = new Rectangle();
-		}
-		return result;
+		return new Rectangle();
 	}
-
+	
+	
 	/**
 	 * If an edge source or target has just been hidden, or the edge is hidden by
 	 * user, the edge editPart can still be among the primary EditParts (but not
@@ -229,12 +238,16 @@ public class TBGResetOriginModelChangeOperation extends AbstractModelChangeOpera
 		double maxY = editparts.isEmpty() ? 0 : Double.MIN_VALUE;
 
 		for (IGraphicalEditPart editPart : editparts) {
+			if (editPart instanceof AbstractDiagramEdgeEditPart) {
+				continue;
+			}
 			IFigure figure = editPart.getFigure();
 			Rectangle bounds = null;
-			if (figure instanceof IExpandableFigure)
+			if (figure instanceof IExpandableFigure) {
 				bounds = ((IExpandableFigure) figure).getExtendedBounds().getCopy();
-			else
+			} else {
 				bounds = figure.getBounds().getCopy();
+			}
 
 			minX = Math.min(minX, bounds.preciseX());
 			maxX = Math.max(maxX, bounds.preciseX() + bounds.preciseWidth());
@@ -259,6 +272,8 @@ public class TBGResetOriginModelChangeOperation extends AbstractModelChangeOpera
 		rect.setPreciseY(minY - frameSize);
 		rect.setPreciseWidth(rect.preciseWidth() + 2 * frameSize);
 		rect.setPreciseHeight(rect.preciseHeight() + 2 * frameSize);
+		rect.updateInts();
 		return rect;
 	}
+	
 }

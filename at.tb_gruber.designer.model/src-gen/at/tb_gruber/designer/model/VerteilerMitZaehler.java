@@ -13,6 +13,7 @@ package at.tb_gruber.designer.model;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerMitZaehler#getNrReserveEinspeisung <em>Nr Reserve Einspeisung</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerMitZaehler#getNrHauptversorgung <em>Nr Hauptversorgung</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.VerteilerMitZaehler#isFernablesung <em>Fernablesung</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerMitZaehler()
@@ -64,5 +65,28 @@ public interface VerteilerMitZaehler extends VerteilerBase {
 	 * @generated
 	 */
 	void setNrHauptversorgung(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Fernablesung</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fernablesung</em>' attribute.
+	 * @see #setFernablesung(boolean)
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerMitZaehler_Fernablesung()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isFernablesung();
+
+	/**
+	 * Sets the value of the '{@link at.tb_gruber.designer.model.VerteilerMitZaehler#isFernablesung <em>Fernablesung</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fernablesung</em>' attribute.
+	 * @see #isFernablesung()
+	 * @generated
+	 */
+	void setFernablesung(boolean value);
 
 } // VerteilerMitZaehler

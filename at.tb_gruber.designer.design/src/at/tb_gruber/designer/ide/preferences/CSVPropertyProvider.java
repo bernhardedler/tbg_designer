@@ -1,12 +1,15 @@
 package at.tb_gruber.designer.ide.preferences;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -19,7 +22,6 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
-import at.tb_gruber.designer.design.Activator;
 import at.tb_gruber.designer.model.Externe_Datenquelle;
 
 public class CSVPropertyProvider {
@@ -103,7 +105,7 @@ public class CSVPropertyProvider {
 			/* Content */
 			while ((line = br.readLine()) != null) {
 				String[] values = line.split(";");
-				Optional<ObjektInfo> opt = getForId(values[idxObjektId], Externe_Datenquelle.IMMO);
+				Optional<ObjektInfo> opt = getForId(values[idxObjektId], Externe_Datenquelle.IMMO, true);
 				if (opt.isPresent()) {
 					ObjektInfo objekt = opt.get();
 					objekt.setObjektName(values[idxObjektName]);
@@ -166,7 +168,7 @@ public class CSVPropertyProvider {
 			/* Content */
 			while ((line = br.readLine()) != null) {
 				String[] values = line.split(";");
-				Optional<ObjektInfo> opt = getForId(values[idxObjektId], Externe_Datenquelle.VS);
+				Optional<ObjektInfo> opt = getForId(values[idxObjektId], Externe_Datenquelle.VS, true);
 				if (opt.isPresent()) {
 					ObjektInfo objekt = opt.get();
 					objekt.setObjektName(values[idxObjektName]);
@@ -236,10 +238,10 @@ public class CSVPropertyProvider {
 				String[] values = line.split(";");
 				String objektName = values[idxStrNr] + "_" + values[idxGebaeudeBezeichnung];
 				String strasseUndHausnummer = values[idxStrasse] + " " + values[idxHausnummer];
-				Optional<ObjektInfo> opt = getForId(values[idxGebNr], Externe_Datenquelle.GEBAEUDE);
+				Optional<ObjektInfo> opt = getForId(values[idxGebNr], Externe_Datenquelle.GEBAEUDE, true);
 				String gebaeudeart = "Verkehrsstation";
 				if (idxGebaeudeArt >= 0) {
-					 gebaeudeart = values[idxGebaeudeArt];
+					gebaeudeart = values[idxGebaeudeArt];
 				}
 				if (opt.isPresent()) {
 					ObjektInfo objekt = opt.get();
@@ -253,9 +255,9 @@ public class CSVPropertyProvider {
 					objekt.setGpsLat(values[idxGpsLat]);
 					objekt.setGebaeudeArt(gebaeudeart);
 				} else {
-					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, gebaeudeart,
-							"AT", values[idxPlz], values[idxOrt], strasseUndHausnummer, values[idxGpsLon],
-							values[idxGpsLat], Externe_Datenquelle.GEBAEUDE));
+					objektInfos.add(new ObjektInfo(values[idxGebNr], values[idxEntNr], objektName, gebaeudeart, "AT",
+							values[idxPlz], values[idxOrt], strasseUndHausnummer, values[idxGpsLon], values[idxGpsLat],
+							Externe_Datenquelle.GEBAEUDE));
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -267,7 +269,7 @@ public class CSVPropertyProvider {
 	}
 
 	public String getAdresseForId(String id, Externe_Datenquelle quelle) {
-		Optional<ObjektInfo> objektOpt = getForId(id, quelle);
+		Optional<ObjektInfo> objektOpt = getForId(id, quelle, false);
 		if (objektOpt.isPresent()) {
 			ObjektInfo objekt = objektOpt.get();
 			return Stream.of(objekt.getLand(), objekt.getPlz(), objekt.getOrt(), objekt.getStrasse())
@@ -278,7 +280,7 @@ public class CSVPropertyProvider {
 	}
 
 	public String getObjektNameForId(String id, Externe_Datenquelle quelle) {
-		Optional<ObjektInfo> objektOpt = getForId(id, quelle);
+		Optional<ObjektInfo> objektOpt = getForId(id, quelle, false);
 		if (objektOpt.isPresent()) {
 			ObjektInfo objekt = objektOpt.get();
 			return objekt.getObjektName();
@@ -288,7 +290,7 @@ public class CSVPropertyProvider {
 	}
 
 	public String getGebaeudeartForId(String id, Externe_Datenquelle quelle) {
-		Optional<ObjektInfo> objektOpt = getForId(id, quelle);
+		Optional<ObjektInfo> objektOpt = getForId(id, quelle, false);
 		if (objektOpt.isPresent()) {
 			ObjektInfo objekt = objektOpt.get();
 			return objekt.getGebaeudeArt();
@@ -298,7 +300,7 @@ public class CSVPropertyProvider {
 	}
 
 	public String getGPSStandortForId(String id, Externe_Datenquelle quelle) {
-		Optional<ObjektInfo> objektOpt = getForId(id, quelle);
+		Optional<ObjektInfo> objektOpt = getForId(id, quelle, false);
 		if (objektOpt.isPresent()) {
 			ObjektInfo objekt = objektOpt.get();
 			return objekt.getGpsLon() + " " + objekt.getGpsLat();
@@ -315,15 +317,16 @@ public class CSVPropertyProvider {
 	 * Falls doppelte Einträge aus den CSVs kommen, können sie über die quelle
 	 * gefiltert werden. sonst geht das Duplikat-Objekt zurück
 	 */
-	private Optional<ObjektInfo> getForId(String id, Externe_Datenquelle quelle) {
+	public Optional<ObjektInfo> getForId(String id, Externe_Datenquelle quelle, boolean isForImport) {
 		// Wenn eine Quelle angegeben ist, muss sie übereinstimmen, wenn undefined, dann
 		// egal
 		List<ObjektInfo> collect = objektInfos.parallelStream()
-				.filter(obj -> obj.getObjektId().equals(id)
+				.filter(obj -> id.equals(obj.getObjektId())
 						&& (Externe_Datenquelle.UNDEFINED.equals(quelle) ? true : obj.quelle.equals(quelle)))
+				.sorted(Comparator.comparing(ObjektInfo::getObjektId))
 				.collect(Collectors.toList());
 
-		if (collect.isEmpty()) {
+		if (!isForImport && collect.isEmpty()) {
 			if (Externe_Datenquelle.GEBAEUDE.equals(quelle)) { // bei gebäuden notfalls über sekundäre Id suchen
 				List<ObjektInfo> collect2 = objektInfos.parallelStream().filter(obj -> id.equals(obj.getObjektId2()))
 						.collect(Collectors.toList());
@@ -337,7 +340,9 @@ public class CSVPropertyProvider {
 			}
 		}
 
-		if (collect.size() == 1) { // wenn genau eins, super
+		if (collect.isEmpty()) {
+			return Optional.empty();
+		} else if (collect.size() == 1) { // wenn genau eins, super
 			return Optional.of(collect.get(0));
 		} else { // wenn mehrere, dann muss er die quelle wählen
 			if (Externe_Datenquelle.UNDEFINED.equals(quelle)) {
@@ -350,7 +355,7 @@ public class CSVPropertyProvider {
 
 	public static class ObjektInfo {
 		private static String duplicateWarning = "Eintrag doppelt vorhanden, bitte Datenquelle wählen";
-		private static ObjektInfo duplicate = new ObjektInfo(duplicateWarning, duplicateWarning, duplicateWarning,
+		public static ObjektInfo duplicate = new ObjektInfo(duplicateWarning, duplicateWarning, duplicateWarning,
 				duplicateWarning, duplicateWarning, duplicateWarning, duplicateWarning, duplicateWarning,
 				duplicateWarning, duplicateWarning, null);
 
@@ -470,6 +475,13 @@ public class CSVPropertyProvider {
 			this.gpsLat = gpsLat;
 		}
 
+		@Override
+		public String toString() {
+			return "ObjektInfo [objektId=" + objektId + ", objektId2=" + objektId2 + ", objektName=" + objektName
+					+ ", gebaeudeArt=" + gebaeudeArt + ", land=" + land + ", plz=" + plz + ", ort=" + ort + ", strasse="
+					+ strasse + ", gpsLon=" + gpsLon + ", gpsLat=" + gpsLat + ", quelle=" + quelle + "]";
+		}
+
 	}
 
 	private void loadBetreiberDatei() {
@@ -536,5 +548,22 @@ public class CSVPropertyProvider {
 
 	public List<String> getEigentuemer() {
 		return eigentuemerList;
+	}
+
+	public void debugAll() {
+		File f = new File("debug_csv.log");
+		try (FileWriter fileWriter = new FileWriter(f)) {
+			objektInfos.stream().sorted((o1, o2) -> o1.objektId.compareTo(o2.objektId)).map(ObjektInfo::toString)
+					.forEach(t -> {
+						try {
+							fileWriter.write(t);
+							fileWriter.write(System.lineSeparator());
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					});
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

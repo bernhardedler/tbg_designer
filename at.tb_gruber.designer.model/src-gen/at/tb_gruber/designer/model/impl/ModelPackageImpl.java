@@ -1052,6 +1052,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getVerteilerMitZaehler_Fernablesung() {
+		return (EAttribute) verteilerMitZaehlerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEnergiespeicher() {
 		return energiespeicherEClass;
 	}
@@ -1594,6 +1604,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		verteilerMitZaehlerEClass = createEClass(VERTEILER_MIT_ZAEHLER);
 		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__NR_RESERVE_EINSPEISUNG);
 		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__NR_HAUPTVERSORGUNG);
+		createEAttribute(verteilerMitZaehlerEClass, VERTEILER_MIT_ZAEHLER__FERNABLESUNG);
 
 		energiespeicherEClass = createEClass(ENERGIESPEICHER);
 		createEAttribute(energiespeicherEClass, ENERGIESPEICHER__ENERGIESPEICHERFUNKTION);
@@ -1881,6 +1892,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getVerteilerMitZaehler_NrHauptversorgung(), ecorePackage.getEString(), "nrHauptversorgung",
 				"ZP-NR.: ", 0, 1, VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVerteilerMitZaehler_Fernablesung(), ecorePackage.getEBoolean(), "fernablesung", "false", 0, 1,
+				VerteilerMitZaehler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(energiespeicherEClass, Energiespeicher.class, "Energiespeicher", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

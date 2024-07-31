@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Designer" uid="at.tb_gruber.designer" id="at.tb_gruber.designer.product.product" application="org.eclipse.ui.ide.workbench" version="7.2.3" useFeatures="true" includeLaunchers="true">
+<product name="Designer" uid="at.tb_gruber.designer" id="at.tb_gruber.designer.product.product" application="org.eclipse.ui.ide.workbench" version="7.3.2" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/at.tb_gruber.designer.product/images/128x128.png"/>
@@ -44,9 +44,11 @@
       </win>
    </launcher>
 
+
    <vm>
       <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11</windows>
    </vm>
+
 
    <plugins>
       <plugin id="at.tb_gruber.designer.feature"/>

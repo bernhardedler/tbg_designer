@@ -325,7 +325,15 @@ public class DiagramServices {
 		}
 	}
 
-	public List<String> getAllBetreiber(EObject self) {
+	public Boolean isFernablesung(EObject self) {
+		if (self instanceof VerteilerMitZaehler) {
+			return ((VerteilerMitZaehler) self).isFernablesung();
+		} else {
+			return false;
+		}
+	}
+
+		public List<String> getAllBetreiber(EObject self) {
 		return props.getBetreiber();
 	}
 

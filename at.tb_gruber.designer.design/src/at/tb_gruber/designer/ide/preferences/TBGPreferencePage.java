@@ -1,20 +1,11 @@
 package at.tb_gruber.designer.ide.preferences;
 
 import org.eclipse.core.runtime.preferences.InstanceScope;
-import org.eclipse.jface.dialogs.PopupDialog;
+import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.FileFieldEditor;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Rectangle;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.preferences.ScopedPreferenceStore;
 
 public class TBGPreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
@@ -26,7 +17,9 @@ public class TBGPreferencePage extends FieldEditorPreferencePage implements IWor
 	public static final String PROPERTY_ID_GEBAEUDE_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.gebaeude";
 	public static final String PROPERTY_ID_BETREIBER_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.betreiber";
 	public static final String PROPERTY_ID_EIGENTUEMER_DATEI = "at.tb_gruber.designer.ide.preferences.csvfile.eigentuemer";
-	
+
+	public static final String AUTO_RESET_ORIGIN = "at.tb_gruber.designer.ide.preferences.diagram.autoresetorigin";
+	public static final String DEBUG_LOG = "at.tb_gruber.designer.ide.preferences.debug.log";
 	public static final String DASH_LENGTH = "at.tb_gruber.designer.ide.preferences.diagram.dash.length";
 	
 
@@ -55,6 +48,12 @@ public class TBGPreferencePage extends FieldEditorPreferencePage implements IWor
 				getFieldEditorParent());
 		eigentuemerDatei.setFileExtensions(new String[] { "*.csv" });
 		addField(eigentuemerDatei);
+		BooleanFieldEditor resetOrigin = new BooleanFieldEditor(AUTO_RESET_ORIGIN, "&Ursprung beim öffnen neu setzen:",
+				getFieldEditorParent());
+		addField(resetOrigin);
+		BooleanFieldEditor debugLog = new BooleanFieldEditor(DEBUG_LOG, "&Debug Log:",
+				getFieldEditorParent());
+		addField(debugLog);
 	}
 
 	@Override
