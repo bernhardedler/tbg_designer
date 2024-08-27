@@ -2089,13 +2089,22 @@ public interface ModelPackage extends EPackage {
 	int VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Energietechnikanlage</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Verteiler Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEILER_CONTAINER_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 2;
+	int VERTEILER_CONTAINER_FEATURE_COUNT = ANLAGE_MIT_ATTRIBUTEN_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Verteiler Container</em>' class.
@@ -3487,6 +3496,17 @@ public interface ModelPackage extends EPackage {
 	EReference getVerteilerContainer_Netzanschlusspunkt();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link at.tb_gruber.designer.model.VerteilerContainer#getEnergietechnikanlage <em>Energietechnikanlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Energietechnikanlage</em>'.
+	 * @see at.tb_gruber.designer.model.VerteilerContainer#getEnergietechnikanlage()
+	 * @see #getVerteilerContainer()
+	 * @generated
+	 */
+	EReference getVerteilerContainer_Energietechnikanlage();
+
+	/**
 	 * Returns the meta object for class '{@link at.tb_gruber.designer.model.Betreiber <em>Betreiber</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4529,6 +4549,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT = eINSTANCE.getVerteilerContainer_Netzanschlusspunkt();
+
+		/**
+		 * The meta object literal for the '<em><b>Energietechnikanlage</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE = eINSTANCE.getVerteilerContainer_Energietechnikanlage();
 
 		/**
 		 * The meta object literal for the '{@link at.tb_gruber.designer.model.impl.BetreiberImpl <em>Betreiber</em>}' class.

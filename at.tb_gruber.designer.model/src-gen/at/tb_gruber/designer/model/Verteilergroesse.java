@@ -68,49 +68,49 @@ public enum Verteilergroesse implements Enumerator {
 	 */
 	XXL(4, "XXL", "XXL"),
 	/**
-	* The '<em><b>3XL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>3XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #_3XL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #_3XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	_3XL(5, "_3XL", "_3XL"),
 	/**
-	* The '<em><b>4XL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>4XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #_4XL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #_4XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	_4XL(6, "_4XL", "_4XL"),
 	/**
-	* The '<em><b>5XL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>5XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #_5XL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #_5XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	_5XL(7, "_5XL", "_5XL"),
 	/**
-	* The '<em><b>6XL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>6XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #_6XL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #_6XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	_6XL(8, "_6XL", "_6XL"),
 	/**
-	* The '<em><b>7XL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>7XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #_7XL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #_7XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	_7XL(9, "_7XL", "_7XL");
 
 	/**

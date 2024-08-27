@@ -1152,6 +1152,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getVerteilerContainer_Energietechnikanlage() {
+		return (EReference) verteilerContainerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getBetreiber() {
 		return betreiberEClass;
 	}
@@ -1616,6 +1626,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		verteilerContainerEClass = createEClass(VERTEILER_CONTAINER);
 		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__VERTEILER);
 		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
+		createEReference(verteilerContainerEClass, VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE);
 
 		betreiberEClass = createEClass(BETREIBER);
 		createEAttribute(betreiberEClass, BETREIBER__NAME);
@@ -1922,6 +1933,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEReference(getVerteilerContainer_Netzanschlusspunkt(), this.getNetzanschlusspunkt(), null,
 				"netzanschlusspunkt", null, 0, 1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVerteilerContainer_Energietechnikanlage(), this.getEnergietechnikanlage(), null,
+				"energietechnikanlage", null, 0, -1, VerteilerContainer.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(betreiberEClass, Betreiber.class, "Betreiber", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -2,6 +2,7 @@
  */
 package at.tb_gruber.designer.model.impl;
 
+import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.ModelPackage;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
 import at.tb_gruber.designer.model.VerteilerBase;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getVerteiler <em>Verteiler</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.impl.VerteilerContainerImpl#getEnergietechnikanlage <em>Energietechnikanlage</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,6 +57,16 @@ public class VerteilerContainerImpl extends AnlageMitAttributenImpl implements V
 	 * @ordered
 	 */
 	protected Netzanschlusspunkt netzanschlusspunkt;
+
+	/**
+	 * The cached value of the '{@link #getEnergietechnikanlage() <em>Energietechnikanlage</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnergietechnikanlage()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Energietechnikanlage> energietechnikanlage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,12 +160,28 @@ public class VerteilerContainerImpl extends AnlageMitAttributenImpl implements V
 	 * @generated
 	 */
 	@Override
+	public EList<Energietechnikanlage> getEnergietechnikanlage() {
+		if (energietechnikanlage == null) {
+			energietechnikanlage = new EObjectContainmentEList<Energietechnikanlage>(Energietechnikanlage.class, this,
+					ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE);
+		}
+		return energietechnikanlage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 			return ((InternalEList<?>) getVerteiler()).basicRemove(otherEnd, msgs);
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			return basicSetNetzanschlusspunkt(null, msgs);
+		case ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE:
+			return ((InternalEList<?>) getEnergietechnikanlage()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -170,6 +198,8 @@ public class VerteilerContainerImpl extends AnlageMitAttributenImpl implements V
 			return getVerteiler();
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			return getNetzanschlusspunkt();
+		case ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE:
+			return getEnergietechnikanlage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,6 +220,10 @@ public class VerteilerContainerImpl extends AnlageMitAttributenImpl implements V
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) newValue);
 			return;
+		case ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE:
+			getEnergietechnikanlage().clear();
+			getEnergietechnikanlage().addAll((Collection<? extends Energietechnikanlage>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -208,6 +242,9 @@ public class VerteilerContainerImpl extends AnlageMitAttributenImpl implements V
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			setNetzanschlusspunkt((Netzanschlusspunkt) null);
 			return;
+		case ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE:
+			getEnergietechnikanlage().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -224,6 +261,8 @@ public class VerteilerContainerImpl extends AnlageMitAttributenImpl implements V
 			return verteiler != null && !verteiler.isEmpty();
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
 			return netzanschlusspunkt != null;
+		case ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE:
+			return energietechnikanlage != null && !energietechnikanlage.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

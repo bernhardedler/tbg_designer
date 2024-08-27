@@ -159,6 +159,8 @@
         eType="#//VerteilerBase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="netzanschlusspunkt" eType="#//Netzanschlusspunkt"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energietechnikanlage" upperBound="-1"
+        eType="#//Energietechnikanlage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NapPosition">
     <eLiterals name="DAVOR" literal="DAVOR"/>

@@ -61,6 +61,7 @@ public class VerteilerContainerItemProvider extends AnlageMitAttributenItemProvi
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__VERTEILER);
 			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT);
+			childrenFeatures.add(ModelPackage.Literals.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE);
 		}
 		return childrenFeatures;
 	}
@@ -126,6 +127,7 @@ public class VerteilerContainerItemProvider extends AnlageMitAttributenItemProvi
 		switch (notification.getFeatureID(VerteilerContainer.class)) {
 		case ModelPackage.VERTEILER_CONTAINER__VERTEILER:
 		case ModelPackage.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT:
+		case ModelPackage.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -151,6 +153,9 @@ public class VerteilerContainerItemProvider extends AnlageMitAttributenItemProvi
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__NETZANSCHLUSSPUNKT,
 				ModelFactory.eINSTANCE.createNetzanschlusspunkt()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.VERTEILER_CONTAINER__ENERGIETECHNIKANLAGE,
+				ModelFactory.eINSTANCE.createEnergietechnikanlage()));
 	}
 
 }

@@ -194,6 +194,7 @@
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/energietechnikanlage"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Betreiber">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Betreiber/name"/>
