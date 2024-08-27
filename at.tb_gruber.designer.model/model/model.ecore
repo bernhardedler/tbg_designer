@@ -235,5 +235,10 @@
     <eLiterals name="L" value="2" literal="L"/>
     <eLiterals name="XL" value="3" literal="XL"/>
     <eLiterals name="XXL" value="4" literal="XXL"/>
+    <eLiterals name="_3XL" value="5" literal="_3XL"/>
+    <eLiterals name="_4XL" value="6" literal="_4XL"/>
+    <eLiterals name="_5XL" value="7" literal="_5XL"/>
+    <eLiterals name="_6XL" value="8" literal="_6XL"/>
+    <eLiterals name="_7XL" value="9" literal="_7XL"/>
   </eClassifiers>
 </ecore:EPackage>

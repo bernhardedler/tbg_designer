@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
 <tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample1" projektname="Testprojekt">
   <objekt name="3045310_BF. KLAUS AUFNAHMEGEB&#xc4;UDE U. BM UNTERKUNFT" objektId="647" gpsstandort="14,15538062 47,83299564" externeQuelle="gebaeude" ort_adresse="AT 4564 KLAUS AN DER PYHRNBAHN KLAUS 77" gebaeudeart="Betriebsgeb&#xe4;ude">
-    <anlage xsi:type="tbg:Versorgungsknoten" anlagennummer="VK 01" groesse="XXL">
+    <anlage xsi:type="tbg:VerteilerContainer">
       <betreiber name="Betreiber"/>
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" groesse="_7XL">
+        <details/>
+      </verteiler>
     </anlage>
     <eigentuemer name="Eigent&#xfc;mer"/>
   </objekt>

@@ -98,6 +98,11 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/L"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/XL"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/XXL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_3XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_4XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_5XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_6XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_7XL"/>
     </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>

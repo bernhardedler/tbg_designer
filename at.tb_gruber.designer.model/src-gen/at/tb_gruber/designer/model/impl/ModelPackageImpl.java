@@ -2070,6 +2070,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.L);
 		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.XL);
 		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse.XXL);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse._3XL);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse._4XL);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse._5XL);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse._6XL);
+		addEEnumLiteral(verteilergroesseEEnum, Verteilergroesse._7XL);
 
 		// Create resource
 		createResource(eNS_URI);
