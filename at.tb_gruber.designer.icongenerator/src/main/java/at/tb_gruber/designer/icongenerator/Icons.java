@@ -36,24 +36,24 @@ public class Icons {
 		Trafo.createAll();
 		Umrichter.createAll();
 
-		Versorgungsknoten.createAll();
-		VersorgungsknotenNapVor.createAll();
-		VersorgungsknotenNapNach.createAll();
+		new IconWithSize("versorgungsknoten").createAll();
+		new IconWithSize("versorgungsknoten").napVor().createAll();
+		new IconWithSize("versorgungsknoten").napNach().createAll();
 
-		Verteiler.createAll();
-		VerteilerNapVor.createAll();
-		VerteilerNapMitte.createAll();
-		VerteilerNapNach.createAll();
-
-		Zaehlerverteiler.createAll();
-		ZaehlerverteilerNapVor.createAll();
-		ZaehlerverteilerNapMitte.createAll();
-		ZaehlerverteilerNapNach.createAll();
-
-		ZaehlerverteilerFA.createAll();
-		ZaehlerverteilerNapVorFA.createAll();
-		ZaehlerverteilerNapMitteFA.createAll();
-		ZaehlerverteilerNapNachFA.createAll();
+		new IconWithSize("verteiler").createAll();
+		new IconWithSize("verteiler").napVor().createAll();
+		new IconWithSize("verteiler").napMitte().createAll();
+		new IconWithSize("verteiler").napNach().createAll();
+		
+		new IconWithSize("zaehlerverteiler").createAll();
+		new IconWithSize("zaehlerverteiler").napVor().createAll();
+		new IconWithSize("zaehlerverteiler").napMitte().createAll();
+		new IconWithSize("zaehlerverteiler").napNach().createAll();
+		
+		new IconWithSize("zaehlerverteiler").fa().createAll();
+		new IconWithSize("zaehlerverteiler").fa().napVor().createAll();
+		new IconWithSize("zaehlerverteiler").fa().napMitte().createAll();
+		new IconWithSize("zaehlerverteiler").fa().napNach().createAll();
 	}
 
 	public static void writeIconToFile(String filepath, String iconAsXML) {

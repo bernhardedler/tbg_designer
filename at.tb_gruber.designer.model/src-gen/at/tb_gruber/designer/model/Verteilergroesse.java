@@ -66,7 +66,52 @@ public enum Verteilergroesse implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	XXL(4, "XXL", "XXL");
+	XXL(4, "XXL", "XXL"),
+	/**
+	 * The '<em><b>3XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #_3XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_3XL(5, "_3XL", "_3XL"),
+	/**
+	 * The '<em><b>4XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #_4XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_4XL(6, "_4XL", "_4XL"),
+	/**
+	 * The '<em><b>5XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #_5XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_5XL(7, "_5XL", "_5XL"),
+	/**
+	 * The '<em><b>6XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #_6XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_6XL(8, "_6XL", "_6XL"),
+	/**
+	 * The '<em><b>7XL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #_7XL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_7XL(9, "_7XL", "_7XL");
 
 	/**
 	 * The '<em><b>S</b></em>' literal value.
@@ -124,12 +169,68 @@ public enum Verteilergroesse implements Enumerator {
 	public static final int XXL_VALUE = 4;
 
 	/**
+	 * The '<em><b>3XL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_3XL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _3XL_VALUE = 5;
+
+	/**
+	 * The '<em><b>4XL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_4XL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _4XL_VALUE = 6;
+
+	/**
+	 * The '<em><b>5XL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_5XL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _5XL_VALUE = 7;
+
+	/**
+	 * The '<em><b>6XL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_6XL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _6XL_VALUE = 8;
+
+	/**
+	 * The '<em><b>7XL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_7XL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _7XL_VALUE = 9;
+
+	/**
 	 * An array of all the '<em><b>Verteilergroesse</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Verteilergroesse[] VALUES_ARRAY = new Verteilergroesse[] { S, M, L, XL, XXL, };
+	private static final Verteilergroesse[] VALUES_ARRAY = new Verteilergroesse[] { S, M, L, XL, XXL, _3XL, _4XL, _5XL,
+			_6XL, _7XL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Verteilergroesse</b></em>' enumerators.
@@ -195,6 +296,16 @@ public enum Verteilergroesse implements Enumerator {
 			return XL;
 		case XXL_VALUE:
 			return XXL;
+		case _3XL_VALUE:
+			return _3XL;
+		case _4XL_VALUE:
+			return _4XL;
+		case _5XL_VALUE:
+			return _5XL;
+		case _6XL_VALUE:
+			return _6XL;
+		case _7XL_VALUE:
+			return _7XL;
 		}
 		return null;
 	}

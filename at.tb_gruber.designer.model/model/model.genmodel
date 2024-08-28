@@ -98,6 +98,11 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/L"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/XL"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/XXL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_3XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_4XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_5XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_6XL"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Verteilergroesse/_7XL"/>
     </genEnums>
     <genClasses ecoreClass="model.ecore#//Bahnhof">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bahnhof/name"/>
@@ -189,6 +194,7 @@
     <genClasses ecoreClass="model.ecore#//VerteilerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/verteiler"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/netzanschlusspunkt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//VerteilerContainer/energietechnikanlage"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Betreiber">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Betreiber/name"/>

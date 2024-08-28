@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerContainer#getVerteiler <em>Verteiler</em>}</li>
  *   <li>{@link at.tb_gruber.designer.model.VerteilerContainer#getNetzanschlusspunkt <em>Netzanschlusspunkt</em>}</li>
+ *   <li>{@link at.tb_gruber.designer.model.VerteilerContainer#getEnergietechnikanlage <em>Energietechnikanlage</em>}</li>
  * </ul>
  *
  * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerContainer()
@@ -55,5 +56,17 @@ public interface VerteilerContainer extends AnlageMitAttributen {
 	 * @generated
 	 */
 	void setNetzanschlusspunkt(Netzanschlusspunkt value);
+
+	/**
+	 * Returns the value of the '<em><b>Energietechnikanlage</b></em>' containment reference list.
+	 * The list contents are of type {@link at.tb_gruber.designer.model.Energietechnikanlage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Energietechnikanlage</em>' containment reference list.
+	 * @see at.tb_gruber.designer.model.ModelPackage#getVerteilerContainer_Energietechnikanlage()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Energietechnikanlage> getEnergietechnikanlage();
 
 } // VerteilerContainer

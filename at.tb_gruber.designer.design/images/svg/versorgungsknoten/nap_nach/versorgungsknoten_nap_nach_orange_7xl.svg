@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="226" width="1130">
+ <g>
+  <title>background</title>
+  <rect fill="#fff" height="226" id="canvas_background" width="1130" x="0" y="0"></rect>
+ </g>
+ <g>
+  <title>Form</title>
+  <rect fill="#fff" height="113" id="svg_3" stroke="#FF7F00" stroke-width="2" width="1128" x="1" y="1"></rect>
+  <line fill="none" id="svg_4" stroke="#FF7F00" stroke-width="2" x1="0" x2="1128" y1="56" y2="56"></line>
+  <line fill="none" id="svg_5" stroke="#FF7F00" stroke-width="2" x1="371" x2="371" y1="56" y2="115"></line>
+  <line fill="none" id="svg_10" stroke="#FF7F00" stroke-width="2" x1="744" x2="744" y1="56" y2="115"></line>
+ </g>
+ <g>
+  <title>NAP</title>
+  <ellipse cx="569" cy="114" fill="none" id="svg21" rx="25" ry="25" stroke="#000" stroke-width="2"></ellipse>
+  <line fill="none" id="svg22" stroke="#000" stroke-width="2" x1="526" x2="613" y1="114" y2="114"></line>
+  <line fill="none" id="svg23" stroke="#000" stroke-width="2" x1="569" x2="569" y1="154" y2="114"></line>
+ </g>
+</svg>

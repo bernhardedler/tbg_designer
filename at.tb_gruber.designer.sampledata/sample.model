@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tbg="http://www.tb-gruber.at/model" name="sample1" projektname="Testprojekt">
+<tbg:Bahnhof xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tbg="http://www.tb-gruber.at/model" name="sample1" projektname="Testprojekt">
   <objekt name="3045310_BF. KLAUS AUFNAHMEGEB&#xc4;UDE U. BM UNTERKUNFT" objektId="647" gpsstandort="14,15538062 47,83299564" externeQuelle="gebaeude" ort_adresse="AT 4564 KLAUS AN DER PYHRNBAHN KLAUS 77" gebaeudeart="Betriebsgeb&#xe4;ude">
-    <eigentuemer name="Eigent&#xfc;mer"/>
+    <anlage xsi:type="tbg:VerteilerContainer">
+      <betreiber name="Betreiber"/>
+      <energietechnikanlage>
+        <betreiber name="Betreiber"/>
+        <verbindungNach ziel="//@objekt.0/@anlage.0/@energietechnikanlage.1" ursprung="//@objekt.0/@anlage.0/@energietechnikanlage.0"/>
+      </energietechnikanlage>
+      <energietechnikanlage versorgtVon="//@objekt.0/@anlage.0/@energietechnikanlage.0/@verbindungNach.0">
+        <betreiber name="Betreiber"/>
+      </energietechnikanlage>
+    </anlage>
+    <anlage xsi:type="tbg:Energietechnikanlage" anlagennummer="ET 01">
+      <betreiber name="Betreiber"/>
+    </anlage>
   </objekt>
 </tbg:Bahnhof>
