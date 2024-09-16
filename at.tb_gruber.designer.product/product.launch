@@ -25,7 +25,7 @@
     <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -perspective org.eclipse.sirius.ui.tools.perspective.modeling --illegal-access=info"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dsun.java2d.dpiaware=true&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=/home/bernhard/Dokumente/Entwicklung/tb_gruber/git/tbg_designer/at.tb_gruber.designer.sampledata/csv/immo.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.vs=/home/bernhard/Dokumente/Entwicklung/tb_gruber/git/tbg_designer/at.tb_gruber.designer.sampledata/csv/vs.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.gebaeude=/home/bernhard/Dokumente/Entwicklung/tb_gruber/git/tbg_designer/at.tb_gruber.designer.sampledata/csv/gebaeude.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.betreiber=/home/bernhard/Dokumente/Entwicklung/tb_gruber/git/tbg_designer/at.tb_gruber.designer.sampledata/csv/betreiber.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.eigentuemer=/home/bernhard/Dokumente/Entwicklung/tb_gruber/git/tbg_designer/at.tb_gruber.designer.sampledata/csv/eigentuemer.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.diagram.dash.length=10"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dsun.java2d.dpiaware=true&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\immo.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.vs=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\vs.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.gebaeude=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\gebaeude.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.betreiber=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\betreiber.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.csvfile.eigentuemer=C:\\Development\\tb_gruber\\git\\tbg_designer\\at.tb_gruber.designer.sampledata\\csv\\eigentuemer.csv&#13;&#10;-Dat.tb_gruber.designer.ide.preferences.diagram.dash.length=10"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="at.tb_gruber.designer.product.product"/>
     <stringAttribute key="productFile" value="\at.tb_gruber.designer.product\designer.product"/>
@@ -127,6 +127,7 @@
         <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
         <setEntry value="org.apache.felix.gogo.shell@default:default"/>
         <setEntry value="org.apache.felix.scr@2:true"/>
+        <setEntry value="org.apache.httpcomponents.httpclient.win@default:default"/>
         <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
         <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
         <setEntry value="org.apache.jasper.glassfish@default:default"/>
@@ -150,6 +151,7 @@
         <setEntry value="org.eclipse.acceleo.ui.interpreter@default:default"/>
         <setEntry value="org.eclipse.ant.core@default:default"/>
         <setEntry value="org.eclipse.compare.core@default:default"/>
+        <setEntry value="org.eclipse.compare.win32@default:default"/>
         <setEntry value="org.eclipse.compare@default:default"/>
         <setEntry value="org.eclipse.core.commands@default:default"/>
         <setEntry value="org.eclipse.core.contenttype@default:default"/>
@@ -160,9 +162,12 @@
         <setEntry value="org.eclipse.core.expressions@default:default"/>
         <setEntry value="org.eclipse.core.externaltools@default:default"/>
         <setEntry value="org.eclipse.core.filebuffers@default:default"/>
+        <setEntry value="org.eclipse.core.filesystem.win32.x86_64@default:false"/>
         <setEntry value="org.eclipse.core.filesystem@default:default"/>
         <setEntry value="org.eclipse.core.jobs@default:default"/>
+        <setEntry value="org.eclipse.core.net.win32.x86_64@default:false"/>
         <setEntry value="org.eclipse.core.net@default:default"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64@default:false"/>
         <setEntry value="org.eclipse.core.resources@default:default"/>
         <setEntry value="org.eclipse.core.runtime@default:true"/>
         <setEntry value="org.eclipse.core.variables@default:default"/>
@@ -186,7 +191,7 @@
         <setEntry value="org.eclipse.e4.ui.ide@default:default"/>
         <setEntry value="org.eclipse.e4.ui.model.workbench@default:default"/>
         <setEntry value="org.eclipse.e4.ui.services@default:default"/>
-        <setEntry value="org.eclipse.e4.ui.swt.gtk@default:false"/>
+        <setEntry value="org.eclipse.e4.ui.swt.win32@default:false"/>
         <setEntry value="org.eclipse.e4.ui.widgets@default:default"/>
         <setEntry value="org.eclipse.e4.ui.workbench.addons.swt@default:default"/>
         <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt@default:default"/>
@@ -195,6 +200,7 @@
         <setEntry value="org.eclipse.e4.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.ecf.filetransfer@default:default"/>
         <setEntry value="org.eclipse.ecf.identity@default:default"/>
+        <setEntry value="org.eclipse.ecf.provider.filetransfer.httpclient45.win32@default:default"/>
         <setEntry value="org.eclipse.ecf.provider.filetransfer.httpclient45@default:default"/>
         <setEntry value="org.eclipse.ecf.provider.filetransfer.ssl@default:false"/>
         <setEntry value="org.eclipse.ecf.provider.filetransfer@default:default"/>
@@ -268,6 +274,7 @@
         <setEntry value="org.eclipse.equinox.http.servlet@default:default"/>
         <setEntry value="org.eclipse.equinox.jsp.jasper.registry@default:default"/>
         <setEntry value="org.eclipse.equinox.jsp.jasper@default:default"/>
+        <setEntry value="org.eclipse.equinox.launcher.win32.win32.x86_64@default:false"/>
         <setEntry value="org.eclipse.equinox.launcher@default:default"/>
         <setEntry value="org.eclipse.equinox.p2.artifact.repository@default:default"/>
         <setEntry value="org.eclipse.equinox.p2.console@default:default"/>
@@ -299,6 +306,7 @@
         <setEntry value="org.eclipse.equinox.preferences@default:default"/>
         <setEntry value="org.eclipse.equinox.registry@default:default"/>
         <setEntry value="org.eclipse.equinox.security.ui@default:default"/>
+        <setEntry value="org.eclipse.equinox.security.win32.x86_64@default:false"/>
         <setEntry value="org.eclipse.equinox.security@default:default"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator.manipulator@default:default"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
@@ -439,8 +447,8 @@
         <setEntry value="org.eclipse.sirius.ui.properties@default:default"/>
         <setEntry value="org.eclipse.sirius.ui@default:default"/>
         <setEntry value="org.eclipse.sirius@default:default"/>
-        <setEntry value="org.eclipse.swt.browser.chromium.gtk.linux.x86_64@default:false"/>
-        <setEntry value="org.eclipse.swt.gtk.linux.x86_64@default:false"/>
+        <setEntry value="org.eclipse.swt.browser.chromium.win32.win32.x86_64@default:false"/>
+        <setEntry value="org.eclipse.swt.win32.win32.x86_64@default:false"/>
         <setEntry value="org.eclipse.swt@default:default"/>
         <setEntry value="org.eclipse.team.core@default:default"/>
         <setEntry value="org.eclipse.team.genericeditor.diff.extension@default:default"/>
@@ -467,6 +475,7 @@
         <setEntry value="org.eclipse.ui.views.log@default:default"/>
         <setEntry value="org.eclipse.ui.views.properties.tabbed@default:default"/>
         <setEntry value="org.eclipse.ui.views@default:default"/>
+        <setEntry value="org.eclipse.ui.win32@default:false"/>
         <setEntry value="org.eclipse.ui.workbench.texteditor@default:default"/>
         <setEntry value="org.eclipse.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.ui@default:default"/>
@@ -550,7 +559,7 @@
         <setEntry value="at.tb_gruber.designer.product@default:default"/>
     </setAttribute>
     <booleanAttribute key="show_selected_only" value="false"/>
-    <stringAttribute key="templateConfig" value="/home/bernhard/Dokumente/Entwicklung/tb_gruber/git/tbg_designer/at.tb_gruber.designer.product/configuration/config.ini"/>
+    <stringAttribute key="templateConfig" value="C:\Development\tb_gruber\git\tbg_designer\at.tb_gruber.designer.product\configuration\config.ini"/>
     <booleanAttribute key="tracing" value="false"/>
     <booleanAttribute key="useCustomFeatures" value="false"/>
     <booleanAttribute key="useDefaultConfig" value="false"/>

@@ -406,7 +406,7 @@ public class TableServices {
 		}
 		return reserve;
 	}
-	
+
 	public String getZaehlername(EObject self) {
 		if (self instanceof Verbindung) {
 			Verbindung verbindung = (Verbindung) self;
@@ -473,6 +473,10 @@ public class TableServices {
 			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
 			if (ursprung instanceof AnlageMitAttributen) {
 				name = ((AnlageMitAttributen) ursprung).getName();
+			} else if (ursprung instanceof VerteilerBase) {
+				VerteilerBase verteiler = (VerteilerBase) ursprung;
+				VerteilerContainer verteilerontainer = (VerteilerContainer) verteiler.eContainer();
+				name = verteilerontainer.getName();
 			}
 		}
 		return name;
@@ -484,6 +488,10 @@ public class TableServices {
 			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
 			if (ursprung instanceof AnlageMitAttributen) {
 				nummer = ((AnlageMitAttributen) ursprung).getAnlagennummer();
+			} else if (ursprung instanceof VerteilerBase) {
+				VerteilerBase verteiler = (VerteilerBase) ursprung;
+				VerteilerContainer verteilerontainer = (VerteilerContainer) verteiler.eContainer();
+				nummer = verteilerontainer.getAnlagennummer();
 			}
 		}
 		return nummer;
@@ -508,6 +516,10 @@ public class TableServices {
 			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
 			if (ursprung instanceof AnlageMitAttributen) {
 				eadbid = ((AnlageMitAttributen) ursprung).getEadbId();
+			} else if (ursprung instanceof VerteilerBase) {
+				VerteilerBase verteiler = (VerteilerBase) ursprung;
+				VerteilerContainer verteilerontainer = (VerteilerContainer) verteiler.eContainer();
+				eadbid = verteilerontainer.getEadbId();
 			}
 		}
 		return eadbid;
@@ -519,9 +531,25 @@ public class TableServices {
 			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
 			if (ursprung instanceof AnlageMitAttributen) {
 				abgang = ((AnlageMitAttributen) ursprung).getAbgangVT();
+			} else if (ursprung instanceof VerteilerBase) {
+				VerteilerBase verteiler = (VerteilerBase) ursprung;
+				VerteilerContainer verteilerontainer = (VerteilerContainer) verteiler.eContainer();
+				abgang = verteilerontainer.getAbgangVT();
 			}
 		}
 		return abgang;
+	}
+
+	public String getUrsprungZaehlpunktnummer(EObject self) {
+		String zpNr = "";
+		if (self instanceof Verbindung) {
+			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
+			if (ursprung instanceof VerteilerMitZaehler) {
+				VerteilerMitZaehler verteiler = (VerteilerMitZaehler) ursprung;
+				zpNr = verteiler.getNrHauptversorgung();
+			}
+		}
+		return zpNr;
 	}
 
 	public String getZielVerteilerbezeichnung(EObject self) {

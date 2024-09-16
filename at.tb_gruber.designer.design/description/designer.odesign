@@ -7477,6 +7477,7 @@
       <ownedColumnMappings name="vbdVersorgtVonPK" headerLabelExpression="vesorgt von PrimaryKey" featureName="ursprung" labelExpression="service:getUrsprungVersorgtVonPK()"/>
       <ownedColumnMappings name="vbdVersorgtVonEadbId" headerLabelExpression="vesorgt von EADB_ID" featureName="ursprung" labelExpression="service:getUrsprungEadbId()"/>
       <ownedColumnMappings name="vbdVersorgtVonAbgangVT" headerLabelExpression="Abgang VT" featureName="ursprung" labelExpression="service:getUrsprungAbgangVt()"/>
+      <ownedColumnMappings name="vbdVersorgtVonZpNr" headerLabelExpression="vesorgt von Zählpunktnummer" featureName="ursprung" labelExpression="service:getUrsprungZaehlpunktnummer()"/>
       <ownedColumnMappings name="vbdSpannung" headerLabelExpression="Kabelversorgungsspannung" featureName="ursprung" labelExpression="aql:self.primaerspannung"/>
       <ownedColumnMappings name="vbdKabeltype" headerLabelExpression="Kabeltype" featureName="ursprung" labelExpression="aql:self.kabeltype"/>
       <ownedColumnMappings name="vbdQuellSicherung" headerLabelExpression="Sicherung Quelle" featureName="ursprung" labelExpression="aql:self.quellSicherung"/>

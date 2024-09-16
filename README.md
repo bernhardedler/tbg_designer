@@ -81,21 +81,22 @@ Wird in `at.tb_gruber.designer.design.Services` instanziert und verwendet.
 |17|In Objektteil|manuell|anlage.reserve3|
 |18|EADB Versorgung Art|manuell|anlage.eadbVersorgungArt|
 |19|Primärspannung|manuell, enum|anlage.primaerspannung|
-|**20**|Reserve1|manuell|???|
-|**21**|Reserve2|manuell|???|
+|20|Reserve1|manuell|ziel.reserve1|
+|21|Reserve2|manuell|ziel.reserve2|
 |22|Sekundärspannung|manuell, enum|trafo.sekundaerspannung|
 |23|Trafo-kVA|manuell|trafo.trafoKva|
 |24|Reserve3|manuell|trafo.reserve5|
-|**25**|Zählpunktnummer Hauptversorgung|manuell|???|
-|**26**|Zählpunktnummer Reserve Einspeisung|manuell|???|
+|25|Zählpunktnummer Hauptversorgung|manuell|ziel.nrHauptversorgung|
+|26|Zählpunktnummer Reserve Einspeisung|manuell|ziel.reserveEinspeisung|
 |27|versorgt von Anlagenname|ermittelt|quelle.anlagenname|
 |28|versorgt von Anlagennummer|ermittelt|quelle.anlagennummer|
 |29|versorgt von Primary Key - Versorgungsschema|ermittelt|(bahnhof.name + '_' + quelle.anlagennummer)
 |30|versorgt von EADB_Anlagen-ID|ermittelt|quelle.eadbId|
-|31|Abgang VT|manuell|ziel.abgangVT|
-|32|Kabelversorgungsspannung|manuell, enum|verbindung.primaerspannung|
-|33|Kabeltype|manuell|verbindung.kabeltype|
-|34|Sicherung Quelle|manuell|verbindung.quellSicherung|
-|35|Sicherung Ziel|manuell|verbindung.zielSicherung|
-|36|VER_BEZ|manuell|anlage.verteilerbezeichnung|
-|37|ARGUS-relevant|manuell, enum|verbindung.argusrelevant|
+|31|versorgt von Abgang VT|manuell|quelle.abgangVT|
+|32|versorgt von Zählpunktnummer|manuell|quelle.nrHauptversorgung|
+|33|Kabelversorgungsspannung|manuell, enum|verbindung.primaerspannung|
+|34|Kabeltype|manuell|verbindung.kabeltype|
+|35|Sicherung Quelle|manuell|verbindung.quellSicherung|
+|36|Sicherung Ziel|manuell|verbindung.zielSicherung|
+|37|VER_BEZ|manuell|anlage.verteilerbezeichnung|
+|38|ARGUS-relevant|manuell, enum|verbindung.argusrelevant|
