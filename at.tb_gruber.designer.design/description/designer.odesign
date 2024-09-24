@@ -7186,6 +7186,7 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::VerteilerContainer" referenceName="anlage">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="anlagennummer" valueExpression="service:generateAnlagenID()"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="model::Betreiber" referenceName="betreiber" variableName="newBetreiber">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newBetreiber">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Betreiber">

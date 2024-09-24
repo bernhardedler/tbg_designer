@@ -124,6 +124,8 @@ public class DiagramServices {
 				anlPrefix = "G";
 			} else if (anlage instanceof Umrichter) {
 				anlPrefix = "UR";
+			} else if (anlage instanceof VerteilerContainer) {
+				anlPrefix = "ZV";
 			}
 			
 			result = String.format("%s %02d", anlPrefix, number);

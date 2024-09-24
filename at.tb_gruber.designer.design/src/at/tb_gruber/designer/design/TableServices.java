@@ -2,6 +2,7 @@ package at.tb_gruber.designer.design;
 
 import java.util.Optional;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
@@ -490,8 +491,8 @@ public class TableServices {
 				nummer = ((AnlageMitAttributen) ursprung).getAnlagennummer();
 			} else if (ursprung instanceof VerteilerBase) {
 				VerteilerBase verteiler = (VerteilerBase) ursprung;
-				VerteilerContainer verteilerontainer = (VerteilerContainer) verteiler.eContainer();
-				nummer = verteilerontainer.getAnlagennummer();
+				VerteilerContainer verteilercontainer = (VerteilerContainer) verteiler.eContainer();
+				nummer = verteilercontainer.getAnlagennummer();
 			}
 		}
 		return nummer;
@@ -501,7 +502,13 @@ public class TableServices {
 		String pk = "";
 		if (self instanceof Verbindung) {
 			AnlageBase ursprung = ((Verbindung) self).getUrsprung();
-			if (!ursprung.getVersorgtVon().isEmpty()) {
+			EList<Verbindung> versorgtVon = ursprung.getVersorgtVon();
+			if (ursprung instanceof VerteilerBase) {
+				VerteilerBase verteiler = (VerteilerBase) ursprung;
+				VerteilerContainer verteilercontainer = (VerteilerContainer) verteiler.eContainer();
+				versorgtVon = verteilercontainer.getVersorgtVon();
+			}
+			if (!versorgtVon.isEmpty()) {
 				Objekt objekt = getObjektForVerbindung((Verbindung) self);
 				Bahnhof bahnhof = (Bahnhof) objekt.eContainer();
 				pk = bahnhof.getName() + "_" + ursprung.getVersorgtVon().get(0).getNr();
@@ -533,8 +540,8 @@ public class TableServices {
 				abgang = ((AnlageMitAttributen) ursprung).getAbgangVT();
 			} else if (ursprung instanceof VerteilerBase) {
 				VerteilerBase verteiler = (VerteilerBase) ursprung;
-				VerteilerContainer verteilerontainer = (VerteilerContainer) verteiler.eContainer();
-				abgang = verteilerontainer.getAbgangVT();
+				VerteilerContainer verteilercontainer = (VerteilerContainer) verteiler.eContainer();
+				abgang = verteilercontainer.getAbgangVT();
 			}
 		}
 		return abgang;

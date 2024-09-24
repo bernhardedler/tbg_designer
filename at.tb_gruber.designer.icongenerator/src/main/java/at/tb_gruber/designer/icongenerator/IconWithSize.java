@@ -34,7 +34,7 @@ public class IconWithSize {
 	}
 
 	private String getNameForSize(IconSize size) {
-		return iconName + nap.position + "_" + size.size;
+		return iconName + nap.position + "_" + size.size + (isFernablesung ? "_fa" : "");
 	}
 
 	private String getFileNameForColorAndSize(String color, IconSize size) {
