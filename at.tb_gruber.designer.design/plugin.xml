@@ -87,4 +87,13 @@
         </Priority>
      </editpartProvider>
   </extension>
+  <extension
+        point="org.eclipse.ui.perspectiveExtensions">
+     <perspectiveExtension
+           targetID="*">
+        <newWizardShortcut
+              id="at.tb_gruber.designer.ide.wizard">
+        </newWizardShortcut>
+     </perspectiveExtension>
+  </extension>
 </plugin>
