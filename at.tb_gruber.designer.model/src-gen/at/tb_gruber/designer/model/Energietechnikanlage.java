@@ -18,7 +18,7 @@ package at.tb_gruber.designer.model;
  * @model
  * @generated
  */
-public interface Energietechnikanlage extends AnlageMitAttributen {
+public interface Energietechnikanlage extends GruppierbareAnlage {
 	/**
 	 * Returns the value of the '<em><b>Et Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link at.tb_gruber.designer.model.ET_Type}.

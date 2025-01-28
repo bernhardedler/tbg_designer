@@ -6,6 +6,7 @@ import at.tb_gruber.designer.model.ARGUSrelevant;
 import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.AnlageMitAttributen;
 import at.tb_gruber.designer.model.AnlageOhneAttribute;
+import at.tb_gruber.designer.model.AnlagenContainer;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Betreiber;
 import at.tb_gruber.designer.model.Details;
@@ -19,6 +20,7 @@ import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Externe_Datenquelle;
 import at.tb_gruber.designer.model.Generator;
 import at.tb_gruber.designer.model.Generatorfunktion;
+import at.tb_gruber.designer.model.GruppierbareAnlage;
 import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.ModelFactory;
 import at.tb_gruber.designer.model.ModelPackage;
@@ -193,6 +195,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass eigentuemerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass anlagenContainerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gruppierbareAnlageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1372,6 +1388,36 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getAnlagenContainer() {
+		return anlagenContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAnlagenContainer_Anlage() {
+		return (EReference) anlagenContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getGruppierbareAnlage() {
+		return gruppierbareAnlageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getObjektarttype() {
 		return objektarttypeEEnum;
 	}
@@ -1657,6 +1703,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		eigentuemerEClass = createEClass(EIGENTUEMER);
 		createEAttribute(eigentuemerEClass, EIGENTUEMER__NAME);
 
+		anlagenContainerEClass = createEClass(ANLAGEN_CONTAINER);
+		createEReference(anlagenContainerEClass, ANLAGEN_CONTAINER__ANLAGE);
+
+		gruppierbareAnlageEClass = createEClass(GRUPPIERBARE_ANLAGE);
+
 		// Create enums
 		objektarttypeEEnum = createEEnum(OBJEKTARTTYPE);
 		spannungsarttypeEEnum = createEEnum(SPANNUNGSARTTYPE);
@@ -1706,8 +1757,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		anlageMitAttributenEClass.getESuperTypes().add(this.getAnlageBase());
 		trafoEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 		netzanschlusspunktEClass.getESuperTypes().add(this.getAnlageOhneAttribute());
-		versorgungsknotenEClass.getESuperTypes().add(this.getAnlageMitAttributen());
-		energietechnikanlageEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		versorgungsknotenEClass.getESuperTypes().add(this.getGruppierbareAnlage());
+		energietechnikanlageEClass.getESuperTypes().add(this.getGruppierbareAnlage());
 		generatorEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 		verteilerMitZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
 		energiespeicherEClass.getESuperTypes().add(this.getAnlageMitAttributen());
@@ -1716,6 +1767,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		verteilerOhneZaehlerEClass.getESuperTypes().add(this.getVerteilerBase());
 		umrichterEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 		anlageOhneAttributeEClass.getESuperTypes().add(this.getAnlageBase());
+		anlagenContainerEClass.getESuperTypes().add(this.getAnlageMitAttributen());
+		gruppierbareAnlageEClass.getESuperTypes().add(this.getAnlageMitAttributen());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bahnhofEClass, Bahnhof.class, "Bahnhof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1994,6 +2047,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEigentuemer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Eigentuemer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(anlagenContainerEClass, AnlagenContainer.class, "AnlagenContainer", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAnlagenContainer_Anlage(), this.getGruppierbareAnlage(), null, "anlage", null, 0, -1,
+				AnlagenContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gruppierbareAnlageEClass, GruppierbareAnlage.class, "GruppierbareAnlage", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(objektarttypeEEnum, Objektarttype.class, "Objektarttype");

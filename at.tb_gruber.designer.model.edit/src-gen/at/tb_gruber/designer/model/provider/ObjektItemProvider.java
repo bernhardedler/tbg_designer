@@ -308,6 +308,9 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 				ModelFactory.eINSTANCE.createNetzanschlusspunkt()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
+				ModelFactory.eINSTANCE.createGruppierbareAnlage()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
 				ModelFactory.eINSTANCE.createVersorgungsknoten()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
@@ -330,6 +333,9 @@ public class ObjektItemProvider extends ItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(
 				createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE, ModelFactory.eINSTANCE.createUmrichter()));
+
+		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__ANLAGE,
+				ModelFactory.eINSTANCE.createAnlagenContainer()));
 
 		newChildDescriptors.add(createChildParameter(ModelPackage.Literals.OBJEKT__EIGENTUEMER,
 				ModelFactory.eINSTANCE.createEigentuemer()));

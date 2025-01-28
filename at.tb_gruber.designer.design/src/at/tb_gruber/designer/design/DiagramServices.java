@@ -33,6 +33,7 @@ import org.eclipse.ui.IEditorPart;
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.AnlageMitAttributen;
+import at.tb_gruber.designer.model.AnlagenContainer;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Betreiber;
 import at.tb_gruber.designer.model.Details;
@@ -40,6 +41,7 @@ import at.tb_gruber.designer.model.Eigentuemer;
 import at.tb_gruber.designer.model.Energiespeicher;
 import at.tb_gruber.designer.model.Energietechnikanlage;
 import at.tb_gruber.designer.model.Generator;
+import at.tb_gruber.designer.model.GruppierbareAnlage;
 import at.tb_gruber.designer.model.LinienType;
 import at.tb_gruber.designer.model.NapPosition;
 import at.tb_gruber.designer.model.Netzanschlusspunkt;
@@ -77,6 +79,10 @@ public class DiagramServices {
 			VerteilerContainer vtc = (VerteilerContainer) container;
 			Objekt containerObj = (Objekt) vtc.eContainer();
 			project = (Bahnhof) containerObj.eContainer();
+		} else if (container instanceof AnlagenContainer) {
+			AnlagenContainer ac = (AnlagenContainer) container;
+			Objekt containerObj = (Objekt) ac.eContainer();
+			project = (Bahnhof) containerObj.eContainer();
 		}
 
 		Set<Integer> alleIds = new TreeSet<Integer>();
@@ -85,6 +91,12 @@ public class DiagramServices {
 				if (anlage instanceof VerteilerContainer) {
 					for (VerteilerBase verteiler : ((VerteilerContainer) anlage).getVerteiler()) {
 						for (Verbindung verbindung : verteiler.getVerbindungNach()) {
+							alleIds.add(verbindung.getNr());
+						}
+					}
+				} else if (anlage instanceof AnlagenContainer) {
+					for (GruppierbareAnlage grAnlage : ((AnlagenContainer) anlage).getAnlage()) {
+						for (Verbindung verbindung : grAnlage.getVerbindungNach()) {
 							alleIds.add(verbindung.getNr());
 						}
 					}
@@ -431,7 +443,7 @@ public class DiagramServices {
 	
 	private Set<IGraphicalEditPart> getSelectedBetreiberAndNap(EObject self){
 		if (!(self instanceof DNode && ((DNode) self).getSemanticElements().get(0) instanceof AnlageBase)
-				&& !(self instanceof DNodeContainer && ((DNodeContainer) self).getSemanticElements().get(0) instanceof VerteilerContainer)) {
+				&& !(self instanceof DNodeContainer && ((DNodeContainer) self).getSemanticElements().get(0) instanceof AnlageBase)) {
 			return Collections.emptySet();
 		}
 		
@@ -449,10 +461,13 @@ public class DiagramServices {
 				nap = ((Versorgungsknoten) anlage).getNetzanschlusspunkt();
 			}
 		} else if (self instanceof DNodeContainer) {
-			VerteilerContainer vc = (VerteilerContainer) ((DNodeContainer)self).getSemanticElements().get(0);
-			betreiber = vc.getBetreiber();
-			details = vc.getDetails();
-			nap = vc.getNetzanschlusspunkt();
+			AnlageBase ab = (AnlageBase) ((DNodeContainer)self).getSemanticElements().get(0);
+			betreiber = ab.getBetreiber();
+			details = ab.getDetails();
+			
+			if (ab instanceof VerteilerContainer) {
+				nap = ((VerteilerContainer)ab).getNetzanschlusspunkt();
+			}
 		}
 			
 		Set<IGraphicalEditPart> selectedElements = new HashSet<>();

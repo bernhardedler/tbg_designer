@@ -28,8 +28,13 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.sirius.viewpoint.DRepresentationElement;
 import org.osgi.framework.FrameworkUtil;
 
+import at.tb_gruber.designer.model.AnlageBase;
+import at.tb_gruber.designer.model.AnlagenContainer;
 import at.tb_gruber.designer.model.Bahnhof;
+import at.tb_gruber.designer.model.GruppierbareAnlage;
 import at.tb_gruber.designer.model.Objekt;
+import at.tb_gruber.designer.model.VerteilerBase;
+import at.tb_gruber.designer.model.VerteilerContainer;
 
 @SuppressWarnings("deprecated")
 public class PlankopfPdfPostProcessor {
@@ -45,7 +50,7 @@ public class PlankopfPdfPostProcessor {
 	private static final int spacing = 5;
 	private static final int offset = 14;
 	private static final int offsetLochung = offset * 4;
-	
+
 	public static final Dimension PLANKOPF_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(703),
 			TBGDiagramSVGGenerator.applyScaling(226));
 	public static final Dimension LEGENDE_1_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(348),
@@ -67,6 +72,7 @@ public class PlankopfPdfPostProcessor {
 
 			insertRahmen(dgrmEP, doc, page);
 			insertSchnittkante(dgrmEP, doc, page);
+			insertAnzahlAnlagenUndGebaeude(dgrmEP, doc, page);
 
 			doc.save(filePath);
 		} finally {
@@ -132,7 +138,7 @@ public class PlankopfPdfPostProcessor {
 				writeMediumTextAt(projekt.getFreigegeben_von(), freigegeben_X, freigegeben_Y, cs);
 
 				String projektname = projekt.getProjektname();
-				if (projektname != null) {
+				if (projektname != null && !projektname.isEmpty()) {
 					String p1, p2, p3;
 					if (projektname.length() <= 25) {
 						p1 = projektname;
@@ -143,26 +149,29 @@ public class PlankopfPdfPostProcessor {
 					int projektname1_Y = positionPlankopf.y() + PLANKOPF_SIZE.height()
 							- TBGDiagramSVGGenerator.applyScaling(155);
 					writeLargeTextAt(p1, projektname1_X, projektname1_Y, cs);
+					if (projektname.length() > 25) {
+						if (projektname.length() <= 50) {
+							p2 = projektname.substring(25);
+						} else {
+							p2 = projektname.substring(25, Math.min(projektname.length(), 50));
+						}
+						int projektname2_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
+						int projektname2_Y = positionPlankopf.y() + PLANKOPF_SIZE.height()
+								- TBGDiagramSVGGenerator.applyScaling(185);
+						writeLargeTextAt(p2, projektname2_X, projektname2_Y, cs);
 
-					if (projektname.length() > 25 && projektname.length() <= 50) {
-						p2 = projektname.substring(25);
-					} else {
-						p2 = projektname.substring(25, Math.min(projektname.length(), 50));
+						if (projektname.length() > 50) {
+							if (projektname.length() <= 75) {
+								p3 = projektname.substring(50);
+							} else {
+								p3 = projektname.substring(50, Math.min(projektname.length(), 75));
+							}
+							int projektname3_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
+							int projektname3_Y = positionPlankopf.y() + PLANKOPF_SIZE.height()
+									- TBGDiagramSVGGenerator.applyScaling(215);
+							writeLargeTextAt(p3, projektname3_X, projektname3_Y, cs);
+						}
 					}
-					int projektname2_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
-					int projektname2_Y = positionPlankopf.y() + PLANKOPF_SIZE.height()
-							- TBGDiagramSVGGenerator.applyScaling(185);
-					writeLargeTextAt(p2, projektname2_X, projektname2_Y, cs);
-
-					if (projektname.length() > 50 && projektname.length() <= 75) {
-						p3 = projektname.substring(50);
-					} else {
-						p3 = projektname.substring(50, Math.min(projektname.length(), 75));
-					}
-					int projektname3_X = positionPlankopf.x() + TBGDiagramSVGGenerator.applyScaling(110);
-					int projektname3_Y = positionPlankopf.y() + PLANKOPF_SIZE.height()
-							- TBGDiagramSVGGenerator.applyScaling(215);
-					writeLargeTextAt(p3, projektname3_X, projektname3_Y, cs);
 				}
 			}
 		} catch (Exception e) {
@@ -246,6 +255,7 @@ public class PlankopfPdfPostProcessor {
 		}
 
 	}
+
 	private static void insertSchnittkante(DiagramEditPart dgrmEP, PDDocument doc, PDPage page) {
 		try (PDPageContentStream cs = new PDPageContentStream(doc, page, AppendMode.APPEND, false, true)) {
 			Dimension totalSize = getPdfPageSize(page);
@@ -260,6 +270,47 @@ public class PlankopfPdfPostProcessor {
 			log.error("Fehler beim Drucken der Schnittkante", e);
 		}
 
+	}
+
+	private static void insertAnzahlAnlagenUndGebaeude(DiagramEditPart dgrmEP, PDDocument doc, PDPage page) {
+		try (PDPageContentStream cs = new PDPageContentStream(doc, page, AppendMode.APPEND, false, true)) {
+			Point positionLegende2 = getTopLeftForLegende2(page);
+
+			Bahnhof projekt = resolveBahnhof(dgrmEP);
+			if (projekt != null) {
+				int anzahlGebaeude = projekt.getObjekt().size();
+				int anzGeb_X = positionLegende2.x() + TBGDiagramSVGGenerator.applyScaling(5);
+				int anzGeb_Y = positionLegende2.y() + LEGENDE_2_SIZE.height() + TBGDiagramSVGGenerator.applyScaling(50);
+				writeSmallTextAt("Anzahl Gebäude: " + anzahlGebaeude, anzGeb_X, anzGeb_Y, cs);
+				
+				int anzahlAnlagen = countAnlagen(projekt);
+				int anzAnl_X = positionLegende2.x() + TBGDiagramSVGGenerator.applyScaling(5);
+				int anzAnl_Y = positionLegende2.y() + LEGENDE_2_SIZE.height() + TBGDiagramSVGGenerator.applyScaling(30);
+				writeSmallTextAt("Anzahl Anlagen: " + anzahlAnlagen, anzAnl_X, anzAnl_Y, cs);
+			}
+
+		} catch (Exception e) {
+			log.error("Fehler beim Drucken der Schnittkante", e);
+		}
+
+	}
+
+	private static int countAnlagen(Bahnhof bahnhof) {
+		int anzahlAnlagen = 0;
+		for (Objekt gebaeude : bahnhof.getObjekt()) {
+			for (AnlageBase anlage : gebaeude.getAnlage()) {
+				if (anlage instanceof VerteilerContainer) {
+					VerteilerContainer vert = (VerteilerContainer) anlage;
+					anzahlAnlagen += vert.getVerteiler().size();
+				} else if (anlage instanceof AnlagenContainer) {
+					AnlagenContainer ac = (AnlagenContainer) anlage;
+					anzahlAnlagen += ac.getAnlage().size();
+				} else {
+					anzahlAnlagen ++;
+				}
+			}
+		}
+		return anzahlAnlagen;
 	}
 
 	private static Bahnhof resolveBahnhof(DiagramEditPart dgrmEP) {

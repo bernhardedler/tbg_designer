@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EnergietechnikanlageImpl extends AnlageMitAttributenImpl implements Energietechnikanlage {
+public class EnergietechnikanlageImpl extends GruppierbareAnlageImpl implements Energietechnikanlage {
 	/**
 	 * The default value of the '{@link #getEtType() <em>Et Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

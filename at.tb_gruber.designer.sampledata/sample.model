@@ -3,18 +3,25 @@
   <objekt name="3045310_BF. KLAUS AUFNAHMEGEB&#xc4;UDE U. BM UNTERKUNFT" objektId="647" gpsstandort="14,15538062 47,83299564" externeQuelle="gebaeude" ort_adresse="AT 4564 KLAUS AN DER PYHRNBAHN KLAUS 77" gebaeudeart="Betriebsgeb&#xe4;ude">
     <anlage xsi:type="tbg:VerteilerContainer" name="Keine Ahnung Name" anlagennummer="ZV 01" eadbId="2562" abgangVT="??">
       <betreiber name="Betreiber"/>
-      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="2" nrHauptversorgung="ZP-NR.: 123456" fernablesung="true">
+      <verteiler xsi:type="tbg:VerteilerMitZaehler" versorgtVon="1" nrHauptversorgung="ZP-NR.: 123456" fernablesung="true">
         <details/>
-        <verbindungNach nr="1" ziel="//@objekt.0/@anlage.1" ursprung="//@objekt.0/@anlage.0/@verteiler.0"/>
+        <verbindungNach nr="2" ziel="//@objekt.0/@anlage.3" ursprung="//@objekt.0/@anlage.0/@verteiler.0"/>
       </verteiler>
       <verteiler xsi:type="tbg:VerteilerOhneZaehler">
-        <verbindungNach nr="2" ziel="//@objekt.0/@anlage.0/@verteiler.0" ursprung="//@objekt.0/@anlage.0/@verteiler.1"/>
+        <verbindungNach nr="1" ziel="//@objekt.0/@anlage.0/@verteiler.0" ursprung="//@objekt.0/@anlage.0/@verteiler.1"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="1" anlagennummer="ET 01">
+    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="3" anlagennummer="ET 01">
       <betreiber name="Betreiber"/>
     </anlage>
-    <anlage xsi:type="tbg:VerteilerContainer" anlagennummer="ZV 02">
+    <anlage xsi:type="tbg:AnlagenContainer" anlagennummer=" 01">
+      <betreiber name="Betreiber"/>
+      <anlage xsi:type="tbg:Energietechnikanlage">
+        <betreiber name="Betreiber"/>
+        <verbindungNach nr="3" ziel="//@objekt.0/@anlage.1" ursprung="//@objekt.0/@anlage.2/@anlage.0"/>
+      </anlage>
+    </anlage>
+    <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="2" anlagennummer="VK 01">
       <betreiber name="Betreiber"/>
     </anlage>
   </objekt>

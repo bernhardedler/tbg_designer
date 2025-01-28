@@ -222,5 +222,9 @@
     <genClasses ecoreClass="model.ecore#//Eigentuemer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Eigentuemer/name"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//AnlagenContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//AnlagenContainer/anlage"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//GruppierbareAnlage"/>
   </genPackages>
 </genmodel:GenModel>

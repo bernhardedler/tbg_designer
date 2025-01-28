@@ -303,6 +303,52 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.AnlagenContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AnlagenContainerItemProvider anlagenContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.AnlagenContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnlagenContainerAdapter() {
+		if (anlagenContainerItemProvider == null) {
+			anlagenContainerItemProvider = new AnlagenContainerItemProvider(this);
+		}
+
+		return anlagenContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.GruppierbareAnlage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GruppierbareAnlageItemProvider gruppierbareAnlageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.tb_gruber.designer.model.GruppierbareAnlage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGruppierbareAnlageAdapter() {
+		if (gruppierbareAnlageItemProvider == null) {
+			gruppierbareAnlageItemProvider = new GruppierbareAnlageItemProvider(this);
+		}
+
+		return gruppierbareAnlageItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link at.tb_gruber.designer.model.VerteilerMitZaehler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -577,6 +623,10 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory
 			umrichterItemProvider.dispose();
 		if (eigentuemerItemProvider != null)
 			eigentuemerItemProvider.dispose();
+		if (anlagenContainerItemProvider != null)
+			anlagenContainerItemProvider.dispose();
+		if (gruppierbareAnlageItemProvider != null)
+			gruppierbareAnlageItemProvider.dispose();
 	}
 
 }

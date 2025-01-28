@@ -157,6 +157,24 @@ public interface ModelFactory extends EFactory {
 	Eigentuemer createEigentuemer();
 
 	/**
+	 * Returns a new object of class '<em>Anlagen Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Anlagen Container</em>'.
+	 * @generated
+	 */
+	AnlagenContainer createAnlagenContainer();
+
+	/**
+	 * Returns a new object of class '<em>Gruppierbare Anlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gruppierbare Anlage</em>'.
+	 * @generated
+	 */
+	GruppierbareAnlage createGruppierbareAnlage();
+
+	/**
 	 * Returns a new object of class '<em>Energiespeicher</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

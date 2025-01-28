@@ -88,6 +88,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			return createUmrichter();
 		case ModelPackage.EIGENTUEMER:
 			return createEigentuemer();
+		case ModelPackage.ANLAGEN_CONTAINER:
+			return createAnlagenContainer();
+		case ModelPackage.GRUPPIERBARE_ANLAGE:
+			return createGruppierbareAnlage();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -349,6 +353,28 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Eigentuemer createEigentuemer() {
 		EigentuemerImpl eigentuemer = new EigentuemerImpl();
 		return eigentuemer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AnlagenContainer createAnlagenContainer() {
+		AnlagenContainerImpl anlagenContainer = new AnlagenContainerImpl();
+		return anlagenContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GruppierbareAnlage createGruppierbareAnlage() {
+		GruppierbareAnlageImpl gruppierbareAnlage = new GruppierbareAnlageImpl();
+		return gruppierbareAnlage;
 	}
 
 	/**

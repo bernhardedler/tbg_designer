@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VersorgungsknotenItemProvider extends AnlageMitAttributenItemProvider {
+public class VersorgungsknotenItemProvider extends GruppierbareAnlageItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

@@ -167,6 +167,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAnlagenContainer(AnlagenContainer object) {
+			return createAnlagenContainerAdapter();
+		}
+
+		@Override
+		public Adapter caseGruppierbareAnlage(GruppierbareAnlage object) {
+			return createGruppierbareAnlageAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -462,6 +472,34 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEigentuemerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.AnlagenContainer <em>Anlagen Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.AnlagenContainer
+	 * @generated
+	 */
+	public Adapter createAnlagenContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.tb_gruber.designer.model.GruppierbareAnlage <em>Gruppierbare Anlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.tb_gruber.designer.model.GruppierbareAnlage
+	 * @generated
+	 */
+	public Adapter createGruppierbareAnlageAdapter() {
 		return null;
 	}
 

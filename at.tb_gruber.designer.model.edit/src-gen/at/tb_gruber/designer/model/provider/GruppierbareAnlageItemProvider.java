@@ -2,34 +2,30 @@
  */
 package at.tb_gruber.designer.model.provider;
 
-import at.tb_gruber.designer.model.Energietechnikanlage;
+import at.tb_gruber.designer.model.GruppierbareAnlage;
 
-import at.tb_gruber.designer.model.ModelPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link at.tb_gruber.designer.model.Energietechnikanlage} object.
+ * This is the item provider adapter for a {@link at.tb_gruber.designer.model.GruppierbareAnlage} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EnergietechnikanlageItemProvider extends GruppierbareAnlageItemProvider {
+public class GruppierbareAnlageItemProvider extends AnlageMitAttributenItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnergietechnikanlageItemProvider(AdapterFactory adapterFactory) {
+	public GruppierbareAnlageItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -44,36 +40,19 @@ public class EnergietechnikanlageItemProvider extends GruppierbareAnlageItemProv
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEtTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Et Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEtTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Energietechnikanlage_etType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Energietechnikanlage_etType_feature",
-								"_UI_Energietechnikanlage_type"),
-						ModelPackage.Literals.ENERGIETECHNIKANLAGE__ET_TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns Energietechnikanlage.gif.
+	 * This returns GruppierbareAnlage.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Energietechnikanlage"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/GruppierbareAnlage"));
 	}
 
 	/**
@@ -94,9 +73,9 @@ public class EnergietechnikanlageItemProvider extends GruppierbareAnlageItemProv
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Energietechnikanlage) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Energietechnikanlage_type")
-				: getString("_UI_Energietechnikanlage_type") + " " + label;
+		String label = ((GruppierbareAnlage) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_GruppierbareAnlage_type")
+				: getString("_UI_GruppierbareAnlage_type") + " " + label;
 	}
 
 	/**
@@ -109,12 +88,6 @@ public class EnergietechnikanlageItemProvider extends GruppierbareAnlageItemProv
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Energietechnikanlage.class)) {
-		case ModelPackage.ENERGIETECHNIKANLAGE__ET_TYPE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

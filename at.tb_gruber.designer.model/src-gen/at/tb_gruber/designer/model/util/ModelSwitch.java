@@ -122,6 +122,8 @@ public class ModelSwitch<T> extends Switch<T> {
 			Versorgungsknoten versorgungsknoten = (Versorgungsknoten) theEObject;
 			T result = caseVersorgungsknoten(versorgungsknoten);
 			if (result == null)
+				result = caseGruppierbareAnlage(versorgungsknoten);
+			if (result == null)
 				result = caseAnlageMitAttributen(versorgungsknoten);
 			if (result == null)
 				result = caseAnlageBase(versorgungsknoten);
@@ -132,6 +134,8 @@ public class ModelSwitch<T> extends Switch<T> {
 		case ModelPackage.ENERGIETECHNIKANLAGE: {
 			Energietechnikanlage energietechnikanlage = (Energietechnikanlage) theEObject;
 			T result = caseEnergietechnikanlage(energietechnikanlage);
+			if (result == null)
+				result = caseGruppierbareAnlage(energietechnikanlage);
 			if (result == null)
 				result = caseAnlageMitAttributen(energietechnikanlage);
 			if (result == null)
@@ -254,6 +258,28 @@ public class ModelSwitch<T> extends Switch<T> {
 		case ModelPackage.EIGENTUEMER: {
 			Eigentuemer eigentuemer = (Eigentuemer) theEObject;
 			T result = caseEigentuemer(eigentuemer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.ANLAGEN_CONTAINER: {
+			AnlagenContainer anlagenContainer = (AnlagenContainer) theEObject;
+			T result = caseAnlagenContainer(anlagenContainer);
+			if (result == null)
+				result = caseAnlageMitAttributen(anlagenContainer);
+			if (result == null)
+				result = caseAnlageBase(anlagenContainer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ModelPackage.GRUPPIERBARE_ANLAGE: {
+			GruppierbareAnlage gruppierbareAnlage = (GruppierbareAnlage) theEObject;
+			T result = caseGruppierbareAnlage(gruppierbareAnlage);
+			if (result == null)
+				result = caseAnlageMitAttributen(gruppierbareAnlage);
+			if (result == null)
+				result = caseAnlageBase(gruppierbareAnlage);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -560,6 +586,36 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEigentuemer(Eigentuemer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anlagen Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anlagen Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnlagenContainer(AnlagenContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gruppierbare Anlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gruppierbare Anlage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGruppierbareAnlage(GruppierbareAnlage object) {
 		return null;
 	}
 

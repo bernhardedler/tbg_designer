@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: at.tb_gruber.designer.model.edit;singleton:=true
 Automatic-Module-Name: at.tb_gruber.designer.model.edit
-Bundle-Version: 7.4.0
+Bundle-Version: 7.5.0
 Bundle-ClassPath: .
 Bundle-Activator: at.tb_gruber.designer.model.provider.ModelEditPlugin$Implementation
 Bundle-Vendor: %providerName
