@@ -20,6 +20,9 @@
         <betreiber name="Betreiber"/>
         <verbindungNach nr="3" ziel="//@objekt.0/@anlage.1" ursprung="//@objekt.0/@anlage.2/@anlage.0"/>
       </anlage>
+      <anlage xsi:type="tbg:Versorgungsknoten">
+        <betreiber name="Betreiber"/>
+      </anlage>
     </anlage>
     <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="2" anlagennummer="VK 01">
       <betreiber name="Betreiber"/>

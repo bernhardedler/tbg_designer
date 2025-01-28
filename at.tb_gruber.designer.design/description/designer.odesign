@@ -634,7 +634,7 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
-          <subNodeMappings name="Vk" label="Versorgungsknoten" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::Versorgungsknoten">
+          <subNodeMappings name="Vk" label="Versorgungsknoten" semanticCandidatesExpression="feature:anlage" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::Versorgungsknoten">
             <borderedNodeMappings xsi:type="description_1:NodeMappingImport" name="nap vk" label="nap vk DUMMY" semanticCandidatesExpression="feature:netzanschlusspunkt" importedMapping="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']/@subContainerMappings[name='VerteilerContainer']/@subNodeMappings[name='Verteiler']/@borderedNodeMappings[name='Netzanschlusspunkt']">
               <style xsi:type="style:NoteDescription" labelSize="12" labelExpression="''" labelPosition="node">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -6833,7 +6833,7 @@
               </style>
             </conditionnalStyles>
           </subContainerMappings>
-          <subContainerMappings name="AnlagenContainer" label="AnlagenContainer" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::AnlagenContainer">
+          <subContainerMappings name="AnlagenContainer" label="AnlagenContainer" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::AnlagenContainer">
             <subNodeMappings name="EtInAC" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:anlage" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::Energietechnikanlage">
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
                 <style xsi:type="style:WorkspaceImageDescription" labelSize="11" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_violett.svg">
@@ -8199,13 +8199,6 @@
               </style>
             </conditionnalStyles>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.objektart.toString())" backgroundStyle="Liquid">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
-          </style>
         </containerMappings>
         <toolSections name="Gebäude">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="GebaeudeAnlegen" label="Gebäude" containerMappings="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@containerMappings[name='ObjektContainer']">

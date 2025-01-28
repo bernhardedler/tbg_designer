@@ -13,7 +13,8 @@
    <launcherArgs>
       <programArgs>-perspective org.eclipse.sirius.ui.tools.perspective.modeling
       </programArgs>
-      <vmArgs>-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=S:\\Korrektur\\490_ÖBB-Listen\\immo.csv
+      <vmArgs>--add-exports java.base/sun.security.action=ALL-UNNAMED
+-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=S:\\Korrektur\\490_ÖBB-Listen\\immo.csv
 -Dat.tb_gruber.designer.ide.preferences.csvfile.vs=S:\\Korrektur\\490_ÖBB-Listen\\vs.csv
 -Dat.tb_gruber.designer.ide.preferences.csvfile.gebaeude=S:\\Korrektur\\490_ÖBB-Listen\\gebaeude.csv
 -Dat.tb_gruber.designer.ide.preferences.csvfile.betreiber=S:\\Korrektur\\490_ÖBB-Listen\\betreiber.csv
@@ -44,11 +45,9 @@
       </win>
    </launcher>
 
-
    <vm>
       <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11</windows>
    </vm>
-
 
    <plugins>
       <plugin id="at.tb_gruber.designer.feature"/>
