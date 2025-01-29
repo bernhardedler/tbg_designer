@@ -28,4 +28,7 @@
       <betreiber name="Betreiber"/>
     </anlage>
   </objekt>
+  <objekt>
+    <eigentuemer name="Eigent&#xfc;mer"/>
+  </objekt>
 </tbg:Bahnhof>

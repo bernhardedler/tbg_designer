@@ -6833,7 +6833,7 @@
               </style>
             </conditionnalStyles>
           </subContainerMappings>
-          <subContainerMappings name="AnlagenContainer" label="AnlagenContainer" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::AnlagenContainer">
+          <subContainerMappings name="AnlagenContainer" label="AnlagenContainer" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::AnlagenContainer">
             <subNodeMappings name="EtInAC" label="Energietechnikanlage" deletionDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='AnlageEntfernen']" semanticCandidatesExpression="feature:anlage" doubleClickDescription="//@ownedViewpoints[name='TBGDesigner']/@ownedRepresentations[name='Versorgungsschema']/@defaultLayer/@toolSections.1/@ownedTools[name='selectBetreiberAndNAP']" domainClass="model::Energietechnikanlage">
               <conditionnalStyles predicateExpression="aql:(self.isVspViolett())">
                 <style xsi:type="style:WorkspaceImageDescription" labelSize="11" showIcon="false" labelExpression="aql:(self.name + ' / ' + self.anlagennummer)" tooltipExpression="aql:(self.name + ' / ' + self.anlagennummer)" sizeComputationExpression="-1" workspacePath="/at.tb_gruber.designer.design/images/svg/energietechnikanlage/energietechnikanlage_violett.svg">
