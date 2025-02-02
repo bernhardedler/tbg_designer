@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.AnlageBase;
 import at.tb_gruber.designer.model.AnlageMitAttributen;
+import at.tb_gruber.designer.model.AnlagenContainer;
 import at.tb_gruber.designer.model.Bahnhof;
 import at.tb_gruber.designer.model.Betreiber;
 import at.tb_gruber.designer.model.Eadb_Versorgung_Art;
@@ -142,6 +143,8 @@ public class TableServices {
 	private Objekt getObjektForVerbindung(Verbindung self) {
 		if (((Verbindung) self).getZiel().eContainer() instanceof VerteilerContainer) {
 			return (Objekt) ((VerteilerContainer) ((Verbindung) self).getZiel().eContainer()).eContainer();
+		} else if (((Verbindung) self).getZiel().eContainer() instanceof AnlagenContainer) {
+			return (Objekt) ((AnlagenContainer) ((Verbindung) self).getZiel().eContainer()).eContainer();
 		} else {
 			return (Objekt) ((Verbindung) self).getZiel().eContainer();
 		}
@@ -177,6 +180,8 @@ public class TableServices {
 			if (ziel instanceof VerteilerBase) {
 				VerteilerContainer container = (VerteilerContainer) ((VerteilerBase) ziel).eContainer();
 				betreiber = Optional.ofNullable(container.getBetreiber()).map(Betreiber::getName).orElse("");
+			} else if (ziel.eContainer() instanceof AnlagenContainer) {
+				betreiber = Optional.ofNullable((AnlagenContainer) ziel.eContainer()).map(AnlagenContainer::getBetreiber).map(Betreiber::getName).orElse("");
 			} else {
 				betreiber = Optional.ofNullable(ziel.getBetreiber()).map(Betreiber::getName).orElse("");
 			}

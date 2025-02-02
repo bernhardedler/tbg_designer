@@ -13,8 +13,7 @@
    <launcherArgs>
       <programArgs>-perspective org.eclipse.sirius.ui.tools.perspective.modeling
       </programArgs>
-      <vmArgs>--add-exports java.base/sun.security.action=ALL-UNNAMED
--Dat.tb_gruber.designer.ide.preferences.csvfile.immo=S:\\Korrektur\\490_ÖBB-Listen\\immo.csv
+      <vmArgs>-Dat.tb_gruber.designer.ide.preferences.csvfile.immo=S:\\Korrektur\\490_ÖBB-Listen\\immo.csv
 -Dat.tb_gruber.designer.ide.preferences.csvfile.vs=S:\\Korrektur\\490_ÖBB-Listen\\vs.csv
 -Dat.tb_gruber.designer.ide.preferences.csvfile.gebaeude=S:\\Korrektur\\490_ÖBB-Listen\\gebaeude.csv
 -Dat.tb_gruber.designer.ide.preferences.csvfile.betreiber=S:\\Korrektur\\490_ÖBB-Listen\\betreiber.csv

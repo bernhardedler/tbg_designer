@@ -11,17 +11,17 @@
         <verbindungNach nr="1" ziel="//@objekt.0/@anlage.0/@verteiler.0" ursprung="//@objekt.0/@anlage.0/@verteiler.1"/>
       </verteiler>
     </anlage>
-    <anlage xsi:type="tbg:Energietechnikanlage" versorgtVon="3" anlagennummer="ET 01">
+    <anlage xsi:type="tbg:Energietechnikanlage" anlagennummer="ET 01">
       <betreiber name="Betreiber"/>
     </anlage>
     <anlage xsi:type="tbg:AnlagenContainer" anlagennummer=" 01">
-      <betreiber name="Betreiber"/>
-      <anlage xsi:type="tbg:Energietechnikanlage">
+      <betreiber name="PR (ET)"/>
+      <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="3" anlagennummer="VK  01.2">
         <betreiber name="Betreiber"/>
-        <verbindungNach nr="3" ziel="//@objekt.0/@anlage.1" ursprung="//@objekt.0/@anlage.2/@anlage.0"/>
       </anlage>
-      <anlage xsi:type="tbg:Versorgungsknoten">
+      <anlage xsi:type="tbg:Energietechnikanlage" anlagennummer="ET  01.1">
         <betreiber name="Betreiber"/>
+        <verbindungNach nr="3" ziel="//@objekt.0/@anlage.2/@anlage.0" ursprung="//@objekt.0/@anlage.2/@anlage.1"/>
       </anlage>
     </anlage>
     <anlage xsi:type="tbg:Versorgungsknoten" versorgtVon="2" anlagennummer="VK 01">

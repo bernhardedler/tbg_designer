@@ -20,10 +20,8 @@ public class ProjectCreationOperation extends WorkspaceModifyOperation {
 			throws CoreException, InvocationTargetException, InterruptedException {
 		try {
 			final ProjectServices service = new ProjectServices();
-
 			monitor.beginTask("Load project", 100);
-			monitor.subTask("Close project");
-			service.closeProjects(monitor);
+			service.closeOpenedEditors();
 			monitor.worked(50);
 			monitor.subTask("Create project");
 			service.createProject(monitor, project);

@@ -1,5 +1,6 @@
 package at.tb_gruber.designer.design;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -29,6 +31,8 @@ import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.diagram.business.api.query.EObjectQuery;
 import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
 import org.eclipse.ui.IEditorPart;
+
+import com.google.common.collect.Lists;
 
 import at.tb_gruber.designer.ide.preferences.CSVPropertyProvider;
 import at.tb_gruber.designer.model.AnlageBase;
@@ -122,7 +126,6 @@ public class DiagramServices {
 		String result = "";
 		if (self instanceof AnlageMitAttributen) {
 			AnlageMitAttributen anlage = ((AnlageMitAttributen)self);
-			int number = getNextLowestFreeIdForClass(anlage);
 			String anlPrefix = "";
 			if (anlage instanceof Energietechnikanlage) {
 				anlPrefix = "ET";
@@ -140,13 +143,28 @@ public class DiagramServices {
 				anlPrefix = "ZV";
 			}
 			
-			result = String.format("%s %02d", anlPrefix, number);
+			boolean isInAnlagenContainer = anlage.eContainer() instanceof AnlagenContainer;
+			if (isInAnlagenContainer) {
+				AnlagenContainer anlContainer = ((AnlagenContainer) anlage.eContainer());
+				String anlContId = anlContainer.getAnlagennummer();
+				int number = anlContainer.getAnlage().size();
+				result = String.format("%s %s.%d", anlPrefix, anlContId, number);
+			} else {
+				int number = getNextLowestFreeIdForClass(anlage);
+				result = String.format("%s %02d", anlPrefix, number);
+			}
 		}
 		return result;
 	}
 	
 	private int getNextLowestFreeIdForClass(AnlageMitAttributen anlage) {
-		Bahnhof bhf = (Bahnhof) anlage.eContainer().eContainer();
+		Bahnhof bhf;
+		if (anlage.eContainer() instanceof AnlagenContainer) {
+			AnlagenContainer anlC = (AnlagenContainer) anlage.eContainer();
+			bhf = (Bahnhof) anlC.eContainer().eContainer();
+		} else {
+			bhf = (Bahnhof) anlage.eContainer().eContainer();
+		}
 		Class<? extends AnlageBase> clazz = anlage.getClass();
 		Set<Integer> vergebeneNummern = new TreeSet<>();
 		for (Objekt o : bhf.getObjekt()) {
@@ -524,5 +542,15 @@ public class DiagramServices {
 			}
 		};
 		j.schedule();
+	}
+
+	Predicate<EObject> isBetreiber = eo -> eo instanceof Betreiber;
+	Predicate<EObject> isParentInAnlagenContainer = eo -> eo.eContainer().eContainer() instanceof AnlagenContainer;
+	
+	public List<EObject> allBetreiber(EObject self) {
+		ArrayList<EObject> eAllContents = Lists.newArrayList(self.eAllContents());
+		eAllContents.removeIf(isBetreiber.negate());
+		eAllContents.removeIf(isParentInAnlagenContainer);
+		return eAllContents;
 	}
 }
