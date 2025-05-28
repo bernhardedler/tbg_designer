@@ -54,7 +54,7 @@ public class PlankopfPdfPostProcessor {
 	public static final Dimension PLANKOPF_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(703),
 			TBGDiagramSVGGenerator.applyScaling(226));
 	public static final Dimension LEGENDE_1_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(348),
-			TBGDiagramSVGGenerator.applyScaling(729));
+			TBGDiagramSVGGenerator.applyScaling(445));
 	public static final Dimension LEGENDE_2_SIZE = new Dimension(TBGDiagramSVGGenerator.applyScaling(348),
 			TBGDiagramSVGGenerator.applyScaling(619));
 

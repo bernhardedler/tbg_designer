@@ -3,3 +3,5 @@
 22.01.2025 2h AnlagenContainer
 28.01.2025 3h AnlagenContainer
 02.02.2025 5h AnlagenContainer
+27.05.2025 1h Legende
+28.05.2025 1h Legende
